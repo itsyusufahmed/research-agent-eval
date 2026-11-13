@@ -1,0 +1,181 @@
+{
+ "schema_version": "v0",
+ "company": "Fundraise Up",
+ "domain": "fundraiseup.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Fundraise Up helps nonprofits accept online donations and increase fundraising revenue through AI-optimized donor experiences, payment options, and analytics.",
+   "citations": [
+    "https://fundraiseup.com/docs/get-started",
+    "https://fundraiseup.com/careers/4674966005"
+   ],
+   "notes": "The getting-started documentation identifies nonprofits as the users and accepting donations and increasing giving as the purpose. The company's product description adds AI optimization, payment options, and analytics. Sources: https://fundraiseup.com/docs/get-started and https://fundraiseup.com/careers/4674966005"
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fundraiseup.com/pricing"
+   ],
+   "notes": "A public pricing page exists and advertises starting with $0 upfront and no long-term contracts. Source: https://fundraiseup.com/pricing"
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "UNICEF USA",
+    "Canadian Red Cross"
+   ],
+   "citations": [
+    "https://fundraiseup.com/case-studies"
+   ],
+   "notes": "named_customers: The company's case-study page identifies UNICEF USA and Canadian Red Cross as customer stories. Source: https://fundraiseup.com/case-studies | named_customers.0: UNICEF USA is explicitly named in a Fundraise Up customer success story. | named_customers.1: Canadian Red Cross is explicitly named beside its customer-story link."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://fundraiseup.com/about"
+   ],
+   "notes": "The company reports 350+ team members, supporting the 201\u2013500 band. The figure is a lower-bound statement rather than an exact count. Source: https://fundraiseup.com/about"
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Brooklyn",
+    "country": "United States"
+   },
+   "citations": [
+    "https://fundraiseup.com/about",
+    "https://fundraiseup.com/careers/4674966005"
+   ],
+   "notes": "hq_city: The company explicitly identifies Brooklyn, New York as its headquarters. Source: https://fundraiseup.com/about | hq_country: The about page identifies headquarters in Brooklyn, New York, and the company's organization metadata explicitly identifies the address country as US. Sources: https://fundraiseup.com/about and https://fundraiseup.com/careers/4674966005"
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2017.0,
+   "citations": [
+    "https://fundraiseup.com/about"
+   ],
+   "notes": "The company explicitly states that it was founded in 2017. Source: https://fundraiseup.com/about"
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://fundraiseup.com/blog",
+    "https://fundraiseup.com/blog/authors/mikhail-farmakovskii",
+    "https://fundraiseup.com/blog/reliability-in-fundraising",
+    "https://fundraiseup.com/blog/machine-learning"
+   ],
+   "notes": "The blog index is oriented toward fundraising, product, and marketing content. The data scientist's author index lists only one implementation-focused article; the other technical-looking reliability and machine-learning articles are attributed to product marketing managers. The required two engineer-authored product-building posts were not established. Sources: https://fundraiseup.com/blog and https://fundraiseup.com/blog/authors/mikhail-farmakovskii"
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fundraiseup.com/docs/get-started",
+    "https://fundraiseup.com/docs/pii/",
+    "https://fundraiseup.com/docs/changelog/connect-ai-assistants-with-mcp/"
+   ],
+   "notes": "The public documentation includes getting-started material, an Elements guide, a supporter-information security FAQ, and MCP documentation, establishing several public product articles. Sources: https://fundraiseup.com/docs/get-started and https://fundraiseup.com/docs/pii/"
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fundraiseup.com/careers/4674966005"
+   ],
+   "notes": "The live Senior ML-Engineer posting explicitly seeks an ML engineer and provides an application link. Source: https://fundraiseup.com/careers/4674966005"
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic (Claude)",
+   "citations": [
+    "https://trust.fundraiseup.com/compliance",
+    "https://fundraiseup.com/subprocessors"
+   ],
+   "notes": "The trust center names Anthropic for AI processing supporting Agentic Giving and platform features. The subprocessor page names Claude and explicitly includes providing the Agentic Giving feature when enabled. These are product-use disclosures, not merely compatible external assistants. Sources: https://trust.fundraiseup.com/compliance and https://fundraiseup.com/subprocessors"
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "GDPR",
+    "PCI DSS"
+   ],
+   "citations": [
+    "https://trust.fundraiseup.com/compliance"
+   ],
+   "notes": "compliance_certs: The trust center lists GDPR and completed ISO 27001, SOC 2 Type II, and PCI DSS compliance documents. HIPAA is not among the listed claims. Source: https://trust.fundraiseup.com/compliance | compliance_certs.0: The trust center lists a completed SOC 2 Type 2 report dated March 2026. | compliance_certs.1: The trust center lists the ISO 27001 document dated February 2024. | compliance_certs.2: GDPR is explicitly displayed among the trust center's compliance claims. | compliance_certs.3: The trust center lists a PCI DSS 4.0.1 attestation dated May 2026."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2024-12",
+    "amount_usd": 70000000.0
+   },
+   "citations": [
+    "https://tracxn.com",
+    "https://fundediq.co/fundraise-up-fundraiseup-com-funding",
+    "https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners"
+   ],
+   "notes": "funding_stage: Both funding profiles classify the $70 million round as Series B; the investor describes it more generally as growth capital. Sources: https://tracxn.com and https://fundediq.co/fundraise-up-fundraiseup-com-funding | funding_date: The funding profile explicitly records the latest round as December 23, 2024, so the answer uses that recorded round month. The investor announcement is dated January 23, 2025; announcement month and recorded round month differ. Sources: https://platform.tracxn.com/a/d/company/59deb48fe4b0f0e8b88cb10c/fundraise%20up?utm_source=parallel&utm_medium=ai#a:about and https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners | funding_amount_usd: The latest-round profile records $70 million, matching the investor's $70 million growth-capital announcement. Sources: https://tracxn.com and https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners"
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://tracxn.com",
+    "https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners"
+   ],
+   "notes": "The latest recorded round is December 2024 and its public announcement is January 2025. Both precede the May 2025 start of the 18-month window, supporting false despite the round-date discrepancy. Sources: https://tracxn.com and https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners"
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fundraiseup.com/careers/4735043005"
+   ],
+   "notes": "A live Account Executive, Education Vertical posting includes an application link and meets the qualifying title requirement. Source: https://fundraiseup.com/careers/4735043005"
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fundraiseup.com/docs/changelog/reach-supporters-through-ai-assistants-with-agentic-giving"
+   ],
+   "notes": "The September 1, 2026 changelog introduces Agentic Giving, which generates public organization and campaign profiles for AI-assistant recommendations. This is a substantive feature launch inside the six-month window. Source: https://fundraiseup.com/docs/changelog/reach-supporters-through-ai-assistants-with-agentic-giving"
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://karvtechinsider.com/martech/cxo-moves/john-schneider-joins-fundraise-up-as-chief-marketing-officer"
+   ],
+   "notes": "A November 2, 2026 report states that John Schneider joined Fundraise Up as Chief Marketing Officer, establishing a qualifying C-level change within the preceding 12 months. The evidence is a secondary report referencing his announcement. Source: https://karvtechinsider.com/martech/cxo-moves/john-schneider-joins-fundraise-up-as-chief-marketing-officer"
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot",
+    "Salesforce",
+    "Scratchpad",
+    "Gong"
+   ],
+   "citations": [
+    "https://www.hubspot.com/case-studies/fundraise-up?size=thousand_plus+",
+    "https://www.scratchpad.com/customers/case-studies/fundraise-up"
+   ],
+   "notes": "crm_stack_signal: HubSpot's case study describes Fundraise Up using its sales and marketing hubs. Scratchpad's customer case study explicitly lists Salesforce, Scratchpad, and Gong in Fundraise Up's technology stack. These are documented usage signals; the case studies do not establish that every system remains deployed today. Sources: https://www.hubspot.com/case-studies/fundraise-up?size=thousand_plus+ and https://www.scratchpad.com/customers/case-studies/fundraise-up | crm_stack_signal.0: HubSpot's case study describes Fundraise Up's internal use of its sales and marketing hubs; current deployment timing is not established. | crm_stack_signal.1: Salesforce is explicitly listed in Fundraise Up's technology stack in the customer case study. | crm_stack_signal.2: Scratchpad is explicitly listed in Fundraise Up's technology stack in the customer case study. | crm_stack_signal.3: Gong is explicitly listed in Fundraise Up's technology stack in the customer case study."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 365.5
+}

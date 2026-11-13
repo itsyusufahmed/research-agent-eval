@@ -1,0 +1,1197 @@
+{
+ "id": "agent_run_4ae7c5f2f3a54ddaaa7b3acb19ad4a04",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:08:19.417Z",
+ "completedAt": "2026-11-10T19:12:29.513Z",
+ "request": {
+  "query": "Research the company CloudTalk (cloudtalk.io). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"CloudTalk is an AI-powered business phone and voice-agent platform that helps small and mid-sized sales and support teams make and receive calls, automate conversations, and analyze customer interactions.\",\"citations\":[\"https://apply.workable.com/cloudtalk/jobs/view/8F45B904A7.md\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.cloudtalk.io/pricing/\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Nokia\",\"Glovo\"],\"citations\":[\"https://www.cloudtalk.io/customer-stories/nokia/\",\"https://www.cloudtalk.io/customer-stories/glovo/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://www.linkedin.com/company/cloudtalk.io\"]},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Toronto\",\"country\":\"Canada\"},\"citations\":[\"https://www.linkedin.com/company/cloudtalk.io\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2016,\"citations\":[\"https://www.linkedin.com/company/cloudtalk.io\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.cloudtalk.io/blog/rnd/testing-strategy-how-we-build-for-reliability/\",\"https://www.cloudtalk.io/blog/rnd/blog-post-6-ensuring-global-call-quality-with-sipfront/\",\"https://sipfront.com/case-studies/cloudtalk-global-call-quality/\",\"https://www.cloudtalk.io/blog/rnd/how-do-we-work-with-technical-backlog/\",\"https://www.linkedin.com/posts/jaroslavtomecek_how-do-we-work-with-technical-backlog-cloudtalk-activity-7382494277425143808-1ypW\"],\"notes\":\"The R&D posts cover testing, voice-infrastructure monitoring and technical backlog decisions; authors include CPTO Josef Lapka and engineering leader Jaroslav Tome\u010dek. The site\u2019s generic author footer labels Lapka \u201cSenior Copywriter,\u201d but the independent customer case study identifies him as CPTO.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://help.cloudtalk.io/en/\",\"https://help.cloudtalk.io/en/articles/10570091-integrations-guide\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://apply.workable.com/cloudtalk/\",\"https://www.theantijobboard.com/startups/companies/cloudtalk\",\"https://builtin.com/job/ai-researcher/8730260\"],\"notes\":\"The near-date vacancy snapshot, verified November 10, 2026, lists four openings and no qualifying AI/ML/data-science title. The previously advertised AI Researcher role was marked removed May 8, 2026. The official board is accessible but its vacancy titles are not exposed in the readable page.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"OpenAI; Anthropic; Google; AssemblyAI; ElevenLabs; Deepgram\",\"citations\":[\"https://www.cloudtalk.io/sub-processors/\"],\"notes\":\"The subprocessor list explicitly associates these providers with Conversation Intelligence, transcription, AI Voice Agent configuration or voice-agent processing.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\",\"GDPR\",\"PCI DSS\"],\"citations\":[\"https://media.cloudtalk.io/2026/06/CloudTalk-Security-Whitepaper.pdf\",\"https://trust.cloudtalk.io/\"],\"notes\":\"Public claims include SOC 2 Type II and ISO/IEC 27001 certification, GDPR and HIPAA compliance, and PCI DSS merchant requirements through SAQ A 4.0; these are not all third-party certifications.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series B\",\"date\":\"2024-01\",\"amount_usd\":28000000},\"citations\":[\"https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/\"]},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/\"],\"notes\":\"The latest verified funding announcement is January 17, 2024, before the May 9, 2025\u2013November 9, 2026 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://apply.workable.com/j/9512015CA0\"],\"notes\":\"Sales Development Representative \u2013 Inbound, Barcelona; posting dated October 1, 2026.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://help.cloudtalk.io/en/articles/17212695-introducing-the-ai-sales-dialer\"],\"notes\":\"The rebuilt AI Sales Dialer became available September 28, 2026, within May 9\u2013November 9, 2026; features include multi-number dialing, fresh-contact prioritization, callbacks and AI voicemail detection.\"},\"leadership_change_12mo\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No dated C-level or VP-level arrival or departure was verified for November 9, 2025\u2013November 9, 2026, and a complete, start-date-bearing leadership roster was unavailable. The VP Sales and VP People arrivals found were before the window.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\"],\"citations\":[\"https://apply.workable.com/j/9512015CA0\"],\"notes\":\"The SDR posting explicitly requires maintaining lead data in HubSpot CRM; this is direct evidence of internal use rather than merely offering an integration.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The R&D posts cover testing, voice-infrastructure monitoring and technical backlog decisions; authors include CPTO Josef Lapka and engineering leader Jaroslav Tome\u010dek. The site\u2019s generic author footer labels Lapka \u201cSenior Copywriter,\u201d but the independent customer case study identifies him as CPTO.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.cloudtalk.io/blog/rnd/testing-strategy-how-we-build-for-reliability/",
+     "https://www.cloudtalk.io/blog/rnd/blog-post-6-ensuring-global-call-quality-with-sipfront/",
+     "https://sipfront.com/case-studies/cloudtalk-global-call-quality/",
+     "https://www.cloudtalk.io/blog/rnd/how-do-we-work-with-technical-backlog/",
+     "https://www.linkedin.com/posts/jaroslavtomecek_how-do-we-work-with-technical-backlog-cloudtalk-activity-7382494277425143808-1ypW"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Toronto",
+     "country": "Canada"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/cloudtalk.io"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://help.cloudtalk.io/en/",
+     "https://help.cloudtalk.io/en/articles/10570091-integrations-guide"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest verified funding announcement is January 17, 2024, before the May 9, 2025\u2013November 9, 2026 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+    ]
+   },
+   "founded_year": {
+    "value": 2016,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/cloudtalk.io"
+    ]
+   },
+   "last_funding": {
+    "value": {
+     "date": "2024-01",
+     "stage": "Series B",
+     "amount_usd": 28000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "The rebuilt AI Sales Dialer became available September 28, 2026, within May 9\u2013November 9, 2026; features include multi-number dialing, fresh-contact prioritization, callbacks and AI voicemail detection.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://help.cloudtalk.io/en/articles/17212695-introducing-the-ai-sales-dialer"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.cloudtalk.io/pricing/"
+    ]
+   },
+   "employee_band": {
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/cloudtalk.io"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Sales Development Representative \u2013 Inbound, Barcelona; posting dated October 1, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://apply.workable.com/j/9512015CA0"
+    ]
+   },
+   "model_provider": {
+    "notes": "The subprocessor list explicitly associates these providers with Conversation Intelligence, transcription, AI Voice Agent configuration or voice-agent processing.",
+    "value": "OpenAI; Anthropic; Google; AssemblyAI; ElevenLabs; Deepgram",
+    "status": "asserted",
+    "citations": [
+     "https://www.cloudtalk.io/sub-processors/"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Nokia",
+     "Glovo"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.cloudtalk.io/customer-stories/nokia/",
+     "https://www.cloudtalk.io/customer-stories/glovo/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The near-date vacancy snapshot, verified November 10, 2026, lists four openings and no qualifying AI/ML/data-science title. The previously advertised AI Researcher role was marked removed May 8, 2026. The official board is accessible but its vacancy titles are not exposed in the readable page.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://apply.workable.com/cloudtalk/",
+     "https://www.theantijobboard.com/startups/companies/cloudtalk",
+     "https://builtin.com/job/ai-researcher/8730260"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Public claims include SOC 2 Type II and ISO/IEC 27001 certification, GDPR and HIPAA compliance, and PCI DSS merchant requirements through SAQ A 4.0; these are not all third-party certifications.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://media.cloudtalk.io/2026/06/CloudTalk-Security-Whitepaper.pdf",
+     "https://trust.cloudtalk.io/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The SDR posting explicitly requires maintaining lead data in HubSpot CRM; this is direct evidence of internal use rather than merely offering an integration.",
+    "value": [
+     "HubSpot"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://apply.workable.com/j/9512015CA0"
+    ]
+   },
+   "product_one_liner": {
+    "value": "CloudTalk is an AI-powered business phone and voice-agent platform that helps small and mid-sized sales and support teams make and receive calls, automate conversations, and analyze customer interactions.",
+    "status": "asserted",
+    "citations": [
+     "https://apply.workable.com/cloudtalk/jobs/view/8F45B904A7.md"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "No dated C-level or VP-level arrival or departure was verified for November 9, 2025\u2013November 9, 2026, and a complete, start-date-bearing leadership roster was unavailable. The VP Sales and VP People arrivals found were before the window.",
+    "status": "unknown",
+    "citations": []
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/cloudtalk/jobs/view/8F45B904A7.md"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/cloudtalk/jobs/view/8F45B904A7.md"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/customer-stories/nokia/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/customer-stories/glovo/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/customer-stories/nokia/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/customer-stories/glovo/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/cloudtalk.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/cloudtalk.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/cloudtalk.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/cloudtalk.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/cloudtalk.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/cloudtalk.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/testing-strategy-how-we-build-for-reliability/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/blog-post-6-ensuring-global-call-quality-with-sipfront/"
+     },
+     {
+      "url": "https://sipfront.com/case-studies/cloudtalk-global-call-quality/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/how-do-we-work-with-technical-backlog/"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/jaroslavtomecek_how-do-we-work-with-technical-backlog-cloudtalk-activity-7382494277425143808-1ypW"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/testing-strategy-how-we-build-for-reliability/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/blog-post-6-ensuring-global-call-quality-with-sipfront/"
+     },
+     {
+      "url": "https://sipfront.com/case-studies/cloudtalk-global-call-quality/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/how-do-we-work-with-technical-backlog/"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/jaroslavtomecek_how-do-we-work-with-technical-backlog-cloudtalk-activity-7382494277425143808-1ypW"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/testing-strategy-how-we-build-for-reliability/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/blog-post-6-ensuring-global-call-quality-with-sipfront/"
+     },
+     {
+      "url": "https://sipfront.com/case-studies/cloudtalk-global-call-quality/"
+     },
+     {
+      "url": "https://www.cloudtalk.io/blog/rnd/how-do-we-work-with-technical-backlog/"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/jaroslavtomecek_how-do-we-work-with-technical-backlog-cloudtalk-activity-7382494277425143808-1ypW"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://help.cloudtalk.io/en/"
+     },
+     {
+      "url": "https://help.cloudtalk.io/en/articles/10570091-integrations-guide"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://help.cloudtalk.io/en/"
+     },
+     {
+      "url": "https://help.cloudtalk.io/en/articles/10570091-integrations-guide"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/cloudtalk/"
+     },
+     {
+      "url": "https://www.theantijobboard.com/startups/companies/cloudtalk"
+     },
+     {
+      "url": "https://builtin.com/job/ai-researcher/8730260"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/cloudtalk/"
+     },
+     {
+      "url": "https://www.theantijobboard.com/startups/companies/cloudtalk"
+     },
+     {
+      "url": "https://builtin.com/job/ai-researcher/8730260"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/cloudtalk/"
+     },
+     {
+      "url": "https://www.theantijobboard.com/startups/companies/cloudtalk"
+     },
+     {
+      "url": "https://builtin.com/job/ai-researcher/8730260"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/sub-processors/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/sub-processors/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/sub-processors/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://media.cloudtalk.io/2026/06/CloudTalk-Security-Whitepaper.pdf"
+     },
+     {
+      "url": "https://trust.cloudtalk.io/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://media.cloudtalk.io/2026/06/CloudTalk-Security-Whitepaper.pdf"
+     },
+     {
+      "url": "https://trust.cloudtalk.io/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://media.cloudtalk.io/2026/06/CloudTalk-Security-Whitepaper.pdf"
+     },
+     {
+      "url": "https://trust.cloudtalk.io/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://www.cloudtalk.io/blog/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/j/9512015CA0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/j/9512015CA0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/j/9512015CA0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://help.cloudtalk.io/en/articles/17212695-introducing-the-ai-sales-dialer"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://help.cloudtalk.io/en/articles/17212695-introducing-the-ai-sales-dialer"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://help.cloudtalk.io/en/articles/17212695-introducing-the-ai-sales-dialer"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/j/9512015CA0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/j/9512015CA0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://apply.workable.com/j/9512015CA0"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

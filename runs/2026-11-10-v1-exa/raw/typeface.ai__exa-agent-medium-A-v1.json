@@ -1,0 +1,839 @@
+{
+ "id": "agent_run_e5ca6cde76d144b8b4643ebd43b19e70",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T18:48:17.333Z",
+ "completedAt": "2026-11-10T18:49:27.342Z",
+ "request": {
+  "query": "Research the company Typeface (typeface.ai). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "medium"
+ },
+ "error": null,
+ "output": {
+  "text": "Research findings for Typeface as of 2026-11-09.",
+  "structured": {
+   "eng_blog": {
+    "notes": "The readable blog index is a marketing, product, and company-news publication; it does not show two qualifying engineer-authored technical implementation posts.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/blog"
+    ]
+   },
+   "hq_location": {
+    "notes": "",
+    "value": {
+     "city": "Palo Alto",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/typefaceai",
+     "https://www.cbinsights.com/company/typeface"
+    ]
+   },
+   "public_docs": {
+    "notes": "Typeface has a public developer documentation site with multiple API, MCP, webhook, and connector articles.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://developers.typeface.ai/docs/introduction",
+     "https://developers.typeface.ai/docs/list-of-connectors"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest listed funding round occurred in 2025-09, within the 18 months before 2026-11-09.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.cbinsights.com/company/typeface/financials",
+     "https://www.cbinsights.com/investor/vinyl-capital-1"
+    ]
+   },
+   "founded_year": {
+    "notes": "",
+    "value": 2022,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/typefaceai",
+     "https://www.cbinsights.com/company/typeface"
+    ]
+   },
+   "last_funding": {
+    "notes": "The latest listed round is dated September 2025; the cited records do not disclose an amount.",
+    "value": {
+     "date": "2025-09",
+     "stage": "Unattributed VC"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.cbinsights.com/company/typeface/financials",
+     "https://www.cbinsights.com/investor/vinyl-capital-1"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Typeface announced the next generation of its Orchestration Engine, including Arc Graph, Arc Fabric, and Arc Loop, on 2026-09-22.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/blog/typeface-orchestration-engine"
+    ]
+   },
+   "pricing_page": {
+    "notes": "The site directs prospective buyers to contact sales and does not provide a pricing page with plans or prices.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/",
+     "https://www.typeface.ai/contact-sales"
+    ]
+   },
+   "employee_band": {
+    "notes": "The cited company profile reports 304 employees.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/typefaceai"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The live job board includes an Enterprise Account Executive role.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/typeface/jobs/5244588007"
+    ]
+   },
+   "model_provider": {
+    "notes": "Typeface says its agents orchestrate models from these providers, among others.",
+    "value": "OpenAI, Anthropic, Cohere, and Google",
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/blog/how-to-use-multimodal-ai-for-video-marketing"
+    ]
+   },
+   "named_customers": {
+    "notes": "Both names appear in customer testimonials on the homepage.",
+    "value": [
+     "J.P. Morgan Asset & Wealth Management",
+     "Post"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The live job board includes a Staff ML Engineer / Applied Scientist posting.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/typeface/jobs/4833257007"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Only certifications from the requested five-item set are listed.",
+    "value": [
+     "SOC 2",
+     "ISO 27001"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/security-and-governance",
+     "https://trust.typeface.ai/home"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "These systems are named as supported connectors on Typeface's public connector documentation.",
+    "value": [
+     "Braze",
+     "Hubspot",
+     "Klaviyo",
+     "Marketo",
+     "Salesforce Data Cloud",
+     "Salesforce Marketing Cloud",
+     "Microsoft Dynamics 365 Customer Engagement"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://developers.typeface.ai/docs/list-of-connectors"
+    ]
+   },
+   "product_one_liner": {
+    "notes": "",
+    "value": "Typeface is an enterprise marketing AI platform that orchestrates brand intelligence, AI agents, and workflows to help marketing, creative, and IT teams create and activate personalized, on-brand campaigns at scale.",
+    "status": "asserted",
+    "citations": [
+     "https://www.typeface.ai/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "The reviewed company and careers pages do not provide a dated, verifiable C-level or VP-level join/leave event in the requested window.",
+    "status": "unknown",
+    "citations": [
+     "https://www.typeface.ai/company",
+     "https://www.typeface.ai/careers"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured",
+    "citations": [
+     {
+      "url": "https://www.typeface.ai/",
+      "title": "Typeface | Enterprise Marketing AI Platform for Agentic Workflows"
+     },
+     {
+      "url": "https://www.typeface.ai/company",
+      "title": "About Typeface"
+     },
+     {
+      "url": "https://www.typeface.ai/careers",
+      "title": "Careers"
+     },
+     {
+      "url": "https://www.typeface.ai/security-and-governance",
+      "title": "Enterprise data security and control"
+     },
+     {
+      "url": "https://trust.typeface.ai/home",
+      "title": "TrustShare"
+     },
+     {
+      "url": "https://www.typeface.ai/blog/typeface-announces-100-m-in-new-funding-to-fuel-global-expansion-of-its-personalized-generative-ai-platform-for-enterprises",
+      "title": "Personalized Generative AI for Enterprise Typeface Announces $100M in Funding"
+     },
+     {
+      "url": "https://www.typeface.ai/blog/typeface-marketing-orchestration-engine",
+      "title": "Introducing the Marketing Orchestration Engine: Bringing Harmony to Workflow Complexity | Typeface"
+     },
+     {
+      "url": "https://www.typeface.ai/blog/typeface-orchestration-engine",
+      "title": "The Next Generation of the Typeface Orchestration Engine: Closing Marketing's Open Loop"
+     },
+     {
+      "url": "https://developers.typeface.ai/docs/introduction",
+      "title": "Introduction"
+     },
+     {
+      "url": "https://developers.typeface.ai/docs/list-of-connectors",
+      "title": "Connectors Overview"
+     },
+     {
+      "url": "https://www.typeface.ai/blog",
+      "title": "The Brief"
+     },
+     {
+      "url": "https://www.typeface.ai/blog/how-to-use-multimodal-ai-for-video-marketing",
+      "title": "Multimodal AI for Video Marketing: A Practical Guide"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/typeface/jobs/5244588007",
+      "title": "Job Application for Enterprise Account Executive at Typeface"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/typeface/jobs/4833257007",
+      "title": "Staff ML Engineer at Typeface"
+     },
+     {
+      "url": "https://www.typeface.ai/contact-sales",
+      "title": "Enterprise Generative AI Platform for Marketing - Typeface | Contact Sales"
+     }
+    ],
+    "confidence": "medium"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 0.4,
+  "searches": 12,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.1,
+  "agentCompute": 0.04,
+  "search": 0.06,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

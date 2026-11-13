@@ -1,0 +1,22 @@
+{
+ "url": "https://docs.sprinto.com/integrations/remove-integration-access/zoho-crm",
+ "fetched_at": "2026-11-10T20:53:30.111585+00:00",
+ "hours_after_run": 44.9,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "a47c578feb64c30531aa63cca6cf8ce99150710c655d9eabd8162d6152fa4850",
+ "chars": 3354,
+ "truncated": false,
+ "title": "Zoho CRM: Remove Sprinto Access | Sprinto Docs",
+ "markdown": "For the complete documentation index, see [llms.txt](https://docs.sprinto.com/llms.txt). This page is also available as [Markdown](https://docs.sprinto.com/integrations/remove-integration-access/zoho-crm.md).\n\nUse this guide to remove the access you gave Sprinto in Zoho CRM. These steps are done in Zoho CRM, not in Sprinto. To connect Zoho CRM to Sprinto again later, see [Zoho CRM Integration](https://docs.sprinto.com/integrations/overview/zoho-crm-integration).\n\n* * *\n\n## Access review connection (Zoho sign-in window)[Direct link to heading](https://docs.sprinto.com/integrations/remove-integration-access/zoho-crm\\#access-review-connection-zoho-sign-in-window)\n\n**How to tell:** Only method: you signed in to Zoho and allowed access to Zoho CRM.\n\n**Who must do this:** The Zoho user who connected; if they've left, a Zoho Directory or Zoho One admin who can reset passwords\n\n**What gets removed:** The OAuth grant for the app Sprinto used is deleted from the connecting user's Zoho account.\n\n### Steps[Direct link to heading](https://docs.sprinto.com/integrations/remove-integration-access/zoho-crm\\#steps)\n\n1. As the person who connected Sprinto, sign in to Zoho Accounts for your data centre: accounts.zoho.com (US), accounts.zoho.eu (EU), accounts.zoho.in (India), accounts.zoho.com.au (Australia), accounts.zoho.jp (Japan), accounts.zoho.uk (UK), accounts.zoho.sa (Saudi Arabia), accounts.zoho.ae (UAE), accounts.zoho.sg (Singapore) or accounts.zohocloud.ca (Canada).\n\n2. Click **Sessions** in the left menu, then click **Connected Apps**.\n\n3. Find the app Sprinto used. The app may be listed as Sprinto or Truto.\n\n4. Hover over the app, click **Revoke Access**, then click **Yes, Proceed**. If you don't see Revoke Access, click the entry, then click **Delete**.\n\n5. If that person has left and can't sign in, an admin clears their app access instead. In Zoho Directory: **Admin Panel** → **User Management** → click the user → **Reset Password**, enter or generate a new password, select **Clear mobile sessions** and API tokens, enter your own password, then click **Reset**. In Zoho One: **Admin Panel** → **User Management** → click the user → **Reset Password**, select **Clear mobile sessions** and API tokens, enter your own password, then click **Yes, Confirm**.\n\n\n### Confirm it's removed[Direct link to heading](https://docs.sprinto.com/integrations/remove-integration-access/zoho-crm\\#confirm-its-removed)\n\nSprinto no longer appears under Sessions → Connected Apps for the user who connected. If you used the admin reset, Sprinto's connection stops working.\n\nIf you also connected Zoho Vault to Sprinto with the same Zoho user, check the entry first — one entry may cover both connections. The admin reset in step 5 ends every app connection that person made, not just Sprinto's.\n\nIn step 4, the button may be labelled **Revoke Access** or **Delete**. If you use the admin reset in step 5, check afterwards that Sprinto's Zoho connection has stopped working.\n\n**Official guide:** [Zoho Accounts help](https://help.zoho.com/portal/en/kb/accounts/manage-your-zoho-account/articles/sessions-zohoaccounts)\n\n[PreviousZendesk: Remove Sprinto Access](https://docs.sprinto.com/integrations/remove-integration-access/zendesk) [NextZoho Desk: Remove Sprinto Access](https://docs.sprinto.com/integrations/remove-integration-access/zoho-desk)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "crm_stack_signal"
+ ],
+ "late": true
+}

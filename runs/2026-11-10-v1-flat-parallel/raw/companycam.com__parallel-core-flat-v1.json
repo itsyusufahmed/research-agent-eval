@@ -1,0 +1,534 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8fe78e5cbdad25e4",
+  "interaction_id": "trun_142119f6a1b4439e8fe78e5cbdad25e4",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "companycam.com"
+  },
+  "created_at": "2026-11-10T18:47:41.957633Z",
+  "modified_at": "2026-11-10T18:53:18.817099Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8fe78e5cbdad25e4",
+   "interaction_id": "trun_142119f6a1b4439e8fe78e5cbdad25e4",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "companycam.com"
+   },
+   "created_at": "2026-11-10T18:47:41.957633Z",
+   "modified_at": "2026-11-10T18:53:18.817099Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Press | CompanyCam",
+       "url": "https://companycam.com/press",
+       "excerpts": [
+        "Founded in 2015 in Lincoln, Nebraska, CompanyCam's jobsite management tools and AI shortcuts are trusted by contractors at every phase of any project."
+       ]
+      }
+     ],
+     "reasoning": "The company's press page states that CompanyCam was founded in 2015.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "CompanyCam Trust Center | Security & Compliance | CompanyCam",
+       "url": "https://companycam.com/trust-center",
+       "excerpts": [
+        "CompanyCam is SOC 2 Type II certified, GDPR and CCPA compliant"
+       ]
+      }
+     ],
+     "reasoning": "The Company's trust-center statement explicitly names SOC 2 Type II and GDPR among its security/privacy claims; CCPA is outside the requested set.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "CompanyCam - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/companycam/__eWj-jyb42WvkkkABaxK1QD9XJKLGEpe6viHxjDlklho",
+       "excerpts": [
+        "CompanyCam is headquartered in Lincoln, [United States]"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies the headquarters as Lincoln, United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "CompanyCam - DEV Community",
+       "url": "https://dev.to/companycam",
+       "excerpts": [
+        "[Sidekiq Request ID Tracking](https://dev.to/companycam/sidekiq-request-id-tracking-2cdm)",
+        "[chadwilken profile](https://dev.to/chadwilken)",
+        "[Chad Wilken](https://dev.to/chadwilken)",
+        "Chad Wilken",
+        "Follow",
+        "[Jul 8 '22](https://dev.to/companycam/sidekiq-request-id-tracking-2cdm)",
+        "## [Sidekiq Request ID Tracking](https://dev.to/companycam/sidekiq-request-id-tracking-2cdm)",
+        "[9 reactions](https://dev.to/companycam/sidekiq-request-id-tracking-2cdm) [Add Comment](https://dev.to/companycam/sidekiq-request-id-tracking-2cdm)",
+        "3 min read",
+        "[Building a Workflow for Async Searchkick Reindexing](https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8)",
+        "[Jun 29 '22](https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8)",
+        "## [Building a Workflow for Async Searchkick Reindexing](https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8)"
+       ]
+      }
+     ],
+     "reasoning": "The CompanyCam DEV index shows multiple engineering-focused posts, including Sidekiq request tracking and a workflow for asynchronous Searchkick reindexing, authored by Chad Wilken; this meets the threshold of at least two technical posts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Press | CompanyCam",
+       "url": "https://companycam.com/press",
+       "excerpts": [
+        "CompanyCam is the leading jobsite productivity platform for contractors, helping them document jobs, communicate with crews, and share progress with clients in real time."
+       ]
+      }
+     ],
+     "reasoning": "The Company's press page directly describes the product and its contractor audience and says it supports job documentation, crew communication, and client progress sharing.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "CompanyCam",
+       "url": "https://linkedin.com/company/companycam",
+       "excerpts": [
+        "View all 365 employees \u2026 size 201-500 employees"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile gives 365 employees and explicitly classifies the company in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "CompanyCam \u00b7 Austin French",
+       "url": "https://austn.net/work/companycam",
+       "excerpts": [
+        "Every AI feature needs the same plumbing: picking a model, prompting it, calling tools, handling failures.",
+        "So I built shared Rails abstractions on top of [RubyLLM](https://rubyllm.com/) , and they were adopted across the product. RubyLLM doesn't care which provider you use, and we shipped on Anthropic, OpenAI and Groq. Voice commands, context-aware invoice generation and tool-calling workflows all ran on that layer."
+       ]
+      }
+     ],
+     "reasoning": "A CompanyCam engineer's project write-up says the shared AI layer was shipped on Anthropic, OpenAI, and Groq.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "CompanyCam Pricing",
+       "url": "https://companycam.com/pricing",
+       "excerpts": [
+        "Core For Solo & Small Teams / month **Includes 1 User (2 User Limit)** Additional Users: $ 29 each USD / Billed Annually"
+       ]
+      }
+     ],
+     "reasoning": "The CompanyCam pricing page presents a plan and billing details, so it is a public pricing page.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "CompanyCam 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/223056-55",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |6\\. Later Stage VC (Series C) |21-Aug-2025 |$415M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook's funding table identifies the latest listed Series C deal as $415 million.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Case Study: Apple Roofing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/apple-roofing",
+       "excerpts": [
+        "How Apple Roofing Scaled Sustainably with the Help of CompanyCam Logo for Apple Roofing"
+       ]
+      },
+      {
+       "title": "Case Study: Vincent's Heating and Plumbing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/vincents-heating-and-plumbing",
+       "excerpts": [
+        "How CompanyCam brought efficiency to Vincent\u2019s Heating & Plumbing\u2019s process. Industry HVAC Location Michigan Employees 23 Customer Since"
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam's customer case studies identify Apple Roofing and Vincent's Heating and Plumbing as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "CompanyCam 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/223056-55",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |6\\. Later Stage VC (Series C) |21-Aug-2025 |$415M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The latest Series C date shown in the funding table is August 21, 2025, represented as 2025-08.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Sr. Salesforce Administrator @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277",
+       "excerpts": [
+        "Administer and maintain core GTM systems (Salesforce, marketing automation, sales engagement tools"
+       ]
+      },
+      {
+       "title": "Sr. Marketing Analyst @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1",
+       "excerpts": [
+        "Experience building dashboards and reports in BI tools, specifically Omni, Amplitude, and Marketo"
+       ]
+      }
+     ],
+     "reasoning": "The Salesforce administrator posting identifies Salesforce as a core GTM system; the marketing analyst posting names Marketo. These support the two selected CRM/marketing stack signals.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/will-martin-11161997",
+       "excerpts": [
+        "title: Vice President of Mid-Market Sales start date year: 2026 start date month: 7 start date: 2026-07-01"
+       ]
+      }
+     ],
+     "reasoning": "The profile identifies Will Martin as a CompanyCam VP and gives a July 1, 2026 start date, within the 12 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "CompanyCam Jobs",
+       "url": "https://jobs.ashbyhq.com/companycam",
+       "excerpts": [
+        "# Open Positions (10)",
+        "Filters:",
+        "Reset filters",
+        "All Departments Engineering (1) \u2002Product Engineering (1) Finance (1) \u2002Enterprise Analytics (1) Marketing (1) \u2002Digital & Marketing Operations (1) Product (2) \u2002Product Design (1) \u2002Product Management (1) Sales (4) \u2002Account Management (1) \u2002Revenue Operations (2) \u2002SMB Sales (1) Support & Success (1) \u2002Mid-Market Customer Success (1)",
+        "All Employment Types Full time (10)",
+        "All Locations Headquarters (3) Remote (7) Remote UK (1)",
+        "All Location Types On-site (1) Remote (8)",
+        "No filters applied",
+        "## Engineering Product Engineering",
+        "[### Senior Software Engineer (Ruby on Rails) Product Engineering \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/76838979-40c4-4d4c-81e6-976ed7b6ee78)",
+        "## Finance Enterprise Analytics",
+        "[### Sr. Marketing Analyst Enterprise Analytics \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1)",
+        "## Marketing Digital & Marketing Operations",
+        "[### Digital Marketing Specialist Digital & Marketing Operations \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/32dd4d15-3ac6-4955-ac18-38892a5e3fd4)",
+        "## Product Product Design",
+        "[### Senior Product Designer Product Design \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/a6b467d7-22bf-40f8-bad4-54e26c0f18e8)",
+        "## Product Product Management",
+        "[### Senior Product Manager Product Management \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b563123e-053e-4a33-9585-94861da86d3f)",
+        "## Sales Account Management",
+        "[### Account Manager, SMB Account Management \u2022 Headquarters \u2022 Full time](https://jobs.ashbyhq.com/companycam/9c8921a4-88a3-4240-a6ff-12d1cafac919)",
+        "## Sales Revenue Operations",
+        "[### GTM Systems Developer Revenue Operations \u2022 Remote; Headquarters \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b6335f3d-853d-4e66-823f-2e09489738a1) [### Sr. Salesforce Administrator Revenue Operations \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277)",
+        "## Sales SMB Sales",
+        "[### Inside Sales Represenative SMB Sales \u2022 Remote UK \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703)",
+        "## Support & Success Mid-Market Customer Success",
+        "[### Customer Success Manager, Mid-Market Mid-Market Customer Success \u2022 Headquarters \u2022 Full time \u2022 On-site](https://jobs.ashbyhq.com/companycam/4071100a-079c-4c3d-9c76-1e3e5919e069)"
+       ]
+      }
+     ],
+     "reasoning": "The current job board lists all ten open positions; none of the role titles includes AI, ML, machine learning, data science, applied/research scientist, NLP, LLM, or computer vision.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "CompanyCam 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/223056-55",
+       "excerpts": [
+        "* Latest Deal Type Series C * Latest Deal Amount $415M * Investors 11 CompanyCam General Information Description ... [Learn more](https://pitchbook.com/profiles/request-access) CompanyCam Valuation & Funding |Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |6\\. Later Stage VC (Series C) |21-Aug-2025 |$415M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook labels the latest deal type Series C and dates the latest funding table row to August 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "CompanyCam Developer Portal",
+       "url": "https://developers.companycam.com/",
+       "excerpts": [
+        "Welcome to CompanyCam If you're looking for the place to build a custom integration for your users or publish an integration to the public for all CompanyCam customers to see, you found the right place!"
+       ]
+      },
+      {
+       "title": "Using AI Features for Documents | Help Center",
+       "url": "https://help.companycam.com/en/articles/8991633-using-ai-features-for-documents",
+       "excerpts": [
+        "Using AI Features for Documents Learn how to use AI features in CompanyCam to automatically generate Summaries, Daily Logs, Progress Recaps, and Walkthroughs from your job-site Photos September 1, 2026"
+       ]
+      },
+      {
+       "title": "Getting Started with CompanyCam | Help Center",
+       "url": "https://help.companycam.com/en/articles/14808615-getting-started-with-companycam",
+       "excerpts": [
+        "Getting Started with CompanyCam Getting Started with CompanyCam Learn how to download CompanyCam, set up your account, invite your team, create a Project, and share photos with clients. September 8, 2026"
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam has a public developer portal and multiple publicly accessible help-center articles, meeting the public documentation criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "CompanyCam - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/companycam/__eWj-jyb42WvkkkABaxK1QD9XJKLGEpe6viHxjDlklho",
+       "excerpts": [
+        "CompanyCam is headquartered in Lincoln, [United States]"
+       ]
+      }
+     ],
+     "reasoning": "The cited headquarters profile identifies Lincoln as CompanyCam's headquarters city.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Auto Drafting Proposals Using the AI Assistant | CompanyCam News Center",
+       "url": "https://intercom.news/companycam/161683-auto-drafting-proposals-using-the-ai-assistant",
+       "excerpts": [
+        "# Auto Drafting Proposals Using the AI Assistant",
+        "Jose avatar",
+        "Shared by Jose",
+        "\u2022 October 27, 2026",
+        "Auto Drafting Proposals adds a starter card to the AI assistant inside a proposal, and it drafts the proposal for you using the context already on the project.",
+        "Writing a proposal has meant re-entering details the team already captured on the jobsite, so this turns that project context into a first draft, and you spend your time reviewing and adjusting a proposal instead of building one from scratch. The draft uses what's on the project, so the scope and details reflect what was actually seen on site."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam announced its AI proposal auto-drafting feature on October 27, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "CompanyCam Jobs",
+       "url": "https://jobs.ashbyhq.com/companycam",
+       "excerpts": [
+        "## Sales SMB Sales",
+        "[### Inside Sales Represenative SMB Sales \u2022 Remote UK \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703)"
+       ]
+      },
+      {
+       "title": "Inside Sales Represenative @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703",
+       "excerpts": [
+        "Manage an ongoing pipeline of prospects to deliver new customers consistently at or above our sales quota level"
+       ]
+      }
+     ],
+     "reasoning": "The open job board lists an Inside Sales Representative role, and the associated posting describes managing a prospect pipeline; this is an active sales-representative opening.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "CompanyCam Secures Strategic Growth Investment from B Capital",
+       "url": "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html",
+       "excerpts": [
+        "Aug 21, 2025, 09:00 ET Share this article Share this article * * * * * _Series C transaction led by B Capital with participation from Decades Holdings, underscoring confidence in CompanyCam's durable growth and vision to transform how contractors work_ LINCOLN, Neb. , Aug. 21, 2025 /PRNewswire/ -- CompanyCam, the leading job site productivity platform with field-ready AI, today announced a new strategic growth investment from B Capital through its Series C transaction."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam announced its Series C investment on August 21, 2025, which is within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "CompanyCam Trust Center | Security & Compliance | CompanyCam",
+       "url": "https://companycam.com/trust-center",
+       "excerpts": [
+        "CompanyCam is SOC 2 Type II certified, GDPR and CCPA compliant"
+       ]
+      }
+     ],
+     "reasoning": "The trust-center statement directly names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "CompanyCam Trust Center | Security & Compliance | CompanyCam",
+       "url": "https://companycam.com/trust-center",
+       "excerpts": [
+        "CompanyCam is SOC 2 Type II certified, GDPR and CCPA compliant"
+       ]
+      }
+     ],
+     "reasoning": "The trust-center statement directly names GDPR compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Case Study: Apple Roofing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/apple-roofing",
+       "excerpts": [
+        "How Apple Roofing Scaled Sustainably with the Help of CompanyCam Logo for Apple Roofing"
+       ]
+      }
+     ],
+     "reasoning": "Apple Roofing is named and its logo is displayed on its CompanyCam case study.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Case Study: Vincent's Heating and Plumbing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/vincents-heating-and-plumbing",
+       "excerpts": [
+        "How CompanyCam brought efficiency to Vincent\u2019s Heating & Plumbing\u2019s process. Industry HVAC Location Michigan Employees 23 Customer Since"
+       ]
+      }
+     ],
+     "reasoning": "Vincent's Heating and Plumbing is named in a CompanyCam customer case study.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Sr. Salesforce Administrator @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277",
+       "excerpts": [
+        "Administer and maintain core GTM systems (Salesforce, marketing automation, sales engagement tools"
+       ]
+      }
+     ],
+     "reasoning": "The CompanyCam Salesforce administrator posting directly names Salesforce as a core GTM system.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Sr. Marketing Analyst @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1",
+       "excerpts": [
+        "Experience building dashboards and reports in BI tools, specifically Omni, Amplitude, and Marketo"
+       ]
+      }
+     ],
+     "reasoning": "The CompanyCam marketing analyst posting directly names Marketo among its systems.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "CompanyCam is a jobsite productivity platform for contractors to document work, communicate with crews, and share project progress with clients in real time.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic, OpenAI, and Groq",
+    "pricing_page": true,
+    "funding_amount_usd": 415000000.0,
+    "named_customers": [
+     "Apple Roofing",
+     "Vincent's Heating and Plumbing"
+    ],
+    "funding_date": "2025-08",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Marketo"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "Lincoln",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

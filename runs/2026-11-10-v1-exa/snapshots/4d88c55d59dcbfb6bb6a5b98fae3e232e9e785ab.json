@@ -1,0 +1,22 @@
+{
+ "url": "https://feedback.spacelift.io/changelog/spacelift-flows-automates-day-2-operations",
+ "fetched_at": "2026-11-10T19:39:22.117583+00:00",
+ "hours_after_run": 43.7,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "d757c398c7c0616c184beba82c94e04ff79c452260a2b2d19206e6e0b178fb0c",
+ "chars": 3695,
+ "truncated": false,
+ "title": "Spacelift Flows Automates Day 2 Operations",
+ "markdown": "[Skip to main content](https://feedback.spacelift.io/changelog/spacelift-flows-automates-day-2-operations#pt-main)\n\nOct 29, 2026\n\nOct 29, 2026\n\n# Spacelift Flows Automates Day 2 Operations\n\n![](https://6697afd8db026456df4b91e0.featurebase-attachments.com/c/changelog/6ae235f059021a9ce635e783/01a183ba-ba02-716e-afe6-e23215c9d5c5/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20261110T200000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=REDACTED&X-Amz-SignedHeaders=host&X-Amz-Signature=REDACTED)\n\nYour applies run through policy and review, but alerts, incident response, and cleanup still run on scripts nobody can see. Flows is the Day 2 operations layer of the Full-Stack Infrastructure Orchestration Platform. It puts that work on an event-based canvas with a step-by-step execution trail, and when a run fails, you replay the whole flow or only the part that broke.\n\nBuild a flow by dragging blocks onto the canvas, describing it to the AI assistant in Flows, or calling the Flows MCP server from your own AI client. You can also write the code yourself. Every flow is defined in YAML with JavaScript, so you can copy it out or keep it in Git and ship it through the `spacelift-io/flows` Terraform provider. Block config reads upstream data with `outputs.<block>.<field>` and secrets with `secrets.<KEY>`. Pre-built blocks cover integrations like AWS, Kubernetes, Terraform, Datadog, PagerDuty, Jira, and Slack, with no containers to build or hosting to set up.\n\nThe MCP Tool block exposes a flow as an MCP tool with a JSON Schema input. Agents call it as themselves, and an approval gate pauses the run for human sign-off, with both recorded in the audit trail. Agent access can run inside your VPC, on-premises, or air-gapped.\n\nSpacelift Deploy events trigger flows, and flows trigger runs. Route drift alerts to Slack and Jira, or gate each stage of a dev, staging, and production rollout on a Slack approval.\n\n![](https://6697afd8db026456df4b91e0.featurebase-attachments.com/c/changelog/6ae235f059021a9ce635e783/01a183ba-ec07-7083-90b5-e9b7898addd8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20261110T200000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=REDACTED&X-Amz-SignedHeaders=host&X-Amz-Signature=REDACTED)\n\nOpen the app switcher in the top left of Spacelift Deploy and select Flows. Start from one of 40+ templates, including Kubernetes namespaces with resource quotas, PostgreSQL management forms, and environment vending with multi-level approvals.\n\n[Browse the template gallery →](https://docs.useflows.com/templates/) or [read the Flows docs →](https://docs.useflows.com/)\n\nReactComment\n\n![](https://6697afd8db026456df4b91e0.featurebase-attachments.com/c/changelog/6ae235f059021a9ce635e783/01a183ba-ba02-716e-afe6-e23215c9d5c5/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20261110T200000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=REDACTED&X-Amz-SignedHeaders=host&X-Amz-Signature=REDACTED)\n\n![](https://6697afd8db026456df4b91e0.featurebase-attachments.com/c/changelog/6ae235f059021a9ce635e783/01a183ba-ec07-7083-90b5-e9b7898addd8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20261110T200000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=REDACTED&X-Amz-SignedHeaders=host&X-Amz-Signature=REDACTED)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "launched_6mo"
+ ],
+ "late": true
+}

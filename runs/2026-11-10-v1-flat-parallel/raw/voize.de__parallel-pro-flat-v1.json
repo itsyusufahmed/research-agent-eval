@@ -1,0 +1,473 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8f376ee9c495435f",
+  "interaction_id": "trun_142119f6a1b4439e8f376ee9c495435f",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "voize.de"
+  },
+  "created_at": "2026-11-10T18:48:28.543545Z",
+  "modified_at": "2026-11-10T18:51:15.606812Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8f376ee9c495435f",
+   "interaction_id": "trun_142119f6a1b4439e8f376ee9c495435f",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "voize.de"
+   },
+   "created_at": "2026-11-10T18:48:28.543545Z",
+   "modified_at": "2026-11-10T18:51:15.606812Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "voize for press",
+       "url": "https://www.voize.de/presse",
+       "excerpts": [
+        "Since its founding in 2020, voize has specialized in developing an intuitive voice documentation app for the care sector."
+       ]
+      }
+     ],
+     "reasoning": "The company's press page explicitly states that voize was founded in 2020: https://www.voize.de/presse.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - voize",
+       "url": "https://trust.voize.ai/",
+       "excerpts": [
+        "Compliance HIPAA GDPR EU AI ACT"
+       ]
+      },
+      {
+       "title": "Trust Center - voize",
+       "url": "https://trust.voize.ai/faq",
+       "excerpts": [
+        "[EN] Which certifications does voize hold? voize is HIPAA compliant. We are not yet ISO 27001, SOC 2, or HDS certified ourselves - however, our information security program is built and operated"
+       ]
+      }
+     ],
+     "reasoning": "The trust center lists HIPAA and GDPR. Its FAQ confirms HIPAA compliance and explicitly says voize is not yet ISO 27001 or SOC 2 certified, so those are excluded. These are public compliance claims, not an assertion that GDPR or HIPAA constitutes an independently issued certification. Sources: https://trust.voize.ai/ and https://trust.voize.ai/faq.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "voize: We build the AI companion for nurses, to create time for care. | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/voize",
+       "excerpts": [
+        "Location: Berlin, Germany"
+       ]
+      }
+     ],
+     "reasoning": "Y Combinator identifies voize's location as Berlin, Germany: https://www.ycombinator.com/companies/voize.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "voize Tech Blog",
+       "url": "https://tech.voize.de/",
+       "excerpts": [
+        "Welcome to the voize Tech Blog, where the voize tech team shares their knowledge and experiences in building an AI-powered product in the healthcare sector.",
+        "[## Teaching Prometheus and OpenTelemetry-collector to be friends Multi-cluster monitoring with consistent dashboards by making OpenTelemetry-collector metrics compatible with kube-prometheus-stack / kubernetes-mixin default Grafana dashboards Reuben Morais Reuben Morais 10 minute read Start reading](https://tech.voize.de/posts/opentelemetry-collector-prometheus-compat) [## PyTorch Lite Multiplatform Write inference code once and run it on both Android and iOS. Erik Ziegler Erik Ziegler 10 minute read Start reading](https://tech.voize.de/posts/pytorch-lite-multiplatform)"
+       ]
+      }
+     ],
+     "reasoning": "The engineering team's blog lists at least two qualifying technical posts: Reuben Morais on Prometheus/OpenTelemetry monitoring and Erik Ziegler on cross-platform PyTorch inference. Source: https://tech.voize.de/.",
+     "confidence": "high"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "voize \u2013 AI Companion for Nurses",
+       "url": "https://www.voize.ai/us",
+       "excerpts": [
+        "voize is a voice documentation app built specifically for long-term care and skilled nursing facilities. Caregivers simply speak into a phone throughout their shift, and voize's AI converts their speech into structured EHR data entries. The result is better, more complete documentation, less time behind a computer, and more time providing care."
+       ]
+      }
+     ],
+     "reasoning": "The product FAQ describes the intended care settings and explains that caregivers' speech is converted into structured EHR entries: https://www.voize.ai/us.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "voize: We build the AI companion for nurses, to create time for care. | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/voize",
+       "excerpts": [
+        "voize voize Founded: 2020 Batch: Winter 2022 Team Size: 140 Status: Active Location: Berlin, Germany Primary Partner: Nicolas Dessaigne"
+       ]
+      }
+     ],
+     "reasoning": "Y Combinator reports a team size of 140, placing voize in the 101\u2013200 band. This is a reported count rather than a real-time payroll total: https://www.ycombinator.com/companies/voize.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Senior ML Engineer - NLP (m/f/d) @ voize",
+       "url": "https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241",
+       "excerpts": [
+        "Our ML and evaluation tooling uses Python; our agent and app code uses Kotlin Multiplatform and JetBrains Koog. We use Claude through our inference service, alongside open and on-device models where they make sense. You don't need to know our specific languages or frameworks before joining: depth and the ability to learn matter more than a keyword match."
+       ]
+      }
+     ],
+     "reasoning": "The company's ML engineering posting explicitly says, 'We use Claude through our inference service,' alongside open and on-device models: https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "voize Preise & Refinanzierung | Pflegesoftware Kosten",
+       "url": "https://www.voize.de/preise",
+       "excerpts": [
+        "voize lizenziert nach der Anzahl versorgter Personen \u2013 nicht nach Nutzer-Accounts."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page explains licensing by the number of people receiving care rather than individual user accounts. Public numeric prices are not required by the question: https://www.voize.de/preise.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "voize raises $50 million to power the AI companion transforming nursing care - Balderton Capital",
+       "url": "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care",
+       "excerpts": [
+        "[voize](https://www.voizeai.com/) , the company building the AI companion redefining nursing care, has raised $50 million in Series A funding led by Balderton Capital, with participation from existing investors HV Capital, Redalpine and Y Combinator."
+       ]
+      },
+      {
+       "title": "voize",
+       "url": "https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about",
+       "excerpts": [
+        "Name: voize | Website Url: https://www.voize.de/ | Primary Sector: HealthTech | Primary Subsector: Healthcare IT | Stage: Series A | Founded Year: 2020 | Employee Count Official: 149 | Location Country: Germany | Location State: Brandenburg | Location City: Potsdam | Latest Funding Round Amount Usd: 50000000.0 | Latest Funding Round Date: 2025-11-17 | Latest Funding Round Name: Series A | Total Disclosed Funding Usd: 59500000.0 | Acquisitions As Acquirer Count: 0 | Funded: Yes | Other Taxonomy Tags: [\"Artificial Intelligence - Industry Applications\",\"Native AI in Healthcare\",\"Native AI by"
+       ]
+      }
+     ],
+     "reasoning": "The investor announcement states a $50 million Series A, and the funding profile identifies it as the latest round. Sources: https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care and https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "voize Preise & Refinanzierung | Pflegesoftware Kosten",
+       "url": "https://www.voize.de/preise",
+       "excerpts": [
+        "Caritas Stuttgart Logo",
+        "AGAPLESION Logo"
+       ]
+      }
+     ],
+     "reasoning": "Both Caritas Stuttgart and AGAPLESION appear in the company's customer logo area on its pricing page: https://www.voize.de/preise.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "voize raises $50 million to power the AI companion transforming nursing care - Balderton Capital",
+       "url": "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care",
+       "excerpts": [
+        "17 November, 2025"
+       ]
+      },
+      {
+       "title": "voize",
+       "url": "https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about",
+       "excerpts": [
+        "Name: voize | Website Url: https://www.voize.de/ | Primary Sector: HealthTech | Primary Subsector: Healthcare IT | Stage: Series A | Founded Year: 2020 | Employee Count Official: 149 | Location Country: Germany | Location State: Brandenburg | Location City: Potsdam | Latest Funding Round Amount Usd: 50000000.0 | Latest Funding Round Date: 2025-11-17 | Latest Funding Round Name: Series A | Total Disclosed Funding Usd: 59500000.0 | Acquisitions As Acquirer Count: 0 | Funded: Yes | Other Taxonomy Tags: [\"Artificial Intelligence - Industry Applications\",\"Native AI in Healthcare\",\"Native AI by"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding profile dates the round to November 17, 2025, matching the investor announcement; the requested month is therefore 2025-11. Sources: https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about and https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Growth Marketing Manager (f/m/d) @ voize",
+       "url": "https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00",
+       "excerpts": [
+        "Strong HubSpot knowledge: workflows, lead scoring, lifecycle stages, nurture programs, segmentation, and reporting"
+       ]
+      }
+     ],
+     "reasoning": "The Growth Marketing Manager posting requires HubSpot workflows, lead scoring, lifecycle stages, nurture programs, segmentation and reporting, providing a direct marketing-stack signal: https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Luis Semprun",
+       "url": "https://linkedin.com/in/semprunl",
+       "excerpts": [
+        "LinkedIn profile: Luis Semprun. Role: VP Engineering @ voize. Returned fields: {experience_text=\"voize Berlin, Germany 2026-09-01 VP Engineering Hive Berlin, Germany 2026-04-01 CTO Hive Berlin, Germany 2024-07-01 2026-04-01 VP Engineering Trade Republic Berlin, Germany 2022-08-01 2024-07-01 Led all customer-facing product engineering groups(150+ FTEs), and drove key initiatives both before and after achieving product-market fit."
+       ]
+      }
+     ],
+     "reasoning": "Luis Semprun's profile records a September 2026 start as VP Engineering at voize, within November 9, 2025\u2013November 9, 2026. This is profile evidence rather than a company appointment announcement: https://linkedin.com/in/semprunl.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Senior ML Engineer - NLP (m/f/d) @ voize",
+       "url": "https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241",
+       "excerpts": [
+        "Senior ML Engineer - NLP (m/f/d)",
+        "[Apply for this Job](https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241/application)"
+       ]
+      }
+     ],
+     "reasoning": "The live Senior ML Engineer \u2013 NLP posting includes an application link and qualifies under the requested role titles: https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "voize raises $50 million to power the AI companion transforming nursing care - Balderton Capital",
+       "url": "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care",
+       "excerpts": [
+        "[voize](https://www.voizeai.com/) , the company building the AI companion redefining nursing care, has raised $50 million in Series A funding led by Balderton Capital, with participation from existing investors HV Capital, Redalpine and Y Combinator."
+       ]
+      },
+      {
+       "title": "voize",
+       "url": "https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about",
+       "excerpts": [
+        "Name: voize | Website Url: https://www.voize.de/ | Primary Sector: HealthTech | Primary Subsector: Healthcare IT | Stage: Series A | Founded Year: 2020 | Employee Count Official: 149 | Location Country: Germany | Location State: Brandenburg | Location City: Potsdam | Latest Funding Round Amount Usd: 50000000.0 | Latest Funding Round Date: 2025-11-17 | Latest Funding Round Name: Series A | Total Disclosed Funding Usd: 59500000.0 | Acquisitions As Acquirer Count: 0 | Funded: Yes | Other Taxonomy Tags: [\"Artificial Intelligence - Industry Applications\",\"Native AI in Healthcare\",\"Native AI by"
+       ]
+      }
+     ],
+     "reasoning": "The investor announcement calls the round Series A, and the funding profile identifies Series A as the latest round. Sources: https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care and https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Startseite | voize Hilfe-Center",
+       "url": "https://help.voize.de/de/",
+       "excerpts": [
+        "[Krankenhaus](https://help.voize.de/de/collections/1465648-krankenhaus)",
+        "23 Artikel"
+       ]
+      }
+     ],
+     "reasoning": "The public help center lists a hospital documentation collection containing 23 articles, satisfying the multi-article requirement: https://help.voize.de/de/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "voize for press",
+       "url": "https://www.voize.de/presse",
+       "excerpts": [
+        "With a team of 50 employees and headquarters in Berlin, voize works to bring innovative technologies to various sectors - with the goal of reducing bureaucracy and creating more time for truly important tasks."
+       ]
+      },
+      {
+       "title": "voize: We build the AI companion for nurses, to create time for care. | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/voize",
+       "excerpts": [
+        "Location: Berlin, Germany"
+       ]
+      }
+     ],
+     "reasoning": "The company's press page explicitly identifies its headquarters as Berlin, corroborated by its Y Combinator location. A company database instead lists Potsdam, so the explicit company headquarters statement is preferred. Sources: https://www.voize.de/presse and https://www.ycombinator.com/companies/voize.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Dedalus HealthCare und voize integrieren KI-Sprachassistent in ORBIS",
+       "url": "https://www.voize.ai/de/presse/dedalus-voize-integration-orbis",
+       "excerpts": [
+        "**Bonn, 22. September 2026** \u2013 Dedalus HealthCare und voize bringen sprachgest\u00fctzte KI-Assistenz ins ORBIS-Krankenhaus-Informationssystem.",
+        "Die gemeinsame L\u00f6sung von Dedalus und voize erm\u00f6glicht es, Pflegeinformationen per Sprache direkt am Patientenbett zu erfassen."
+       ]
+      }
+     ],
+     "reasoning": "The September 22, 2026 announcement introduces voice-based AI documentation integrated into Dedalus ORBIS, a substantive clinical workflow integration within May 9\u2013November 9, 2026: https://www.voize.ai/de/presse/dedalus-voize-integration-orbis.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Sales Development Representative (m/f/d) - SaaS @ voize",
+       "url": "https://jobs.ashbyhq.com/voize/b8a80d0e-a245-4d90-89ba-317190aff23c",
+       "excerpts": [
+        "Sales Development Representative (m/f/d) - SaaS",
+        "[Apply for this Job](https://jobs.ashbyhq.com/voize/b8a80d0e-a245-4d90-89ba-317190aff23c/application)"
+       ]
+      }
+     ],
+     "reasoning": "The live Sales Development Representative posting includes an application link: https://jobs.ashbyhq.com/voize/b8a80d0e-a245-4d90-89ba-317190aff23c.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "voize raises $50 million to power the AI companion transforming nursing care - Balderton Capital",
+       "url": "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care",
+       "excerpts": [
+        "[voize](https://www.voizeai.com/) , the company building the AI companion redefining nursing care, has raised $50 million in Series A funding led by Balderton Capital, with participation from existing investors HV Capital, Redalpine and Y Combinator.",
+        "17 November, 2025"
+       ]
+      }
+     ],
+     "reasoning": "The $50 million Series A announcement is dated November 17, 2025, within May 9, 2025\u2013November 9, 2026: https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - voize",
+       "url": "https://trust.voize.ai/faq",
+       "excerpts": [
+        "[EN] Which certifications does voize hold? voize is HIPAA compliant. We are not yet ISO 27001, SOC 2, or HDS certified ourselves - however, our information security program is built and operated"
+       ]
+      }
+     ],
+     "reasoning": "The trust FAQ explicitly states that voize is HIPAA compliant: https://trust.voize.ai/faq.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - voize",
+       "url": "https://trust.voize.ai/",
+       "excerpts": [
+        "Compliance HIPAA GDPR EU AI ACT"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly listed in the trust center's compliance section: https://trust.voize.ai/.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Growth Marketing Manager (f/m/d) @ voize",
+       "url": "https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00",
+       "excerpts": [
+        "Strong HubSpot knowledge: workflows, lead scoring, lifecycle stages, nurture programs, segmentation, and reporting"
+       ]
+      }
+     ],
+     "reasoning": "The growth marketing posting explicitly names HubSpot and its marketing automation functions: https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "voize Preise & Refinanzierung | Pflegesoftware Kosten",
+       "url": "https://www.voize.de/preise",
+       "excerpts": [
+        "Caritas Stuttgart Logo"
+       ]
+      }
+     ],
+     "reasoning": "Caritas Stuttgart appears in the customer logo area: https://www.voize.de/preise.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "voize Preise & Refinanzierung | Pflegesoftware Kosten",
+       "url": "https://www.voize.de/preise",
+       "excerpts": [
+        "AGAPLESION Logo"
+       ]
+      }
+     ],
+     "reasoning": "AGAPLESION appears in the customer logo area: https://www.voize.de/preise.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2020.0,
+    "compliance_certs": [
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "Germany",
+    "eng_blog": true,
+    "product_one_liner": "voize is an AI voice-documentation app for caregivers in long-term care and skilled nursing facilities that converts spoken notes into structured EHR entries.",
+    "employee_band": "101-200",
+    "model_provider": "Claude",
+    "pricing_page": true,
+    "funding_amount_usd": 50000000.0,
+    "named_customers": [
+     "Caritas Stuttgart",
+     "AGAPLESION"
+    ],
+    "funding_date": "2025-11",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series A",
+    "public_docs": true,
+    "hq_city": "Berlin",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

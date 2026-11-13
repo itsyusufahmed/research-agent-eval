@@ -1,0 +1,989 @@
+{
+ "id": "agent_run_626fa3a72068403c80c79d92665d7c0b",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:05:51.024Z",
+ "completedAt": "2026-11-10T19:09:34.493Z",
+ "request": {
+  "query": "Research the company SurveySparrow (surveysparrow.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"SurveySparrow is an AI-powered customer-experience platform that helps organizations collect feedback through conversational surveys and other channels, analyze it, and turn insights into action.\",\"citations\":[\"https://surveysparrow.com/\",\"https://linkedin.com/company/surveysparrow\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://surveysparrow.com/pricing/\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Decathlon\",\"Truliv\",\"Supertails\",\"Tarkett\"],\"citations\":[\"https://surveysparrow.com/customers/decathlon/\",\"https://surveysparrow.com/customers/truliv/\",\"https://surveysparrow.com/customers/supertails/\",\"https://surveysparrow.com/customers/tarkett/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://linkedin.com/company/surveysparrow\"]},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"San Francisco\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/surveysparrow\",\"https://pitchbook.com/profiles/company/266539-87\"],\"notes\":\"The current company profile and corporate-office listing identify San Francisco; some press releases retain Palo Alto.\"},\"founded_year\":{\"status\":\"asserted\",\"value\":2017,\"citations\":[\"https://linkedin.com/company/surveysparrow\",\"https://surveysparrow.com/about-us/\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://engineering.surveysparrow.com/\",\"https://engineering.surveysparrow.com/no-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775\",\"https://engineering.surveysparrow.com/building-reliability-together-why-slos-matter-f8c0eeab7400\"],\"notes\":\"Developer-authored posts explain the PostgreSQL migration and the engineering team\u2019s SLO/reliability implementation.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://support.surveysparrow.com/hc/en/\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://emploive.com/companies/surveysparrow-private-limited\"],\"notes\":\"The readable jobs board lists 11 open roles, none with a qualifying AI/ML/data-science title. The official careers URL could not be read; this assessment relies on the third-party board.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"OpenAI; Azure OpenAI; Anthropic Claude Sonnet via Amazon Bedrock\",\"citations\":[\"https://surveysparrow.com/legal/sub-processor-policy/\",\"https://aws.amazon.com/aws-startups/learn/surveysparrow-turns-talk-into-traction-for-customer-experience/\"],\"notes\":\"The subprocessor policy names OpenAI and Azure OpenAI; the AWS customer case study identifies Claude Sonnet for summarization, clustering and sentiment scoring. This is not an exhaustive feature-by-feature model inventory.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\",\"GDPR\"],\"citations\":[\"https://security.surveysparrow.com/\",\"https://surveysparrow.com/legal/security/\"],\"notes\":\"Public compliance claims include SOC 2 Type II and ISO/IEC 27001:2022. HIPAA and GDPR are compliance claims, not equivalent to independent certification. PCI compliance is attributed to the payment processor, not SurveySparrow itself.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Seed\",\"date\":\"2019-04\",\"amount_usd\":1400000},\"citations\":[\"https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners/\",\"https://www.vccircle.com/prime-venture-partners-backs-saas-startup-surveysparrow\",\"https://pitchbook.com/profiles/company/266539-87\"],\"notes\":\"The company announcement is datelined April 2, 2019, despite a 2026 page header. Its reported amount is $1.4 million; a funding database instead records November 2018, so the announcement date is used.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners/\",\"https://pitchbook.com/profiles/company/266539-87\"],\"notes\":\"The latest listed round is the April 2019 seed announcement, before the May 9, 2025\u2013November 9, 2026 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://emploive.com/jobs/5723395/business-development-representative-us-surveysparrow-private-limited\",\"https://startuplandscape.in/jobs/1172-business-development-representative-us-surveysparrow\"],\"notes\":\"Business Development Representative - US; the dated job listing was verified November 5, 2026.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/introducing-echo-turn-feedback-into-action-before-the-customer-is-1222877\"],\"notes\":\"SurveySparrow announced the launch of Echo, its real-time conversational feedback AI agent, on September 17, 2026, within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/vipint7\"],\"notes\":\"Vipin Thomas\u2019s profile dates his VP Revenue Operations & Strategy role at SurveySparrow through June 2026 and his next role at Freshworks from June 2026, establishing a VP departure inside November 9, 2025\u2013November 9, 2026.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"Salesforce\",\"LinkedIn Sales Navigator\",\"ZoomInfo\",\"Zoho CRM\",\"Marketo\",\"MailChimp\",\"Intercom\",\"Zendesk\",\"Zapier\"],\"citations\":[\"https://emploive.com/jobs/5723395/business-development-representative-us-surveysparrow-private-limited\",\"https://surveysparrow.com/apps/zoho-survey-integration/\",\"https://zapier.com/apps/surveysparrow/integrations\",\"https://surveysparrow.com/features/extending-capabilities-with-api-webhooks-integrations/\"],\"notes\":\"HubSpot, Salesforce, LinkedIn Sales Navigator and ZoomInfo appear as example tools in sales hiring requirements. The other names appear in integrations documentation/catalogs. These are visible stack signals, not proof of internal deployment.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Developer-authored posts explain the PostgreSQL migration and the engineering team\u2019s SLO/reliability implementation.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://engineering.surveysparrow.com/",
+     "https://engineering.surveysparrow.com/no-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775",
+     "https://engineering.surveysparrow.com/building-reliability-together-why-slos-matter-f8c0eeab7400"
+    ]
+   },
+   "hq_location": {
+    "notes": "The current company profile and corporate-office listing identify San Francisco; some press releases retain Palo Alto.",
+    "value": {
+     "city": "San Francisco",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/surveysparrow",
+     "https://pitchbook.com/profiles/company/266539-87"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://support.surveysparrow.com/hc/en/"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest listed round is the April 2019 seed announcement, before the May 9, 2025\u2013November 9, 2026 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners/",
+     "https://pitchbook.com/profiles/company/266539-87"
+    ]
+   },
+   "founded_year": {
+    "value": 2017,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/surveysparrow",
+     "https://surveysparrow.com/about-us/"
+    ]
+   },
+   "last_funding": {
+    "notes": "The company announcement is datelined April 2, 2019, despite a 2026 page header. Its reported amount is $1.4 million; a funding database instead records November 2018, so the announcement date is used.",
+    "value": {
+     "date": "2019-04",
+     "stage": "Seed",
+     "amount_usd": 1400000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners/",
+     "https://www.vccircle.com/prime-venture-partners-backs-saas-startup-surveysparrow",
+     "https://pitchbook.com/profiles/company/266539-87"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "SurveySparrow announced the launch of Echo, its real-time conversational feedback AI agent, on September 17, 2026, within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/introducing-echo-turn-feedback-into-action-before-the-customer-is-1222877"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://surveysparrow.com/pricing/"
+    ]
+   },
+   "employee_band": {
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/surveysparrow"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Business Development Representative - US; the dated job listing was verified November 5, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://emploive.com/jobs/5723395/business-development-representative-us-surveysparrow-private-limited",
+     "https://startuplandscape.in/jobs/1172-business-development-representative-us-surveysparrow"
+    ]
+   },
+   "model_provider": {
+    "notes": "The subprocessor policy names OpenAI and Azure OpenAI; the AWS customer case study identifies Claude Sonnet for summarization, clustering and sentiment scoring. This is not an exhaustive feature-by-feature model inventory.",
+    "value": "OpenAI; Azure OpenAI; Anthropic Claude Sonnet via Amazon Bedrock",
+    "status": "asserted",
+    "citations": [
+     "https://surveysparrow.com/legal/sub-processor-policy/",
+     "https://aws.amazon.com/aws-startups/learn/surveysparrow-turns-talk-into-traction-for-customer-experience/"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Decathlon",
+     "Truliv",
+     "Supertails",
+     "Tarkett"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://surveysparrow.com/customers/decathlon/",
+     "https://surveysparrow.com/customers/truliv/",
+     "https://surveysparrow.com/customers/supertails/",
+     "https://surveysparrow.com/customers/tarkett/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The readable jobs board lists 11 open roles, none with a qualifying AI/ML/data-science title. The official careers URL could not be read; this assessment relies on the third-party board.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://emploive.com/companies/surveysparrow-private-limited"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Public compliance claims include SOC 2 Type II and ISO/IEC 27001:2022. HIPAA and GDPR are compliance claims, not equivalent to independent certification. PCI compliance is attributed to the payment processor, not SurveySparrow itself.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://security.surveysparrow.com/",
+     "https://surveysparrow.com/legal/security/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "HubSpot, Salesforce, LinkedIn Sales Navigator and ZoomInfo appear as example tools in sales hiring requirements. The other names appear in integrations documentation/catalogs. These are visible stack signals, not proof of internal deployment.",
+    "value": [
+     "HubSpot",
+     "Salesforce",
+     "LinkedIn Sales Navigator",
+     "ZoomInfo",
+     "Zoho CRM",
+     "Marketo",
+     "MailChimp",
+     "Intercom",
+     "Zendesk",
+     "Zapier"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://emploive.com/jobs/5723395/business-development-representative-us-surveysparrow-private-limited",
+     "https://surveysparrow.com/apps/zoho-survey-integration/",
+     "https://zapier.com/apps/surveysparrow/integrations",
+     "https://surveysparrow.com/features/extending-capabilities-with-api-webhooks-integrations/"
+    ]
+   },
+   "product_one_liner": {
+    "value": "SurveySparrow is an AI-powered customer-experience platform that helps organizations collect feedback through conversational surveys and other channels, analyze it, and turn insights into action.",
+    "status": "asserted",
+    "citations": [
+     "https://surveysparrow.com/",
+     "https://linkedin.com/company/surveysparrow"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Vipin Thomas\u2019s profile dates his VP Revenue Operations & Strategy role at SurveySparrow through June 2026 and his next role at Freshworks from June 2026, establishing a VP departure inside November 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/vipint7"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://surveysparrow.com/"
+     },
+     {
+      "url": "https://linkedin.com/company/surveysparrow"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://surveysparrow.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://surveysparrow.com/customers/decathlon/"
+     },
+     {
+      "url": "https://surveysparrow.com/customers/truliv/"
+     },
+     {
+      "url": "https://surveysparrow.com/customers/supertails/"
+     },
+     {
+      "url": "https://surveysparrow.com/customers/tarkett/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/surveysparrow"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/surveysparrow"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/266539-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/surveysparrow"
+     },
+     {
+      "url": "https://surveysparrow.com/about-us/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://engineering.surveysparrow.com/"
+     },
+     {
+      "url": "https://engineering.surveysparrow.com/no-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775"
+     },
+     {
+      "url": "https://engineering.surveysparrow.com/building-reliability-together-why-slos-matter-f8c0eeab7400"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://support.surveysparrow.com/hc/en/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://emploive.com/companies/surveysparrow-private-limited"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://surveysparrow.com/legal/sub-processor-policy/"
+     },
+     {
+      "url": "https://aws.amazon.com/aws-startups/learn/surveysparrow-turns-talk-into-traction-for-customer-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://security.surveysparrow.com/"
+     },
+     {
+      "url": "https://surveysparrow.com/legal/security/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners/"
+     },
+     {
+      "url": "https://www.vccircle.com/prime-venture-partners-backs-saas-startup-surveysparrow"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/266539-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners/"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/266539-87"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://emploive.com/jobs/5723395/business-development-representative-us-surveysparrow-private-limited"
+     },
+     {
+      "url": "https://startuplandscape.in/jobs/1172-business-development-representative-us-surveysparrow"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/introducing-echo-turn-feedback-into-action-before-the-customer-is-1222877"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/vipint7"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://emploive.com/jobs/5723395/business-development-representative-us-surveysparrow-private-limited"
+     },
+     {
+      "url": "https://surveysparrow.com/apps/zoho-survey-integration/"
+     },
+     {
+      "url": "https://zapier.com/apps/surveysparrow/integrations"
+     },
+     {
+      "url": "https://surveysparrow.com/features/extending-capabilities-with-api-webhooks-integrations/"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

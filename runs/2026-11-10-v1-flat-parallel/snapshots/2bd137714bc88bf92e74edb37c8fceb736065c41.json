@@ -1,0 +1,24 @@
+{
+ "url": "https://help.aikido.dev/autofix-and-remediation/scope/ai-autofix-for-sast-and-iac-issues",
+ "fetched_at": "2026-11-10T19:15:19.736112+00:00",
+ "hours_after_run": 43.3,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "9664402f451660c95a4c99efab8280f5d8dac066024581bb6dbee4826eb3cf5e",
+ "chars": 3288,
+ "truncated": false,
+ "title": "AutoFix for SAST | Aikido",
+ "markdown": "# AutoFix for SAST\n\nAikido Local Scan accounts DO NOT have access to AutoFix within the UI, but it is available for the IDE plugins.\n\nThe goal of Aikido has always been to save you time by reducing noise, focusing on the issues that truly matter. With the introduction of the **AI Autofix** feature, Aikido takes this one step further.\n\n### [\\#](https://help.aikido.dev/autofix-and-remediation/scope/ai-autofix-for-sast-and-iac-issues\\#key-features-of-ai-autofix) Key Features of AI Autofix\n\n- **Preview Changes:** Review detailed previews of AI-generated fixes before implementing them to ensure alignment with your standards.\n\n- **Create Pull Requests (PRs):** Generate pull requests directly in your Source Control Management (SCM) system from the Autofix interface.\n\n- **Direct IDE Integration:** Apply fixes instantly to your codebase via the VS Code integration, saving even more time.\n\n![AI-generated patch enhances JSONP security by escaping callback, mitigating XSS vulnerabilities in PHP code.](https://help.aikido.dev/_assets/d5c415f696cb/ucarecdn-859a9d47-c060-4244-8c32-89fff802c11e.png)\n\n\n* * *\n\n### [\\#](https://help.aikido.dev/autofix-and-remediation/scope/ai-autofix-for-sast-and-iac-issues\\#important-info) Important Info\n\n- **We do not use your code for training / fine-tuning**\n  - Code snippets required for generating fixes are securely transmitted to **AWS Bedrock** over encrypted channels. Aikido **nor** [AWS Bedrock](https://aws.amazon.com/bedrock/security-compliance/) use your code for training or fine-tuning AI models.\n- **Speed**\n  - Simple fixes are typically generated in under 5 seconds. Larger or more complex fixes may take up to 30 seconds, depending on file size and issue complexity.\n- **Confidence Levels**\n  - Fixes are categorized into confidence levels: **High**, **Medium**, and **Low**. Manual reviews before merging are recommended.\n\n    ![Low confidence warning: Further validation of similar fixes needed.](https://help.aikido.dev/_assets/d9c8c53d8fa4/ucarecdn-2c623f8c-0bb2-444c-8071-d957e38e3f99.png)\n\n* * *\n\n### [\\#](https://help.aikido.dev/autofix-and-remediation/scope/ai-autofix-for-sast-and-iac-issues\\#how-to-use-the-ai-autofix-functionality) How to use the AI Autofix functionality\n\n- **Step 1**. Navigate to the SAST or IaC [Autofix Page.](https://app.aikido.dev/issues/fix/sast?regionRedirect=1) All potential fixes are grouped by type and location.\n\n![Aikido Autofix dashboard showing critical SAST issues and options to fix or preview autofix.](https://help.aikido.dev/_assets/06c9b253fd61/ucarecdn-2b801f85-4354-421b-b93d-7ff66d316815.png)\n\n- **Step 2.** Select one or multiple fixes to preview or create a PR for.\n\n![Security scan identifies path traversal vulnerabilities in two PHP files, both with medium severity.](https://help.aikido.dev/_assets/803acd57c70f/ucarecdn-b9f2fa3e-053f-492c-8a1d-3f0ed3b90a2c.png)\n\n- **Step 3.** Preview and Apply.\n  - **Create a PR**: Automatically generate a pull request in your SCM.\n  - **Apply Directly**: Instantly implement the fix in your codebase via VS Code integration.\n\n![Code patch preview adding file path validation to prevent path traversal vulnerabilities in PHP files.](https://help.aikido.dev/_assets/a53799b05509/ucarecdn-f6ac142a-2711-4ce2-b4d4-db6ae64938b2.png)\n\n* * *",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T18:47:24.550279+00:00",
+ "hours_after_launch": 0.47
+}

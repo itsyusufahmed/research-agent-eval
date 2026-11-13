@@ -1,0 +1,233 @@
+{
+ "vendor": "parallel",
+ "endpoint": "https://api.parallel.ai/v1/tasks/runs",
+ "client": "run_parallel_flat.py",
+ "schema_variant": "flat, 20 top-level properties, basis as the receipt",
+ "prompt_version": "v1-2026-11-10",
+ "processors": [
+  "core",
+  "pro",
+  "ultra"
+ ],
+ "config_ids": {
+  "core": "parallel-core-flat-v1",
+  "pro": "parallel-pro-flat-v1",
+  "ultra": "parallel-ultra-flat-v1"
+ },
+ "csv": "scored_120.csv",
+ "run_date": "2026-11-09",
+ "run_date_note": "the date in the task text and the records; 'started' is the real launch time",
+ "started": "2026-11-10T13:47:24.550279",
+ "started_local": "2026-11-10T13:47:24.550279-05:00",
+ "started_utc": "2026-11-10T18:47:24.550279+00:00",
+ "price_per_run_usd": {
+  "core": 0.025,
+  "pro": 0.1,
+  "ultra": 0.3
+ },
+ "cost_basis": "list price per processor; the Task API returns no per-run cost; failed runs are not billed",
+ "source_policy": null,
+ "webhook": null,
+ "mcp_servers": null,
+ "beta_headers": [],
+ "enable_events": "unset",
+ "property_count": 20,
+ "mapping_rules": [
+  "A null value is status unknown; anything else is status asserted.",
+  "hq_location is asserted only when hq_city and hq_country are both non-null; value is {city, country}.",
+  "last_funding is asserted when funding_stage is non-null; a null funding_date or funding_amount_usd is allowed; brief_task._norm_value maps none / bootstrapped / self-funded stages to \"none\" and trims a YYYY-MM-DD date to YYYY-MM.",
+  "citations are the URLs in the run's basis entry for the property, plus the per-element entries of a list property (field.0, field.1, ...); for hq_location and last_funding, the union across their parts. An unknown carries no citations (brief_schema.json).",
+  "notes carry the basis reasoning for the property (each part labelled when there is more than one entry).",
+  "The raw response, basis included, is stored untouched under raw/."
+ ],
+ "task_spec": {
+  "output_schema": {
+   "type": "json",
+   "json_schema": {
+    "type": "object",
+    "properties": {
+     "product_one_liner": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "What does the product do, and who is it for? One sentence. Null means unknown."
+     },
+     "pricing_page": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true. Null means unknown."
+     },
+     "named_customers": {
+      "type": [
+       "array",
+       "null"
+      ],
+      "items": {
+       "type": "string"
+      },
+      "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers. Null means unknown."
+     },
+     "employee_band": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "enum": [
+       "11-20",
+       "21-50",
+       "51-100",
+       "101-200",
+       "201-500",
+       null
+      ],
+      "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500. Null means unknown."
+     },
+     "hq_city": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "Headquarters city and country. This property is the city. Null means unknown."
+     },
+     "hq_country": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "Headquarters city and country. This property is the country. Null means unknown."
+     },
+     "founded_year": {
+      "type": [
+       "integer",
+       "null"
+      ],
+      "description": "Year founded. Null means unknown."
+     },
+     "eng_blog": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all. Null means unknown."
+     },
+     "public_docs": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage. Null means unknown."
+     },
+     "ai_ml_roles_open": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere. Null means unknown."
+     },
+     "model_provider": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown. Null means unknown."
+     },
+     "compliance_certs": {
+      "type": [
+       "array",
+       "null"
+      ],
+      "items": {
+       "type": "string"
+      },
+      "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count. Null means unknown."
+     },
+     "funding_stage": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page. This property is the stage. Null means unknown."
+     },
+     "funding_date": {
+      "type": [
+       "string",
+       "null"
+      ],
+      "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page. This property is the date as YYYY-MM. Null means unknown."
+     },
+     "funding_amount_usd": {
+      "type": [
+       "number",
+       "null"
+      ],
+      "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page. This property is the amount in USD. Null means unknown."
+     },
+     "raised_18mo": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all. Null means unknown."
+     },
+     "hiring_sdr_ae": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere. Null means unknown."
+     },
+     "launched_6mo": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read. Null means unknown."
+     },
+     "leadership_change_12mo": {
+      "type": [
+       "boolean",
+       "null"
+      ],
+      "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified. Null means unknown."
+     },
+     "crm_stack_signal": {
+      "type": [
+       "array",
+       "null"
+      ],
+      "items": {
+       "type": "string"
+      },
+      "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read. Null means unknown."
+     }
+    },
+    "required": [
+     "product_one_liner",
+     "pricing_page",
+     "named_customers",
+     "employee_band",
+     "hq_city",
+     "hq_country",
+     "founded_year",
+     "eng_blog",
+     "public_docs",
+     "ai_ml_roles_open",
+     "model_provider",
+     "compliance_certs",
+     "funding_stage",
+     "funding_date",
+     "funding_amount_usd",
+     "raised_18mo",
+     "hiring_sdr_ae",
+     "launched_6mo",
+     "leadership_change_12mo",
+     "crm_stack_signal"
+    ],
+    "additionalProperties": false
+   }
+  }
+ }
+}

@@ -1,0 +1,934 @@
+{
+ "id": "agent_run_1432a4b560e94629acc56c1f20db1b99",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:11:24.557Z",
+ "completedAt": "2026-11-10T19:15:48.038Z",
+ "request": {
+  "query": "Research the company Owl.co (owl.co). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Owl.co provides AI tools for insurance carriers that read claim documents, surface evidence and signals, and help claims teams make faster, auditable decisions.\",\"citations\":[\"https://owl.co/products\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://owl.co/\",\"https://owl.co/contact\"],\"notes\":\"No public pricing or plan page was found; the site routes prospective customers to sales, and /pricing returned no page.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[],\"citations\":[\"https://owl.co/resources/case-study-streamlining-claims-management-with-owl-co-ai-solutions\",\"https://owl.co/resources/evaluating-ai-assisted-claims-review-across-five-lines-of-business\"],\"notes\":\"The readable customer case studies anonymize the insurers rather than naming them; two customer names could not be established.\"},\"employee_band\":{\"status\":\"asserted\",\"value\":\"51-100\",\"citations\":[\"https://www.linkedin.com/company/owldotco\"],\"notes\":\"The company profile reports 99 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Vancouver\",\"country\":\"Canada\"},\"citations\":[\"https://www.linkedin.com/company/owldotco\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2019,\"citations\":[\"https://www.linkedin.com/company/owldotco\"],\"notes\":\"The company profile reports 2019; other databases use earlier founding or launch dates.\"},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://owl.co/resources\"],\"notes\":\"The readable resources index contains claims-industry, product and marketing content, not two engineer-authored implementation posts.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://owl.co/documentation\",\"https://owl.co/\"],\"notes\":\"A public documentation landing page lists categories and article teasers, but several readable documentation articles or a working developer portal could not be verified; this does not meet the requested multi-article threshold.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://owlco.na.teamtailor.com/jobs\"],\"notes\":\"The current board lists 10 roles, none with a qualifying AI, ML or data-science title. Principal Software Engineer roles involve AI, but their titles do not meet the stated rule; older Deep Learning Engineer listings are closed.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Owl-1.5\",\"citations\":[\"https://owl.co/documentation\",\"https://owl.co/owlvision\"],\"notes\":\"The documentation names Owl-1.5, and OwlVision is described as a domain-specific system rather than a prompt over a frontier model. OpenAI and Anthropic appear in homepage comparisons, which do not establish their use in the product.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\",\"GDPR\"],\"citations\":[\"https://owl.co/security\"],\"notes\":\"These are the company\u2019s public certification/compliance claims; SOC 2 is specified as Type II. HIPAA and GDPR are compliance claims rather than standalone certifications.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series B\",\"date\":\"2021-11\",\"amount_usd\":30000000},\"citations\":[\"https://www.businesswire.com/news/home/20211103005209/en/owl.co-Secures-30-Million-in-Funding-to-Address-Insurance-Industry%E2%80%99s-80-Billion-Fraud-Problem\"]},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.businesswire.com/news/home/20211103005209/en/owl.co-Secures-30-Million-in-Funding-to-Address-Insurance-Industry%E2%80%99s-80-Billion-Fraud-Problem\",\"https://www.linkedin.com/company/owldotco\"],\"notes\":\"The latest disclosed round is dated November 3, 2021, before the May 9, 2025\u2013November 9, 2026 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive\"],\"notes\":\"A live Enterprise Account Executive posting is open.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows\",\"https://owl.co/resources\"],\"notes\":\"The May 9, 2026 announcement introduces Template Assistant as a new feature, on the first day of the six-month window.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/mary-beth-carion\"],\"notes\":\"Mary Beth Carion ended her Vice President, Partnerships & Strategy role in January 2026 and transitioned to Strategic Advisor; this is a departure from the VP role, not a complete separation from Owl.co.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\"],\"citations\":[\"https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive\"],\"notes\":\"The Enterprise Account Executive posting requires forecasting in Salesforce and maintaining CRM hygiene.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The readable resources index contains claims-industry, product and marketing content, not two engineer-authored implementation posts.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/resources"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Vancouver",
+     "country": "Canada"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/owldotco"
+    ]
+   },
+   "public_docs": {
+    "notes": "A public documentation landing page lists categories and article teasers, but several readable documentation articles or a working developer portal could not be verified; this does not meet the requested multi-article threshold.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/documentation",
+     "https://owl.co/"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest disclosed round is dated November 3, 2021, before the May 9, 2025\u2013November 9, 2026 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.businesswire.com/news/home/20211103005209/en/owl.co-Secures-30-Million-in-Funding-to-Address-Insurance-Industry%E2%80%99s-80-Billion-Fraud-Problem",
+     "https://www.linkedin.com/company/owldotco"
+    ]
+   },
+   "founded_year": {
+    "notes": "The company profile reports 2019; other databases use earlier founding or launch dates.",
+    "value": 2019,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/owldotco"
+    ]
+   },
+   "last_funding": {
+    "value": {
+     "date": "2021-11",
+     "stage": "Series B",
+     "amount_usd": 30000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.businesswire.com/news/home/20211103005209/en/owl.co-Secures-30-Million-in-Funding-to-Address-Insurance-Industry%E2%80%99s-80-Billion-Fraud-Problem"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "The May 9, 2026 announcement introduces Template Assistant as a new feature, on the first day of the six-month window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows",
+     "https://owl.co/resources"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No public pricing or plan page was found; the site routes prospective customers to sales, and /pricing returned no page.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/",
+     "https://owl.co/contact"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 99 employees.",
+    "value": "51-100",
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/owldotco"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "A live Enterprise Account Executive posting is open.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive"
+    ]
+   },
+   "model_provider": {
+    "notes": "The documentation names Owl-1.5, and OwlVision is described as a domain-specific system rather than a prompt over a frontier model. OpenAI and Anthropic appear in homepage comparisons, which do not establish their use in the product.",
+    "value": "Owl-1.5",
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/documentation",
+     "https://owl.co/owlvision"
+    ]
+   },
+   "named_customers": {
+    "notes": "The readable customer case studies anonymize the insurers rather than naming them; two customer names could not be established.",
+    "value": [],
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/resources/case-study-streamlining-claims-management-with-owl-co-ai-solutions",
+     "https://owl.co/resources/evaluating-ai-assisted-claims-review-across-five-lines-of-business"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The current board lists 10 roles, none with a qualifying AI, ML or data-science title. Principal Software Engineer roles involve AI, but their titles do not meet the stated rule; older Deep Learning Engineer listings are closed.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://owlco.na.teamtailor.com/jobs"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "These are the company\u2019s public certification/compliance claims; SOC 2 is specified as Type II. HIPAA and GDPR are compliance claims rather than standalone certifications.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/security"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The Enterprise Account Executive posting requires forecasting in Salesforce and maintaining CRM hygiene.",
+    "value": [
+     "Salesforce"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Owl.co provides AI tools for insurance carriers that read claim documents, surface evidence and signals, and help claims teams make faster, auditable decisions.",
+    "status": "asserted",
+    "citations": [
+     "https://owl.co/products"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Mary Beth Carion ended her Vice President, Partnerships & Strategy role in January 2026 and transitioned to Strategic Advisor; this is a departure from the VP role, not a complete separation from Owl.co.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/mary-beth-carion"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://owl.co/products"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://owl.co/"
+     },
+     {
+      "url": "https://owl.co/contact"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://owl.co/resources/case-study-streamlining-claims-management-with-owl-co-ai-solutions"
+     },
+     {
+      "url": "https://owl.co/resources/evaluating-ai-assisted-claims-review-across-five-lines-of-business"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/owldotco"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/owldotco"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/owldotco"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://owl.co/resources"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://owl.co/documentation"
+     },
+     {
+      "url": "https://owl.co/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://owlco.na.teamtailor.com/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://owl.co/documentation"
+     },
+     {
+      "url": "https://owl.co/owlvision"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://owl.co/security"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.businesswire.com/news/home/20211103005209/en/owl.co-Secures-30-Million-in-Funding-to-Address-Insurance-Industry%E2%80%99s-80-Billion-Fraud-Problem"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.businesswire.com/news/home/20211103005209/en/owl.co-Secures-30-Million-in-Funding-to-Address-Insurance-Industry%E2%80%99s-80-Billion-Fraud-Problem"
+     },
+     {
+      "url": "https://www.linkedin.com/company/owldotco"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows"
+     },
+     {
+      "url": "https://owl.co/resources"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mary-beth-carion"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

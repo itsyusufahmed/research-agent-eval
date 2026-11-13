@@ -1,0 +1,174 @@
+{
+ "schema_version": "v0",
+ "company": "Neostella",
+ "domain": "neostella.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Neostella\u2019s connected legal case-management platform brings together case data, documents, workflows, communications, reporting, and AI for growing and enterprise legal teams.",
+   "citations": [
+    "https://neostella.com/platform"
+   ],
+   "notes": "The platform page says the product connects cases, documents, workflows, communications, reporting, and AI for growing and enterprise legal teams; the one-liner restates that scope."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://neostella.com/pricing"
+   ],
+   "notes": "Neostella has a public pricing page describing packages, and the page content includes a per-user monthly price. This supports a true answer."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Groth Law Firm",
+    "Bell Legal Group"
+   ],
+   "citations": [
+    "https://neostella.com/news/groth-law-firm-selects-neostella",
+    "https://neostella.com/news/neostella-launches-the-legal-industrys-first-case-management-platform-that-connects-all-legal-tools"
+   ],
+   "notes": "named_customers: Neostella\u2019s customer announcement and quote identify Groth Law Firm. Another Neostella announcement quotes Aaron Jophlin, Managing Partner at Bell Legal Group, describing Neostella as a trusted partner. | named_customers.0: Neostella\u2019s announcement names Groth Law Firm and includes a quote from its founder describing Neostella as the firm\u2019s technology provider. | named_customers.1: Neostella\u2019s announcement quotes Bell Legal Group\u2019s managing partner describing Neostella as a trusted partner."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+    "https://neostella.com/about-us"
+   ],
+   "notes": "The Tracxn profile reports an official employee count of 313, which falls in the 201\u2013500 band; Neostella\u2019s About page also reports 250+ employees."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Milwaukee",
+    "country": "United States"
+   },
+   "citations": [
+    "https://neostella.com/about-us"
+   ],
+   "notes": "hq_city: Neostella\u2019s About page identifies its headquarters as Milwaukee and specifies Milwaukee, Wisconsin, USA. | hq_country: The company About page identifies its location as Milwaukee, Wisconsin, USA, supporting United States as the headquarters country."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2019.0,
+   "citations": [
+    "https://neostella.com/about-us",
+    "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about"
+   ],
+   "notes": "Neostella\u2019s About page states it was founded in 2019. A Tracxn profile gives a conflicting 2008 founding year, so I use the company\u2019s first-party statement and assign medium confidence."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://neostella.com/resources/blogs"
+   ],
+   "notes": "The blog index shows posts about legal workflow automation, law-firm technology, and general legal/product topics. It does not show at least two engineer-authored posts about how the product is built, so the answer is false."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.neostella.com/hc/en-us"
+   ],
+   "notes": "The public Neostella Support Center lists several product-documentation sections, including Schema, Process Studio automations, documents, Technical Reference, and Release Notes."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://apply.workable.com/neostella/j/CC2AB7C2DF"
+   ],
+   "notes": "Neostella\u2019s live Workable posting is titled Machine Learning Engineer and describes building AI and machine-learning systems, which meets the role-title criteria."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Claude and ChatGPT are named as optional external MCP integrations; the model provider behind Neostella\u2019s built-in AI is not disclosed.",
+   "citations": [
+    "https://neostella.com/platform/ai-solutions",
+    "https://help.neostella.com/hc/en-us/articles/42634782190999-ai-mcp-server-configuration"
+   ],
+   "notes": "Neostella describes built-in AI without naming its underlying model. Its MCP documentation names Claude and ChatGPT as external tools that can connect to platform data, so those are reported as integrations rather than as the provider behind built-in AI."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2 Type II",
+    "GDPR",
+    "HIPAA"
+   ],
+   "citations": [
+    "http://trust.neostella.com/"
+   ],
+   "notes": "compliance_certs: Neostella\u2019s Trust Center names SOC 2 Type II, GDPR, and HIPAA in its compliance material; these are the listed items included in the answer. | compliance_certs.0: The Trust Center explicitly names SOC 2 Type II. | compliance_certs.1: The Trust Center explicitly names GDPR. | compliance_certs.2: The Trust Center explicitly names HIPAA."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2025-05",
+    "amount_usd": 10700000.0
+   },
+   "citations": [
+    "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+    "https://www.sec.gov/Archives/edgar/data/2071719/000207171925000001/xslFormDX01/primary_doc.xml"
+   ],
+   "notes": "funding_stage: The funding profile identifies the most recent round as a Series B dated 2025-05-23; the SEC Form D confirms a first sale in that month. | funding_date: The SEC Form D gives the date of first sale as 2025-05-23, and the funding profile identifies the latest round as dated 2025-05-23. The requested YYYY-MM value is therefore 2025-05. | funding_amount_usd: The funding profile reports the latest round amount as USD 10.7 million, and the SEC Form D reports USD 10.7 million sold."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.sec.gov/Archives/edgar/data/2071719/000207171925000001/xslFormDX01/primary_doc.xml",
+    "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about"
+   ],
+   "notes": "The SEC filing reports the first sale on 2025-05-23, which is within the 18 months before 2026-11-09; the funding profile identifies it as the latest round."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://apply.workable.com/neostella",
+    "https://apply.workable.com/neostella/j/8A9EB63ED0"
+   ],
+   "notes": "Neostella\u2019s current openings page lists an Account Executive role, matching the specified titles."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.neostella.com/hc/en-us/articles/44753920985495-november-2026-release-notes"
+   ],
+   "notes": "The November 2026 release notes cover October 28\u2013November 4 and list creation of a Basic Sandbox as a new feature. This falls within the six months before 2026-11-09."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/bammke"
+   ],
+   "notes": "A LinkedIn profile timeline lists Brian Mayer\u2019s VP of Product role at Neostella beginning 2025-12-01, within the 12 months before 2026-11-09. The evidence is a dated profile rather than a company appointment announcement."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "HubSpot"
+   ],
+   "citations": [
+    "https://builtin.com/job/business-development-representative/10241584",
+    "http://trust.neostella.com/subprocessors"
+   ],
+   "notes": "crm_stack_signal: A Neostella job posting names Salesforce CRM, and the Trust Center\u2019s subprocessor listing names Salesforce as a CRM/sales-automation platform and HubSpot for CRM, marketing, and sales automation. | crm_stack_signal.0: A Neostella job posting explicitly refers to Salesforce CRM. | crm_stack_signal.1: The Trust Center lists HubSpot for CRM, marketing, and sales automation."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 685.4
+}

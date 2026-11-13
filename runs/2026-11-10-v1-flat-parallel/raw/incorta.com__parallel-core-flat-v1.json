@@ -1,0 +1,568 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb0c8985f0217bd0d",
+  "interaction_id": "trun_142119f6a1b4439eb0c8985f0217bd0d",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "incorta.com"
+  },
+  "created_at": "2026-11-10T18:48:06.414440Z",
+  "modified_at": "2026-11-10T18:50:13.011829Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb0c8985f0217bd0d",
+   "interaction_id": "trun_142119f6a1b4439eb0c8985f0217bd0d",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "incorta.com"
+   },
+   "created_at": "2026-11-10T18:48:06.414440Z",
+   "modified_at": "2026-11-10T18:50:13.011829Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/incorta",
+       "excerpts": [
+        "With intuitive low-code/no-code tools, AI-powered querying through Nexus, and prebuilt business data applications, enterprise teams can quickly surface insights, break down technical roadblocks, and make smarter decisions without heavy engineering effort. website: http://www.incorta.com employee count: 334 founded year: 2013 follower count: 80718 linkedin url: https://www.linkedin.com/company/incorta country iso: US country name: United States locality: Foster City, CA type: Privately Held size: 200 postal code: 94404 street address: 950 Tower Lane"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile states that Incorta was founded in 2013.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Analytics Data Security, Privacy & Compliance | Incorta",
+       "url": "http://incorta.com/platform/security",
+       "excerpts": [
+        "Valid SOC 2 Type II Report, produced by an independent auditor and updated annually",
+        "Apply best practice measures to ensure data privacy, security and compliance with GDPR, CCPA and SOC 2."
+       ]
+      }
+     ],
+     "reasoning": "Incorta\u2019s security page expressly names SOC 2 Type II and GDPR among its security/compliance claims. Only those named values from the requested list are returned.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Global Privacy Policy | Incorta",
+       "url": "https://www.incorta.com/legal-pages/global-privacy-policy",
+       "excerpts": [
+        "(\"Incorta\", \"we\", \"us\", or \"our\") is a business analytics software company headquartered in San Mateo, California, United States."
+       ]
+      }
+     ],
+     "reasoning": "Incorta\u2019s privacy policy identifies the company as headquartered in the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Medium",
+       "url": "https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127",
+       "excerpts": [
+        "Incorta eliminates layers of complexity in the data warehousing industry. In this post, let\u2019s understand what it does and why it works. Also, will shed light on how it eliminates the friction caused by static Star-Schemas, and opens the door for implicit on-Demand Star-Schema. ... \u00b7 [Last published Sep 25, 2023"
+       ]
+      }
+     ],
+     "reasoning": "The Engineering@Incorta source identifies itself as a technical blog from Incorta engineers; it contains a technical post on star-schema/data warehousing, and identifies another post, \u201cAtomicity Guarantees in Java.\u201d This supports multiple technical engineering posts, though the index evidence is concise.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Governed Data, Analytics & AI Platform | Incorta",
+       "url": "https://www.incorta.com/",
+       "excerpts": [
+        "Incorta is a governed data and AI platform that connects live, detailed data from systems of record to analytics, AI agents, applications, and workflows. Teams can analyze, build, and act from one trusted data foundation"
+       ]
+      }
+     ],
+     "reasoning": "The company homepage describes connecting live, detailed system-of-record data to analytics, AI agents, applications, and workflows, and says this enables teams to analyze, build, and act from a trusted data foundation.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Governed Data, Analytics & AI Platform | Incorta",
+       "url": "https://www.incorta.com/",
+       "excerpts": [
+        "Name: Incorta | Employees In Linkedin: 328.0 | Company Size: 201-500 employees | Website: https://www.incorta.com/"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports a size of 201\u2013500 employees, matching the requested band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Incorta - Senior Software Engineer",
+       "url": "https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6",
+       "excerpts": [
+        "The Incorta AI Gateway is the single, governed path that every AI call in Incorta takes, from Incorta's products and services to models such as Claude.",
+        "Develop and optimize the data plane to ensure streaming, tool calls, and LLM APIs (such as Anthropic and OpenAI) remain fast, robust, and accurate."
+       ]
+      },
+      {
+       "title": "Governed Data, Analytics & AI Platform | Incorta",
+       "url": "https://www.incorta.com/",
+       "excerpts": [
+        "Claude Gemini OpenAI"
+       ]
+      }
+     ],
+     "reasoning": "An Incorta engineering posting names Claude and Anthropic/OpenAI APIs, while the product homepage also lists Claude, Gemini, and OpenAI. These support the named models/providers in the answer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "INCORTA OPEN DATA DELIVERY PLATFORM",
+       "url": "https://marketplace.microsoft.com/en-us/marketplace/apps/incorta.incorta_direct_data_platform?tab=PlansAndPrice",
+       "excerpts": [
+        "Plan Description Price/payment options Billing term Subtotal Incorta Workbench for Workday Get it now Specific to Workday customers. Includes 1 Production Environment and 1 Development Environment, 64 GB RAM, 1 Data Application. Limited to 10 users and Delivering of data to Workday Products $4,166.67/1-month $50,000.00/1-year $100,000.00/one-time payment"
+       ]
+      }
+     ],
+     "reasoning": "The public Microsoft Marketplace Incorta plans page displays a named plan and its monthly, annual, and one-time prices, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Incorta Raises $120M in Series D Funding Amid Soaring Global Demand for Unified Data Analytics | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+       "excerpts": [
+        "June 23, 2021 \u2014** [Incorta](http://incorta.com/) , the Direct Data Platform\u2122, today announced $120 million in Series D funding"
+       ]
+      }
+     ],
+     "reasoning": "Incorta\u2019s press release reports a $120 million Series D funding announcement in June 2021.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Incorta\u2019s demo page identifies these four organizations as teams that trust the product; they are presented as customers, not partners or investors.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Incorta Raises $120M in Series D Funding Amid Soaring Global Demand for Unified Data Analytics | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+       "excerpts": [
+        "San Mateo, CA, June 23, 2021 \u2014** [Incorta](http://incorta.com/) , the Direct Data Platform\u2122, today announced $120 million in Series D funding"
+       ]
+      },
+      {
+       "title": "Incorta Funding Rounds | Seedtable",
+       "url": "https://seedtable.com/companies/incorta/funding-rounds",
+       "excerpts": [
+        "Incorta has raised190.0M USD across 5funding rounds since 2017.Its latest round wasaSeries D of 120.0M USD announced in June 2021, led byWipro Ventures. |Stage |Amount |Date | |[Series D](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |[120\\.0M USD](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |[23 Jun 2021](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s announcement is dated June 23, 2021, and a funding-round history identifies the Series D as its latest round; the requested YYYY-MM value is 2021-06.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31?lever-source%5B%5D=careers.sorensoncap.com",
+       "excerpts": [
+        "Update and manage prospect interactions in Salesforce and Outreach to ensure accurate lead tracking and efficient follow-ups."
+       ]
+      },
+      {
+       "title": "Incorta - Web and Digital Marketing Manager",
+       "url": "https://jobs.lever.co/incorta/f813a666-81a8-45be-ba2f-9f447edce30e",
+       "excerpts": [
+        "Experience with CRM platforms (e.g., Salesforce) and marketing automation (e.g., HubSpot, Marketo) integration is essential."
+       ]
+      }
+     ],
+     "reasoning": "The SDR posting names Salesforce and Outreach for prospect tracking and follow-ups. The web/digital marketing posting names Salesforce, HubSpot, and Marketo in its CRM/marketing-automation integration requirements. The returned systems are all explicitly mentioned in job postings.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Incorta Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/incorta/5a1d8a6b240000240063cb18",
+       "excerpts": [
+        "McCrory leaves Incorta as SVP of Global Sales. Bringing over 25 years of experience in leading enterprise software sales, McCrory previously served as VP of Americas Sales at DataRobot and SVP of Global Sales at Incorta. Aug 06, 2026"
+       ]
+      }
+     ],
+     "reasoning": "A company overview/news snippet reports that Thomas McCrory left Incorta as SVP of Global Sales on August 6, 2026, within the 12-month window ending November 9, 2026. The report is secondary, so confidence is medium.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Incorta",
+       "url": "https://jobs.lever.co/incorta",
+       "excerpts": [
+        "[##### Senior Software Engineer On-site \u2014 Full-time Cairo](https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6)",
+        "Enterprise AE"
+       ]
+      },
+      {
+       "title": "Incorta - Principle Software Engineer",
+       "url": "https://jobs.lever.co/incorta/7637ea82-5651-4400-9b87-6da61f913e95",
+       "excerpts": [
+        "Incorta is an enterprise data and analytics platform."
+       ]
+      }
+     ],
+     "reasoning": "The current careers listing evidence shows openings titled Senior Software Engineer, Principal Software Engineer, and Enterprise AE, but no title containing the specified AI/ML/data-science terms. Engineering-role descriptions mentioning AI work do not change the role titles under the question\u2019s rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Incorta Raises $120M in Series D Funding Amid Soaring Global Demand for Unified Data Analytics | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+       "excerpts": [
+        "**San Mateo, CA, June 23, 2021 \u2014** [Incorta](http://incorta.com/) , the Direct Data Platform\u2122, today announced $120 million in Series D funding led by Prysm Capital, with participation from existing investors GV (formerly Google Ventures), Kleiner Perkins, M12 (formerly Microsoft Ventures), Sorenson Capital, Telstra Ventures, Wipro Ventures and Ron Wohl, as well as a credit facility from Silicon Valley Bank."
+       ]
+      },
+      {
+       "title": "Incorta Funding Rounds | Seedtable",
+       "url": "https://seedtable.com/companies/incorta/funding-rounds",
+       "excerpts": [
+        "Incorta has raised190.0M USD across 5funding rounds since 2017.Its latest round wasaSeries D of 120.0M USD announced in June 2021, led byWipro Ventures. |Stage |Amount |Date | |[Series D](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |[120\\.0M USD](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |[23 Jun 2021](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |"
+       ]
+      }
+     ],
+     "reasoning": "Incorta calls the $120 million round Series D, and funding-round history identifies that Series D as the latest round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "About Us | Incorta",
+       "url": "https://www.incorta.com/about-us",
+       "excerpts": [
+        "Documentation Product guides and references](https://docs.incorta.com/)"
+       ]
+      }
+     ],
+     "reasoning": "The About Us page links a public documentation site described as containing product guides and references, supporting the existence of public product documentation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Contact Us | Incorta",
+       "url": "https://www.incorta.com/contact",
+       "excerpts": [
+        "Main Headquarters 950 Tower LaneSuite 1550, Foster City, CA 94404"
+       ]
+      }
+     ],
+     "reasoning": "Incorta\u2019s contact page explicitly labels the Foster City address as its main headquarters.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Incorta Adds Governed Data Transformation for Agentic Workflows with Incorta Intelligence | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-adds-governed-data-transformation-for-agentic-workflows-with-incorta-intelligence",
+       "excerpts": [
+        "Foster City, CA \u2013 September 30, 2026** \u2013 [Incorta](http://www.incorta.com/) , the governed data and AI platform company, today announced an addition to [Incorta Intelligence](https://www.incorta.com/incorta-intelligence?=undefined&utm_source=cpc&utm_medium=google&utm_campaign=brand-campaign&utm_term=incorta%20analytics&gad_source=1&gad_campaignid=20961059019&gbraid=0AAAAACV-JTlHMpucllBI9aObtOseGPUpZ&gclid=CjwKCAjww-3VBhAcEiwAwUUIuxOTRjEaxw1DsKKF3fCDbEddhXPjsMxWlBo50FytoeLd4UAUYWEOMhoCmGIQAvD_BwE) . New to the platform, Analyst Studio provides governed data transformation capabilities"
+       ]
+      }
+     ],
+     "reasoning": "On September 30, 2026, Incorta announced Analyst Studio as a new addition to Incorta Intelligence. The announcement falls within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31",
+       "excerpts": [
+        "Maintain a deep understanding of our product offerings and align them with potential customer needs."
+       ]
+      },
+      {
+       "title": "Incorta - Account Executive",
+       "url": "https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73",
+       "excerpts": [
+        "Account Executive Mid West Sales & Marketing \u2013 Enterprise AE / Full-time / Remote [Apply for this job](https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73/apply) Incorta is a next-generation data analytics and business intelligence platform that excels at rapidly delivering business value from transactional data, this is the first real breakthrough in data analytics in 20 years."
+       ]
+      }
+     ],
+     "reasoning": "The live Incorta job listings include a Sales Development Representative and an Account Executive, both qualifying titles under the requested definition.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Incorta Raises $120M in Series D Funding Amid Soaring Global Demand for Unified Data Analytics | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+       "excerpts": [
+        "June 23, 2021 \u2014** [Incorta](http://incorta.com/) , the Direct Data Platform\u2122, today announced $120 million in Series D funding"
+       ]
+      },
+      {
+       "title": "Incorta Funding Rounds | Seedtable",
+       "url": "https://seedtable.com/companies/incorta/funding-rounds",
+       "excerpts": [
+        "Incorta has raised190.0M USD across 5funding rounds since 2017.Its latest round wasaSeries D of 120.0M USD announced in June 2021, led byWipro Ventures. |Stage |Amount |Date | |[Series D](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |[120\\.0M USD](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |[23 Jun 2021](https://seedtable.com/companies/incorta/funding-rounds/series-d-2021-06) |"
+       ]
+      }
+     ],
+     "reasoning": "The most recent identified round is the Series D announced in June 2021, well before the 18-month window ending November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Analytics Data Security, Privacy & Compliance | Incorta",
+       "url": "http://incorta.com/platform/security",
+       "excerpts": [
+        "Valid SOC 2 Type II Report, produced by an independent auditor and updated annually"
+       ]
+      }
+     ],
+     "reasoning": "The security page names the SOC 2 Type II report.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Analytics Data Security, Privacy & Compliance | Incorta",
+       "url": "http://incorta.com/platform/security",
+       "excerpts": [
+        "Apply best practice measures to ensure data privacy, security and compliance with GDPR, CCPA and SOC 2."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Starbucks appears on Incorta\u2019s customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Comcast appears on Incorta\u2019s customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Broadcom appears on Incorta\u2019s customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.3",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Skechers appears on Incorta\u2019s customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31?lever-source%5B%5D=careers.sorensoncap.com",
+       "excerpts": [
+        "Update and manage prospect interactions in Salesforce and Outreach to ensure accurate lead tracking and efficient follow-ups."
+       ]
+      }
+     ],
+     "reasoning": "The SDR job posting names Salesforce for prospect interactions.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31?lever-source%5B%5D=careers.sorensoncap.com",
+       "excerpts": [
+        "Update and manage prospect interactions in Salesforce and Outreach to ensure accurate lead tracking and efficient follow-ups."
+       ]
+      }
+     ],
+     "reasoning": "The SDR job posting names Outreach for prospect follow-ups.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Incorta - Web and Digital Marketing Manager",
+       "url": "https://jobs.lever.co/incorta/f813a666-81a8-45be-ba2f-9f447edce30e",
+       "excerpts": [
+        "Experience with CRM platforms (e.g., Salesforce) and marketing automation (e.g., HubSpot, Marketo) integration is essential."
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting names HubSpot as a marketing-automation integration platform.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Incorta - Web and Digital Marketing Manager",
+       "url": "https://jobs.lever.co/incorta/f813a666-81a8-45be-ba2f-9f447edce30e",
+       "excerpts": [
+        "Experience with CRM platforms (e.g., Salesforce) and marketing automation (e.g., HubSpot, Marketo) integration is essential."
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting names Marketo as a marketing-automation integration platform.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2013.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Incorta connects live, detailed data from systems of record to analytics, AI agents, applications, and workflows so enterprise teams can analyze, build, and act from a trusted data foundation.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic (Claude), OpenAI, and Google Gemini",
+    "pricing_page": true,
+    "funding_amount_usd": 120000000.0,
+    "named_customers": [
+     "Starbucks",
+     "Comcast",
+     "Broadcom",
+     "Skechers"
+    ],
+    "funding_date": "2021-06",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Outreach",
+     "HubSpot",
+     "Marketo"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series D",
+    "public_docs": true,
+    "hq_city": "Foster City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

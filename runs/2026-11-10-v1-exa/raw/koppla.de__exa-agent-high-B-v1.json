@@ -1,0 +1,1214 @@
+{
+ "id": "agent_run_d16b36799fb44bdd82f6f467cf4ca50f",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:58:20.563Z",
+ "completedAt": "2026-11-10T19:02:33.868Z",
+ "request": {
+  "query": "Research the company koppla (koppla.de). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"koppla is a collaborative construction scheduling platform that helps construction companies, project managers and site teams plan, coordinate and monitor projects together.\",\"citations\":[\"https://www.koppla.de\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.koppla.de/preise\"],\"notes\":\"Public project and enterprise licence plans; prices are provided by individual quotation.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Br\u00fcninghoff\",\"Heitkamp\",\"Pandion\"],\"citations\":[\"https://www.koppla.de/referenzen\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"21-50\",\"citations\":[\"https://www.koppla.de/das-ist-koppla\"],\"notes\":\"The company page reports 38 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Berlin\",\"country\":\"Germany\"},\"citations\":[\"https://linkedin.com/company/kopplasoftware\"],\"notes\":\"The company profile identifies Berlin as headquarters.\"},\"founded_year\":{\"status\":\"asserted\",\"value\":2020,\"citations\":[\"https://www.koppla.de/das-ist-koppla\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.koppla.de/blog\"],\"notes\":\"The blog covers construction, scheduling, company news and product education rather than engineering implementation.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://support.koppla.de/article/projekt-aus-ms-project-importieren\",\"https://support.koppla.de/article/die-koppla-api-nutzen\"],\"notes\":\"Public help articles cover project imports and API usage, among other product topics.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://koppla.jobs.personio.de/?language=en\"],\"notes\":\"The live board lists Founders Associate \u2013 GTM / RevOps / Growth and Senior Product Engineer \u2013 Coding & People Leadership; neither is a qualifying AI/ML/data-science title.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No named model or provider found in the public AI/product pages, import/API documentation, blog, Trust Center or linked privacy notices; no public subprocessor list identifying one was located.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://security.koppla.de/\"],\"notes\":\"The Trust Center lists ISO/IEC 27001 and GDPR. GDPR is a regulatory compliance claim, not an independent certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Seed\",\"date\":\"2025-05\",\"amount_usd\":6760000},\"citations\":[\"https://www.cbinsights.com/company/koppla/financials\",\"https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein\"],\"notes\":\"CB Insights labels the round Seed VC - III and reports $6.76 million on 2025-05-19; the company announcement reports \u20ac6 million. USD amount is the database-reported figure, not a calculated conversion.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein\",\"https://www.brandenburg-kapital.de/en/bk/news/newsdetailseite_516.html\"],\"notes\":\"The May 2025 financing falls within 2025-05-09 through 2026-11-09.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://koppla.jobs.personio.de/?language=en\"],\"notes\":\"No qualifying SDR, BDR or account executive title appears on the live board; older recruiting announcements are not treated as current openings.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.koppla.de/blog/bim-in-koppla\"],\"notes\":\"A new BIM integration was announced on 2026-05-27, within the requested six-month window.\"},\"leadership_change_12mo\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No qualifying dated appointment or departure was verified. The about page does not provide a complete leadership roster with start dates; the VP Revenue profile gives September 2025, outside the window, but does not establish the absence of other leadership changes.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"LinkedIn Sales Navigator\",\"Lusha\",\"Hunter\",\"Segment\"],\"citations\":[\"https://jobs.earlybird.com/companies/koppla/jobs/42114494-senior-account-executive-m-w-d-full-cycle-enterprise-saas-vertrieb\",\"https://linkedin.com/company/kopplasoftware\"],\"notes\":\"An archived account-executive posting explicitly says the team works with HubSpot. The company profile also lists HubSpot Sales, LinkedIn Sales Navigator, Lusha, Hunter and Segment; these are visible stack signals, not proof that every system remains in use.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog covers construction, scheduling, company news and product education rather than engineering implementation.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/blog"
+    ]
+   },
+   "hq_location": {
+    "notes": "The company profile identifies Berlin as headquarters.",
+    "value": {
+     "city": "Berlin",
+     "country": "Germany"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/kopplasoftware"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public help articles cover project imports and API usage, among other product topics.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://support.koppla.de/article/projekt-aus-ms-project-importieren",
+     "https://support.koppla.de/article/die-koppla-api-nutzen"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The May 2025 financing falls within 2025-05-09 through 2026-11-09.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein",
+     "https://www.brandenburg-kapital.de/en/bk/news/newsdetailseite_516.html"
+    ]
+   },
+   "founded_year": {
+    "value": 2020,
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/das-ist-koppla"
+    ]
+   },
+   "last_funding": {
+    "notes": "CB Insights labels the round Seed VC - III and reports $6.76 million on 2025-05-19; the company announcement reports \u20ac6 million. USD amount is the database-reported figure, not a calculated conversion.",
+    "value": {
+     "date": "2025-05",
+     "stage": "Seed",
+     "amount_usd": 6760000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.cbinsights.com/company/koppla/financials",
+     "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "A new BIM integration was announced on 2026-05-27, within the requested six-month window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/blog/bim-in-koppla"
+    ]
+   },
+   "pricing_page": {
+    "notes": "Public project and enterprise licence plans; prices are provided by individual quotation.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/preise"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company page reports 38 employees.",
+    "value": "21-50",
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/das-ist-koppla"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "No qualifying SDR, BDR or account executive title appears on the live board; older recruiting announcements are not treated as current openings.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://koppla.jobs.personio.de/?language=en"
+    ]
+   },
+   "model_provider": {
+    "notes": "No named model or provider found in the public AI/product pages, import/API documentation, blog, Trust Center or linked privacy notices; no public subprocessor list identifying one was located.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "value": [
+     "Br\u00fcninghoff",
+     "Heitkamp",
+     "Pandion"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de/referenzen"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The live board lists Founders Associate \u2013 GTM / RevOps / Growth and Senior Product Engineer \u2013 Coding & People Leadership; neither is a qualifying AI/ML/data-science title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://koppla.jobs.personio.de/?language=en"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The Trust Center lists ISO/IEC 27001 and GDPR. GDPR is a regulatory compliance claim, not an independent certification.",
+    "value": [
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://security.koppla.de/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "An archived account-executive posting explicitly says the team works with HubSpot. The company profile also lists HubSpot Sales, LinkedIn Sales Navigator, Lusha, Hunter and Segment; these are visible stack signals, not proof that every system remains in use.",
+    "value": [
+     "HubSpot",
+     "LinkedIn Sales Navigator",
+     "Lusha",
+     "Hunter",
+     "Segment"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://jobs.earlybird.com/companies/koppla/jobs/42114494-senior-account-executive-m-w-d-full-cycle-enterprise-saas-vertrieb",
+     "https://linkedin.com/company/kopplasoftware"
+    ]
+   },
+   "product_one_liner": {
+    "value": "koppla is a collaborative construction scheduling platform that helps construction companies, project managers and site teams plan, coordinate and monitor projects together.",
+    "status": "asserted",
+    "citations": [
+     "https://www.koppla.de"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "No qualifying dated appointment or departure was verified. The about page does not provide a complete leadership roster with start dates; the VP Revenue profile gives September 2025, outside the window, but does not establish the absence of other leadership changes.",
+    "status": "unknown",
+    "citations": []
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/preise"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/preise"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/preise"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/referenzen"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/referenzen"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/das-ist-koppla"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/das-ist-koppla"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/das-ist-koppla"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/kopplasoftware"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/kopplasoftware"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.notes",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/kopplasoftware"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/das-ist-koppla"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/das-ist-koppla"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://support.koppla.de/article/projekt-aus-ms-project-importieren"
+     },
+     {
+      "url": "https://support.koppla.de/article/die-koppla-api-nutzen"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://support.koppla.de/article/projekt-aus-ms-project-importieren"
+     },
+     {
+      "url": "https://support.koppla.de/article/die-koppla-api-nutzen"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.notes",
+    "citations": [
+     {
+      "url": "https://support.koppla.de/article/projekt-aus-ms-project-importieren"
+     },
+     {
+      "url": "https://support.koppla.de/article/die-koppla-api-nutzen"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://koppla.jobs.personio.de/?language=en"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://koppla.jobs.personio.de/?language=en"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://koppla.jobs.personio.de/?language=en"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://security.koppla.de/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://security.koppla.de/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://security.koppla.de/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://www.cbinsights.com/company/koppla/financials"
+     },
+     {
+      "url": "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://www.cbinsights.com/company/koppla/financials"
+     },
+     {
+      "url": "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://www.cbinsights.com/company/koppla/financials"
+     },
+     {
+      "url": "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+     },
+     {
+      "url": "https://www.brandenburg-kapital.de/en/bk/news/newsdetailseite_516.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+     },
+     {
+      "url": "https://www.brandenburg-kapital.de/en/bk/news/newsdetailseite_516.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog/koppla-sammelt-6-millionen-euro-ein"
+     },
+     {
+      "url": "https://www.brandenburg-kapital.de/en/bk/news/newsdetailseite_516.html"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://koppla.jobs.personio.de/?language=en"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://koppla.jobs.personio.de/?language=en"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://koppla.jobs.personio.de/?language=en"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog/bim-in-koppla"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog/bim-in-koppla"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/blog/bim-in-koppla"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://jobs.earlybird.com/companies/koppla/jobs/42114494-senior-account-executive-m-w-d-full-cycle-enterprise-saas-vertrieb"
+     },
+     {
+      "url": "https://linkedin.com/company/kopplasoftware"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://jobs.earlybird.com/companies/koppla/jobs/42114494-senior-account-executive-m-w-d-full-cycle-enterprise-saas-vertrieb"
+     },
+     {
+      "url": "https://linkedin.com/company/kopplasoftware"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://jobs.earlybird.com/companies/koppla/jobs/42114494-senior-account-executive-m-w-d-full-cycle-enterprise-saas-vertrieb"
+     },
+     {
+      "url": "https://linkedin.com/company/kopplasoftware"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/kuenstliche-intelligenz-mit-koppla"
+     },
+     {
+      "url": "https://security.koppla.de/"
+     },
+     {
+      "url": "https://koppla.de/privacy"
+     },
+     {
+      "url": "https://koppla.notion.site/Datenschutzerkl-rung-www-koppla-de-ed17d110754e4ac79bc7fd3f540d9a51"
+     },
+     {
+      "url": "https://koppla.notion.site/Datenschutzerkl-rung-my-koppla-de-459266af87d34f009aa7e1418b1bae9d"
+     },
+     {
+      "url": "https://support.koppla.de/article/projekt-aus-ms-project-importieren"
+     },
+     {
+      "url": "https://www.koppla.de/blog"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.koppla.de/das-ist-koppla"
+     },
+     {
+      "url": "https://linkedin.com/in/fabianschaeffer"
+     }
+    ],
+    "confidence": "medium"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

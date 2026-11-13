@@ -1,0 +1,21 @@
+{
+ "url": "https://dev.bitly.com/docs/getting-started/introduction/",
+ "fetched_at": "2026-11-09T21:48:29.027538+00:00",
+ "hours_after_run": 21.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "d141b992b3c54ab0c18711ff79678fdf0a41b88c8d7515b4a8898bae7a0938e6",
+ "chars": 2094,
+ "truncated": false,
+ "title": "Introduction | Bitly Developer",
+ "markdown": "[Skip to main content](https://dev.bitly.com/docs/getting-started/introduction/#main)\n\nIntroducing the Bitly MCP Server\n\nHead over to our Bitly MCP Server documentation page to see how to use Bitly in your favorite AI agent workflows — ChatGPT, Claude, Cursor, GitHub Copilot, etc.\n\n[Take me there](https://dev.bitly.com/bitly-mcp/) ×\n\n# The Bitly API\n\nBitly is the most widely trusted link management platform in the world. By using the Bitly API, you will exercise the full power of your links through automated link customization, mobile deep linking, and click analytics.\n\n> Ready to jump right in? See the [API reference](https://dev.bitly.com/api-reference) for all endpoints.\n\nWhile shortening links is Bitly’s most basic functionality, our customers create and distribute links at scale via integrated apps and SMS by utilizing the Bitly API.\n\n## What you need to get started\n\n- **Product knowledge.** Check out our [Help Center](https://support.bitly.com/hc/en-us) for basics. When working with end-users, be aware that some terms that they see in the web app are abbreviated on the backend. The two most common (and their API translations) are short links (Bitlinks) and custom domains (Branded Short Domains, or BSDs).\n\n- **A Bitly account.** Have access to an account and check your plan's link limits.\n\n\nYou’ll find more details on these and other topics as you navigate this developer site, so let's dive in!\n\n## Shorten your first link!\n\n1. Generate an [access token](https://app.bitly.com/settings/api/).\n\n2. You'll use the `POST` method to the [`/v4/shorten`](https://dev.bitly.com/api-reference#createBitlink) endpoint. Append your access token as a header in your request. Here's an example: `Authorization: Bearer {token}`.\n\n`POST https://api-ssl.bitly.com/v4/shorten`\n\n\n\n\n\n\n\n```\n{\n       \"group_guid\": \"Ba1bc23dE4F\",\n       \"domain\": \"bit.ly\",\n       \"long_url\": \"https://dev.bitly.com/\"\n}\n```\n\n\n\n\n\n\n\nA successful response will return the shortened link in the link object.\n\n3. Go to our [API reference](https://dev.bitly.com/api-reference) to view all available endpoints.",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ]
+}

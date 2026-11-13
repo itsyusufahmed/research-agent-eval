@@ -1,0 +1,944 @@
+{
+ "id": "agent_run_7f9d748ff13e4ba9b1d80555dad0c727",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T19:01:19.670Z",
+ "completedAt": "2026-11-10T19:05:32.076Z",
+ "request": {
+  "query": "Research the company SER Group (sergroup.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us\"],\"value\":\"SER Group\u2019s Doxis is an AI-powered document management and process-automation platform for enterprises that need to capture, understand, manage and secure documents across business systems.\",\"notes\":\"SER Group rebranded as Doxis in January 2026.\"},\"pricing_page\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/\",\"https://www.doxis.com/en/blog/best-document-scanning-software\"],\"value\":false,\"notes\":\"No public product-pricing page or pricing navigation link was found; product pricing is custom-quoted. Silver, Gold and Platinum are managed-service/support packages, not product pricing plans.\"},\"named_customers\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/customer-stories/dhl-express-germany\",\"https://www.doxis.com/en/customer-stories\"],\"value\":[\"DHL Express\",\"BASF\",\"Eli Lilly\"]},\"employee_band\":{\"status\":\"unknown\",\"citations\":[\"https://www.doxis.com/en/about-us\"],\"notes\":\"The company reports more than 900 employees, exceeding every permitted band; no valid band can be selected.\"},\"hq_location\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/news-press/the-carlyle-group-acquires-sergroup\"],\"value\":{\"city\":\"Bonn\",\"country\":\"Germany\"}},\"founded_year\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/news-press/the-carlyle-group-acquires-sergroup\"],\"value\":1984},\"eng_blog\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/blog\"],\"value\":false,\"notes\":\"The readable blog index contains business, product and informational posts, not an engineering blog with two engineer-authored product-construction posts. Press releases quoting the CTO do not meet that requirement.\"},\"public_docs\":{\"status\":\"asserted\",\"citations\":[\"https://dochorizon.klippa.com/docs/api\"],\"value\":true,\"notes\":\"Public Doxis AI.dp documentation includes API, platform, SDK, model-builder, prompt-builder and other documentation sections.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/careers/AIKlippa\"],\"value\":true,\"notes\":\"Live Full Stack AI Engineer posting at Klippa, a Doxis company, hiring three engineers for production AI/ML systems.\"},\"model_provider\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/blog/product-news/maximizing-ai-for-effective-information-management\"],\"value\":\"OpenAI\",\"notes\":\"Doxis publicly describes OpenAI integration and predefined OpenAI prompts in its Prompt Fast Starters; this does not establish a single exclusive provider or model version.\"},\"compliance_certs\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/business-platform/certification\",\"https://www.doxis.com/en/business-platform/certification/eu-gdpr\"],\"value\":[\"SOC 2\",\"ISO 27001\",\"GDPR\"],\"notes\":\"SOC 2 applies to Doxis Cloud Services; ISO 27001 is an organizational certification. GDPR is a published conformity/compliance assessment of specified Doxis components, conditional on correct use and organizational controls, rather than a universal GDPR certification.\"},\"last_funding\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment\",\"https://www.ta.com/news/ser-welcomes-new-investment-from-ta-to-accelerate-growth/\",\"https://tracxn.com/d/companies/sergroup/__MPCRN53hdxjsNH3_Huxs3SCcjxcbCM1B8W7HZVU558Y/funding-and-investors\"],\"value\":{\"stage\":\"Private equity / strategic growth investment\",\"date\":\"2024-03\",\"amount_usd\":null},\"notes\":\"TA Associates investment announced March 21, 2024; amount undisclosed. This is private-equity investment, not a named venture series.\"},\"raised_18mo\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment\",\"https://tracxn.com/d/companies/sergroup/__MPCRN53hdxjsNH3_Huxs3SCcjxcbCM1B8W7HZVU558Y/funding-and-investors\"],\"value\":false,\"notes\":\"Latest publicly documented financing was March 21, 2024, before the May 9, 2025\u2013November 9, 2026 window; subsequent acquisitions are not fundraising rounds.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/de/ueber-uns/karriere/business-development-representative-m-w-d\",\"https://www.doxis.com/de/ueber-uns/karriere\"],\"value\":true,\"notes\":\"The German careers index lists a live Business Development Representative (m/w/d) opening.\"},\"launched_6mo\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/news-press/doxis-streamlines-employee-compensation-communications-through-new-sap-successfactors-compensation-integration\"],\"value\":true,\"notes\":\"On October 19, 2026, Doxis announced a new SAP SuccessFactors Compensation integration automating compensation-statement generation, distribution and archiving.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis\"],\"value\":true,\"notes\":\"January 19, 2026 announcement: Andy Spence joins as Chief Revenue Officer and Jean Van Vuuren as Vice President of Sales EMEA; Yeelen Knegtering is appointed Chief AI Officer.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"citations\":[\"https://www.doxis.com/de/ueber-uns/karriere/business-development-representative-m-w-d\",\"https://careers.ta.com/companies/doxis-2-50dda798-d5a0-4f79-aa48-52a7f8342a8c/jobs/80704838-business-development-representative-m-f-d\"],\"value\":[\"Salesforce\",\"Pipedrive\"],\"notes\":\"The live German BDR posting requires maintaining Salesforce data. A separate, now-closed Groningen BDR posting explicitly identifies Pipedrive as its CRM; that signal is historical, not proof of uniform current group-wide deployment.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The readable blog index contains business, product and informational posts, not an engineering blog with two engineer-authored product-construction posts. Press releases quoting the CTO do not meet that requirement.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/blog"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Bonn",
+     "country": "Germany"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/news-press/the-carlyle-group-acquires-sergroup"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public Doxis AI.dp documentation includes API, platform, SDK, model-builder, prompt-builder and other documentation sections.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://dochorizon.klippa.com/docs/api"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "Latest publicly documented financing was March 21, 2024, before the May 9, 2025\u2013November 9, 2026 window; subsequent acquisitions are not fundraising rounds.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+     "https://tracxn.com/d/companies/sergroup/__MPCRN53hdxjsNH3_Huxs3SCcjxcbCM1B8W7HZVU558Y/funding-and-investors"
+    ]
+   },
+   "founded_year": {
+    "value": 1984,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/news-press/the-carlyle-group-acquires-sergroup"
+    ]
+   },
+   "last_funding": {
+    "notes": "TA Associates investment announced March 21, 2024; amount undisclosed. This is private-equity investment, not a named venture series.",
+    "value": {
+     "date": "2024-03",
+     "stage": "Private equity / strategic growth investment"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+     "https://www.ta.com/news/ser-welcomes-new-investment-from-ta-to-accelerate-growth/",
+     "https://tracxn.com/d/companies/sergroup/__MPCRN53hdxjsNH3_Huxs3SCcjxcbCM1B8W7HZVU558Y/funding-and-investors"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "On October 19, 2026, Doxis announced a new SAP SuccessFactors Compensation integration automating compensation-statement generation, distribution and archiving.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/news-press/doxis-streamlines-employee-compensation-communications-through-new-sap-successfactors-compensation-integration"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No public product-pricing page or pricing navigation link was found; product pricing is custom-quoted. Silver, Gold and Platinum are managed-service/support packages, not product pricing plans.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/",
+     "https://www.doxis.com/en/blog/best-document-scanning-software"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company reports more than 900 employees, exceeding every permitted band; no valid band can be selected.",
+    "status": "unknown",
+    "citations": [
+     "https://www.doxis.com/en/about-us"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The German careers index lists a live Business Development Representative (m/w/d) opening.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/de/ueber-uns/karriere/business-development-representative-m-w-d",
+     "https://www.doxis.com/de/ueber-uns/karriere"
+    ]
+   },
+   "model_provider": {
+    "notes": "Doxis publicly describes OpenAI integration and predefined OpenAI prompts in its Prompt Fast Starters; this does not establish a single exclusive provider or model version.",
+    "value": "OpenAI",
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/blog/product-news/maximizing-ai-for-effective-information-management"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "DHL Express",
+     "BASF",
+     "Eli Lilly"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/customer-stories/dhl-express-germany",
+     "https://www.doxis.com/en/customer-stories"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "Live Full Stack AI Engineer posting at Klippa, a Doxis company, hiring three engineers for production AI/ML systems.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/careers/AIKlippa"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "SOC 2 applies to Doxis Cloud Services; ISO 27001 is an organizational certification. GDPR is a published conformity/compliance assessment of specified Doxis components, conditional on correct use and organizational controls, rather than a universal GDPR certification.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/business-platform/certification",
+     "https://www.doxis.com/en/business-platform/certification/eu-gdpr"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The live German BDR posting requires maintaining Salesforce data. A separate, now-closed Groningen BDR posting explicitly identifies Pipedrive as its CRM; that signal is historical, not proof of uniform current group-wide deployment.",
+    "value": [
+     "Salesforce",
+     "Pipedrive"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/de/ueber-uns/karriere/business-development-representative-m-w-d",
+     "https://careers.ta.com/companies/doxis-2-50dda798-d5a0-4f79-aa48-52a7f8342a8c/jobs/80704838-business-development-representative-m-f-d"
+    ]
+   },
+   "product_one_liner": {
+    "notes": "SER Group rebranded as Doxis in January 2026.",
+    "value": "SER Group\u2019s Doxis is an AI-powered document management and process-automation platform for enterprises that need to capture, understand, manage and secure documents across business systems.",
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "January 19, 2026 announcement: Andy Spence joins as Chief Revenue Officer and Jean Van Vuuren as Vice President of Sales EMEA; Yeelen Knegtering is appointed Chief AI Officer.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/"
+     },
+     {
+      "url": "https://www.doxis.com/en/blog/best-document-scanning-software"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/customer-stories/dhl-express-germany"
+     },
+     {
+      "url": "https://www.doxis.com/en/customer-stories"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/news-press/the-carlyle-group-acquires-sergroup"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/news-press/the-carlyle-group-acquires-sergroup"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/blog"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://dochorizon.klippa.com/docs/api"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/careers/AIKlippa"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/blog/product-news/maximizing-ai-for-effective-information-management"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/business-platform/certification"
+     },
+     {
+      "url": "https://www.doxis.com/en/business-platform/certification/eu-gdpr"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment"
+     },
+     {
+      "url": "https://www.ta.com/news/ser-welcomes-new-investment-from-ta-to-accelerate-growth/"
+     },
+     {
+      "url": "https://tracxn.com/d/companies/sergroup/__MPCRN53hdxjsNH3_Huxs3SCcjxcbCM1B8W7HZVU558Y/funding-and-investors"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment"
+     },
+     {
+      "url": "https://tracxn.com/d/companies/sergroup/__MPCRN53hdxjsNH3_Huxs3SCcjxcbCM1B8W7HZVU558Y/funding-and-investors"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/de/ueber-uns/karriere/business-development-representative-m-w-d"
+     },
+     {
+      "url": "https://www.doxis.com/de/ueber-uns/karriere"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/news-press/doxis-streamlines-employee-compensation-communications-through-new-sap-successfactors-compensation-integration"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://www.doxis.com/de/ueber-uns/karriere/business-development-representative-m-w-d"
+     },
+     {
+      "url": "https://careers.ta.com/companies/doxis-2-50dda798-d5a0-4f79-aa48-52a7f8342a8c/jobs/80704838-business-development-representative-m-f-d"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

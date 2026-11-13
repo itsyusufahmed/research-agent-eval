@@ -1,0 +1,523 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb2cef36da3392f85",
+  "interaction_id": "trun_142119f6a1b4439eb2cef36da3392f85",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "getsona.com"
+  },
+  "created_at": "2026-11-10T18:47:47.747710Z",
+  "modified_at": "2026-11-10T19:00:00.637612Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb2cef36da3392f85",
+   "interaction_id": "trun_142119f6a1b4439eb2cef36da3392f85",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "getsona.com"
+   },
+   "created_at": "2026-11-10T18:47:47.747710Z",
+   "modified_at": "2026-11-10T19:00:00.637612Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About | Sona",
+       "url": "https://www.getsona.com/about",
+       "excerpts": [
+        "Founded in 2021 and backed by Google's AI fund, Sona was purpose-built from day one with AI at its core."
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s official About page explicitly states that it was founded in 2021: https://www.getsona.com/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center | Sona",
+       "url": "https://trust.sona.ai/",
+       "excerpts": [
+        "The short version: we're ISO 27001:2022 certified and Cyber Essentials certified, we run defence-in-depth architecture across segregated,",
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s Trust Center explicitly claims ISO 27001:2022 certification and names GDPR. GDPR is reported as a public compliance claim, not as an independently issued certification: https://trust.sona.ai/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Sona: Employees, Funding, HQ & Competitors | Enrich Layer",
+       "url": "https://enrichlayer.com/company/getsona",
+       "excerpts": [
+        "As of 2026-10-29, Sona is headquartered in London, England, GB."
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "company_id: 632cbc0758dc67491f811fea; name: Sona; website_url: https://www.sona.ai/; location_city: London; location_country: United Kingdom; founded_year: 2021; employee_count_official: 255; latest_funding_round_name: Series B; latest_funding_round_date: 2026-04-01; latest_funding_round_amount_usd: 45000000.0; total_disclosed_funding_usd: 115573099.0; stage: Series B; funded: Yes"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters listing identifies London, England, GB, while the matching company profile specifies United Kingdom. Source: https://enrichlayer.com/company/getsona.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Workforce Management Blog | Sona",
+       "url": "https://www.sona.ai/blog",
+       "excerpts": [
+        "News, research and insights from the world of frontline work \u2014 expert perspectives on workforce management, AI innovation, and operational excellence.",
+        "Read More](https://www.sona.ai/blog/hospitalitys-hidden-kpi) [News Sona partners with Hire Intelligence to close the gap between hiring and rostering",
+        "Read More](https://www.sona.ai/blog/investing-in-workforce-tech-what-good-looks-like-for-your-people) [News Why we launched Sona LMS"
+       ]
+      },
+      {
+       "title": "Sona",
+       "url": "https://getsona.com/blog",
+       "excerpts": [
+        "[Social Care Implementing AI in social care: staying safe while taking the first steps"
+       ]
+      }
+     ],
+     "reasoning": "The readable blog indexes show industry advice, partnerships, customer news and product announcements, rather than the required two engineering-authored posts explaining how the product is built. Sources: https://www.sona.ai/blog and https://getsona.com/blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Account Executive @ Sona",
+       "url": "https://jobs.ashbyhq.com/sona/68c05d9d-2fdf-4193-a8d9-2f02d4100637",
+       "excerpts": [
+        "Sona is the AI-native workforce management platform for frontline organisations, with agents that match staffing to real demand and take the admin load off managers."
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s own job description describes its AI-native workforce management platform for frontline organisations and agents that match staffing to demand and reduce managers\u2019 administration: https://jobs.ashbyhq.com/sona/68c05d9d-2fdf-4193-a8d9-2f02d4100637.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "company_id: 632cbc0758dc67491f811fea; name: Sona; website_url: https://www.sona.ai/; location_city: London; location_country: United Kingdom; founded_year: 2021; employee_count_official: 255; latest_funding_round_name: Series B; latest_funding_round_date: 2026-04-01; latest_funding_round_amount_usd: 45000000.0; total_disclosed_funding_usd: 115573099.0; stage: Series B; funded: Yes"
+       ]
+      }
+     ],
+     "reasoning": "The matching Sona company profile lists 255 employees, placing it in 201-500. Other directories give differing estimates, so confidence is medium. Source: https://platform.tracxn.com/a/d/company/632cbc0758dc67491f811fea/sona?utm_source=parallel&utm_medium=ai#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Sub-Processor List | Sona",
+       "url": "https://www.sona.ai/sub-processors",
+       "excerpts": [
+        "|OpenAI |USA |LLM Provider |",
+        "|Anthropic |USA |LLM Provider |"
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s official subprocessor list names both OpenAI and Anthropic as LLM providers: https://www.sona.ai/sub-processors.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Sona",
+       "url": "https://www.getsona.com/pricing",
+       "excerpts": [
+        "Our AI workforce management platform is fully configurable around your business - and because our product is adaptable, so is our pricing."
+       ]
+      }
+     ],
+     "reasoning": "Sona has a public page specifically discussing configurable pricing, although it does not publish numeric prices: https://www.getsona.com/pricing.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Sona Raises $45M Series B to Bring AI to the Frontline Economy",
+       "url": "https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy",
+       "excerpts": [
+        "Sona has raised $45 million in Series B funding led by N47, with participation from existing investors Felicis, Northzone, Gradient, and Italian Founders Fund, bringing its total funding to over $100 million."
+       ]
+      },
+      {
+       "title": "Sona Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/sona-2/financials",
+       "excerpts": [
+        "Sona's **latest funding round** was a **Series B for $45M** on **April 1, 2026** ."
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s official announcement reports $45 million, and its funding profile identifies that Series B as the latest round. Sources: https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy and https://www.cbinsights.com/company/sona-2/financials.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Paul UK",
+       "url": "https://www.getsona.com/case-studies/paul-uk",
+       "excerpts": [
+        "PAUL UK puts managers back on the shop floor with Sona"
+       ]
+      },
+      {
+       "title": "Greensleeves Care",
+       "url": "https://getsona.com/case-studies/greensleeves-care",
+       "excerpts": [
+        "Greensleeves Care partnered with Sona to bring order to the complexity of growth by acquisition, unifying scheduling, HR, and payroll across 28 homes with varied contracts, pay structures, and terms and conditions."
+       ]
+      }
+     ],
+     "reasoning": "Both organisations have official Sona case studies describing their use of the platform. Sources: https://www.getsona.com/case-studies/paul-uk and https://getsona.com/case-studies/greensleeves-care.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Sona Raises $45M Series B to Bring AI to the Frontline Economy",
+       "url": "https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy",
+       "excerpts": [
+        "Apr 1, 2026, 1:08:57 PM"
+       ]
+      },
+      {
+       "title": "Sona Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/sona-2/financials",
+       "excerpts": [
+        "Sona's **latest funding round** was a **Series B for $45M** on **April 1, 2026** ."
+       ]
+      }
+     ],
+     "reasoning": "The official Series B announcement is dated April 1, 2026; the funding profile also identifies this as the latest round. Normalised to YYYY-MM, the date is 2026-04. Sources: https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy and https://www.cbinsights.com/company/sona-2/financials.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Revenue Operations Analyst @ Sona | Antler Job Board",
+       "url": "https://careers.antler.co/companies/sona-2/jobs/79459664-revenue-operations-manager",
+       "excerpts": [
+        "Own the architecture and administration of Sona's GTM data model: designing and maintaining properties, objects, associations, and lifecycle stages across HubSpot and connected systems"
+       ]
+      },
+      {
+       "title": "Sub-Processor List | Sona",
+       "url": "https://www.sona.ai/sub-processors",
+       "excerpts": [
+        "|Planhat |EEA |CRM |"
+       ]
+      }
+     ],
+     "reasoning": "A Sona revenue-operations posting describes administering its GTM data model across HubSpot, while its official subprocessor list names Planhat as a CRM. Sources: https://careers.antler.co/companies/sona-2/jobs/79459664-revenue-operations-manager and https://www.sona.ai/sub-processors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/jenniferklahrejohnson",
+       "excerpts": [
+        "company name: Sona",
+        "title: VP, Solution Marketing",
+        "start date: 2026-09-01"
+       ]
+      },
+      {
+       "title": "Jennifer Johnson - Sona | LinkedIn",
+       "url": "https://linkedin.com/in/Jenniferklahrejohnson",
+       "excerpts": [
+        "I\u2019m excited to share that I\u2019m starting a new chapter in my career as VP, Solution Marketing at [Sona](https://uk.linkedin.com/company/getsona?trk=public_profile__posts-text) !"
+       ]
+      }
+     ],
+     "reasoning": "Jennifer Johnson\u2019s profile lists VP, Solution Marketing at Sona with a start date of September 1, 2026, within the requested 12-month window. Her announcement also says she is starting that role and links to Sona\u2019s getsona company page. Sources: https://linkedin.com/in/jenniferklahrejohnson and https://linkedin.com/in/Jenniferklahrejohnson.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Senior Machine Learning Engineer @ Sona",
+       "url": "https://jobs.ashbyhq.com/Sona/b0ecc744-e4ac-441e-9f19-dbd961847836",
+       "excerpts": [
+        "Senior Machine Learning Engineer",
+        "[Apply for this Job](https://jobs.ashbyhq.com/Sona/b0ecc744-e4ac-441e-9f19-dbd961847836/application)"
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s live Senior Machine Learning Engineer posting includes an application link and directly meets the qualifying-title rule: https://jobs.ashbyhq.com/Sona/b0ecc744-e4ac-441e-9f19-dbd961847836.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Sona Raises $45M Series B to Bring AI to the Frontline Economy",
+       "url": "https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy",
+       "excerpts": [
+        "Sona has raised $45 million in Series B funding led by N47, with participation from existing investors Felicis, Northzone, Gradient, and Italian Founders Fund, bringing its total funding to over $100 million."
+       ]
+      },
+      {
+       "title": "Sona Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/sona-2/financials",
+       "excerpts": [
+        "Sona's **latest funding round** was a **Series B for $45M** on **April 1, 2026** ."
+       ]
+      }
+     ],
+     "reasoning": "The official announcement names the round as Series B, and the funding profile identifies it as Sona\u2019s latest round. Sources: https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy and https://www.cbinsights.com/company/sona-2/financials.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Using Sona \u2013 Sona Support",
+       "url": "https://getsona.zendesk.com/hc/en-gb/sections/7065836833565-Using-Sona",
+       "excerpts": [
+        "[Using Sona](https://getsona.zendesk.com/hc/en-gb/sections/7065836833565-Using-Sona)",
+        "[Where can I download the Sona app?](https://getsona.zendesk.com/hc/en-gb/articles/7065370491805-Where-can-I-download-the-Sona-app)",
+        "[How do I message my manager?](https://getsona.zendesk.com/hc/en-gb/articles/7067217123229-How-do-I-message-my-manager)",
+        "[Why are some shifts in my schedule different colours?](https://getsona.zendesk.com/hc/en-gb/articles/7093787875613-Why-are-some-shifts-in-my-schedule-different-colours)"
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s public help center contains multiple product-support articles, including downloading the app, messaging a manager and understanding shift colours: https://getsona.zendesk.com/hc/en-gb/sections/7065836833565-Using-Sona.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Sona Raises $45M Series B to Bring AI to the Frontline Economy",
+       "url": "https://www.prnewswire.com/news-releases/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy-302730478.html",
+       "excerpts": [
+        "Headquartered in London with a growing presence in New York, Sona is backed by N47, Felicis, Northzone, Gradient, and others."
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s funding press release explicitly states that it is headquartered in London: https://www.prnewswire.com/news-releases/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy-302730478.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Why we launched Sona LMS",
+       "url": "https://www.sona.ai/blog/why-we-launched-sona-lms",
+       "excerpts": [
+        "Why we launched Sona LMS Why we launched Sona LMS Team Sona [Team Sona](https://www.sona.ai/blog/author/team-sona) Jun 22, 2026, 2:00:10 PM",
+        "Sona LMS removes these inefficiencies by embedding learning directly into workforce operations. #### What is live today Sona LMS is now available, offering a comprehensive set of features that address the real challenges of workforce training and compliance. * Shift gating : Completed skills unlock shift eligibility; expired certifications automatically block shift assignments."
+       ]
+      }
+     ],
+     "reasoning": "The June 22, 2026 announcement says Sona LMS is now available and describes substantive learning-management and shift-eligibility functionality. This falls within the six months before November 9, 2026: https://www.sona.ai/blog/why-we-launched-sona-lms.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive @ Sona",
+       "url": "https://jobs.ashbyhq.com/sona/68c05d9d-2fdf-4193-a8d9-2f02d4100637",
+       "excerpts": [
+        "Account Executive",
+        "[Apply for this Job](https://jobs.ashbyhq.com/sona/68c05d9d-2fdf-4193-a8d9-2f02d4100637/application)"
+       ]
+      },
+      {
+       "title": "Business Development Representative @ Sona",
+       "url": "https://jobs.ashbyhq.com/sona/8ed590ab-ec44-4529-92e8-44f40c918fcf",
+       "excerpts": [
+        "Business Development Representative",
+        "[Apply for this Job](https://jobs.ashbyhq.com/sona/8ed590ab-ec44-4529-92e8-44f40c918fcf/application)"
+       ]
+      }
+     ],
+     "reasoning": "Live Sona postings include both Account Executive and Business Development Representative roles with application links. Sources: https://jobs.ashbyhq.com/sona/68c05d9d-2fdf-4193-a8d9-2f02d4100637 and https://jobs.ashbyhq.com/sona/8ed590ab-ec44-4529-92e8-44f40c918fcf.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Sona Raises $45M Series B to Bring AI to the Frontline Economy",
+       "url": "https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy",
+       "excerpts": [
+        "Apr 1, 2026, 1:08:57 PM",
+        "Sona has raised $45 million in Series B funding led by N47, with participation from existing investors Felicis, Northzone, Gradient, and Italian Founders Fund, bringing its total funding to over $100 million."
+       ]
+      }
+     ],
+     "reasoning": "Sona announced its $45 million Series B on April 1, 2026, within the 18 months before November 9, 2026: https://www.sona.ai/blog/sona-raises-45m-series-b-to-bring-ai-to-the-frontline-economy.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center | Sona",
+       "url": "https://trust.sona.ai/",
+       "excerpts": [
+        "The short version: we're ISO 27001:2022 certified and Cyber Essentials certified, we run defence-in-depth architecture across segregated,"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly states that Sona is ISO 27001:2022 certified: https://trust.sona.ai/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center | Sona",
+       "url": "https://trust.sona.ai/",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names GDPR among Sona\u2019s public compliance claims: https://trust.sona.ai/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Paul UK",
+       "url": "https://www.getsona.com/case-studies/paul-uk",
+       "excerpts": [
+        "PAUL UK puts managers back on the shop floor with Sona"
+       ]
+      }
+     ],
+     "reasoning": "An official customer case study describes PAUL UK using Sona: https://www.getsona.com/case-studies/paul-uk.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Greensleeves Care",
+       "url": "https://getsona.com/case-studies/greensleeves-care",
+       "excerpts": [
+        "Greensleeves Care partnered with Sona to bring order to the complexity of growth by acquisition, unifying scheduling, HR, and payroll across 28 homes with varied contracts, pay structures, and terms and conditions."
+       ]
+      }
+     ],
+     "reasoning": "The official case study states that Greensleeves Care partnered with Sona: https://getsona.com/case-studies/greensleeves-care.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Revenue Operations Analyst @ Sona | Antler Job Board",
+       "url": "https://careers.antler.co/companies/sona-2/jobs/79459664-revenue-operations-manager",
+       "excerpts": [
+        "Own the architecture and administration of Sona's GTM data model: designing and maintaining properties, objects, associations, and lifecycle stages across HubSpot and connected systems"
+       ]
+      }
+     ],
+     "reasoning": "The revenue-operations posting explicitly describes Sona\u2019s GTM data model across HubSpot: https://careers.antler.co/companies/sona-2/jobs/79459664-revenue-operations-manager.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Sub-Processor List | Sona",
+       "url": "https://www.sona.ai/sub-processors",
+       "excerpts": [
+        "|Planhat |EEA |CRM |"
+       ]
+      }
+     ],
+     "reasoning": "Sona\u2019s official subprocessor list names Planhat and labels its purpose CRM: https://www.sona.ai/sub-processors.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2021.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": false,
+    "product_one_liner": "Sona is an AI-native workforce management platform for frontline organisations that matches staffing to demand and reduces managers\u2019 administrative work.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI and Anthropic",
+    "pricing_page": true,
+    "funding_amount_usd": 45000000.0,
+    "named_customers": [
+     "PAUL UK",
+     "Greensleeves Care"
+    ],
+    "funding_date": "2026-04",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Planhat"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

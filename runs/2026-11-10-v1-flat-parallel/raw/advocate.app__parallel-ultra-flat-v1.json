@@ -1,0 +1,432 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ebe3de5fc3839ade0",
+  "interaction_id": "trun_142119f6a1b4439ebe3de5fc3839ade0",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "advocate.app"
+  },
+  "created_at": "2026-11-10T18:48:30.843441Z",
+  "modified_at": "2026-11-10T18:51:41.268214Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ebe3de5fc3839ade0",
+   "interaction_id": "trun_142119f6a1b4439ebe3de5fc3839ade0",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "advocate.app"
+   },
+   "created_at": "2026-11-10T18:48:30.843441Z",
+   "modified_at": "2026-11-10T18:51:41.268214Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "founded year: 2020"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly lists 2020 as its founding year. Source: https://linkedin.com/company/advocate-technologies",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "Report available SOC 2 Type II",
+        "Our information security management system is certified against the 2022 revision of ISO/IEC 27001 by an accredited external auditor. The certificate and audit report are available on request."
+       ]
+      }
+     ],
+     "reasoning": "The security page claims an available SOC 2 Type II report and an information-security management system certified against ISO/IEC 27001:2022. Neither is described as in progress. Source: https://www.advocate.app/security",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Advocate \u2014 Commercial Insurance Intelligence",
+       "url": "https://www.advocate.app/about",
+       "excerpts": [
+        "Advocate is headquartered in New York City, with offices inPrague and Athens."
+       ]
+      },
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "country iso: US country name: United States locality: New York City"
+       ]
+      }
+     ],
+     "reasoning": "The about page identifies New York City as headquarters, and the company profile identifies its country as the United States. Sources: https://www.advocate.app/about and https://linkedin.com/company/advocate-technologies",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Company News & Product Updates | Advocate",
+       "url": "https://www.advocate.app/blog",
+       "excerpts": [
+        "Showing 1 of 1posts",
+        "[Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance"
+       ]
+      }
+     ],
+     "reasoning": "The blog index contains one company-news post announcing funding and commercial-insurance benchmarks, rather than two engineer-authored articles about building the product. It therefore does not meet the specified engineering-blog threshold. Source: https://www.advocate.app/blog",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "Advocate Technologies brings data and transparency to the commercial insurance market. We turn complex insurance policies into standardized data, then benchmark that data against billions of dollars in real-time market transactions, so our customers can close coverage gaps, catch overpriced policies, and make placement and renewal decisions with confidence.",
+        "We build for everyone managing a portfolio of insurance: commercial insurance brokers, commercial loan servicers, commercial insurance carriers, and property owners."
+       ]
+      },
+      {
+       "title": "Trust Center - Advocate",
+       "url": "https://trust.advocate.app/subprocessors",
+       "excerpts": [
+        "Brokers, loan servicers, and property owners use Advocate to organize policy data with AI Agents, benchmark coverage and pricing against live market transactions, and monitor portfolio risk continuously."
+       ]
+      }
+     ],
+     "reasoning": "The company describes standardizing policy data and benchmarking it against market transactions, identifies the four customer groups, and describes AI agents and continuous portfolio-risk monitoring. Sources: https://linkedin.com/company/advocate-technologies and https://trust.advocate.app/subprocessors",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "employee count: 74"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 74 employees, placing it in the 51-100 band. Profile-based headcount may differ from official payroll headcount. Source: https://linkedin.com/company/advocate-technologies",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "Inference runs with frontier model providers such as Anthropic and OpenAI under enterprise agreements configured for zero data retention. Prompts and outputs are not stored by the provider beyond the request."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly names Anthropic and OpenAI as frontier-model providers used for inference under zero-data-retention enterprise agreements. Source: https://www.advocate.app/security",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Insurance Analytics Platform Pricing \u2014 Advocate",
+       "url": "https://advocate.app/pricing",
+       "excerpts": [
+        "Enterprise Custom Contact us for pricing [Contact sales](mailto:sales@advocate.app)"
+       ]
+      }
+     ],
+     "reasoning": "A public pricing page lists an Enterprise Custom offering with contact-sales pricing; numerical prices are not required by the question. Source: https://advocate.app/pricing",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "**New York, NY, August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding** from Vestigo Ventures, Brewer Lane, MetaProp, and select family offices."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified funding announcement reports $18 million in seed funding, equivalent to USD 18,000,000. Source: https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Insurance Software & Market Terminal for Brokers | Advocate",
+       "url": "https://advocate.app/",
+       "excerpts": [
+        "KeyBank Greystone RGA Merchants Bank Arbor HUB Dwight Capital Truist PGIM PK AirFinance"
+       ]
+      }
+     ],
+     "reasoning": "KeyBank and Greystone appear in the homepage customer-logo display. The evidence is a logo wall rather than separate customer case studies. Source: https://advocate.app/",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "**New York, NY, August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding** from Vestigo Ventures, Brewer Lane, MetaProp, and select family offices."
+       ]
+      }
+     ],
+     "reasoning": "The seed funding was announced on August 4, 2026, giving 2026-08 as the publicly announced round date; a separate closing date was not established. Source: https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Client Solutions Manager, InsurTech ",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4",
+       "excerpts": [
+        "Proficiency with Excel, Word, and structured workflow or CRM platforms."
+       ]
+      },
+      {
+       "title": "Platform Engineer ",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610",
+       "excerpts": [
+        "Build and maintain in-platform and out-of-platform integrations, from customer-facing data connections to the third-party systems the company runs on."
+       ]
+      }
+     ],
+     "reasoning": "Readable job descriptions refer only to unnamed CRM platforms and third-party integrations. The reviewed documentation and jobs did not identify a specific CRM or sales-and-marketing system, so the result is an empty list, not a claim that no such software is used. Sources: https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4 and https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [],
+     "reasoning": "Unknown: no dated qualifying C-level or VP arrival or departure was verified for the requested window, and the about page did not provide a complete named leadership roster with start dates. This does not establish a negative answer. Reviewed page: https://www.advocate.app/about",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Advocate Technologies Inc.",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+       "excerpts": [
+        "5 roles across all departments in all locations Engineering [Platform Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610) Engineering Long Island City, NY View job [Product Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/50d16a20-4191-4bac-8915-230f81df29b3) Engineering New York, NY View job [Product Engineer (Europe, Remote)](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/a7576b54-094e-4018-9efe-f5177a3e2857) Engineering Remote (Greece) View job Insurance Operations [Client Solutions Manager, InsurTech](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4) Insurance Operations Athina, Greece View job [Insurance Consultant"
+       ]
+      }
+     ],
+     "reasoning": "The job board lists five openings: Platform Engineer, two Product Engineer roles, Client Solutions Manager, and Insurance Consultant. None has a qualifying AI, ML, or data-science title. Source: https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "**New York, NY, August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding** from Vestigo Ventures, Brewer Lane, MetaProp, and select family offices."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified funding announcement explicitly describes the $18 million financing as seed funding. Source: https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "API Reference - Advocate API",
+       "url": "https://docs.advocate.app/",
+       "excerpts": [
+        "[Authentication](https://docs.advocate.app/authentication) Using the API [Query Parameters](https://docs.advocate.app/query-parameters) [Responses](https://docs.advocate.app/responses) [Errors](https://docs.advocate.app/errors) [Rate Limiting](https://docs.advocate.app/rate-limits) [Custom Metadata"
+       ]
+      }
+     ],
+     "reasoning": "The public API documentation contains multiple articles, including Authentication, Query Parameters, Responses, Errors, Rate Limiting, and Custom Metadata. Source: https://docs.advocate.app/",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Advocate \u2014 Commercial Insurance Intelligence",
+       "url": "https://www.advocate.app/about",
+       "excerpts": [
+        "Advocate is headquartered in New York City, with offices inPrague and Athens."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly states that it is headquartered in New York City. Source: https://www.advocate.app/about",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "**New York, NY, August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding** from Vestigo Ventures, Brewer Lane, MetaProp, and select family offices.",
+        "On August 4, Advocate came out of stealth with $18 million in seed funding and the industry's first standardized pricing and coverage benchmarks, built on $7.3 billion in real premium across 70,000 policies."
+       ]
+      }
+     ],
+     "reasoning": "Advocate announced its public launch and standardized pricing-and-coverage benchmarks on August 4, 2026, within the six months preceding November 9, 2026. Source: https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Advocate Technologies Inc.",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+       "excerpts": [
+        "5 roles across all departments in all locations Engineering [Platform Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610) Engineering Long Island City, NY View job [Product Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/50d16a20-4191-4bac-8915-230f81df29b3) Engineering New York, NY View job [Product Engineer (Europe, Remote)](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/a7576b54-094e-4018-9efe-f5177a3e2857) Engineering Remote (Greece) View job Insurance Operations [Client Solutions Manager, InsurTech](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4) Insurance Operations Athina, Greece View job [Insurance Consultant"
+       ]
+      }
+     ],
+     "reasoning": "None of the five listed openings is an SDR, BDR, sales/business-development representative, or account executive role. Source: https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "**New York, NY, August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding** from Vestigo Ventures, Brewer Lane, MetaProp, and select family offices."
+       ]
+      }
+     ],
+     "reasoning": "The August 4, 2026 announcement reports $18 million in seed funding, within the 18 months preceding November 9, 2026. Source: https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "Report available SOC 2 Type II"
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly claims SOC 2 Type II with a report available. Source: https://www.advocate.app/security",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "Our information security management system is certified against the 2022 revision of ISO/IEC 27001 by an accredited external auditor. The certificate and audit report are available on request."
+       ]
+      }
+     ],
+     "reasoning": "The security page states that the information-security management system is certified against ISO/IEC 27001:2022. Source: https://www.advocate.app/security",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Insurance Software & Market Terminal for Brokers | Advocate",
+       "url": "https://advocate.app/",
+       "excerpts": [
+        "KeyBank Greystone RGA Merchants Bank Arbor HUB Dwight Capital Truist PGIM PK AirFinance"
+       ]
+      }
+     ],
+     "reasoning": "KeyBank is named in the homepage customer-logo display. Source: https://advocate.app/",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Insurance Software & Market Terminal for Brokers | Advocate",
+       "url": "https://advocate.app/",
+       "excerpts": [
+        "KeyBank Greystone RGA Merchants Bank Arbor HUB Dwight Capital Truist PGIM PK AirFinance"
+       ]
+      }
+     ],
+     "reasoning": "Greystone is named in the homepage customer-logo display. Source: https://advocate.app/",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2020.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Advocate uses AI to standardize commercial insurance policy data, benchmark coverage and pricing, and monitor portfolio risk for brokers, loan servicers, carriers, and property owners.",
+    "employee_band": "51-100",
+    "model_provider": "Anthropic and OpenAI",
+    "pricing_page": true,
+    "funding_amount_usd": 18000000.0,
+    "named_customers": [
+     "KeyBank",
+     "Greystone"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "seed",
+    "public_docs": true,
+    "hq_city": "New York City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

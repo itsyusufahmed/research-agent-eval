@@ -1,0 +1,25 @@
+{
+ "url": "https://docs.revealdata.com/reveal/docs/aji-environment-and-data-requirements",
+ "fetched_at": "2026-11-11T01:26:45.845978+00:00",
+ "hours_after_run": 49.4,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "d40983feb6b084da6126f8ab0caae4a7bc272585e323f08286f631ef7107b545",
+ "chars": 3204,
+ "truncated": false,
+ "title": "aji Environment and Data Requirements",
+ "markdown": "> ## Documentation Index\n>\n> Fetch the complete documentation index at: [https://docs.revealdata.com/llms.txt](https://docs.revealdata.com/llms.txt)\n>\n> Use this file to discover all available pages before exploring further.\n\n# aji Environment and Data Requirements\n\n- Updated on Oct 15, 2025\n- Published on Sep 19, 2025\n\n- 1 minute(s) read\n- Focus\n- Listen\n\nFollow\n\nPrint\n\nCopy pageCopy as Markdown for LLMsView as MarkdownView the page as plain text\n\nOpen in ChatGPTAsk ChatGPT about this pageOpen in ClaudeAsk Claude about this page\n\nArticle summary[Prev](https://docs.revealdata.com/docs/about-aji \"About aji\")[Next](https://docs.revealdata.com/docs/aji-unit-allocation-instance-admin \"aji Unit Allocation – Instance Admin\")\n\n## Requirements\n\nIn order for aji to review your documents, a variety of actions must be fulfilled both in the Reveal environment and with your specific dataset.\n\n### Reveal Environment\n\n1. You must have a Reveal version that is 2025.9 or later with aji enabled.\n\n   - aji can be enabled by contacting your CSM.\n2. You must create a new, active project after the 2025.9 GA date.\n\n\n### Dataset Criteria\n\n1. Your dataset must be uploaded into Reveal.\n\n2. Your dataset must be in English. Currently, this is the only supported language for aji.\n\n3. Your dataset must be in a US environment, or you must consent to securely transfer content to a US-based AWS Bedrock region.\n\n4. Your data must contain OCRed or extracted text.\n\n   - aji only searches text. It does not search metadata, pictures, audio or video content, or anything else that is not text.\n5. For each individual document, the text size of your data must be no less than 0.05KB and no more than 150KB.\n\n\n> Note\n>\n> Reveal reserves the right to parse documents due to the fact that LLMs have size limits on what can be sent for analysis.\n\n## Optional Preparation\n\nThe below additional prep work can help improve your overall experience with aji.\n\n### Reveal Environment Prep\n\n1. Enable Ask, Reveal’s GenAI query tool that allows you to ask questions about your documents to a GenAI model. This allows you to select “Suggest documents automatically” for Calibration Reviews, which uses Ask to auto-generate a suggested document set to Calibrate.\n\n1. You can learn more about ASK by reading our [About Ask (opens in new tab)](https://docs.revealdata.com/reveal/docs/about-ask) article.\n\n### Dataset Criteria Prep\n\nBefore it’s used by aji, you can filter your dataset in one or more of the the following ways:\n\n- Remove documents that have already been manually coded.\n\n- Remove out-of-scope documents.\n\n- Remove documents that are too small or too large (text size less than 0.05KB or greater than 150KB). aji cannot search documents outside that text size range.\n\n- Remove structured data (logs, number-only spreadsheet files, etc.).\n\n- Remove exact duplicates.\n\n\nOnce your data is prepped, put it in its own work folder that can be used later. This is your **target data population** that will be used to create random sample sets for Validation, and used as a work folder source for GenAI Review.\n\nWas this article helpful?\n\nYes  No\n\nPrevious article\n\nAbout aji\n\nNext article\n\naji Unit Allocation – Instance Admin",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider",
+  "public_docs"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-11T01:07:54.554783+00:00",
+ "hours_after_launch": 0.31
+}

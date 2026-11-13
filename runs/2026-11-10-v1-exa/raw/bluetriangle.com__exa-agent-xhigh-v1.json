@@ -1,0 +1,996 @@
+{
+ "id": "agent_run_857a4f8ebb9949d1a910ef4f5d759594",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T19:07:49.370Z",
+ "completedAt": "2026-11-10T19:12:00.929Z",
+ "request": {
+  "query": "Research the company Blue Triangle (bluetriangle.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Blue Triangle helps enterprise digital, engineering, marketing and ecommerce teams quantify the revenue lost to website and mobile-app friction, prioritize fixes and validate their revenue impact.\",\"citations\":[\"https://bluetriangle.com/\",\"https://bluetriangle.com/about\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://portal.bluetriangle.com/btportal/web/index.php?r=checkout%2Fpackage\"],\"notes\":\"A publicly accessible plan-comparison page lists packages and enterprise custom pricing; the main-site /pricing page was unavailable.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Lenovo\",\"Living Spaces\"],\"citations\":[\"https://bluetriangle.com/platform-overview/resolve-friction/function-tracing\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"21-50\",\"citations\":[\"https://linkedin.com/company/blue-triangle-technologies\"],\"notes\":\"The company profile reports 23 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Glen Allen\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/blue-triangle-technologies\"],\"notes\":\"The company profile identifies Glen Allen as headquarters; some other directories use Richmond or Mechanicsville.\"},\"founded_year\":{\"status\":\"asserted\",\"value\":2011,\"citations\":[\"https://linkedin.com/company/blue-triangle-technologies\",\"https://careers.saasventurecapital.com/companies/blue-triangle\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://bluetriangle.com/blog\"],\"notes\":\"The blog is primarily product announcements, digital-experience guidance and marketing content; no qualifying pair of engineer-authored posts about building Blue Triangle was established.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://help.bluetriangle.com/\",\"https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview\",\"https://help.bluetriangle.com/help-center/assistant-ai-overview\",\"https://help.bluetriangle.com/help-center/release-notes-2026\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://careers.saasventurecapital.com/companies/blue-triangle\",\"https://bluetriangle.com/about/careers\"],\"notes\":\"The company job-board page explicitly says it has no jobs relevant to that board at this time; no qualifying live posting was found.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No underlying model/provider is publicly identified in the AI documentation, AI/product FAQs, blog, privacy/security materials or disclosed subprocessor list. Claude, ChatGPT and Cursor are documented as external MCP clients, not as Blue Triangle\u2019s internal model provider.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://bluetriangle.com/legal-trust\",\"https://bluetriangle.com/privacy-policy\"],\"notes\":\"The Trust Center offers SOC-2 and ISO27001 documentation on request. GDPR is an explicit compliance claim in the privacy policy, not a standalone certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series B\",\"date\":\"2021-11\"},\"citations\":[\"https://www.vcbacked.co/company/blue-triangle\",\"https://leadiq.com/c/blue-triangle/5a1d847824000024005ef211\"],\"notes\":\"The latest recorded round is dated November 9, 2021; its amount is undisclosed, so amount_usd is omitted.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.vcbacked.co/company/blue-triangle\"],\"notes\":\"The latest recorded funding round is November 9, 2021, before the May 9, 2025\u2013November 9, 2026 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://careers.saasventurecapital.com/companies/blue-triangle\",\"https://careers.saasventurecapital.com/companies/blue-triangle/jobs/28126921-sales-development-representative\"],\"notes\":\"The company board lists no relevant jobs; the historical SDR posting explicitly states that it no longer accepts applications.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://bluetriangle.com/blog/blue-triangle-mcp-ai-assistant-access\",\"https://bluetriangle.com/blog/find-and-fix-digital-friction-without-a-developer\"],\"notes\":\"The MCP connector was announced in August 2026, and the Revenue Assurance platform in July 2026, both inside May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://bluetriangle.com/about\",\"https://www.linkedin.com/in/lancebuchholz\",\"https://www.linkedin.com/in/chuckmoxley\",\"https://www.linkedin.com/in/amirrozenberg\",\"https://www.linkedin.com/in/danielfossva\",\"https://linkedin.com/in/emily-salzer-19007443\",\"https://www.linkedin.com/in/lance-ullom-3146a914\"],\"notes\":\"The six-person published leadership team was checked against employment histories; company joins predate November 9, 2025, and no dated departure was found. Emily Salzer\u2019s January 2026 VP appointment was an internal promotion, not a company join.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"ZoomInfo\",\"Outreach.io\",\"Salesloft\"],\"citations\":[\"https://careers.saasventurecapital.com/companies/blue-triangle/jobs/28126921-sales-development-representative\",\"https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview\"],\"notes\":\"Historical SDR recruiting names all four in desired tool experience; current MCP documentation also describes HubSpot and ZoomInfo workflows. These are public stack signals, not confirmation that all four remain in internal use.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog is primarily product announcements, digital-experience guidance and marketing content; no qualifying pair of engineer-authored posts about building Blue Triangle was established.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://bluetriangle.com/blog"
+    ]
+   },
+   "hq_location": {
+    "notes": "The company profile identifies Glen Allen as headquarters; some other directories use Richmond or Mechanicsville.",
+    "value": {
+     "city": "Glen Allen",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/blue-triangle-technologies"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://help.bluetriangle.com/",
+     "https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview",
+     "https://help.bluetriangle.com/help-center/assistant-ai-overview",
+     "https://help.bluetriangle.com/help-center/release-notes-2026"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest recorded funding round is November 9, 2021, before the May 9, 2025\u2013November 9, 2026 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.vcbacked.co/company/blue-triangle"
+    ]
+   },
+   "founded_year": {
+    "value": 2011,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/blue-triangle-technologies",
+     "https://careers.saasventurecapital.com/companies/blue-triangle"
+    ]
+   },
+   "last_funding": {
+    "notes": "The latest recorded round is dated November 9, 2021; its amount is undisclosed, so amount_usd is omitted.",
+    "value": {
+     "date": "2021-11",
+     "stage": "Series B"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.vcbacked.co/company/blue-triangle",
+     "https://leadiq.com/c/blue-triangle/5a1d847824000024005ef211"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "The MCP connector was announced in August 2026, and the Revenue Assurance platform in July 2026, both inside May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://bluetriangle.com/blog/blue-triangle-mcp-ai-assistant-access",
+     "https://bluetriangle.com/blog/find-and-fix-digital-friction-without-a-developer"
+    ]
+   },
+   "pricing_page": {
+    "notes": "A publicly accessible plan-comparison page lists packages and enterprise custom pricing; the main-site /pricing page was unavailable.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://portal.bluetriangle.com/btportal/web/index.php?r=checkout%2Fpackage"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 23 employees.",
+    "value": "21-50",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/blue-triangle-technologies"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The company board lists no relevant jobs; the historical SDR posting explicitly states that it no longer accepts applications.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://careers.saasventurecapital.com/companies/blue-triangle",
+     "https://careers.saasventurecapital.com/companies/blue-triangle/jobs/28126921-sales-development-representative"
+    ]
+   },
+   "model_provider": {
+    "notes": "No underlying model/provider is publicly identified in the AI documentation, AI/product FAQs, blog, privacy/security materials or disclosed subprocessor list. Claude, ChatGPT and Cursor are documented as external MCP clients, not as Blue Triangle\u2019s internal model provider.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "value": [
+     "Lenovo",
+     "Living Spaces"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://bluetriangle.com/platform-overview/resolve-friction/function-tracing"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The company job-board page explicitly says it has no jobs relevant to that board at this time; no qualifying live posting was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://careers.saasventurecapital.com/companies/blue-triangle",
+     "https://bluetriangle.com/about/careers"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The Trust Center offers SOC-2 and ISO27001 documentation on request. GDPR is an explicit compliance claim in the privacy policy, not a standalone certification.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://bluetriangle.com/legal-trust",
+     "https://bluetriangle.com/privacy-policy"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "Historical SDR recruiting names all four in desired tool experience; current MCP documentation also describes HubSpot and ZoomInfo workflows. These are public stack signals, not confirmation that all four remain in internal use.",
+    "value": [
+     "HubSpot",
+     "ZoomInfo",
+     "Outreach.io",
+     "Salesloft"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://careers.saasventurecapital.com/companies/blue-triangle/jobs/28126921-sales-development-representative",
+     "https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Blue Triangle helps enterprise digital, engineering, marketing and ecommerce teams quantify the revenue lost to website and mobile-app friction, prioritize fixes and validate their revenue impact.",
+    "status": "asserted",
+    "citations": [
+     "https://bluetriangle.com/",
+     "https://bluetriangle.com/about"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "The six-person published leadership team was checked against employment histories; company joins predate November 9, 2025, and no dated departure was found. Emily Salzer\u2019s January 2026 VP appointment was an internal promotion, not a company join.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://bluetriangle.com/about",
+     "https://www.linkedin.com/in/lancebuchholz",
+     "https://www.linkedin.com/in/chuckmoxley",
+     "https://www.linkedin.com/in/amirrozenberg",
+     "https://www.linkedin.com/in/danielfossva",
+     "https://linkedin.com/in/emily-salzer-19007443",
+     "https://www.linkedin.com/in/lance-ullom-3146a914"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://bluetriangle.com/"
+     },
+     {
+      "url": "https://bluetriangle.com/about"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://portal.bluetriangle.com/btportal/web/index.php?r=checkout%2Fpackage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://bluetriangle.com/platform-overview/resolve-friction/function-tracing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/blue-triangle-technologies"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/blue-triangle-technologies"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/blue-triangle-technologies"
+     },
+     {
+      "url": "https://careers.saasventurecapital.com/companies/blue-triangle"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://bluetriangle.com/blog"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://help.bluetriangle.com/"
+     },
+     {
+      "url": "https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview"
+     },
+     {
+      "url": "https://help.bluetriangle.com/help-center/assistant-ai-overview"
+     },
+     {
+      "url": "https://help.bluetriangle.com/help-center/release-notes-2026"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://careers.saasventurecapital.com/companies/blue-triangle"
+     },
+     {
+      "url": "https://bluetriangle.com/about/careers"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://bluetriangle.com/legal-trust"
+     },
+     {
+      "url": "https://bluetriangle.com/privacy-policy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.vcbacked.co/company/blue-triangle"
+     },
+     {
+      "url": "https://leadiq.com/c/blue-triangle/5a1d847824000024005ef211"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.vcbacked.co/company/blue-triangle"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://careers.saasventurecapital.com/companies/blue-triangle"
+     },
+     {
+      "url": "https://careers.saasventurecapital.com/companies/blue-triangle/jobs/28126921-sales-development-representative"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://bluetriangle.com/blog/blue-triangle-mcp-ai-assistant-access"
+     },
+     {
+      "url": "https://bluetriangle.com/blog/find-and-fix-digital-friction-without-a-developer"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://bluetriangle.com/about"
+     },
+     {
+      "url": "https://www.linkedin.com/in/lancebuchholz"
+     },
+     {
+      "url": "https://www.linkedin.com/in/chuckmoxley"
+     },
+     {
+      "url": "https://www.linkedin.com/in/amirrozenberg"
+     },
+     {
+      "url": "https://www.linkedin.com/in/danielfossva"
+     },
+     {
+      "url": "https://linkedin.com/in/emily-salzer-19007443"
+     },
+     {
+      "url": "https://www.linkedin.com/in/lance-ullom-3146a914"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://careers.saasventurecapital.com/companies/blue-triangle/jobs/28126921-sales-development-representative"
+     },
+     {
+      "url": "https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://help.bluetriangle.com/help-center/blue-triangle-mcp-overview"
+     },
+     {
+      "url": "https://help.bluetriangle.com/help-center/assistant-ai-overview"
+     },
+     {
+      "url": "https://bluetriangle.com/hubfs/Blue_Triangle_June_2023/pdf/Blue%20Triangle%20Subprocessor%20List%202023.pdf"
+     },
+     {
+      "url": "https://bluetriangle.com/legal-trust"
+     },
+     {
+      "url": "https://bluetriangle.com/privacy-policy"
+     },
+     {
+      "url": "https://bluetriangle.com/faq"
+     },
+     {
+      "url": "https://bluetriangle.com/blog/blue-triangle-mcp-ai-assistant-access"
+     }
+    ],
+    "confidence": "medium"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

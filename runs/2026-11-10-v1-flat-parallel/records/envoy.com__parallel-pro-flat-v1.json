@@ -1,0 +1,181 @@
+{
+ "schema_version": "v0",
+ "company": "Envoy",
+ "domain": "envoy.com",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Envoy unifies visitor management, workplace spaces, and communications in a workplace management platform for facilities, security, and IT teams.",
+   "citations": [
+    "https://envoy.com/products"
+   ],
+   "notes": "The product page describes one platform unifying visitors, spaces, and communications and explicitly identifies facilities, security, and IT teams as its users: https://envoy.com/products."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://envoy.com/pricing"
+   ],
+   "notes": "A public pricing page lists plans, including an Enterprise plan with custom pricing: https://envoy.com/pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "G+D",
+    "Headspace"
+   ],
+   "citations": [
+    "https://www.envoy.com/case-studies",
+    "https://envoy.com/case-studies/headspace"
+   ],
+   "notes": "named_customers: The customer stories page identifies G+D as using Envoy (https://www.envoy.com/case-studies), and the Headspace case study includes a customer's statement about needing Envoy for its office (https://envoy.com/case-studies/headspace). | named_customers.0: G+D is identified as using Envoy to welcome visitors at https://www.envoy.com/case-studies. | named_customers.1: The Headspace customer case study contains a first-person statement about using Envoy: https://envoy.com/case-studies/headspace."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://indexed.vc/companies/envoy"
+   ],
+   "notes": "The company profile explicitly reports the employee band as 201\u2013500: https://indexed.vc/companies/envoy. This is a third-party headcount classification."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "San Francisco",
+    "country": "United States"
+   },
+   "citations": [
+    "https://envoy.com/about-us"
+   ],
+   "notes": "hq_city: Envoy explicitly labels San Francisco as its headquarters on its about page: https://envoy.com/about-us. | hq_country: The about page identifies San Francisco as headquarters and provides its California postal address, placing headquarters in the United States: https://envoy.com/about-us."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2013.0,
+   "citations": [
+    "https://linkedin.com/company/envoy-inc"
+   ],
+   "notes": "Envoy's company profile explicitly lists 2013 as its founding year: https://linkedin.com/company/envoy-inc."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://engineering.envoy.com/"
+   ],
+   "notes": "The engineering index contains at least two named, first-person product-building posts: Shraddha Chadha on the Kafka/LLM/geospatial threat-detection pipeline and Matthew Ellwood on rendering React within Ember. The site presents its contributors as Envoy's builders, although the index does not supply their formal job titles: https://engineering.envoy.com/."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://developers.envoy.com/",
+    "https://envoy.help/en/articles/3450292-envoy-compliance-certifications"
+   ],
+   "notes": "Envoy has a public developer portal linking to guides and API documentation (https://developers.envoy.com/), plus a public help center containing multiple product and compliance articles, evidenced by its related-article links (https://envoy.help/en/articles/3450292-envoy-compliance-certifications)."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://jobs.ashbyhq.com/envoy?format=json",
+    "https://www.jobscroller.net/companies/envoy"
+   ],
+   "notes": "The official board lists the relevant engineering and data titles without any qualifying AI/ML/data-science title (https://jobs.ashbyhq.com/envoy?format=json). A complete 23-role listing likewise contains none (https://www.jobscroller.net/companies/envoy). Member of Technical Staff, Envoy Response involves AI in its description but does not satisfy the required title test; Senior Data Analyst also does not qualify. Confidence is limited by dynamic hiring data and differing listing counts."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic Claude, accessed through Amazon Bedrock",
+   "citations": [
+    "https://envoy.help/en/articles/16301838-ai-usage-in-envoy-products"
+   ],
+   "notes": "Envoy's AI usage documentation explicitly states that Anthropic's Claude model processes information through Amazon Bedrock: https://envoy.help/en/articles/16301838-ai-usage-in-envoy-products."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "HIPAA",
+    "GDPR"
+   ],
+   "citations": [
+    "https://trust.envoy.com/",
+    "https://envoy.com/legal/compliance"
+   ],
+   "notes": "compliance_certs: Envoy's Trust Center lists SOC 2 Type 2, ISO/IEC 27001, and HIPAA compliance (https://trust.envoy.com/); its legal page explicitly states that Envoy services comply with GDPR (https://envoy.com/legal/compliance). These are public compliance claims, not an assertion that every listed framework issues a certification. PCI DSS is excluded because the legal page describes helping customers meet physical-access requirements rather than claiming Envoy's own PCI DSS certification. | compliance_certs.0: SOC 2 Type 2 is explicitly listed at https://trust.envoy.com/. | compliance_certs.1: ISO/IEC 27001 is explicitly listed at https://trust.envoy.com/. | compliance_certs.2: HIPAA appears as a compliance claim at https://trust.envoy.com/. This does not imply that every customer deployment is automatically HIPAA compliant. | compliance_certs.3: Envoy explicitly states its services comply with GDPR at https://envoy.com/legal/compliance."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series C",
+    "date": "2022-01",
+    "amount_usd": 111000000.0
+   },
+   "citations": [
+    "https://envoy.com/workplace-management/envoy-series-c-cant-stop-wont-stop",
+    "https://indexed.vc/companies/envoy"
+   ],
+   "notes": "funding_stage: The company announcement calls the round Series C (https://envoy.com/workplace-management/envoy-series-c-cant-stop-wont-stop), and the funding profile identifies it as the latest round (https://indexed.vc/companies/envoy). | funding_date: The Series C announcement is dated January 11, 2022, giving 2022-01 (https://envoy.com/workplace-management/envoy-series-c-cant-stop-wont-stop). The funding profile identifies January 2022 as the latest round (https://indexed.vc/companies/envoy). | funding_amount_usd: Envoy announced $111 million in Series C capital (https://envoy.com/workplace-management/envoy-series-c-cant-stop-wont-stop). The funding profile identifies that round as its most recent, distinguishing the round amount from $170.2 million in total funding (https://indexed.vc/companies/envoy)."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://envoy.com/workplace-management/envoy-series-c-cant-stop-wont-stop",
+    "https://indexed.vc/companies/envoy"
+   ],
+   "notes": "The latest identified round is the January 2022 Series C, preceding the eighteen-month window beginning May 9, 2025. Sources: https://envoy.com/workplace-management/envoy-series-c-cant-stop-wont-stop and https://indexed.vc/companies/envoy."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8",
+    "https://hiringcensus.com/c/ashby/envoy"
+   ],
+   "notes": "The Mid Market Account Executive posting provides a live application link (https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8). The current-role listing also includes EMEA Outbound BDR, corroborating qualifying sales hiring (https://hiringcensus.com/c/ashby/envoy)."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://envoy.com/ai-information"
+   ],
+   "notes": "Envoy's AI information page dates the Envoy Response launch to August 6, 2026. It combines AI-analyzed threat intelligence and incident management, constituting a product launch within the six-month window: https://envoy.com/ai-information."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://envoy.com/press",
+    "https://envoy.com/press-release/rss.xml"
+   ],
+   "notes": "Envoy announced Mauricio Ramirez's appointment as Chief Revenue Officer. The newsroom dates the announcement February 26, 2026, while its feed carries a July 2026 publication timestamp; both fall within the requested twelve-month window. Sources: https://envoy.com/press and https://envoy.com/press-release/rss.xml."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "Outreach",
+    "ZoomInfo",
+    "Nooks",
+    "LI Sales Navigator",
+    "6Sense",
+    "Chorus"
+   ],
+   "citations": [
+    "https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8",
+    "https://jobs.ashbyhq.com/Envoy/50fb0d1e-fa3a-4f05-b40f-df0149882eec"
+   ],
+   "notes": "crm_stack_signal: The Mid Market Account Executive posting names Salesforce, Outreach, LI Sales Navigator, 6Sense, ZoomInfo, and Chorus as preferred stack experience (https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8). The EMEA BDR posting explicitly calls SFDC, Outreach, ZoomInfo, and Nooks its current stack (https://jobs.ashbyhq.com/Envoy/50fb0d1e-fa3a-4f05-b40f-df0149882eec). Preferred experience is a weaker usage signal than the explicit current-stack statement. | crm_stack_signal.0: Salesforce is named in the AE posting, while SFDC appears in the BDR posting's current stack: https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8 and https://jobs.ashbyhq.com/Envoy/50fb0d1e-fa3a-4f05-b40f-df0149882eec. | crm_stack_signal.1: Outreach is explicitly part of the current stack: https://jobs.ashbyhq.com/Envoy/50fb0d1e-fa3a-4f05-b40f-df0149882eec. | crm_stack_signal.2: ZoomInfo is explicitly part of the current stack: https://jobs.ashbyhq.com/Envoy/50fb0d1e-fa3a-4f05-b40f-df0149882eec. | crm_stack_signal.3: Nooks is explicitly part of the current stack: https://jobs.ashbyhq.com/Envoy/50fb0d1e-fa3a-4f05-b40f-df0149882eec. | crm_stack_signal.4: LI Sales Navigator is named as preferred stack experience in the AE posting: https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8. | crm_stack_signal.5: 6Sense is named as preferred stack experience in the AE posting: https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8. | crm_stack_signal.6: Chorus is named as preferred stack experience in the AE posting: https://jobs.ashbyhq.com/Envoy/d8a76039-7a58-4e28-988c-b013be7a3aa8."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 343.6
+}

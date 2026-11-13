@@ -1,0 +1,963 @@
+{
+ "id": "agent_run_1c4ba17edbb64724bc9ec4838e936847",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:08:50.454Z",
+ "completedAt": "2026-11-10T19:12:45.718Z",
+ "request": {
+  "query": "Research the company Forwood Safety (forwoodsafety.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Forwood Safety provides critical-risk management software and safety expertise that help organisations in high-risk industries verify critical controls and prevent workplace fatalities and serious injuries.\",\"citations\":[\"https://forwoodsafety.com/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://forwoodsafety.com/\"],\"notes\":\"No public pricing page or pricing navigation was found; the pricing URL returned no readable page.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Metso\",\"BHP\"],\"citations\":[\"https://forwoodsafety.com/\",\"https://forwoodsafety.com/about-us/critical-risk-management-for-fatality-prevention/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"51-100\",\"citations\":[\"https://pitchbook.com/profiles/company/267247-81\"],\"notes\":\"The company profile reports 94 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Brisbane\",\"country\":\"Australia\"},\"citations\":[\"https://pitchbook.com/profiles/company/267247-81\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":1995,\"citations\":[\"https://pitchbook.com/profiles/company/267247-81\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://forwoodsafety.com/resources/news-articles/\",\"https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics/\"],\"notes\":\"The news archive is predominantly safety, product and marketing content. One implementation-focused QuickSight Q article was found, but not two engineer-authored build posts.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://help.forwoodsafety.com/en/collections/8382503-forwood-users\"],\"notes\":\"The public help collection lists login, password reset, mobile activation and CCV app setup articles.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://forwoodsafety.com/about-us/careers/\",\"https://forwoodsafety.bamboohr.com/careers/161\",\"https://forwoodsafety.bamboohr.com/careers/162\",\"https://forwoodsafety.bamboohr.com/careers/160\",\"https://forwoodsafety.bamboohr.com/careers/153\",\"https://forwoodsafety.bamboohr.com/careers/163\"],\"notes\":\"The readable openings found were sales and critical-risk management roles; none had a qualifying AI, ML or data-science title.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Amazon Web Services \u2014 Amazon QuickSight Q\",\"citations\":[\"https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics/\"],\"notes\":\"Forwood explicitly describes using QuickSight Q\u2019s machine-learning-powered natural-language analytics; no underlying foundation-model name is disclosed.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type 2\"],\"citations\":[\"https://forwoodsafety.com/forwood-is-proud-to-be-soc-2-type-2-compliant/\",\"https://forwoodsafety.com/privacy-policy/\"],\"notes\":\"ISO 27001 and GDPR are described as alignment frameworks in the privacy policy, not separate certifications.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Later Stage VC\",\"date\":\"2023-10\"},\"citations\":[\"https://pitchbook.com/profiles/company/267247-81\",\"https://www.macquarie.com/au/en/insights/investing-in-workplace-fatality-prevention-software.html\"],\"notes\":\"The database dates the completed round to 2023-10-31. The investment amount is not publicly disclosed, so amount_usd is omitted.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://pitchbook.com/profiles/company/267247-81\"],\"notes\":\"The latest recorded round is October 2023, before the 2025-05-09\u20132026-11-09 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://forwoodsafety.bamboohr.com/careers/160\"],\"notes\":\"Live Account Executive \u2013 Enterprise SaaS Sales posting for Italy.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://forwoodsafety.com/access-key-data-with-ease-in-safety-2-0/\",\"https://forwoodsafety.com/resources/news-articles/\",\"https://forwoodsafety.com/forwood-crm-round-table-2026/\"],\"notes\":\"The latest explicit launch found was Safety+ 2.0 and its mobile app on 2025-01-21, before 2026-05-09. The June 2026 Forwood One item describes an early look at a future platform, not a launch.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://forwoodsafety.com/about-us/meet-our-team/\",\"https://linkedin.com/in/jeremy-morgan\",\"https://linkedin.com/in/thorstenscholz\"],\"notes\":\"The small official executive team was checked in full; no in-window C-level/VP appointment or departure was announced. Available role histories place the commercial and operations appointments before 2025-11-09; the team page itself provides no start dates.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Zoho CRM\",\"LinkedIn\",\"LeadsBridge\",\"WordPress\"],\"citations\":[\"https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration\"],\"notes\":\"The implementation case study describes Zoho CRM connected to the WordPress website and LinkedIn lead forms through LeadsBridge, with marketing automation; the engagement began in May 2025.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The news archive is predominantly safety, product and marketing content. One implementation-focused QuickSight Q article was found, but not two engineer-authored build posts.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/resources/news-articles/",
+     "https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics/"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Brisbane",
+     "country": "Australia"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/267247-81"
+    ]
+   },
+   "public_docs": {
+    "notes": "The public help collection lists login, password reset, mobile activation and CCV app setup articles.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://help.forwoodsafety.com/en/collections/8382503-forwood-users"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest recorded round is October 2023, before the 2025-05-09\u20132026-11-09 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/267247-81"
+    ]
+   },
+   "founded_year": {
+    "value": 1995,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/267247-81"
+    ]
+   },
+   "last_funding": {
+    "notes": "The database dates the completed round to 2023-10-31. The investment amount is not publicly disclosed, so amount_usd is omitted.",
+    "value": {
+     "date": "2023-10",
+     "stage": "Later Stage VC"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/267247-81",
+     "https://www.macquarie.com/au/en/insights/investing-in-workplace-fatality-prevention-software.html"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "The latest explicit launch found was Safety+ 2.0 and its mobile app on 2025-01-21, before 2026-05-09. The June 2026 Forwood One item describes an early look at a future platform, not a launch.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/access-key-data-with-ease-in-safety-2-0/",
+     "https://forwoodsafety.com/resources/news-articles/",
+     "https://forwoodsafety.com/forwood-crm-round-table-2026/"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No public pricing page or pricing navigation was found; the pricing URL returned no readable page.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 94 employees.",
+    "value": "51-100",
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/267247-81"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Live Account Executive \u2013 Enterprise SaaS Sales posting for Italy.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.bamboohr.com/careers/160"
+    ]
+   },
+   "model_provider": {
+    "notes": "Forwood explicitly describes using QuickSight Q\u2019s machine-learning-powered natural-language analytics; no underlying foundation-model name is disclosed.",
+    "value": "Amazon Web Services \u2014 Amazon QuickSight Q",
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics/"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Metso",
+     "BHP"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/",
+     "https://forwoodsafety.com/about-us/critical-risk-management-for-fatality-prevention/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The readable openings found were sales and critical-risk management roles; none had a qualifying AI, ML or data-science title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/about-us/careers/",
+     "https://forwoodsafety.bamboohr.com/careers/161",
+     "https://forwoodsafety.bamboohr.com/careers/162",
+     "https://forwoodsafety.bamboohr.com/careers/160",
+     "https://forwoodsafety.bamboohr.com/careers/153",
+     "https://forwoodsafety.bamboohr.com/careers/163"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "ISO 27001 and GDPR are described as alignment frameworks in the privacy policy, not separate certifications.",
+    "value": [
+     "SOC 2 Type 2"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/forwood-is-proud-to-be-soc-2-type-2-compliant/",
+     "https://forwoodsafety.com/privacy-policy/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The implementation case study describes Zoho CRM connected to the WordPress website and LinkedIn lead forms through LeadsBridge, with marketing automation; the engagement began in May 2025.",
+    "value": [
+     "Zoho CRM",
+     "LinkedIn",
+     "LeadsBridge",
+     "WordPress"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Forwood Safety provides critical-risk management software and safety expertise that help organisations in high-risk industries verify critical controls and prevent workplace fatalities and serious injuries.",
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "The small official executive team was checked in full; no in-window C-level/VP appointment or departure was announced. Available role histories place the commercial and operations appointments before 2025-11-09; the team page itself provides no start dates.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://forwoodsafety.com/about-us/meet-our-team/",
+     "https://linkedin.com/in/jeremy-morgan",
+     "https://linkedin.com/in/thorstenscholz"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/"
+     },
+     {
+      "url": "https://forwoodsafety.com/about-us/critical-risk-management-for-fatality-prevention/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/267247-81"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/267247-81"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/267247-81"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/resources/news-articles/"
+     },
+     {
+      "url": "https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://help.forwoodsafety.com/en/collections/8382503-forwood-users"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/about-us/careers/"
+     },
+     {
+      "url": "https://forwoodsafety.bamboohr.com/careers/161"
+     },
+     {
+      "url": "https://forwoodsafety.bamboohr.com/careers/162"
+     },
+     {
+      "url": "https://forwoodsafety.bamboohr.com/careers/160"
+     },
+     {
+      "url": "https://forwoodsafety.bamboohr.com/careers/153"
+     },
+     {
+      "url": "https://forwoodsafety.bamboohr.com/careers/163"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/forwood-is-proud-to-be-soc-2-type-2-compliant/"
+     },
+     {
+      "url": "https://forwoodsafety.com/privacy-policy/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/267247-81"
+     },
+     {
+      "url": "https://www.macquarie.com/au/en/insights/investing-in-workplace-fatality-prevention-software.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/267247-81"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.bamboohr.com/careers/160"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/access-key-data-with-ease-in-safety-2-0/"
+     },
+     {
+      "url": "https://forwoodsafety.com/resources/news-articles/"
+     },
+     {
+      "url": "https://forwoodsafety.com/forwood-crm-round-table-2026/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://forwoodsafety.com/about-us/meet-our-team/"
+     },
+     {
+      "url": "https://linkedin.com/in/jeremy-morgan"
+     },
+     {
+      "url": "https://linkedin.com/in/thorstenscholz"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

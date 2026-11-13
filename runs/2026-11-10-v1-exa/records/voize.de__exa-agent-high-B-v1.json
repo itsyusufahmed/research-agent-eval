@@ -1,0 +1,166 @@
+{
+ "schema_version": "v0",
+ "company": "voize",
+ "domain": "voize.de",
+ "config_id": "exa-agent-high-B-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "voize is an AI voice assistant for nurses and caregivers that turns spoken observations into structured care documentation and transfers it into existing electronic care-record systems.",
+   "citations": [
+    "https://www.voize.ai/us",
+    "https://tech.voize.de/posts/pytorch-lite-multiplatform"
+   ]
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.voize.de/preise"
+   ],
+   "notes": "Public page describes licensing by number of people receiving care rather than by user account; no numeric price is required for this classification."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Johannesstift Diakonie",
+    "Diakonie Stiftung Salem",
+    "Dorea Familie"
+   ],
+   "citations": [
+    "https://www.voize.de/preise"
+   ]
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "101-200",
+   "citations": [
+    "https://www.voize.de/uber-uns"
+   ],
+   "notes": "The company About page reports 139 employees."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Berlin",
+    "country": "Germany"
+   },
+   "citations": [
+    "https://linkedin.com/company/voize-ai"
+   ]
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2020,
+   "citations": [
+    "https://www.ycombinator.com/companies/voize"
+   ]
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://tech.voize.de/",
+    "https://tech.voize.de/posts/pytorch-lite-multiplatform",
+    "https://tech.voize.de/posts/opentelemetry-collector-prometheus-compat"
+   ],
+   "notes": "Separate technical blog includes CTO Erik Ziegler\u2019s on-device ML implementation article and ML Engineer Reuben Morais\u2019s infrastructure-monitoring article."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.voize.de/de/"
+   ],
+   "notes": "Public help center has multiple collections, including 23 hospital articles."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/voize/31a2c1ca-0655-458c-a281-759c515ee9e8"
+   ],
+   "notes": "Live posting: Senior ML Engineer - Speech (m/f/d)."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Proprietary on-device speech/NLP models; Anthropic Claude via Amazon Bedrock for hosted text analysis; fine-tuned, self-hosted Mistral Small 3 for grammar correction.",
+   "citations": [
+    "https://tech.voize.de/posts/pytorch-lite-multiplatform",
+    "https://voize.notion.site/datenschutz-unterauftragnehmer"
+   ],
+   "notes": "The subprocessor list distinguishes product use of Claude through AWS Bedrock from direct Anthropic API use for internal processes and support."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR",
+    "HIPAA"
+   ],
+   "citations": [
+    "https://www.voize.ai/us"
+   ],
+   "notes": "Public compliance claims, not independent certifications: the US FAQ claims HIPAA compliance and BAAs, and GDPR-compliant processing under an Article 28 DPA."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series A",
+    "date": "2025-11",
+    "amount_usd": 50000000
+   },
+   "citations": [
+    "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care/"
+   ],
+   "notes": "Announced November 17, 2025; led by Balderton Capital."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care/"
+   ],
+   "notes": "The November 17, 2025 announcement falls within May 9, 2025\u2013November 9, 2026."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/Voize/33445222-3f46-452e-83cf-5c26b2f2ba89/application"
+   ],
+   "notes": "Live posting: Sales Development Representative (m/f/d)."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.linkedin.com/posts/nicolas-klare-537595105_voize-im-krankenhaus-tiefenintegration-activity-7508422792212746240-AftO"
+   ],
+   "notes": "September 23, 2026: official German hospital-product launch with bidirectional ORBIS U integration, within May 9\u2013November 9, 2026."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/semprunl",
+    "https://www.linkedin.com/posts/semprunl_ive-joined-voize-as-vp-engineering-activity-7503102621759713280-4IOS"
+   ],
+   "notes": "Luis Semprun joined as VP Engineering in September 2026; his announcement is dated September 8, 2026."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot"
+   ],
+   "citations": [
+    "https://jobs.ashbyhq.com/Voize/33445222-3f46-452e-83cf-5c26b2f2ba89/application"
+   ],
+   "notes": "The SDR posting explicitly names HubSpot and describes recording conversations and outcomes in the company CRM."
+  }
+ },
+ "prompt_version": "v1-2026-11-10",
+ "cost_usd": 0.5,
+ "latency_seconds": 302.0
+}

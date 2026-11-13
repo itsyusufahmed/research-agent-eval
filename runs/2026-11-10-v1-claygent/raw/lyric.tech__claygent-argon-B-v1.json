@@ -1,0 +1,394 @@
+{
+ "run": {
+  "routine_run_id": "run_0toayusS9vYzP2po3Md",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "lyric.tech",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The index identifies one clearly engineering-authored engineering-insights post. Other technical articles include a post by the founder/CEO, but the available bylines do not establish a second engineer-authored post.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/blog?paged=1",
+        "https://lyric.tech/blog/the-technology-behind-modeling-at-scale"
+       ]
+      },
+      "reasoning": "I treated lyric.tech and Lyric Studio as the entity, excluding similarly named organizations. Company pages support its product, founding year, headquarters, customer names, and security claims. The dated Series B announcement is within the requested 18-month window; the company’s current information page gives a different Series B amount, noted below. Current-career evidence supports the open sales role, while a Nov. 9 job inventory and the linked Ashby description support the ML role. The public docs gateway requires a Lyric Studio login, and the reviewed public materials do not identify a model provider. Recent blog entries are readable but are not product-launch announcements.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://lyric.tech/ai-info-about-lyric",
+       "Visited https://lyric.tech/blog?paged=1",
+       "Visited https://lyric.tech/blog/the-technology-behind-modeling-at-scale",
+       "Visited https://linkedin.com/in/adityajaroli",
+       "Visited https://linkedin.com/company/lyric-tech",
+       "Visited https://security.lyric.tech/",
+       "Visited https://lyric.tech/pricing",
+       "Visited https://lyric.tech/",
+       "Visited https://lyric.tech/blogs",
+       "Visited http://jobs.ashbyhq.com/lyric/3d922475-95b5-4dad-84ad-5b2e38445ed2",
+       "Visited https://linkedin.com/in/seanzonneveld",
+       "Visited https://lyric.tech/about-us",
+       "Visited https://companies.morningstack.app/ats/ashby/machine-learning-engineer",
+       "Visited https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform",
+       "Visited https://docs.lyric.tech/",
+       "Visited https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314",
+       "Visited https://jobs.ashbyhq.com/lyric/bd834e1f-3499-4c5c-9302-74d017807618",
+       "Visited https://www.insightpartners.com/ideas/lyric-raises-43-5m-series-b-to-transform-supply-chain-decision-making-with-ai"
+      ],
+      "hq_location": {
+       "notes": "",
+       "value": {
+        "city": "Sunnyvale",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/ai-info-about-lyric"
+       ]
+      },
+      "public_docs": {
+       "notes": "The documentation site presents an email login gate rather than several publicly accessible product articles.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://docs.lyric.tech/",
+        "https://lyric.tech/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The Series B was announced on Aug. 5, 2025, within the 18 months before Nov. 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.insightpartners.com/ideas/lyric-raises-43-5m-series-b-to-transform-supply-chain-decision-making-with-ai"
+       ]
+      },
+      "founded_year": {
+       "notes": "The company information page states that Lyric was founded in 2021.",
+       "value": 2021,
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/ai-info-about-lyric"
+       ]
+      },
+      "last_funding": {
+       "notes": "Lyric’s current official information page reports a $55.5M Series B; its dated Aug. 5, 2025 announcement initially reported $43.5M for that round. I use the current official amount and the dated announcement for the month.",
+       "value": {
+        "date": "2025-08",
+        "stage": "Series B",
+        "amount_usd": 55.5
+       },
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/ai-info-about-lyric",
+        "https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The readable recent index shows analyst mentions, thought leadership, and an article about agents and forecasting, but no dated product or major-feature launch announcement in the six-month window.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/blogs"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The site navigation/footer has no public pricing page, and the /pricing URL only returns a permanent redirect rather than pricing information.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/",
+        "https://lyric.tech/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "LinkedIn reports 323 employees, which falls in the 201-500 band.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/lyric-tech"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "Lyric’s live Ashby posting is for an Enterprise Account Executive.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/lyric/bd834e1f-3499-4c5c-9302-74d017807618"
+       ]
+      },
+      "model_provider": {
+       "notes": "Lyric describes supply-chain-native models and names infrastructure/subprocessors, but the reviewed public product, AI, and security materials do not name an AI model provider.",
+       "value": "",
+       "status": "unknown",
+       "citations": [
+        "https://lyric.tech/platform",
+        "https://lyric.tech/ai-info-about-lyric",
+        "https://security.lyric.tech/"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both are named on Lyric’s customer-stories and clients/case-studies pages.",
+       "value": [
+        "Coca-Cola Consolidated",
+        "Mondelēz International"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/customer-stories",
+        "https://lyric.tech/ai-info-about-lyric"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The Nov. 9 inventory lists Lyric as hiring for an ML engineering role, and the linked Lyric posting is titled ML (Data) Platform Engineer.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/lyric/3d922475-95b5-4dad-84ad-5b2e38445ed2",
+        "https://companies.morningstack.app/ats/ashby/machine-learning-engineer"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Listed as SOC 2 Type 2 attested, ISO/IEC 27001 certified, and aligned with GDPR; only requested named items are included.",
+       "value": [
+        "SOC 2 Type 2",
+        "ISO/IEC 27001",
+        "GDPR"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/ai-info-about-lyric"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "A Lyric GTM job post explicitly lists Salesforce in its GTM tech stack.",
+       "value": [
+        "Salesforce"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Lyric Studio is an AI-native supply-chain planning, modeling, and decision-intelligence platform for large enterprises managing complex supply chains.",
+       "status": "asserted",
+       "citations": [
+        "https://lyric.tech/ai-info-about-lyric",
+        "https://lyric.tech/platform"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "Sean Zonneveld’s profile lists an EVP Global Sales role at Lyric starting May 2026, within the 12-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/in/seanzonneveld",
+        "https://lyric.tech/about-us"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "lyric.tech",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The index identifies one clearly engineering-authored engineering-insights post. Other technical articles include a post by the founder/CEO, but the available bylines do not establish a second engineer-authored post.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/blog?paged=1",
+      "https://lyric.tech/blog/the-technology-behind-modeling-at-scale"
+     ]
+    },
+    "reasoning": "I treated lyric.tech and Lyric Studio as the entity, excluding similarly named organizations. Company pages support its product, founding year, headquarters, customer names, and security claims. The dated Series B announcement is within the requested 18-month window; the company’s current information page gives a different Series B amount, noted below. Current-career evidence supports the open sales role, while a Nov. 9 job inventory and the linked Ashby description support the ML role. The public docs gateway requires a Lyric Studio login, and the reviewed public materials do not identify a model provider. Recent blog entries are readable but are not product-launch announcements.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://lyric.tech/ai-info-about-lyric",
+     "Visited https://lyric.tech/blog?paged=1",
+     "Visited https://lyric.tech/blog/the-technology-behind-modeling-at-scale",
+     "Visited https://linkedin.com/in/adityajaroli",
+     "Visited https://linkedin.com/company/lyric-tech",
+     "Visited https://security.lyric.tech/",
+     "Visited https://lyric.tech/pricing",
+     "Visited https://lyric.tech/",
+     "Visited https://lyric.tech/blogs",
+     "Visited http://jobs.ashbyhq.com/lyric/3d922475-95b5-4dad-84ad-5b2e38445ed2",
+     "Visited https://linkedin.com/in/seanzonneveld",
+     "Visited https://lyric.tech/about-us",
+     "Visited https://companies.morningstack.app/ats/ashby/machine-learning-engineer",
+     "Visited https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform",
+     "Visited https://docs.lyric.tech/",
+     "Visited https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314",
+     "Visited https://jobs.ashbyhq.com/lyric/bd834e1f-3499-4c5c-9302-74d017807618",
+     "Visited https://www.insightpartners.com/ideas/lyric-raises-43-5m-series-b-to-transform-supply-chain-decision-making-with-ai"
+    ],
+    "hq_location": {
+     "notes": "",
+     "value": {
+      "city": "Sunnyvale",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/ai-info-about-lyric"
+     ]
+    },
+    "public_docs": {
+     "notes": "The documentation site presents an email login gate rather than several publicly accessible product articles.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://docs.lyric.tech/",
+      "https://lyric.tech/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The Series B was announced on Aug. 5, 2025, within the 18 months before Nov. 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.insightpartners.com/ideas/lyric-raises-43-5m-series-b-to-transform-supply-chain-decision-making-with-ai"
+     ]
+    },
+    "founded_year": {
+     "notes": "The company information page states that Lyric was founded in 2021.",
+     "value": 2021,
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/ai-info-about-lyric"
+     ]
+    },
+    "last_funding": {
+     "notes": "Lyric’s current official information page reports a $55.5M Series B; its dated Aug. 5, 2025 announcement initially reported $43.5M for that round. I use the current official amount and the dated announcement for the month.",
+     "value": {
+      "date": "2025-08",
+      "stage": "Series B",
+      "amount_usd": 55.5
+     },
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/ai-info-about-lyric",
+      "https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The readable recent index shows analyst mentions, thought leadership, and an article about agents and forecasting, but no dated product or major-feature launch announcement in the six-month window.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/blogs"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The site navigation/footer has no public pricing page, and the /pricing URL only returns a permanent redirect rather than pricing information.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/",
+      "https://lyric.tech/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "LinkedIn reports 323 employees, which falls in the 201-500 band.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/lyric-tech"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "Lyric’s live Ashby posting is for an Enterprise Account Executive.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/lyric/bd834e1f-3499-4c5c-9302-74d017807618"
+     ]
+    },
+    "model_provider": {
+     "notes": "Lyric describes supply-chain-native models and names infrastructure/subprocessors, but the reviewed public product, AI, and security materials do not name an AI model provider.",
+     "value": "",
+     "status": "unknown",
+     "citations": [
+      "https://lyric.tech/platform",
+      "https://lyric.tech/ai-info-about-lyric",
+      "https://security.lyric.tech/"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both are named on Lyric’s customer-stories and clients/case-studies pages.",
+     "value": [
+      "Coca-Cola Consolidated",
+      "Mondelēz International"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/customer-stories",
+      "https://lyric.tech/ai-info-about-lyric"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The Nov. 9 inventory lists Lyric as hiring for an ML engineering role, and the linked Lyric posting is titled ML (Data) Platform Engineer.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/lyric/3d922475-95b5-4dad-84ad-5b2e38445ed2",
+      "https://companies.morningstack.app/ats/ashby/machine-learning-engineer"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Listed as SOC 2 Type 2 attested, ISO/IEC 27001 certified, and aligned with GDPR; only requested named items are included.",
+     "value": [
+      "SOC 2 Type 2",
+      "ISO/IEC 27001",
+      "GDPR"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/ai-info-about-lyric"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "A Lyric GTM job post explicitly lists Salesforce in its GTM tech stack.",
+     "value": [
+      "Salesforce"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Lyric Studio is an AI-native supply-chain planning, modeling, and decision-intelligence platform for large enterprises managing complex supply chains.",
+     "status": "asserted",
+     "citations": [
+      "https://lyric.tech/ai-info-about-lyric",
+      "https://lyric.tech/platform"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "Sean Zonneveld’s profile lists an EVP Global Sales role at Lyric starting May 2026, within the 12-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/in/seanzonneveld",
+      "https://lyric.tech/about-us"
+     ]
+    }
+   }
+  }
+ }
+}

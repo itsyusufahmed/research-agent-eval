@@ -1,0 +1,529 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9e053901084956ab",
+  "interaction_id": "trun_142119f6a1b4439e9e053901084956ab",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "fly.io"
+  },
+  "created_at": "2026-11-10T18:47:45.900457Z",
+  "modified_at": "2026-11-10T18:50:57.580476Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9e053901084956ab",
+   "interaction_id": "trun_142119f6a1b4439e9e053901084956ab",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "fly.io"
+   },
+   "created_at": "2026-11-10T18:47:45.900457Z",
+   "modified_at": "2026-11-10T18:50:57.580476Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About us",
+       "url": "https://fly.io/about",
+       "excerpts": [
+        "Fly.io is a new, developer-focused public cloud: Easy to deploy on, powerful to grow on."
+       ]
+      }
+     ],
+     "reasoning": "Fly.io\u2019s about page says it has been working on the company since 2017. Other profiles vary on dates, so the company\u2019s own statement is preferred.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "**SOC 2 Type 2 (Sept 2026), HIPAA BAA.** SOC 2 Type 2: our current report was issued on September 3, 2026 by Aprio LLP and covers August 1, 2025 to July 31, 2026 (Security and Confidentiality criteria). It is available under NDA from the Trust Center to organizations with the paid Compliance Package. The report describes the Fly.io platform; it does not name individual products such as Sprites, which run on the platform it covers, and Tigris is not a subservice organization in it. A bridge letter is not needed inside the first quarter after the audit period and is available on request after that. We do not hold ISO 27001, a PCI DSS AOC or FedRAMP, and none are planned; for datacenter ISO 27001 we can supply the facility operator\u2019s certificate for the region you use. HIPAA: our BAA is self-service in the Trust Center for organizations with the paid Compliance Package (see COMPLIANCE-31), with a separate Tigris BAA for object storage. We do not distribute penetration test reports (see SOFTWARE-1); we provide an attestation letter and the SOC 2 report instead."
+       ]
+      }
+     ],
+     "reasoning": "The security questionnaire names SOC 2 Type 2 and a HIPAA BAA; these correspond to the requested SOC 2 and HIPAA categories. The answer retains only those named categories.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Fly.io | LinkedIn",
+       "url": "https://linkedin.com/company/fly-io",
+       "excerpts": [
+        "Headquarters Chicago, Illinois Type Privately Held Specialties JavaScript, Serverless, Edge Computing, and CDN Locations Primary 321 N Clark St Chicago, Illinois, US"
+       ]
+      }
+     ],
+     "reasoning": "The Fly.io LinkedIn company profile identifies Chicago, Illinois as headquarters and gives its primary location in the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "The Fly Blog",
+       "url": "https://fly.io/blog",
+       "excerpts": [
+        "- [SBD: We Have a Filesystem at Home](https://fly.io/blog/sprites-block-device.md): Sprites outgrew the clever filesystem we built for them. Their replacement is a plain disk: ext4, on a block device, on a bucket.",
+        "- [Your Agent Speaks MCP. Give It a Computer.](https://fly.io/blog/sprites-mcp.md)",
+        "- [Turn And Face The Strange](https://fly.io/blog/kurt-scott-money-sprites.md)",
+        "- [Building Agents that Don't Break Themselves](https://fly.io/blog/building-agents-that-dont-break-themselves.md): Where your agent runs and where it runs code are two different questions. Answer them separately.",
+        "- [Carving The Scheduler Out Of Our Orchestrator](https://fly.io/blog/carving-the-scheduler-out-of-our-orchestrator.md): A deep dive into container scheduling and Flyd, our new orchestrator.",
+        "216 pages, newest first. Each link is the page's Markdown twin; the page itself is the same URL without `.md`, ending in `/`."
+       ]
+      }
+     ],
+     "reasoning": "The blog index contains multiple technical implementation posts, including one on the Sprites filesystem and one on Fly\u2019s scheduler/orchestrator, rather than only marketing or release notes. The blog content is technical, though the index does not identify author job titles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Fly.io: Run full stack apps close to your users. | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/fly-io",
+       "excerpts": [
+        "Run full stack apps close to your users. We run app servers and databases close to end users. Developers deploy their apps to Fly.io (it's about the simplest place to deploy a Docker Image) and use our CLI to launch instances in regions that are most important for their application."
+       ]
+      },
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "Fly.io builds computers for agents \u2014 connected infrastructure designed for AI agents and the applications they build. Unlike disposable execution environments, Fly.io gives agents real computers that have durable disk drives, secure connectivity to other systems, and the ability to scale to millions of instances to power production AI applications."
+       ]
+      }
+     ],
+     "reasoning": "The company description says developers deploy apps to Fly.io in regions close to users; the company\u2019s current announcement describes connected infrastructure and computers for AI agents. Together these establish the product and its users.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/flydotio",
+       "excerpts": [
+        "name: Fly.io description Fly.io builds computers for agents: connected infrastructure designed for AI agents and the applications they build. website: https://fly.io/ employee count: 56 follower count: 11016 linkedin url: https://www.linkedin.com/company/flydotio"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company data reports 56 employees, which falls in the 51-100 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Fly.io pricing",
+       "url": "https://fly.io/pricing",
+       "excerpts": [
+        "Canonical page: https://fly.io/pricing/"
+       ]
+      }
+     ],
+     "reasoning": "The cited page is Fly.io\u2019s public pricing page.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "*Funding, customer adoption, and new CEO Scott Johnston accelerate Fly.io\u2019s vision for infrastructure purpose-built for AI agents and the applications they build.*",
+        "**SAN FRANCISCO \u2014 July 24, 2026 \u2014** AI agents are transforming how software is built and deployed. For nearly a decade, Fly.io has helped developers build and run software. Now, as agents increasingly build, operate, and deploy software alongside people, Fly.io recognizes that AI agents require a fundamentally different kind of infrastructure than the disposable execution environments that defined the first wave of AI.",
+        "Fly.io is doubling down on computers for agents \u2014 connected infrastructure designed for AI agents and the applications they build. Fly.io gives agents real computers that have durable disk drives, secure connectivity to other systems, and the ability to scale to millions of instances to power production AI applications.",
+        "Fly.io just closed its strongest quarter in company history, driven almost entirely by agent workloads. More than 37,000 customers build on Fly.io, and more than 8,000 of them are agent-native. Over the past 12 months, revenue from the company\u2019s largest agent-native customers has grown nearly 12 times. Among the company\u2019s largest customers overall, agent-native companies now represent approximately two-thirds of revenue. Agent-first companies like Firecrawl, Kilocode, and Plastic Labs use Fly.io to build production AI applications that run continuously and perform real work.",
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado, general partner at Andreessen Horowitz, and Daniel Docter, managing director at Dell Technologies Capital, will join the company\u2019s board of directors. The investment will accelerate Fly.io\u2019s leadership in computers for agents as organizations increasingly build and deploy production agentic AI applications."
+       ]
+      }
+     ],
+     "reasoning": "Fly.io\u2019s July 24, 2026 announcement states that it announced $25 million in Series D funding.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "Fly.io\u2019s homepage explicitly identifies Builder.io, Mercor, and Supabase among teams building on Fly.io.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "*Funding, customer adoption, and new CEO Scott Johnston accelerate Fly.io\u2019s vision for infrastructure purpose-built for AI agents and the applications they build.*",
+        "**SAN FRANCISCO \u2014 July 24, 2026 \u2014** AI agents are transforming how software is built and deployed. For nearly a decade, Fly.io has helped developers build and run software. Now, as agents increasingly build, operate, and deploy software alongside people, Fly.io recognizes that AI agents require a fundamentally different kind of infrastructure than the disposable execution environments that defined the first wave of AI.",
+        "Fly.io is doubling down on computers for agents \u2014 connected infrastructure designed for AI agents and the applications they build. Fly.io gives agents real computers that have durable disk drives, secure connectivity to other systems, and the ability to scale to millions of instances to power production AI applications.",
+        "Fly.io just closed its strongest quarter in company history, driven almost entirely by agent workloads. More than 37,000 customers build on Fly.io, and more than 8,000 of them are agent-native. Over the past 12 months, revenue from the company\u2019s largest agent-native customers has grown nearly 12 times. Among the company\u2019s largest customers overall, agent-native companies now represent approximately two-thirds of revenue. Agent-first companies like Firecrawl, Kilocode, and Plastic Labs use Fly.io to build production AI applications that run continuously and perform real work.",
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado, general partner at Andreessen Horowitz, and Daniel Docter, managing director at Dell Technologies Capital, will join the company\u2019s board of directors. The investment will accelerate Fly.io\u2019s leadership in computers for agents as organizations increasingly build and deploy production agentic AI applications."
+       ]
+      }
+     ],
+     "reasoning": "The cited announcement dates the $25 million Series D to July 24, 2026, so the requested YYYY-MM value is 2026-07.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [Customer.io](https://customer.io/) | United States | Newsletters and transactional email |",
+        "| [HubSpot](https://hubspot.com) | United States | Customer relationship management |",
+        "| [Snowflake](https://www.snowflake.com/) | United States | Customer relationship management |"
+       ]
+      }
+     ],
+     "reasoning": "Fly.io\u2019s subprocessor list labels HubSpot and Snowflake as customer-relationship-management tools and lists Customer.io for newsletters and transactional email.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "*Funding, customer adoption, and new CEO Scott Johnston accelerate Fly.io\u2019s vision for infrastructure purpose-built for AI agents and the applications they build.*",
+        "**SAN FRANCISCO \u2014 July 24, 2026 \u2014** AI agents are transforming how software is built and deployed. For nearly a decade, Fly.io has helped developers build and run software. Now, as agents increasingly build, operate, and deploy software alongside people, Fly.io recognizes that AI agents require a fundamentally different kind of infrastructure than the disposable execution environments that defined the first wave of AI.",
+        "Fly.io is doubling down on computers for agents \u2014 connected infrastructure designed for AI agents and the applications they build. Fly.io gives agents real computers that have durable disk drives, secure connectivity to other systems, and the ability to scale to millions of instances to power production AI applications.",
+        "Fly.io just closed its strongest quarter in company history, driven almost entirely by agent workloads. More than 37,000 customers build on Fly.io, and more than 8,000 of them are agent-native. Over the past 12 months, revenue from the company\u2019s largest agent-native customers has grown nearly 12 times. Among the company\u2019s largest customers overall, agent-native companies now represent approximately two-thirds of revenue. Agent-first companies like Firecrawl, Kilocode, and Plastic Labs use Fly.io to build production AI applications that run continuously and perform real work.",
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado, general partner at Andreessen Horowitz, and Daniel Docter, managing director at Dell Technologies Capital, will join the company\u2019s board of directors. The investment will accelerate Fly.io\u2019s leadership in computers for agents as organizations increasingly build and deploy production agentic AI applications.",
+        "Fly.io also announced that Scott Johnston has joined as CEO and a member of the board. Johnston previously served as CEO of Docker and held leadership roles at Puppet, Loudcloud, and Netscape, helping scale infrastructure platforms through major shifts in software development. Founder Kurt Mackey will remain on Fly.io\u2019s board and transition to an advisory role, continuing to help shape the company\u2019s long-term technical vision."
+       ]
+      }
+     ],
+     "reasoning": "In its dated July 24, 2026 announcement, Fly.io says Scott Johnston joined as CEO, within the 12 months before the requested date.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Fly Jobs",
+       "url": "https://fly.io/jobs/index.md",
+       "excerpts": [
+        "4 pages, newest first. Each link is the page's Markdown twin; the page itself is the same URL without `.md`, ending in `/`.",
+        "- [Fullstack Engineer](https://fly.io/jobs/fullstack-engineer.md): Join our team!",
+        "- [Infrastructure Operations Engineer](https://fly.io/jobs/infra-engineer.md): Join our team!",
+        "- [Account Manager, Strategic Accounts](https://fly.io/jobs/account-manager-strategic-accounts.md): Join our team!",
+        "- [Networking Engineer: Proxy and Corrosion](https://fly.io/jobs/networking-engineer.md): Join our team!"
+       ]
+      }
+     ],
+     "reasoning": "The current jobs index says it lists four ongoing openings. Their titles are Fullstack Engineer, Infrastructure Operations Engineer, Account Manager, and Networking Engineer; none is an AI/ML/data-science role.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "*Funding, customer adoption, and new CEO Scott Johnston accelerate Fly.io\u2019s vision for infrastructure purpose-built for AI agents and the applications they build.*",
+        "**SAN FRANCISCO \u2014 July 24, 2026 \u2014** AI agents are transforming how software is built and deployed. For nearly a decade, Fly.io has helped developers build and run software. Now, as agents increasingly build, operate, and deploy software alongside people, Fly.io recognizes that AI agents require a fundamentally different kind of infrastructure than the disposable execution environments that defined the first wave of AI.",
+        "Fly.io is doubling down on computers for agents \u2014 connected infrastructure designed for AI agents and the applications they build. Fly.io gives agents real computers that have durable disk drives, secure connectivity to other systems, and the ability to scale to millions of instances to power production AI applications.",
+        "Fly.io just closed its strongest quarter in company history, driven almost entirely by agent workloads. More than 37,000 customers build on Fly.io, and more than 8,000 of them are agent-native. Over the past 12 months, revenue from the company\u2019s largest agent-native customers has grown nearly 12 times. Among the company\u2019s largest customers overall, agent-native companies now represent approximately two-thirds of revenue. Agent-first companies like Firecrawl, Kilocode, and Plastic Labs use Fly.io to build production AI applications that run continuously and perform real work.",
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado, general partner at Andreessen Horowitz, and Daniel Docter, managing director at Dell Technologies Capital, will join the company\u2019s board of directors. The investment will accelerate Fly.io\u2019s leadership in computers for agents as organizations increasingly build and deploy production agentic AI applications."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s July 2026 announcement labels its $25 million round Series D.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Fly.io developer documentation",
+       "url": "https://docs.fly.io/",
+       "excerpts": [
+        "# Fly.io developer documentation",
+        "> Learn to build, deploy, and run apps and AI agents on Fly.io. Find guides and reference docs for Fly Machines, Sprites, Managed Postgres, networking, and flyctl.",
+        ">   <li>[Fly Machines](https://docs.fly.io/machines)</li>",
+        ">   <li>[Fly Volumes](https://docs.fly.io/volumes)</li>",
+        ">   <li>[Security](https://docs.fly.io/security)</li>",
+        ">   <li>[Networking](https://docs.fly.io/networking)</li>",
+        ">   <li>[Managed Postgres](https://docs.fly.io/postgres)</li>",
+        ">   <li>[Database & Storage](https://docs.fly.io/database-storage-guides)</li>",
+        ">   <li>[Monitoring](https://docs.fly.io/monitoring)</li>",
+        "> </ul>"
+       ]
+      }
+     ],
+     "reasoning": "Fly.io provides a public developer documentation site and links to multiple guides and reference sections for its products and features.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Fly.io | LinkedIn",
+       "url": "https://linkedin.com/company/fly-io",
+       "excerpts": [
+        "Headquarters Chicago, Illinois Type Privately Held Specialties JavaScript, Serverless, Edge Computing, and CDN Locations Primary 321 N Clark St Chicago, Illinois, US"
+       ]
+      }
+     ],
+     "reasoning": "Fly.io\u2019s current LinkedIn company profile lists Chicago, Illinois as its headquarters.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "New Fly MCP",
+       "url": "https://community.fly.io/t/new-fly-mcp/28906",
+       "excerpts": [
+        "**URL:** <https://community.fly.io/t/new-fly-mcp/28906>\\ **Category:** Fresh Produce\\ **Tags:** machines, sprites\\ **Created:** [October 23, 2026, 1:52pm UTC](https://community.fly.io/t/new-fly-mcp/28906 \"2026-10-23T13:52:18Z\")\\ **Posts on this page:** 6\\ **Page:** 1 <div class=\"post-metadata\"> ... **Post date:** [October 23, 2026, 1:52pm UTC](https://community.fly.io/t/new-fly-mcp/28906/1 \"2026-10-23T13:52:18Z\") </div> Earlier this year, with the launch of Sprites, we released the Sprites MCP. That has been very useful for people using agents to work with Fly. But, it was always missing the rest of Fly. Now, we have a single MCP server with access to all of your Fly resources: [https://mcp.fly.io/](https://mcp.fly.io/) Visit that URL in your browser and you\u2019ll get all the details about how to hook up the MCP server to your agent. Or, just point your agent at it and let it rip. You can manage machines, volumes, apps, and sprites."
+       ]
+      }
+     ],
+     "reasoning": "Fly.io announced its unified MCP server on October 23, 2026, inside the six-month window preceding November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Fly Jobs",
+       "url": "https://fly.io/jobs/index.md",
+       "excerpts": [
+        "4 pages, newest first. Each link is the page's Markdown twin; the page itself is the same URL without `.md`, ending in `/`.",
+        "- [Fullstack Engineer](https://fly.io/jobs/fullstack-engineer.md): Join our team!",
+        "- [Infrastructure Operations Engineer](https://fly.io/jobs/infra-engineer.md): Join our team!",
+        "- [Account Manager, Strategic Accounts](https://fly.io/jobs/account-manager-strategic-accounts.md): Join our team!",
+        "- [Networking Engineer: Proxy and Corrosion](https://fly.io/jobs/networking-engineer.md): Join our team!"
+       ]
+      }
+     ],
+     "reasoning": "The current four-role jobs index includes an Account Manager but no SDR, BDR, sales/business development representative, or account executive title; Account Manager is outside the defined titles.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "*Funding, customer adoption, and new CEO Scott Johnston accelerate Fly.io\u2019s vision for infrastructure purpose-built for AI agents and the applications they build.*",
+        "**SAN FRANCISCO \u2014 July 24, 2026 \u2014** AI agents are transforming how software is built and deployed. For nearly a decade, Fly.io has helped developers build and run software. Now, as agents increasingly build, operate, and deploy software alongside people, Fly.io recognizes that AI agents require a fundamentally different kind of infrastructure than the disposable execution environments that defined the first wave of AI.",
+        "Fly.io is doubling down on computers for agents \u2014 connected infrastructure designed for AI agents and the applications they build. Fly.io gives agents real computers that have durable disk drives, secure connectivity to other systems, and the ability to scale to millions of instances to power production AI applications.",
+        "Fly.io just closed its strongest quarter in company history, driven almost entirely by agent workloads. More than 37,000 customers build on Fly.io, and more than 8,000 of them are agent-native. Over the past 12 months, revenue from the company\u2019s largest agent-native customers has grown nearly 12 times. Among the company\u2019s largest customers overall, agent-native companies now represent approximately two-thirds of revenue. Agent-first companies like Firecrawl, Kilocode, and Plastic Labs use Fly.io to build production AI applications that run continuously and perform real work.",
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado, general partner at Andreessen Horowitz, and Daniel Docter, managing director at Dell Technologies Capital, will join the company\u2019s board of directors. The investment will accelerate Fly.io\u2019s leadership in computers for agents as organizations increasingly build and deploy production agentic AI applications."
+       ]
+      }
+     ],
+     "reasoning": "Fly.io announced its $25 million Series D in July 2026, within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "**SOC 2 Type 2 (Sept 2026), HIPAA BAA.** SOC 2 Type 2: our current report was issued on September 3, 2026 by Aprio LLP and covers August 1, 2025 to July 31, 2026 (Security and Confidentiality criteria). It is available under NDA from the Trust Center to organizations with the paid Compliance Package. The report describes the Fly.io platform; it does not name individual products such as Sprites, which run on the platform it covers, and Tigris is not a subservice organization in it. A bridge letter is not needed inside the first quarter after the audit period and is available on request after that. We do not hold ISO 27001, a PCI DSS AOC or FedRAMP, and none are planned; for datacenter ISO 27001 we can supply the facility operator\u2019s certificate for the region you use. HIPAA: our BAA is self-service in the Trust Center for organizations with the paid Compliance Package (see COMPLIANCE-31), with a separate Tigris BAA for object storage. We do not distribute penetration test reports (see SOFTWARE-1); we provide an attestation letter and the SOC 2 report instead."
+       ]
+      }
+     ],
+     "reasoning": "The security questionnaire explicitly names this compliance category in describing the SOC 2 Type 2 report and HIPAA BAA.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "**SOC 2 Type 2 (Sept 2026), HIPAA BAA.** SOC 2 Type 2: our current report was issued on September 3, 2026 by Aprio LLP and covers August 1, 2025 to July 31, 2026 (Security and Confidentiality criteria). It is available under NDA from the Trust Center to organizations with the paid Compliance Package. The report describes the Fly.io platform; it does not name individual products such as Sprites, which run on the platform it covers, and Tigris is not a subservice organization in it. A bridge letter is not needed inside the first quarter after the audit period and is available on request after that. We do not hold ISO 27001, a PCI DSS AOC or FedRAMP, and none are planned; for datacenter ISO 27001 we can supply the facility operator\u2019s certificate for the region you use. HIPAA: our BAA is self-service in the Trust Center for organizations with the paid Compliance Package (see COMPLIANCE-31), with a separate Tigris BAA for object storage. We do not distribute penetration test reports (see SOFTWARE-1); we provide an attestation letter and the SOC 2 report instead."
+       ]
+      }
+     ],
+     "reasoning": "The security questionnaire explicitly names this compliance category in describing the SOC 2 Type 2 report and HIPAA BAA.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "The homepage names this organization as a team building on Fly.io.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "The homepage names this organization as a team building on Fly.io.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "The homepage names this organization as a team building on Fly.io.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [HubSpot](https://hubspot.com) | United States | Customer relationship management |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list identifies this system and its function at Fly.io.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [Customer.io](https://customer.io/) | United States | Newsletters and transactional email |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list identifies this system and its function at Fly.io.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [Snowflake](https://www.snowflake.com/) | United States | Customer relationship management |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list identifies this system and its function at Fly.io.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "HIPAA"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Fly.io is a global cloud platform for developers and AI agents to deploy and run applications and databases close to users.",
+    "employee_band": "51-100",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 25000000.0,
+    "named_customers": [
+     "Builder.io",
+     "Mercor",
+     "Supabase"
+    ],
+    "funding_date": "2026-07",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Customer.io",
+     "Snowflake"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series D",
+    "public_docs": true,
+    "hq_city": "Chicago",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

@@ -1,0 +1,581 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eaaa726bfc8fbb1f9",
+  "interaction_id": "trun_142119f6a1b4439eaaa726bfc8fbb1f9",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "bit.ly"
+  },
+  "created_at": "2026-11-10T18:47:31.972775Z",
+  "modified_at": "2026-11-10T18:52:00.218276Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eaaa726bfc8fbb1f9",
+   "interaction_id": "trun_142119f6a1b4439eaaa726bfc8fbb1f9",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "bit.ly"
+   },
+   "created_at": "2026-11-10T18:47:31.972775Z",
+   "modified_at": "2026-11-10T18:52:00.218276Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Bitly Enters 2026 With Expanded Link and QR Code Solutions",
+       "url": "https://bitly.com/pages/press/bitly-connection-layer-links-qr-codes-2026",
+       "excerpts": [
+        "Founded in 2008, Bitly has evolved alongside the internet itself."
+       ]
+      }
+     ],
+     "reasoning": "Bitly explicitly states that it was founded in 2008: https://bitly.com/pages/press/bitly-connection-layer-links-qr-codes-2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Bitly Trust Center",
+       "url": "http://bitly.com/pages/trust",
+       "excerpts": [
+        "As part of that commitment, Bitly is SOC 2 compliant."
+       ]
+      },
+      {
+       "title": "Bitly Trust Center",
+       "url": "https://bitly.com/pages/trust?trk=organization_guest_main-feed-card-text",
+       "excerpts": [
+        "Bitly is GDPR compliant and Swiss-US Privacy Shield certified."
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly claims SOC 2 compliance and GDPR compliance. GDPR is included as a requested compliance category, not as an independently verified certification: https://bitly.com/pages/trust.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Bitly; website_url: https://bitly.com; location_city: New York City; location_country: United States",
+        "latest_funding_round_name: Series D; latest_funding_round_date: 2017-07-12; latest_funding_round_amount_usd: 63000000.0; all_funding_rounds[0].round_name: Series D; all_funding_rounds[0].amount_usd: 63000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2017-07-12; all_funding_rounds[0].round_investor_names: Spectrum Equity; all_funding_rounds[1].round_name: Series C; all_funding_rounds[1].amount_usd: 15000000.0; all_funding_rounds[1].round_valuation"
+       ]
+      }
+     ],
+     "reasoning": "The company profile corresponding to bitly.com identifies its location as New York City, United States: https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880/bitly.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Adventures in Optimizing Text Processing",
+       "url": "https://word.bitly.com/post/74069870671/optimizing-text-processing",
+       "excerpts": [
+        "Lessons learned while post-processing 1.75 billion lines of Hadoop output.",
+        "Michael Richman [@mrwoofster](http://twitter.com/mrwoofster)_"
+       ]
+      },
+      {
+       "title": "The Great Migration",
+       "url": "https://word.bitly.com/post/168053046227/the-great-migration",
+       "excerpts": [
+        "Recently we gave a talk at [Velocity EU](https://conferences.oreilly.com/velocity/vl-eu) about the lessons learned from our big data center move in 2016.",
+        "by [Sean O'Connor](http://twitter.com/theSeanOC)"
+       ]
+      },
+      {
+       "title": "word.bitly.com",
+       "url": "https://word.bitly.com/",
+       "excerpts": [
+        "by [Peter Herndon](http://twitter.com/tpherndon) [\\#](https://word.bitly.com/post/77292911854/joining-bitly-engineering) 20 February 2014"
+       ]
+      }
+     ],
+     "reasoning": "The engineering blog contains multiple engineer-authored technical posts, including Michael Richman's Hadoop-processing optimization article and Sean O'Connor's data-center migration post. The index also contains Peter Herndon's discussion of Bitly engineering and infrastructure. Sources: https://word.bitly.com/post/74069870671/optimizing-text-processing, https://word.bitly.com/post/168053046227/the-great-migration, and https://word.bitly.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Bitly Enters 2026 With Expanded Link and QR Code Solutions",
+       "url": "https://bitly.com/pages/press/bitly-connection-layer-links-qr-codes-2026",
+       "excerpts": [
+        "Bitly is a leading global platform for link and QR Code management, enabling brands and businesses to create, manage, and measure digital interactions across online and offline channels."
+       ]
+      }
+     ],
+     "reasoning": "Bitly describes a link and QR Code management platform for brands and businesses to create, manage, and measure digital interactions across online and offline channels: https://bitly.com/pages/press/bitly-connection-layer-links-qr-codes-2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Bitly | LinkedIn",
+       "url": "https://linkedin.com/company/552285",
+       "excerpts": [
+        "Industry Software Development Company size 201-500 employees Headquarters New York, NY"
+       ]
+      }
+     ],
+     "reasoning": "Bitly's company profile lists its company size as 201\u2013500 employees: https://linkedin.com/company/552285.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "What is Bitly Assist? \u2013 Bitly Support",
+       "url": "https://support.bitly.com/hc/en-us/articles/44440648181005-What-is-Bitly-Assist",
+       "excerpts": [
+        "Bitly Assist is Bitly's built-in AI assistant.",
+        "Is my data used to train AI models?** User data is not used to train AI models."
+       ]
+      },
+      {
+       "title": "Introducing Bitly Assist & Weekly Insights: Smarter Link Analytics & Insights",
+       "url": "https://bitly.com/blog/introducing-bitly-assist-weekly-insights",
+       "excerpts": [
+        "[Bitly Assist](https://bitly.com/pages/ai/bitly-assist/) is an AI-powered chat assistant built directly into Bitly that lets you ask questions about your link and QR Code performance\u2014and get clear answers in seconds."
+       ]
+      },
+      {
+       "title": "Terms of Service | Bitly",
+       "url": "https://bitly.com/pages/terms-of-service",
+       "excerpts": [
+        "Bitly shall provide Customer with a current list of sub-processors upon written request (email to suffice)."
+       ]
+      }
+     ],
+     "reasoning": "Unknown: the reviewed product documentation, AI FAQ, launch article, security materials, and legal/privacy disclosures did not identify the model powering Bitly Assist. The terms say a current subprocessor list is available upon written request. Public AI integrations were not treated as proof of the underlying model. Sources: https://support.bitly.com/hc/en-us/articles/44440648181005-What-is-Bitly-Assist, https://bitly.com/blog/introducing-bitly-assist-weekly-insights, https://security.bitly.com/, and https://bitly.com/pages/terms-of-service.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Bitly Core, Growth, Premium & Enterprise Pricing Plans",
+       "url": "https://bitly.com/pages/pricing",
+       "excerpts": [
+        "Try it out for free $ 0 /month [Get Started](https://bitly.com/a/sign_up) What's included: 2 QR Codes/month 5 links/month 2 custom landing pages 3 custom back-halves/month Unlimited clicks & QR Code scans QR Code customizations Core Unlock powerful data Annual Only $ 10 /month Annual charge of $120"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page lists free and paid plans, including the Core plan and its annual charge: https://bitly.com/pages/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Bitly; website_url: https://bitly.com; location_city: New York City; location_country: United States; latest_funding_round_name: Series D; latest_funding_round_date: 2017-07-12; latest_funding_round_amount_usd: 63000000.0",
+        "all_funding_rounds[0].round_name: Series D; all_funding_rounds[0].amount_usd: 63000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2017-07-12; all_funding_rounds[0].round_investor_names: Spectrum Equity; all_funding_rounds[1].round_name: Series C; all_funding_rounds[1].amount_usd: 15000000.0; all_funding_rounds[1].round_valuation"
+       ]
+      },
+      {
+       "title": "TechCrunch: *Bitly* sells a majority stake to Spectrum Equity for $63M | Spectrum Equity",
+       "url": "https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m",
+       "excerpts": [
+        "Bitly is announcing that it has raised $63 million in additional funding from Spectrum Equity \u2014 a deal that gives the growth equity firm a majority stake in Bitly."
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded round is $63 million. Spectrum Equity's announcement independently describes $63 million in additional funding in exchange for a majority stake: https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m. Funding profile: https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880/bitly.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer stories - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies",
+       "excerpts": [
+        "[4,000 Sign-Ups, One Source of Truth: How Hacking HR Tracks What Actually Works with Bitly](https://bitly.com/pages/resources/case-studies/how-hacking-hr-tracks-what-actually-works-with-bitly/)"
+       ]
+      },
+      {
+       "title": "Outerthere's Path to 3x Revenue, One Bitly Link at a Time - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies/outertheres-path-to-3x-revenue",
+       "excerpts": [
+        "Bitly now works as Outerthere's independent source of truth, no matter what platform the traffic runs through"
+       ]
+      }
+     ],
+     "reasoning": "Bitly's customer stories identify Hacking HR and describe Outerthere's use of Bitly. Sources: https://bitly.com/pages/resources/case-studies and https://bitly.com/pages/resources/case-studies/outertheres-path-to-3x-revenue.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Bitly; website_url: https://bitly.com; location_city: New York City; location_country: United States; latest_funding_round_name: Series D; latest_funding_round_date: 2017-07-12",
+        "latest_funding_round_amount_usd: 63000000.0; all_funding_rounds[0].round_name: Series D; all_funding_rounds[0].amount_usd: 63000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2017-07-12; all_funding_rounds[0].round_investor_names: Spectrum Equity; all_funding_rounds[1].round_name: Series C; all_funding_rounds[1].amount_usd: 15000000.0; all_funding_rounds[1].round_valuation"
+       ]
+      },
+      {
+       "title": "TechCrunch: *Bitly* sells a majority stake to Spectrum Equity for $63M | Spectrum Equity",
+       "url": "https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m",
+       "excerpts": [
+        "[External Coverage](https://www.spectrumequity.com/news/?category=external-coverage) | July 2017"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding record is dated July 12, 2017, and Spectrum's coverage is dated July 2017; the requested month format is therefore 2017-07. Sources: https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880/bitly and https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Bitly and Salesforce Integration",
+       "url": "https://bitly.com/solutions/integrations/salesforce",
+       "excerpts": [
+        "Create and track branded short links directly within Salesforce. Measure engagement across every campaign and customer touchpoint without leaving your CRM."
+       ]
+      },
+      {
+       "title": "Qualified - Bitly Customer Case Study",
+       "url": "https://www.qualified.com/customers/bitly",
+       "excerpts": [
+        "Bitly uses Qualified's conversational marketing platform to drive more pipeline"
+       ]
+      },
+      {
+       "title": "Customer Story with Bitly | Intercom",
+       "url": "https://www.intercom.com/customers/bitly",
+       "excerpts": [
+        "The platform is key to Bitly's growth, and they're using Intercom to help make it happen."
+       ]
+      }
+     ],
+     "reasoning": "Salesforce is an explicit product-integration signal, not proof of Bitly's internal deployment. Qualified and Intercom publish customer stories explicitly describing Bitly's use of their platforms. Sources: https://bitly.com/solutions/integrations/salesforce, https://www.qualified.com/customers/bitly, and https://www.intercom.com/customers/bitly.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Bitly Appoints Matt Young as CTO, Strengthening Leadership Team",
+       "url": "https://bitly.com/pages/press/bitly-appoints-matt-young-as-cto",
+       "excerpts": [
+        "Mar 19, 2026 .",
+        "**NEW YORK** \u2013 Thursday, March 19 _\u2013_ [Bitly Inc](https://bitly.com/) ., a leading global platform for link and QR Code management, today announced the appointment of **Matt Young** as Chief Technology Officer."
+       ]
+      }
+     ],
+     "reasoning": "Bitly announced Matt Young's appointment as Chief Technology Officer on March 19, 2026, within the requested November 9, 2025\u2013November 9, 2026 window: https://bitly.com/pages/press/bitly-appoints-matt-young-as-cto.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at Bitly Inc.",
+       "url": "https://job-boards.eu.greenhouse.io/bitly",
+       "excerpts": [
+        "There are no current openings."
+       ]
+      }
+     ],
+     "reasoning": "The readable job-board index states that there are no current openings, supporting false under the specified rule. Confidence is reduced because a separate account-executive application remains accessible, indicating inconsistent job-board presentation: https://job-boards.eu.greenhouse.io/bitly.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Bitly; website_url: https://bitly.com; location_city: New York City; location_country: United States; latest_funding_round_name: Series D",
+        "latest_funding_round_date: 2017-07-12; latest_funding_round_amount_usd: 63000000.0; all_funding_rounds[0].round_name: Series D; all_funding_rounds[0].amount_usd: 63000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2017-07-12; all_funding_rounds[0].round_investor_names: Spectrum Equity; all_funding_rounds[1].round_name: Series C; all_funding_rounds[1].amount_usd: 15000000.0; all_funding_rounds[1].round_valuation"
+       ]
+      },
+      {
+       "title": "TechCrunch: *Bitly* sells a majority stake to Spectrum Equity for $63M | Spectrum Equity",
+       "url": "https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m",
+       "excerpts": [
+        "Bitly is announcing that it has raised $63 million in additional funding from Spectrum Equity \u2014 a deal that gives the growth equity firm a majority stake in Bitly."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile classifies the July 2017 transaction as Series D. Spectrum describes its economic form as a growth-equity investment acquiring a majority stake, so the stage label follows the funding profile's classification. Sources: https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880/bitly and https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction | Bitly Developer",
+       "url": "https://dev.bitly.com/",
+       "excerpts": [
+        "See the [API reference](https://dev.bitly.com/api-reference) for all endpoints."
+       ]
+      },
+      {
+       "title": "Bitly API Reference",
+       "url": "https://dev.bitly.com/api-reference",
+       "excerpts": [
+        "Bitly API (4.0.0) OpenAPI Specification: [Download](https://dev.bitly.com/v4/v4.json)"
+       ]
+      }
+     ],
+     "reasoning": "Bitly has a public developer portal and a multi-endpoint API reference with an OpenAPI specification: https://dev.bitly.com/ and https://dev.bitly.com/api-reference.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Bitly | LinkedIn",
+       "url": "https://linkedin.com/company/552285",
+       "excerpts": [
+        "Industry Software Development Company size 201-500 employees Headquarters New York, NY"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Bitly; website_url: https://bitly.com; location_city: New York City",
+        "location_country: United States; latest_funding_round_name: Series D; latest_funding_round_date: 2017-07-12; latest_funding_round_amount_usd: 63000000.0; all_funding_rounds[0].round_name: Series D; all_funding_rounds[0].amount_usd: 63000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2017-07-12; all_funding_rounds[0].round_investor_names: Spectrum Equity; all_funding_rounds[1].round_name: Series C; all_funding_rounds[1].amount_usd: 15000000.0; all_funding_rounds[1].round_valuation"
+       ]
+      }
+     ],
+     "reasoning": "Bitly's company page lists headquarters in New York, NY, and its company profile specifies New York City. Sources: https://linkedin.com/company/552285 and https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880/bitly.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "What's new at Bitly? \u2013 Bitly Support",
+       "url": "https://support.bitly.com/hc/en-us/articles/34262355353997-What-s-new-at-Bitly",
+       "excerpts": [
+        "September 2026",
+        "AI traffic for individual links",
+        "Each link's details page now has an AI traffic card that shows estimated AI visits for your selected date range, how that compares to the previous period, and which assistants visit most.",
+        "You can now create and manage Bitly Pages programmatically. Build a Page at a short URL you choose, fill it with content, style it, and publish it, all without opening the Bitly app."
+       ]
+      }
+     ],
+     "reasoning": "The September 2026 changelog introduces per-link AI-traffic analytics and programmatic creation and management of Bitly Pages through the API and MCP. These are substantive capabilities within May 9\u2013November 9, 2026: https://support.bitly.com/hc/en-us/articles/34262355353997-What-s-new-at-Bitly.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Associate Account Executive  at Bitly Inc.",
+       "url": "https://job-boards.eu.greenhouse.io/bitly/jobs/4703185101",
+       "excerpts": [
+        "Associate Account Executive US Remote",
+        "Apply for this job"
+       ]
+      },
+      {
+       "title": "Jobs at Bitly Inc.",
+       "url": "https://job-boards.eu.greenhouse.io/bitly",
+       "excerpts": [
+        "There are no current openings."
+       ]
+      }
+     ],
+     "reasoning": "A live Associate Account Executive posting has an application form and no closure notice: https://job-boards.eu.greenhouse.io/bitly/jobs/4703185101. This supports true, although the general board simultaneously says there are no current openings, reducing confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Bitly; website_url: https://bitly.com; location_city: New York City; location_country: United States; latest_funding_round_name: Series D; latest_funding_round_date: 2017-07-12",
+        "latest_funding_round_amount_usd: 63000000.0; all_funding_rounds[0].round_name: Series D; all_funding_rounds[0].amount_usd: 63000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2017-07-12; all_funding_rounds[0].round_investor_names: Spectrum Equity; all_funding_rounds[1].round_name: Series C; all_funding_rounds[1].amount_usd: 15000000.0; all_funding_rounds[1].round_valuation"
+       ]
+      },
+      {
+       "title": "TechCrunch: *Bitly* sells a majority stake to Spectrum Equity for $63M | Spectrum Equity",
+       "url": "https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m",
+       "excerpts": [
+        "[External Coverage](https://www.spectrumequity.com/news/?category=external-coverage) | July 2017",
+        "Bitly is announcing that it has raised $63 million in additional funding from Spectrum Equity \u2014 a deal that gives the growth equity firm a majority stake in Bitly."
+       ]
+      }
+     ],
+     "reasoning": "The most recent recorded funding is July 2017, before the May 9, 2025\u2013November 9, 2026 window. Sources: https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880/bitly and https://www.spectrumequity.com/news/techcrunch-bitly-sells-a-majority-stake-to-spectrum-equity-for-63m.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Bitly Trust Center",
+       "url": "http://bitly.com/pages/trust",
+       "excerpts": [
+        "As part of that commitment, Bitly is SOC 2 compliant."
+       ]
+      }
+     ],
+     "reasoning": "Bitly explicitly claims SOC 2 compliance on its Trust Center: https://bitly.com/pages/trust.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Bitly Trust Center",
+       "url": "https://bitly.com/pages/trust?trk=organization_guest_main-feed-card-text",
+       "excerpts": [
+        "Bitly is GDPR compliant and Swiss-US Privacy Shield certified."
+       ]
+      }
+     ],
+     "reasoning": "Bitly explicitly claims GDPR compliance on its Trust Center: https://bitly.com/pages/trust.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer stories - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies",
+       "excerpts": [
+        "[4,000 Sign-Ups, One Source of Truth: How Hacking HR Tracks What Actually Works with Bitly](https://bitly.com/pages/resources/case-studies/how-hacking-hr-tracks-what-actually-works-with-bitly/)"
+       ]
+      }
+     ],
+     "reasoning": "Hacking HR appears in Bitly's customer-story index: https://bitly.com/pages/resources/case-studies.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Outerthere's Path to 3x Revenue, One Bitly Link at a Time - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies/outertheres-path-to-3x-revenue",
+       "excerpts": [
+        "Bitly now works as Outerthere's independent source of truth, no matter what platform the traffic runs through"
+       ]
+      }
+     ],
+     "reasoning": "The Outerthere case study describes its operational use of Bitly: https://bitly.com/pages/resources/case-studies/outertheres-path-to-3x-revenue.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Bitly and Salesforce Integration",
+       "url": "https://bitly.com/solutions/integrations/salesforce",
+       "excerpts": [
+        "Create and track branded short links directly within Salesforce. Measure engagement across every campaign and customer touchpoint without leaving your CRM."
+       ]
+      }
+     ],
+     "reasoning": "Bitly publicly offers a Salesforce integration; this is an integration signal rather than confirmed internal CRM deployment: https://bitly.com/solutions/integrations/salesforce.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Qualified - Bitly Customer Case Study",
+       "url": "https://www.qualified.com/customers/bitly",
+       "excerpts": [
+        "Bitly uses Qualified's conversational marketing platform to drive more pipeline"
+       ]
+      }
+     ],
+     "reasoning": "Qualified's customer case study explicitly says Bitly uses its conversational marketing platform: https://www.qualified.com/customers/bitly.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Customer Story with Bitly | Intercom",
+       "url": "https://www.intercom.com/customers/bitly",
+       "excerpts": [
+        "The platform is key to Bitly's growth, and they're using Intercom to help make it happen."
+       ]
+      }
+     ],
+     "reasoning": "Intercom's customer story explicitly describes Bitly using Intercom: https://www.intercom.com/customers/bitly.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2008.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Bitly helps brands and businesses create, manage, and measure links and QR Codes across online and offline channels.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 63000000.0,
+    "named_customers": [
+     "Hacking HR",
+     "Outerthere"
+    ],
+    "funding_date": "2017-07",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Qualified",
+     "Intercom"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series D",
+    "public_docs": true,
+    "hq_city": "New York City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

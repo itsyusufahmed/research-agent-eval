@@ -1,0 +1,551 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e99da92933ac10ea2",
+  "interaction_id": "trun_142119f6a1b4439e99da92933ac10ea2",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "neostella.com"
+  },
+  "created_at": "2026-11-10T18:48:11.421309Z",
+  "modified_at": "2026-11-10T18:59:24.291648Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e99da92933ac10ea2",
+   "interaction_id": "trun_142119f6a1b4439e99da92933ac10ea2",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "neostella.com"
+   },
+   "created_at": "2026-11-10T18:48:11.421309Z",
+   "modified_at": "2026-11-10T18:59:24.291648Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "founded in 2019"
+       ]
+      },
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s About page states it was founded in 2019. A Tracxn profile gives a conflicting 2008 founding year, so I use the company\u2019s first-party statement and assign medium confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "SOC 2 Type II",
+        "GDPR",
+        "HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s Trust Center names SOC 2 Type II, GDPR, and HIPAA in its compliance material; these are the listed items included in the answer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "Milwaukee, Wisconsin, USA"
+       ]
+      }
+     ],
+     "reasoning": "The company About page identifies its location as Milwaukee, Wisconsin, USA, supporting United States as the headquarters country.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blogs - Neostella",
+       "url": "https://neostella.com/resources/blogs",
+       "excerpts": [
+        "[5 questions to ask before automating a legal workflow](https://neostella.com/blogs/legal-automation-questions/)",
+        "[how to reduce manual follow-up with better workflow rules](https://neostella.com/blogs/how-to-reduce-manual-follow-up-with-better-workflow-rules/)",
+        "[5 Signs Your Law Firm\u2019s Technology Is Creating More Work Than It Removes](https://neostella.com/blogs/5-signs-your-law-firms-technology-is-creating-more-work-than-it-removes/)",
+        "[before defining tomorrow: the story behind neostella](https://neostella.com/blogs/why-we-built-neostella/)",
+        "[3 things legal teams can learn from product teams.](https://neostella.com/blogs/3-things-legal-teams-can-learn-from-product-teams/)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index shows posts about legal workflow automation, law-firm technology, and general legal/product topics. It does not show at least two engineer-authored posts about how the product is built, so the answer is false.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Legal Case Management Software for Enterprise Firms | Neostella",
+       "url": "https://neostella.com/platform",
+       "excerpts": [
+        "Connect cases, documents, workflows, communications, reporting, and AI in one platform built for growing and enterprise legal teams."
+       ]
+      }
+     ],
+     "reasoning": "The platform page says the product connects cases, documents, workflows, communications, reporting, and AI for growing and enterprise legal teams; the one-liner restates that scope.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      },
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "250+ employees"
+       ]
+      }
+     ],
+     "reasoning": "The Tracxn profile reports an official employee count of 313, which falls in the 201\u2013500 band; Neostella\u2019s About page also reports 250+ employees.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Legal AI Solutions | AI Tools for Law Firms | Neostella",
+       "url": "https://neostella.com/platform/ai-solutions",
+       "excerpts": [
+        "built-in ai."
+       ]
+      },
+      {
+       "title": "ai - mcp server - configuration \u2013 Neostella Support Center",
+       "url": "https://help.neostella.com/hc/en-us/articles/42634782190999-ai-mcp-server-configuration",
+       "excerpts": [
+        "The **Neostella MCP Server allows external AI tools** , such as _Claude_ and _ChatGPT_ , to securely authenticate and access platform data.",
+        "Configure the custom connector to authenticate _Claude_ with Neostella.",
+        "Configure the plugin to authenticate _ChatGPT_ with Neostella."
+       ]
+      }
+     ],
+     "reasoning": "Neostella describes built-in AI without naming its underlying model. Its MCP documentation names Claude and ChatGPT as external tools that can connect to platform data, so those are reported as integrations rather than as the provider behind built-in AI.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Neostella Pricing | Legal Case Management Software",
+       "url": "https://neostella.com/pricing",
+       "excerpts": [
+        "Packages that grow with your firm, giving you only what you need.",
+        "$175",
+        "/user/month"
+       ]
+      }
+     ],
+     "reasoning": "Neostella has a public pricing page describing packages, and the page content includes a per-user monthly price. This supports a true answer.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      },
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2071719/000207171925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "$ 10,700,000"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile reports the latest round amount as USD 10.7 million, and the SEC Form D reports USD 10.7 million sold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Groth Law Firm Selects Neostella for Its Next Stage of Expansion. - Neostella",
+       "url": "https://neostella.com/news/groth-law-firm-selects-neostella",
+       "excerpts": [
+        "Groth Law Firm Selects Neostella for Its Next Stage of Expansion.",
+        "\"As our firm has grown, we've learned that technology has to make things easier, not create more problems."
+       ]
+      },
+      {
+       "title": "Neostella Launches Connected Legal Case Management Platform",
+       "url": "https://neostella.com/news/neostella-launches-the-legal-industrys-first-case-management-platform-that-connects-all-legal-tools",
+       "excerpts": [
+        "\u201cNeostella has been a trusted partner, committed to supporting our goals and growth,\u201d said Aaron Jophlin, Managing Partner at Bell Legal Group."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s customer announcement and quote identify Groth Law Firm. Another Neostella announcement quotes Aaron Jophlin, Managing Partner at Bell Legal Group, describing Neostella as a trusted partner.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2071719/000207171925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "|X |New Notice | | |Date of First Sale |2025-05-23 | | | |First Sale Yet to Occur |"
+       ]
+      },
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      }
+     ],
+     "reasoning": "The SEC Form D gives the date of first sale as 2025-05-23, and the funding profile identifies the latest round as dated 2025-05-23. The requested YYYY-MM value is therefore 2025-05.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Development Representative - Neostella | Built In",
+       "url": "https://builtin.com/job/business-development-representative/10241584",
+       "excerpts": [
+        "Manage your day in Salesforce CRM and track all tasks, activities, interactions, notes, etc."
+       ]
+      },
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/subprocessors",
+       "excerpts": [
+        "Subprocessors |Amazon Web Services \u2022 Cloud provider United States Cloud Infrastructure | |Logo for Microsoft 365 Microsoft 365 \u2022 Email, document collaboration, productivity tools United States | |Zendesk \u2022 Customer support and ticketing United States Customer support and ticketing | |Logo for Nylas Nylas \u2022 Email, calendar, and contacts APIs United States Email, calendar, and contacts APIs | |Logo for Svix Svix \u2022 Webhook delivery & event infrastructure United States Webhook delivery & event infrastructure | |Salesforce \u2022 Sales United States CRM and sales automation platform | |DocuSign \u2022 Document management United States Electronic signatures & workflows | |Hubspot \u2022 CRM, marketing & sales automation United State CRM, marketing & sales automation | |SendGrid (Twilio) SendGrid (Twilio) \u2022 Transactional email delivery United States Transactional email delivery | 1-9 of 9 results"
+       ]
+      }
+     ],
+     "reasoning": "A Neostella job posting names Salesforce CRM, and the Trust Center\u2019s subprocessor listing names Salesforce as a CRM/sales-automation platform and HubSpot for CRM, marketing, and sales automation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Brian Mayer",
+       "url": "https://linkedin.com/in/bammke",
+       "excerpts": [
+        "Returned fields: {experience_text='Neostella Milwaukee, Wisconsin, United States 2025-12-01 VP of Product Neostella Milwaukee, Wisconsin, United States 2024-10-01 2025-12-01 I lead a team of 6 product managers responsible for all of Neostella\u2019s legal tech software."
+       ]
+      }
+     ],
+     "reasoning": "A LinkedIn profile timeline lists Brian Mayer\u2019s VP of Product role at Neostella beginning 2025-12-01, within the 12 months before 2026-11-09. The evidence is a dated profile rather than a company appointment announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Machine Learning Engineer - Neostella",
+       "url": "https://apply.workable.com/neostella/j/CC2AB7C2DF",
+       "excerpts": [
+        "Machine Learning Engineer",
+        "You'll build AI and machine learning systems that ship to production and create real customer value. Working closely with product managers and backend engineers, you'll help design, implement, and iterate on features that improve automation, insight, and assistive workflows across the platform."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s live Workable posting is titled Machine Learning Engineer and describes building AI and machine-learning systems, which meets the role-title criteria.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      },
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2071719/000207171925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "|X |New Notice | | |Date of First Sale |2025-05-23 | | | |First Sale Yet to Occur |"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the most recent round as a Series B dated 2025-05-23; the SEC Form D confirms a first sale in that month.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Neostella Support Center",
+       "url": "https://help.neostella.com/hc/en-us",
+       "excerpts": [
+        "[Schema](https://help.neostella.com/hc/en-us/sections/37655419099799-Schema)",
+        "[Process Studio - Automations](https://help.neostella.com/hc/en-us/sections/37569684720663-Process-Studio-Automations)",
+        "[documents](https://help.neostella.com/hc/en-us/sections/37787085622295-documents)",
+        "technical reference",
+        "[Release Notes](https://help.neostella.com/hc/en-us/sections/25195091012887-Release-Notes)"
+       ]
+      }
+     ],
+     "reasoning": "The public Neostella Support Center lists several product-documentation sections, including Schema, Process Studio automations, documents, Technical Reference, and Release Notes.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "HQ Milwaukee",
+        "Milwaukee, Wisconsin, USA"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s About page identifies its headquarters as Milwaukee and specifies Milwaukee, Wisconsin, USA.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "november 2026 release notes \u2013 Neostella Support Center",
+       "url": "https://help.neostella.com/hc/en-us/articles/44753920985495-november-2026-release-notes",
+       "excerpts": [
+        "Updated November 04, 2026 12:54",
+        "october 28th to november 4th",
+        "| |**Create \"BASIC\" Sandbox:** Admins can create a Basic Sandbox, a safe copy of the main tenant's structure (forms, workflows and configurations, but not Projects, Leads or Documents) to configure and experiment before promoting changes. A tenant can have up to five at a time, each shows a banner with its name, domain and type, and a sandbox cannot be deleted while it is still being created. |"
+       ]
+      }
+     ],
+     "reasoning": "The November 2026 release notes cover October 28\u2013November 4 and list creation of a Basic Sandbox as a new feature. This falls within the six months before 2026-11-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Neostella - Current Openings",
+       "url": "https://apply.workable.com/neostella",
+       "excerpts": [
+        "Account Executive"
+       ]
+      },
+      {
+       "title": "apply.workable.com",
+       "url": "https://apply.workable.com/neostella/j/8A9EB63ED0",
+       "excerpts": [
+        "--- description: Who We Are:Every industry has a moment when technology finally catches up to the people doing the work.We are building that moment for legal.Neostella creates connected legal technology that brings together the data, workflows, and systems legal teams ... image: https://www.workable.com/assets/facebook-preview.png title: Account Executive - Neostella ---"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s current openings page lists an Account Executive role, matching the specified titles.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2071719/000207171925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "|X |New Notice | | |Date of First Sale |2025-05-23 | | | |First Sale Yet to Occur |"
+       ]
+      },
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      }
+     ],
+     "reasoning": "The SEC filing reports the first sale on 2025-05-23, which is within the 18 months before 2026-11-09; the funding profile identifies it as the latest round.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "SOC 2 Type II"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names GDPR.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names HIPAA.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Groth Law Firm Selects Neostella for Its Next Stage of Expansion. - Neostella",
+       "url": "https://neostella.com/news/groth-law-firm-selects-neostella",
+       "excerpts": [
+        "Groth Law Firm Selects Neostella for Its Next Stage of Expansion.",
+        "\"As our firm has grown, we've learned that technology has to make things easier, not create more problems."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s announcement names Groth Law Firm and includes a quote from its founder describing Neostella as the firm\u2019s technology provider.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Neostella Launches Connected Legal Case Management Platform",
+       "url": "https://neostella.com/news/neostella-launches-the-legal-industrys-first-case-management-platform-that-connects-all-legal-tools",
+       "excerpts": [
+        "\u201cNeostella has been a trusted partner, committed to supporting our goals and growth,\u201d said Aaron Jophlin, Managing Partner at Bell Legal Group."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s announcement quotes Bell Legal Group\u2019s managing partner describing Neostella as a trusted partner.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Development Representative - Neostella | Built In",
+       "url": "https://builtin.com/job/business-development-representative/10241584",
+       "excerpts": [
+        "Manage your day in Salesforce CRM and track all tasks, activities, interactions, notes, etc."
+       ]
+      }
+     ],
+     "reasoning": "A Neostella job posting explicitly refers to Salesforce CRM.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/subprocessors",
+       "excerpts": [
+        "Subprocessors |Amazon Web Services \u2022 Cloud provider United States Cloud Infrastructure | |Logo for Microsoft 365 Microsoft 365 \u2022 Email, document collaboration, productivity tools United States | |Zendesk \u2022 Customer support and ticketing United States Customer support and ticketing | |Logo for Nylas Nylas \u2022 Email, calendar, and contacts APIs United States Email, calendar, and contacts APIs | |Logo for Svix Svix \u2022 Webhook delivery & event infrastructure United States Webhook delivery & event infrastructure | |Salesforce \u2022 Sales United States CRM and sales automation platform | |DocuSign \u2022 Document management United States Electronic signatures & workflows | |Hubspot \u2022 CRM, marketing & sales automation United State CRM, marketing & sales automation | |SendGrid (Twilio) SendGrid (Twilio) \u2022 Transactional email delivery United States Transactional email delivery | 1-9 of 9 results"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists HubSpot for CRM, marketing, and sales automation.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2019.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "GDPR",
+     "HIPAA"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Neostella\u2019s connected legal case-management platform brings together case data, documents, workflows, communications, reporting, and AI for growing and enterprise legal teams.",
+    "employee_band": "201-500",
+    "model_provider": "Claude and ChatGPT are named as optional external MCP integrations; the model provider behind Neostella\u2019s built-in AI is not disclosed.",
+    "pricing_page": true,
+    "funding_amount_usd": 10700000.0,
+    "named_customers": [
+     "Groth Law Firm",
+     "Bell Legal Group"
+    ],
+    "funding_date": "2025-05",
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Milwaukee",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

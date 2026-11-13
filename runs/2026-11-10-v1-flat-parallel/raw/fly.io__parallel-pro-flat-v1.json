@@ -1,0 +1,518 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9fc8d959e6254448",
+  "interaction_id": "trun_142119f6a1b4439e9fc8d959e6254448",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "fly.io"
+  },
+  "created_at": "2026-11-10T18:47:46.129450Z",
+  "modified_at": "2026-11-10T18:51:31.731259Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9fc8d959e6254448",
+   "interaction_id": "trun_142119f6a1b4439e9fc8d959e6254448",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "fly.io"
+   },
+   "created_at": "2026-11-10T18:47:46.129450Z",
+   "modified_at": "2026-11-10T18:51:31.731259Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About us",
+       "url": "https://fly.io/about",
+       "excerpts": [
+        "Fly.io is a new, developer-focused public cloud: Easy to deploy on, powerful to grow on. We've been hammering on this thing since 2017, and we think it's pretty great."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/about says the company has been building the platform since 2017. This supports 2017, although one secondary funding profile inconsistently reports 2016.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "**SOC 2 Type 2 (Sept 2026), HIPAA BAA.**",
+        "HIPAA: our BAA is self-service in the Trust Center for organizations with the paid Compliance Package (see COMPLIANCE-31), with a separate Tigris BAA for object storage."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/security-questionnaire claims a completed SOC 2 Type 2 audit and offers a HIPAA BAA. HIPAA here denotes contractual compliance support, not an independent certification. ISO 27001 and PCI DSS are explicitly not held; no explicit GDPR-compliant claim was established.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Fly.io IPO Timeline and Financing Details - Forge",
+       "url": "https://forgeglobal.com/flyio_ipo",
+       "excerpts": [
+        "Headquarters San Francisco, CA, United States"
+       ]
+      }
+     ],
+     "reasoning": "https://forgeglobal.com/flyio_ipo explicitly lists the headquarters country as United States. The conflicting Chicago listings also place the company in the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Operationalizing Macaroons \u00b7 The Fly Blog",
+       "url": "https://fly.io/blog/operationalizing-macaroons",
+       "excerpts": [
+        "Author Thomas Ptacek",
+        "`tkdb` is about 5000 lines of Go code"
+       ]
+      },
+      {
+       "title": "Building clusters with serf, my new favorite thing \u00b7 The Fly Blog",
+       "url": "https://fly.io/blog/building-clusters-with-serf",
+       "excerpts": [
+        "Author Thomas Ptacek",
+        "Serf runs without leaders (cluster members come and go, and everybody just figures things out) and no storage requirements."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/blog/operationalizing-macaroons explains Fly.io\u2019s implemented token infrastructure, including its Go/SQLite service. https://fly.io/blog/building-clusters-with-serf discusses clustering infrastructure. Both explicitly identify Thomas Ptacek as author and provide engineering content rather than marketing or release notes.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About us",
+       "url": "https://fly.io/about",
+       "excerpts": [
+        "Fly.io is a new, developer-focused public cloud: Easy to deploy on, powerful to grow on. We've been hammering on this thing since 2017, and we think it's pretty great."
+       ]
+      },
+      {
+       "title": "Fly.io developer documentation",
+       "url": "https://docs.fly.io/",
+       "excerpts": [
+        "Fly.io developer documentation > Learn to build, deploy, and run apps and AI agents on Fly.io. Find guides and reference docs for Fly Machines, Sprites, Managed Postgres, networking, and flyctl"
+       ]
+      },
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Fly.io is a public cloud that runs code on hardware-isolated Linux virtual"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/ describes a public cloud running code on hardware-isolated Linux VMs; https://fly.io/about identifies developers as the audience; https://docs.fly.io/ covers deploying and running apps and AI agents.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/flydotio",
+       "excerpts": [
+        "name: Fly.io description Fly.io builds computers for agents: connected infrastructure designed for AI agents and the applications they build. website: https://fly.io/ employee count: 56"
+       ]
+      }
+     ],
+     "reasoning": "https://linkedin.com/company/flydotio reports 56 employees, which falls in the 51-100 band. A LinkedIn count may differ from official payroll headcount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [Anthropic](https://anthropic.com/) | United States | AI-assisted log analysis, support responses, and signup classification |",
+        "| [OpenAI](https://openai.com/) | United States | Incident summary generation |"
+       ]
+      },
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "Anthropic and OpenAI are listed on our sub-processor page and are used only by Fly. io\u2019s internal tooling, for inference"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/sub-processors names Anthropic for log analysis, support responses and signup classification, and OpenAI for incident summaries. https://fly.io/legal/security-questionnaire clarifies that this is internal-tooling inference, not a fixed model backend for customer workloads.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Fly.io pricing",
+       "url": "https://fly.io/pricing",
+       "excerpts": [
+        "Fly.io pricing"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/pricing is the company\u2019s public pricing page.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding"
+       ]
+      },
+      {
+       "title": "Fly.io 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/182654-47",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |8\\. Later Stage VC (Series D) |24-Jul-2026 |$25M"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/news/fly-io-launches-computers-for-agents announces $25 million in Series D funding. https://pitchbook.com/profiles/company/182654-47 lists the same July 2026 round as the latest financing identified. $25 million equals USD 25,000,000.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/ explicitly lists Builder.io and Supabase among teams building on Fly.io, rather than as investors or partners.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026"
+       ]
+      },
+      {
+       "title": "Fly.io 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/182654-47",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |8\\. Later Stage VC (Series D) |24-Jul-2026"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/news/fly-io-launches-computers-for-agents is dated July 24, 2026; https://pitchbook.com/profiles/company/182654-47 dates the Series D to that day. The requested month format is 2026-07.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [HubSpot](https://hubspot.com) | United States | Customer relationship management |",
+        "| [Customer.io](https://customer.io/) | United States | Newsletters and transactional email |"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/sub-processors explicitly identifies HubSpot for customer relationship management and Customer.io for newsletters and transactional email.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "Fly.io also announced that Scott Johnston has joined as CEO and a member of the board."
+       ]
+      }
+     ],
+     "reasoning": "The July 24, 2026 announcement at https://fly.io/news/fly-io-launches-computers-for-agents states that Scott Johnston joined as CEO and a board member, within the preceding 12 months.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Fly Jobs",
+       "url": "https://fly.io/jobs/index.md",
+       "excerpts": [
+        "4 pages, newest first.",
+        "[Fullstack Engineer](https://fly.io/jobs/fullstack-engineer.md): Join our team!"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/jobs/index.md lists four current openings: Fullstack Engineer, Infrastructure Operations Engineer, Account Manager\u2014Strategic Accounts, and Networking Engineer\u2014Proxy and Corrosion. None has a qualifying AI, ML or data-science title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding"
+       ]
+      },
+      {
+       "title": "Fly.io 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/182654-47",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |8\\. Later Stage VC (Series D)"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/news/fly-io-launches-computers-for-agents explicitly calls the round Series D; https://pitchbook.com/profiles/company/182654-47 corroborates that classification for the latest financing identified.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Fly.io developer documentation",
+       "url": "https://docs.fly.io/",
+       "excerpts": [
+        "Fly.io developer documentation > Learn to build, deploy, and run apps and AI agents on Fly.io. Find guides and reference docs for Fly Machines, Sprites, Managed Postgres, networking, and flyctl"
+       ]
+      }
+     ],
+     "reasoning": "https://docs.fly.io/ is a public developer documentation site containing guides and references for Machines, Sprites, Managed Postgres, networking and flyctl.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Fly.io 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/182654-47",
+       "excerpts": [
+        "Fly.io is headquartered in San Francisco, CA."
+       ]
+      },
+      {
+       "title": "Fly.io IPO Timeline and Financing Details - Forge",
+       "url": "https://forgeglobal.com/flyio_ipo",
+       "excerpts": [
+        "Headquarters San Francisco, CA, United States"
+       ]
+      }
+     ],
+     "reasoning": "https://pitchbook.com/profiles/company/182654-47 and https://forgeglobal.com/flyio_ipo explicitly identify San Francisco as headquarters. Confidence is reduced because Craft and LinkedIn retain conflicting Chicago locations.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Fly.io Changelog",
+       "url": "https://fly.io/changelog/",
+       "excerpts": [
+        "[New Fly MCP](https://fly.io/changelog/new-fly-mcp.md) (2026-10-23): Earlier this year, with the launch of Sprites, we released the Sprites MCP."
+       ]
+      },
+      {
+       "title": "Feng Shui for Robots: The Fly MCP Server",
+       "url": "https://fly.io/blog/feng-shui-for-robots.md",
+       "excerpts": [
+        "So we built `mcp.fly.io`: one MCP server that connects your agent to Sprites and to your Fly.io apps."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/changelog/ dates \u201cNew Fly MCP\u201d to October 23, 2026, inside the six-month window. https://fly.io/blog/feng-shui-for-robots.md describes the new server connecting agents to both Sprites and Fly.io apps, a substantive capability rather than a bug fix or UI tweak.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Fly Jobs",
+       "url": "https://fly.io/jobs/index.md",
+       "excerpts": [
+        "4 pages, newest first.",
+        "[Fullstack Engineer](https://fly.io/jobs/fullstack-engineer.md): Join our team!"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/jobs/index.md lists four current openings and none is an SDR, BDR or account executive. The listed strategic account manager is excluded by the question\u2019s definition.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure",
+       "url": "https://fly.io/news/fly-io-launches-computers-for-agents",
+       "excerpts": [
+        "July 24, 2026",
+        "To accelerate this opportunity, Fly.io also announced $25 million in Series D funding"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/news/fly-io-launches-computers-for-agents announces the $25 million Series D on July 24, 2026, within the preceding 18 months.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "**SOC 2 Type 2 (Sept 2026), HIPAA BAA.**"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/security-questionnaire explicitly claims a completed SOC 2 Type 2 audit.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Fly.io Security & Compliance Questionnaire",
+       "url": "https://fly.io/legal/security-questionnaire",
+       "excerpts": [
+        "HIPAA: our BAA is self-service in the Trust Center for organizations with the paid Compliance Package (see COMPLIANCE-31), with a separate Tigris BAA for object storage."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/security-questionnaire offers a HIPAA BAA through the paid Compliance Package. This establishes HIPAA support, not an independent HIPAA certification.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/ names Builder.io among teams building on Fly.io.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Fly.io: deploy apps and agents on hardware-isolated VMs",
+       "url": "https://fly.io/",
+       "excerpts": [
+        "Teams building on Fly.io include Builder.io, Mercor, Cogram, Mocha, Context, Reflex, Beam, Imbue, Supabase, Webhound and Hercules."
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/ names Supabase among teams building on Fly.io.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [HubSpot](https://hubspot.com) | United States | Customer relationship management |"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/sub-processors identifies HubSpot as its customer relationship management provider.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Fly.io Sub-processors",
+       "url": "https://fly.io/legal/sub-processors",
+       "excerpts": [
+        "| [Customer.io](https://customer.io/) | United States | Newsletters and transactional email |"
+       ]
+      }
+     ],
+     "reasoning": "https://fly.io/legal/sub-processors identifies Customer.io for newsletters and transactional email.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "HIPAA"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Fly.io is a public cloud for developers to deploy and run applications and AI agents on hardware-isolated Linux virtual machines.",
+    "employee_band": "51-100",
+    "model_provider": "Anthropic and OpenAI, used for inference in internal support and operations tooling rather than to run customers\u2019 applications.",
+    "pricing_page": true,
+    "funding_amount_usd": 25000000.0,
+    "named_customers": [
+     "Builder.io",
+     "Supabase"
+    ],
+    "funding_date": "2026-07",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Customer.io"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series D",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

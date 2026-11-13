@@ -1,0 +1,549 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e885ccd16fb5cbf5f",
+  "interaction_id": "trun_142119f6a1b4439e885ccd16fb5cbf5f",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "wellnessliving.com"
+  },
+  "created_at": "2026-11-10T18:49:05.147617Z",
+  "modified_at": "2026-11-10T18:52:28.728212Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e885ccd16fb5cbf5f",
+   "interaction_id": "trun_142119f6a1b4439e885ccd16fb5cbf5f",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "wellnessliving.com"
+   },
+   "created_at": "2026-11-10T18:49:05.147617Z",
+   "modified_at": "2026-11-10T18:52:28.728212Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "WellnessLiving Secures US$66 Million Investment to Boost Growth",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-secures-us66-million-investment-from-mccarthy-capital-cibc-innovation-banking-accelerate-growth",
+       "excerpts": [
+        "Founded in 2013, WellnessLiving develops multi-tenant business management software to allow business owners to schedule classes, appointments, and events, manage staff, process payments, and increase"
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/wellnesslivingsoftware",
+       "excerpts": [
+        "founded year: 2012"
+       ]
+      }
+     ],
+     "reasoning": "The company's 2022 funding announcement says it was founded in 2013. LinkedIn gives 2012, so I use the company's press-release statement while noting the conflicting year in the supporting evidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "WellnessLiving\u2019s security framework | WellnessLiving Help Center",
+       "url": "https://help.wellnessliving.com/en/articles/10250832-wellnessliving-s-security-framework",
+       "excerpts": [
+        "# Compliance",
+        "## SOC 2",
+        "WellnessLiving undergoes independent third-party SOC 2 audits to verify that our policies, procedures, and controls are effectively designed and operating to meet our security, availability, and confidentiality commitments. Our SOC 2 Type 2 report, prepared by a certified public accountant (CPA) firm, is available upon request for current customers or businesses considering our software.",
+        "## HIPAA",
+        "WellnessLiving undergoes third-party HIPAA audits to ensure compliance with the HIPAA Security and Privacy Rules.",
+        "Please note that while WellnessLiving provides HIPAA-compliant software systems, businesses using our software must ensure their practices are also HIPAA-compliant.",
+        "## PCI-DSS",
+        "The scope of PCI-DSS compliance for WellnessLiving is limited, as we do not store or process payment card information. Instead, we rely on our merchant processing partners to handle payment transactions. These partners must provide PCI-DSS attestation of compliance (AoC).",
+        "Please note that while WellnessLiving supports PCI compliance through our software and merchant processing partners, businesses are responsible for ensuring their own compliance with PCI-DSS requirements. For more information, see [PCI compliance](https://www.wellnessliving.com/knowledge-sharing/knowledge-base/pci-compliance/) ."
+       ]
+      }
+     ],
+     "reasoning": "The security page identifies SOC 2 audits and a SOC 2 Type 2 report, and says WellnessLiving undergoes HIPAA audits and provides HIPAA-compliant software. It discusses GDPR as a privacy law and says PCI-DSS attestations are provided by merchant-processing partners, so those are not listed as WellnessLiving certifications.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "WellnessLiving - Products, Competitors, Financials, Employees, Headquarters Locations",
+       "url": "https://www.cbinsights.com/company/wellnessliving",
+       "excerpts": [
+        "It was founded in 2012 and is based in Thornhill, Ontario. Headquarters Location 175 Commerce Valley Dr W 320 Thornhill, Ontario, L3T 7P6, Canada"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters listing places WellnessLiving in Thornhill, Ontario, Canada; the country component is Canada.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog - WellnessLiving",
+       "url": "https://www.wellnessliving.com/blog",
+       "excerpts": [
+        "# Blog",
+        "Everything you need to know to grow your business",
+        "All Categories Barbershop Business Management Case Studies Dance Community eBooks Events Business Fitness Health and Beauty Marketing/Social Martial Arts Med Spa Music Play Caf\u00e9 Pilates Press Releases Release Notes Swim School Tattoo Shop Webinars Yoga",
+        "### Featured Posts",
+        "[Screenshot of WellnessLiving Marketing Suite software](https://www.wellnessliving.com/blog/wellnessliving-marketing-suite-launch/?utm_cat=1272)",
+        "[WellnessLiving Launches Industry\u2019s First AI-Powered, All-in-One Marketing Automation System for Fitness, Wellness and Beauty Businesses](https://www.wellnessliving.com/blog/wellnessliving-marketing-suite-launch/?utm_cat=1272)",
+        "[How PeaceCore Studios Grew 488% with a Personalized, Whole-Body Approach\u2014and the Right Fitness Studio Software](https://www.wellnessliving.com/blog/how-peacecore-studios-grew-488-with-a-personalized-whole-body-approach-and-the-right-fitness-studio-software/?utm_cat=465)",
+        "[How PeaceCore Studios Grew 488% with WellnessLiving](https://www.wellnessliving.com/blog/how-peacecore-studios-grew-488-with-a-personalized-whole-body-approach-and-the-right-fitness-studio-software/?utm_cat=465)",
+        "[Release Highlights | May 2026 (Version 26.73)](https://www.wellnessliving.com/blog/wellnessliving-release-highlights-may-2026-version-26-73/?utm_cat=85)",
+        "[WellnessLiving Release Highlights | May 2026 (Version 26.73)](https://www.wellnessliving.com/blog/wellnessliving-release-highlights-may-2026-version-26-73/?utm_cat=85)",
+        "[Some of the dedicated WellnessLivling clients that have inspired our latest features.](https://www.wellnessliving.com/blog/behind-the-build-meet-the-customers-who-shaped-release-26-73/?utm_cat=17866)",
+        "[Behind the Build: Meet the Customers Who Shaped Release 26.73](https://www.wellnessliving.com/blog/behind-the-build-meet-the-customers-who-shaped-release-26-73/?utm_cat=17866)",
+        "### Latest Posts",
+        "[Community](https://www.wellnessliving.com/blog/community/)",
+        "[Instructors at the Pilates Moment help students through their stretch routine.](https://www.wellnessliving.com/blog/the-pilates-moment/?utm_cat=17866)",
+        "[The Pilates Moment: A Reformer Studio Built on Belonging](https://www.wellnessliving.com/blog/the-pilates-moment/?utm_cat=17866)",
+        "[Yoga](https://www.wellnessliving.com/blog/yoga/)",
+        "[A corporate yoga class, taking place on the company's lunch break.](https://www.wellnessliving.com/blog/how-to-add-corporate-yoga-to-your-studios-revenue-mix/?utm_cat=1184)",
+        "[How to Add Corporate Yoga to Your Studio\u2019s Revenue Mix](https://www.wellnessliving.com/blog/how-to-add-corporate-yoga-to-your-studios-revenue-mix/?utm_cat=1184)",
+        "[The owner of Move Mint Condition, helping a senior client stretch his legs.](https://www.wellnessliving.com/blog/move-mint-condition/?utm_cat=17866)",
+        "[Move Mint Condition: Stretching and Training Built on Referrals](https://www.wellnessliving.com/blog/move-mint-condition/?utm_cat=17866)",
+        "[The silhouette of someone from Bikram Yoga Bella Vista doing yoga on a beach.](https://www.wellnessliving.com/blog/bikram-yoga-bella-vista/?utm_cat=17866)",
+        "[Bikram Yoga Bella Vista: Ten Years of Community, Finally on the Right Platform](https://www.wellnessliving.com/blog/bikram-yoga-bella-vista/?utm_cat=17866)",
+        "[Release Notes](https://www.wellnessliving.com/blog/release-notes/)",
+        "[Infographic for the WellnessLiving Release Highlights: July 2026 (Version 26.74).](https://www.wellnessliving.com/blog/wellnessliving-release-highlights-july-2026-version-26-74/?utm_cat=85)",
+        "[WellnessLiving Release Highlights \u2013 July 2026 (Version 26.74)](https://www.wellnessliving.com/blog/wellnessliving-release-highlights-july-2026-version-26-74/?utm_cat=85)",
+        "[An infographic for the WellnessLiving Health & Beauty Highlights: July 2026 (Version 26.74).](https://www.wellnessliving.com/blog/wellnessliving-health-beauty-highlights-july-2026-version-26-74/?utm_cat=85)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index presents general business-growth content, product launches, customer stories, community posts, and release highlights/notes rather than an engineering or technical blog. The engineering-leader features are profile pieces, not a technical blog with two qualifying engineering build posts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Wellnessliving Zvcrxvet",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet",
+       "excerpts": [
+        "We are an all-in-one business management software platform serving wellness, fitness, health, and beauty businesses around the world. From online booking and client management to payments, marketing, loyalty programs, reporting, and AI-powered business tools, WellnessLiving enables businesses to run their entire operation from a single, powerful system."
+       ]
+      }
+     ],
+     "reasoning": "WellnessLiving's company description calls it an all-in-one business-management platform serving wellness, fitness, health, and beauty businesses and names its core operational capabilities.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "WellnessLiving",
+       "url": "https://linkedin.com/company/wellnesslivingsoftware",
+       "excerpts": [
+        "WellnessLiving Company size: 201-500 employees."
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile states the company-size band is 201\u2013500 employees.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "The Future Is Now - How CAASI AI Can Take Your Business to the Next Level | WellnessLiving Live | WellnessLiving Help Center",
+       "url": "https://help.wellnessliving.com/en/articles/15280546-the-future-is-now-how-caasi-ai-can-take-your-business-to-the-next-level-wellnessliving-live",
+       "excerpts": [
+        "CAASI is WellnessLiving's built-in AI client assistant, powered by Google Gemini and trained on your classes, pricing, staff profiles, and policies from Staff Back Office. It greets website visitors instantly, answers questions in your brand voice, collects contact information, and sends leads into your Communication Hub for fast staff follow-up."
+       ]
+      }
+     ],
+     "reasoning": "WellnessLiving's Help Center explicitly says CAASI is powered by Google Gemini.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing - WellnessLiving",
+       "url": "https://www.wellnessliving.com/pricing",
+       "excerpts": [
+        "The All-in-One Platform to Run and Grow Your Business Pay Monthly Pay Annually (Save 10%) Starter $69 /mo"
+       ]
+      }
+     ],
+     "reasoning": "The company has a public pricing page that lists pricing plans and a monthly price.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "WellnessLiving Secures US$66 Million Investment to Boost Growth",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-secures-us66-million-investment-from-mccarthy-capital-cibc-innovation-banking-accelerate-growth",
+       "excerpts": [
+        "TORONTO, ON. \u2014 August 16, 2022 \u2014 [WellnessLiving](https://bit.ly/3bXwU3r) (the \u201cCompany\u201d), which provides a cloud-based business management software and integrated payments platform for fitness and wellness operators, announced that the Company has partnered with McCarthy Capital to accelerate its growth. In addition to McCarthy Capital leading the $46 million minority investment, CIBC Innovation Banking has provided $20 million in growth financing, bringing the total raised this round to US$66 million."
+       ]
+      }
+     ],
+     "reasoning": "The company's announcement reports a $46 million minority investment plus $20 million in growth financing, totaling US$66 million for the round.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Automated Fitness Management Software for Any Studio | WellnessLiving",
+       "url": "https://www.wellnessliving.com/fitness/software",
+       "excerpts": [
+        "Photo of Brian Sipotz, owner of Advantage Personal Training, a WellnessLiving gym management software customer.",
+        "Photo of Hannah Ray, owner of REDCON1 Gym, a WellnessLiving gym management software customer."
+       ]
+      }
+     ],
+     "reasoning": "WellnessLiving's fitness-software pages identify Advantage Personal Training and REDCON1 Gym as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "WellnessLiving Secures US$66 Million Investment to Boost Growth",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-secures-us66-million-investment-from-mccarthy-capital-cibc-innovation-banking-accelerate-growth",
+       "excerpts": [
+        "TORONTO, ON. \u2014 August 16, 2022 \u2014 [WellnessLiving](https://bit.ly/3bXwU3r) (the \u201cCompany\u201d), which provides a cloud-based business management software and integrated payments platform for fitness and wellness operators, announced that the Company has partnered with McCarthy Capital to accelerate its growth. In addition to McCarthy Capital leading the $46 million minority investment, CIBC Innovation Banking has provided $20 million in growth financing, bringing the total raised this round to US$66 million."
+       ]
+      }
+     ],
+     "reasoning": "The company's funding announcement dates the $66 million transaction to August 16, 2022, which is 2022-08 at the requested granularity.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Development Representative at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/business-development-representative-292926",
+       "excerpts": [
+        "Own your book of business, you will be responsible for managing your pipeline, opportunities, and day-to-day activities in Salesforce."
+       ]
+      },
+      {
+       "title": "Sales Operations Manager at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/sales-operations-manager-295466",
+       "excerpts": [
+        "Configure and optimize Zoho CRM, including custom modules, fields, layouts, views, workflows, blueprints, automations, and dashboards."
+       ]
+      }
+     ],
+     "reasoning": "A WellnessLiving business-development job post names Salesforce, and a sales-operations job post names Zoho CRM.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Don Williams Appointed as Chief Revenue Officer (CRO)",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-appoints-don-williams-as-chief-revenue-officer-cro",
+       "excerpts": [
+        "WellnessLiving Appoints Don Williams as Chief Revenue Officer (CRO) Last Updated on 24 February, 2026 Williams brings decades of sales and marketing experience to WellnessLiving to drive growth in 2023 and beyond. ... class, event, and appointment-based businesses in the fitness and wellness industry, announces Don Williams as its new Chief Revenue Officer (CRO) after securing a USD $66.0 million investment from McCarthy Capital and CIBC Innovation Banking last August. Williams will play a pivotal role in accelerating the next stage of the company\u2019s growth, overseeing all aspects of WellnessLiving\u2019s global go-to-market strategy."
+       ]
+      }
+     ],
+     "reasoning": "WellnessLiving announced Don Williams as its new Chief Revenue Officer in February 2026, within the 12 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "AI Solutions Engineer at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/ai-solutions-engineer-294353",
+       "excerpts": [
+        "Apply Now Location Thornhill, Canada Salary 70000 - 90000 CAD Per annum Job Type Full-time Date Posted August 7th, 2026 [](https://www.facebook.com/sharer/sharer.php?u=https://jobs.gohire.io/wellnessliving-zvcrxvet/ai-solutions-engineer-294353?source=facebook) ... AI Solutions Engineer at WellnessLiving Location Thornhill, Canada Salary 70000 - 90000 CAD Job Type Full-time Date Posted August 7th, 2026 ... [View All Jobs](https://jobs.gohire.io/) [Download File](https://api.gohire.io//download-form/?bucket=&key=&type=3&name=) **AI Solutions Engineer** **AI-Native Product & Automation Builder**"
+       ]
+      }
+     ],
+     "reasoning": "The company's job page lists an AI Solutions Engineer role, dated August 7, 2026, with an active Apply Now link; this is an AI-titled engineering position.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "WellnessLiving Secures US$66 Million Investment to Boost Growth",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-secures-us66-million-investment-from-mccarthy-capital-cibc-innovation-banking-accelerate-growth",
+       "excerpts": [
+        "TORONTO, ON. \u2014 August 16, 2022 \u2014 [WellnessLiving](https://bit.ly/3bXwU3r) (the \u201cCompany\u201d), which provides a cloud-based business management software and integrated payments platform for fitness and wellness operators, announced that the Company has partnered with McCarthy Capital to accelerate its growth. In addition to McCarthy Capital leading the $46 million minority investment, CIBC Innovation Banking has provided $20 million in growth financing, bringing the total raised this round to US$66 million."
+       ]
+      },
+      {
+       "title": "WellnessLiving - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/wellnessliving/__FRnKHGaex2SoiJI9FardqrzEZhhSBXhvj_HQYyArc3A",
+       "excerpts": [
+        "Total Funding [$46M](https://platform.tracxn.com/a/d/company/531b4d5ee4b0f7e166256ede:funding-and-investors) in 2 rounds Latest Funding Round [PE, Aug 16, 2022, $\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/531b4d5ee4b0f7e166256ede:funding-and-investors)"
+       ]
+      }
+     ],
+     "reasoning": "The announcement describes a minority investment together with growth financing, and Tracxn labels the latest funding round as PE; the stated stage summarizes both parts of that transaction.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home | WellnessLiving Help Center",
+       "url": "https://help.wellnessliving.com/en",
+       "excerpts": [
+        "[WellnessLiving Help Center](https://help.wellnessliving.com/en/) [Blog](https://www.wellnessliving.com/blog/) [Community Forum](https://community.wellnessliving.com/page/home/) [WellnessLiving](https://wellnessliving.com/home.html) [Blog](https://www.wellnessliving.com/blog/) [Community Forum](https://community.wellnessliving.com/page/home/) [WellnessLiving](https://wellnessliving.com/home.html) Welcome to the WellnessLiving Help Center!"
+       ]
+      },
+      {
+       "title": "Getting Started with the WellnessLiving API | WellnessLiving Help Center",
+       "url": "https://help.wellnessliving.com/en/articles/10697645-getting-started-with-the-wellnessliving-api",
+       "excerpts": [
+        "**Developer Portal:** Access API documentation, endpoint references, and tutorials on the [WellnessLiving Developer Portal](https://www.wellnessliving.com/developer-portal/getting-started/introduction/) ."
+       ]
+      }
+     ],
+     "reasoning": "The company has a public Help Center and links to an API developer portal with documentation, endpoint references, and tutorials.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "WellnessLiving - Products, Competitors, Financials, Employees, Headquarters Locations",
+       "url": "https://www.cbinsights.com/company/wellnessliving",
+       "excerpts": [
+        "It was founded in 2012 and is based in Thornhill, Ontario. Headquarters Location 175 Commerce Valley Dr W 320 Thornhill, Ontario, L3T 7P6, Canada"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters listing identifies Thornhill, Ontario, Canada; the city is Thornhill.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "WellnessLiving Launches Industry\u2019s First AI-Powered, All-in-One Marketing Automation System for Fitness, Wellness and Beauty Businesses - WellnessLiving",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-marketing-suite-launch",
+       "excerpts": [
+        "WellnessLiving Launches Industry\u2019s First AI-Powered, All-in-One Marketing Automation System for Fitness, Wellness and Beauty Businesses Last Updated on 25 August, 2026 _Now available to thousands of businesses worldwide, Marketing Suite delivers pre-built, AI-personalized automations powered by real-time data._"
+       ]
+      }
+     ],
+     "reasoning": "WellnessLiving's blog announced the launch of its AI-powered Marketing Suite on August 25, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/business-development-representative-292926",
+       "excerpts": [
+        "Apply Now Location Thornhill, Canada Salary 50000 - 100000 CAD Per annum Job Type Full-time Date Posted November 9th, 2026 [](https://www.facebook.com/sharer/sharer.php?u=https://jobs.gohire.io/wellnessliving-zvcrxvet/business-development-representative-292926?source=facebook) ... [Report this job](https://api.gohire.io/report-job/14555/292926?s=career-page) [View All Jobs](https://jobs.gohire.io/) Business Development Representative at WellnessLiving Location Thornhill, Canada Salary 50000 - 100000 CAD Job Type Full-time Date Posted November 9th, 2026"
+       ]
+      },
+      {
+       "title": "Enterprise Account Executive at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/enterprise-account-executive-299157",
+       "excerpts": [
+        "Apply Now Location Thornhill, Canada Salary 90000 - 95000 CAD Per annum Job Type Full-time Date Posted November 9th, 2026 [](https://www.facebook.com/sharer/sharer.php?u=https://jobs.gohire.io/wellnessliving-zvcrxvet/enterprise-account-executive-299157?source=facebook) ... [View All Jobs](https://jobs.gohire.io/) Enterprise Account Executive at WellnessLiving Location Thornhill, Canada Salary 90000 - 95000 CAD Job Type Full-time Date Posted November 9th, 2026 [](https://www.facebook.com/sharer/sharer.php?u=https://jobs.gohire.io/wellnessliving-zvcrxvet/enterprise-account-executive-299157?source=facebook) [](https ... **Enterprise Account Executive** **Salary:** $90,000 - $95,000 base + Commission (OTE ~$140,000) **Department:** Sales **Reports To:** VP of Sales **Location:** Hybrid (Thornhill, ON) **Role Type:** Permanent, Full-Time"
+       ]
+      }
+     ],
+     "reasoning": "The current job board has a Business Development Representative posting and an Enterprise Account Executive posting, both dated November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "WellnessLiving - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/wellnessliving/__FRnKHGaex2SoiJI9FardqrzEZhhSBXhvj_HQYyArc3A",
+       "excerpts": [
+        "Total Funding [$46M](https://platform.tracxn.com/a/d/company/531b4d5ee4b0f7e166256ede:funding-and-investors) in 2 rounds Latest Funding Round [PE, Aug 16, 2022, $\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/531b4d5ee4b0f7e166256ede:funding-and-investors)"
+       ]
+      },
+      {
+       "title": "WellnessLiving Secures US$66 Million Investment to Boost Growth",
+       "url": "https://www.wellnessliving.com/blog/wellnessliving-secures-us66-million-investment-from-mccarthy-capital-cibc-innovation-banking-accelerate-growth",
+       "excerpts": [
+        "[Blog](https://www.wellnessliving.com/blog/) [Press Releases](https://www.wellnessliving.com/blog/press-releases/) McCarthy Capital Awards $66 Million Investment to WellnessLiving McCarthy Capital Awards $66 Million Investment to WellnessLiving Last Updated on 2 March, 2026 TORONTO, ON. \u2014 August 16, 2022 \u2014 [WellnessLiving](https://bit.ly/3bXwU3r) (the \u201cCompany\u201d), which provides a cloud-based business management software and integrated payments platform for fitness and wellness operators, announced that the Company has partnered with McCarthy Capital to accelerate its growth. In addition to McCarthy Capital leading the $46 million minority investment, CIBC Innovation Banking has provided $20 million in growth financing, bringing the total raised this round to US$66 million."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the latest round as August 16, 2022, and the company's announcement gives the date and amount. That predates the 18-month window ending November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "WellnessLiving\u2019s security framework | WellnessLiving Help Center",
+       "url": "https://help.wellnessliving.com/en/articles/10250832-wellnessliving-s-security-framework",
+       "excerpts": [
+        "# Compliance",
+        "## SOC 2",
+        "WellnessLiving undergoes independent third-party SOC 2 audits to verify that our policies, procedures, and controls are effectively designed and operating to meet our security, availability, and confidentiality commitments. Our SOC 2 Type 2 report, prepared by a certified public accountant (CPA) firm, is available upon request for current customers or businesses considering our software.",
+        "## HIPAA",
+        "WellnessLiving undergoes third-party HIPAA audits to ensure compliance with the HIPAA Security and Privacy Rules.",
+        "Please note that while WellnessLiving provides HIPAA-compliant software systems, businesses using our software must ensure their practices are also HIPAA-compliant.",
+        "## PCI-DSS",
+        "The scope of PCI-DSS compliance for WellnessLiving is limited, as we do not store or process payment card information. Instead, we rely on our merchant processing partners to handle payment transactions. These partners must provide PCI-DSS attestation of compliance (AoC).",
+        "Please note that while WellnessLiving supports PCI compliance through our software and merchant processing partners, businesses are responsible for ensuring their own compliance with PCI-DSS requirements. For more information, see [PCI compliance](https://www.wellnessliving.com/knowledge-sharing/knowledge-base/pci-compliance/) ."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly says WellnessLiving undergoes third-party SOC 2 audits and has a SOC 2 Type 2 report.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "WellnessLiving\u2019s security framework | WellnessLiving Help Center",
+       "url": "https://help.wellnessliving.com/en/articles/10250832-wellnessliving-s-security-framework",
+       "excerpts": [
+        "# Compliance",
+        "## SOC 2",
+        "WellnessLiving undergoes independent third-party SOC 2 audits to verify that our policies, procedures, and controls are effectively designed and operating to meet our security, availability, and confidentiality commitments. Our SOC 2 Type 2 report, prepared by a certified public accountant (CPA) firm, is available upon request for current customers or businesses considering our software.",
+        "## HIPAA",
+        "WellnessLiving undergoes third-party HIPAA audits to ensure compliance with the HIPAA Security and Privacy Rules.",
+        "Please note that while WellnessLiving provides HIPAA-compliant software systems, businesses using our software must ensure their practices are also HIPAA-compliant.",
+        "## PCI-DSS",
+        "The scope of PCI-DSS compliance for WellnessLiving is limited, as we do not store or process payment card information. Instead, we rely on our merchant processing partners to handle payment transactions. These partners must provide PCI-DSS attestation of compliance (AoC).",
+        "Please note that while WellnessLiving supports PCI compliance through our software and merchant processing partners, businesses are responsible for ensuring their own compliance with PCI-DSS requirements. For more information, see [PCI compliance](https://www.wellnessliving.com/knowledge-sharing/knowledge-base/pci-compliance/) ."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly says WellnessLiving undergoes third-party HIPAA audits and provides HIPAA-compliant software.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Automated Fitness Management Software for Any Studio | WellnessLiving",
+       "url": "https://www.wellnessliving.com/fitness/software",
+       "excerpts": [
+        "Photo of Brian Sipotz, owner of Advantage Personal Training, a WellnessLiving gym management software customer."
+       ]
+      }
+     ],
+     "reasoning": "The cited page calls Advantage Personal Training a WellnessLiving customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Automated Fitness Management Software for Any Studio | WellnessLiving",
+       "url": "https://www.wellnessliving.com/fitness/software",
+       "excerpts": [
+        "Photo of Hannah Ray, owner of REDCON1 Gym, a WellnessLiving gym management software customer."
+       ]
+      }
+     ],
+     "reasoning": "The cited page calls REDCON1 Gym a WellnessLiving customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Development Representative at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/business-development-representative-292926",
+       "excerpts": [
+        "Own your book of business, you will be responsible for managing your pipeline, opportunities, and day-to-day activities in Salesforce."
+       ]
+      }
+     ],
+     "reasoning": "The WellnessLiving business-development job post names Salesforce.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Sales Operations Manager at WellnessLiving | Jobs at WellnessLiving",
+       "url": "https://jobs.gohire.io/wellnessliving-zvcrxvet/sales-operations-manager-295466",
+       "excerpts": [
+        "Configure and optimize Zoho CRM, including custom modules, fields, layouts, views, workflows, blueprints, automations, and dashboards."
+       ]
+      }
+     ],
+     "reasoning": "The WellnessLiving sales-operations job post names Zoho CRM.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2013.0,
+    "compliance_certs": [
+     "SOC 2",
+     "HIPAA"
+    ],
+    "hq_country": "Canada",
+    "eng_blog": false,
+    "product_one_liner": "WellnessLiving is an all-in-one business management platform for wellness, fitness, health, and beauty businesses, combining booking, client management, payments, marketing, loyalty, reporting, and AI-powered tools.",
+    "employee_band": "201-500",
+    "model_provider": "Google Gemini",
+    "pricing_page": true,
+    "funding_amount_usd": 66000000.0,
+    "named_customers": [
+     "Advantage Personal Training",
+     "REDCON1 Gym"
+    ],
+    "funding_date": "2022-08",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Zoho CRM"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Minority growth investment (private equity plus growth financing)",
+    "public_docs": true,
+    "hq_city": "Thornhill",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

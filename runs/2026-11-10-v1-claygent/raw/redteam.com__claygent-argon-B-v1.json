@@ -1,0 +1,362 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob26jZw3nuHYMVeRj",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "redteam.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The recent-posts index is construction guidance and product/marketing content, not engineering posts about how the product is built.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://blog.redteam.com/recent-posts/"
+       ]
+      },
+      "reasoning": "The company’s own site identifies its construction-management audience, a public pricing page, founding history, customer testimonials, and help center. LinkedIn’s stated employee count maps to 51–100. RedTeam’s current career portal says there are no jobs posted, although a specific Account Executive application page remains live; the latter supports SDR/AE hiring, while the no-openings page supports the negative AI/ML-role result. RedTeam’s dated release notes announce a report feature on November 9, 2026, within the six-month window. A July 2026 appointment of a Vice President of Finance is within the 12-month leadership window. Funding databases identify a February 2022 $28 million Series B as the latest round, outside the 18-month window. The engineering-blog, model-provider, and certification conclusions are based respectively on the marketing-oriented blog index, a RedTeam-specific partner case study, and the company’s legal/privacy page.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Visited https://redteam.com/about-us",
+       "Visited https://redteam.com/privacy-policies",
+       "Visited https://blog.redteam.com/recent-posts/",
+       "Visited https://redteam.com/",
+       "Visited https://linkedin.com/company/redteamsoftware",
+       "Visited https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing",
+       "Visited https://redteam.com/pricing",
+       "Visited https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising",
+       "Visited https://redteam.com/insights-and-stories/redteam-go-release-notes-november-9-2026",
+       "Visited https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/redteam-appoints-connor-schone-as-vice-president-of-finance.html",
+       "Visited https://redteam.apscareerportal.com/jobs?locale=en-US",
+       "Visited https://redteam.careerplug.com/jobs/3327123/apps/new",
+       "Visited https://help.redteam.com/en",
+       "Visited https://redteam.careerplug.com/jobs/3672234/apps/new"
+      ],
+      "hq_location": {
+       "notes": "RedTeam’s timeline gives Orlando, Florida as headquarters; LinkedIn identifies the country as the United States.",
+       "value": {
+        "city": "Orlando",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/about-us",
+        "https://linkedin.com/company/redteamsoftware"
+       ]
+      },
+      "public_docs": {
+       "notes": "The public Help Center has multiple product collections and hundreds of articles.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://help.redteam.com/en"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The latest recorded round is February 2022, before the 18-month period ending November 9, 2026.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising"
+       ]
+      },
+      "founded_year": {
+       "notes": "RedTeam’s company timeline identifies 2006 as its founding year.",
+       "value": 2006,
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/about-us"
+       ]
+      },
+      "last_funding": {
+       "notes": "The funding history shows the latest deal as a $28 million Series B in February 2022.",
+       "value": {
+        "date": "2022-02",
+        "stage": "Series B",
+        "amount_usd": 28000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "On November 9, 2026, RedTeam announced expanded report options for presenting project costs, including views by division or cost code and markup-display choices.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/insights-and-stories/redteam-go-release-notes-november-9-2026"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The public page describes APV-based pricing and a calculator/custom quotes.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "LinkedIn lists 98 employees; another directory gives a slightly higher band, so this uses the company profile’s stated count.",
+       "value": "51-100",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/redteamsoftware"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "A direct RedTeam application page is open for an Account Executive—SMB role; the general job board separately says there are no jobs posted.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://redteam.careerplug.com/jobs/3327123/apps/new"
+       ]
+      },
+      "model_provider": {
+       "notes": "A RedTeam-specific AI document-extraction case study identifies Bedrock as the AI interpretation service; this supports the extraction pipeline, not necessarily every AI feature.",
+       "value": "Amazon Bedrock",
+       "status": "asserted",
+       "citations": [
+        "https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both are identified in customer testimonials on RedTeam’s homepage.",
+       "value": [
+        "T&G Constructors",
+        "ASI General Contractors"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The company’s job board states that there are no jobs posted at this time.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://redteam.apscareerportal.com/jobs?locale=en-US"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The legal/privacy page describes general security safeguards but names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/privacy-policies"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The Revenue Operations Manager posting names both systems.",
+       "value": [
+        "HubSpot",
+        "Gainsight"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://redteam.careerplug.com/jobs/3672234/apps/new"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "RedTeam provides construction-management software for small and mid-sized commercial general contractors to manage projects, financials, documents, and team coordination in one connected platform.",
+       "status": "asserted",
+       "citations": [
+        "https://redteam.com/"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "RedTeam announced Connor Schone’s appointment as Vice President of Finance on July 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/redteam-appoints-connor-schone-as-vice-president-of-finance.html"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "redteam.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The recent-posts index is construction guidance and product/marketing content, not engineering posts about how the product is built.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://blog.redteam.com/recent-posts/"
+     ]
+    },
+    "reasoning": "The company’s own site identifies its construction-management audience, a public pricing page, founding history, customer testimonials, and help center. LinkedIn’s stated employee count maps to 51–100. RedTeam’s current career portal says there are no jobs posted, although a specific Account Executive application page remains live; the latter supports SDR/AE hiring, while the no-openings page supports the negative AI/ML-role result. RedTeam’s dated release notes announce a report feature on November 9, 2026, within the six-month window. A July 2026 appointment of a Vice President of Finance is within the 12-month leadership window. Funding databases identify a February 2022 $28 million Series B as the latest round, outside the 18-month window. The engineering-blog, model-provider, and certification conclusions are based respectively on the marketing-oriented blog index, a RedTeam-specific partner case study, and the company’s legal/privacy page.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Visited https://redteam.com/about-us",
+     "Visited https://redteam.com/privacy-policies",
+     "Visited https://blog.redteam.com/recent-posts/",
+     "Visited https://redteam.com/",
+     "Visited https://linkedin.com/company/redteamsoftware",
+     "Visited https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing",
+     "Visited https://redteam.com/pricing",
+     "Visited https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising",
+     "Visited https://redteam.com/insights-and-stories/redteam-go-release-notes-november-9-2026",
+     "Visited https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/redteam-appoints-connor-schone-as-vice-president-of-finance.html",
+     "Visited https://redteam.apscareerportal.com/jobs?locale=en-US",
+     "Visited https://redteam.careerplug.com/jobs/3327123/apps/new",
+     "Visited https://help.redteam.com/en",
+     "Visited https://redteam.careerplug.com/jobs/3672234/apps/new"
+    ],
+    "hq_location": {
+     "notes": "RedTeam’s timeline gives Orlando, Florida as headquarters; LinkedIn identifies the country as the United States.",
+     "value": {
+      "city": "Orlando",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/about-us",
+      "https://linkedin.com/company/redteamsoftware"
+     ]
+    },
+    "public_docs": {
+     "notes": "The public Help Center has multiple product collections and hundreds of articles.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://help.redteam.com/en"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The latest recorded round is February 2022, before the 18-month period ending November 9, 2026.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising"
+     ]
+    },
+    "founded_year": {
+     "notes": "RedTeam’s company timeline identifies 2006 as its founding year.",
+     "value": 2006,
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/about-us"
+     ]
+    },
+    "last_funding": {
+     "notes": "The funding history shows the latest deal as a $28 million Series B in February 2022.",
+     "value": {
+      "date": "2022-02",
+      "stage": "Series B",
+      "amount_usd": 28000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "On November 9, 2026, RedTeam announced expanded report options for presenting project costs, including views by division or cost code and markup-display choices.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/insights-and-stories/redteam-go-release-notes-november-9-2026"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The public page describes APV-based pricing and a calculator/custom quotes.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "LinkedIn lists 98 employees; another directory gives a slightly higher band, so this uses the company profile’s stated count.",
+     "value": "51-100",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/redteamsoftware"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "A direct RedTeam application page is open for an Account Executive—SMB role; the general job board separately says there are no jobs posted.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://redteam.careerplug.com/jobs/3327123/apps/new"
+     ]
+    },
+    "model_provider": {
+     "notes": "A RedTeam-specific AI document-extraction case study identifies Bedrock as the AI interpretation service; this supports the extraction pipeline, not necessarily every AI feature.",
+     "value": "Amazon Bedrock",
+     "status": "asserted",
+     "citations": [
+      "https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both are identified in customer testimonials on RedTeam’s homepage.",
+     "value": [
+      "T&G Constructors",
+      "ASI General Contractors"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The company’s job board states that there are no jobs posted at this time.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://redteam.apscareerportal.com/jobs?locale=en-US"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The legal/privacy page describes general security safeguards but names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/privacy-policies"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The Revenue Operations Manager posting names both systems.",
+     "value": [
+      "HubSpot",
+      "Gainsight"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://redteam.careerplug.com/jobs/3672234/apps/new"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "RedTeam provides construction-management software for small and mid-sized commercial general contractors to manage projects, financials, documents, and team coordination in one connected platform.",
+     "status": "asserted",
+     "citations": [
+      "https://redteam.com/"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "RedTeam announced Connor Schone’s appointment as Vice President of Finance on July 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/redteam-appoints-connor-schone-as-vice-president-of-finance.html"
+     ]
+    }
+   }
+  }
+ }
+}

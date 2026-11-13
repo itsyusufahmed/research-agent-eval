@@ -1,0 +1,21 @@
+{
+ "url": "https://auterion.com/improving-the-security-of-px4-by-fuzz-testing-the-mavlink-c-parser/",
+ "fetched_at": "2026-11-09T21:46:50.446185+00:00",
+ "hours_after_run": 21.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "7dcc0f82a5152f07bd5170c12c85e0f551c1b7182509ce7e1e033aca555028f0",
+ "chars": 1168,
+ "truncated": false,
+ "title": "MAVLink Fuzz Testing | Auterion",
+ "markdown": "## [PX4](https://auterion.com/news/px4/)\n\n# MAVLink Fuzz Testing\n\nAugust 28, 2019\n\n![](https://i0.wp.com/auterion.com/wp-content/uploads/2020/05/Featured_image-2.png?fit=1200%2C628&ssl=1)\n\n### Improving the security of PX4 by fuzz testing the MAVLink C parser.\n\nTo ensure the security of PX4, and of the whole ecosystem around MAVLink, we applied fuzz testing against the MAVLink library. In fuzz testing (\"fuzzing\") random data, including invalid and unexpected values, is used as input for a program or programming interface.\n\nIn this case, we are targeting the MAVLink parser written in C which is used in PX4, MAVSDK, QGroundControl, and other pieces of software. The parser which parses incoming communication packets can be considered the “door” to the outside world, or third parties and is, therefore, a logical target for potential attackers. By throwing a lot of random bytes at the parser written in C we found 1 security bug and automatically identified another already known bug. The fixes for both bugs are currently under review.\n\nFor more information: [https://github.com/Auterion/mavlink-fuzz-testing](https://github.com/Auterion/mavlink-fuzz-testing)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "eng_blog"
+ ]
+}

@@ -1,0 +1,510 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea73e1f0dc9465d77",
+  "interaction_id": "trun_142119f6a1b4439ea73e1f0dc9465d77",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "gomomentus.com"
+  },
+  "created_at": "2026-11-10T18:48:06.179604Z",
+  "modified_at": "2026-11-10T19:03:36.694145Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea73e1f0dc9465d77",
+   "interaction_id": "trun_142119f6a1b4439ea73e1f0dc9465d77",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "gomomentus.com"
+   },
+   "created_at": "2026-11-10T18:48:06.179604Z",
+   "modified_at": "2026-11-10T19:03:36.694145Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Momentus Technologies | LinkedIn",
+       "url": "https://linkedin.com/company/57378",
+       "excerpts": [
+        "Founded in 1985, Momentus is headquartered in the United States."
+       ]
+      }
+     ],
+     "reasoning": "The company's LinkedIn profile explicitly states that Momentus was founded in 1985: https://linkedin.com/company/57378.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Momentus Technologies",
+       "url": "https://trustcenter.gomomentus.com/",
+       "excerpts": [
+        "SOC 2",
+        "ISO 27001:2022",
+        "PCI DSS - SAQ D, Merchant"
+       ]
+      },
+      {
+       "title": "Venue Ticketing Software for Operators | Momentus Ticketing",
+       "url": "https://gomomentus.com/ticketing",
+       "excerpts": [
+        "Every purchase and behavioral signal belongs to you. Stream directly to your CRM, BI, and marketing stack in real time. Full data sovereignty, GDPR compliant"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names SOC 2, ISO 27001:2022 and PCI DSS\u2014SAQ D, Merchant: https://trustcenter.gomomentus.com/. The Ticketing page separately claims GDPR compliance: https://gomomentus.com/ticketing. These are public compliance claims; GDPR is not itself a certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Momentus Technologies | LinkedIn",
+       "url": "https://linkedin.com/company/57378",
+       "excerpts": [
+        "Founded in 1985, Momentus is headquartered in the United States."
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly identifies the United States as its headquarters country: https://linkedin.com/company/57378.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Resources - Blog",
+       "url": "https://gomomentus.com/blog",
+       "excerpts": [
+        "Security Without a Single Point of Failure: How Momentus Technologies Approaches Defense in Depth",
+        "Event RFP Tools: How Venues Turn Incoming Requests Into Signed Contracts"
+       ]
+      },
+      {
+       "title": "Momentus Blog | Momentus Technologies",
+       "url": "https://gomomentus.com/blog/author/momentus-technologies",
+       "excerpts": [
+        "Filter by Blog Topics All Arts and Culture Casino Resorts and Hotels Convention Centers Corporate Event Management Higher Education Innovation Lab Press Risk Management Venue Management Stadium and Arena Sustainability Incident Management"
+       ]
+      }
+     ],
+     "reasoning": "The blog index is predominantly industry, product and company content. The security implementation article is a qualifying technical example, but the reviewed index and posts did not establish a second engineer-authored article about how Momentus is built. Under the requested two-post threshold, the answer is false: https://gomomentus.com/blog and https://gomomentus.com/blog/author/momentus-technologies.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Momentus Technologies International - Sales Operations Analyst",
+       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813",
+       "excerpts": [
+        "Momentus provides industry-leading event and venue management software to customers in over 50 countries around the world, serving thousands of customers that power millions of events. In the age of digital transformation, our comprehensive platform offers event professionals leading-edge SaaS technology that provides a 360 view of their business, allowing them to cut costs, save time, and increase revenue. Momentus technology powers top shows around the world, famous museums, global convention centers, performing arts venues, professional sports arenas, and other unique venues."
+       ]
+      },
+      {
+       "title": "Event & Venue Management Software | Momentus",
+       "url": "https://www.gomomentus.com/",
+       "excerpts": [
+        "Top organizations worldwide rely on Momentus to increase bookings, streamline event operations, and improve venue revenue in one robust event & venue management platform."
+       ]
+      }
+     ],
+     "reasoning": "The company describes its software, venue customers and event-professional audience in its employer posting, while its homepage identifies increased bookings, streamlined event operations and venue revenue as benefits: https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813 and https://www.gomomentus.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Momentus Technologies | LinkedIn",
+       "url": "https://linkedin.com/company/57378",
+       "excerpts": [
+        "201-500 employees"
+       ]
+      }
+     ],
+     "reasoning": "The company profile lists the requested 201\u2013500 employee band: https://linkedin.com/company/57378. This is a self-reported company-size range rather than an audited headcount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Momentus Answers | Venue and Event Management Platform",
+       "url": "https://gomomentus.com/momentus-answers",
+       "excerpts": [
+        "Momentus AI products run on AWS Bedrock, which provides access to foundation models from Anthropic, Meta, Amazon, Cohere, and others. The Momentus engineering team selects the best model for each task and upgrades as the underlying models improve. This avoids vendor lock-in to any single model provider and lets Momentus deliver AI products that get better as the model ecosystem improves."
+       ]
+      }
+     ],
+     "reasoning": "The AI FAQ states that Momentus AI products run on AWS Bedrock, names Anthropic, Meta, Amazon and Cohere as available foundation-model providers, and says its engineering team selects models by task. It does not establish that every named provider is deployed: https://gomomentus.com/momentus-answers.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing",
+       "url": "https://gomomentus.com/pricing",
+       "excerpts": [
+        "[Pricing](https://gomomentus.com/pricing)",
+        "Basic"
+       ]
+      }
+     ],
+     "reasoning": "A public pricing page exists and includes a Basic plan. Published numerical prices are not required by the question: https://gomomentus.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [],
+     "reasoning": "The latest financing amount could not be verified. The public financing profile identifies a latest deal type but does not disclose its amount: https://pitchbook.com/profiles/company/233445-43. The unrelated aerospace company's funding was excluded.",
+     "confidence": "low"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Event & Venue Management Software | Momentus",
+       "url": "https://www.gomomentus.com/",
+       "excerpts": [
+        "Trusted by **Google, Microsoft, Nike, and more**"
+       ]
+      }
+     ],
+     "reasoning": "The homepage explicitly says it is trusted by Google, Microsoft and Nike, supporting all three customer names: https://www.gomomentus.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [],
+     "reasoning": "The date of the latest financing could not be verified from https://pitchbook.com/profiles/company/233445-43. A separately documented April 2021 buyout cannot safely be assigned to the undated latest acquisition-debt financing.",
+     "confidence": "low"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Momentus Technologies International - Sales Operations Analyst",
+       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813",
+       "excerpts": [
+        "Provide day-to-day support for sales technology platforms, including: Salesforce (primary platform), Hubspot, and Gong"
+       ]
+      }
+     ],
+     "reasoning": "The Sales Operations Analyst posting explicitly identifies Salesforce as the primary platform and also names HubSpot and Gong among the sales technology systems the employee would support: https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Momentus Technologies Strengthens Leadership with Appointment of Joel Sackett as Chief Product Officer and James Hughes as Chief Technology Officer | Momentus Technologies",
+       "url": "https://gomomentus.com/blog/momentus-technologies-strengthens-leadership-with-appointment-of-joel-sackett-as-chief-product-officer-and-james-hughes-as-chief-technology-officer",
+       "excerpts": [
+        "January 24, 2026",
+        "Joel Sackett has been appointed as the Chief Product Officer (CPO) and James Hughes has been appointed as the Chief Technology Officer (CTO)."
+       ]
+      }
+     ],
+     "reasoning": "The January 24, 2026 announcement appoints Joel Sackett as Chief Product Officer and James Hughes as Chief Technology Officer, within the requested twelve-month window: https://gomomentus.com/blog/momentus-technologies-strengthens-leadership-with-appointment-of-joel-sackett-as-chief-product-officer-and-james-hughes-as-chief-technology-officer.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Momentus Technologies International - Ai Operations Manager",
+       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4280768",
+       "excerpts": [
+        "[Apply](https://recruiting.paylocity.com/Recruiting/Jobs/Apply/4280768) Ai Operations Manager"
+       ]
+      }
+     ],
+     "reasoning": "An employer-hosted Ai Operations Manager posting displays an Apply link, and its title qualifies under the question's AI-title rule: https://recruiting.paylocity.com/Recruiting/Jobs/Details/4280768. Confidence is reduced because this individually accessible posting is absent from the employer's seven-role overview.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [],
+     "reasoning": "The financing profile identifies the latest deal type as Debt - Acquisition. This is reported as the available financing classification, not an invented equity-series stage: https://pitchbook.com/profiles/company/233445-43.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Momentus API Reference Documentation \u2013 Momentus Connect",
+       "url": "https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35490423637143-Momentus-API-Reference-Documentation",
+       "excerpts": [
+        "Momentus Connect includes interactive API reference documentation in Swagger format, where you can browse endpoints and make real API calls directly from the browser."
+       ]
+      },
+      {
+       "title": "General \u2013 Momentus Connect",
+       "url": "https://connectsupportcenter.ungerboeck.com/hc/en-us/sections/38773439114391-General",
+       "excerpts": [
+        "[Add and Manage Webhooks](https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/38904056579351-Add-and-Manage-Webhooks) Momentus Connect provides a built-in webhook management interface, allowing you to configure and manage webhooks across your Momentus products.",
+        "[Authenticate in the API Reference Documentation](https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/38776788049303-Authenticate-in-the-API-Reference-Documentation) Momentus Connect API reference documentation is in Swagger format, where you can browse endpoints and make real API calls directly from the browser..."
+       ]
+      }
+     ],
+     "reasoning": "The public Momentus Connect help center contains multiple API and webhook articles and describes interactive Swagger documentation, satisfying the multi-article requirement: https://connectsupportcenter.ungerboeck.com/hc/en-us/sections/38773439114391-General and https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35490423637143-Momentus-API-Reference-Documentation.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Momentus Technologies | LinkedIn",
+       "url": "https://linkedin.com/company/57378",
+       "excerpts": [
+        "Headquarters St Louis, MO"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly lists St Louis, Missouri as its headquarters; the answer normalizes the city's punctuation: https://linkedin.com/company/57378.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Momentus Technologies Launches Momentus Ticketing, Giving Venue Operators Full Ownership of Their Audience, Data, and Revenue",
+       "url": "https://www.prnewswire.com/news-releases/momentus-technologies-launches-momentus-ticketing-giving-venue-operators-full-ownership-of-their-audience-data-and-revenue-302784503.html",
+       "excerpts": [
+        "May 28, 2026 /PRNewswire/ -- [Momentus Technologies](https://edge.prnewswire.com/c/link/?t=0&l=en&o=4697989-1&h=251125623&u=https%3A%2F%2Fgomomentus ... This launch expands the Momentus platform ecosystem \u2013 which includes Momentus Enterprise, Momentus Elite, Momentus WeTrack, and the company's growing suite of [AI",
+        "May 28, 2026, 10:03 ET Share this article ... AUSTIN, Texas ,"
+       ]
+      }
+     ],
+     "reasoning": "The May 28, 2026 announcement launches Momentus Ticketing and describes an expansion of the platform ecosystem. This falls within the requested six-month window: https://www.prnewswire.com/news-releases/momentus-technologies-launches-momentus-ticketing-giving-venue-operators-full-ownership-of-their-audience-data-and-revenue-302784503.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Momentus Technologies Account Executive | SmartRecruiters",
+       "url": "https://jobs.smartrecruiters.com/MomentusTechnologies/744000109067005-account-executive",
+       "excerpts": [
+        "Account Executive",
+        "I'm interested I'm interested"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific Account Executive posting remains accessible with an application CTA: https://jobs.smartrecruiters.com/MomentusTechnologies/744000109067005-account-executive. Confidence is reduced because no closing date is shown and the separate current Paylocity overview does not list this role.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [],
+     "reasoning": "Recent fundraising could not be established either way. The latest financing profile lacks a verifiable date, while the documented April 2021 buyout alone does not prove there was no subsequent financing: https://pitchbook.com/profiles/company/233445-43 and https://mergr.com/transaction/cove-hill-partners-acquires-momentus-technologies.",
+     "confidence": "low"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Momentus Technologies",
+       "url": "https://trustcenter.gomomentus.com/",
+       "excerpts": [
+        "SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is explicitly named in the Trust Center.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Momentus Technologies",
+       "url": "https://trustcenter.gomomentus.com/",
+       "excerpts": [
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Venue Ticketing Software for Operators | Momentus Ticketing",
+       "url": "https://gomomentus.com/ticketing",
+       "excerpts": [
+        "Every purchase and behavioral signal belongs to you. Stream directly to your CRM, BI, and marketing stack in real time. Full data sovereignty, GDPR compliant"
+       ]
+      }
+     ],
+     "reasoning": "The Ticketing product page explicitly claims GDPR compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Trust Center - Momentus Technologies",
+       "url": "https://trustcenter.gomomentus.com/",
+       "excerpts": [
+        "PCI DSS - SAQ D, Merchant"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names PCI DSS\u2014SAQ D, Merchant.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Event & Venue Management Software | Momentus",
+       "url": "https://www.gomomentus.com/",
+       "excerpts": [
+        "Trusted by **Google, Microsoft, Nike, and more**"
+       ]
+      }
+     ],
+     "reasoning": "Google is explicitly named in the homepage's trusted-by statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Event & Venue Management Software | Momentus",
+       "url": "https://www.gomomentus.com/",
+       "excerpts": [
+        "Trusted by **Google, Microsoft, Nike, and more**"
+       ]
+      }
+     ],
+     "reasoning": "Microsoft is explicitly named in the homepage's trusted-by statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Event & Venue Management Software | Momentus",
+       "url": "https://www.gomomentus.com/",
+       "excerpts": [
+        "Trusted by **Google, Microsoft, Nike, and more**"
+       ]
+      }
+     ],
+     "reasoning": "Nike is explicitly named in the homepage's trusted-by statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Momentus Technologies International - Sales Operations Analyst",
+       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813",
+       "excerpts": [
+        "Provide day-to-day support for sales technology platforms, including: Salesforce (primary platform), Hubspot, and Gong"
+       ]
+      }
+     ],
+     "reasoning": "The employer posting identifies Salesforce as its primary sales technology platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Momentus Technologies International - Sales Operations Analyst",
+       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813",
+       "excerpts": [
+        "Provide day-to-day support for sales technology platforms, including: Salesforce (primary platform), Hubspot, and Gong"
+       ]
+      }
+     ],
+     "reasoning": "The employer posting explicitly names HubSpot among the supported sales technology platforms.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Momentus Technologies International - Sales Operations Analyst",
+       "url": "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813",
+       "excerpts": [
+        "Provide day-to-day support for sales technology platforms, including: Salesforce (primary platform), Hubspot, and Gong"
+       ]
+      }
+     ],
+     "reasoning": "The employer posting explicitly names Gong among the supported sales technology platforms.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1985.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Momentus provides venue and event management software that helps venue operators and event professionals manage bookings, streamline operations, and increase revenue.",
+    "employee_band": "201-500",
+    "model_provider": "AWS Bedrock; its FAQ names Anthropic, Meta, Amazon and Cohere as available foundation-model providers, without identifying specific deployed models.",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Google",
+     "Microsoft",
+     "Nike"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot",
+     "Gong"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Debt - Acquisition",
+    "public_docs": true,
+    "hq_city": "St. Louis",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": null
+   }
+  }
+ }
+}

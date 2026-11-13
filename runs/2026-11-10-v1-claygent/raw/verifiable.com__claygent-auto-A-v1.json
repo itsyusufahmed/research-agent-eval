@@ -1,0 +1,452 @@
+{
+ "run": {
+  "routine_run_id": "run_0toax19uvQcJAygZpTn",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "verifiable.com",
+    "status": "complete",
+    "result": {
+     "claygent-auto-A": {
+      "eng_blog": {
+       "notes": "The blog index presents marketing, customer, and industry content; it does not show at least two engineer-authored posts about how the product is built.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/blog"
+       ]
+      },
+      "reasoning": "Company-owned product, customer case-study, documentation, security, jobs, press, and funding pages were reviewed alongside company-profile and reporting sources. These establish the product/audience, named customers, public API docs, Salesforce integration, SOC 2 Type II claim, funding, and dated product launch. The largest unresolved items are the undisclosed AI model provider and a leadership roster/change history; they are marked unknown rather than inferred.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Searched Google with query \"site:verifiable.com Verifiable about company customers pricing security documentation careers\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable: The Future of AI Credentialing has Arrived\",\"link\":\"https://verifiable.com/\",\"displayedLink\":\"https://verifiable.com\",\"snippet\":\"Scale provider credentialing with real-time verified data and AI-powered productivity, built to absorb volume without compromising quality or margins.\",\"position\":1},{\"title\":\"About Verifiable\",\"link\":\"https://verifiable.com/about\",\"displayedLink\":\"https://verifiable.com › about\",\"snippet\":\"We are pioneering the future of creden...",
+       "Searched Google with query \"Verifiable company funding founded headquarters employees healthcare verification funding round\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable - 2026 Company Profile & Team\",\"link\":\"https://tracxn.com/d/companies/verifiable/__HFF9JukfOe37Qa2zy0QXo7FQgbvtEoi_FkQmvpsazNw\",\"displayedLink\":\"https://tracxn.com › Discover › Companies\",\"snippet\":\"Verifiable has raised a total funding of $50.1M over 4 rounds. Its first funding round was on 2020. Its latest funding round was a Series B ...\",\"date\":\"Sep 11, 2026\",\"position\":1},{\"title\":\"Verifiable Lands $27M Series B from Craft Ventures to ...\",\"link\":\"htt...",
+       "Searched Google with query \"site:verifiable.com/blog Verifiable engineering blog product launch\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"Verifiable careers jobs Greenhouse Lever jobs\". The results are: \n {\"search_results\":[{\"title\":\"Lever vs Greenhouse Hiring Platform Comparison\",\"link\":\"https://www.lever.co/alternative/lever-vs-greenhouse\",\"displayedLink\":\"https://www.lever.co › Alternative\",\"snippet\":\"Lever has you covered. Unlike Greenhouse, which is made primarily for recruiters, Lever is built for all users with intuitive and accessible UI.\",\"position\":1},{\"title\":\"Layoffs: How to find jobs at companies like Greenhouse, ...\",\"link\":\"https://www.linkedin.com/posts/finniandurkan_booleans-and-...",
+       "Searched Google with query \"Verifiable SOC 2 ISO 27001 HIPAA compliance AI model provider subprocessor\". The results are: \n {\"search_results\":[{\"title\":\"HIPAA-Compliant AI: How to Use AI Agents with PHI\",\"link\":\"https://mcpmanager.ai/blog/hipaa-compliant-ai/\",\"displayedLink\":\"https://mcpmanager.ai › ... › Category: Industry News\",\"snippet\":\"Learn what HIPAA requires from AI agents handling PHI, and how an MCP gateway enforces PHI redaction, per-user audit logging, ...\",\"date\":\"Sep 15, 2026\",\"rating\":4.8,\"ratingCount\":26,\"position\":1},{\"title\":\"SOC 2 and HIPAA AI Support Checklist (2026) | Lorikeet\",\"link\":\"https://ww...",
+       "Searched Google with query \"Verifiable customer case studies customers healthcare provider credentialing\". The results are: \n {\"search_results\":[{\"title\":\"Credentialing Case Studies: Difficult Histories\",\"link\":\"https://medwave.io/2025/11/credentialing-case-studies-challenging-provider-histories/\",\"displayedLink\":\"https://medwave.io › Blog\",\"snippet\":\"Real credentialing case studies show how specialists handle license gaps, malpractice history, and career changes to get providers approved.\",\"date\":\"Nov 12, 2025\",\"position\":1},{\"title\":\"Verifiable: The Future of AI Credentialing has Arrived\",\"link\":\"https://verifiable.c...",
+       "Searched Google with query \"Verifiable Crunchbase funding 2024 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Crunchbase News: Data-driven reporting on private markets ...\",\"link\":\"https://news.crunchbase.com/\",\"displayedLink\":\"https://news.crunchbase.com\",\"snippet\":\"A total of 34 companies joined The Crunchbase Unicorn Board in October, adding more than $96 billion in value and $14.8 billion in total funding to the board.\",\"position\":1},{\"title\":\"Q3 2026 Posted A Record Count Of Billion-Dollar Rounds ...\",\"link\":\"https://news.crunchbase.com/venture/q3-2026-global-startup-fu...",
+       "Searched Google with query \"Verifiable.com integrations Salesforce HubSpot CRM jobs\". The results are: \n {\"search_results\":[{\"title\":\"Connect HubSpot and Salesforce\",\"link\":\"https://knowledge.hubspot.com/salesforce/install-the-hubspot-salesforce-integration\",\"displayedLink\":\"https://knowledge.hubspot.com › salesforce › install-the...\",\"snippet\":\"The HubSpot-Salesforce integration allows contacts, companies, deals, activities, and other supported data to sync between both platforms, ...\",\"date\":\"Oct 2, 2026\",\"position\":1},{\"title\":\"Verifiable: The Future of AI Credentialing has Arrived\",\"link\":\"http...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/\",\"question\":\"What product and audience are described, does navigation/footer have pricing docs/help/careers/security links, and what integrations are named?\"}. The results are: \n \"Product: Verifiable’s AI-powered credentialing and provider network monitoring platform, including CredAgent®, credentialing automation software, NCQA-certified CVO services, ongoing provider monitoring, provider enrollment/licensing, roster management, primary source verification, and API/Salesforce integration. Audience: healthcare organizations, especially health & dental plans and provider organizations; also pharmacy, recruiting/staffing, and life sciences organizations. Navigation/footer ...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/about\",\"question\":\"Company founding year, headquarters, team size, leadership/team roster, and careers openings?\"}. The results are: \n \"Verifiable Inc. — Founding year: not stated. Headquarters: not stated. Team size: not stated; described as a team across the U.S. and globally. Leadership/team roster: not provided. Careers: hiring talented employees; “See Open Positions” — https://jobs.lever.co/verifiable. Company/about page: https://verifiable.com/about. Press page: https://verifiable.com/press.\"",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies\",\"question\":\"List named customer case studies or customer names on this page.\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/blog\",\"question\":\"What is newest dated launch/product announcement, and are there technical engineering posts?\"}. The results are: \n \"Product/launch context: “CredAgent AI” / “CredAgent® NEW” is highlighted as “The Only Agentic AI Built for the Future of Credentialing.” Featured content includes “DEA Number Lookup, Registration & Verification: 2026 FAQ” and “Webinar Recap | Credentialing: Your Clearest AI Win in 2026.” No explicit publication dates are shown in the provided page text. Relevant links: Press: https://verifiable.com/press; Resources/Blog: https://verifiable.com/resources and https://verifiable.com/blog; API docu...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/legal/privacy-policy\",\"question\":\"What AI model providers or subprocessors and compliance certifications are named?\"}. The results are: \n \"Relevant links: AICPA SOC overview: https://aicpa-cima.com/resources/download/soc-for-service-organizations-engagements-overview; Verifiable Security: https://verifiable.com/legal/security; Verifiable Privacy Policy: https://verifiable.com/legal/privacy-policy; NCQA report card: https://reportcards.ncqa.org/other-health-care-organization/Other_0012M00002M2RMNQA3; NextRoll Privacy: https://www.nextroll.com/privacy. Contact: privacy@verifiable.com\"",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/blog/verifiable-raises-27m-series-b\",\"question\":\"What date and amount/stage of latest funding announcement?\"}. The results are: \n \"July 10, 2023 — Verifiable announced a $27 million Series B funding round, led by Craft Ventures. Article: https://verifiable.com/blog/verifiable-raises-27m-series-b\"",
+       "Searched Google with query \"site:verifiable.com/blog Verifiable launched introduced 2025 2026 CredAgent announcement\". The results are: \n {\"search_results\":[{\"title\":\"Get Ahead of the 2025 Changes to NCQA Credentialing ...\",\"link\":\"https://verifiable.com/blog/get-ahead-of-the-2025-changes-to-ncqa-credentialing-guidelines\",\"displayedLink\":\"https://verifiable.com › blog › get-ahead-of-the-2025-c...\",\"snippet\":\"Their recent release of updates for 2025 include changes to primary source verification timeframes, new language around race and ethnicity, ...\",\"date\":\"Aug 28, 2024\",\"position\":1},{\"title\":\"Webinar Q&A: 2025 NCQA Guideline Up...",
+       "Searched Google with query \"Verifiable company headquarters Austin founded 2020 employees LinkedIn\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable\",\"link\":\"https://www.linkedin.com/company/verifiable-credentials\",\"displayedLink\":\"8K+ followers\",\"snippet\":\"Website: http://www.verifiable.com. External link for Verifiable ; Industry: Software Development ; Company size: 51-200 employees ; Headquarters: Austin, Texas.\",\"position\":1},{\"title\":\"Nick Macario - CEO @ Verifiable\",\"subtitle\":\"Austin, Texas, United States · Co-Founder & CEO · Verifiable\",\"link\":\"https://www.linkedin.com/in/nickmacario\",\"display...",
+       "Searched Google with query \"site:verifiable.com/careers OR site:verifiable.com/jobs Verifiable careers open positions\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable\",\"link\":\"https://verifiable.com/careers\",\"displayedLink\":\"https://verifiable.com › careers\",\"snippet\":\"Customer Success Manager · Enterprise Customer Success Manager · Solutions Engineer.\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Averifiable.com%2Fcareers%20OR%20site%3Averifiable.com%2Fjobs%20Verifiable%20careers%20open%20positions&hl=en&gl=us\"}",
+       "Searched Google with query \"Verifiable SOC 2 security trust center GDPR HIPAA model OpenAI Anthropic\". The results are: \n {\"search_results\":[{\"title\":\"Trust Center - Anthropic\",\"link\":\"https://trust.anthropic.com/\",\"displayedLink\":\"https://trust.anthropic.com\",\"snippet\":\"Anthropic is an AI safety and research company with a mission of ensuring the world safely makes the transition through transformative AI.\",\"position\":1},{\"title\":\"Security and privacy at OpenAI\",\"link\":\"https://openai.com/security-and-privacy/\",\"displayedLink\":\"https://openai.com › security-and-privacy\",\"snippet\":\"OpenAI supports our customers' co...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies/modern-health\",\"question\":\"Confirm customer name and evidence Verifiable customer.\"}. The results are: \n \"Customer: Modern Health (Industry: Mental Health Care). Verifiable customer evidence: Verifiable’s case study states that Modern Health uses Verifiable for automated primary-source license verifications and monitoring, provider onboarding, and broader provider network infrastructure. It reports that after one year Verifiable became core to Modern Health’s overall provider network infrastructure, improving onboarding efficiency, provider experience/NPS, credentialing workflows, compliance, and d...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies/humana-dental-case-study\",\"question\":\"Confirm customer name and case study details.\"}. The results are: \n \"Customer: Humana Dental (Humana), headquartered in Louisville, Kentucky; industry: dental plan. Case study: “How Verifiable Helped Humana Dental Accelerate its Credentialing Turnaround Times by 98%.” Humana Dental offers dental plans to a network of more than 117,000 providers and had over 100,000 clinicians. Using Verifiable’s native Salesforce credentialing application, Humana unified provider operations, automated primary-source verifications, and brought credentialing in-house. Credentialin...",
+       "Used visitWebpage {\"url\":\"https://jobs.lever.co/verifiable\",\"question\":\"List current open job titles and any AI/ML/data science or SDR/BDR/account executive roles.\"}. The results are: \n \"Current open roles at Verifiable (all remote, full-time): Customer Success Manager — Customer Success; Enterprise Customer Success Manager — Customer Success; Solutions Engineer — Engineering. Jobs page: https://jobs.lever.co/verifiable. No AI/ML, data science, SDR/BDR, or Account Executive roles listed.\"",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/legal/security\",\"question\":\"Which compliance certifications are explicitly claimed, and any AI model/vendor details?\"}. The results are: \n \"Verifiable explicitly states its security policies, procedures, and standards align with the AICPA SOC 2 Trust Service Principles and that an independent third party audits SOC 2 compliance annually. No other compliance certifications are explicitly claimed. The page mentions “CredAgent AI” / “The Only Agentic AI Built for the Future of Credentialing,” but provides no specific AI model, model provider, or vendor details. Security page: https://verifiable.com/legal/security; CredAgent AI: https:...",
+       "Used visitWebpage {\"url\":\"https://docs.discovery.verifiable.com/reference/current/overview\",\"question\":\"What is public documentation about, and does it identify model provider or CRM systems?\"}. The results are: \n \"Relevant public documentation links: API Introduction (https://docs.discovery.verifiable.com/references/api/section/introduction), Providers (https://docs.discovery.verifiable.com/references/api/providers), ProvidersInfo (https://docs.discovery.verifiable.com/references/api/providersinfo), ProviderProfiles (https://docs.discovery.verifiable.com/references/api/providerprofiles), Integrations (https://docs.discovery.verifiable.com/references/api/integrations), and Flexible Data Model (https://doc...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/blog/verifiable-is-now-soc-2-certified\",\"question\":\"Which security certification and date are claimed?\"}. The results are: \n \"Verifiable’s blog, published March 1, 2022, states: “as of March 2022 we are officially SOC 2 Type 2 compliant” and later says “Now that we are SOC Type II certified.”\"",
+       "Searched Google with query \"site:verifiable.com/resources/case-studies Verifiable customer case study health plan\". The results are: \n {\"search_results\":[{\"title\":\"Humana Dental Case Study\",\"link\":\"https://verifiable.com/resources/case-studies/humana-dental-case-study\",\"displayedLink\":\"https://verifiable.com › resources › case-studies › huma...\",\"snippet\":\"How Verifiable helped Humana Dental accelerate its credentialing turnaround times by 98%\",\"position\":1},{\"title\":\"Modern Health on Verifiable\",\"link\":\"https://verifiable.com/resources/case-studies/modern-health\",\"displayedLink\":\"https://verifiable.com › resources › case-studi...",
+       "Searched Google with query \"site:verifiable.com/blog Verifiable CredAgent launched AI agent date 2025 2026\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:verifiable.com \"founded\" Verifiable 2019 OR 2020\". The results are: \n {\"search_results\":[{\"title\":\"Behavioral Health Client Spotlight: Mental Health Month\",\"link\":\"https://verifiable.com/blog/mental-health-awareness-month-spotlight-recognizing-the-impact-of-our-behavioral-health-clients\",\"displayedLink\":\"https://verifiable.com › blog › mental-health-awareness-...\",\"snippet\":\"Founded in 2020, our mission is simple: make high-quality addiction care more accessible, more effective, and more in tune with real life.\",\"date\":\"May 23, 2025\",\"position\":1}],\"results_return...",
+       "Searched Google with query \"Verifiable employees 2025 company 101-200 employees healthcare credentialing\". The results are: \n {\"search_results\":[{\"title\":\"The Credentialing Compliance Environment Has Changed\",\"link\":\"https://verifiable.com/blog/the-credentialing-compliance-environment-changed-most-health-plans-are-still-catching-up\",\"displayedLink\":\"https://verifiable.com › blog › the-credentialing-compli...\",\"snippet\":\"Four 2024-2025 regulatory changes are exposing the same credentialing gap. s have reshaped the credentialing compliance environment for health ...\",\"date\":\"Jul 20, 2026\",\"position\":1},{\"title\":\"Verifiab...",
+       "Searched Google with query \"site:verifiable.com \"OpenAI\" OR \"Anthropic\" OR \"Google\" AI Verifiable CredAgent\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable Press\",\"link\":\"https://verifiable.com/press\",\"displayedLink\":\"https://verifiable.com › press\",\"snippet\":\"Verifiable Launches CredAgent™, the Industry's First Autonomous AI Credentialing Agent ... Sam Altman's Investment Web: Where the OpenAI CEO is investing in AI, ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Averifiable.com%20%22OpenAI%22%20OR%20%22Anthropic%22%20OR...",
+       "Searched Google with query \"site:verifiable.com/blog Verifiable funding latest raised Series A 2021\". The results are: \n {\"search_results\":[{\"title\":\"Andreessen Horowitz Names Verifiable in Telehealth Tech ...\",\"link\":\"https://verifiable.com/blog/andreessen-horowitz-lists-verifiable-in-the-new-tech-stack-powering-telehealth\",\"displayedLink\":\"https://verifiable.com › blog › andreessen-horowitz-lists...\",\"snippet\":\"With over $1.4Bn in its bio funds, global digital health funding jumped 45% YoY in 2020, with telehealth startups raising over $10B in 2020 ( ...\",\"date\":\"Jan 12, 2021\",\"position\":1},{\"title\":\"CB Insights...",
+       "Searched Google with query \"Verifiable latest funding date 27m 2023 Series B total funding 2024\". The results are: \n {\"search_results\":[{\"title\":\"HealthTech startup Verifiable lands $27m in Series B funding\",\"link\":\"https://fintech.global/2023/07/11/healthtech-startup-verifiable-lands-27m-in-series-b-funding/\",\"displayedLink\":\"https://fintech.global › 2023/07/11 › healthtech-startup-...\",\"snippet\":\"Verifiable lands $27m in Series B funding July 11, 2023 Verifiable. The Austin-based startup now boasts a total funding pot of $47m,\",\"date\":\"Jul 11, 2023\",\"position\":1},{\"title\":\"Verifiable Lands $27M Series B from...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/press\",\"question\":\"Read dated press announcements, especially launch/introducing product or major feature in last six months, and identify newest launch-type item.\"}. The results are: \n \"Newest launch-type press announcement: “Verifiable Launches CredAgent®, the Industry's First Autonomous AI Credentialing Agent,” dated Feb. 26, 2026. Link: https://prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html. Other recent launch announcements: “Verifiable Announces the Launch of Provider Demographic Data Management…” dated Jun. 24, 2025 (https://verifiable.com/press-releases/verifiable-announces-the-launch-of-pr...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/blog\",\"question\":\"Inspect blog index for posts that describe engineering implementation or technical systems, by engineers; report titles/dates.\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/\",\"question\":\"Does the site expose pricing in navigation/footer? What audience and product are described? Which solution integration is named?\"}. The results are: \n \"Navigation/footer lists products and links but no Pricing link or pricing information. Product: Verifiable’s AI-powered credentialing and provider monitoring platform, including CredAgent®, credentialing software, CVO services, provider enrollment/licensing, roster management, primary source verification, and ongoing monitoring. Audience: healthcare organizations, specifically Health & Dental Plans and Provider Organizations; also pharmacy, recruiting/staffing, and life sciences. Named integrat...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/credagent\",\"question\":\"Does CredAgent page publicly identify the specific AI model or provider it uses?\"}. The results are: \n \"CredAgent page (https://verifiable.com/credagent) describes CredAgent® as Verifiable’s “AI-powered technology” and “agentic AI,” supported by “dedicated AI engineering,” but does not name a specific AI model or provider (e.g., OpenAI, Anthropic, or a model name).\"",
+       "Searched Google with query \"Verifiable launches CredAgent autonomous AI credentialing agent date 2026 Verifiable press\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable Launches CredAgent™, the Industry's First ...\",\"link\":\"https://www.prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html\",\"displayedLink\":\"https://www.prnewswire.com › news-releases › verifiable...\",\"snippet\":\"Feb 26, 2026, CredAgentTM, the industry's first autonomous AI agent for end-to-end credentialing. up to 10x productivity … executing complex ...\",\"date\":\"Feb 26, 2026\",\"positio...",
+       "Searched Google with query \"Verifiable founded in 2020 healthcare credentialing company 2020 funding seed 2020\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable validates its healthcare credentialing software ...\",\"link\":\"https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m/\",\"displayedLink\":\"https://techcrunch.com › 2023/07/10 › verifiable-health...\",\"snippet\":\"... funding in 2021 and $3 million in seed funding in 2020. In total, the company has raised $47 million since forming in 2020. Verifiable ...\",\"date\":\"Jul 10, 2023\",\"position\":1},{\"title\":\"Verifiable: The Future of AI Credent...",
+       "Searched Google with query \"\"Verifiable\" \"141 employees\" LinkedIn 2025\". The results are: \n {\"search_results\":[{\"title\":\"Daniel Ng - Relationship Manager\",\"subtitle\":\"Singapore, Singapore · Relationship Manager · Resona Merchant Bank Asia Limited\",\"link\":\"https://sg.linkedin.com/in/danielngkingvoon\",\"displayedLink\":\"40+ followers\",\"snippet\":\"Senior Manager with over 10 years of experience in Commercial and Corporate Banking, and Government Financial Institution. Feb 2025 - Present - Jan 2025 5 ...\",\"position\":1},{\"title\":\"Verifiable - 2026 Company Profile & Team\",\"link\":\"https://tracxn...",
+       "Searched Google with query \"Verifiable LinkedIn employees 2026 Austin 101-200 headcount\". The results are: \n {\"search_results\":[{\"title\":\"LinkedIn Number of Employees 2026\",\"link\":\"https://www.reveliolabs.com/companies/linkedin/employees\",\"displayedLink\":\"https://www.reveliolabs.com › companies › employees\",\"snippet\":\"LinkedIn had 24835 employees as of June 2026, up 775 (-0.6%) LinkedIn's total headcount has grown 8.0% from 22,992 employees in 2023 to 24,835 in 2026.\",\"position\":1},{\"title\":\"About Us\",\"link\":\"https://news.linkedin.com/about-us\",\"displayedLink\":\"https://news.linkedin.com › about-us\",\"sn...",
+       "Used visitWebpage {\"url\":\"https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m/\",\"question\":\"What year did Verifiable form, and its HQ city/country?\"}. The results are: \n \"Verifiable formed in 2020 and is based in Austin, Texas, United States (HQ city/country: Austin, United States). Source: TechCrunch article: https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m\"",
+       "Used visitWebpage {\"url\":\"https://getlatka.com/companies/Verifiable\",\"question\":\"What exact employee count and as-of date are stated for Verifiable?\"}. The results are: \n \"Verifiable had 141 employees as of December 2024, according to LinkedIn.\"",
+       "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/verifiable-credentials\",\"question\":\"What headquarters location and company size band does Verifiable's LinkedIn page list?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/verifiable-credentials\",\"locations\":[{\"address\":\"Austin, Texas, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"\",\"formatted_address\":\"Austin, TX\",\"business_region\":\"NAM\",\"latitude\":30.26497841,\"locality\":\"Austin\",\"admin_district\":\"Texas\",\"admin_district2\":\"Travis County\",\"country_region\":\"United States\",\"locationstr\":\"Austin, Texas, US\",\"metro_area\":\"Austin-Round Rock-San Marcos, TX\",\"name\":\"Austin, TX\",\"neighborhood\":\"\",\"postal_code\":\"\",\"coun...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/press\",\"question\":\"What is the date of the newest product launch announcement and its title?\"}. The results are: \n \"Feb 26, 2026 — “Verifiable Launches CredAgent®, the Industry's First Autonomous AI Credentialing Agent” (https://prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html)\"",
+       "Searched Google with query \"site:verifiable.com/blog engineers engineering infrastructure Verifiable blog technical\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:verifiable.com/legal/privacy-policy OpenAI Anthropic subprocessor Verifiable\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"Verifiable executive VP joins 2025 2026 leadership executive appointment credentialing\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable Inc. Appoints Brook West as President\",\"link\":\"https://verifiable.com/press-releases/verifiable-inc-appoints-brook-west-as-president-to-spearhead-next-phase-of-growth\",\"displayedLink\":\"https://verifiable.com › press-releases › verifiable-inc-a...\",\"snippet\":\"Verifiable, a leading automated credentialing and network monitoring platform, today announced the appointment of Brook West as President.\",\"date\":\"Dec 18, 2024\",\"position\":1},{\"title\":\"Shaun Smith nam...",
+       "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies/grow-therapy\",\"question\":\"Confirm Grow Therapy is a Verifiable customer.\"}. The results are: \n \"Verifiable’s case study confirms Grow Therapy as a customer/partner. Source: https://verifiable.com (Case Study: “Grow Therapy is Making Mental Healthcare More Accessible Through Delegated Credentialing”). Grow Therapy partnered with Verifiable for delegated credentialing; Verifiable provided an NCQA-certified CVO, real-time primary-source verifications, CAQH integration, and faster credentialing. Customer quote: “Verifiable was a clear stand out from others in the market.” — Christy Maselli, D..."
+      ],
+      "hq_location": {
+       "notes": "LinkedIn identifies Austin, Texas as headquarters; TechCrunch also describes the company as based in Austin.",
+       "value": {
+        "city": "Austin",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/verifiable-credentials",
+        "https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m"
+       ]
+      },
+      "public_docs": {
+       "notes": "Verifiable publishes a developer/API documentation portal with multiple reference articles, including provider, integration, and data-model documentation.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.discovery.verifiable.com/reference/current/overview"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The latest funding announcement located was the July 2023 Series B, which predates the 18-month window beginning 2025-05-09.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/blog/verifiable-raises-27m-series-b"
+       ]
+      },
+      "founded_year": {
+       "notes": "TechCrunch states that the company formed in 2020.",
+       "value": 2020,
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m"
+       ]
+      },
+      "last_funding": {
+       "notes": "The company announced a $27 million Series B on July 10, 2023.",
+       "value": {
+        "date": "2023-07",
+        "stage": "Series B",
+        "amount_usd": 27000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/blog/verifiable-raises-27m-series-b"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The newest product-launch announcement found is CredAgent, dated 2026-02-26, before the six-month window beginning 2026-05-09.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/press",
+        "https://www.prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The homepage's navigation and footer do not expose a pricing link or public pricing information.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/"
+       ]
+      },
+      "employee_band": {
+       "notes": "The cited profile reports 141 employees as of December 2024, which falls in this band.",
+       "value": "101-200",
+       "status": "asserted",
+       "citations": [
+        "https://getlatka.com/companies/Verifiable"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The current job board lists three roles, none titled SDR, BDR, sales/business development representative, or account executive.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.lever.co/verifiable"
+       ]
+      },
+      "model_provider": {
+       "notes": "The product page, public API documentation, security page, and privacy-policy page reviewed describe AI or security practices but do not publicly identify a specific AI model or provider.",
+       "value": "",
+       "status": "unknown",
+       "citations": [
+        "https://verifiable.com/credagent",
+        "https://docs.discovery.verifiable.com/reference/current/overview",
+        "https://verifiable.com/legal/security",
+        "https://verifiable.com/legal/privacy-policy"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both are identified in Verifiable customer case studies.",
+       "value": [
+        "Humana Dental",
+        "Modern Health"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/resources/case-studies/humana-dental-case-study",
+        "https://verifiable.com/resources/case-studies/modern-health"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The current job board lists Customer Success Manager, Enterprise Customer Success Manager, and Solutions Engineer roles; none has a qualifying AI/ML/data-science title.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.lever.co/verifiable"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Verifiable's blog explicitly says it achieved SOC 2 Type II certification; the security page discusses annual third-party SOC 2 audits.",
+       "value": [
+        "SOC 2 Type II"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/blog/verifiable-is-now-soc-2-certified",
+        "https://verifiable.com/legal/security"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "Verifiable publicly describes a native Salesforce application/integration for credentialing and provider network monitoring.",
+       "value": [
+        "Salesforce"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/salesforce-credentialing-network-monitoring",
+        "https://verifiable.com/"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "The company describes credentialing, monitoring, and provider-network workflows for healthcare customers.",
+       "value": "Verifiable provides AI-powered provider credentialing and ongoing credential monitoring—including primary-source verification and network management—for healthcare organizations such as health plans and provider organizations.",
+       "status": "asserted",
+       "citations": [
+        "https://verifiable.com/",
+        "https://verifiable.com/providers"
+       ]
+      },
+      "timeTakenInSeconds": "89.03",
+      "totalCreditsCharged": 0.4,
+      "leadership_change_12mo": {
+       "notes": "The company About page does not provide a full leadership roster, and no dated C-level/VP join or departure within 2025-11-09 through 2026-11-09 was verified.",
+       "value": false,
+       "status": "unknown",
+       "citations": [
+        "https://verifiable.com/about",
+        "https://verifiable.com/press"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "verifiable.com",
+  "status": "complete",
+  "result": {
+   "claygent-auto-A": {
+    "eng_blog": {
+     "notes": "The blog index presents marketing, customer, and industry content; it does not show at least two engineer-authored posts about how the product is built.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/blog"
+     ]
+    },
+    "reasoning": "Company-owned product, customer case-study, documentation, security, jobs, press, and funding pages were reviewed alongside company-profile and reporting sources. These establish the product/audience, named customers, public API docs, Salesforce integration, SOC 2 Type II claim, funding, and dated product launch. The largest unresolved items are the undisclosed AI model provider and a leadership roster/change history; they are marked unknown rather than inferred.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Searched Google with query \"site:verifiable.com Verifiable about company customers pricing security documentation careers\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable: The Future of AI Credentialing has Arrived\",\"link\":\"https://verifiable.com/\",\"displayedLink\":\"https://verifiable.com\",\"snippet\":\"Scale provider credentialing with real-time verified data and AI-powered productivity, built to absorb volume without compromising quality or margins.\",\"position\":1},{\"title\":\"About Verifiable\",\"link\":\"https://verifiable.com/about\",\"displayedLink\":\"https://verifiable.com › about\",\"snippet\":\"We are pioneering the future of creden...",
+     "Searched Google with query \"Verifiable company funding founded headquarters employees healthcare verification funding round\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable - 2026 Company Profile & Team\",\"link\":\"https://tracxn.com/d/companies/verifiable/__HFF9JukfOe37Qa2zy0QXo7FQgbvtEoi_FkQmvpsazNw\",\"displayedLink\":\"https://tracxn.com › Discover › Companies\",\"snippet\":\"Verifiable has raised a total funding of $50.1M over 4 rounds. Its first funding round was on 2020. Its latest funding round was a Series B ...\",\"date\":\"Sep 11, 2026\",\"position\":1},{\"title\":\"Verifiable Lands $27M Series B from Craft Ventures to ...\",\"link\":\"htt...",
+     "Searched Google with query \"site:verifiable.com/blog Verifiable engineering blog product launch\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"Verifiable careers jobs Greenhouse Lever jobs\". The results are: \n {\"search_results\":[{\"title\":\"Lever vs Greenhouse Hiring Platform Comparison\",\"link\":\"https://www.lever.co/alternative/lever-vs-greenhouse\",\"displayedLink\":\"https://www.lever.co › Alternative\",\"snippet\":\"Lever has you covered. Unlike Greenhouse, which is made primarily for recruiters, Lever is built for all users with intuitive and accessible UI.\",\"position\":1},{\"title\":\"Layoffs: How to find jobs at companies like Greenhouse, ...\",\"link\":\"https://www.linkedin.com/posts/finniandurkan_booleans-and-...",
+     "Searched Google with query \"Verifiable SOC 2 ISO 27001 HIPAA compliance AI model provider subprocessor\". The results are: \n {\"search_results\":[{\"title\":\"HIPAA-Compliant AI: How to Use AI Agents with PHI\",\"link\":\"https://mcpmanager.ai/blog/hipaa-compliant-ai/\",\"displayedLink\":\"https://mcpmanager.ai › ... › Category: Industry News\",\"snippet\":\"Learn what HIPAA requires from AI agents handling PHI, and how an MCP gateway enforces PHI redaction, per-user audit logging, ...\",\"date\":\"Sep 15, 2026\",\"rating\":4.8,\"ratingCount\":26,\"position\":1},{\"title\":\"SOC 2 and HIPAA AI Support Checklist (2026) | Lorikeet\",\"link\":\"https://ww...",
+     "Searched Google with query \"Verifiable customer case studies customers healthcare provider credentialing\". The results are: \n {\"search_results\":[{\"title\":\"Credentialing Case Studies: Difficult Histories\",\"link\":\"https://medwave.io/2025/11/credentialing-case-studies-challenging-provider-histories/\",\"displayedLink\":\"https://medwave.io › Blog\",\"snippet\":\"Real credentialing case studies show how specialists handle license gaps, malpractice history, and career changes to get providers approved.\",\"date\":\"Nov 12, 2025\",\"position\":1},{\"title\":\"Verifiable: The Future of AI Credentialing has Arrived\",\"link\":\"https://verifiable.c...",
+     "Searched Google with query \"Verifiable Crunchbase funding 2024 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"Crunchbase News: Data-driven reporting on private markets ...\",\"link\":\"https://news.crunchbase.com/\",\"displayedLink\":\"https://news.crunchbase.com\",\"snippet\":\"A total of 34 companies joined The Crunchbase Unicorn Board in October, adding more than $96 billion in value and $14.8 billion in total funding to the board.\",\"position\":1},{\"title\":\"Q3 2026 Posted A Record Count Of Billion-Dollar Rounds ...\",\"link\":\"https://news.crunchbase.com/venture/q3-2026-global-startup-fu...",
+     "Searched Google with query \"Verifiable.com integrations Salesforce HubSpot CRM jobs\". The results are: \n {\"search_results\":[{\"title\":\"Connect HubSpot and Salesforce\",\"link\":\"https://knowledge.hubspot.com/salesforce/install-the-hubspot-salesforce-integration\",\"displayedLink\":\"https://knowledge.hubspot.com › salesforce › install-the...\",\"snippet\":\"The HubSpot-Salesforce integration allows contacts, companies, deals, activities, and other supported data to sync between both platforms, ...\",\"date\":\"Oct 2, 2026\",\"position\":1},{\"title\":\"Verifiable: The Future of AI Credentialing has Arrived\",\"link\":\"http...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/\",\"question\":\"What product and audience are described, does navigation/footer have pricing docs/help/careers/security links, and what integrations are named?\"}. The results are: \n \"Product: Verifiable’s AI-powered credentialing and provider network monitoring platform, including CredAgent®, credentialing automation software, NCQA-certified CVO services, ongoing provider monitoring, provider enrollment/licensing, roster management, primary source verification, and API/Salesforce integration. Audience: healthcare organizations, especially health & dental plans and provider organizations; also pharmacy, recruiting/staffing, and life sciences organizations. Navigation/footer ...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/about\",\"question\":\"Company founding year, headquarters, team size, leadership/team roster, and careers openings?\"}. The results are: \n \"Verifiable Inc. — Founding year: not stated. Headquarters: not stated. Team size: not stated; described as a team across the U.S. and globally. Leadership/team roster: not provided. Careers: hiring talented employees; “See Open Positions” — https://jobs.lever.co/verifiable. Company/about page: https://verifiable.com/about. Press page: https://verifiable.com/press.\"",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies\",\"question\":\"List named customer case studies or customer names on this page.\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/blog\",\"question\":\"What is newest dated launch/product announcement, and are there technical engineering posts?\"}. The results are: \n \"Product/launch context: “CredAgent AI” / “CredAgent® NEW” is highlighted as “The Only Agentic AI Built for the Future of Credentialing.” Featured content includes “DEA Number Lookup, Registration & Verification: 2026 FAQ” and “Webinar Recap | Credentialing: Your Clearest AI Win in 2026.” No explicit publication dates are shown in the provided page text. Relevant links: Press: https://verifiable.com/press; Resources/Blog: https://verifiable.com/resources and https://verifiable.com/blog; API docu...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/legal/privacy-policy\",\"question\":\"What AI model providers or subprocessors and compliance certifications are named?\"}. The results are: \n \"Relevant links: AICPA SOC overview: https://aicpa-cima.com/resources/download/soc-for-service-organizations-engagements-overview; Verifiable Security: https://verifiable.com/legal/security; Verifiable Privacy Policy: https://verifiable.com/legal/privacy-policy; NCQA report card: https://reportcards.ncqa.org/other-health-care-organization/Other_0012M00002M2RMNQA3; NextRoll Privacy: https://www.nextroll.com/privacy. Contact: privacy@verifiable.com\"",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/blog/verifiable-raises-27m-series-b\",\"question\":\"What date and amount/stage of latest funding announcement?\"}. The results are: \n \"July 10, 2023 — Verifiable announced a $27 million Series B funding round, led by Craft Ventures. Article: https://verifiable.com/blog/verifiable-raises-27m-series-b\"",
+     "Searched Google with query \"site:verifiable.com/blog Verifiable launched introduced 2025 2026 CredAgent announcement\". The results are: \n {\"search_results\":[{\"title\":\"Get Ahead of the 2025 Changes to NCQA Credentialing ...\",\"link\":\"https://verifiable.com/blog/get-ahead-of-the-2025-changes-to-ncqa-credentialing-guidelines\",\"displayedLink\":\"https://verifiable.com › blog › get-ahead-of-the-2025-c...\",\"snippet\":\"Their recent release of updates for 2025 include changes to primary source verification timeframes, new language around race and ethnicity, ...\",\"date\":\"Aug 28, 2024\",\"position\":1},{\"title\":\"Webinar Q&A: 2025 NCQA Guideline Up...",
+     "Searched Google with query \"Verifiable company headquarters Austin founded 2020 employees LinkedIn\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable\",\"link\":\"https://www.linkedin.com/company/verifiable-credentials\",\"displayedLink\":\"8K+ followers\",\"snippet\":\"Website: http://www.verifiable.com. External link for Verifiable ; Industry: Software Development ; Company size: 51-200 employees ; Headquarters: Austin, Texas.\",\"position\":1},{\"title\":\"Nick Macario - CEO @ Verifiable\",\"subtitle\":\"Austin, Texas, United States · Co-Founder & CEO · Verifiable\",\"link\":\"https://www.linkedin.com/in/nickmacario\",\"display...",
+     "Searched Google with query \"site:verifiable.com/careers OR site:verifiable.com/jobs Verifiable careers open positions\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable\",\"link\":\"https://verifiable.com/careers\",\"displayedLink\":\"https://verifiable.com › careers\",\"snippet\":\"Customer Success Manager · Enterprise Customer Success Manager · Solutions Engineer.\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Averifiable.com%2Fcareers%20OR%20site%3Averifiable.com%2Fjobs%20Verifiable%20careers%20open%20positions&hl=en&gl=us\"}",
+     "Searched Google with query \"Verifiable SOC 2 security trust center GDPR HIPAA model OpenAI Anthropic\". The results are: \n {\"search_results\":[{\"title\":\"Trust Center - Anthropic\",\"link\":\"https://trust.anthropic.com/\",\"displayedLink\":\"https://trust.anthropic.com\",\"snippet\":\"Anthropic is an AI safety and research company with a mission of ensuring the world safely makes the transition through transformative AI.\",\"position\":1},{\"title\":\"Security and privacy at OpenAI\",\"link\":\"https://openai.com/security-and-privacy/\",\"displayedLink\":\"https://openai.com › security-and-privacy\",\"snippet\":\"OpenAI supports our customers' co...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies/modern-health\",\"question\":\"Confirm customer name and evidence Verifiable customer.\"}. The results are: \n \"Customer: Modern Health (Industry: Mental Health Care). Verifiable customer evidence: Verifiable’s case study states that Modern Health uses Verifiable for automated primary-source license verifications and monitoring, provider onboarding, and broader provider network infrastructure. It reports that after one year Verifiable became core to Modern Health’s overall provider network infrastructure, improving onboarding efficiency, provider experience/NPS, credentialing workflows, compliance, and d...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies/humana-dental-case-study\",\"question\":\"Confirm customer name and case study details.\"}. The results are: \n \"Customer: Humana Dental (Humana), headquartered in Louisville, Kentucky; industry: dental plan. Case study: “How Verifiable Helped Humana Dental Accelerate its Credentialing Turnaround Times by 98%.” Humana Dental offers dental plans to a network of more than 117,000 providers and had over 100,000 clinicians. Using Verifiable’s native Salesforce credentialing application, Humana unified provider operations, automated primary-source verifications, and brought credentialing in-house. Credentialin...",
+     "Used visitWebpage {\"url\":\"https://jobs.lever.co/verifiable\",\"question\":\"List current open job titles and any AI/ML/data science or SDR/BDR/account executive roles.\"}. The results are: \n \"Current open roles at Verifiable (all remote, full-time): Customer Success Manager — Customer Success; Enterprise Customer Success Manager — Customer Success; Solutions Engineer — Engineering. Jobs page: https://jobs.lever.co/verifiable. No AI/ML, data science, SDR/BDR, or Account Executive roles listed.\"",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/legal/security\",\"question\":\"Which compliance certifications are explicitly claimed, and any AI model/vendor details?\"}. The results are: \n \"Verifiable explicitly states its security policies, procedures, and standards align with the AICPA SOC 2 Trust Service Principles and that an independent third party audits SOC 2 compliance annually. No other compliance certifications are explicitly claimed. The page mentions “CredAgent AI” / “The Only Agentic AI Built for the Future of Credentialing,” but provides no specific AI model, model provider, or vendor details. Security page: https://verifiable.com/legal/security; CredAgent AI: https:...",
+     "Used visitWebpage {\"url\":\"https://docs.discovery.verifiable.com/reference/current/overview\",\"question\":\"What is public documentation about, and does it identify model provider or CRM systems?\"}. The results are: \n \"Relevant public documentation links: API Introduction (https://docs.discovery.verifiable.com/references/api/section/introduction), Providers (https://docs.discovery.verifiable.com/references/api/providers), ProvidersInfo (https://docs.discovery.verifiable.com/references/api/providersinfo), ProviderProfiles (https://docs.discovery.verifiable.com/references/api/providerprofiles), Integrations (https://docs.discovery.verifiable.com/references/api/integrations), and Flexible Data Model (https://doc...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/blog/verifiable-is-now-soc-2-certified\",\"question\":\"Which security certification and date are claimed?\"}. The results are: \n \"Verifiable’s blog, published March 1, 2022, states: “as of March 2022 we are officially SOC 2 Type 2 compliant” and later says “Now that we are SOC Type II certified.”\"",
+     "Searched Google with query \"site:verifiable.com/resources/case-studies Verifiable customer case study health plan\". The results are: \n {\"search_results\":[{\"title\":\"Humana Dental Case Study\",\"link\":\"https://verifiable.com/resources/case-studies/humana-dental-case-study\",\"displayedLink\":\"https://verifiable.com › resources › case-studies › huma...\",\"snippet\":\"How Verifiable helped Humana Dental accelerate its credentialing turnaround times by 98%\",\"position\":1},{\"title\":\"Modern Health on Verifiable\",\"link\":\"https://verifiable.com/resources/case-studies/modern-health\",\"displayedLink\":\"https://verifiable.com › resources › case-studi...",
+     "Searched Google with query \"site:verifiable.com/blog Verifiable CredAgent launched AI agent date 2025 2026\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:verifiable.com \"founded\" Verifiable 2019 OR 2020\". The results are: \n {\"search_results\":[{\"title\":\"Behavioral Health Client Spotlight: Mental Health Month\",\"link\":\"https://verifiable.com/blog/mental-health-awareness-month-spotlight-recognizing-the-impact-of-our-behavioral-health-clients\",\"displayedLink\":\"https://verifiable.com › blog › mental-health-awareness-...\",\"snippet\":\"Founded in 2020, our mission is simple: make high-quality addiction care more accessible, more effective, and more in tune with real life.\",\"date\":\"May 23, 2025\",\"position\":1}],\"results_return...",
+     "Searched Google with query \"Verifiable employees 2025 company 101-200 employees healthcare credentialing\". The results are: \n {\"search_results\":[{\"title\":\"The Credentialing Compliance Environment Has Changed\",\"link\":\"https://verifiable.com/blog/the-credentialing-compliance-environment-changed-most-health-plans-are-still-catching-up\",\"displayedLink\":\"https://verifiable.com › blog › the-credentialing-compli...\",\"snippet\":\"Four 2024-2025 regulatory changes are exposing the same credentialing gap. s have reshaped the credentialing compliance environment for health ...\",\"date\":\"Jul 20, 2026\",\"position\":1},{\"title\":\"Verifiab...",
+     "Searched Google with query \"site:verifiable.com \"OpenAI\" OR \"Anthropic\" OR \"Google\" AI Verifiable CredAgent\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable Press\",\"link\":\"https://verifiable.com/press\",\"displayedLink\":\"https://verifiable.com › press\",\"snippet\":\"Verifiable Launches CredAgent™, the Industry's First Autonomous AI Credentialing Agent ... Sam Altman's Investment Web: Where the OpenAI CEO is investing in AI, ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Averifiable.com%20%22OpenAI%22%20OR%20%22Anthropic%22%20OR...",
+     "Searched Google with query \"site:verifiable.com/blog Verifiable funding latest raised Series A 2021\". The results are: \n {\"search_results\":[{\"title\":\"Andreessen Horowitz Names Verifiable in Telehealth Tech ...\",\"link\":\"https://verifiable.com/blog/andreessen-horowitz-lists-verifiable-in-the-new-tech-stack-powering-telehealth\",\"displayedLink\":\"https://verifiable.com › blog › andreessen-horowitz-lists...\",\"snippet\":\"With over $1.4Bn in its bio funds, global digital health funding jumped 45% YoY in 2020, with telehealth startups raising over $10B in 2020 ( ...\",\"date\":\"Jan 12, 2021\",\"position\":1},{\"title\":\"CB Insights...",
+     "Searched Google with query \"Verifiable latest funding date 27m 2023 Series B total funding 2024\". The results are: \n {\"search_results\":[{\"title\":\"HealthTech startup Verifiable lands $27m in Series B funding\",\"link\":\"https://fintech.global/2023/07/11/healthtech-startup-verifiable-lands-27m-in-series-b-funding/\",\"displayedLink\":\"https://fintech.global › 2023/07/11 › healthtech-startup-...\",\"snippet\":\"Verifiable lands $27m in Series B funding July 11, 2023 Verifiable. The Austin-based startup now boasts a total funding pot of $47m,\",\"date\":\"Jul 11, 2023\",\"position\":1},{\"title\":\"Verifiable Lands $27M Series B from...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/press\",\"question\":\"Read dated press announcements, especially launch/introducing product or major feature in last six months, and identify newest launch-type item.\"}. The results are: \n \"Newest launch-type press announcement: “Verifiable Launches CredAgent®, the Industry's First Autonomous AI Credentialing Agent,” dated Feb. 26, 2026. Link: https://prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html. Other recent launch announcements: “Verifiable Announces the Launch of Provider Demographic Data Management…” dated Jun. 24, 2025 (https://verifiable.com/press-releases/verifiable-announces-the-launch-of-pr...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/blog\",\"question\":\"Inspect blog index for posts that describe engineering implementation or technical systems, by engineers; report titles/dates.\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/\",\"question\":\"Does the site expose pricing in navigation/footer? What audience and product are described? Which solution integration is named?\"}. The results are: \n \"Navigation/footer lists products and links but no Pricing link or pricing information. Product: Verifiable’s AI-powered credentialing and provider monitoring platform, including CredAgent®, credentialing software, CVO services, provider enrollment/licensing, roster management, primary source verification, and ongoing monitoring. Audience: healthcare organizations, specifically Health & Dental Plans and Provider Organizations; also pharmacy, recruiting/staffing, and life sciences. Named integrat...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/credagent\",\"question\":\"Does CredAgent page publicly identify the specific AI model or provider it uses?\"}. The results are: \n \"CredAgent page (https://verifiable.com/credagent) describes CredAgent® as Verifiable’s “AI-powered technology” and “agentic AI,” supported by “dedicated AI engineering,” but does not name a specific AI model or provider (e.g., OpenAI, Anthropic, or a model name).\"",
+     "Searched Google with query \"Verifiable launches CredAgent autonomous AI credentialing agent date 2026 Verifiable press\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable Launches CredAgent™, the Industry's First ...\",\"link\":\"https://www.prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html\",\"displayedLink\":\"https://www.prnewswire.com › news-releases › verifiable...\",\"snippet\":\"Feb 26, 2026, CredAgentTM, the industry's first autonomous AI agent for end-to-end credentialing. up to 10x productivity … executing complex ...\",\"date\":\"Feb 26, 2026\",\"positio...",
+     "Searched Google with query \"Verifiable founded in 2020 healthcare credentialing company 2020 funding seed 2020\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable validates its healthcare credentialing software ...\",\"link\":\"https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m/\",\"displayedLink\":\"https://techcrunch.com › 2023/07/10 › verifiable-health...\",\"snippet\":\"... funding in 2021 and $3 million in seed funding in 2020. In total, the company has raised $47 million since forming in 2020. Verifiable ...\",\"date\":\"Jul 10, 2023\",\"position\":1},{\"title\":\"Verifiable: The Future of AI Credent...",
+     "Searched Google with query \"\"Verifiable\" \"141 employees\" LinkedIn 2025\". The results are: \n {\"search_results\":[{\"title\":\"Daniel Ng - Relationship Manager\",\"subtitle\":\"Singapore, Singapore · Relationship Manager · Resona Merchant Bank Asia Limited\",\"link\":\"https://sg.linkedin.com/in/danielngkingvoon\",\"displayedLink\":\"40+ followers\",\"snippet\":\"Senior Manager with over 10 years of experience in Commercial and Corporate Banking, and Government Financial Institution. Feb 2025 - Present - Jan 2025 5 ...\",\"position\":1},{\"title\":\"Verifiable - 2026 Company Profile & Team\",\"link\":\"https://tracxn...",
+     "Searched Google with query \"Verifiable LinkedIn employees 2026 Austin 101-200 headcount\". The results are: \n {\"search_results\":[{\"title\":\"LinkedIn Number of Employees 2026\",\"link\":\"https://www.reveliolabs.com/companies/linkedin/employees\",\"displayedLink\":\"https://www.reveliolabs.com › companies › employees\",\"snippet\":\"LinkedIn had 24835 employees as of June 2026, up 775 (-0.6%) LinkedIn's total headcount has grown 8.0% from 22,992 employees in 2023 to 24,835 in 2026.\",\"position\":1},{\"title\":\"About Us\",\"link\":\"https://news.linkedin.com/about-us\",\"displayedLink\":\"https://news.linkedin.com › about-us\",\"sn...",
+     "Used visitWebpage {\"url\":\"https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m/\",\"question\":\"What year did Verifiable form, and its HQ city/country?\"}. The results are: \n \"Verifiable formed in 2020 and is based in Austin, Texas, United States (HQ city/country: Austin, United States). Source: TechCrunch article: https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m\"",
+     "Used visitWebpage {\"url\":\"https://getlatka.com/companies/Verifiable\",\"question\":\"What exact employee count and as-of date are stated for Verifiable?\"}. The results are: \n \"Verifiable had 141 employees as of December 2024, according to LinkedIn.\"",
+     "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/verifiable-credentials\",\"question\":\"What headquarters location and company size band does Verifiable's LinkedIn page list?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/verifiable-credentials\",\"locations\":[{\"address\":\"Austin, Texas, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"\",\"formatted_address\":\"Austin, TX\",\"business_region\":\"NAM\",\"latitude\":30.26497841,\"locality\":\"Austin\",\"admin_district\":\"Texas\",\"admin_district2\":\"Travis County\",\"country_region\":\"United States\",\"locationstr\":\"Austin, Texas, US\",\"metro_area\":\"Austin-Round Rock-San Marcos, TX\",\"name\":\"Austin, TX\",\"neighborhood\":\"\",\"postal_code\":\"\",\"coun...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/press\",\"question\":\"What is the date of the newest product launch announcement and its title?\"}. The results are: \n \"Feb 26, 2026 — “Verifiable Launches CredAgent®, the Industry's First Autonomous AI Credentialing Agent” (https://prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html)\"",
+     "Searched Google with query \"site:verifiable.com/blog engineers engineering infrastructure Verifiable blog technical\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:verifiable.com/legal/privacy-policy OpenAI Anthropic subprocessor Verifiable\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"Verifiable executive VP joins 2025 2026 leadership executive appointment credentialing\". The results are: \n {\"search_results\":[{\"title\":\"Verifiable Inc. Appoints Brook West as President\",\"link\":\"https://verifiable.com/press-releases/verifiable-inc-appoints-brook-west-as-president-to-spearhead-next-phase-of-growth\",\"displayedLink\":\"https://verifiable.com › press-releases › verifiable-inc-a...\",\"snippet\":\"Verifiable, a leading automated credentialing and network monitoring platform, today announced the appointment of Brook West as President.\",\"date\":\"Dec 18, 2024\",\"position\":1},{\"title\":\"Shaun Smith nam...",
+     "Used visitWebpage {\"url\":\"https://verifiable.com/resources/case-studies/grow-therapy\",\"question\":\"Confirm Grow Therapy is a Verifiable customer.\"}. The results are: \n \"Verifiable’s case study confirms Grow Therapy as a customer/partner. Source: https://verifiable.com (Case Study: “Grow Therapy is Making Mental Healthcare More Accessible Through Delegated Credentialing”). Grow Therapy partnered with Verifiable for delegated credentialing; Verifiable provided an NCQA-certified CVO, real-time primary-source verifications, CAQH integration, and faster credentialing. Customer quote: “Verifiable was a clear stand out from others in the market.” — Christy Maselli, D..."
+    ],
+    "hq_location": {
+     "notes": "LinkedIn identifies Austin, Texas as headquarters; TechCrunch also describes the company as based in Austin.",
+     "value": {
+      "city": "Austin",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/verifiable-credentials",
+      "https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m"
+     ]
+    },
+    "public_docs": {
+     "notes": "Verifiable publishes a developer/API documentation portal with multiple reference articles, including provider, integration, and data-model documentation.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.discovery.verifiable.com/reference/current/overview"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The latest funding announcement located was the July 2023 Series B, which predates the 18-month window beginning 2025-05-09.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/blog/verifiable-raises-27m-series-b"
+     ]
+    },
+    "founded_year": {
+     "notes": "TechCrunch states that the company formed in 2020.",
+     "value": 2020,
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2023/07/10/verifiable-healthcare-credentialing-software-27m"
+     ]
+    },
+    "last_funding": {
+     "notes": "The company announced a $27 million Series B on July 10, 2023.",
+     "value": {
+      "date": "2023-07",
+      "stage": "Series B",
+      "amount_usd": 27000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/blog/verifiable-raises-27m-series-b"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The newest product-launch announcement found is CredAgent, dated 2026-02-26, before the six-month window beginning 2026-05-09.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/press",
+      "https://www.prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The homepage's navigation and footer do not expose a pricing link or public pricing information.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/"
+     ]
+    },
+    "employee_band": {
+     "notes": "The cited profile reports 141 employees as of December 2024, which falls in this band.",
+     "value": "101-200",
+     "status": "asserted",
+     "citations": [
+      "https://getlatka.com/companies/Verifiable"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The current job board lists three roles, none titled SDR, BDR, sales/business development representative, or account executive.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.lever.co/verifiable"
+     ]
+    },
+    "model_provider": {
+     "notes": "The product page, public API documentation, security page, and privacy-policy page reviewed describe AI or security practices but do not publicly identify a specific AI model or provider.",
+     "value": "",
+     "status": "unknown",
+     "citations": [
+      "https://verifiable.com/credagent",
+      "https://docs.discovery.verifiable.com/reference/current/overview",
+      "https://verifiable.com/legal/security",
+      "https://verifiable.com/legal/privacy-policy"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both are identified in Verifiable customer case studies.",
+     "value": [
+      "Humana Dental",
+      "Modern Health"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/resources/case-studies/humana-dental-case-study",
+      "https://verifiable.com/resources/case-studies/modern-health"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The current job board lists Customer Success Manager, Enterprise Customer Success Manager, and Solutions Engineer roles; none has a qualifying AI/ML/data-science title.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.lever.co/verifiable"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Verifiable's blog explicitly says it achieved SOC 2 Type II certification; the security page discusses annual third-party SOC 2 audits.",
+     "value": [
+      "SOC 2 Type II"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/blog/verifiable-is-now-soc-2-certified",
+      "https://verifiable.com/legal/security"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "Verifiable publicly describes a native Salesforce application/integration for credentialing and provider network monitoring.",
+     "value": [
+      "Salesforce"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/salesforce-credentialing-network-monitoring",
+      "https://verifiable.com/"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "The company describes credentialing, monitoring, and provider-network workflows for healthcare customers.",
+     "value": "Verifiable provides AI-powered provider credentialing and ongoing credential monitoring—including primary-source verification and network management—for healthcare organizations such as health plans and provider organizations.",
+     "status": "asserted",
+     "citations": [
+      "https://verifiable.com/",
+      "https://verifiable.com/providers"
+     ]
+    },
+    "timeTakenInSeconds": "89.03",
+    "totalCreditsCharged": 0.4,
+    "leadership_change_12mo": {
+     "notes": "The company About page does not provide a full leadership roster, and no dated C-level/VP join or departure within 2025-11-09 through 2026-11-09 was verified.",
+     "value": false,
+     "status": "unknown",
+     "citations": [
+      "https://verifiable.com/about",
+      "https://verifiable.com/press"
+     ]
+    }
+   }
+  }
+ }
+}

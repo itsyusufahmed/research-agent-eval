@@ -1,0 +1,463 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eac9dca6b15af78fb",
+  "interaction_id": "trun_142119f6a1b4439eac9dca6b15af78fb",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "karbonhq.com"
+  },
+  "created_at": "2026-11-10T18:48:38.330243Z",
+  "modified_at": "2026-11-10T18:51:49.549955Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eac9dca6b15af78fb",
+   "interaction_id": "trun_142119f6a1b4439eac9dca6b15af78fb",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "karbonhq.com"
+   },
+   "created_at": "2026-11-10T18:48:38.330243Z",
+   "modified_at": "2026-11-10T18:51:49.549955Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "url": "http://karbonhq.com/resources/client-trust-report-2026-karbon",
+       "excerpts": [
+        "Founded in 2014, Karbon has customers in 40 countries with employees across US, Australia, New Zealand, Canada and the United Kingdom."
+       ]
+      }
+     ],
+     "reasoning": "Karbon explicitly states it was founded in 2014: http://karbonhq.com/resources/client-trust-report-2026-karbon.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Enterprise Security | Karbon",
+       "url": "https://karbonhq.com/security",
+       "excerpts": [
+        "**SOC 2** Type II **GDPR** Compliant",
+        "Karbon\u2019s web application product is SOC 2 Type 2 certified.",
+        "However, Karbon has not yet been independently certified as ISO 27001 compliant.",
+        "Internal assessments have been conducted to ensure these requirements are being met, including self-assessment for GDPR compliance."
+       ]
+      }
+     ],
+     "reasoning": "https://karbonhq.com/security claims SOC 2 Type II certification and GDPR compliance. GDPR is self-assessed, not an independent certification. ISO 27001 is explicitly not yet independently certified; PCI DSS statements concern Stripe rather than Karbon's own certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Karbon, Inc. - LEI 254900EY5JBDTPBGP417",
+       "url": "https://www.gleif.org/lei/254900EY5JBDTPBGP417",
+       "excerpts": [
+        "Headquarters Address (en) Country: US | United States of America (the) First Headquarters Address Line: 548 Market Street City: San Francisco Region: California (US-CA) Postal Code: 94104 Additional Headquarters Address Line: #45902"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters address lists country US: https://www.gleif.org/lei/254900EY5JBDTPBGP417.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Medium",
+       "url": "https://medium.com/@karbonhq",
+       "excerpts": [
+        "This is our company blog, where we write about our customers and the startup journey. For more content, head over to <http://karbonhq.com/magazine>",
+        "[## What We Believe ### We live in an always-on economy.](https://medium.com/@karbonhq/what-we-believe-93da4a18ee5)",
+        "[## What we shipped: Q1 2019 ### We started this year with a big announcement: Karbon is now available for workplaces of all types.](https://medium.com/@karbonhq/what-we-shipped-q1-2019-9ba36c23271c)",
+        "[## Karbon partners with Microsoft ScaleUp ### We are delighted to announce that we have been invited to join Microsoft ScaleUp"
+       ]
+      }
+     ],
+     "reasoning": "The readable company blog index at https://medium.com/@karbonhq shows product-release summaries, company viewpoints, partnerships and hiring announcements, rather than two qualifying engineer-authored implementation posts. Confidence is limited because this is an older company blog archive.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Client Management for Accounting Firms | Karbon",
+       "url": "https://karbonhq.com/solution/client-management",
+       "excerpts": [
+        "Karbon is a cloud-based practice management solution built for accounting firms, combining CRM features, email, task management, invoicing, and payments in one platform."
+       ]
+      }
+     ],
+     "reasoning": "Karbon describes its accounting-firm audience and combined practice-management capabilities at https://karbonhq.com/solution/client-management.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Karbon | LinkedIn",
+       "url": "https://linkedin.com/company/3795518",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters San Francisco, California Type Privately Held Founded 2014"
+       ]
+      }
+     ],
+     "reasoning": "Karbon's LinkedIn company profile lists 201\u2013500 employees: https://linkedin.com/company/3795518.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI-Powered Practice Management for Accounting Firms | Karbon",
+       "url": "https://karbonhq.com/feature/ai",
+       "excerpts": [
+        "The Azure OpenAI Service, which powers Karbon AI, provides critical enterprise security, compliance, and regional availability."
+       ]
+      }
+     ],
+     "reasoning": "Karbon explicitly says Azure OpenAI Service powers Karbon AI: https://karbonhq.com/feature/ai.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Practice Management Plans to Suit Every Accounting Firm | Karbon",
+       "url": "https://karbonhq.com/pricing",
+       "excerpts": [
+        "**$59/month, per user, paid annually**"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page includes per-user pricing: https://karbonhq.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Karbon (San Francisco)",
+       "url": "https://content.pitchbook.com/profiles/company/154034-11",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2018-03-16) Financing status: Venture Capital-Backed (as of 2024-07-17) Last financing date: 2024-07-17 Last financing size: USD 10.5 million Last financing deal types: Later Stage VC, Series B Total raised: USD 91.5 million"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies the last financing size as USD 10.5 million, equivalent to $10,500,000: https://content.pitchbook.com/profiles/company/154034-11.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "System Six eradicated chaos with Karbon | Karbon",
+       "url": "https://karbonhq.com/customer-stories/system-six",
+       "excerpts": [
+        "Discover how System Six increased productivity by over 50% with Karbon."
+       ]
+      },
+      {
+       "title": "How BKL uses Karbon to save 4 days per month | Karbon",
+       "url": "https://karbonhq.com/customer-stories/bkl",
+       "excerpts": [
+        "[Customer Story](https://karbonhq.com/customer-stories/) / BKL How BKL uses Karbon to save 4 days per month"
+       ]
+      }
+     ],
+     "reasoning": "Karbon publishes customer stories for System Six and BKL: https://karbonhq.com/customer-stories/system-six and https://karbonhq.com/customer-stories/bkl.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Karbon (San Francisco)",
+       "url": "https://content.pitchbook.com/profiles/company/154034-11",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2018-03-16) Financing status: Venture Capital-Backed (as of 2024-07-17) Last financing date: 2024-07-17 Last financing size: USD 10.5 million Last financing deal types: Later Stage VC, Series B Total raised: USD 91.5 million"
+       ]
+      }
+     ],
+     "reasoning": "The latest financing date is July 17, 2024, normalized to 2024-07: https://content.pitchbook.com/profiles/company/154034-11.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Account Executive, SMB at Karbon",
+       "url": "https://job-boards.greenhouse.io/karbon/jobs/6102022004",
+       "excerpts": [
+        "Ensure accurate and timely updates of information and forecasts (call/meeting notes, supporting documentation, next steps etc.) in Salesforce/Gong"
+       ]
+      }
+     ],
+     "reasoning": "The account executive posting explicitly requires maintaining information and forecasts in Salesforce/Gong: https://job-boards.greenhouse.io/karbon/jobs/6102022004.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Karbon Appoints Brooke Brockman as CMO to Lead Global Brand",
+       "url": "https://www.globenewswire.com/news-release/2025/11/11/3185458/0/en/Karbon-Appoints-Brooke-Brockman-as-CMO-to-Lead-Global-Brand-Growth-and-AI-Innovation-for-Accounting-Firms.html",
+       "excerpts": [
+        "November 11, 2025 09:00 ET | Source: [Karbon](https://www.globenewswire.com/en/search/organization/Karbon)",
+        "11, 2025 (GLOBE NEWSWIRE) -- [Karbon](https://www.globenewswire.com/Tracker?data=u9xkleh0zd1LEDJAb4VmqVX_KBqLVPs5uxJGRIWjo2W0mru9xvg7WSl53vMjg-gHAdYd8UENZYLU88yTrK3ibQ==) , the global leader in AI-driven accounting practice management software, today announced the appointment of Brooke Brockman as Chief Marketing Officer."
+       ]
+      }
+     ],
+     "reasoning": "Karbon announced Brooke Brockman's appointment as CMO on November 11, 2025, within the requested twelve-month window: https://www.globenewswire.com/news-release/2025/11/11/3185458/0/en/Karbon-Appoints-Brooke-Brockman-as-CMO-to-Lead-Global-Brand-Growth-and-AI-Innovation-for-Accounting-Firms.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for AI Operations Lead at Karbon",
+       "url": "https://job-boards.greenhouse.io/karbon/jobs/6208899004",
+       "excerpts": [
+        "AI Operations Lead",
+        "Apply for this job"
+       ]
+      }
+     ],
+     "reasoning": "A live application page lists AI Operations Lead, a qualifying AI-titled role: https://job-boards.greenhouse.io/karbon/jobs/6208899004.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Karbon (San Francisco)",
+       "url": "https://content.pitchbook.com/profiles/company/154034-11",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2018-03-16) Financing status: Venture Capital-Backed (as of 2024-07-17) Last financing date: 2024-07-17 Last financing size: USD 10.5 million Last financing deal types: Later Stage VC, Series B Total raised: USD 91.5 million"
+       ]
+      }
+     ],
+     "reasoning": "The latest financing is classified as Later Stage VC, Series B: https://content.pitchbook.com/profiles/company/154034-11.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Karbon Developer Center",
+       "url": "https://developers.karbonhq.com/",
+       "excerpts": [
+        "[Making Your First API Request](https://developers.karbonhq.com/guides/authentication/) Learn how to authenticate with the Karbon API using the required Authorization and AccessKey headers, make your first request to verify your credentials, and understand the account-level access model that governs all API operations.",
+        "[Searching for and Retrieving Client Details](https://developers.karbonhq.com/guides/searching-clients/) Search and filter across Karbon's three client entity types: Contacts, Organizations, and ClientGroups\u2014using OData-style queries, retrieve full contact details including emails and phone numbers via $expand=BusinessCards, and update client records or look them up by your own identifiers.",
+        "[Creating a New Work Item](https://developers.karbonhq.com/guides/creating-work-items/) Create work items"
+       ]
+      }
+     ],
+     "reasoning": "The public developer portal contains multiple guides covering authentication, client retrieval, work creation and other API operations: https://developers.karbonhq.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Karbon, Inc. - LEI 254900EY5JBDTPBGP417",
+       "url": "https://www.gleif.org/lei/254900EY5JBDTPBGP417",
+       "excerpts": [
+        "Headquarters Address (en) Country: US | United States of America (the) First Headquarters Address Line: 548 Market Street City: San Francisco Region: California (US-CA) Postal Code: 94104 Additional Headquarters Address Line: #45902"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters address explicitly lists San Francisco: https://www.gleif.org/lei/254900EY5JBDTPBGP417.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Karbon Launches Kai",
+       "url": "https://karbonhq.com/resources/karbon-launches-kai",
+       "excerpts": [
+        "**SAN DIEGO, June 3, 2026\u2014** [Karbon](https://karbonhq.com/) , the leading AI-powered accounting practice management software, today introduced Kai, an AI coworker built directly into the platform where a firm's client history, workflows, and communications already live."
+       ]
+      }
+     ],
+     "reasoning": "Karbon introduced Kai, an AI coworker embedded in its platform, on June 3, 2026, within the six-month window: https://karbonhq.com/resources/karbon-launches-kai.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Account Executive, SMB at Karbon",
+       "url": "https://job-boards.greenhouse.io/karbon/jobs/6102022004",
+       "excerpts": [
+        "Account Executive, SMB"
+       ]
+      }
+     ],
+     "reasoning": "The live Account Executive, SMB posting meets the requested sales-role criterion: https://job-boards.greenhouse.io/karbon/jobs/6102022004.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Karbon (San Francisco)",
+       "url": "https://content.pitchbook.com/profiles/company/154034-11",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2018-03-16) Financing status: Venture Capital-Backed (as of 2024-07-17) Last financing date: 2024-07-17 Last financing size: USD 10.5 million Last financing deal types: Later Stage VC, Series B Total raised: USD 91.5 million"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded financing is July 17, 2024, before the eighteen-month window beginning May 9, 2025: https://content.pitchbook.com/profiles/company/154034-11. This negative relies on the funding database's latest-financing record.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Enterprise Security | Karbon",
+       "url": "https://karbonhq.com/security",
+       "excerpts": [
+        "Karbon\u2019s web application product is SOC 2 Type 2 certified."
+       ]
+      }
+     ],
+     "reasoning": "Karbon directly claims SOC 2 Type 2 certification on https://karbonhq.com/security.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Enterprise Security | Karbon",
+       "url": "https://karbonhq.com/security",
+       "excerpts": [
+        "**SOC 2** Type II **GDPR** Compliant",
+        "Internal assessments have been conducted to ensure these requirements are being met, including self-assessment for GDPR compliance."
+       ]
+      }
+     ],
+     "reasoning": "Karbon claims GDPR compliance through self-assessment, not independent certification: https://karbonhq.com/security.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "System Six eradicated chaos with Karbon | Karbon",
+       "url": "https://karbonhq.com/customer-stories/system-six",
+       "excerpts": [
+        "Discover how System Six increased productivity by over 50% with Karbon."
+       ]
+      }
+     ],
+     "reasoning": "System Six is named in a Karbon customer story: https://karbonhq.com/customer-stories/system-six.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "How BKL uses Karbon to save 4 days per month | Karbon",
+       "url": "https://karbonhq.com/customer-stories/bkl",
+       "excerpts": [
+        "[Customer Story](https://karbonhq.com/customer-stories/) / BKL How BKL uses Karbon to save 4 days per month"
+       ]
+      }
+     ],
+     "reasoning": "BKL is named in a Karbon customer story: https://karbonhq.com/customer-stories/bkl.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Account Executive, SMB at Karbon",
+       "url": "https://job-boards.greenhouse.io/karbon/jobs/6102022004",
+       "excerpts": [
+        "Ensure accurate and timely updates of information and forecasts (call/meeting notes, supporting documentation, next steps etc.) in Salesforce/Gong"
+       ]
+      }
+     ],
+     "reasoning": "The sales posting explicitly names Salesforce as a system used for updates and forecasts: https://job-boards.greenhouse.io/karbon/jobs/6102022004.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Account Executive, SMB at Karbon",
+       "url": "https://job-boards.greenhouse.io/karbon/jobs/6102022004",
+       "excerpts": [
+        "Ensure accurate and timely updates of information and forecasts (call/meeting notes, supporting documentation, next steps etc.) in Salesforce/Gong"
+       ]
+      }
+     ],
+     "reasoning": "The sales posting explicitly names Gong alongside Salesforce: https://job-boards.greenhouse.io/karbon/jobs/6102022004.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2014.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Karbon is cloud-based practice management software for accounting firms that combines client management, email, tasks, invoicing and payments in one platform.",
+    "employee_band": "201-500",
+    "model_provider": "Azure OpenAI Service",
+    "pricing_page": true,
+    "funding_amount_usd": 10500000.0,
+    "named_customers": [
+     "System Six",
+     "BKL"
+    ],
+    "funding_date": "2024-07",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Gong"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "url": "https://docs.platform.qubrid.com/inferencing/Quickstart%20API",
+ "fetched_at": "2026-11-10T00:01:57.295538+00:00",
+ "hours_after_run": 24.0,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "urllib",
+ "status": 200,
+ "content_sha256": "4c32b7a2c69aa055141e7f7b7872dab1c14d6d01990ba82a9793c05ab87365bd",
+ "chars": 2667,
+ "truncated": false,
+ "title": "Quickstart API | Qubrid Documentation",
+ "markdown": "Search...Ctrl K\nCommunity\nBlogs\nGetting started\nIntroduction\nQuickstart\nEnterprise Account\nChoose Your Interface\nGPU Compute\nAI Templates\nOn Demand GPUs\nBare Metal\nGPU Clusters\nInferencing\nQuickstart API\nMigration\nManage API Keys\nServerless Models\nIntegrationsNew\nConnect Your Tools\nZed\nOpenClaw\nOpen WebUI\nDify\nClaude Code\nCursor\nCline\nHermes\nGrok Build\nVS Code\nAI Controller\nOverview\nInstallation\nDashboard\nModel Studio\nCompute Management\nUser Management\nTroubleshooting\nSupportGo to Platform\nDocumentationChangelogModel ComparisonAPI Reference\nInferencing\nAccelerate your development with our API within a minute.\nQubrid AI simplifies the process of integrating high-performance open-source models, allowing you to run inference with just a few lines of code.\nThe platform and inference API now use https://qubrid.com instead of https://platform.qubrid.com. Docs stay at docs.platform.qubrid.com. If you still use the old host, follow the Platform Hostname Migration guide. The previous host still works during the transition.\n1. Register for an account\nBegin by creating an account to obtain your unique API key.\nOnce your account is active, configure your environment by exporting your key as a variable named QUBRID_API_KEY:\nexport QUBRID_API_KEY=xxxxx\n2. Run your first Model Inference\nSelect the model you wish to run. For this demonstration, we will utilize OPENAI GPT OSS 120B with streaming enabled to show real-time token generation.\nPythonJavaScriptGocURL\nimport requests\nimport json\nfrom pprint import pprint\nurl = \"https://qubrid.com/api/v1/qubridai/chat/completions\"\nheaders = {\n \"Authorization\": \"Bearer <QUBRID_API_KEY>\",\n \"Content-Type\": \"application/json\",\n}\ndata = {\n \"model\": \"openai/gpt-oss-120b\",\n \"messages\": [\n {\"role\": \"user\", \"content\": \"Explain quantum computing to a 5 year old.\"}\n ],\n \"temperature\": 0.7,\n \"max_tokens\": 4096,\n \"stream\": False,\n \"top_p\": 0.8,\n}\nresponse = requests.post(\n url,\n headers=headers,\n json=data,\n)\ncontent_type = response.headers.get(\"Content-Type\", \"\")\nif \"application/json\" in content_type:\n pprint(response.json())\nelse:\n for line in response.iter_lines(decode_unicode=True):\n if not line:\n continue\n if line.startswith(\"data:\"):\n payload = line.replace(\"data:\", \"\").strip()\n if payload == \"[DONE]\":\n break\n try:\n chunk = json.loads(payload)\n pprint(chunk)\n except json.JSONDecodeError:\n print(\"Raw chunk:\", payload)\nCongratulations! You have successfully run your first inference request to the Qubrid AI cloud.\nNext steps\nCheck out the Qubrid AI playground to try out different models.\nPreviousGPU ClustersNextMigration\nOn this page\n1. Register for an account\n2. Run your first Model Inference\nNext steps",
+ "error": null,
+ "final_url": "https://docs.platform.qubrid.com/inferencing/Quickstart%20API",
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ]
+}

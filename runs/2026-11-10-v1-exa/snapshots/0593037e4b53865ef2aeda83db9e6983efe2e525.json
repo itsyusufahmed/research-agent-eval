@@ -1,0 +1,24 @@
+{
+ "url": "https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/",
+ "fetched_at": "2026-11-10T04:45:49.941769+00:00",
+ "hours_after_run": 28.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "0c9c60ff3dc4a719b4b78ba3f1aa8800c2d13a3117a2d813f4acddbc91244630",
+ "chars": 2494,
+ "truncated": false,
+ "title": "OpenAI | Koodisi Documentation",
+ "markdown": "[Skip to main content](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/#__docusaurus_skipToContent_fallback)\n\nOn this page\n\nUse the OpenAI group to work with the models available to your OpenAI account. The activities call the OpenAI REST API and return its response to the workflow.\n\n## Available activities [​](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/\\#available-activities \"Direct link to Available activities\")\n\n| Activity | Purpose |\n| --- | --- |\n| [**List Models**](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/listmodels/) | Returns the models available to the account |\n| [**Retrieve Model**](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/retrievemodel/) | Returns details of a single model |\n| [**Delete Model**](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/deletemodel/) | Deletes a fine-tuned model |\n\n## Configure an OpenAI call [​](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/\\#configure-an-openai-call \"Direct link to Configure an OpenAI call\")\n\n1. Add the activity to the workflow.\n2. Supply the OpenAI API key as an `Authorization` header on the **Headers** tab.\n3. For **Retrieve Model** and **Delete Model**, enter the **Model Name**.\n4. Map the request on the **Input** tab and the response on the **Output** tab.\n\nThese activities build on the [REST Client](https://docs.koodisi.com/working-with-activities/list-of-available-activities/http/restclient/), so their Input and Output are the generic HTTP request and response rather than an OpenAI-shaped payload.\n\n## Recommended practices [​](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/\\#recommended-practices \"Direct link to Recommended practices\")\n\n- Store the API key in a vault-backed variable rather than as literal text in a header.\n- Deleting a model cannot be undone; only fine-tuned models the account owns can be deleted.\n\n- [Available activities](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/#available-activities)\n- [Configure an OpenAI call](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/#configure-an-openai-call)\n- [Recommended practices](https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai/#recommended-practices)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T04:26:45.757456+00:00",
+ "hours_after_launch": 0.32
+}

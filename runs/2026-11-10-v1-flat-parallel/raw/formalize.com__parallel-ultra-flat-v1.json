@@ -1,0 +1,439 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8452e8bd42b18139",
+  "interaction_id": "trun_142119f6a1b4439e8452e8bd42b18139",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "formalize.com"
+  },
+  "created_at": "2026-11-10T18:47:47.058298Z",
+  "modified_at": "2026-11-10T18:55:53.932879Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8452e8bd42b18139",
+   "interaction_id": "trun_142119f6a1b4439e8452e8bd42b18139",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "formalize.com"
+   },
+   "created_at": "2026-11-10T18:47:47.058298Z",
+   "modified_at": "2026-11-10T18:55:53.932879Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Formalize - Formalize",
+       "url": "https://career.formalize.com/pages/about-formalize",
+       "excerpts": [
+        "Founded in 2021"
+       ]
+      }
+     ],
+     "reasoning": "Formalize's company page states that it was founded in 2021.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Formalize",
+       "url": "https://app.formalize.com/trust-center/58100b83-1724-40f9-b315-d573970a207d",
+       "excerpts": [
+        "ISO27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The company's trust-center certification listing names ISO 27001:2022, which is included in the requested certification set.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Copenhagen Office - Formalize",
+       "url": "https://career.formalize.com/pages/copenhagen-office",
+       "excerpts": [
+        "Our headquarter is located in the heart of Copenhagen, the capital of Denmark."
+       ]
+      }
+     ],
+     "reasoning": "Formalize's Copenhagen office page identifies its headquarters as Copenhagen, the capital of Denmark.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Compliance Blog: NIS2, DORA & GDPR | Formalize",
+       "url": "https://formalize.com/en/blog",
+       "excerpts": [
+        "Some of the data collected by this provider is for the purposes of personalization and measuring advertising effectiveness.",
+        "This data can also be used to create leads for marketing purposes."
+       ]
+      }
+     ],
+     "reasoning": "The blog index surfaces compliance-framework and risk/governance content rather than engineering posts; no qualifying technical blog is shown, so this is false under the stated rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Formalize: The Complete GRC and Compliance Platform",
+       "url": "https://formalize.com/en",
+       "excerpts": [
+        "We support companies of all sizes with reliable, user-friendly compliance software.",
+        "Formalize simplifies NIS2, DORA, risk, and audit management, and our Whistleblower Software helps organizations handle whistleblowing cases."
+       ]
+      }
+     ],
+     "reasoning": "The homepage says the software serves companies of all sizes and identifies NIS2, DORA, risk, audit management, and whistleblowing case handling as its functions.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Formalize; website_url: https://formalize.com/en; location_city: Aarhus; location_country: Denmark; founded_year: 2021; employee_count_official: 238; funded: Yes; investment_count: null; latest_funding_round_name: Series B; latest_funding_round_date: 2025-10-28; latest_funding_round_amount_usd: 34908600.0; total_disclosed_funding_usd: 51211544.0; stage: Series B; tracxn_url: https://platform.tracxn.com/a/d/company/5852ea59e4b0d645017483f5/formalize?utm_source=parallel&utm_medium=ai#a:about name: Formalize; website_url: http://getformalize.com; location_city: San Francisco; location_count"
+       ]
+      }
+     ],
+     "reasoning": "The company-data record gives an official employee count of 238, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI Overview",
+       "url": "https://grc-api-production-misc.s3.eu-central-1.amazonaws.com/public/c5b01294-71de-4e47-a1f8-b11d4b517b5c",
+       "excerpts": [
+        "**15 Known Limitations 21**"
+       ]
+      }
+     ],
+     "reasoning": "Formalize's AI overview says it uses Anthropic Claude models accessed through Amazon Bedrock.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Price and Plans - Fomalize",
+       "url": "https://formalize.com/en/pricing",
+       "excerpts": [
+        "**LANGUAGE\\_KEY** Pending",
+        "[\\_BODY\\_PURPOSES#]"
+       ]
+      }
+     ],
+     "reasoning": "Formalize has a public pricing page describing a free trial and its Compliance Platform offering; a public page qualifies even when pricing requires a quote.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Formalize; website_url: https://formalize.com/en; location_city: Aarhus; location_country: Denmark; founded_year: 2021; employee_count_official: 238; funded: Yes; investment_count: null; latest_funding_round_name: Series B; latest_funding_round_date: 2025-10-28; latest_funding_round_amount_usd: 34908600.0; total_disclosed_funding_usd: 51211544.0; stage: Series B; tracxn_url: https://platform.tracxn.com/a/d/company/5852ea59e4b0d645017483f5/formalize?utm_source=parallel&utm_medium=ai#a:about name: Formalize; website_url: http://getformalize.com; location_city: San Francisco; location_count"
+       ]
+      }
+     ],
+     "reasoning": "The company funding record reports the latest round's amount as USD 34,908,600.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Arcano Partners cut DORA reporting time by 85% | Formalize",
+       "url": "https://formalize.com/en/case-studies/arcano-partners",
+       "excerpts": [
+        "Arcano Partners cut DORA reporting time by 85%"
+       ]
+      },
+      {
+       "title": "Testimonials - Whistleblower Software by Formalize",
+       "url": "https://whistleblowersoftware.com/en/testimonials",
+       "excerpts": [
+        "Hanna Swarowsky"
+       ]
+      }
+     ],
+     "reasoning": "Formalize's case study names Arcano Partners, and a customer testimonial names Moore TK.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Formalize Raises \u20ac30M to Shape the Future of Compliance Across Europe",
+       "url": "https://formalize.com/en/formalize-raises-30-million",
+       "excerpts": [
+        "Tracks the visitor across devices and marketing channels."
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement is dated October 28, 2025, so the requested YYYY-MM value is 2025-10.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Sales Development Representative - Norway - Formalize",
+       "url": "https://career.formalize.com/jobs/8625503-sales-development-representative-norway",
+       "excerpts": [
+        "A key contributor to our pipeline accuracy, maintaining high data quality and logging all customer interactions seamlessly in our CRM system (HubSpot)."
+       ]
+      }
+     ],
+     "reasoning": "The SDR job posting explicitly says customer interactions are logged in the company's CRM system, HubSpot.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Kasper Mathias Svendsen",
+       "url": "https://linkedin.com/in/kaspermathias",
+       "excerpts": [
+        "Role: VP of Product @ Formalize.",
+        "Returned fields: {experience_text='Formalize Aarhus, Central Denmark Region, Denmark 2026-09-01 VP of Product Formalize Aarhus, Central Denmark Region, Denmark 2026-05-01 2026-08-01 Product & Design Director T\u00c4FT Aarhus, Central Denmark Region, Denmark 2026-03-01 Founder Lunar 2025-04-01 2026-01-01 Design Director Lunar Aarhus, Central Denmark Region, Denmark 2023-10-01 2025-04-01 Head of Design Lunar 2022-06-01 2023-10-01 Principal Experience Designer Lunar 2021-02-01 2022-07-01 Head of Design Lunar Greater Aarhu..., slug='kaspermathias', url='https://linkedin.com/in/kaspermathias', name='Kasper Mathias Svendsen', company_name='Formalize', title='VP of Product'}"
+       ]
+      }
+     ],
+     "reasoning": "A profile identifies a Formalize VP of Product and gives a start date of 2026-09-01, within the 12 months before 2026-11-09.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "\n      Current job openings - Formalize\n    ",
+       "url": "https://career.formalize.com/jobs",
+       "excerpts": [
+        "[Director of Legal (Copenhagen)](https://career.formalize.com/jobs/8671785-director-of-legal-copenhagen)",
+        "[Technical Solutions Representative Student Assistant (Spanish)](https://career.formalize.com/jobs/8625733-technical-solutions-representative-student-assistant-spanish)",
+        "[Sales Development Representative - Norway](https://career.formalize.com/jobs/8625503-sales-development-representative-norway)",
+        "[Partner Manager - Norway](https://career.formalize.com/jobs/8609960-partner-manager-norway)",
+        "[IT Support (Copenhagen)](https://career.formalize.com/jobs/8609251-it-support-copenhagen)",
+        "[Compliance Product Enablement Student Assistant (Spanish)](https://career.formalize.com/jobs/8591871-compliance-product-enablement-student-assistant-spanish)",
+        "[Compliance Product Enablement Student Assistant (French)](https://career.formalize.com/jobs/8591831-compliance-product-enablement-student-assistant-french)",
+        "[Country Manager - Sweden](https://career.formalize.com/jobs/8552075-country-manager-sweden)",
+        "[Country Manager - France](https://career.formalize.com/jobs/8551879-country-manager-france)",
+        "[Senior Partner Manager - Denmark](https://career.formalize.com/jobs/8404634-senior-partner-manager-denmark)",
+        "[Staff Software Engineer - Marketplace](https://career.formalize.com/jobs/8332332-staff-software-engineer-marketplace)"
+       ]
+      }
+     ],
+     "reasoning": "The current careers board lists these open titles; none is an AI, ML, data-science, NLP, LLM, or related research role.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Formalize Raises \u20ac30M to Shape the Future of Compliance Across Europe",
+       "url": "https://formalize.com/en/formalize-raises-30-million",
+       "excerpts": [
+        "Formalize, a rapidly scaling compliance software company, has raised \u20ac30 million in a Series B funding round to accelerate its mission of becoming Europe\u2019s leading platform for governance, risk, and compliance."
+       ]
+      }
+     ],
+     "reasoning": "The announcement identifies the latest financing as a Series B round.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home | Formalize Help Center",
+       "url": "https://support.formalize.com/en",
+       "excerpts": [
+        "[Learn About Formalize 64 articles](https://support.formalize.com/en/collections/1352737-learn-about-formalize) [Learn About Whistleblower Software by Formalize 58 articles](https://support.formalize.com/en/collections/1352763-learn-about-whistleblower-software-by-formalize)",
+        "[How to Create and Edit Policies Using Formalize IQ](https://support.formalize.com/en/articles/872097-how-to-create-and-edit-policies-using-formalize-iq) [The Audit module](https://support.formalize.com/en/articles/853787-the-audit-module) [What is Formalize Smart Fill?](https://support.formalize.com/en/articles/566770-what-is-formalize-smart-fill) [How to Set Up Entity-Based Access Roles](https://support.formalize.com/en/articles/721585-how-to-set-up-entity-based-access-roles) [Completing a task with evidences](https://support.formalize.com/en/articles/566899-completing-a-task-with-evidences) [Workflow Builder - Update resource through questionnaire](https://support.formalize.com/en/articles/566896-workflow-builder-update-resource-through-questionnaire) [Data reports](https://support.formalize.com/en/articles/566866-data-reports)"
+       ]
+      }
+     ],
+     "reasoning": "The public help center has a Formalize collection with 64 articles, a Whistleblower collection with 58 articles, and additional product articles, meeting the requirement for several public documentation articles.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Copenhagen Office - Formalize",
+       "url": "https://career.formalize.com/pages/copenhagen-office",
+       "excerpts": [
+        "Our headquarter is located in the heart of Copenhagen, the capital of Denmark."
+       ]
+      }
+     ],
+     "reasoning": "The company's office page explicitly places its headquarters in Copenhagen. A third-party company-data record differs on city, so Copenhagen is reported from the company's own source.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Changelog | Formalize",
+       "url": "https://formalize.canny.io/changelog",
+       "excerpts": [
+        "September 2, 2026",
+        "We have just released the newly redesigned Approval Flows experience!"
+       ]
+      }
+     ],
+     "reasoning": "The changelog dates the redesigned Approval Flows release to September 2, 2026, within the six months before 2026-11-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "\n      Current job openings - Formalize\n    ",
+       "url": "https://career.formalize.com/jobs",
+       "excerpts": [
+        "[Sales Development Representative - Norway](https://career.formalize.com/jobs/8625503-sales-development-representative-norway)"
+       ]
+      }
+     ],
+     "reasoning": "The current careers board includes a Sales Development Representative role, which meets the stated hiring-title criteria.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Formalize Raises \u20ac30M to Shape the Future of Compliance Across Europe",
+       "url": "https://formalize.com/en/formalize-raises-30-million",
+       "excerpts": [
+        "Tracks the visitor across devices and marketing channels."
+       ]
+      }
+     ],
+     "reasoning": "The announced October 2025 Series B falls within the 18 months before the requested cutoff of 2026-11-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Formalize",
+       "url": "https://app.formalize.com/trust-center/58100b83-1724-40f9-b315-d573970a207d",
+       "excerpts": [
+        "ISO27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The trust-center certification listing names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Arcano Partners cut DORA reporting time by 85% | Formalize",
+       "url": "https://formalize.com/en/case-studies/arcano-partners",
+       "excerpts": [
+        "Arcano Partners cut DORA reporting time by 85%"
+       ]
+      }
+     ],
+     "reasoning": "The Formalize case study names Arcano Partners as a customer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Testimonials - Whistleblower Software by Formalize",
+       "url": "https://whistleblowersoftware.com/en/testimonials",
+       "excerpts": [
+        "Hanna Swarowsky"
+       ]
+      }
+     ],
+     "reasoning": "The Formalize customer testimonial identifies Moore TK.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Sales Development Representative - Norway - Formalize",
+       "url": "https://career.formalize.com/jobs/8625503-sales-development-representative-norway",
+       "excerpts": [
+        "A key contributor to our pipeline accuracy, maintaining high data quality and logging all customer interactions seamlessly in our CRM system (HubSpot)."
+       ]
+      }
+     ],
+     "reasoning": "The SDR job posting explicitly names HubSpot as the company's CRM.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2021.0,
+    "compliance_certs": [
+     "ISO 27001:2022"
+    ],
+    "hq_country": "Denmark",
+    "eng_blog": false,
+    "product_one_liner": "Formalize provides compliance software for organizations of all sizes to manage NIS2/DORA requirements, risk and audits, and whistleblowing cases.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic Claude models via Amazon Bedrock",
+    "pricing_page": true,
+    "funding_amount_usd": 34908600.0,
+    "named_customers": [
+     "Arcano Partners",
+     "Moore TK"
+    ],
+    "funding_date": "2025-10",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Copenhagen",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

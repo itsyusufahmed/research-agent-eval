@@ -1,0 +1,372 @@
+{
+ "run": {
+  "routine_run_id": "run_0toazzamQpoTrPWNE8r",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "nudge-global.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The blog index shows workplace financial-wellbeing insights, reports, awards/news and client stories, not posts about how the product is built by engineers.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://nudge-global.com/resources/newsblog"
+       ]
+      },
+      "reasoning": "All findings concern Nudge Global Ltd at nudge-global.com. Its first-party pages describe an employee financial-wellbeing platform, locate its global HQ in London, and date its founding to 2013; its Trust Center lists ISO 27001 and GDPR. The public site has a marketing/insights blog and an FAQ but no separate public pricing or product documentation portal. Current job listings include a Strategic Account Executive and a Senior Software Engineer, so sales hiring is active but no AI/ML role is listed. Dated announcements show a September 2026 personalized action-plan launch and October 2026 VP appointments. The latest identified funding was the 2021 Kennet growth-equity/Series A round, outside the 18-month period. Public AI materials do not identify a model vendor, while the privacy policy explicitly names HubSpot as its marketing platform.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.nudge-global.com/about",
+       "Visited https://trust.nudge-global.com/",
+       "Visited https://nudge-global.com/resources/newsblog",
+       "Visited https://www.nudge-global.com/clients/client-stories/meta",
+       "Visited https://www.nudge-global.com/clients/client-stories/siemens",
+       "Visited https://www.nudge-global.com/",
+       "Visited https://linkedin.com/company/nudge-global-ltd",
+       "Visited https://nudge-global.com/platform/powered-by-ai",
+       "Visited https://www.nudge-global.com/faq",
+       "Visited https://www.nudge-global.com/contact-us",
+       "Visited https://careers.nudge-global.com/jobs",
+       "Visited https://www.hello-nudge.com/news/nudge-appoints-debi-kesselring-and-greg-goebert-as-vice-presidents-u-s",
+       "Visited https://www.hello-nudge.com/news/nudge-funding-announcement",
+       "Visited https://www.nudge-global.com/privacy-policy",
+       "Visited https://www.hello-nudge.com/news/from-financial-education-to-a-personalized-financial-action-plan"
+      ],
+      "hq_location": {
+       "notes": "The contact page labels its London address as the Global HQ.",
+       "value": {
+        "city": "London",
+        "country": "United Kingdom"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/contact-us"
+       ]
+      },
+      "public_docs": {
+       "notes": "The site links to a single FAQ page but does not list a product documentation, help-center or developer portal in its navigation/footer.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/",
+        "https://www.nudge-global.com/faq"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The latest identified outside investment was the Kennet growth-equity/Series A round in March 2021, well before the 18-month window.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.hello-nudge.com/news/nudge-funding-announcement",
+        "https://linkedin.com/company/nudge-global-ltd"
+       ]
+      },
+      "founded_year": {
+       "notes": "The company says its founders’ idea became nudge in 2013.",
+       "value": 2013,
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/about"
+       ]
+      },
+      "last_funding": {
+       "notes": "Nudge’s March 2021 company announcement identifies Kennet Partners’ growth-equity investment; the company LinkedIn page’s linked funding record reports a $7 million Series A. Funding databases differ slightly on the month and round label.",
+       "value": {
+        "date": "2021-03",
+        "stage": "Series A",
+        "amount_usd": 7000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.hello-nudge.com/news/nudge-funding-announcement",
+        "https://linkedin.com/company/nudge-global-ltd"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Nudge announced personalized financial action plans on September 1, 2026, within the six-month window before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.hello-nudge.com/news/from-financial-education-to-a-personalized-financial-action-plan"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The homepage navigation/footer has no pricing link; the FAQ says pricing is customized and directs prospective customers to contact nudge for commercial options.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/",
+        "https://www.nudge-global.com/faq"
+       ]
+      },
+      "employee_band": {
+       "notes": "The company profile lists 116 employees.",
+       "value": "101-200",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/nudge-global-ltd"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The current job board lists a Strategic Account Executive opening.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://careers.nudge-global.com/jobs"
+       ]
+      },
+      "model_provider": {
+       "notes": "The AI page and FAQ identify numa as nudge’s AI but do not name an underlying model or provider; the Trust Center subprocessor listing was also checked and does not publicly identify one.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "Both are named in nudge client stories.",
+       "value": [
+        "Meta",
+        "Siemens"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/clients/client-stories/meta",
+        "https://www.nudge-global.com/clients/client-stories/siemens"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The current job board lists Strategic Account Executive and Senior Software Engineer; neither is an AI, ML or data-science role.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://careers.nudge-global.com/jobs"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The Trust Center names GDPR and ISO/IEC 27001 in its compliance list; other listed standards are outside the requested set.",
+       "value": [
+        "GDPR",
+        "ISO 27001"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://trust.nudge-global.com/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The privacy policy identifies a HubSpot marketing pixel and describes HubSpot as the marketing platform.",
+       "value": [
+        "HubSpot"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/privacy-policy"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "The homepage describes personalized financial education for employees as the core of employer financial-wellbeing programs.",
+       "value": "nudge gives employers a personalized financial-wellbeing platform that helps employees make better financial and benefits decisions through impartial financial education and guidance.",
+       "status": "asserted",
+       "citations": [
+        "https://www.nudge-global.com/"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "Nudge announced the appointment of Debi Kesselring and Greg Goebert as U.S. Vice Presidents on October 15, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.hello-nudge.com/news/nudge-appoints-debi-kesselring-and-greg-goebert-as-vice-presidents-u-s"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "nudge-global.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The blog index shows workplace financial-wellbeing insights, reports, awards/news and client stories, not posts about how the product is built by engineers.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://nudge-global.com/resources/newsblog"
+     ]
+    },
+    "reasoning": "All findings concern Nudge Global Ltd at nudge-global.com. Its first-party pages describe an employee financial-wellbeing platform, locate its global HQ in London, and date its founding to 2013; its Trust Center lists ISO 27001 and GDPR. The public site has a marketing/insights blog and an FAQ but no separate public pricing or product documentation portal. Current job listings include a Strategic Account Executive and a Senior Software Engineer, so sales hiring is active but no AI/ML role is listed. Dated announcements show a September 2026 personalized action-plan launch and October 2026 VP appointments. The latest identified funding was the 2021 Kennet growth-equity/Series A round, outside the 18-month period. Public AI materials do not identify a model vendor, while the privacy policy explicitly names HubSpot as its marketing platform.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.nudge-global.com/about",
+     "Visited https://trust.nudge-global.com/",
+     "Visited https://nudge-global.com/resources/newsblog",
+     "Visited https://www.nudge-global.com/clients/client-stories/meta",
+     "Visited https://www.nudge-global.com/clients/client-stories/siemens",
+     "Visited https://www.nudge-global.com/",
+     "Visited https://linkedin.com/company/nudge-global-ltd",
+     "Visited https://nudge-global.com/platform/powered-by-ai",
+     "Visited https://www.nudge-global.com/faq",
+     "Visited https://www.nudge-global.com/contact-us",
+     "Visited https://careers.nudge-global.com/jobs",
+     "Visited https://www.hello-nudge.com/news/nudge-appoints-debi-kesselring-and-greg-goebert-as-vice-presidents-u-s",
+     "Visited https://www.hello-nudge.com/news/nudge-funding-announcement",
+     "Visited https://www.nudge-global.com/privacy-policy",
+     "Visited https://www.hello-nudge.com/news/from-financial-education-to-a-personalized-financial-action-plan"
+    ],
+    "hq_location": {
+     "notes": "The contact page labels its London address as the Global HQ.",
+     "value": {
+      "city": "London",
+      "country": "United Kingdom"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/contact-us"
+     ]
+    },
+    "public_docs": {
+     "notes": "The site links to a single FAQ page but does not list a product documentation, help-center or developer portal in its navigation/footer.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/",
+      "https://www.nudge-global.com/faq"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The latest identified outside investment was the Kennet growth-equity/Series A round in March 2021, well before the 18-month window.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.hello-nudge.com/news/nudge-funding-announcement",
+      "https://linkedin.com/company/nudge-global-ltd"
+     ]
+    },
+    "founded_year": {
+     "notes": "The company says its founders’ idea became nudge in 2013.",
+     "value": 2013,
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/about"
+     ]
+    },
+    "last_funding": {
+     "notes": "Nudge’s March 2021 company announcement identifies Kennet Partners’ growth-equity investment; the company LinkedIn page’s linked funding record reports a $7 million Series A. Funding databases differ slightly on the month and round label.",
+     "value": {
+      "date": "2021-03",
+      "stage": "Series A",
+      "amount_usd": 7000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.hello-nudge.com/news/nudge-funding-announcement",
+      "https://linkedin.com/company/nudge-global-ltd"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Nudge announced personalized financial action plans on September 1, 2026, within the six-month window before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.hello-nudge.com/news/from-financial-education-to-a-personalized-financial-action-plan"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The homepage navigation/footer has no pricing link; the FAQ says pricing is customized and directs prospective customers to contact nudge for commercial options.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/",
+      "https://www.nudge-global.com/faq"
+     ]
+    },
+    "employee_band": {
+     "notes": "The company profile lists 116 employees.",
+     "value": "101-200",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/nudge-global-ltd"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The current job board lists a Strategic Account Executive opening.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://careers.nudge-global.com/jobs"
+     ]
+    },
+    "model_provider": {
+     "notes": "The AI page and FAQ identify numa as nudge’s AI but do not name an underlying model or provider; the Trust Center subprocessor listing was also checked and does not publicly identify one.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "Both are named in nudge client stories.",
+     "value": [
+      "Meta",
+      "Siemens"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/clients/client-stories/meta",
+      "https://www.nudge-global.com/clients/client-stories/siemens"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The current job board lists Strategic Account Executive and Senior Software Engineer; neither is an AI, ML or data-science role.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://careers.nudge-global.com/jobs"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The Trust Center names GDPR and ISO/IEC 27001 in its compliance list; other listed standards are outside the requested set.",
+     "value": [
+      "GDPR",
+      "ISO 27001"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://trust.nudge-global.com/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The privacy policy identifies a HubSpot marketing pixel and describes HubSpot as the marketing platform.",
+     "value": [
+      "HubSpot"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/privacy-policy"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "The homepage describes personalized financial education for employees as the core of employer financial-wellbeing programs.",
+     "value": "nudge gives employers a personalized financial-wellbeing platform that helps employees make better financial and benefits decisions through impartial financial education and guidance.",
+     "status": "asserted",
+     "citations": [
+      "https://www.nudge-global.com/"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "Nudge announced the appointment of Debi Kesselring and Greg Goebert as U.S. Vice Presidents on October 15, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.hello-nudge.com/news/nudge-appoints-debi-kesselring-and-greg-goebert-as-vice-presidents-u-s"
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,392 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob1kitXmeN6KTiihm",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "disprz.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The blog index is predominantly product, learning-industry, and marketing content; technical-sounding examples are by Product/Content Marketing authors, not engineers, and the evidence does not meet the two-engineer-post threshold.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/blog",
+        "https://disprz.ai/blog/autonomous-enablement-learning",
+        "https://disprz.ai/blog/disprz-launches-autonomous-enablement-os"
+       ]
+      },
+      "reasoning": "Answers use Disprz-specific official pages and profile/job sources. The about/contact pages distinguish a North America HQ in West Orange from a Corporate & Technology HQ in Chennai; the company LinkedIn page labels West Orange as its headquarters, so that is reported here. The official blog's posts and author descriptions do not establish an engineering blog. Funding is last evidenced by the $30 million Series C announcement in August 2023, outside the requested 18-month window. The dated September 2026 product announcement falls within the requested six-month window.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html",
+       "Visited https://compliance.disprz.ai/",
+       "Visited https://disprz.ai/blog",
+       "Visited https://disprz.ai/blog/autonomous-enablement-learning",
+       "Visited https://disprz.ai/blog/disprz-launches-autonomous-enablement-os",
+       "Visited https://disprz.ai/",
+       "Visited https://linkedin.com/company/13366982",
+       "Visited https://www.microsoft.com/en-in/aifirstmovers/disprz",
+       "Visited https://disprz.ai/pricing",
+       "Visited https://disprz.ai/company/about-us",
+       "Visited https://disprz.ai/blog/series-c-announcement",
+       "Visited https://linkedin.com/in/anand-venkatesan",
+       "Visited https://developer.disprz.com/",
+       "Visited https://disprz.atlassian.net/wiki/spaces/PS/pages/2760245302/Disprz+External+API+guide",
+       "Visited https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations",
+       "Visited https://www.ptinews.com/press-release/disprz-crosses-130-crore-arr-and-launches-autonomous-enablement-os-pioneering-a-new-category-beyond-traditional-l-d/4107975",
+       "Visited https://disprz.keka.com/careers/jobdetails/136668",
+       "Visited https://disprz.keka.com/careers"
+      ],
+      "hq_location": {
+       "notes": "LinkedIn identifies West Orange, New Jersey as company headquarters; Disprz separately labels Chennai its Corporate & Technology HQ.",
+       "value": {
+        "city": "West Orange",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/13366982",
+        "https://disprz.ai/contact-us"
+       ]
+      },
+      "public_docs": {
+       "notes": "Disprz has a public developer portal and an external API guide covering multiple API categories.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://developer.disprz.com/",
+        "https://disprz.atlassian.net/wiki/spaces/PS/pages/2760245302/Disprz+External+API+guide"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The latest identified round is the August 2023 Series C, before the 18-month window ending 2026-11-09.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/blog/series-c-announcement"
+       ]
+      },
+      "founded_year": {
+       "notes": "The funding announcement identifies Disprz as established in 2015.",
+       "value": 2015,
+       "status": "asserted",
+       "citations": [
+        "https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html"
+       ]
+      },
+      "last_funding": {
+       "notes": "The company's funding announcement states it raised $30 million in its Series C round.",
+       "value": {
+        "date": "2023-08",
+        "stage": "Series C",
+        "amount_usd": 30000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/blog/series-c-announcement"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Disprz announced the Autonomous Enablement OS on 2026-09-28, within six months before 2026-11-09.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/blog/disprz-launches-autonomous-enablement-os",
+        "https://www.ptinews.com/press-release/disprz-crosses-130-crore-arr-and-launches-autonomous-enablement-os-pioneering-a-new-category-beyond-traditional-l-d/4107975"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The public page is titled Plans and Pricing and lists plans, including a per-learner starting price.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "LinkedIn lists company size as 201–500 employees.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/13366982"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The careers listing includes an open role titled AD - Sales (Philippines).",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://disprz.keka.com/careers/jobdetails/136668",
+        "https://disprz.keka.com/careers"
+       ]
+      },
+      "model_provider": {
+       "notes": "Microsoft's Disprz feature says Azure OpenAI is used to drive personalization.",
+       "value": "Azure OpenAI",
+       "status": "asserted",
+       "citations": [
+        "https://www.microsoft.com/en-in/aifirstmovers/disprz"
+       ]
+      },
+      "named_customers": {
+       "notes": "The company homepage explicitly says these companies trust Disprz.",
+       "value": [
+        "Amazon",
+        "Axis Bank",
+        "Starbucks",
+        "Bharat Petroleum"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The active careers posting is titled AI Content Operations Intern and describes work supporting AI-generated content.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://disprz.keka.com/careers/jobdetails/140799"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The Trust Vault names these; GDPR is described as a privacy-framework compliance, not a certification.",
+       "value": [
+        "ISO 27001:2022",
+        "SOC 2 Type II",
+        "GDPR"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://compliance.disprz.ai/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The job description identifies HubSpot as its CRM and includes Avoma in the GTM/operational technology stack.",
+       "value": [
+        "HubSpot",
+        "Avoma"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Paraphrases the homepage description.",
+       "value": "Disprz is an AI-powered learning and skilling platform combining LMS, LXP, and AI content authoring to help enterprises build workforce capability at scale.",
+       "status": "asserted",
+       "citations": [
+        "https://disprz.ai/"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "The profile says Anand Venkatesan has been Head of Engineering at Disprz since March 2026 and identifies him as Senior Vice President & Head of Engineering, within the 12-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/in/anand-venkatesan"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "disprz.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The blog index is predominantly product, learning-industry, and marketing content; technical-sounding examples are by Product/Content Marketing authors, not engineers, and the evidence does not meet the two-engineer-post threshold.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/blog",
+      "https://disprz.ai/blog/autonomous-enablement-learning",
+      "https://disprz.ai/blog/disprz-launches-autonomous-enablement-os"
+     ]
+    },
+    "reasoning": "Answers use Disprz-specific official pages and profile/job sources. The about/contact pages distinguish a North America HQ in West Orange from a Corporate & Technology HQ in Chennai; the company LinkedIn page labels West Orange as its headquarters, so that is reported here. The official blog's posts and author descriptions do not establish an engineering blog. Funding is last evidenced by the $30 million Series C announcement in August 2023, outside the requested 18-month window. The dated September 2026 product announcement falls within the requested six-month window.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html",
+     "Visited https://compliance.disprz.ai/",
+     "Visited https://disprz.ai/blog",
+     "Visited https://disprz.ai/blog/autonomous-enablement-learning",
+     "Visited https://disprz.ai/blog/disprz-launches-autonomous-enablement-os",
+     "Visited https://disprz.ai/",
+     "Visited https://linkedin.com/company/13366982",
+     "Visited https://www.microsoft.com/en-in/aifirstmovers/disprz",
+     "Visited https://disprz.ai/pricing",
+     "Visited https://disprz.ai/company/about-us",
+     "Visited https://disprz.ai/blog/series-c-announcement",
+     "Visited https://linkedin.com/in/anand-venkatesan",
+     "Visited https://developer.disprz.com/",
+     "Visited https://disprz.atlassian.net/wiki/spaces/PS/pages/2760245302/Disprz+External+API+guide",
+     "Visited https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations",
+     "Visited https://www.ptinews.com/press-release/disprz-crosses-130-crore-arr-and-launches-autonomous-enablement-os-pioneering-a-new-category-beyond-traditional-l-d/4107975",
+     "Visited https://disprz.keka.com/careers/jobdetails/136668",
+     "Visited https://disprz.keka.com/careers"
+    ],
+    "hq_location": {
+     "notes": "LinkedIn identifies West Orange, New Jersey as company headquarters; Disprz separately labels Chennai its Corporate & Technology HQ.",
+     "value": {
+      "city": "West Orange",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/13366982",
+      "https://disprz.ai/contact-us"
+     ]
+    },
+    "public_docs": {
+     "notes": "Disprz has a public developer portal and an external API guide covering multiple API categories.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://developer.disprz.com/",
+      "https://disprz.atlassian.net/wiki/spaces/PS/pages/2760245302/Disprz+External+API+guide"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The latest identified round is the August 2023 Series C, before the 18-month window ending 2026-11-09.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/blog/series-c-announcement"
+     ]
+    },
+    "founded_year": {
+     "notes": "The funding announcement identifies Disprz as established in 2015.",
+     "value": 2015,
+     "status": "asserted",
+     "citations": [
+      "https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html"
+     ]
+    },
+    "last_funding": {
+     "notes": "The company's funding announcement states it raised $30 million in its Series C round.",
+     "value": {
+      "date": "2023-08",
+      "stage": "Series C",
+      "amount_usd": 30000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/blog/series-c-announcement"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Disprz announced the Autonomous Enablement OS on 2026-09-28, within six months before 2026-11-09.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/blog/disprz-launches-autonomous-enablement-os",
+      "https://www.ptinews.com/press-release/disprz-crosses-130-crore-arr-and-launches-autonomous-enablement-os-pioneering-a-new-category-beyond-traditional-l-d/4107975"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The public page is titled Plans and Pricing and lists plans, including a per-learner starting price.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "LinkedIn lists company size as 201–500 employees.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/13366982"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The careers listing includes an open role titled AD - Sales (Philippines).",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://disprz.keka.com/careers/jobdetails/136668",
+      "https://disprz.keka.com/careers"
+     ]
+    },
+    "model_provider": {
+     "notes": "Microsoft's Disprz feature says Azure OpenAI is used to drive personalization.",
+     "value": "Azure OpenAI",
+     "status": "asserted",
+     "citations": [
+      "https://www.microsoft.com/en-in/aifirstmovers/disprz"
+     ]
+    },
+    "named_customers": {
+     "notes": "The company homepage explicitly says these companies trust Disprz.",
+     "value": [
+      "Amazon",
+      "Axis Bank",
+      "Starbucks",
+      "Bharat Petroleum"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The active careers posting is titled AI Content Operations Intern and describes work supporting AI-generated content.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://disprz.keka.com/careers/jobdetails/140799"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The Trust Vault names these; GDPR is described as a privacy-framework compliance, not a certification.",
+     "value": [
+      "ISO 27001:2022",
+      "SOC 2 Type II",
+      "GDPR"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://compliance.disprz.ai/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The job description identifies HubSpot as its CRM and includes Avoma in the GTM/operational technology stack.",
+     "value": [
+      "HubSpot",
+      "Avoma"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Paraphrases the homepage description.",
+     "value": "Disprz is an AI-powered learning and skilling platform combining LMS, LXP, and AI content authoring to help enterprises build workforce capability at scale.",
+     "status": "asserted",
+     "citations": [
+      "https://disprz.ai/"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "The profile says Anand Venkatesan has been Head of Engineering at Disprz since March 2026 and identifies him as Senior Vice President & Head of Engineering, within the 12-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/in/anand-venkatesan"
+     ]
+    }
+   }
+  }
+ }
+}

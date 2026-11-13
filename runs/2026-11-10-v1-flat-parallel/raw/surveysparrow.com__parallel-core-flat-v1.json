@@ -1,0 +1,649 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e82984d88dfd2e2a6",
+  "interaction_id": "trun_142119f6a1b4439e82984d88dfd2e2a6",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "surveysparrow.com"
+  },
+  "created_at": "2026-11-10T18:48:39.546726Z",
+  "modified_at": "2026-11-10T18:51:26.126592Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e82984d88dfd2e2a6",
+   "interaction_id": "trun_142119f6a1b4439e82984d88dfd2e2a6",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "surveysparrow.com"
+   },
+   "created_at": "2026-11-10T18:48:39.546726Z",
+   "modified_at": "2026-11-10T18:51:26.126592Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Founded:** 2017"
+       ]
+      }
+     ],
+     "reasoning": "The company facts page states its founding year as 2017.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security - SurveySparrow",
+       "url": "https://surveysparrow.com/legal/security",
+       "excerpts": [
+        "SOC 2 Type II",
+        "ISO/IEC 27001",
+        "GDPR",
+        "HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow\u2019s public security page names SOC 2 Type II, ISO/IEC 27001, GDPR, and HIPAA, all within the requested certification list.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Headquarters:** 2261 Market Street, San Francisco, CA 94114, USA"
+       ]
+      }
+     ],
+     "reasoning": "The company facts page gives its headquarters address in San Francisco, USA.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Medium",
+       "url": "https://engineering.surveysparrow.com/slashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6",
+       "excerpts": [
+        "# Slashing QA Runtimes with Playwright Sharding on Kubernetes (k8s)",
+        "[Niranchan D](https://medium.com/@niranchan.d)",
+        "5 min read",
+        "\u00b7",
+        "Aug 28, 2025",
+        "[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fsurveysparrow-engineering%2Fb11c447952e6&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fslashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6&user=Niranchan+D&userId=50a326bc2ac1)",
+        "\\--",
+        "[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Frepost%2Fp%2Fb11c447952e6&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fslashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6&user=Niranchan+D&userId=50a326bc2ac1)",
+        "[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2Fb11c447952e6&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fslashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6)",
+        "[Listen](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost_audio_button%26postId%3Db11c447952e6&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fslashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6)",
+        "Share",
+        "_By Niranchan D, DevOps Team_",
+        "If you\u2019re in DevOps, you know the feeling. You get a notification that the nightly QA regression suite has started. You glance at the Jenkins build, see it\u2019s chugging along on a beefy worker node, and you know you won\u2019t see the results for hours. It\u2019s a monolithic beast, a single point of failure. A single instance failure wipes out the complete execution, and you\u2019re back to \u201cZERO\u201d .",
+        "This was our reality for a long time. While they were powerful tools, our traditional Pytest and Selenium suites, with their hundreds of test cases, presented a classic infrastructure challenge. Running them as a single, monolithic task meant they were slow to complete and fragile; any interruption meant starting over.",
+        "Then, a beacon appeared. Our QA team started adopting Playwright for their testing, and a particular feature got our DevOps Spidey-senses tingling: **sharding** .",
+        "### The Old Way: QA on One Fragile Node",
+        "_Let\u2019s quickly paint the \u201cbefore\u201d picture._",
+        "Press enter or click to view image in full size",
+        "Traditional Jenkins Pipeline: Sequential bottleneck with a single large worker instance running tests one after another, leading to slow execution and resource waste.",
+        "**Duration:** Hours. Sometimes, many hours.",
+        "> **The Risk:** If anything went wrong with the instance \u2014 a random crash, a resource spike, a network glitch \u2014 the whole multi-hour process was toast. We\u2019d have to restart the entire thing.",
+        "> ",
+        "> We weren\u2019t just wasting time; we were creating a massive bottleneck for our release cycle. We needed a more resilient, more parallel, and frankly, a more modern way to do this.",
+        "### The \u201cAha!\u201d Moment: Sharding + Kubernetes",
+        "Playwright\u2019s `--shard` flag is simple but brilliant. It lets you split your test suite into a number of independent \u201cshards\u201d or chunks. For example, you can tell Playwright, \u201cRun this suite, but only test case chunk 1 out of 5\u201d ( `--shard=1/5` ), and another runner can execute chunk 2 out of 5, and so on.",
+        "As soon as we saw this, the solution became obvious. Instead of one giant job, why not many small, independent jobs? And what\u2019s the perfect tool for running many small, independent jobs?",
+        "> **Kubernetes Jobs.**",
+        "By combining Playwright\u2019s application-level sharding with Kubernetes\u2019 infrastructure-level job management, we could build a system that was faster, cheaper, and way more robust."
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://engineering.surveysparrow.com/no-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775",
+       "excerpts": [
+        "# No Downtime, Just Upgrade: PostgreSQL v12 to v16",
+        "[Ganapathi Subramanian](https://medium.com/@ganapathi.surveysparrow)",
+        "13 min read",
+        "\u00b7",
+        "Mar 5, 2025",
+        "[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fvote%2Fsurveysparrow-engineering%2F167ddb42f775&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fno-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775&user=Ganapathi+Subramanian&userId=891d66975191)",
+        "\\--",
+        "[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Frepost%2Fp%2F167ddb42f775&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fno-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775&user=Ganapathi+Subramanian&userId=891d66975191)",
+        "[](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2F_%2Fbookmark%2Fp%2F167ddb42f775&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fno-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775)",
+        "[Listen](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost_audio_button%26postId%3D167ddb42f775&operation=register&redirect=https%3A%2F%2Fengineering.surveysparrow.com%2Fno-downtime-just-upgrade-postgresql-v12-to-v16-167ddb42f775)",
+        "Share",
+        "At SurveySparrow, high application availability is critical. With the growing demand for high performance and reliability, we embarked on upgrading our AWS Aurora PostgreSQL cluster from version 12 to 16. _The challenge? Upgrading without a second of downtime, ensuring a seamless experience for our customers._ Let\u2019s see how we achieved it.",
+        "## Making Sure It Fits: Compatibility Validation",
+        "The first step was to assess our application\u2019s compatibility with PostgreSQL 16.3. To do this, we deployed a test environment running PostgreSQL 16.3 and conducted extensive functional testing with the help of our quality assessments. Fortunately, no bugs were identified, allowing us to move forward with the next steps.",
+        "## The Goal in Focus",
+        "Aurora PostgreSQL 12 was approaching end-of-life (EOL), leaving us no choice but to upgrade to version 16. The migration came with its own set of challenges:",
+        "* **Durability:** No data loss.",
+        "* **Downtime Risk:** Ensuring a smooth cutover with no impact on the application\u2019s users.",
+        "* **Complexity:** Configuring replication, data synchronisation, and traffic redirection.",
+        "Our goal was clear \u2014 an end-to-end migration that would minimize risk, maximize efficiency, and ensure uninterrupted service.",
+        "## The Upgrade Roadmap",
+        "1. **Snapshot Restoration as the Baseline**  ",
+        "   As part of our upgrade plan, we would first [restore a snapshot](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/BackupRestoreAurora.html) of the source PostgreSQL 12 cluster to create the initial PostgreSQL 16 cluster. This approach ensures that the new cluster starts with a complete and consistent dataset.",
+        "2. **Logical Replication for Real-Time Sync:**  ",
+        "   After the snapshot restoration, we would enable logical replication to keep the PostgreSQL 16 cluster in sync with ongoing changes from the source PostgreSQL 12 cluster. This step ensures that live updates continue to be replicated, minimizing data lag during the migration.",
+        "3. **AWS DMS for Change Data Capture (CDC):**  ",
+        "   [AWS Database Migration Service](https://docs.aws.amazon.com/dms/latest/userguide/Welcome.html) (DMS) was used for CDC, enabling us to replicate changes between the clusters. This tool acted as a bridge between the two environments during the transition period.",
+        "4. **PgBouncer as a Traffic Manager:**  ",
+        "   [PgBouncer](https://www.pgbouncer.org/) was instrumental in managing the application\u2019s traffic during the cutover. It provided the flexibility to pause and resume traffic, ensuring a seamless transition when switching between clusters.",
+        "## Action Time: The Execution Phase",
+        "### Aurora Clusters Setup for Migration and Backup",
+        "To ensure a smooth and reliable migration, we carefully set up three Aurora PostgreSQL clusters, each with a distinct role:",
+        "* **DB-1:** PostgreSQL 12.6 (source cluster)",
+        "* **DB-2:** PostgreSQL 16.3 (target cluster)",
+        "* **DB-3:** PostgreSQL 12.6 (backup cluster)",
+        "Each cluster was configured to meet the demands of the migration process. Here are the steps we followed:",
+        "1. Adjusted parameters on **DB-1** (source cluster) to support logical replication:  ",
+        "   _set wal\\_sender\\_timeout=0  ",
+        "   Enabled rds.logical\\_replication=1 (a static parameter requiring a reboot)._",
+        "2. Created a replication slot in **DB-1** to initiate data replication.",
+        "3. Took a snapshot of **DB-1** to create a baseline backup.",
+        "4. Created two new clusters:  ",
+        "   **_DB-2_** _(target cluster)  ",
+        "   _ **_DB-3_** _(backup cluster)_",
+        "5. Created a new parameter group for **DB-2** to fine-tune PostgreSQL 16.3 settings.",
+        "6. Dropped the replication slot in **DB-2** after creation to avoid upgrade errors.  ",
+        "   _Logical replication slots must be removed prior to in-place upgrades; otherwise, the process fails with an error in the pg\\_upgrade.log_",
+        "7. Performed an in-place upgrade of DB-2 to PostgreSQL 16.3 from PostgreSQL 12.3.",
+        "8. The upgrade might leave behind outdated or fragmented indexes and tables, which can negatively impact query performance.  ",
+        "   **REINDEX** rebuilds all the indexes, ensuring they align with the new PostgreSQL version\u2019s internal structures, boosting query speed and accuracy.",
+        "9. **VACUUM** frees up unused space, updates statistics, and helps the database optimizer make smarter decisions for query execution.",
+        "10. Retained DB-3 as a backup cluster to mitigate any unforeseen issues during the migration process.  ",
+        "    _While AWS DMS supports bi-directional replication, we opted for a safer fallback approach by maintaining DB-3 as a backup cluster, as we were not entirely confident in DMS\u2019s conflict resolution capabilities, even with the loopback prevention mechanism in place._",
+        "11. Set up a replication slot in **DB-2** to enable ongoing synchronization during the final cutover.",
+        "Press enter or click to view image in full size",
+        "## AWS DMS Setup for replication and validation",
+        "### Understanding Replication Instances"
+       ]
+      }
+     ],
+     "reasoning": "The SurveySparrow Engineering publication contains at least two substantive posts by engineering/DevOps authors: one explains QA sharding with Kubernetes, and another details a production PostgreSQL upgrade and infrastructure migration.",
+     "confidence": "high"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is a platform that helps companies **hear** from their customers and **act** on what they say. Companies use it to collect feedback through surveys, chat, WhatsApp, email, and other channels;"
+       ]
+      },
+      {
+       "title": "SurveySparrow turns talk into traction for customer experience | AWS Startups",
+       "url": "https://startups.aws.com/learn/surveysparrow-turns-talk-into-traction-for-customer-experience",
+       "excerpts": [
+        "SurveySparrow was designed for mid-market brands which receive high volumes of feedback but lack the capabilities to gain intelligent insight. Its platform pulls together data from numerous touchpoints including email, apps, kiosks, socials, and review sites, and uses AI to help businesses cut through the noise, find what matters, and act fast."
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow describes feedback collection across multiple channels; AWS\u2019s company profile identifies its target as mid-market brands and notes AI-assisted insight and action.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "SurveySparrow | LinkedIn",
+       "url": "https://linkedin.com/company/13253328",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters San Francisco, California Type Privately Held Founded 2017"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile places SurveySparrow in the 201\u2013500 employee band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "Generative AI features use OpenAI (US) and Azure OpenAI (EU) as listed third-party providers (sub-processors). Customer data is not used to train AI models."
+       ]
+      },
+      {
+       "title": "SurveySparrow turns talk into traction for customer experience | AWS Startups",
+       "url": "https://aws.amazon.com/startups/learn/surveysparrow-turns-talk-into-traction-for-customer-experience",
+       "excerpts": [
+        "The team uses [Anthropic Claude Sonnet](https://aws.amazon.com/bedrock/anthropic) in [Amazon Bedrock](https://aws.amazon.com/bedrock) to power real-time summarization, clustering, and sentiment scoring."
+       ]
+      }
+     ],
+     "reasoning": "The company facts page identifies OpenAI and Azure OpenAI as generative-AI subprocessors; AWS\u2019s technical account also says Claude Sonnet on Bedrock powers summarization, clustering, and sentiment scoring. These are reported for different features/contexts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Online Survey Software Pricing & Plans | SurveySparrow",
+       "url": "https://surveysparrow.com/pricing",
+       "excerpts": [
+        "Choose a subscription that fits your needs."
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow has a public pricing page presenting subscription choices.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "SurveySparrow funding: rounds and investors | Millionrounds",
+       "url": "https://millionrounds.com/company/surveysparrow",
+       "excerpts": [
+        "Funding summary Updated 4 Nov 2026 **$1.4M** raised across 1 round since 2019, from 1 source Latest round Seed, $1.4M Apr 2019"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the latest round as a $1.4 million seed round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is used by companies such as **Siemens, Marshalls, TATA Digital, Hero MotoCorp, XMPie, Samana Group, Gyptech, GoStudent, Cohere Health, OceanFirst Bank, Caribbean Airlines, IHG Hotels & Resorts, Schlumberger, Mondelez International, and DHL** ."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s own facts page explicitly identifies Siemens and TATA Digital among companies using SurveySparrow.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "SurveySparrow funding: rounds and investors | Millionrounds",
+       "url": "https://millionrounds.com/company/surveysparrow",
+       "excerpts": [
+        "Funding summary Updated 4 Nov 2026 **$1.4M** raised across 1 round since 2019, from 1 source Latest round Seed, $1.4M Apr 2019"
+       ]
+      }
+     ],
+     "reasoning": "The latest-round entry dates the seed financing to April 2019.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s integrations section names Salesforce, Microsoft Dynamics 365, and HubSpot as CRM integrations.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "SurveySparrow - Executive Leadership | The Org",
+       "url": "https://theorg.com/org/surveysparrow/teams/executive-leadership",
+       "excerpts": [
+        "Executive Leadership",
+        "2 people \u00b7 0 jobs",
+        "This department provides strategic direction and oversight for the organization.",
+        "* * *",
+        "## People (2)",
+        "GR",
+        "Ganesh R.",
+        "Business Unit Head - Stealth (new Product)",
+        "Shihab Muhammed",
+        "Founder& CEO"
+       ]
+      },
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Co-founder and CEO:** Shihab Muhammed"
+       ]
+      }
+     ],
+     "reasoning": "The full small executive-leadership roster lists only Ganesh R. as Business Unit Head and Shihab Muhammed as Founder & CEO; no C-level or VP-level addition inside the preceding 12 months is shown. The identified CEO is described as a co-founder. No dated C-level/VP departure or appointment surfaced.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "SurveySparrow Careers & Jobs: 10 Open Jobs \u2013 November 2026 | Jobiba",
+       "url": "https://jobiba.com/company/surveysparrow-careers?tab=jobs",
+       "excerpts": [
+        "SurveySparrow is hiring: 10 open jobs on Jobiba as of 9 November 2026, including 3 in India.",
+        "[See 10jobs](https://jobiba.com/company/surveysparrow-careers?tab=jobs) Follow [Company site \u2197](https://surveysparrow.com/)",
+        "Hiring right now \u00b7 9 November 2026",
+        "**10** live jobs",
+        "**10** new in 30 days \u2014 no earlier 30 days to compare",
+        "[### Revenue Operations Analyst \ud83d\udccdChennai, Tamil Nadu, India ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/revenue-operations-analyst-surveysparrow-8f293e2d) [### Solution Engineer \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/solution-engineer-surveysparrow-834ad3d2) [### Business Development Representative - US \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/business-development-representative-us-surveysparrow-9ac7dcad) [### Product Marketer - SparrowCRM \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/product-marketer-sparrowcrm-surveysparrow-945cf3a1) [### Intern - Brand and Community Marketing \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/intern-brand-and-community-marketing-surveysparrow-d5a3d80a) [### Lead Solution Engineer \ud83d\udccdChennai, Tamil Nadu, India ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/lead-solution-engineer-surveysparrow-edd07068) [### Marketing Graphic Designer \ud83d\udccdChennai, Tamil Nadu, India ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/marketing-graphic-designer-surveysparrow-a8b7c6da) [### Senior Channel Sales Executive \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/senior-channel-sales-executive-surveysparrow-e12d10a3) [### Intern - Community Onboarding \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/intern-community-onboarding-surveysparrow-8fa4c7dc) [### Key Account Sales Specialist \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/key-account-sales-specialist-surveysparrow-1664f77d)"
+       ]
+      }
+     ],
+     "reasoning": "The dated job inventory lists all ten open job titles, including revenue operations, solution engineering, business development, marketing, and sales roles, but no AI/ML/data-science title. The source dates the inventory to 9 November 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "SurveySparrow funding: rounds and investors | Millionrounds",
+       "url": "https://millionrounds.com/company/surveysparrow",
+       "excerpts": [
+        "Funding summary Updated 4 Nov 2026 **$1.4M** raised across 1 round since 2019, from 1 source Latest round Seed, $1.4M Apr 2019"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding record identifies the round stage as Seed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "SurveySparrow APIs | Connect and REST assured",
+       "url": "https://developers.surveysparrow.com/",
+       "excerpts": [
+        "Unleash boundless potential with SurveySparrow's developer tools.",
+        "[Get Started](https://developers.surveysparrow.com/appnest/)"
+       ]
+      },
+      {
+       "title": "Integrating MS Dynamics 365 With SurveySparrow",
+       "url": "https://support.surveysparrow.com/hc/en/articles/14505450863389-Integrating-MS-Dynamics-365-With-SurveySparrow",
+       "excerpts": [
+        "Head to the ****Apps and Integrations**** section and search for ****MS Dynamics 365,**** then click on the toggle."
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow provides a public developer portal with a Get Started path and a separate public integration help article, meeting the multi-article/public documentation criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Headquarters:** 2261 Market Street, San Francisco, CA 94114, USA"
+       ]
+      }
+     ],
+     "reasoning": "The listed headquarters address locates the company in San Francisco.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "SurveySparrow Launches SparrowCRM, an AI-Native Sales CRM",
+       "url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/surveysparrow-launches-sparrowcrm-the-ai-native-agentic-crm-for-r-1216253",
+       "excerpts": [
+        "SurveySparrow Launches SparrowCRM - the AI-Native Agentic CRM for Revenue Teams Thursday, 03 September 2026 10:00 AM Topic: Product Announcements _**SurveySparrow launches**_ [_**SparrowCRM**_](https://www.sparrowcrm.com/) _**an AI-native, agentic CRM that runs the entire sales process, connecting context from every deal and driving the right actions throughout the sales pipeline.**_ **CALIFORNIA CITY, CA / [ACCESS Newswire](https://www.accessnewswire.com/) / September 3, 2026 /** SurveySparrow, trusted by over 10,000 businesses across 149 countries, has been steadily evolving into a multi-product company. ..."
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow announced the launch of SparrowCRM on 3 September 2026, within the six-month window ending 9 November 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "SurveySparrow Careers & Jobs: 10 Open Jobs \u2013 November 2026 | Jobiba",
+       "url": "https://jobiba.com/company/surveysparrow-careers?tab=jobs",
+       "excerpts": [
+        "SurveySparrow is hiring: 10 open jobs on Jobiba as of 9 November 2026, including 3 in India.",
+        "[See 10jobs](https://jobiba.com/company/surveysparrow-careers?tab=jobs) Follow [Company site \u2197](https://surveysparrow.com/)",
+        "Hiring right now \u00b7 9 November 2026",
+        "**10** live jobs",
+        "**10** new in 30 days \u2014 no earlier 30 days to compare",
+        "[### Revenue Operations Analyst \ud83d\udccdChennai, Tamil Nadu, India ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/revenue-operations-analyst-surveysparrow-8f293e2d) [### Solution Engineer \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/solution-engineer-surveysparrow-834ad3d2) [### Business Development Representative - US \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/business-development-representative-us-surveysparrow-9ac7dcad) [### Product Marketer - SparrowCRM \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/product-marketer-sparrowcrm-surveysparrow-945cf3a1) [### Intern - Brand and Community Marketing \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/intern-brand-and-community-marketing-surveysparrow-d5a3d80a) [### Lead Solution Engineer \ud83d\udccdChennai, Tamil Nadu, India ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/lead-solution-engineer-surveysparrow-edd07068) [### Marketing Graphic Designer \ud83d\udccdChennai, Tamil Nadu, India ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/marketing-graphic-designer-surveysparrow-a8b7c6da) [### Senior Channel Sales Executive \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/senior-channel-sales-executive-surveysparrow-e12d10a3) [### Intern - Community Onboarding \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/intern-community-onboarding-surveysparrow-8fa4c7dc) [### Key Account Sales Specialist \ud83d\udccdLocation flexible ACTIVE FULL\\_TIME Today View job \u2192](https://jobiba.com/job/key-account-sales-specialist-surveysparrow-1664f77d)"
+       ]
+      }
+     ],
+     "reasoning": "The dated current job board includes an active Business Development Representative - US opening, a qualifying BDR role.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "SurveySparrow funding: rounds and investors | Millionrounds",
+       "url": "https://millionrounds.com/company/surveysparrow",
+       "excerpts": [
+        "Funding summary Updated 4 Nov 2026 **$1.4M** raised across 1 round since 2019, from 1 source Latest round Seed, $1.4M Apr 2019"
+       ]
+      },
+      {
+       "title": "SurveySparrow Raises $1.4 million Seed Funding From Prime Venture Partners",
+       "url": "https://surveysparrow.com/newsroom/surveysparrow-raises-seed-funding-from-prime-venture-partners",
+       "excerpts": [
+        "has **raised $1.4 million** in **seed funding** from [Prime Venture Partners]"
+       ]
+      }
+     ],
+     "reasoning": "The latest round is identified as the April 2019 seed round, well before the 18-month period beginning 9 May 2025; the round announcement independently confirms it was seed funding.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security - SurveySparrow",
+       "url": "https://surveysparrow.com/legal/security",
+       "excerpts": [
+        "SOC 2 Type II"
+       ]
+      }
+     ],
+     "reasoning": "The public security page names SOC 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security - SurveySparrow",
+       "url": "https://surveysparrow.com/legal/security",
+       "excerpts": [
+        "ISO/IEC 27001"
+       ]
+      }
+     ],
+     "reasoning": "The public security page names ISO 27001.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Security - SurveySparrow",
+       "url": "https://surveysparrow.com/legal/security",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "The public security page names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Security - SurveySparrow",
+       "url": "https://surveysparrow.com/legal/security",
+       "excerpts": [
+        "HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "The public security page names HIPAA.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is used by companies such as **Siemens, Marshalls, TATA Digital, Hero MotoCorp, XMPie, Samana Group, Gyptech, GoStudent, Cohere Health, OceanFirst Bank, Caribbean Airlines, IHG Hotels & Resorts, Schlumberger, Mondelez International, and DHL** ."
+       ]
+      }
+     ],
+     "reasoning": "The company facts page names Siemens as an organization using SurveySparrow.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is used by companies such as **Siemens, Marshalls, TATA Digital, Hero MotoCorp, XMPie, Samana Group, Gyptech, GoStudent, Cohere Health, OceanFirst Bank, Caribbean Airlines, IHG Hotels & Resorts, Schlumberger, Mondelez International, and DHL** ."
+       ]
+      }
+     ],
+     "reasoning": "The company facts page names TATA Digital as an organization using SurveySparrow.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The integrations section names Salesforce as a CRM integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The integrations section names Microsoft Dynamics 365 as a CRM integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The integrations section names HubSpot as a CRM integration.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR",
+     "HIPAA"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "SurveySparrow helps companies, especially mid-market brands, collect customer feedback across surveys, chat, WhatsApp, email, and other channels, then analyze it and act on what customers say.",
+    "employee_band": "201-500",
+    "model_provider": "SurveySparrow names OpenAI (US) and Azure OpenAI (EU) for generative-AI features; AWS also reports Anthropic Claude Sonnet in Amazon Bedrock for summarization, clustering, and sentiment scoring.",
+    "pricing_page": true,
+    "funding_amount_usd": 1400000.0,
+    "named_customers": [
+     "Siemens",
+     "TATA Digital"
+    ],
+    "funding_date": "2019-04",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Microsoft Dynamics 365",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

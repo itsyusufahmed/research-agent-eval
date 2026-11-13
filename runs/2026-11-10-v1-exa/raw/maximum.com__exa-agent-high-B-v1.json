@@ -1,0 +1,895 @@
+{
+ "id": "agent_run_641f97922c804080b4a7bf3ce84ad11a",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T19:03:51.106Z",
+ "completedAt": "2026-11-10T19:08:13.179Z",
+ "request": {
+  "query": "Research the company Maximum (maximum.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Maximum provides an AI-native banking operating system for banks to modernize core infrastructure, automate operational workflows, and build and deploy custom agents.\",\"citations\":[\"https://maximum.com/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://maximum.com/\",\"https://maximum.com/pricing\"],\"notes\":\"No public pricing plans or pricing navigation were found; the pricing path returns the homepage content.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[],\"citations\":[\"https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure/\"],\"notes\":\"Only one named customer/design partner was verified: Emprise Bank, announced October 15, 2026; no second name was found. The empty list follows the requested fewer-than-two rule.\"},\"employee_band\":{\"status\":\"unknown\",\"citations\":[\"https://www.linkedin.com/company/maximum\"],\"notes\":\"The banking company reports 11\u201350 employees on LinkedIn, which cannot distinguish the requested 11\u201320 and 21\u201350 bands.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Miami\",\"country\":\"United States\"},\"citations\":[\"https://pitchbook.com/profiles/company/1474291-54\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2025,\"citations\":[\"https://pitchbook.com/profiles/company/1474291-54\",\"https://linkedin.com/in/randyfernando\"],\"notes\":\"PitchBook gives 2025, consistent with the founder\u2019s January 2025 start; the company LinkedIn page instead lists 2026, its public-launch year.\"},\"eng_blog\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No company blog was found; its newsroom contains external launch and investment coverage, not engineering posts.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://maximum.com/\",\"https://docs.maximum.com\"],\"notes\":\"The documentation portal is access-controlled and requires a work-email login code and access from a Maximum representative; no public multi-article documentation was found.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://maximum.com/careers\"],\"notes\":\"The listed roles are Senior Staff Software Engineer, Staff Software Engineer, and Senior Software Engineer; none has a qualifying AI/ML/data-science title.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No model provider was disclosed in the public site, newsroom, careers, terms, or privacy/subprocessor disclosures; product documentation requires access.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[],\"citations\":[\"https://maximum.com/privacy\"],\"notes\":\"The public legal/privacy page names none of the five requested certifications.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Seed\",\"date\":\"2026-08\",\"amount_usd\":30000000},\"citations\":[\"https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\",\"https://pitchbook.com/profiles/company/1474291-54\"],\"notes\":\"Announced August 3, 2026; PitchBook records this as its sole financing round.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\"],\"notes\":\"The August 3, 2026 seed announcement falls within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://maximum.com/careers\"],\"notes\":\"The public careers page lists only software-engineering openings.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\"],\"notes\":\"Maximum emerged from stealth on August 3, 2026, introducing its AI-native operating system for banks within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/alexsteiner1\"],\"notes\":\"Alex Steiner\u2019s profile dates his start as Chief Revenue Officer at Maximum to August 2026, within November 9, 2025\u2013November 9, 2026.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[],\"citations\":[\"https://maximum.com/careers\"],\"notes\":\"The readable job postings name no CRM or sales/marketing system.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "No company blog was found; its newsroom contains external launch and investment coverage, not engineering posts.",
+    "status": "unknown",
+    "citations": []
+   },
+   "hq_location": {
+    "value": {
+     "city": "Miami",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/1474291-54"
+    ]
+   },
+   "public_docs": {
+    "notes": "The documentation portal is access-controlled and requires a work-email login code and access from a Maximum representative; no public multi-article documentation was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/",
+     "https://docs.maximum.com"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The August 3, 2026 seed announcement falls within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+    ]
+   },
+   "founded_year": {
+    "notes": "PitchBook gives 2025, consistent with the founder\u2019s January 2025 start; the company LinkedIn page instead lists 2026, its public-launch year.",
+    "value": 2025,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/1474291-54",
+     "https://linkedin.com/in/randyfernando"
+    ]
+   },
+   "last_funding": {
+    "notes": "Announced August 3, 2026; PitchBook records this as its sole financing round.",
+    "value": {
+     "date": "2026-08",
+     "stage": "Seed",
+     "amount_usd": 30000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+     "https://pitchbook.com/profiles/company/1474291-54"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Maximum emerged from stealth on August 3, 2026, introducing its AI-native operating system for banks within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No public pricing plans or pricing navigation were found; the pricing path returns the homepage content.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/",
+     "https://maximum.com/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "The banking company reports 11\u201350 employees on LinkedIn, which cannot distinguish the requested 11\u201320 and 21\u201350 bands.",
+    "status": "unknown",
+    "citations": [
+     "https://www.linkedin.com/company/maximum"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The public careers page lists only software-engineering openings.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/careers"
+    ]
+   },
+   "model_provider": {
+    "notes": "No model provider was disclosed in the public site, newsroom, careers, terms, or privacy/subprocessor disclosures; product documentation requires access.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "notes": "Only one named customer/design partner was verified: Emprise Bank, announced October 15, 2026; no second name was found. The empty list follows the requested fewer-than-two rule.",
+    "value": [],
+    "status": "asserted",
+    "citations": [
+     "https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The listed roles are Senior Staff Software Engineer, Staff Software Engineer, and Senior Software Engineer; none has a qualifying AI/ML/data-science title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/careers"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The public legal/privacy page names none of the five requested certifications.",
+    "value": [],
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/privacy"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The readable job postings name no CRM or sales/marketing system.",
+    "value": [],
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/careers"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Maximum provides an AI-native banking operating system for banks to modernize core infrastructure, automate operational workflows, and build and deploy custom agents.",
+    "status": "asserted",
+    "citations": [
+     "https://maximum.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Alex Steiner\u2019s profile dates his start as Chief Revenue Officer at Maximum to August 2026, within November 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/alexsteiner1"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://maximum.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://maximum.com/"
+     },
+     {
+      "url": "https://maximum.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/maximum"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/1474291-54"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/1474291-54"
+     },
+     {
+      "url": "https://linkedin.com/in/randyfernando"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://maximum.com/"
+     },
+     {
+      "url": "https://docs.maximum.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://maximum.com/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://maximum.com/privacy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/1474291-54"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://maximum.com/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/alexsteiner1"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://maximum.com/careers"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

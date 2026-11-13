@@ -1,0 +1,24 @@
+{
+ "url": "https://docs.maia.ai/docs/guides/ai-note.md",
+ "fetched_at": "2026-11-11T01:28:51.698438+00:00",
+ "hours_after_run": 49.5,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "47e3555ab6140bd61727e562d285610910dffc853ea341322a0e8637a554c927",
+ "chars": 3421,
+ "truncated": false,
+ "title": "",
+ "markdown": "> ## Documentation Index\n> Fetch the complete documentation index at: https://docs.maia.ai/llms.txt\n> Use this file to discover all available pages before exploring further.\n\n# Pipeline notes\n\nThis feature is only available to customers on specific Maia plans. Visit the Maia [Pricing](https://www.maia.ai/pricing) page to learn more.\n\nAs a Maia user, you can invoke [Maia, your agentic data team](https://docs.maia.ai/docs/guides/maia-team-overview.md) to annotate your data pipelines using notes. Notes contextualize each component in your pipeline using its metadata, making collaboration clearer and easier.\n\nYou can edit notes directly in Maia using Markdown. Standard [Markdown](https://www.markdownguide.org/) formatting applies.\n\n***\n\n## Video example\n\n[YouTube video player](https://www.youtube.com/embed/Z0McyoyVUYI?si=7rRi7_tH6c1MH9E3\\&enablejsapi=1)\n\n***\n\n## Maia notes: metadata and usage\n\nThe Maia-powered note feature uses a private large language model (LLM), hosted in Matillion's own secure AWS infrastructure.\n\n* **No customer data is sent to the large language model.** AI notes are generated using the metadata of components in a pipeline in the form of Matillion's proprietary language, \"DPL\"—the Data Pipeline Language. For example, the parameters of a component are included in the DPL as metadata, but the contents of your tables and files are **not** included.\n* The generation of AI notes is performed in a \"zero-shot\" fashion, meaning the large language model is taken \"as-is\" and has **not** been reinforced, fine-tuned, or otherwise modified with customer data.\n* Data warehouse credits are **not** consumed as part of the usage of this model.\n* Secrets are externalized in a vault and are **never** sent to an AI model.\n\n***\n\n## Create a note using Maia\n\n### Create a Maia note for a single component in a pipeline:\n\n1. Right-click a component and click **Add note using Maia**.\n2. If you're happy with the generated note, click **Add**. To try again, click **Refine**.\n   * Click **Elaborate** to add more detail to the note.\n   * Click **Shorten** to reduce the size and detail of the note.\n   * Click **Regenerate** to generate a fresh note.\n\n### Create a Maia note for multiple components in a pipeline:\n\n1. Hold the `SHIFT` key and use left-click and drag to draw a box around the components to include in the AI note.\n2. Right-click anywhere on the canvas and click **Add note using Maia**.\n3. If you're happy with the generated note, click **Add**. To try again, click **Refine**.\n   * Click **Elaborate** to add more detail to the note.\n   * Click **Shorten** to reduce the size and detail of the note.\n   * Click **Regenerate** to generate a fresh note.\n\n***\n\n## Edit a note\n\n* Use the hand cursor to move a note via left-click and drag.\n* Use the resize cursor to adjust the height and width of a note.\n* Once a note has been added, click the contents of the note and the raw Markdown will be exposed and can be edited. Standard [Markdown](https://www.markdownguide.org/) formatting applies.\n* Click the info button ⓘ above the note to visit [https://commonmark.org/help/](https://commonmark.org/help/) to learn more about Markdown.\n* Click the rounded-square button to change the color of the note.\n* Click the trashcan button above the note to **delete** the note.\n\n\nThis documentation is built and hosted on [Mintlify](https://mintlify.com), a developer documentation platform.",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-11T01:07:54.554783+00:00",
+ "hours_after_launch": 0.35
+}

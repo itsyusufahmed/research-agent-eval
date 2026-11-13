@@ -1,0 +1,397 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eaacd4c6f0fc20d01",
+  "interaction_id": "trun_142119f6a1b4439eaacd4c6f0fc20d01",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "maximum.com"
+  },
+  "created_at": "2026-11-10T18:48:33.384636Z",
+  "modified_at": "2026-11-10T18:56:40.145222Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eaacd4c6f0fc20d01",
+   "interaction_id": "trun_142119f6a1b4439eaacd4c6f0fc20d01",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "maximum.com"
+   },
+   "created_at": "2026-11-10T18:48:33.384636Z",
+   "modified_at": "2026-11-10T18:56:40.145222Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/1474291-54",
+       "excerpts": [
+        "Maximum Overview Update this profile * Year Founded 2025"
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/randyfernando",
+       "excerpts": [
+        "start date year: 2025"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook reports 2025, consistent with the founder's Maximum role beginning in 2025. The company LinkedIn page instead lists 2026, so the year is not unanimous. Sources: https://pitchbook.com/profiles/company/1474291-54 and https://linkedin.com/in/randyfernando.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system. \u00b7 Privacy Policy",
+       "url": "https://maximum.com/privacy",
+       "excerpts": [
+        "Security We use industry-standard physical, technical, and administrative safeguards (such as encryption and firewalls"
+       ]
+      }
+     ],
+     "reasoning": "The readable privacy policy describes security safeguards but names none of SOC 2, ISO 27001, HIPAA, GDPR or PCI DSS. This is an empty disclosure list, not a claim that Maximum lacks certifications. Source: https://maximum.com/privacy.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Maximum \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/maximum",
+       "excerpts": [
+        "Headquarters Miami, United States"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly identifies its headquarters as Miami, United States. Source: https://dealroom.co/companies/maximum.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/blog",
+       "excerpts": [
+        "[Home](https://maximum.com/) [Newsroom](https://maximum.com/newsroom) [Careers](https://maximum.com/careers) [LinkedIn (opens in new window)](https://www.linkedin.com/company/maximum/) Legal [Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility"
+       ]
+      },
+      {
+       "title": "Maximum \u00b7 Newsroom",
+       "url": "https://maximum.com/newsroom",
+       "excerpts": [
+        "FEATURED New fintech Maximum aims to take on the core banking cabal AMERICAN BANKER AUGUST 2026"
+       ]
+      }
+     ],
+     "reasoning": "No actual company blog was found: /blog serves homepage-style content, while the newsroom lists external press and investor coverage. Under the rule that no blog at all means unknown, this remains null rather than false. Sources: https://maximum.com/blog and https://maximum.com/newsroom.",
+     "confidence": "low"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Emprise Bank Selects Maximum to Power Its Next Generation of Banking Infrastructure - Emprise Bank",
+       "url": "https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure",
+       "excerpts": [
+        "Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core, providing an environment for banks to build and deploy custom agents to automate complex operational workflows, gain real-time visibility into customer activity, and deliver innovative financial products to drive growth for the bank."
+       ]
+      }
+     ],
+     "reasoning": "The description explicitly identifies an AI-native operating system for banks and specifies workflow automation, real-time customer visibility and financial-product development. Source: https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://www.linkedin.com/company/maximum/",
+       "excerpts": [
+        "employee count: 11",
+        "Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core, providing an environment for banks to build and deploy custom agents to automate complex operational workflows, gain real-time visibility into customer activity, and deliver innovative financial products to drive growth for the bank. Maximum unlocks the ambition of banking leaders, delivering a comprehensive platform purpose-built to power banking for the next century."
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn profile for the banking company reports an employee count of 11, placing it in 11-20. LinkedIn-associated headcount may differ from payroll headcount. Source: https://www.linkedin.com/company/maximum/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system. \u00b7 Privacy Policy",
+       "url": "https://maximum.com/privacy",
+       "excerpts": [
+        "Below are the circumstances in which we may share information: Maximum works with third-party service providers"
+       ]
+      },
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/",
+       "excerpts": [
+        "AI-native technology for banks."
+       ]
+      }
+     ],
+     "reasoning": "No model or provider was publicly identifiable in the inspected product content, security material, privacy-provider disclosures or press coverage. The privacy policy describes service providers generically, and public documentation was not found. Sources: https://maximum.com/privacy and https://maximum.com/.",
+     "confidence": "low"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/",
+       "excerpts": [
+        "Company [Home](https://maximum.com/) [Newsroom](https://maximum.com/newsroom) [Careers](https://maximum.com/careers) [LinkedIn (opens in new window)](https://www.linkedin.com/company/maximum/) Legal [Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility",
+        "Request access"
+       ]
+      }
+     ],
+     "reasoning": "The homepage offers Request access and has no pricing link in its navigation or footer; checking /pricing did not produce a public pricing page. Source: https://maximum.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/1474291-54",
+       "excerpts": [
+        "Latest Deal Type Seed * Latest Deal Amount $30M"
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/maximum",
+       "excerpts": [
+        "Today, we're introducing <a class=\"link\" href=\"https://www.linkedin.com/company/maximum?trk=public_post_reshare-text\" target=\"_self\" data-tracking-control-name=\"public_post_reshare-text\" data-tracking-will-navigate=\"\">Maximum</a> as we emerge from stealth with a $30 million Seed round"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook identifies the latest financing as a $30 million seed round, also announced by Maximum. The amount converts to USD 30,000,000. Sources: https://pitchbook.com/profiles/company/1474291-54 and https://linkedin.com/company/maximum.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Emprise Bank Selects Maximum to Power Its Next Generation of Banking Infrastructure - Emprise Bank",
+       "url": "https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure",
+       "excerpts": [
+        "15, 2026** \u2014 Emprise Bank has announced a design partnership with Maximum, an AI-native banking infrastructure company, to transform its core banking system."
+       ]
+      }
+     ],
+     "reasoning": "Two qualifying customer names could not be established. The closest announcement explicitly describes Emprise Bank as a design partner, which is excluded by the question's partner rule. No qualifying customer directory, case-study collection or Maximum-specific review listing was found to justify an empty-list answer. Source: https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure.",
+     "confidence": "low"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/1474291-54",
+       "excerpts": [
+        "Latest Deal Type Seed * Latest Deal Amount $30M * Investors 5 Maximum General Information Description Developer of an AI-native operating system designed for the banking industry. ... |Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |03-Aug-2026"
+       ]
+      }
+     ],
+     "reasoning": "The latest financing table dates the seed round August 3, 2026, giving 2026-08 in the requested format. Source: https://pitchbook.com/profiles/company/1474291-54.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Maximum \u00b7 Careers",
+       "url": "https://maximum.com/careers",
+       "excerpts": [
+        "Own a domain service end to end: schema, gRPC API, workflows, event consumers, tests, and the docs that explain why you built it the way you did.",
+        "We use AI coding agents heavily, and directing them is part of the job."
+       ]
+      }
+     ],
+     "reasoning": "The readable careers page contains detailed engineering responsibilities and tool-use expectations, but names no CRM or sales/marketing system. Source: https://maximum.com/careers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/randyfernando",
+       "excerpts": [
+        "start date: 2025-01-01",
+        "title: Founder & CEO"
+       ]
+      }
+     ],
+     "reasoning": "The founder's profile places his CEO role before the window. No dated qualifying appointment or departure was verified, and no complete, checkable leadership roster was available; therefore false cannot be established. Source: https://linkedin.com/in/randyfernando.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Maximum \u00b7 Careers",
+       "url": "https://maximum.com/careers",
+       "excerpts": [
+        "Senior Staff Software Engineer Location: Remote (US or Canada)",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Senior%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Senior%20Staff%20Software%20Engineer) with the subject line \u201cSenior Staff Software Engineer",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer) with the subject line \u201cStaff Software Engineer\u201d. ## Senior Software Engineer"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists Senior Staff Software Engineer, Staff Software Engineer and Senior Software Engineer. None has a qualifying AI, ML or data-science title; using AI coding agents within these roles does not qualify. Source: https://maximum.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/1474291-54",
+       "excerpts": [
+        "Latest Deal Type Seed * Latest Deal Amount $30M * Investors 5 Maximum General Information Description Developer of an AI-native operating system designed for the banking industry. ... |Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round"
+       ]
+      }
+     ],
+     "reasoning": "The company financing profile explicitly labels the latest deal Seed. Source: https://pitchbook.com/profiles/company/1474291-54.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/",
+       "excerpts": [
+        "Company [Home](https://maximum.com/) [Newsroom](https://maximum.com/newsroom) [Careers](https://maximum.com/careers) [LinkedIn (opens in new window)](https://www.linkedin.com/company/maximum/) Legal [Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation and footer contain no documentation, help-center or developer-portal link. Checks of the docs and help subdomains did not yield public documentation. Source: https://maximum.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Maximum \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/maximum",
+       "excerpts": [
+        "Headquarters Miami, United States"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly names Miami as its headquarters city. Source: https://dealroom.co/companies/maximum.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "New fintech Maximum aims to take on the core banking cabal | American Banker",
+       "url": "https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal",
+       "excerpts": [
+        "Published August 03, 2026, 1:45 p.m.",
+        "Randy Fernando is formally launching his latest startup, Maximum, with a $30 million seed funding round led by CRV."
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/maximum",
+       "excerpts": [
+        "Today, we're introducing <a class=\"link\" href=\"https://www.linkedin.com/company/maximum?trk=public_post_reshare-text\" target=\"_self\" data-tracking-control-name=\"public_post_reshare-text\" data-tracking-will-navigate=\"\">Maximum</a> as we emerge from stealth"
+       ]
+      }
+     ],
+     "reasoning": "Maximum's August 3, 2026 public introduction falls inside the six-month window and qualifies as an introducing/announcing item under the supplied rule. This refers to the public launch announcement, not verified general availability. Sources: https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal and https://linkedin.com/company/maximum.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Maximum \u00b7 Careers",
+       "url": "https://maximum.com/careers",
+       "excerpts": [
+        "Senior Staff Software Engineer Location: Remote (US or Canada)",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Senior%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Senior%20Staff%20Software%20Engineer) with the subject line \u201cSenior Staff Software Engineer",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer) with the subject line \u201cStaff Software Engineer\u201d. ## Senior Software Engineer"
+       ]
+      }
+     ],
+     "reasoning": "The readable careers page lists only three software-engineering titles, with no SDR, BDR or account-executive opening. Source: https://maximum.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/1474291-54",
+       "excerpts": [
+        "Latest Deal Type Seed * Latest Deal Amount $30M * Investors 5 Maximum General Information Description Developer of an AI-native operating system designed for the banking industry. ... |Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |03-Aug-2026"
+       ]
+      }
+     ],
+     "reasoning": "The completed August 3, 2026 seed financing falls within the 18 months before November 9, 2026. Source: https://pitchbook.com/profiles/company/1474291-54.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2025.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": null,
+    "product_one_liner": "Maximum provides an AI-native operating system for banks to automate operational workflows, monitor customer activity in real time, and develop financial products.",
+    "employee_band": "11-20",
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": 30000000.0,
+    "named_customers": null,
+    "funding_date": "2026-08",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": false,
+    "hq_city": "Miami",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

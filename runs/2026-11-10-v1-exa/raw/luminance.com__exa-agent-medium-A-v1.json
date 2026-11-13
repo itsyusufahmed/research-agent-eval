@@ -1,0 +1,951 @@
+{
+ "id": "agent_run_8b3592ebd8ff4cc5868e5ddb73ebb6a3",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T19:10:53.069Z",
+ "completedAt": "2026-11-10T19:11:49.198Z",
+ "request": {
+  "query": "Research the company Luminance (luminance.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "medium"
+ },
+ "error": null,
+ "output": {
+  "text": "Research current to 2026-11-09; dates and time-window judgments use the explicit reference date in the request.",
+  "structured": {
+   "eng_blog": {
+    "notes": "The accessible blog material is primarily marketing, product and employee-profile content; the reviewed index does not establish a dedicated engineering/technical blog with at least two qualifying engineer-authored build posts.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/resources/index",
+     "https://www.luminance.com/blogs/a-day-in-the-life-david-quick-senior-research-architect",
+     "https://www.luminance.com/blogs/a-day-in-the-life-asha-patel-machine-learning-research-engineer"
+    ]
+   },
+   "hq_location": {
+    "notes": "",
+    "value": {
+     "city": "Cambridge",
+     "country": "United Kingdom"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/luminancetech",
+     "https://find-and-update.company-information.service.gov.uk/company/09857705"
+    ]
+   },
+   "public_docs": {
+    "notes": "The public API documentation exposes multiple API versions.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://api.luminance.com/swagger-docs"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest identified round was announced in February 2025, before the 18-month window beginning 2025-05-09.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments"
+    ]
+   },
+   "founded_year": {
+    "notes": "",
+    "value": 2015,
+    "status": "asserted",
+    "citations": [
+     "https://find-and-update.company-information.service.gov.uk/company/09857705",
+     "https://linkedin.com/company/luminancetech"
+    ]
+   },
+   "last_funding": {
+    "notes": "",
+    "value": {
+     "date": "2025-02",
+     "stage": "Series C",
+     "amount_usd": 75000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "The cited launch/update posts are dated June 19, 2026 and October 8, 2026, both within the six-month window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/blogs/the-era-of-vertical-ai-is-here-introducing-luna-crescent-luminances-proprietary-legal-intelligence-model",
+     "https://www.luminance.com/blogs/agentic-contract-workflows-and-negotiation"
+    ]
+   },
+   "pricing_page": {
+    "notes": "The public site presents a demo/contact call to action and does not expose a public pricing page in the reviewed navigation/footer.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/"
+    ]
+   },
+   "employee_band": {
+    "notes": "The cited company profile reports 417 employees.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/luminancetech"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "A live Business Development Representative posting is available.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.workable.com/view/ayXwTA8jZpVUi4WsFjUrJZ/hybrid-business-development-representative-in-sydney-at-luminance"
+    ]
+   },
+   "model_provider": {
+    "notes": "",
+    "value": "Luna Crescent (Luminance's proprietary legal-intelligence model); the published subprocessor list also names OpenAI for additional generative-model processing and AWS, Microsoft Azure and Google Cloud for in-cloud model processing.",
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/platform/technology",
+     "https://www.luminance.com/legal/subprocessors",
+     "https://www.luminance.com/blogs/the-era-of-vertical-ai-is-here-introducing-luna-crescent-luminances-proprietary-legal-intelligence-model"
+    ]
+   },
+   "named_customers": {
+    "notes": "",
+    "value": [
+     "AMD",
+     "Hitachi",
+     "LG Chem",
+     "SiriusXM",
+     "Rolls-Royce",
+     "Lamborghini"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The open job-board results reviewed list roles such as Applications Engineer and R&D Engineer, but no title containing AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.workable.com/company/w8FTn8rfvq841JEwq3ERiy/jobs-at-luminance",
+     "https://jobs.workable.com/view/x3fKPWKKJSfxWcL328Wt14/hybrid-applications-engineer-in-cambridge-at-luminance",
+     "https://jobs.workable.com/view/9vtKs55K3Uc3WfBMzJkkQ2/hybrid-r%26d-engineer-in-cambridge-at-luminance"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "",
+    "value": [
+     "ISO 27001",
+     "SOC 2"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/security"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "",
+    "value": [
+     "Salesforce"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/blogs/how-are-commercial-teams-using-luminance%E2%80%99s-legal-grade%E2%84%A2-ai"
+    ]
+   },
+   "product_one_liner": {
+    "notes": "",
+    "value": "Luminance is a contract-intelligence platform that uses legal AI to help Legal, Procurement, Finance, Sales and other enterprise teams discover risk, negotiate agreements and automate contract workflows.",
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "The December 10, 2025 announcement says Kim Winter joined as Vice President of Marketing, within the 12-month window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.luminance.com/press-releases/luminance-deepens-u-s-leadership-bench-as-region-delivers-2-5x-revenue-growth"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/luminancetech"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/luminancetech"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09857705"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/09857705"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/resources/index"
+     },
+     {
+      "url": "https://www.luminance.com/blogs/a-day-in-the-life-david-quick-senior-research-architect"
+     },
+     {
+      "url": "https://www.luminance.com/blogs/a-day-in-the-life-asha-patel-machine-learning-research-engineer"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://api.luminance.com/swagger-docs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://jobs.workable.com/company/w8FTn8rfvq841JEwq3ERiy/jobs-at-luminance"
+     },
+     {
+      "url": "https://jobs.workable.com/view/x3fKPWKKJSfxWcL328Wt14/hybrid-applications-engineer-in-cambridge-at-luminance"
+     },
+     {
+      "url": "https://jobs.workable.com/view/9vtKs55K3Uc3WfBMzJkkQ2/hybrid-r%26d-engineer-in-cambridge-at-luminance"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/platform/technology"
+     },
+     {
+      "url": "https://www.luminance.com/legal/subprocessors"
+     },
+     {
+      "url": "https://www.luminance.com/blogs/the-era-of-vertical-ai-is-here-introducing-luna-crescent-luminances-proprietary-legal-intelligence-model"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/security"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://jobs.workable.com/view/ayXwTA8jZpVUi4WsFjUrJZ/hybrid-business-development-representative-in-sydney-at-luminance"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/blogs/the-era-of-vertical-ai-is-here-introducing-luna-crescent-luminances-proprietary-legal-intelligence-model"
+     },
+     {
+      "url": "https://www.luminance.com/blogs/agentic-contract-workflows-and-negotiation"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/press-releases/luminance-deepens-u-s-leadership-bench-as-region-delivers-2-5x-revenue-growth"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://www.luminance.com/blogs/how-are-commercial-teams-using-luminance%E2%80%99s-legal-grade%E2%84%A2-ai"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 0.4,
+  "searches": 12,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.1,
+  "agentCompute": 0.04,
+  "search": 0.06,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

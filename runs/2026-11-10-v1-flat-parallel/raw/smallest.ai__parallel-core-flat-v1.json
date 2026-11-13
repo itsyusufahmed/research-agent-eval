@@ -1,0 +1,592 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb861a68ee4575263",
+  "interaction_id": "trun_142119f6a1b4439eb861a68ee4575263",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "smallest.ai"
+  },
+  "created_at": "2026-11-10T18:47:54.137892Z",
+  "modified_at": "2026-11-10T18:51:15.368908Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb861a68ee4575263",
+   "interaction_id": "trun_142119f6a1b4439eb861a68ee4575263",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "smallest.ai"
+   },
+   "created_at": "2026-11-10T18:47:54.137892Z",
+   "modified_at": "2026-11-10T18:51:15.368908Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "smallest.ai | LinkedIn",
+       "url": "https://linkedin.com/company/smallest",
+       "excerpts": [
+        "Founded 2023"
+       ]
+      }
+     ],
+     "reasoning": "The Smallest.ai LinkedIn company profile states it was founded in 2023.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Careers | Smallest AI",
+       "url": "https://smallest.ai/careers",
+       "excerpts": [
+        "[We are SOC 2, GDPR, and HIPAA compliant](https://security.smallest.ai/?tab=overview)"
+       ]
+      },
+      {
+       "title": "Smallest Inc. Trust Center | Konfirmity",
+       "url": "https://security.smallest.ai/",
+       "excerpts": [
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "Smallest.ai\u2019s careers page says it is SOC 2, GDPR, and HIPAA compliant; its trust-center evidence names ISO 27001:2022. These are the named public claims included; the PCI claim is not stated as PCI DSS on the cited sources.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "smallest.ai | LinkedIn",
+       "url": "https://linkedin.com/company/smallest",
+       "excerpts": [
+        "San Francisco, California, US"
+       ]
+      }
+     ],
+     "reasoning": "The company profile places Smallest.ai in San Francisco, California, US, establishing the country as the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Lightning on Tenstorrent: 4\u00d7 Less Cost Than NVIDIA - Smallest.ai",
+       "url": "https://smallest.ai/blog/rewriting-tts-inference-economics-lightning-v2-on-tenstorrent-achieves-4%C3%97-lower-cost-than-nvidia-l40s",
+       "excerpts": [
+        "Hardware-Level Leverage: Why Tenstorrent Matters Nvidia GPUs are built around massively parallel Streaming Multiprocessors (SMs). While extremely powerful for throughput workloads, SMs operate largely as independent execution units. ... For single-stream Real-time TTS inference, you cannot rely on batching to amortize this cost. You pay the full memory latency every time. How Tenstorrent Changes the Equation Tenstorrent\u2019s architecture introduces a Network-on-Chip (NoC) connecting compute cores directly, alongside large distributed SRAM. This enables: ... This fundamentally changes the cost-performance equation. BlockFloat8 is not merely available \u2014 it becomes economically viable for real-time inference, including smaller and mid-sized TTS models ... Our latest model, **Lightning V3** , already surpasses V2 in quality and architectural efficiency. We plan to deploy Lightning V3 on Tenstorrent with the same co-design principles, targeting similar"
+       ]
+      },
+      {
+       "title": "Ranjith M S \u2013 Voice AI Author | Smallest.ai",
+       "url": "https://smallest.ai/author/ranjith-m-s",
+       "excerpts": [
+        "Ranjith M S Senior AI Inference Performance Engineer Company Features Industries Research Ranjith M S is a Senior AI Inference Performance Engineer at Smallest AI. He focuses on making the company's voice models run fast and efficiently, optimizing inference for the low-latency performance real-time voice demands."
+       ]
+      },
+      {
+       "title": "Electron V2: A SLM powering real time - Smallest.ai",
+       "url": "https://smallest.ai/blog/electron-v2-a-slm-powering-real-time-conversations-by-smallestai",
+       "excerpts": [
+        "Electron V2, by Smallest.ai, is a Small Language Model (SLM) engineered to dominate the intelligence layer for real-time, impactful voice conversations. It excels where enterprises need it most: industry-leading speed, exceptional reliability, and superior cost-effectiveness. ... We benchmark Electron V2 against leading LLMs on **Latency (Time to First Byte - TTFB)** and a comprehensive **Performance Score** (judged by SOTA LLM models across Instruction Following, ... Its high score, especially when considering its likely significantly smaller parameter count compared to giants like GPT-4o or Llama-3.3-70b, highlights exceptional efficiency. This translates to lower inference costs, reduced memory, faster responses, and wider deployability. ... For enterprises prioritizing quality, reliability, and cost efficiency in their conversational workflows, Electron V2 is the strategic choice. [Akshat Mandloi](https://smallest.ai/author/akshat-mandloi)"
+       ]
+      },
+      {
+       "title": "Akshat Mandloi \u2013 Voice AI Author | Smallest.ai",
+       "url": "https://smallest.ai/author/akshat-mandloi",
+       "excerpts": [
+        "Akshat Mandloi is the co-founder and CTO of Smallest AI, where he leads the research and engineering behind the company's voice models. An IIT Guwahati graduate and former senior data scientist, he drives the work on Lightning TTS, Pulse STT, and low-latency voice infrastructure."
+       ]
+      }
+     ],
+     "reasoning": "The blog includes an engineering-focused article on TTS inference and hardware co-optimization; the author profile identifies Ranjith M S as a Senior AI Inference Performance Engineer and lists that article. A separate post on Smallest\u2019s Electron V2 language model is attributed to Akshat Mandloi, whose profile identifies him as the company CTO leading research and engineering. These provide at least two technical posts by engineering staff.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Smallest AI Documentation | Smallest AI Docs",
+       "url": "https://docs.smallest.ai/",
+       "excerpts": [
+        "Smallest AI is voice infrastructure. Two product lines share one account, one API key, and one set of docs.",
+        "* **Voice Agents** is the hosted platform for agents that talk to your customers over the phone, on the web, or inside a mobile app. It runs speech to text, the LLM turn, text to speech, and telephony for you. Configure an agent in the dashboard, or write the LLM turn yourself with the Agent Crew SDK.",
+        "* **Models** are the individual engines behind it: Lightning (text to speech), Pulse (speech to text), Hydra (speech to speech), and Electron (LLM). Call them over HTTP or WebSocket from any stack, including Pipecat, LiveKit, and the Vercel AI SDK.",
+        "[Voice Agents Agents that keep the conversation going. Any language. Any channel. Dashboard, SDK, and API. Build an agent](https://docs.smallest.ai/voice-agents/overview) [Models Text to speech, speech to text, speech to speech, and an LLM. HTTP and WebSocket from any stack. Call the models](https://docs.smallest.ai/models/overview) [API Reference Every endpoint for both APIs, with schemas and copyable snippets in cURL, Python, and TypeScript. Browse endpoints](https://docs.smallest.ai/api-reference/introduction)"
+       ]
+      }
+     ],
+     "reasoning": "The documentation describes hosted agents for phone, web, or mobile use and model APIs covering speech-to-text, text-to-speech, speech-to-speech, and LLMs, supporting the stated product and developer/enterprise audience.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "smallest.ai Key People 2026 \u2013 Founders, CEO & CXOs",
+       "url": "https://inc42.com/company/smallest-ai/people",
+       "excerpts": [
+        "smallest.ai: People highlights An overview of key people in smallest.ai. key_people_logo Key People 7 total_employee_logo Total Employee 105 smallest.ai Founders Akshat Mandloi-logo Akshat Mandloi Founder Sudarshan Kamath-logo Sudarshan Kamath Founder"
+       ]
+      }
+     ],
+     "reasoning": "The Smallest.ai people profile reports 105 total employees, which falls in the 101-200 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Smallest Inc. Trust Center | Konfirmity",
+       "url": "https://security.smallest.ai/",
+       "excerpts": [
+        "|Provider |Purpose |Data Location |",
+        "| --- | --- | --- |",
+        "|AWS |Cloud Infrastructure for our apps and services |India, USA |",
+        "|Clickhouse |Managed columnar analytics database (ClickHouse Cloud) \u2014 event/usage/telemetry storage |USA, INDIA |",
+        "|E2E Networks Ltd |GPU compute and model inference |India |",
+        "|LiveKit |Real-time audio/video streaming infrastructure |India, United States |",
+        "|Northflank |Application deployment and container hosting |United States |",
+        "|OpenAI |LLM inference for specific feature / tooling / eval pipeline. |USA |"
+       ]
+      }
+     ],
+     "reasoning": "Smallest.ai\u2019s trust-center subprocessor table names OpenAI and specifies LLM inference for specific feature, tooling, or evaluation-pipeline use; this supports the qualified provider answer rather than implying all product models are OpenAI models.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Model Pricing: Lightning TTS and Pulse STT - Smallest.ai",
+       "url": "https://smallest.ai/pricing/models",
+       "excerpts": [
+        "Pricing that scales with you"
+       ]
+      },
+      {
+       "title": "Voice Agent Pricing: Pay As You Go - Smallest.ai",
+       "url": "https://smallest.ai/pricing/agents",
+       "excerpts": [
+        "Start with $10 in free credits, full access, and a pricing model that grows with you."
+       ]
+      }
+     ],
+     "reasoning": "Smallest.ai has public model-pricing and voice-agent-pricing pages, so the answer is true.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Smallest.ai gets $21 Million in Funding to Build Voice 4.0, the Next Generation of Enterprise Voice AI",
+       "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html",
+       "excerpts": [
+        "global leaderboard SAN FRANCISCO , July 30, 2026 /PRNewswire/ -- Smallest.ai , a San Francisco-based foundational AI research lab building the next generation of real-time voice AI infrastructure for enterprises, today announced it has surpassed $21 million in total funding following the close of a $13 million Series A led by Seligman Ventures with participation from Sierra Ventures and 3one4"
+       ]
+      }
+     ],
+     "reasoning": "The July 2026 announcement reports the close of a $13 million Series A; the amount requested is the round amount, not the more-than-$21-million cumulative total.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "How Pocket Hit $100M ARR with Pulse STT | Smallest.ai",
+       "url": "https://smallest.ai/pocket",
+       "excerpts": [
+        "The AI notetaker to reach $100M ARR in 7 months, powered by Smallest's Pulse"
+       ]
+      },
+      {
+       "title": "Kogta: 15M+ Calls to Real Collections - Smallest.ai",
+       "url": "https://smallest.ai/customer-stories/kogta",
+       "excerpts": [
+        "How Kogta Turned 15 Million+ Calls into Real Collections with Smallest AI"
+       ]
+      }
+     ],
+     "reasoning": "Smallest.ai\u2019s customer-story pages identify Pocket and Kogta as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Smallest.ai gets $21 Million in Funding to Build Voice 4.0, the Next Generation of Enterprise Voice AI",
+       "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html",
+       "excerpts": [
+        "global leaderboard SAN FRANCISCO , July 30, 2026 /PRNewswire/ -- Smallest.ai , a San Francisco-based foundational AI research lab building the next generation of real-time voice AI infrastructure for enterprises, today announced it has surpassed $21 million in total funding following the close of a $13 million Series A led by Seligman Ventures with participation from Sierra Ventures and 3one4"
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement is dated July 30, 2026, so the round date is 2026-07.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Development Representative (BDR) \u2013 GTM & Outbound - US @ Smallest ",
+       "url": "https://jobs.ashbyhq.com/smallest/d5f015ce-7470-4930-9cb3-fc7a930a039b",
+       "excerpts": [
+        "## **Tools You\u2019ll Likely Use**",
+        "* **CRM** : Zoho",
+        "* **Sales tools** : Instantly, LinkedIn Sales Navigator, Aurasell",
+        "* **AI tools:** ChatGPT, Perplexity,Claude, custom internal AI workflows"
+       ]
+      }
+     ],
+     "reasoning": "The Smallest.ai BDR job description names Zoho as CRM and lists Instantly, LinkedIn Sales Navigator, and Aurasell as sales tools likely to be used.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Smallest AI names ex-CRED, YES Bank, Kotak digital banking leader Siddharth Sharma President \u2013 BFSI, India",
+       "url": "https://www.aninews.in/news/business/smallest-ai-names-ex-cred-yes-bank-kotak-digital-banking-leader-siddharth-sharma-president-8211-bfsi-india20261106154941",
+       "excerpts": [
+        "Mumbai (Maharashtra) [India], November 6 (ANI): [Smallest AI](https://smallest.ai/) , a San Francisco-based foundational AI research lab, has appointed Siddharth Sharma as President of Banking, Financial Services, and Insurance, India.",
+        "In his role, Sharma will own revenue and partnerships for the company's growing BFSI business, working directly with co-founder and CEO Sudarshan Kamath."
+       ]
+      }
+     ],
+     "reasoning": "A November 6, 2026 announcement says Siddharth Sharma was appointed President of Banking, Financial Services, and Insurance, India, a president-level leadership appointment within the prior 12 months.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Smallest  Jobs",
+       "url": "https://jobs.ashbyhq.com/smallest",
+       "excerpts": [
+        "# Open Positions (3)",
+        "Filters:",
+        "Reset filters",
+        "All Departments Engineering (2) Finance (1)",
+        "All Employment Types Full time (3)",
+        "All Locations Bengaluru (2) Mumbai (1)",
+        "All Location Types On-site (3)",
+        "No filters applied",
+        "## Engineering",
+        "[### Senior SDET Engineering \u2022 Bengaluru \u2022 Full time \u2022 On-site](https://jobs.ashbyhq.com/smallest/d251ba4a-8ae6-4e3e-b918-1c77e4555a68) [### Software Engineer - Systems and Reliablity Engineering \u2022 Bengaluru \u2022 Full time \u2022 On-site](https://jobs.ashbyhq.com/smallest/f0879803-4119-4278-bcfc-4f0b25df943b)",
+        "## Finance",
+        "[### Manager - Finance and Accounts Finance \u2022 Mumbai \u2022 Full time \u2022 On-site](https://jobs.ashbyhq.com/smallest/f85b6c92-05ad-4507-a35a-d866a5b158c0)"
+       ]
+      }
+     ],
+     "reasoning": "The current careers board lists three open roles\u2014Senior SDET, Software Engineer - Systems and Reliability, and Manager - Finance and Accounts\u2014and none has an AI/ML/data-science title matching the specified categories.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Smallest.ai gets $21 Million in Funding to Build Voice 4.0, the Next Generation of Enterprise Voice AI",
+       "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html",
+       "excerpts": [
+        "global leaderboard SAN FRANCISCO , July 30, 2026 /PRNewswire/ -- Smallest.ai , a San Francisco-based foundational AI research lab building the next generation of real-time voice AI infrastructure for enterprises, today announced it has surpassed $21 million in total funding following the close of a $13 million Series A led by Seligman Ventures with participation from Sierra Ventures and 3one4"
+       ]
+      }
+     ],
+     "reasoning": "The July 2026 funding announcement identifies the latest reported round as a Series A.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Smallest AI Documentation | Smallest AI Docs",
+       "url": "https://docs.smallest.ai/",
+       "excerpts": [
+        "**Voice Agents** is the hosted platform for agents that talk to your customers over the phone, on the web, or inside a mobile app. It runs speech to text, the LLM turn, text to speech, and telephony for you. Configure an agent in the dashboard, or write the LLM turn yourself with the Agent Crew SDK.",
+        "[Voice Agents Agents that keep the conversation going. Any language. Any channel. Dashboard, SDK, and API. Build an agent](https://docs.smallest.ai/voice-agents/overview) [Models Text to speech, speech to text, speech to speech, and an LLM. HTTP and WebSocket from any stack. Call the models](https://docs.smallest.ai/models/overview) [API Reference Every endpoint for both APIs, with schemas and copyable snippets in cURL, Python, and TypeScript. Browse endpoints](https://docs.smallest.ai/api-reference/introduction)"
+       ]
+      }
+     ],
+     "reasoning": "The public Smallest AI documentation site has product overviews, voice-agent and model guides, and API-reference material across multiple sections, satisfying the several-articles requirement.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "smallest.ai | LinkedIn",
+       "url": "https://linkedin.com/company/smallest",
+       "excerpts": [
+        "Headquarters San Francisco, California"
+       ]
+      }
+     ],
+     "reasoning": "The Smallest.ai company profile identifies its headquarters as San Francisco, California.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Lightning V3 TTS: Next-Gen Conversational AI - Smallest.ai",
+       "url": "https://smallest.ai/blog/introducing-lightning-v3",
+       "excerpts": [
+        "October 5, 2026",
+        "_Lightning V3 is available today on our pay-as-you-go plan."
+       ]
+      }
+     ],
+     "reasoning": "Smallest.ai\u2019s Lightning V3 introduction was dated October 5, 2026 and states it was available that day, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative (BDR) \u2013 GTM & Outbound - US @ Smallest ",
+       "url": "https://jobs.ashbyhq.com/smallest/d5f015ce-7470-4930-9cb3-fc7a930a039b",
+       "excerpts": [
+        "# Business Development Representative (BDR) \u2013 GTM & Outbound - US"
+       ]
+      },
+      {
+       "title": "Smallest.ai Business Development Representative (BDR) - GTM & Outbound - US Job San Francisco",
+       "url": "https://www.ziprecruiter.com/c/Smallest.ai/Job/Business-Development-Representative-(BDR)-GTM-&-Outbound-US/-in-San-Francisco,CA?jid=892f206253ee630c",
+       "excerpts": [
+        "Posted 4 days ago"
+       ]
+      }
+     ],
+     "reasoning": "A Smallest.ai BDR (business development representative) posting was available and was listed as posted four days before November 10, within the requested date window; this meets the BDR hiring criterion.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Smallest.ai gets $21 Million in Funding to Build Voice 4.0, the Next Generation of Enterprise Voice AI",
+       "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html",
+       "excerpts": [
+        "global leaderboard SAN FRANCISCO , July 30, 2026 /PRNewswire/ -- Smallest.ai , a San Francisco-based foundational AI research lab building the next generation of real-time voice AI infrastructure for enterprises, today announced it has surpassed $21 million in total funding following the close of a $13 million Series A led by Seligman Ventures with participation from Sierra Ventures and 3one4"
+       ]
+      }
+     ],
+     "reasoning": "The $13 million Series A closed in July 2026, within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Careers | Smallest AI",
+       "url": "https://smallest.ai/careers",
+       "excerpts": [
+        "[We are SOC 2, GDPR, and HIPAA compliant](https://security.smallest.ai/?tab=overview)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page explicitly says Smallest.ai is SOC 2 compliant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Smallest Inc. Trust Center | Konfirmity",
+       "url": "https://security.smallest.ai/",
+       "excerpts": [
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The trust-center evidence explicitly names ISO 27001:2022.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Careers | Smallest AI",
+       "url": "https://smallest.ai/careers",
+       "excerpts": [
+        "[We are SOC 2, GDPR, and HIPAA compliant](https://security.smallest.ai/?tab=overview)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page explicitly says Smallest.ai is HIPAA compliant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Careers | Smallest AI",
+       "url": "https://smallest.ai/careers",
+       "excerpts": [
+        "[We are SOC 2, GDPR, and HIPAA compliant](https://security.smallest.ai/?tab=overview)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page explicitly says Smallest.ai is GDPR compliant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "How Pocket Hit $100M ARR with Pulse STT | Smallest.ai",
+       "url": "https://smallest.ai/pocket",
+       "excerpts": [
+        "The AI notetaker to reach $100M ARR in 7 months, powered by Smallest's Pulse"
+       ]
+      }
+     ],
+     "reasoning": "The customer story names Pocket.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Kogta: 15M+ Calls to Real Collections - Smallest.ai",
+       "url": "https://smallest.ai/customer-stories/kogta",
+       "excerpts": [
+        "How Kogta Turned 15 Million+ Calls into Real Collections with Smallest AI"
+       ]
+      }
+     ],
+     "reasoning": "The customer story names Kogta.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Development Representative (BDR) \u2013 GTM & Outbound - US @ Smallest ",
+       "url": "https://jobs.ashbyhq.com/smallest/d5f015ce-7470-4930-9cb3-fc7a930a039b",
+       "excerpts": [
+        "* **CRM** : Zoho"
+       ]
+      }
+     ],
+     "reasoning": "The BDR posting names Zoho as the CRM.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Business Development Representative (BDR) \u2013 GTM & Outbound - US @ Smallest ",
+       "url": "https://jobs.ashbyhq.com/smallest/d5f015ce-7470-4930-9cb3-fc7a930a039b",
+       "excerpts": [
+        "* **Sales tools** : Instantly, LinkedIn Sales Navigator, Aurasell"
+       ]
+      }
+     ],
+     "reasoning": "The BDR posting names Instantly as a sales tool.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Business Development Representative (BDR) \u2013 GTM & Outbound - US @ Smallest ",
+       "url": "https://jobs.ashbyhq.com/smallest/d5f015ce-7470-4930-9cb3-fc7a930a039b",
+       "excerpts": [
+        "* **Sales tools** : Instantly, LinkedIn Sales Navigator, Aurasell"
+       ]
+      }
+     ],
+     "reasoning": "The BDR posting names LinkedIn Sales Navigator as a sales tool.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Business Development Representative (BDR) \u2013 GTM & Outbound - US @ Smallest ",
+       "url": "https://jobs.ashbyhq.com/smallest/d5f015ce-7470-4930-9cb3-fc7a930a039b",
+       "excerpts": [
+        "* **Sales tools** : Instantly, LinkedIn Sales Navigator, Aurasell"
+       ]
+      }
+     ],
+     "reasoning": "The BDR posting names Aurasell as a sales tool.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2023.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Smallest.ai provides enterprises and developers with real-time voice-AI infrastructure, combining hosted voice agents with APIs for speech-to-text, text-to-speech, speech-to-speech, and language models.",
+    "employee_band": "101-200",
+    "model_provider": "OpenAI (for LLM inference for specific features, tooling, and evaluation pipelines)",
+    "pricing_page": true,
+    "funding_amount_usd": 13000000.0,
+    "named_customers": [
+     "Pocket",
+     "Kogta"
+    ],
+    "funding_date": "2026-07",
+    "crm_stack_signal": [
+     "Zoho",
+     "Instantly",
+     "LinkedIn Sales Navigator",
+     "Aurasell"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "schema_version": "v0",
+ "company": "On3 Works",
+ "domain": "on3works.com",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "ON3 Works uses proprietary AI and engineer-led vetting to find, assess and shortlist engineers, developers and IT specialists for companies hiring in the UK and Spain.",
+   "citations": [
+    "https://on3works.com/about"
+   ],
+   "notes": "The official About page identifies the service as AI-led candidate search and screening plus engineer-vetted technical interviews, for employers seeking engineers, developers and IT specialists in the UK and Spain."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://on3works.com/pricing"
+   ],
+   "notes": "The official on3works.com/pricing page is explicitly titled and headed \u201cPricing,\u201d so a public pricing page exists."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://on3works.com/about"
+   ],
+   "notes": "The official key-facts/client section names CGI as a notable client, but the visible customer evidence provides fewer than two named customers; therefore the schema\u2019s empty-list condition applies."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "11-20",
+   "citations": [
+    "https://linkedin.com/company/on3works"
+   ],
+   "notes": "The LinkedIn company profile reports 14 employees, which falls in the 11-20 band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Mallorca",
+    "country": "Spain"
+   },
+   "citations": [
+    "https://on3works.com/about"
+   ],
+   "notes": "hq_city: The company\u2019s official headquarters entry gives Mallorca, Spain; Mallorca is retained as the stated headquarters location, although the company does not specify a city in that entry. | hq_country: The official company facts table states its headquarters as Mallorca, Spain."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2022.0,
+   "citations": [
+    "https://on3works.com/about"
+   ],
+   "notes": "ON3 Works\u2019 official About page lists the founded year as 2022."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://on3works.com/insights"
+   ],
+   "notes": "The insights index is mainly recruiting-market research, comparisons, fee guides and salary/location content. It lists one post explaining the technical AI pipeline, not the two or more engineering/build posts required for a technical blog."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://on3works.com/"
+   ],
+   "notes": "The homepage footer lists company/about, recruiting research and social links, but no product documentation or help-center link. The linked recruiting articles and FAQ are explanatory marketing/research content, not a multi-article product docs portal."
+  },
+  "ai_ml_roles_open": {
+   "status": "unknown",
+   "value": null,
+   "citations": []
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Cohere for job-matching embeddings and Google Gemini and OpenAI for resume extraction; ON3 Works describes its core contextual-vetting model as a fine-tuned LLM but does not name its provider.",
+   "citations": [
+    "https://hiron.ai/privacy",
+    "https://on3works.com/ai-recruiting"
+   ],
+   "notes": "The Hiron privacy notice, operated by ON3 Works Ltd, names Cohere for job-matching embeddings and Gemini/OpenAI for resume extraction. The ON3 Works technical article separately calls its contextual model a fine-tuned LLM without identifying its provider, so the listed providers are role-specific disclosures and not a confirmed name for the core LLM."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR"
+   ],
+   "citations": [
+    "https://hiron.ai/privacy"
+   ],
+   "notes": "compliance_certs: The company\u2019s Hiron privacy/legal notice explicitly names UK GDPR. It does not establish the other listed compliance labels; GDPR is included because it is named on this legal page and appears among the requested labels. | compliance_certs.0: The Hiron legal notice explicitly uses the term \u201cUK GDPR.\u201d"
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": "none",
+   "citations": [
+    "https://tracxn.com/a/d/company/627d1deeac38e601e897dd8c/on3works#a:about",
+    "https://bouncewatch.com/explore/startup/on3-works"
+   ],
+   "notes": "funding_stage: Tracxn classifies ON3 Works as unfunded, and BounceWatch reports zero funding rounds and no investment information; the most recent funding stage is therefore none."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://tracxn.com/a/d/company/627d1deeac38e601e897dd8c/on3works#a:about",
+    "https://bouncewatch.com/explore/startup/on3-works"
+   ],
+   "notes": "The available funding profile says the company is unfunded and the funding-round inventory reports zero rounds, so there was no funding raised in the 18-month period."
+  },
+  "hiring_sdr_ae": {
+   "status": "unknown",
+   "value": null,
+   "citations": []
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://linkedin.com/company/hosteleria-mallorca",
+    "https://linkedin.com/company/on3works"
+   ],
+   "notes": "The dated launch announcement found is for the separate Hosteler\u00eda Mallorca division on 2026-04-13, before the six-month window beginning 2026-05-09. The later visible ON3 Works feed entries are market commentary/research, not an announced product or major feature launch."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://on3works.com/about"
+   ],
+   "notes": "The small official team page identifies the two founders and their roles: John is CEO and Daniel co-founder; it says they started ON3 Works in 2022 and lists no C-level or VP-level joiner in the relevant year. No departure is announced on the team page."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://on3works.com/about"
+   ],
+   "notes": "The readable company facts and public site identify direct founder communication by email/video and list social links, but disclose no CRM or sales/marketing platform. No named system was found in the readable material."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 512.2
+}

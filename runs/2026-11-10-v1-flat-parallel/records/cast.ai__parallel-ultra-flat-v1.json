@@ -1,0 +1,174 @@
+{
+ "schema_version": "v0",
+ "company": "Cast AI",
+ "domain": "cast.ai",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Cast AI automates Kubernetes workload and infrastructure optimization for DevOps and platform teams to reduce cloud costs and improve application performance.",
+   "citations": [
+    "https://docs.cast.ai/docs",
+    "https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers"
+   ],
+   "notes": "The documentation identifies the Kubernetes automation and optimization platform, while the announcement explicitly identifies DevOps and platform teams and the cost/performance benefits: https://docs.cast.ai/docs and https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://cast.ai/pricing"
+   ],
+   "notes": "The pricing URL is only a custom-quote request, with no plans or tiers, and no pricing link was found in the homepage navigation/footer. It therefore meets the specified bare-contact-form negative rule: https://cast.ai/pricing and https://cast.ai/."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "BMW",
+    "Cisco",
+    "FICO",
+    "HuggingFace",
+    "Swisscom"
+   ],
+   "citations": [
+    "https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers"
+   ],
+   "notes": "named_customers: Cast AI explicitly names all five organizations as companies that trust its platform, rather than as investors or partners: https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers. | named_customers.0: BMW is explicitly named among companies trusting Cast AI: https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers. | named_customers.1: Cisco is explicitly named among companies trusting Cast AI: https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers. | named_customers.2: FICO is explicitly named among companies trusting Cast AI: https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers. | named_customers.3: HuggingFace is explicitly named among companies trusting Cast AI: https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers. | named_customers.4: Swisscom is explicitly named among companies trusting Cast AI: https://cast.ai/press-release/cast-ai-extends-automation-and-cost-optimization-capabilities-to-on-premises-and-additional-cloud-providers."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/cast-ai"
+   ],
+   "notes": "The company profile explicitly lists Company size 201-500 employees: https://linkedin.com/company/cast-ai."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Miami",
+    "country": "United States"
+   },
+   "citations": [
+    "https://linkedin.com/company/cast-ai",
+    "https://tracxn.com/d/companies/cast-ai/__wxE-eSHGeuyS5QmOX73eEy1wg7dRhbydKlGjMs6vKsk"
+   ],
+   "notes": "hq_city: The company profile explicitly identifies headquarters as Miami, FL: https://linkedin.com/company/cast-ai. | hq_country: The company profile explicitly locates Cast AI in Miami, United States: https://tracxn.com/d/companies/cast-ai/__wxE-eSHGeuyS5QmOX73eEy1wg7dRhbydKlGjMs6vKsk."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2019.0,
+   "citations": [
+    "https://linkedin.com/company/cast-ai"
+   ],
+   "notes": "The company profile explicitly states Founded 2019: https://linkedin.com/company/cast-ai."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://cast.ai/blog/author/leon/",
+    "https://cast.ai/blog/infrastructure-has-a-closure-problem/",
+    "https://cast.ai/blog/gen-ai-and-large-language-model-training-and-inference-how-to-reduce-your-aws-bill"
+   ],
+   "notes": "Two posts by CTO Leon Kuperman explain Cast AI's own implementation: APA's execution and deployment architecture in https://cast.ai/blog/infrastructure-has-a-closure-problem/ and GPU provisioning plus ML-based scheduling in https://cast.ai/blog/gen-ai-and-large-language-model-training-and-inference-how-to-reduce-your-aws-bill. His technical leadership credentials are stated at https://cast.ai/blog/author/leon/. Classification involves judging the technical depth of these product-focused posts."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.cast.ai/docs"
+   ],
+   "notes": "The public documentation contains Guides, API Reference and multiple separate articles, including CLI connection, console connection and Terraform provider guides: https://docs.cast.ai/docs."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://cast.ai/careers/apply?gh_jid=4451280009"
+   ],
+   "notes": "The live Senior Applied ML Engineer | Kimchi (Model Router) posting is an eligible ML role and explicitly includes model features, training and calibration: https://cast.ai/careers/apply?gh_jid=4451280009."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Kimchi Coding offers MiniMax M3; AI Enabler documents OpenAI (GPT-4o), Anthropic, and self-hosted Llama 3.1 via vLLM as supported options.",
+   "citations": [
+    "https://cast.ai/newsroom",
+    "https://docs.cast.ai/docs/ai-supported-providers"
+   ],
+   "notes": "The newsroom explicitly says MiniMax M3 is available through Kimchi Coding: https://cast.ai/newsroom. The supported-provider documentation names OpenAI, Anthropic and hosted_vllm, with GPT-4o and Llama 3.1 examples: https://docs.cast.ai/docs/ai-supported-providers. These are supported options, not a claim that every customer uses every provider."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2 Type 2",
+    "ISO 27001",
+    "PCI DSS"
+   ],
+   "citations": [
+    "https://trust.cast.ai/"
+   ],
+   "notes": "compliance_certs: The trust center displays SOC 2 Type 2, an ISO27001 Audit Certificate, and a PCI DSS AOC as completed compliance documentation: https://trust.cast.ai/. | compliance_certs.0: The trust center explicitly displays SOC 2 Type 2: https://trust.cast.ai/. | compliance_certs.1: The trust center lists an ISO27001 Audit Certificate: https://trust.cast.ai/. | compliance_certs.2: The trust center explicitly lists a PCI DSS AOC: https://trust.cast.ai/."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series C",
+    "date": "2026-01",
+    "amount_usd": null
+   },
+   "citations": [
+    "https://tracxn.com/d/companies/cast-ai/__wxE-eSHGeuyS5QmOX73eEy1wg7dRhbydKlGjMs6vKsk",
+    "https://cast.ai/press-release/cast-ai-valued-at-over-1-billion-with-the-launch-of-its-gpu-marketplace"
+   ],
+   "notes": "funding_stage: The funding profile classifies the latest January 2026 investment as Series C. The company's announcement calls it a strategic investment, so the stage classification relies on the funding profile: https://tracxn.com/d/companies/cast-ai/__wxE-eSHGeuyS5QmOX73eEy1wg7dRhbydKlGjMs6vKsk. | funding_date: The funding profile dates the latest round January 2, 2026, while the company's investment announcement is dated January 12, 2026; both support the requested month 2026-01. Sources: https://tracxn.com/d/companies/cast-ai/__wxE-eSHGeuyS5QmOX73eEy1wg7dRhbydKlGjMs6vKsk and https://cast.ai/press-release/cast-ai-valued-at-over-1-billion-with-the-launch-of-its-gpu-marketplace. | funding_amount_usd: The latest January 2026 round is explicitly recorded as having an undisclosed amount. Null represents that undisclosed round amount, not the company's cumulative funding: https://tracxn.com/d/companies/cast-ai/__wxE-eSHGeuyS5QmOX73eEy1wg7dRhbydKlGjMs6vKsk."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://cast.ai/press-release/cast-ai-valued-at-over-1-billion-with-the-launch-of-its-gpu-marketplace"
+   ],
+   "notes": "The January 12, 2026 announcement confirms a strategic investment from Pacific Alliance Ventures, within eighteen months before November 9, 2026: https://cast.ai/press-release/cast-ai-valued-at-over-1-billion-with-the-launch-of-its-gpu-marketplace."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://cast.ai/careers/apply?gh_jid=4472206009"
+   ],
+   "notes": "The live company careers posting is explicitly titled Account Executive | Enterprise | UK: https://cast.ai/careers/apply?gh_jid=4472206009."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://cast.ai/press-release/kimchi-coding-hits-general-availability"
+   ],
+   "notes": "Cast AI announced general availability of Kimchi Coding on July 15, 2026, within the six months before November 9, 2026: https://cast.ai/press-release/kimchi-coding-hits-general-availability."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/reid-barker-80300344"
+   ],
+   "notes": "Reid Barker's dated profile shows he joined Cast AI as VP of Sales, North America in April 2026, within the requested twelve-month window: https://linkedin.com/in/reid-barker-80300344."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce"
+   ],
+   "citations": [
+    "https://jobs.floridafunders.com/companies/cast-ai-2/jobs/84856594-go-to-market-systems-engineer"
+   ],
+   "notes": "crm_stack_signal: The Go-To-Market Systems Engineer posting explicitly assigns ownership of core GTM platforms including Salesforce CRM, which is stronger evidence than a generic CRM experience requirement: https://jobs.floridafunders.com/companies/cast-ai-2/jobs/84856594-go-to-market-systems-engineer. | crm_stack_signal.0: The GTM systems job explicitly names Salesforce CRM as a core platform to administer: https://jobs.floridafunders.com/companies/cast-ai-2/jobs/84856594-go-to-market-systems-engineer."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 503.0
+}

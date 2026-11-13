@@ -1,0 +1,1226 @@
+{
+ "id": "agent_run_ec0b96d611824366b42438cd59c255b0",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:58:22.273Z",
+ "completedAt": "2026-11-10T19:02:30.563Z",
+ "request": {
+  "query": "Research the company Nanonets (nanonets.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Nanonets provides AI document-processing agents that extract structured data and automate document-heavy workflows for enterprise operations and finance teams.\",\"citations\":[\"https://nanonets.com/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://nanonets.com/pricing\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"P&G\",\"Bayer\",\"Roche\",\"Schneider Electric\"],\"citations\":[\"https://job-boards.greenhouse.io/nanonets/jobs/5372370008\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://linkedin.com/company/nanonets\",\"https://job-boards.greenhouse.io/nanonets/jobs/5372370008\"],\"notes\":\"Current profile and job-listing counts of 327 and 333 fall in this band; other directories report lower counts.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"San Francisco\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/nanonets\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2017,\"citations\":[\"https://linkedin.com/company/nanonets\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://nanonets.com/research/nanonets-ocr-s/index.html\",\"https://nanonets.com/research/nanonets-ocr-3\",\"https://linkedin.com/in/mandalsouvik\"],\"notes\":\"The research publication series includes OCR-s training details by Souvik Mandal and the OCR-3 research-team devlog covering training, inference and Mixture-of-Experts architecture; these are distinct from marketing tutorials.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://apidocs.nanonets.com/docs/intro/\",\"https://docs.nanonets.com/docs/on-prem-offerings\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://job-boards.greenhouse.io/nanonets/jobs/5372370008\",\"https://www.ycombinator.com/companies/nanonets/jobs\"],\"notes\":\"The live Deep Learning Engineer posting covers LLMs, VLMs, NLP and computer vision; the company job board also lists Senior Deep Learning Engineer and VP of AI.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Nanonets OCR-3; Nanonets-OCR-s, fine-tuned from Qwen2.5-VL-3B; Amazon Textract and Google Vision as selectable OCR engines in the on-prem offering.\",\"citations\":[\"https://nanonets.com/research/nanonets-ocr-3\",\"https://nanonets.com/research/nanonets-ocr-s/index.html\",\"https://docs.nanonets.com/docs/on-prem-offerings\"]},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\",\"GDPR\"],\"citations\":[\"https://nanonets.com/products/agentic-data-extraction\",\"https://legal.nanonets.com/security-policy\"],\"notes\":\"These are the company\u2019s public claims. HIPAA and GDPR are compliance frameworks, not independent certifications. No Nanonets PCI DSS certification is asserted.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series B\",\"date\":\"2024-03\",\"amount_usd\":29000000},\"citations\":[\"https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/\"]},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/\"],\"notes\":\"The latest identified round was announced March 12, 2024, before the May 9, 2025\u2013November 9, 2026 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://job-boards.greenhouse.io/nanonets/jobs/5219252008\"],\"notes\":\"Enterprise Account Executive opening.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://chatgate.ai/post/atlas-3\",\"https://www.producthunt.com/newsletters/archive/51972-bring-your-own-brain\"],\"notes\":\"Atlas, a Nanonets company-context product, launched June 26, 2026, within the May 9\u2013November 9, 2026 window.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/mishra-shubhra\"],\"notes\":\"Shubhra Mishra\u2019s profile lists a March 2026 start as Vice President, Strategic Initiatives at Nanonets, within the November 9, 2025\u2013November 9, 2026 window.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"HubSpot\"],\"citations\":[\"https://nanonets.com/integrations\"],\"notes\":\"These are explicitly named customer-facing CRM integrations, not proof of Nanonets\u2019 internal CRM deployment.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The research publication series includes OCR-s training details by Souvik Mandal and the OCR-3 research-team devlog covering training, inference and Mixture-of-Experts architecture; these are distinct from marketing tutorials.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/research/nanonets-ocr-s/index.html",
+     "https://nanonets.com/research/nanonets-ocr-3",
+     "https://linkedin.com/in/mandalsouvik"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "San Francisco",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/nanonets"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://apidocs.nanonets.com/docs/intro/",
+     "https://docs.nanonets.com/docs/on-prem-offerings"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest identified round was announced March 12, 2024, before the May 9, 2025\u2013November 9, 2026 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+    ]
+   },
+   "founded_year": {
+    "value": 2017,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/nanonets"
+    ]
+   },
+   "last_funding": {
+    "value": {
+     "date": "2024-03",
+     "stage": "Series B",
+     "amount_usd": 29000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Atlas, a Nanonets company-context product, launched June 26, 2026, within the May 9\u2013November 9, 2026 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://chatgate.ai/post/atlas-3",
+     "https://www.producthunt.com/newsletters/archive/51972-bring-your-own-brain"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "Current profile and job-listing counts of 327 and 333 fall in this band; other directories report lower counts.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/nanonets",
+     "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Enterprise Account Executive opening.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/nanonets/jobs/5219252008"
+    ]
+   },
+   "model_provider": {
+    "value": "Nanonets OCR-3; Nanonets-OCR-s, fine-tuned from Qwen2.5-VL-3B; Amazon Textract and Google Vision as selectable OCR engines in the on-prem offering.",
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/research/nanonets-ocr-3",
+     "https://nanonets.com/research/nanonets-ocr-s/index.html",
+     "https://docs.nanonets.com/docs/on-prem-offerings"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "P&G",
+     "Bayer",
+     "Roche",
+     "Schneider Electric"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The live Deep Learning Engineer posting covers LLMs, VLMs, NLP and computer vision; the company job board also lists Senior Deep Learning Engineer and VP of AI.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/nanonets/jobs/5372370008",
+     "https://www.ycombinator.com/companies/nanonets/jobs"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "These are the company\u2019s public claims. HIPAA and GDPR are compliance frameworks, not independent certifications. No Nanonets PCI DSS certification is asserted.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/products/agentic-data-extraction",
+     "https://legal.nanonets.com/security-policy"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "These are explicitly named customer-facing CRM integrations, not proof of Nanonets\u2019 internal CRM deployment.",
+    "value": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/integrations"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Nanonets provides AI document-processing agents that extract structured data and automate document-heavy workflows for enterprise operations and finance teams.",
+    "status": "asserted",
+    "citations": [
+     "https://nanonets.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Shubhra Mishra\u2019s profile lists a March 2026 start as Vice President, Strategic Initiatives at Nanonets, within the November 9, 2025\u2013November 9, 2026 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/mishra-shubhra"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/nanonets"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-s/index.html"
+     },
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-3"
+     },
+     {
+      "url": "https://linkedin.com/in/mandalsouvik"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-s/index.html"
+     },
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-3"
+     },
+     {
+      "url": "https://linkedin.com/in/mandalsouvik"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-s/index.html"
+     },
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-3"
+     },
+     {
+      "url": "https://linkedin.com/in/mandalsouvik"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://apidocs.nanonets.com/docs/intro/"
+     },
+     {
+      "url": "https://docs.nanonets.com/docs/on-prem-offerings"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://apidocs.nanonets.com/docs/intro/"
+     },
+     {
+      "url": "https://docs.nanonets.com/docs/on-prem-offerings"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/nanonets/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/nanonets/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/nanonets/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-3"
+     },
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-s/index.html"
+     },
+     {
+      "url": "https://docs.nanonets.com/docs/on-prem-offerings"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-3"
+     },
+     {
+      "url": "https://nanonets.com/research/nanonets-ocr-s/index.html"
+     },
+     {
+      "url": "https://docs.nanonets.com/docs/on-prem-offerings"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/products/agentic-data-extraction"
+     },
+     {
+      "url": "https://legal.nanonets.com/security-policy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/products/agentic-data-extraction"
+     },
+     {
+      "url": "https://legal.nanonets.com/security-policy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://nanonets.com/products/agentic-data-extraction"
+     },
+     {
+      "url": "https://legal.nanonets.com/security-policy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5219252008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5219252008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/nanonets/jobs/5219252008"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://chatgate.ai/post/atlas-3"
+     },
+     {
+      "url": "https://www.producthunt.com/newsletters/archive/51972-bring-your-own-brain"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://chatgate.ai/post/atlas-3"
+     },
+     {
+      "url": "https://www.producthunt.com/newsletters/archive/51972-bring-your-own-brain"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://chatgate.ai/post/atlas-3"
+     },
+     {
+      "url": "https://www.producthunt.com/newsletters/archive/51972-bring-your-own-brain"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mishra-shubhra"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mishra-shubhra"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mishra-shubhra"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://nanonets.com/integrations"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://nanonets.com/integrations"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://nanonets.com/integrations"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

@@ -1,0 +1,522 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea8b652f46a1661fc",
+  "interaction_id": "trun_142119f6a1b4439ea8b652f46a1661fc",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "bizagi.com"
+  },
+  "created_at": "2026-11-10T18:48:03.744401Z",
+  "modified_at": "2026-11-10T18:51:15.217202Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea8b652f46a1661fc",
+   "interaction_id": "trun_142119f6a1b4439ea8b652f46a1661fc",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "bizagi.com"
+   },
+   "created_at": "2026-11-10T18:48:03.744401Z",
+   "modified_at": "2026-11-10T18:51:15.217202Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About | Bizagi",
+       "url": "https://www.bizagi.com/en/about",
+       "excerpts": [
+        "1989 Founded in Bogot\u00e1 by Gustavo G\u00f3mez and co-founders, initially delivering consulting and custom software."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi's company history explicitly says it was founded in 1989: https://www.bizagi.com/en/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Bizagi is ISO/IEC 27001:2022 certified. Bizagi's information security Management System (ISMS) is based on ISO/IEC 27001:2022 standard.",
+        "Independent reviews have concluded that Bizagi Cloud meets the requirements of the HIPAA/HITECH regulations.",
+        "Bizagi is committed to providing the features to achieve GDPR compliance and enforce privacy and protection of personal data."
+       ]
+      }
+     ],
+     "reasoning": "The compliance page names ISO 27001, HIPAA and GDPR. It explicitly claims ISO/IEC 27001:2022 certification and independently reviewed HIPAA/HITECH conformity; its GDPR wording concerns features supporting compliance, rather than an independent certification: https://www.bizagi.com/en/platform/compliance.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Discover Our Offices Around the Globe | Bizagi",
+       "url": "https://www.bizagi.com/en/about/offices",
+       "excerpts": [
+        "Washington DC - Corporate Headquarters 1775 Tysons Blvd, 5th Floor, Tysons, VA, 22102"
+       ]
+      },
+      {
+       "title": "Bizagi",
+       "url": "https://linkedin.com/company/bizagi",
+       "excerpts": [
+        "1775 Tysons Blvd, 5th Floor, Tysons, Washington DC, 22102, US"
+       ]
+      }
+     ],
+     "reasoning": "The official offices page designates its Washington DC-area office as corporate headquarters, and the matching LinkedIn address explicitly identifies the country as US: https://www.bizagi.com/en/about/offices and https://linkedin.com/company/bizagi.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog - Low-Code, Process Automation, AI & More | Bizagi",
+       "url": "https://www.bizagi.com/en/blog?page=2",
+       "excerpts": [
+        "And vibe coding does not make you an enterprise app developer.\"\\\\n\\\\nThat's how Rachel Brennan, VP of Product Marketing at Bizagi"
+       ]
+      },
+      {
+       "title": "How to Create Robust Apps with Bizagi Live Processes",
+       "url": "https://www.bizagi.com/en/blog/how-to-create-robust-apps-bizagi-live-processes",
+       "excerpts": [
+        "How to Create Robust Apps with Bizagi Live Processes How to Create Robust Apps with Bizagi Live Processes By [Kevin Guerrero, Product Marketing Director"
+       ]
+      }
+     ],
+     "reasoning": "The readable blog index lists business, AI-adoption, automation and product content, without establishing two engineer-authored posts explaining how Bizagi itself is built. An inspected technical-sounding tutorial is attributed to a Product Marketing Director: https://www.bizagi.com/en/blog?page=2 and https://www.bizagi.com/en/blog/how-to-create-robust-apps-bizagi-live-processes. This is an assessment of the visible index, not proof that no technical article exists anywhere.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About | Bizagi",
+       "url": "https://www.bizagi.com/company",
+       "excerpts": [
+        "Bizagi is a low-code automation platform used to automate and orchestrate business processes, connecting people, systems, data, AI and bots."
+       ]
+      },
+      {
+       "title": "Bizagi's Summer 2026 Release Expands AI Insight, Automation and Control",
+       "url": "https://www.bizagi.com/resources/newsroom/summer-2026-release",
+       "excerpts": [
+        "Bizagi's Summer 2026 Release Expands AI Insight, Automation and Control The latest platform release builds on Bizagi's commitment to enabling impact and ROI from AI investments in the enterprise. **July 21, WASHINGTON D.C.** \u2013 Bizagi, a leader in enterprise process automation and business orchestration, today announced its Summer 2026 platform release."
+       ]
+      }
+     ],
+     "reasoning": "The company page describes low-code business-process automation and orchestration connecting people, systems, data, AI and bots; the release announcement identifies its enterprise focus: https://www.bizagi.com/company and https://www.bizagi.com/resources/newsroom/summer-2026-release.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Bizagi",
+       "url": "https://linkedin.com/company/bizagi",
+       "excerpts": [
+        "Industry: Software Development \u00b7 Company size: 201-500 employees \u00b7 Headquarters: Washington DC"
+       ]
+      },
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Bizagi has 439 employees as of Jun 26."
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn explicitly lists 201\u2013500 employees, consistent with the company profile's count of 439: https://linkedin.com/company/bizagi and https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Bizagi Cloud Platform > Bizagi's AI approach",
+       "url": "https://help.bizagi.com/platform/en/bizagi-ai-approach.htm",
+       "excerpts": [
+        "As a cloud-native platform running on Microsoft Azure, Bizagi leverages Microsoft's leadership in generative AI by embedding Azure's Private OpenAI GPT service directly into its automation suite."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi's AI documentation explicitly says its automation suite embeds Azure's Private OpenAI GPT service: https://help.bizagi.com/platform/en/bizagi-ai-approach.htm. It does not specify a particular GPT version in this passage.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Bizagi Pricing - Consumption-Based Pricing For Full Flexibility | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/pricing",
+       "excerpts": [
+        "Bizagi's PaaS offers consumption-based pricing for full flexibility."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi has a public page describing consumption-based pricing: https://www.bizagi.com/en/platform/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Website [www.bizagi.com/en](https://www.bizagi.com/en) Social [X](http://twitter.com/bizagi) Key Metrics Founded Year 1989 Location Chalfont Saint Peter, [United Kingdom](https://tracxn.com/d/geographies/united-kingdom/__BFrCTEA8idVqv695D5RNyVuEJ3b_q8H7jGByutRg8gc) Stage Late Stage Total Funding [$48M](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) in 1 round Latest Funding Round [PE, Sep 13, 2017, $\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) Investors [Invus](https://tracxn.com/d/private-equity/in"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile reports $48 million raised in one round and identifies that round as the September 2017 PE investment, so the single round's amount is $48 million: https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw. The company announcement also identifies a $48 million investment: https://www.bizagi.com/en/resources/newsroom/1208-bizagi-receives-48-million-usd-investment-to-fuel-global-growth-plans.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Process Automation Case Studies | Bizagi",
+       "url": "https://www.bizagi.com/en/customers",
+       "excerpts": [
+        "Unilever International",
+        "DHL Group"
+       ]
+      }
+     ],
+     "reasoning": "Both Unilever International and DHL Group appear on Bizagi's customer case-study page: https://www.bizagi.com/en/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Bizagi's latest funding was a [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) PE round on Sep 13, 2017"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the latest round as September 13, 2017, which becomes 2017-09 in the requested format: https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Development Representative - BDR - Bizagi | Built In",
+       "url": "https://builtin.com/job/business-development-representative-bdr/8826498",
+       "excerpts": [
+        "**Maintain accurate activity and pipeline data** using tools such as LinkedIn Sales Navigator, Outreach, and CRM systems."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi's BDR job listing explicitly names LinkedIn Sales Navigator and Outreach for activity and pipeline management. It mentions CRM systems generically without identifying a CRM vendor: https://builtin.com/job/business-development-representative-bdr/8826498.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/samirgulati",
+       "excerpts": [
+        "company name: Bizagi Locality: McLean, Virginia, United States start date: 2022-01-01 start date year: 2022 start date month: 1 end date: 2026-04-01 end date year: 2026 end date month: 4 Summary Bizagi stands for business agility: empowering everyone to turn process models into workflows with our lowest-code platform. Title: Chief Marketing Officer"
+       ]
+      }
+     ],
+     "reasoning": "Samir Gulati's profile lists his Bizagi Chief Marketing Officer position ending in April 2026, within the preceding twelve months: https://linkedin.com/in/samirgulati.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Bizagi Career Site",
+       "url": "https://bizagi.wd3.myworkdayjobs.com/Bizagi_Career_Site",
+       "excerpts": [
+        "[AI\u2011First Full Stack Developer (.NET / Angular / Azure)](https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Bogota/Fullstack-Developer_JR676-1)"
+       ]
+      },
+      {
+       "title": "Fullstack Developer Jr676 1",
+       "url": "https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Bogota/Fullstack-Developer_JR676-1",
+       "excerpts": [
+        "[Apply](https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Bogota/Fullstack-Developer_JR676-1/apply)"
+       ]
+      }
+     ],
+     "reasoning": "The careers board lists an AI-First Full Stack Developer (.NET / Angular / Azure) opening, whose title contains AI and whose posting has an application link: https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Bogota/Fullstack-Developer_JR676-1. This qualifies under the specified title-based rule, although it is not titled ML engineer or data scientist.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Bizagi's latest funding was a [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) PE round on Sep 13, 2017"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile explicitly classifies the latest round as PE, rendered as private equity: https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Bizagi API documentation",
+       "url": "https://help.bizagi.com/platform/en/rulesapi/rules_api/api/index.html",
+       "excerpts": [
+        "**Bizagi API documentation**"
+       ]
+      },
+      {
+       "title": "Low-code Process Automation > Studio Cloud - Authoring environment > Bizagi Studio > Integrating external applications from Bizagi > Bizagi Connectors and Widgets Marketplace",
+       "url": "https://help.bizagi.com/platform/en/connectors-and-widgets-marketplace.htm",
+       "excerpts": [
+        "In this site you can find connectors, which allow you to integrate to various external systems, as well as widgets, that let you to extend and customize your forms through different controls."
+       ]
+      },
+      {
+       "title": "Bizagi Cloud Platform > Bizagi's AI approach",
+       "url": "https://help.bizagi.com/platform/en/bizagi-ai-approach.htm",
+       "excerpts": [
+        "As a cloud-native platform running on Microsoft Azure, Bizagi leverages Microsoft's leadership in generative AI by embedding Azure's Private OpenAI GPT service directly into its automation suite."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi has public API documentation and multiple product-help articles, including marketplace integration and AI architecture information: https://help.bizagi.com/platform/en/rulesapi/rules_api/api/index.html, https://help.bizagi.com/platform/en/connectors-and-widgets-marketplace.htm and https://help.bizagi.com/platform/en/bizagi-ai-approach.htm.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Bizagi FAQs",
+       "url": "https://www.bizagi.com/en/bizagi-faqs",
+       "excerpts": [
+        "[Bizagi's corporate headquarters](https://www.bizagi.com/en/about/offices \"Discover Our Offices Around the Globe | Bizagi\") is in Washington DC."
+       ]
+      },
+      {
+       "title": "Discover Our Offices Around the Globe | Bizagi",
+       "url": "https://www.bizagi.com/en/about/offices",
+       "excerpts": [
+        "Washington DC - Corporate Headquarters 1775 Tysons Blvd, 5th Floor, Tysons, VA, 22102"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi explicitly labels its corporate headquarters Washington DC. Its street address is in Tysons, Virginia; the answer follows the company's stated headquarters-city designation: https://www.bizagi.com/en/bizagi-faqs and https://www.bizagi.com/en/about/offices.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Bizagi's Summer 2026 Release Expands AI Insight, Automation and Control",
+       "url": "https://www.bizagi.com/resources/newsroom/summer-2026-release",
+       "excerpts": [
+        "Bizagi's Summer 2026 Release Expands AI Insight, Automation and Control The latest platform release builds on Bizagi's commitment to enabling impact and ROI from AI investments in the enterprise. **July 21, WASHINGTON D.C.** \u2013 Bizagi, a leader in enterprise process automation and business orchestration, today announced its Summer 2026 platform release.",
+        "Real-time Kafka events: New Kafka integration enables organizations to send and receive messages in real time to react instantly to business events with scalable, resilient event-driven automation."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi announced its Summer 2026 platform release on July 21, within the six-month window. New real-time Kafka integration is a substantive feature rather than a cosmetic update: https://www.bizagi.com/resources/newsroom/summer-2026-release.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative Bdr Jr693 1",
+       "url": "https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Business-Development-Representative---BDR_JR693-1",
+       "excerpts": [
+        "[Apply](https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Business-Development-Representative---BDR_JR693-1/apply)",
+        "**Create qualified sales opportunities** by articulating the value of Bizagi's AI-powered process automation platform."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi has a Business Development Representative\u2014BDR posting with an active application link and sales-opportunity responsibilities: https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Business-Development-Representative---BDR_JR693-1.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Bizagi's latest funding was a [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) PE round on Sep 13, 2017"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded funding round is September 13, 2017, well before the eighteen-month window beginning in May 2025: https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Bizagi is ISO/IEC 27001:2022 certified."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi explicitly claims ISO/IEC 27001:2022 certification on https://www.bizagi.com/en/platform/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Independent reviews have concluded that Bizagi Cloud meets the requirements of the HIPAA/HITECH regulations."
+       ]
+      }
+     ],
+     "reasoning": "The compliance page states that independent reviews concluded Bizagi Cloud meets HIPAA/HITECH requirements: https://www.bizagi.com/en/platform/compliance. This is a conformity claim, not a formal HIPAA certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Bizagi is committed to providing the features to achieve GDPR compliance and enforce privacy and protection of personal data."
+       ]
+      }
+     ],
+     "reasoning": "The compliance page explicitly names GDPR and claims features supporting GDPR compliance: https://www.bizagi.com/en/platform/compliance. Its wording does not establish independent GDPR certification.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Process Automation Case Studies | Bizagi",
+       "url": "https://www.bizagi.com/en/customers",
+       "excerpts": [
+        "Unilever International"
+       ]
+      }
+     ],
+     "reasoning": "Unilever International is named on the customer case-study page: https://www.bizagi.com/en/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Process Automation Case Studies | Bizagi",
+       "url": "https://www.bizagi.com/en/customers",
+       "excerpts": [
+        "DHL Group"
+       ]
+      }
+     ],
+     "reasoning": "DHL Group is named on the customer case-study page: https://www.bizagi.com/en/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Development Representative - BDR - Bizagi | Built In",
+       "url": "https://builtin.com/job/business-development-representative-bdr/8826498",
+       "excerpts": [
+        "**Maintain accurate activity and pipeline data** using tools such as LinkedIn Sales Navigator, Outreach, and CRM systems."
+       ]
+      }
+     ],
+     "reasoning": "The BDR listing names LinkedIn Sales Navigator as a tool for maintaining activity and pipeline data: https://builtin.com/job/business-development-representative-bdr/8826498.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Business Development Representative - BDR - Bizagi | Built In",
+       "url": "https://builtin.com/job/business-development-representative-bdr/8826498",
+       "excerpts": [
+        "**Maintain accurate activity and pipeline data** using tools such as LinkedIn Sales Navigator, Outreach, and CRM systems."
+       ]
+      }
+     ],
+     "reasoning": "The BDR listing explicitly names Outreach among its sales tools: https://builtin.com/job/business-development-representative-bdr/8826498.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1989.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Bizagi is a low-code platform that helps enterprises automate and orchestrate business processes by connecting people, systems, data, AI and bots.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI GPT through Microsoft Azure's Private OpenAI service",
+    "pricing_page": true,
+    "funding_amount_usd": 48000000.0,
+    "named_customers": [
+     "Unilever International",
+     "DHL Group"
+    ],
+    "funding_date": "2017-09",
+    "crm_stack_signal": [
+     "LinkedIn Sales Navigator",
+     "Outreach"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Private equity",
+    "public_docs": true,
+    "hq_city": "Washington, DC",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

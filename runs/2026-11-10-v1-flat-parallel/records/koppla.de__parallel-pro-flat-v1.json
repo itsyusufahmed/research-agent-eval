@@ -1,0 +1,155 @@
+{
+ "schema_version": "v0",
+ "company": "koppla",
+ "domain": "koppla.de",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "koppla helps general contractors, general planners, property developers and architects schedule construction projects and reduce project-delivery risks.",
+   "citations": [
+    "https://www.koppla.de/"
+   ],
+   "notes": "The homepage names general contractors, general planners, property developers and architects, and describes faster scheduling and reduced project-process risks: https://www.koppla.de/."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.koppla.de/preise"
+   ],
+   "notes": "A public pricing page describes project and company licenses, including unlimited users: https://www.koppla.de/preise. Public numerical prices are not required by the question."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Implenia",
+    "Max B\u00f6gl",
+    "Leonhard Weiss"
+   ],
+   "citations": [
+    "https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html"
+   ],
+   "notes": "named_customers: The investor announcement explicitly identifies Implenia, Max B\u00f6gl and Leonhard Weiss as customers, rather than partners or investors: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html. | named_customers.0: Implenia is explicitly named as a customer: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html. | named_customers.1: Max B\u00f6gl is explicitly named as a customer: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html. | named_customers.2: Leonhard Weiss is explicitly named as a customer: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "21-50",
+   "citations": [
+    "https://www.koppla.de/das-ist-koppla",
+    "https://koppla.de/karriere"
+   ],
+   "notes": "The about page states 38 employees, while the careers page states 27 people. Although the exact counts differ, both fall within 21-50: https://www.koppla.de/das-ist-koppla and https://koppla.de/karriere."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Potsdam",
+    "country": "Germany"
+   },
+   "citations": [
+    "https://koppla.de/imprint"
+   ],
+   "notes": "hq_city: The company's imprint gives its address as Schopenhauerstra\u00dfe 19, 14467 Potsdam, Germany: https://koppla.de/imprint. This establishes its registered location; the company profile also identifies Potsdam. | hq_country: The company imprint gives its address as Potsdam, Deutschland: https://koppla.de/imprint. This establishes its registered location; the company profile also identifies Potsdam as its location."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2020.0,
+   "citations": [
+    "https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html"
+   ],
+   "notes": "The investor announcement explicitly says koppla was founded in 2020: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.koppla.de/blog"
+   ],
+   "notes": "The reviewed blog index contains construction-management advice, product announcements, integrations and event marketing, rather than at least two engineer-authored posts about building the software: https://www.koppla.de/blog. Construction-engineering topics were not counted as software-engineering posts."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://support.koppla.de/de"
+   ],
+   "notes": "The public help center contains multiple collections with numerous articles, including seven welcome articles, nineteen planning articles and twelve project-control articles: https://support.koppla.de/de."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://koppla.jobs.personio.de/?language=en"
+   ],
+   "notes": "The current English job board lists Founders Associate\u2014GTM/RevOps/Growth and Senior Product Engineer\u2014Coding & People Leadership. Neither title qualifies as an AI, ML or data-science role: https://koppla.jobs.personio.de/?language=en."
+  },
+  "model_provider": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown. The AI product page describes AI-assisted project import and hosting safeguards but names no model or model provider. No model provider was identified in the reviewed blog, help-center material, privacy pages or public subprocessor listing. Sources: https://www.koppla.de/kuenstliche-intelligenz-mit-koppla, https://www.koppla.de/blog, https://support.koppla.de/de and https://security.koppla.de/. AWS appearing as a subprocessor was not treated as evidence of an AI model provider."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR",
+    "ISO 27001"
+   ],
+   "citations": [
+    "https://security.koppla.de/"
+   ],
+   "notes": "compliance_certs: The public Trust Center lists GDPR and ISO/IEC 27001 under compliance, without an in-progress qualifier in the reviewed content. These are reported as public claims, not independently verified certifications: https://security.koppla.de/. | compliance_certs.0: GDPR is explicitly listed in koppla's Trust Center: https://security.koppla.de/. | compliance_certs.1: ISO/IEC 27001 is explicitly displayed as a compliance item. The reviewed listing does not describe it as in progress: https://security.koppla.de/."
+  },
+  "last_funding": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "normalizer: no stage, so recorded as unknown (funding_date=\"2025-05\", funding_amount_usd=6800000.0) | funding_stage: Unknown because sources conflict on the stage. Seedtable labels the round Series A, another company-data source labels the Newion round Seed, and Tech.eu calls it Other. The primary investor announcement does not specify a stage. Sources: https://seedtable.com/companies/koppla, https://funding.tech.eu/companies/koppla-10ab2ad0 and https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html. No stage was inferred from the amount. | funding_date: The investor announcement is dated May 19, 2025, and the funding history lists the latest round on that date. Both support 2025-05: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html and https://funding.tech.eu/companies/koppla-10ab2ad0. | funding_amount_usd: Seedtable reports the last funding amount as USD 6.8 million: https://seedtable.com/companies/koppla. The investor announcement describes the corresponding May 2025 round as EUR 6 million: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html. The USD value is the published database figure, not a newly calculated conversion."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html",
+    "https://newion.com/news/why-we-invested-in-koppla"
+   ],
+   "notes": "The EUR 6 million round was announced on May 19, 2025, within the requested eighteen-month window. Both the public investor announcement and Newion's investment announcement support this: https://www.ilb.de/de/presse/pressemitteilungen/pressemitteilung_2049984.html and https://newion.com/news/why-we-invested-in-koppla."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://koppla.jobs.personio.de/?language=en"
+   ],
+   "notes": "Neither position on the reviewed current job board is titled SDR, BDR, sales/business-development representative or account executive. The GTM-focused Founders Associate role does not meet the title requirement: https://koppla.jobs.personio.de/?language=en."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.koppla.de/blog/bim-in-koppla"
+   ],
+   "notes": "The May 27, 2026 announcement introduces a new BIM integration that automatically links schedules to 4D-BIM tools using matching keys. This is a substantive feature within the six-month window, not a bug fix or UI tweak: https://www.koppla.de/blog/bim-in-koppla."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown. The team roster lacks leadership start dates, and public leadership listings do not establish a complete, consistent dated history. Fabian Schaeffer's VP Revenue start was September 2025, outside the requested window, so it does not establish an in-window change. Sources: https://koppla.de/karriere, https://linkedin.com/in/fabianschaeffer and https://getlatka.com/companies/koppla/contacts."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://koppla.jobs.personio.de/job/2870964?language=en"
+   ],
+   "notes": "The readable GTM/RevOps job posting discusses CRM maintenance, pipeline reporting and commercial workflows but names no CRM or sales/marketing platform. This supports an empty list under the stated rule, not a claim that koppla uses no CRM: https://koppla.jobs.personio.de/job/2870964?language=en."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 321.6
+}

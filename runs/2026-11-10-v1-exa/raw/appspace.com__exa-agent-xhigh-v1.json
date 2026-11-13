@@ -1,0 +1,1434 @@
+{
+ "id": "agent_run_c1cb421084cf439f96989f594422d695",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T18:56:22.640Z",
+ "completedAt": "2026-11-10T19:00:53.049Z",
+ "request": {
+  "query": "Research the company Appspace (appspace.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Appspace is a workplace experience platform for organizations and their employees that unifies employee communications, digital signage, intranet, space reservations, and visitor management.\",\"citations\":[\"https://www.appspace.com/\",\"https://job-boards.greenhouse.io/appspace\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.appspace.com/pricing/\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Milliman\",\"Costco\",\"American Chemical Society\",\"Paramount\"],\"citations\":[\"https://www.appspace.com/resources/case-studies/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://linkedin.com/company/appspace\"]},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Tampa\",\"country\":\"United States\"},\"citations\":[\"https://www.appspace.com\",\"https://linkedin.com/company/appspace\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2002,\"citations\":[\"https://www.appspace.com\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.appspace.com/resources/blog\",\"https://www.appspace.com/blog/category/workplace/\"],\"notes\":\"The public blog covers workplace strategy, employee communications, and product news; no qualifying engineering blog with two engineer-authored implementation posts was found.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.appspace.com/\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://job-boards.greenhouse.io/appspace\",\"https://boards-api.greenhouse.io/v1/boards/appspace/jobs\"],\"notes\":\"The complete public board lists seven openings, none with a qualifying AI, ML, or data-science title; the Security Architect role does not qualify.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Microsoft Azure OpenAI / Microsoft Foundry and Google Gemini / Vertex AI\",\"citations\":[\"https://www.appspace.com/ai-assistants/\",\"https://www.appspace.com/legal/ai-terms-exhibit/\",\"https://community.appspace.com/security-14/does-appspace-ai-store-prompts-conversation-history-or-customer-data-1766\"],\"notes\":\"Public materials identify Microsoft and Google as AI providers and allow customers to connect their own supported models; the default model\u2019s exact version is not disclosed.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type II\",\"ISO 27001:2022\",\"GDPR\"],\"citations\":[\"https://www.appspace.com/legal/data-security-exhibit/\",\"https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf\"],\"notes\":\"GDPR is a claimed regulatory compliance framework, not a certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Private equity / strategic growth investment\",\"date\":\"2023-09\"},\"citations\":[\"https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/\"],\"notes\":\"Accel-KKR investment announced September 21, 2023; the USD amount was not disclosed.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/\"],\"notes\":\"The latest identified funding announcement was September 21, 2023, before the May 9, 2025\u2013November 9, 2026 window; the 2025 Igloo acquisition was not a funding round.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://job-boards.greenhouse.io/appspace/jobs/6228311004\"],\"notes\":\"Live Business Development Representative opening in the United Kingdom; the current board also lists account executive openings.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.appspace.com/blog/enterprise-ai-bring-your-own-model/\"],\"notes\":\"Introduced Bring Your Own Model on June 16, 2026, within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.appspace.com/blog/appspace-expands-executive-team/\"],\"notes\":\"On March 19, 2026, Appspace announced Eric Daggett joining as Chief Sales Officer and Dan Ward joining as Chief Technology Officer.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"SalesLoft\",\"Chili Piper\",\"Gong\",\"ZoomInfo\",\"LinkedIn\",\"Gainsight\",\"SupportLogic\",\"Intercom\",\"Clari\",\"Goldcast\"],\"citations\":[\"https://job-boards.greenhouse.io/appspace/jobs/6228311004\",\"https://www.appspace.com/legal/data-processing-addendum/\"],\"notes\":\"Sales-development systems are named in the BDR posting; additional CRM/support services are named in the subprocessor list.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The public blog covers workplace strategy, employee communications, and product news; no qualifying engineering blog with two engineer-authored implementation posts was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/resources/blog",
+     "https://www.appspace.com/blog/category/workplace/"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Tampa",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com",
+     "https://linkedin.com/company/appspace"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.appspace.com/"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest identified funding announcement was September 21, 2023, before the May 9, 2025\u2013November 9, 2026 window; the 2025 Igloo acquisition was not a funding round.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+    ]
+   },
+   "founded_year": {
+    "value": 2002,
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com"
+    ]
+   },
+   "last_funding": {
+    "notes": "Accel-KKR investment announced September 21, 2023; the USD amount was not disclosed.",
+    "value": {
+     "date": "2023-09",
+     "stage": "Private equity / strategic growth investment"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Introduced Bring Your Own Model on June 16, 2026, within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/blog/enterprise-ai-bring-your-own-model/"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/pricing/"
+    ]
+   },
+   "employee_band": {
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/appspace"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Live Business Development Representative opening in the United Kingdom; the current board also lists account executive openings.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+    ]
+   },
+   "model_provider": {
+    "notes": "Public materials identify Microsoft and Google as AI providers and allow customers to connect their own supported models; the default model\u2019s exact version is not disclosed.",
+    "value": "Microsoft Azure OpenAI / Microsoft Foundry and Google Gemini / Vertex AI",
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/ai-assistants/",
+     "https://www.appspace.com/legal/ai-terms-exhibit/",
+     "https://community.appspace.com/security-14/does-appspace-ai-store-prompts-conversation-history-or-customer-data-1766"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Milliman",
+     "Costco",
+     "American Chemical Society",
+     "Paramount"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/resources/case-studies/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The complete public board lists seven openings, none with a qualifying AI, ML, or data-science title; the Security Architect role does not qualify.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/appspace",
+     "https://boards-api.greenhouse.io/v1/boards/appspace/jobs"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "GDPR is a claimed regulatory compliance framework, not a certification.",
+    "value": [
+     "SOC 2 Type II",
+     "ISO 27001:2022",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/legal/data-security-exhibit/",
+     "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "Sales-development systems are named in the BDR posting; additional CRM/support services are named in the subprocessor list.",
+    "value": [
+     "Salesforce",
+     "SalesLoft",
+     "Chili Piper",
+     "Gong",
+     "ZoomInfo",
+     "LinkedIn",
+     "Gainsight",
+     "SupportLogic",
+     "Intercom",
+     "Clari",
+     "Goldcast"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/appspace/jobs/6228311004",
+     "https://www.appspace.com/legal/data-processing-addendum/"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Appspace is a workplace experience platform for organizations and their employees that unifies employee communications, digital signage, intranet, space reservations, and visitor management.",
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/",
+     "https://job-boards.greenhouse.io/appspace"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "On March 19, 2026, Appspace announced Eric Daggett joining as Chief Sales Officer and Dan Ward joining as Chief Technology Officer.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.appspace.com/blog/appspace-expands-executive-team/"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/case-studies/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/case-studies/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/case-studies/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.status",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     },
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value.city",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     },
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value.country",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     },
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     },
+     {
+      "url": "https://linkedin.com/company/appspace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/blog"
+     },
+     {
+      "url": "https://www.appspace.com/blog/category/workplace/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/blog"
+     },
+     {
+      "url": "https://www.appspace.com/blog/category/workplace/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/blog"
+     },
+     {
+      "url": "https://www.appspace.com/blog/category/workplace/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/resources/blog"
+     },
+     {
+      "url": "https://www.appspace.com/blog/category/workplace/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.status",
+    "citations": [
+     {
+      "url": "https://docs.appspace.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://docs.appspace.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://docs.appspace.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.status",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     },
+     {
+      "url": "https://boards-api.greenhouse.io/v1/boards/appspace/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     },
+     {
+      "url": "https://boards-api.greenhouse.io/v1/boards/appspace/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     },
+     {
+      "url": "https://boards-api.greenhouse.io/v1/boards/appspace/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace"
+     },
+     {
+      "url": "https://boards-api.greenhouse.io/v1/boards/appspace/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/ai-assistants/"
+     },
+     {
+      "url": "https://www.appspace.com/legal/ai-terms-exhibit/"
+     },
+     {
+      "url": "https://community.appspace.com/security-14/does-appspace-ai-store-prompts-conversation-history-or-customer-data-1766"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/ai-assistants/"
+     },
+     {
+      "url": "https://www.appspace.com/legal/ai-terms-exhibit/"
+     },
+     {
+      "url": "https://community.appspace.com/security-14/does-appspace-ai-store-prompts-conversation-history-or-customer-data-1766"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/ai-assistants/"
+     },
+     {
+      "url": "https://www.appspace.com/legal/ai-terms-exhibit/"
+     },
+     {
+      "url": "https://community.appspace.com/security-14/does-appspace-ai-store-prompts-conversation-history-or-customer-data-1766"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/ai-assistants/"
+     },
+     {
+      "url": "https://www.appspace.com/legal/ai-terms-exhibit/"
+     },
+     {
+      "url": "https://community.appspace.com/security-14/does-appspace-ai-store-prompts-conversation-history-or-customer-data-1766"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/legal/data-security-exhibit/"
+     },
+     {
+      "url": "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/legal/data-security-exhibit/"
+     },
+     {
+      "url": "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/legal/data-security-exhibit/"
+     },
+     {
+      "url": "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/legal/data-security-exhibit/"
+     },
+     {
+      "url": "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.status",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value.stage",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value.date",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.status",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.status",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/enterprise-ai-bring-your-own-model/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/enterprise-ai-bring-your-own-model/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/enterprise-ai-bring-your-own-model/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/enterprise-ai-bring-your-own-model/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.status",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/appspace-expands-executive-team/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/appspace-expands-executive-team/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/appspace-expands-executive-team/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.appspace.com/blog/appspace-expands-executive-team/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.status",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     },
+     {
+      "url": "https://www.appspace.com/legal/data-processing-addendum/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     },
+     {
+      "url": "https://www.appspace.com/legal/data-processing-addendum/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     },
+     {
+      "url": "https://www.appspace.com/legal/data-processing-addendum/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+     },
+     {
+      "url": "https://www.appspace.com/legal/data-processing-addendum/"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

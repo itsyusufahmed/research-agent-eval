@@ -1,0 +1,777 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e952dd1ac4fa7b992",
+  "interaction_id": "trun_142119f6a1b4439e952dd1ac4fa7b992",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "luminance.com"
+  },
+  "created_at": "2026-11-10T18:48:53.291008Z",
+  "modified_at": "2026-11-10T18:52:07.394698Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e952dd1ac4fa7b992",
+   "interaction_id": "trun_142119f6a1b4439e952dd1ac4fa7b992",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "luminance.com"
+   },
+   "created_at": "2026-11-10T18:48:53.291008Z",
+   "modified_at": "2026-11-10T18:52:07.394698Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "url": "http://luminance.com/about",
+       "excerpts": [
+        "Founded by mathematicians in 2015, Luminance has spent nearly a decade developing the most legally accurate AI"
+       ]
+      }
+     ],
+     "reasoning": "The company About excerpt states it was founded by mathematicians in 2015.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Luminance",
+       "url": "https://trust.luminance.com/",
+       "excerpts": [
+        "## Compliance",
+        "GDPR",
+        "EU AI ACT",
+        "SOC 2 Type II",
+        "ISO 27001:2022",
+        "## Resources",
+        "[View all](https://trust.luminance.com/resources)",
+        "### Compliance",
+        "ISO 27001:2022 Certificate",
+        "[ISO 27001 - Statement of Applicability (SoA)](https://trust.luminance.com/?requestAccessOpen=true&requestedResources=6a70a8dca136d2aec4c3466e)",
+        "[SOC 2 Type II Report](https://trust.luminance.com/?requestAccessOpen=true&requestedResources=6a70a64f7a04e05bcad44dad)",
+        "### Whitepapers"
+       ]
+      }
+     ],
+     "reasoning": "The official Trust Center compliance list names GDPR, SOC 2 Type II, and ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/luminancetech",
+       "excerpts": [
+        "name: Luminance description Luminance is the Contract Intelligence platform that turns the language that defines a business into the intelligence it runs on. ... website: http://www.luminance.com employee count: 417 founded year: 2015 follower count: 41651 linkedin url: https://www.linkedin.com/company/luminancetech country iso: GB country name: United Kingdom locality: Cambridge type: Privately Held size: 200"
+       ]
+      }
+     ],
+     "reasoning": "The Luminance LinkedIn company profile gives its country as the United Kingdom and locality as Cambridge.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "The era of vertical AI is here: introducing Luna Crescent - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/blogs/the-era-of-vertical-ai-is-here-introducing-luna-crescent-luminances-proprietary-legal-intelligence-model",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Jun 19, 2026",
+        "## The era of vertical AI is here: introducing Luna Crescent",
+        "Dr Graham Sills, Co-Founder and Director of AI",
+        "The first wave of enterprise AI was defined by access. As foundation models became increasingly powerful and widely available, businesses rushed to integrate them into products, workflows and entire business processes. Suddenly, every software company had access to the same remarkable technology.",
+        "But as AI matures, a new reality is emerging. General-purpose models are getting better and better. Yet some problems are simply too specialized to be solved optimally by models designed to solve everything.",
+        "Legal work is an example of this. Contracts are not just another form of text. They are filled with nuance, complex drafting conventions and subtle distinctions that can materially change meaning, risk and commercial outcome. Understanding them requires more than language understanding. It requires legal understanding.",
+        "It\u2019s why the next phase of enterprise AI will be defined by vertical models: specialist AI built for specialist work. At Luminance, we\u2019ve been building towards that future for some time. And today, we\u2019re announcing that future in the form of Luna Crescent \u2013 Luminance\u2019s proprietary legal intelligence model.",
+        "**Why did we build Luna?**",
+        "Luminance has been building Legal-Grade\u2122 AI for over a decade. In that time, our platform has been exposed to over 220 million verified legal documents. This powerful corpus offers something general-purpose model providers cannot replicate: a deep, ground-level understanding of how contracts are actually written, negotiated and managed in practice. Legal language is not a subset of general language. It operates according to its own logic, conventions and risks.",
+        "As foundation models became increasingly capable, the opportunity became clear: combine the power of general AI advances with a specialist intelligence layer that only years of legal data and domain expertise could produce. That\u2019s the principle behind Luna.",
+        "Luna is not a replacement for foundation models. Luminance\u2019s multi-model architecture continuously evaluates and combines the best combination of models for any given task. Where foundation models deliver the strongest results, we use them. Where a specialist legal model performs better, we use Luna. The goal is to combine the best of both for the optimal outcome.",
+        "**Where does the power come from?**",
+        "Luna was designed with a clear goal: to create a specialist legal model optimized primarily for accuracy and legal understanding.",
+        "Its training draws on Luminance\u2019s extensive, high-quality dataset \u2013 specifically a carefully curated selection of challenging examples spanning around 3.4 million legal concepts and data points. Importantly, the breadth of the training data reflects the complexity of legal work: contracts from virtually every industry, including highly complex agreements, difficult file formats, obscure drafting styles and diverse legal language. This enables Luna to perform effectively across the full range of contracts encountered in real-world legal scenarios.",
+        "Reliability was a core design principle throughout. Rather than generating plausible-sounding answers, Luna has been specifically trained to prioritize faithful extraction from source documents. When information is not present, it is designed to identify that absence rather than invent an answer. We know instilling this level of trust is what matters most for legal professionals.",
+        "**What does this mean in practice?**",
+        "Ultimately, the value of any AI comes down to results. Luna is already operating within the Luminance platform, helping power the contract intelligence capabilities used by customers around the world.",
+        "To validate performance, Luminance\u2019s Cambridge-based R&D team developed ContractIQ Bench, a proprietary benchmark consisting of 189,000 manually annotated and reviewed data points which assess a model\u2019s ability to interpret key provisions within legal documents, such as liability caps, termination for convenience, and confidentiality obligations. Using ContractIQ Bench, Luminance tested Luna against leading general-purpose models on held-out legal documents and concepts not included in Luna\u2019s training data, alongside blind evaluations by legal experts.",
+        "Luna achieved 5% higher accuracy on contract understanding tasks and was consistently preferred by legal experts for its ability to identify contractual concepts and extract key information from complex clauses.",
+        "The advantage is clearest in work that general-purpose AI was not purpose built to solve: identifying non-standard clause constructions, detecting concepts expressed in unfamiliar language, classifying obligations buried in dense boilerplate and flagging what is absent as well as what is present. Luna understands legal language as a system of obligations, rights, risks and commercial consequences, rather than as another category of general text.",
+        "Luna offers this specialised legal intelligence while also processing information quickly. The model generates text nearly 4 times faster than generalist tools, reaching 200-400 tokens per second. Work that takes 30 seconds on a general model takes under eight on Luna. Multiplied across an enterprise contract repository, those seconds become hours of recovered time and faster business decision-making."
+       ]
+      },
+      {
+       "title": "How Luminance selects AI models for Contract Intelligence - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/blogs/how-luminance-selects-ai-models-for-contract-intelligence",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Oct 5, 2026",
+        "## How Luminance selects AI models for Contract Intelligence",
+        "Luc Frachon and the Luminance Evals Team",
+        "LLM providers release new models at an increasing pace, and it becomes harder and harder to know which model to use. This makes model selection a demanding engineering problem, but also an exciting one. We are fortunate to have so many capable models competing to solve increasingly complex problems. The challenge is understanding where each model performs best, and how those strengths translate into real-world usefulness. A model optimized for an academic benchmark may not be the best choice for a specific contract task. Model evaluation must therefore be grounded in realistic documents, realistic workflows, and the use cases that matter to users. ",
+        "Over the last two weeks, OpenAI and Anthropic have released four major models: GPT 6 Sol, GPT 6.1 Sol, Claude Sonnet 5.5, and Claude Opus 5.5. This is the perfect opportunity to illustrate our testing ethos while providing some real insight about their respective strengths and weaknesses. ",
+        "In this blog, we explain our general philosophy around AI model evaluation and selection, and provide a worked example based on a recent batch of new AI model releases. ",
+        "## **Why Luminance takes a model-opinionated approach** ",
+        "The Luminance Platform covers many legal [workflows](../platform/product/workflows). For instance, reviewing the Repository might involve finding agreements, organizing information, surfacing and explaining contract details, etc. In [Negotiation](../platform/product/negotiation), Luminance\u2019s AI might be asked to compare a clause with a preferred position, redline positions, find precedents, etc. There is no one-size-fits-all approach to model selection across such a wide range of tasks. The right model for a document retrieval task may not be the right model for contract interpretation, drafting, negotiation, or portfolio analysis. ",
+        "Some software providers make a point of letting the user choose between all new models. At Luminance, we don\u2019t believe in this approach. ",
+        "Choosing the right model for a given task is among the hardest problems in the industry and requires detailed knowledge of every feature and model. We find it unfair to the customer to leave the decision to them. ",
+        "As we are not pricing by usage, our customers are guaranteed optimal performance and consistent pricing. This is what we call being [model-opinionated](../platform/technology/model-opinionated) by design: Luminance selects the model best suited to each Contract Intelligence task, rather than asking customers to become experts in model selection themselves. ",
+        "The models are available to everyone. The judgment is not. ",
+        "## **How we evaluate AI models for contract work ** ",
+        "Our evaluation framework is based on real documents and real tasks a user would ask the product to perform. We constantly evolve it to cover the new features developed by our engineers to ensure that evaluation metrics closely correlate with actual user experience. It makes this framework a lot more informative and grounded than generic legal benchmarks. ",
+        "Every model is assessed over contract workflows for legal accuracy, usefulness, tone, speed, and consistency, on the same set of tasks and against the same evaluation criteria. There are two main categories of tasks that we assess: Negotiation and Repository, with subcategories in each. ",
+        "We compare each LLM to two established reference models for which we have reliable metrics and report accuracy and speed over multiple repeats. This allows us to assess whether a new model performs well in isolation and whether it represents a meaningful improvement for a particular task. ",
+        "**How this cohort performed: AI model evaluation results across Repository and Negotiation ** ",
+        "*Figure 1. Accuracy differences from reference models (GPT 5.6 Terra and GPT 5.4, respectively), with higher values indicating better performance against our assessment criteria. Time is also relative to reference models. *",
+        "Our latest test campaign pitches four recently released models against each other: OpenAI\u2019s GPT 6 Sol and GPT 6.1 Sol, and Anthropic\u2019s Claude Sonnet 5.5 and Claude Opus 5.5. ",
+        "- On Repository tasks, Opus performed best overall, followed by 6.1 Sol, 6 Sol, and Sonnet 5.5. ",
+        "- On Negotiation, Opus came first again by a short margin over Sonnet. However, the differences with the reference model are much narrower than on Repository. ",
+        "Completion times showed large differences, ranging from 0.7x to 1.6x in the reference models\u2019 times. These differences are very noticeable to the user and must be considered when selecting the right model for the job. ",
+        "Going into more detail, we see interesting patterns emerge. On Negotiation, every tested model brings a clear uplift in document retrieval, a mechanical, agent-calling task, with 6.1 Sol improving by 20pp. Results are less consistent on interpretation and understanding questions such as market standards or drafting and amendments. The other lesson here is that bigger is not always better, with Sonnet 5.5 punching above its weight in most categories. ",
+        "*Figure 2. Negotiation accuracy differences from reference models, in percentage points. This breakdown helps us make a more specific choice than simply selecting the highest overall score. We can see which kinds of work improve, and whether those improvements fit the way customers use each part of Luminance. *",
+        "## **How Model performance compounds throughout a task** ",
+        "[The Luminance Repository](../platform/product/repository) view enables users to ask a question across their entire repository and get detailed per-document answers. For example, they might ask, *\u201cAnalyze my termination rights over all my master service agreements.\u201d* The agent decides what columns to generate and writes column descriptions. Those are then used by a subagent to populate the columns against each document. ",
+        "*Figure 3. Repository preparation, shown as accuracy differences from reference model in percentage points. Our metrics show each stage independently. Opus was particularly strong at choosing the correct columns, as well as writing their description. Sonnet and 6 Sol were less impressive on column creation, but when they chose the right columns, their descriptions were still an improvement. *",
+        "An interesting effect is that the next stage, cell population, can be significantly improved *without changing its own model*, just from the better column descriptions generated by the top-level agent. This shows that choosing the right model can bring benefits to a whole sequence of agentic tasks, not just the specific steps where it intervenes. In a well-designed AI product, improvements compound over a workflow, and better performance in the early steps provides the user with better accuracy over the whole system. ",
+        "## **What AI model selection means for customers** ",
+        "A lot more goes into proper model testing than just running them on a public benchmark. ",
+        "For Contract Intelligence, the relevant question is not \u201c*Which model is best?*\u201d in the abstract. It\u2019s *\u201cWhich model is best for this task, in this workflow, using this contractual context?\u201d* ",
+        "From this round of testing, we learned that Claude Opus 5.5 looks particularly strong as the Repository\u2019s main agent, while Claude Sonnet 5.5 seems to be a good choice for some Negotiation applications. The GPT Sol models deliver consistently good performance but come with a speed impact. Final validation by our legal experts will confirm which of these models are worth deploying into production. Our users benefit from these choices automatically without having to worry about cost. ",
+        "This funnel supports Luminance\u2019s model-opinionated approach: the platform selects the right model for each Contract Intelligence task, combining frontier models with purpose-built legal intelligence, contextual retrieval, agentic workflows, and differentiated validation. "
+       ]
+      }
+     ],
+     "reasoning": "Two official blog posts meet the technical threshold: the June 2026 Luna Crescent post is by the Co-Founder and Director of AI and discusses model development and R&D validation; the October 2026 model-selection post is by Luc Frachon and the Luminance Evals Team and explains engineering evaluation of models for product tasks.",
+     "confidence": "high"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/",
+       "excerpts": [
+        "Accelerate legal work and unlock the value of contracts across the enterprise. Luminance is the single source of contract intelligence delivered to everyone, everywhere, to mitigate risk and capture commercial opportunity.",
+        "[REQUEST A DEMO](./#get-started)"
+       ]
+      },
+      {
+       "title": "Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments",
+       "excerpts": [
+        "Developed by AI experts from the University of Cambridge, Luminance uses specialist AI \u2013 known as the \u201cPanel of Judges\u201d \u2013 to automate and augment every touchpoint a business has with its contracts, from generation to negotiation and post-execution analysis. The company works with over 700 organisations in 70+ countries across all verticals and has a roster of blue-chip clients such as AMD, Hitachi, LG Chem, SiriusXM, Rolls-Royce and Lamborghini."
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes Contract Intelligence for the enterprise; the company funding announcement describes specialist AI automating contract generation, negotiation, and post-execution analysis.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Luminance - LinkedIn",
+       "url": "https://linkedin.com/company/luminancetech",
+       "excerpts": [
+        "Luminance - LinkedIn Industry Software Development Company size 201-500 employees Headquarters Cambridge Type Privately Held Founded 2015"
+       ]
+      }
+     ],
+     "reasoning": "The Luminance LinkedIn company profile identifies company size as 201\u2013500 employees.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "The era of vertical AI is here: introducing Luna Crescent - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/blogs/the-era-of-vertical-ai-is-here-introducing-luna-crescent-luminances-proprietary-legal-intelligence-model",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Jun 19, 2026",
+        "## The era of vertical AI is here: introducing Luna Crescent",
+        "Dr Graham Sills, Co-Founder and Director of AI",
+        "The first wave of enterprise AI was defined by access. As foundation models became increasingly powerful and widely available, businesses rushed to integrate them into products, workflows and entire business processes. Suddenly, every software company had access to the same remarkable technology.",
+        "But as AI matures, a new reality is emerging. General-purpose models are getting better and better. Yet some problems are simply too specialized to be solved optimally by models designed to solve everything.",
+        "Legal work is an example of this. Contracts are not just another form of text. They are filled with nuance, complex drafting conventions and subtle distinctions that can materially change meaning, risk and commercial outcome. Understanding them requires more than language understanding. It requires legal understanding.",
+        "It\u2019s why the next phase of enterprise AI will be defined by vertical models: specialist AI built for specialist work. At Luminance, we\u2019ve been building towards that future for some time. And today, we\u2019re announcing that future in the form of Luna Crescent \u2013 Luminance\u2019s proprietary legal intelligence model.",
+        "**Why did we build Luna?**",
+        "Luminance has been building Legal-Grade\u2122 AI for over a decade. In that time, our platform has been exposed to over 220 million verified legal documents. This powerful corpus offers something general-purpose model providers cannot replicate: a deep, ground-level understanding of how contracts are actually written, negotiated and managed in practice. Legal language is not a subset of general language. It operates according to its own logic, conventions and risks.",
+        "As foundation models became increasingly capable, the opportunity became clear: combine the power of general AI advances with a specialist intelligence layer that only years of legal data and domain expertise could produce. That\u2019s the principle behind Luna.",
+        "Luna is not a replacement for foundation models. Luminance\u2019s multi-model architecture continuously evaluates and combines the best combination of models for any given task. Where foundation models deliver the strongest results, we use them. Where a specialist legal model performs better, we use Luna. The goal is to combine the best of both for the optimal outcome.",
+        "**Where does the power come from?**",
+        "Luna was designed with a clear goal: to create a specialist legal model optimized primarily for accuracy and legal understanding.",
+        "Its training draws on Luminance\u2019s extensive, high-quality dataset \u2013 specifically a carefully curated selection of challenging examples spanning around 3.4 million legal concepts and data points. Importantly, the breadth of the training data reflects the complexity of legal work: contracts from virtually every industry, including highly complex agreements, difficult file formats, obscure drafting styles and diverse legal language. This enables Luna to perform effectively across the full range of contracts encountered in real-world legal scenarios.",
+        "Reliability was a core design principle throughout. Rather than generating plausible-sounding answers, Luna has been specifically trained to prioritize faithful extraction from source documents. When information is not present, it is designed to identify that absence rather than invent an answer. We know instilling this level of trust is what matters most for legal professionals.",
+        "**What does this mean in practice?**",
+        "Ultimately, the value of any AI comes down to results. Luna is already operating within the Luminance platform, helping power the contract intelligence capabilities used by customers around the world.",
+        "To validate performance, Luminance\u2019s Cambridge-based R&D team developed ContractIQ Bench, a proprietary benchmark consisting of 189,000 manually annotated and reviewed data points which assess a model\u2019s ability to interpret key provisions within legal documents, such as liability caps, termination for convenience, and confidentiality obligations. Using ContractIQ Bench, Luminance tested Luna against leading general-purpose models on held-out legal documents and concepts not included in Luna\u2019s training data, alongside blind evaluations by legal experts.",
+        "Luna achieved 5% higher accuracy on contract understanding tasks and was consistently preferred by legal experts for its ability to identify contractual concepts and extract key information from complex clauses.",
+        "The advantage is clearest in work that general-purpose AI was not purpose built to solve: identifying non-standard clause constructions, detecting concepts expressed in unfamiliar language, classifying obligations buried in dense boilerplate and flagging what is absent as well as what is present. Luna understands legal language as a system of obligations, rights, risks and commercial consequences, rather than as another category of general text.",
+        "Luna offers this specialised legal intelligence while also processing information quickly. The model generates text nearly 4 times faster than generalist tools, reaching 200-400 tokens per second. Work that takes 30 seconds on a general model takes under eight on Luna. Multiplied across an enterprise contract repository, those seconds become hours of recovered time and faster business decision-making."
+       ]
+      },
+      {
+       "title": "Trust Center - Luminance",
+       "url": "https://trust.luminance.com/",
+       "excerpts": [
+        "[Penetration Test Executive Summary](https://trust.luminance.com/?requestAccessOpen=true&requestedResources=6a7f1c7a6d61b33e5fe228da)",
+        "## Subprocessors",
+        "[View all](https://trust.luminance.com/subprocessors)",
+        "AWS \u2022 Product hosting & infrastructure provider",
+        "Location dependent on chosen hosting region",
+        "Product and data hosting, and generative model processing",
+        "Logo for Microsoft Azure",
+        "Microsoft Azure \u2022 Infrastructure provider",
+        "Infrastructure & additional generative model processing",
+        "Logo for Google Cloud EMEA",
+        "Google Cloud EMEA \u2022 Infrastructure provider",
+        "Logo for OpenAI, LLC",
+        "OpenAI, LLC \u2022 Generative model provider",
+        "United States",
+        "Additional generative model processing"
+       ]
+      }
+     ],
+     "reasoning": "Luminance describes Luna Crescent as its proprietary legal model within a multi-model system that also selects foundation models; its Trust Center explicitly names OpenAI, LLC as a generative model provider.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/",
+       "excerpts": [
+        "---",
+        "title: \"Accelerate legal work with Contract Intelligence | Luminance\"",
+        "description: Luminance provides a Contract Intelligence Platform that turns business language into actionable insights that mitigate risk and unlock value for every team across the enterprise.",
+        "published: \"Nov 9, 2026, 5:35 PM UTC\"",
+        "[Platform]",
+        "[Solutions]",
+        "[Security](./security)",
+        "[Customers](./customers)",
+        "[Resources](./resources/index)",
+        "[Company]",
+        "[Request a Demo](./demo)",
+        "[Luminance Forward: Nine new innovations. Read here \u2197](./resources/forward-october-2026)",
+        "CONTRACT INTELLIGENCE",
+        "# Contracts are everyone's business.",
+        "Accelerate legal work and unlock the value of contracts across the enterprise. Luminance is the single source of contract intelligence delivered to everyone, everywhere, to mitigate risk and capture commercial opportunity.",
+        "[REQUEST A DEMO](./#get-started)",
+        "TRUSTED BY 1,000+ ENTERPRISES WORLDWIDE",
+        "[Technology Overview](./platform/technology)",
+        "[Document Search Engine](./platform/technology/document-search-engine)",
+        "[Model Opinionated](./platform/technology/model-opinionated)",
+        "[Differential Validation](./platform/technology/differential-validation)",
+        "[Luna](./platform/technology/luna)",
+        "SOLUTIONS",
+        "[Legal](./solutions/department/legal)",
+        "[Finance](./solutions/department/finance)",
+        "[Procurement](./solutions/department/procurement)",
+        "[Compliance](./solutions/department/compliance)",
+        "[Sales](./solutions/department/sales)",
+        "[Executive](./solutions/department/exec)",
+        "[HR](./solutions/department/hr)",
+        "COMPANY",
+        "[About](./company/about)",
+        "[Careers](./company/careers)",
+        "[Contact](./company/contact)",
+        "[Legal & Privacy](./legal)",
+        "\u00a9 2026 Luminance. All rights reserved."
+       ]
+      }
+     ],
+     "reasoning": "The official homepage navigation offers a demo rather than pricing, and the complete footer navigation lists platform, resources, company, careers, contact, and legal links without a pricing link; this supports a negative answer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Feb 18, 2025",
+        "### Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments",
+        "Luminance, the pioneer in Legal-Grade\u2122 AI, today announced that it has raised $75 million in a Series C funding round, taking the total amount raised in the last 12 months to over $115 million. The oversubscribed round was led by Point72 Private Investments, with participation from Forestay Capital, RPS Ventures and Schroders Capital, as well as existing investors including March Capital, National Grid Partners and Slaughter and May.",
+        "Developed by AI experts from the University of Cambridge, Luminance uses specialist AI \u2013 known as the \u201cPanel of Judges\u201d \u2013 to automate and augment every touchpoint a business has with its contracts, from generation to negotiation and post-execution analysis. The company works with over 700 organisations in 70+ countries across all verticals and has a roster of blue-chip clients such as AMD, Hitachi, LG Chem, SiriusXM, Rolls-Royce and Lamborghini.",
+        "Demand for legal AI has grown dramatically. In its core Corporate product offering, Luminance has seen customers increase five times and ARR grow six times in the past two years. To meet this rapid increase in global demand, Luminance grew headcount by 80% in 2024, most notably in North America where headcount tripled with the opening of three brand-new offices in San Francisco, Dallas and Toronto, and the company expanded its US HQ in New York.",
+        "Driving this commercial success, Luminance has pioneered a number of world-firsts in AI. Most recently, the company released [Lumi Go](https://www.luminance.com/news/press/20241211_luminance_launches.html), a revolution in contract negotiation that enables Luminance customers to send draft agreements to a counterparty and have the AI auto-negotiate on their behalf.\\",
+        "\\",
+        "**Eleanor Lightbody, CEO of Luminance, said:** \u201cThis funding is all about innovation, expansion and scaling. It supercharges our US growth, where 40% of our revenue is already generated, and will fuel key hires and new offices across the US, APAC and Europe. It also accelerates innovation at our Cambridge R&D hub as we expand Luminance\u2019s AI platform to legal adjacent use cases in procurement and compliance. With Point72 Private Investments\u2019 deep legal tech expertise, we are setting the benchmark for end-to-end, legal-grade AI for enterprise.\u201d\\",
+        "**Sri Chandrasekar, Managing Partner of Point72 Private Investments, said:** \u201cWe know this market well and strongly believe in the power of next-generation AI to revolutionise contracting processes across the enterprise. We are excited to back Luminance as it continues building a specialist and trusted technology that has already been adopted by many of the world\u2019s largest organizations. Their team, strategy and vision positions them well to win this market.\u201d\\",
+        "**Hyun Koo, Partner at March Capital and Luminance board member, said:** \u201cSince our initial investment, Luminance has made significant strides growing in key markets and in product development. Recent wins with major customers such as DHL and AMD highlight its product capabilities, quick time-to-value, and clear ROI, which are increasingly important in enterprise AI adoption. We\u2019re excited to continue working with the Luminance team as they solidify their position as the global leader in legal AI.\u201d\\"
+       ]
+      },
+      {
+       "title": "Luminance Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/luminance/financials",
+       "excerpts": [
+        "Luminance's **latest funding round** was a **Series C for $75M** on **February 18, 2025** ."
+       ]
+      }
+     ],
+     "reasoning": "The company announcement gives a $75 million Series C; the funding profile identifies that as the latest round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer Stories | Luminance",
+       "url": "https://www.luminance.com/customers",
+       "excerpts": [
+        "# See what Contract Intelligence makes possible",
+        "Discover how global enterprises are using Luminance to put the intelligence in their contracts to work. ",
+        "Results",
+        "## Measurable impact across the enterprise ",
+        "TRENCH GROUP",
+        "80%",
+        "of contracts handled by the wider business",
+        "IMERYS",
+        "90%+",
+        "reduction in external counsel costs ",
+        "Yokogawa",
+        "99\\.9%",
+        "reduction in time to respond to business queries",
+        "FLUENCE",
+        "Up to 50%",
+        "fewer negotiation turns",
+        "[TotalEnergies Transforming legal operations across the enterprise](./customers/transforming-legal-operations-across-the-enterprise)",
+        "[Cryptomathic Turning contract data into commercial intelligence across the business](./customers/cryptomathic)",
+        "[Imerys Using portfolio insight to rethink negotiation strategy](./customers/imerys)",
+        "[Trench Group Giving Sales and Operations greater autonomy over day-to-day contracts](./customers/how-luminances-legal-grade-ai-is-transforming-trench-groups-contract-activity)",
+        "[IDEXX Turning global contract data into immediate risk intelligence](./customers/idexx)",
+        "[Hitachi Vantara Putting institutional knowledge to work beyond Legal](./customers/hitachi-ventara)",
+        "[Fluence Using historic contract data to negotiate from a stronger position](./customers/how-fluence-is-scaling-contracting-excellence-with-legal-grade-ai)",
+        "[Plat4mation Helping Legal become a more strategic partner as the company scales](./customers/how-plat4mation-is-scaling-legal-excellence-with-legal-grade-ai)",
+        "[Interfood Turning portfolio-wide visibility into more informed commercial decisions](./customers/how-interfood-are-building-a-more-strategic-legal-function-with-luminance-legal-grade-ai)",
+        "[NTT Data Bringing clarity and confidence to complex contract reviews](./customers/luminance-is-a-great-help)"
+       ]
+      }
+     ],
+     "reasoning": "Luminance\u2019s official customer stories page lists TRENCH GROUP and IMERYS as customer examples.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Feb 18, 2025",
+        "### Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments",
+        "Luminance, the pioneer in Legal-Grade\u2122 AI, today announced that it has raised $75 million in a Series C funding round, taking the total amount raised in the last 12 months to over $115 million. The oversubscribed round was led by Point72 Private Investments, with participation from Forestay Capital, RPS Ventures and Schroders Capital, as well as existing investors including March Capital, National Grid Partners and Slaughter and May.",
+        "Developed by AI experts from the University of Cambridge, Luminance uses specialist AI \u2013 known as the \u201cPanel of Judges\u201d \u2013 to automate and augment every touchpoint a business has with its contracts, from generation to negotiation and post-execution analysis. The company works with over 700 organisations in 70+ countries across all verticals and has a roster of blue-chip clients such as AMD, Hitachi, LG Chem, SiriusXM, Rolls-Royce and Lamborghini.",
+        "Demand for legal AI has grown dramatically. In its core Corporate product offering, Luminance has seen customers increase five times and ARR grow six times in the past two years. To meet this rapid increase in global demand, Luminance grew headcount by 80% in 2024, most notably in North America where headcount tripled with the opening of three brand-new offices in San Francisco, Dallas and Toronto, and the company expanded its US HQ in New York.",
+        "Driving this commercial success, Luminance has pioneered a number of world-firsts in AI. Most recently, the company released [Lumi Go](https://www.luminance.com/news/press/20241211_luminance_launches.html), a revolution in contract negotiation that enables Luminance customers to send draft agreements to a counterparty and have the AI auto-negotiate on their behalf.\\",
+        "\\",
+        "**Eleanor Lightbody, CEO of Luminance, said:** \u201cThis funding is all about innovation, expansion and scaling. It supercharges our US growth, where 40% of our revenue is already generated, and will fuel key hires and new offices across the US, APAC and Europe. It also accelerates innovation at our Cambridge R&D hub as we expand Luminance\u2019s AI platform to legal adjacent use cases in procurement and compliance. With Point72 Private Investments\u2019 deep legal tech expertise, we are setting the benchmark for end-to-end, legal-grade AI for enterprise.\u201d\\",
+        "**Sri Chandrasekar, Managing Partner of Point72 Private Investments, said:** \u201cWe know this market well and strongly believe in the power of next-generation AI to revolutionise contracting processes across the enterprise. We are excited to back Luminance as it continues building a specialist and trusted technology that has already been adopted by many of the world\u2019s largest organizations. Their team, strategy and vision positions them well to win this market.\u201d\\",
+        "**Hyun Koo, Partner at March Capital and Luminance board member, said:** \u201cSince our initial investment, Luminance has made significant strides growing in key markets and in product development. Recent wins with major customers such as DHL and AMD highlight its product capabilities, quick time-to-value, and clear ROI, which are increasingly important in enterprise AI adoption. We\u2019re excited to continue working with the Luminance team as they solidify their position as the global leader in legal AI.\u201d\\"
+       ]
+      },
+      {
+       "title": "Luminance Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/luminance/financials",
+       "excerpts": [
+        "Luminance's **latest funding round** was a **Series C for $75M** on **February 18, 2025** ."
+       ]
+      }
+     ],
+     "reasoning": "The official Series C announcement is dated February 18, 2025, and the funding profile identifies it as the latest round, yielding 2025-02.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Global Consulting Partners Lead @ Luminance  | Tech:NYC Job Board",
+       "url": "https://jobs.technyc.org/companies/luminance-2/jobs/91345345-global-consulting-partners-lead",
+       "excerpts": [
+        "Coordinate executive partner engagement and ensure sourced and influenced activity is accurately attributed and documented in HubSpot."
+       ]
+      }
+     ],
+     "reasoning": "A Luminance job posting explicitly says partner activity is documented in HubSpot, supporting HubSpot as a visible CRM system.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Greg\u00a0Pelander\u00a0Joins Luminance as Chief Technology Officer, Expanding Executive Bench and U.S.\u00a0Expertise\u00a0at Enterprise Giant\u00a0",
+       "url": "https://www.luminance.com/press/greg-pelander-joins-luminance-as-chief-technology-officer-expanding-executive-bench-and-u-s-expertise-at-enterprise-giant",
+       "excerpts": [
+        "**March 16 | London** Luminance, the pioneer of Legal-Grade\u2122 AI for enterprise legal teams, today announced the appointment of Greg Pelander as Chief Technology Officer. In his new role, Greg will be responsible for Luminance\u2019s technology strategy, engineering execution and infrastructure. Pelander, who will be based in Cambridge, brings nearly two decades of engineering leadership at prominent West Coast and Silicon Valley technology companies to the role."
+       ]
+      }
+     ],
+     "reasoning": "Luminance announced Greg Pelander\u2019s appointment as Chief Technology Officer in March 2026, inside the 12-month lookback period.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Machine Learning Research Engineer @ Luminance | Simplify Jobs",
+       "url": "https://simplify.jobs/p/7585e74f-2916-4691-b493-97166fd23c38/Machine-Learning-Research-Engineer",
+       "excerpts": [
+        "[L](https://simplify.jobs/c/Luminance) Luminance AI-powered contract analytics and automation Machine Learning Research Engineer Full-Time Confirmed live in the last 24 hours Unlock job analytics Simplify+"
+       ]
+      },
+      {
+       "title": "Machine Learning Research Engineer - Luminance | Built In",
+       "url": "https://builtin.com/job/machine-learning-research-engineer/6882726",
+       "excerpts": [
+        "Machine Learning Research Engineer"
+       ]
+      }
+     ],
+     "reasoning": "A current listing identifies a Machine Learning Research Engineer role and says it was confirmed live in the last 24 hours.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Feb 18, 2025",
+        "### Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments",
+        "Luminance, the pioneer in Legal-Grade\u2122 AI, today announced that it has raised $75 million in a Series C funding round, taking the total amount raised in the last 12 months to over $115 million. The oversubscribed round was led by Point72 Private Investments, with participation from Forestay Capital, RPS Ventures and Schroders Capital, as well as existing investors including March Capital, National Grid Partners and Slaughter and May.",
+        "Developed by AI experts from the University of Cambridge, Luminance uses specialist AI \u2013 known as the \u201cPanel of Judges\u201d \u2013 to automate and augment every touchpoint a business has with its contracts, from generation to negotiation and post-execution analysis. The company works with over 700 organisations in 70+ countries across all verticals and has a roster of blue-chip clients such as AMD, Hitachi, LG Chem, SiriusXM, Rolls-Royce and Lamborghini.",
+        "Demand for legal AI has grown dramatically. In its core Corporate product offering, Luminance has seen customers increase five times and ARR grow six times in the past two years. To meet this rapid increase in global demand, Luminance grew headcount by 80% in 2024, most notably in North America where headcount tripled with the opening of three brand-new offices in San Francisco, Dallas and Toronto, and the company expanded its US HQ in New York.",
+        "Driving this commercial success, Luminance has pioneered a number of world-firsts in AI. Most recently, the company released [Lumi Go](https://www.luminance.com/news/press/20241211_luminance_launches.html), a revolution in contract negotiation that enables Luminance customers to send draft agreements to a counterparty and have the AI auto-negotiate on their behalf.\\",
+        "\\",
+        "**Eleanor Lightbody, CEO of Luminance, said:** \u201cThis funding is all about innovation, expansion and scaling. It supercharges our US growth, where 40% of our revenue is already generated, and will fuel key hires and new offices across the US, APAC and Europe. It also accelerates innovation at our Cambridge R&D hub as we expand Luminance\u2019s AI platform to legal adjacent use cases in procurement and compliance. With Point72 Private Investments\u2019 deep legal tech expertise, we are setting the benchmark for end-to-end, legal-grade AI for enterprise.\u201d\\",
+        "**Sri Chandrasekar, Managing Partner of Point72 Private Investments, said:** \u201cWe know this market well and strongly believe in the power of next-generation AI to revolutionise contracting processes across the enterprise. We are excited to back Luminance as it continues building a specialist and trusted technology that has already been adopted by many of the world\u2019s largest organizations. Their team, strategy and vision positions them well to win this market.\u201d\\",
+        "**Hyun Koo, Partner at March Capital and Luminance board member, said:** \u201cSince our initial investment, Luminance has made significant strides growing in key markets and in product development. Recent wins with major customers such as DHL and AMD highlight its product capabilities, quick time-to-value, and clear ROI, which are increasingly important in enterprise AI adoption. We\u2019re excited to continue working with the Luminance team as they solidify their position as the global leader in legal AI.\u201d\\"
+       ]
+      },
+      {
+       "title": "Luminance Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/luminance/financials",
+       "excerpts": [
+        "Luminance's **latest funding round** was a **Series C for $75M** on **February 18, 2025** ."
+       ]
+      }
+     ],
+     "reasoning": "The official funding announcement calls the $75 million round a Series C; the funding profile reports it as the latest round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Luminance | API Documentation",
+       "url": "https://api.luminance.com/swagger-docsv150",
+       "excerpts": [
+        "[\u2190 Back to API versions](https://api.luminance.com/swagger-docs)",
+        "Swagger UI Explore",
+        "## Luminance Public API v2 ```",
+        " 1.5",
+        "``` ```",
+        "OAS 3.0",
+        "```",
+        "Luminance offers a RESTful HTTP-based API utilizing JSON as the primary serialization format and OAuth2 for authentication. This API is engineered to seamlessly integrate your software with the Luminance Platform, leveraging its objects and endpoints to enhance your applications.",
+        "With this API, you can create integrations that allow direct access to folders, tasks, and documents stored in Luminance. Additionally, you can track document progress through reviews or utilize machine learning capabilities via annotations and Traffic Light Analysis.",
+        "The Luminance API is designed with developers in mind, providing comprehensive documentation and robust support to ensure smooth integration. It adheres to industry standards, ensuring compatibility and security. Developers can take advantage of the API's flexibility to build custom solutions, automate workflows, and enhance overall efficiency within their applications.",
+        "API requests are rate limited for security reasons to 100 requests every 10 minutes.",
+        "This version of the API is deployed by standard to Luminance product versions 1.43.0 onwards",
+        "## Authentication (OAuth2 client credentials)",
+        "To test endpoints from this document you need an access token. Use the **Authorize** button and enter the token as described below.",
+        "1. **Prerequisites** Ensure you have a Client ID and Client Secret (configured as a Service User).",
+        "2. **Encode credentials** Base64-encode the string `<client-id>:<client-secret>` . For example: `echo -n '<client-id>:<client-secret>' | base64`",
+        "3. **Request a token** Send a POST request to your instance token endpoint:",
+        "    + URL: `https://<moniker>.app.luminance.com/auth/oauth2/token` (replace `<moniker>` with your instance moniker).",
+        "    + Headers: `Content-Type: application/x-www-form-urlencoded` , `Authorization: Basic <base64_encoded_credentials>` .",
+        "    + Body: `grant_type=client_credentials` .",
+        "   Example:",
+        "   ```"
+       ]
+      }
+     ],
+     "reasoning": "Luminance provides a public API documentation portal, identifies a REST API for integrating with its platform, and includes developer-facing authentication and endpoint documentation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Luminance - LinkedIn",
+       "url": "https://linkedin.com/company/luminancetech",
+       "excerpts": [
+        "Luminance - LinkedIn Industry Software Development Company size 201-500 employees Headquarters Cambridge Type Privately Held Founded 2015"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies Cambridge as Luminance\u2019s headquarters.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Luminance Forward: Product Innovation October 2026 | Luminance",
+       "url": "http://www.luminance.com/resources/forward-october-2026",
+       "excerpts": [
+        "--- title: \"Luminance Forward: Product Innovation October 2026 | Luminance\" description: \"Luminance Forward: A look at the newest product innovations and upcoming releases.\" published: \"Nov 9, 2026, 5:35 PM UTC\" ---",
+        "October 2026 Product Updates ",
+        "# Luminance Forward: Nine new innovations",
+        "[Join early access](./forward-october-2026#get-started)",
+        "[WATCH THE WEBINAR](./forward-october-2026#webinar)",
+        "[01 External Sources](./forward-october-2026#innovation-external-sources)",
+        "[02 New Lumi](./forward-october-2026#innovation-new-lumi)",
+        "[03 Lumi MCP](./forward-october-2026#innovation-lumi-mcp)",
+        "[04 Parallel Approvals](./forward-october-2026#innovation-parallel-approvals)",
+        "[05 NDA Negotiation Agent](./forward-october-2026#innovation-nda-negotiation-agent)",
+        "[06 Obligation Tracking](./forward-october-2026#innovation-obligation-tracking)",
+        "[07 Scheduled Reports](./forward-october-2026#innovation-scheduled-reports)",
+        "[08 Template Agent](./forward-october-2026#innovation-template-agent)",
+        "[09 Playbook Supervisor](./forward-october-2026#innovation-playbook-supervisor)",
+        "LIVE",
+        "## External Sources",
+        "Bring cited research from trusted legal sources, web search and LexisNexis Prot\u00e9g\u00e9 into the contract workflow.",
+        "[GET IN TOUCH](./forward-october-2026#get-started)",
+        "IN BETA",
+        "## New Lumi",
+        "Access Contract Intelligence via a single conversational starting point to find information, build a plan and take action across connected workflows.",
+        "[GET EARLY ACCESS](./forward-october-2026#get-started)",
+        "## Lumi MCP",
+        "Extend Contract Intelligence into the tools teams already use, including Slack, ChatGPT, Outlook and more.",
+        "coming soon",
+        "## Parallel Approvals",
+        "Move contracts through independent reviews simultaneously, giving each team clear visibility while keeping execution aligned with Legal-defined rules.",
+        "[JOIN THE WAITLIST](./forward-october-2026#get-started)",
+        "COMING SOON",
+        "## NDA Negotiation Agent",
+        "Empower teams across the business to move routine contract negotiations forward automatically, with Legal-approved guardrails.",
+        "## Obligation Tracking",
+        "Proactively surface renewals, cancellation windows, recurring spend and non-standard terms so teams can act before issues arise.",
+        "## Scheduled Reports",
+        "Turn contract insights into recurring, actionable reports that keep teams and leadership informed about upcoming obligations and decisions.",
+        "## Template Agent",
+        "Turn gold standard contracts into reusable templates that help the wider business create the right document faster.",
+        "## Playbook Supervisor",
+        "Make Legal negotiation knowledge reusable by converting playbooks into structured, reviewable guidance for incoming contracts \u2014 all via natural language conversation.",
+        "**Deep dive into Luminance\u2019s latest innovations designed to help your teams:\\",
+        "**\\",
+        "- Create reusable templates and playbooks from legal expertise. ",
+        "\\",
+        "- Access Contract Intelligence through a single conversational experience. ",
+        "- Add trusted research into your contract workflows. "
+       ]
+      }
+     ],
+     "reasoning": "Luminance published its October 2026 product-update announcement on November 9, 2026; the page describes nine new innovations, including capabilities marked live, within the six-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative @ Luminance | Simplify Jobs",
+       "url": "https://simplify.jobs/p/1d1c6a1e-3b8e-4b76-9ab9-390df9c12b12/Business-Development-Representative",
+       "excerpts": [
+        "[L](https://simplify.jobs/c/Luminance) Luminance AI-powered contract analytics and automation Business Development Representative Sales Development Representative \u00b7 Confirmed live in the last 24 hours \u00b7 Views Simplify+ Full-time New York, NY, USA $50k - $70k /yr Hybrid"
+       ]
+      }
+     ],
+     "reasoning": "A current Business Development Representative/Sales Development Representative listing is marked confirmed live in the last 24 hours.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Luminance Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/luminance/financials",
+       "excerpts": [
+        "Luminance's **latest funding round** was a **Series C for $75M** on **February 18, 2025** ."
+       ]
+      },
+      {
+       "title": "Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments - Accelerate legal work with Contract Intelligence | Luminance",
+       "url": "https://www.luminance.com/press-releases/luminance-raises-75-million-in-series-c-funding-round-led-by-point72-private-investments",
+       "excerpts": [
+        "[Luminance Forward: Nine new innovations. Read here \u2197](../resources/forward-october-2026)",
+        "Feb 18, 2025",
+        "### Luminance Raises $75 Million in Series C Funding Round Led by Point72 Private Investments",
+        "Luminance, the pioneer in Legal-Grade\u2122 AI, today announced that it has raised $75 million in a Series C funding round, taking the total amount raised in the last 12 months to over $115 million. The oversubscribed round was led by Point72 Private Investments, with participation from Forestay Capital, RPS Ventures and Schroders Capital, as well as existing investors including March Capital, National Grid Partners and Slaughter and May.",
+        "Developed by AI experts from the University of Cambridge, Luminance uses specialist AI \u2013 known as the \u201cPanel of Judges\u201d \u2013 to automate and augment every touchpoint a business has with its contracts, from generation to negotiation and post-execution analysis. The company works with over 700 organisations in 70+ countries across all verticals and has a roster of blue-chip clients such as AMD, Hitachi, LG Chem, SiriusXM, Rolls-Royce and Lamborghini.",
+        "Demand for legal AI has grown dramatically. In its core Corporate product offering, Luminance has seen customers increase five times and ARR grow six times in the past two years. To meet this rapid increase in global demand, Luminance grew headcount by 80% in 2024, most notably in North America where headcount tripled with the opening of three brand-new offices in San Francisco, Dallas and Toronto, and the company expanded its US HQ in New York.",
+        "Driving this commercial success, Luminance has pioneered a number of world-firsts in AI. Most recently, the company released [Lumi Go](https://www.luminance.com/news/press/20241211_luminance_launches.html), a revolution in contract negotiation that enables Luminance customers to send draft agreements to a counterparty and have the AI auto-negotiate on their behalf.\\",
+        "\\",
+        "**Eleanor Lightbody, CEO of Luminance, said:** \u201cThis funding is all about innovation, expansion and scaling. It supercharges our US growth, where 40% of our revenue is already generated, and will fuel key hires and new offices across the US, APAC and Europe. It also accelerates innovation at our Cambridge R&D hub as we expand Luminance\u2019s AI platform to legal adjacent use cases in procurement and compliance. With Point72 Private Investments\u2019 deep legal tech expertise, we are setting the benchmark for end-to-end, legal-grade AI for enterprise.\u201d\\",
+        "**Sri Chandrasekar, Managing Partner of Point72 Private Investments, said:** \u201cWe know this market well and strongly believe in the power of next-generation AI to revolutionise contracting processes across the enterprise. We are excited to back Luminance as it continues building a specialist and trusted technology that has already been adopted by many of the world\u2019s largest organizations. Their team, strategy and vision positions them well to win this market.\u201d\\",
+        "**Hyun Koo, Partner at March Capital and Luminance board member, said:** \u201cSince our initial investment, Luminance has made significant strides growing in key markets and in product development. Recent wins with major customers such as DHL and AMD highlight its product capabilities, quick time-to-value, and clear ROI, which are increasingly important in enterprise AI adoption. We\u2019re excited to continue working with the Luminance team as they solidify their position as the global leader in legal AI.\u201d\\"
+       ]
+      }
+     ],
+     "reasoning": "The latest reported round was February 18, 2025, which predates the 18-month lookback window ending November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Luminance",
+       "url": "https://trust.luminance.com/",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center compliance list names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Luminance",
+       "url": "https://trust.luminance.com/",
+       "excerpts": [
+        "SOC 2 Type II"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center compliance list names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Luminance",
+       "url": "https://trust.luminance.com/",
+       "excerpts": [
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center compliance list names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer Stories | Luminance",
+       "url": "https://www.luminance.com/customers",
+       "excerpts": [
+        "TRENCH GROUP"
+       ]
+      }
+     ],
+     "reasoning": "TRENCH GROUP is named on Luminance\u2019s customer stories page.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customer Stories | Luminance",
+       "url": "https://www.luminance.com/customers",
+       "excerpts": [
+        "IMERYS"
+       ]
+      }
+     ],
+     "reasoning": "IMERYS is named on Luminance\u2019s customer stories page.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Global Consulting Partners Lead @ Luminance  | Tech:NYC Job Board",
+       "url": "https://jobs.technyc.org/companies/luminance-2/jobs/91345345-global-consulting-partners-lead",
+       "excerpts": [
+        "Coordinate executive partner engagement and ensure sourced and influenced activity is accurately attributed and documented in HubSpot."
+       ]
+      }
+     ],
+     "reasoning": "The job posting names HubSpot.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "GDPR",
+     "SOC 2 Type II",
+     "ISO 27001:2022"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": true,
+    "product_one_liner": "Luminance's Contract Intelligence platform uses legal-grade AI to draft, negotiate, analyze, and manage contracts for legal and business teams across enterprises.",
+    "employee_band": "201-500",
+    "model_provider": "Luminance says it uses its proprietary Luna Crescent legal model together with task-selected foundation models; its Trust Center names OpenAI as a generative-model provider.",
+    "pricing_page": false,
+    "funding_amount_usd": 75000000.0,
+    "named_customers": [
+     "TRENCH GROUP",
+     "IMERYS"
+    ],
+    "funding_date": "2025-02",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "Cambridge",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,170 @@
+{
+ "schema_version": "v0",
+ "company": "Funnel",
+ "domain": "funnel.io",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Funnel is a marketing intelligence platform that collects and prepares data for marketing and data teams to build reports, measure marketing effectiveness, and decide where to spend next.",
+   "citations": [
+    "https://jobs.funnel.io/jobs",
+    "https://help.funnel.io/en/articles/8020917-introduction-to-funnel"
+   ],
+   "notes": "https://jobs.funnel.io/jobs identifies marketing and data teams as the audience and describes reporting, marketing mix modeling, and spending decisions. https://help.funnel.io/en/articles/8020917-introduction-to-funnel explains data collection, preparation, and reporting. The sentence combines these descriptions."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://funnel.io/pricing"
+   ],
+   "notes": "https://funnel.io/pricing is a public plans-and-pricing page."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Adidas",
+    "Uber"
+   ],
+   "citations": [
+    "https://funnel.io/all-case-studies"
+   ],
+   "notes": "named_customers: https://funnel.io/all-case-studies displays Adidas and Uber on Funnel's customer case-study page. | named_customers.0: Adidas appears on the customer case-study page at https://funnel.io/all-case-studies. | named_customers.1: Uber appears on the customer case-study page at https://funnel.io/all-case-studies."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://funnel.io/about"
+   ],
+   "notes": "https://funnel.io/about reports more than 300 employees, supporting the 201-500 band. The published headcount is rounded rather than an exact total."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Stockholm",
+    "country": "Sweden"
+   },
+   "citations": [
+    "https://funnel.io/contact"
+   ],
+   "notes": "hq_city: https://funnel.io/contact labels Stockholm, Sweden as its corporate headquarters. | hq_country: https://funnel.io/contact identifies its corporate headquarters as Stockholm, Sweden."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2014.0,
+   "citations": [
+    "https://funnel.io/about"
+   ],
+   "notes": "https://funnel.io/about explicitly states that Funnel was founded in 2014."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://funnel.io/devblog/building-funnels-declarative-connector-platform",
+    "https://funnel.io/devblog/the-data-that-wont-sit-still-engineering-at-the-edge-of-marketing-data"
+   ],
+   "notes": "Two qualifying posts describe Funnel's implementation: https://funnel.io/devblog/building-funnels-declarative-connector-platform, by developer Filips Nastins, explains its YAML-based connector framework; https://funnel.io/devblog/the-data-that-wont-sit-still-engineering-at-the-edge-of-marketing-data, by Engineering Manager Anirudh Mehta and CTO Jonas Bj\u00f6rk, describes its scheduler and Rust runtime."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.funnel.io/en/articles/8020917-introduction-to-funnel",
+    "https://help.funnel.io/en/articles/12920015-getting-started-with-funnel-ai",
+    "https://help.funnel.io/en/articles/12928597-data-chat-faq"
+   ],
+   "notes": "Funnel has a public multi-article knowledge base, including https://help.funnel.io/en/articles/8020917-introduction-to-funnel, https://help.funnel.io/en/articles/12920015-getting-started-with-funnel-ai, and https://help.funnel.io/en/articles/12928597-data-chat-faq."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.funnel.io/jobs/8656845-product-engineer-ai-product-experience",
+    "https://jobs.funnel.io/jobs"
+   ],
+   "notes": "https://jobs.funnel.io/jobs/8656845-product-engineer-ai-product-experience is an application-enabled Product Engineer - AI Product Experience posting. It also appears on the current board at https://jobs.funnel.io/jobs, and its title explicitly includes AI."
+  },
+  "model_provider": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown after reviewing the AI documentation and FAQ, privacy/security material, DPA subprocessors, and blog. https://help.funnel.io/en/articles/12928597-data-chat-faq identifies AWS hosting, while https://funnel.io/funnel-gdpr-data-processing-agreement names AWS and Google for data-center services. https://funnel.io/privacy mentions unnamed AI models. https://funnel.io/blog/funnel-mcp-server-marketing-data-ai describes external AI clients, not Funnel's underlying model provider."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "GDPR"
+   ],
+   "citations": [
+    "https://funnel.io/funnel-data-privacy-and-security"
+   ],
+   "notes": "compliance_certs: https://funnel.io/funnel-data-privacy-and-security claims SOC 2 Type 2 attestation, ISO 27001 certification, and GDPR compliance. GDPR is included as the requested compliance claim, not described as a formal certification. | compliance_certs.0: https://funnel.io/funnel-data-privacy-and-security explicitly claims SOC 2 Type 2 attestation. | compliance_certs.1: https://funnel.io/funnel-data-privacy-and-security explicitly states ISO 27001 certified. | compliance_certs.2: https://funnel.io/funnel-data-privacy-and-security explicitly claims GDPR compliance."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Debt financing",
+    "date": "2026-01",
+    "amount_usd": 80000000.0
+   },
+   "citations": [
+    "https://funnel.io/press-releases/funnel-secures-80m-debt-facility"
+   ],
+   "notes": "funding_stage: https://funnel.io/press-releases/funnel-secures-80m-debt-facility explicitly characterizes the financing as a debt facility, so the stage is debt financing rather than a new equity-series round. | funding_date: https://funnel.io/press-releases/funnel-secures-80m-debt-facility is dated January 28, 2026, yielding 2026-01. | funding_amount_usd: https://funnel.io/press-releases/funnel-secures-80m-debt-facility announces an $80 million debt facility from HSBC Innovation Banking and Hercules Capital. This is the total facility amount, not an equity round."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://funnel.io/press-releases/funnel-secures-80m-debt-facility"
+   ],
+   "notes": "https://funnel.io/press-releases/funnel-secures-80m-debt-facility announces $80 million in debt financing on January 28, 2026, inside the requested eighteen-month window. This is debt funding, not equity."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://jobs.funnel.io/jobs",
+    "https://jobs.funnel.io/jobs/7321981-sales-development-representative"
+   ],
+   "notes": "https://jobs.funnel.io/jobs lists only Product Engineer - AI Product Experience and Measurement Consultant - Boston, neither a qualifying sales role. The previously indexed SDR posting at https://jobs.funnel.io/jobs/7321981-sales-development-representative now explicitly says the position is no longer active."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.globenewswire.com/news-release/2026/05/26/3301222/0/en/Funnel-launches-Digital-Measurement-a-new-category-of-MMM-software-to-reconcile-competing-measurement-methodologies.html"
+   ],
+   "notes": "The company announcement at https://www.globenewswire.com/news-release/2026/05/26/3301222/0/en/Funnel-launches-Digital-Measurement-a-new-category-of-MMM-software-to-reconcile-competing-measurement-methodologies.html states that Funnel launched Digital Measurement on May 26, 2026. It combines MMM, multi-touch attribution, and ad-platform signals, qualifying as a product launch within six months of November 9, 2026."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.kennedyfitch.com/chros-on-the-go/",
+    "https://linkedin.com/in/sabina-klint-53803924"
+   ],
+   "notes": "https://www.kennedyfitch.com/chros-on-the-go/ reports in March 2026 that Sabina Klint joins Hemnet from Funnel, where she was Chief People Officer, effective June 1, 2026. Her profile at https://linkedin.com/in/sabina-klint-53803924 corroborates the Hemnet role beginning in June 2026. Together these support a C-level departure within the requested twelve-month window; the evidence is not a Funnel-issued departure announcement."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot"
+   ],
+   "citations": [
+    "https://jobs.funnel.io/posts/automating-growth-how-huanling-and-revops-power-funnel-s-efficiency"
+   ],
+   "notes": "crm_stack_signal: In https://jobs.funnel.io/posts/automating-growth-how-huanling-and-revops-power-funnel-s-efficiency, a Funnel RevOps employee explicitly describes improving workflows in 'HubSpot, our CRM,' establishing actual internal use. | crm_stack_signal.0: https://jobs.funnel.io/posts/automating-growth-how-huanling-and-revops-power-funnel-s-efficiency explicitly names HubSpot as Funnel's CRM."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 501.5
+}

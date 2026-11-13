@@ -1,0 +1,167 @@
+{
+ "schema_version": "v0",
+ "company": "Verifiable",
+ "domain": "verifiable.com",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Verifiable automates provider credentialing, verification, and ongoing network monitoring for healthcare organizations.",
+   "citations": [
+    "https://verifiable.com/press-releases/verifiable-inc-appoints-brook-west-as-president-to-spearhead-next-phase-of-growth"
+   ],
+   "notes": "Verifiable describes its product as a credentialing and network-monitoring platform for healthcare organizations, supporting fast verifications and compliance: https://verifiable.com/press-releases/verifiable-inc-appoints-brook-west-as-president-to-spearhead-next-phase-of-growth."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://verifiable.com/"
+   ],
+   "notes": "The inspected homepage navigation and footer offer contact and demo routes rather than a pricing link: https://verifiable.com/. The checked /pricing address returned a redirect-only response without readable plans. This supports false, with some uncertainty from the incomplete redirect response."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Humana",
+    "Grow Therapy"
+   ],
+   "citations": [
+    "https://verifiable.com/?sa=X",
+    "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html"
+   ],
+   "notes": "named_customers: Humana and Grow Therapy appear in the homepage logo wall, and the company-issued announcement also names both as organizations it works with: https://verifiable.com/ and https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html. | named_customers.0: Humana is named in the homepage customer-logo area. | named_customers.1: Grow Therapy is named in the homepage customer-logo area."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "101-200",
+   "citations": [
+    "https://tracxn.com/a/d/company/5384c56fe4b05d85e2d43b86/verifiable#a:about"
+   ],
+   "notes": "The company profile reports 138 employees, which falls within 101\u2013200: https://tracxn.com/a/d/company/5384c56fe4b05d85e2d43b86/verifiable#a:about. Headcount is a secondary-source estimate and can change."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Austin",
+    "country": "United States"
+   },
+   "citations": [
+    "https://crustdata.com/profiles/company/verifiable"
+   ],
+   "notes": "hq_city: The company profile explicitly identifies Austin as headquarters: https://crustdata.com/profiles/company/verifiable. This is a secondary source. | hq_country: The company profile identifies the headquarters as Austin, Texas, USA: https://crustdata.com/profiles/company/verifiable. This is a secondary-source headquarters designation."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2019.0,
+   "citations": [
+    "https://www.ycombinator.com/companies/verifiable"
+   ],
+   "notes": "The Y Combinator company profile explicitly states that Verifiable was founded in 2019: https://www.ycombinator.com/companies/verifiable."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://verifiable.com/blog",
+    "https://verifiable.com/blog/from-legacy-to-scalable-engineering-the-ai-powered-credentialing-stack"
+   ],
+   "notes": "The readable blog index contains credentialing, compliance, webinar, and marketing content: https://verifiable.com/blog. The apparently technical credentialing-stack article is industry thought leadership rather than an explanation of Verifiable's implementation: https://verifiable.com/blog/from-legacy-to-scalable-engineering-the-ai-powered-credentialing-stack. Two qualifying engineer-authored build posts were not found."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.discovery.verifiable.com/reference/current/overview/"
+   ],
+   "notes": "The public API documentation contains multiple sections, including release notes, getting started, common concepts, authentication, and provider endpoints: https://docs.discovery.verifiable.com/reference/current/overview/."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://startup.jobs/company/verifiable"
+   ],
+   "notes": "The readable company job-board listing showed customer-success and solutions-engineering roles, with no qualifying AI/ML/data-science title: https://startup.jobs/company/verifiable. Confidence is limited because the official careers-page text omitted its role list and the third-party board may not be exhaustive."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic (Claude)",
+   "citations": [
+    "https://verifiable.com/legal/subprocessors"
+   ],
+   "notes": "The subprocessor disclosure names Anthropic and Claude for automated code generation, evaluation, testing, and workflow assistance connected with Verifiable's platform and services: https://verifiable.com/legal/subprocessors. This does not establish that Claude powers every credentialing function."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2"
+   ],
+   "citations": [
+    "https://verifiable.com/blog/verifiable-is-now-soc-2-certified"
+   ],
+   "notes": "compliance_certs: Verifiable explicitly announces achieved SOC 2 Type 2 compliance, not an in-progress certification: https://verifiable.com/blog/verifiable-is-now-soc-2-certified. General discussion of HIPAA does not establish that Verifiable claims HIPAA compliance. | compliance_certs.0: Verifiable explicitly claims achieved SOC 2 Type 2 compliance."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2023-07",
+    "amount_usd": 27000000.0
+   },
+   "citations": [
+    "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html",
+    "https://tracxn.com"
+   ],
+   "notes": "funding_stage: The primary funding announcement identifies Series B, matching the latest round in the funding profile: https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html. | funding_date: The answer uses the primary announcement month, July 2023: https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html. A secondary funding profile records June 2023 instead; no separate closing date was stated in the announcement, so the date discrepancy remains. | funding_amount_usd: The company-issued announcement states $27 million, and the funding profile identifies the same Series B as the latest recorded round: https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html and https://tracxn.com/a/d/company/5384c56fe4b05d85e2d43b86/verifiable#a:about."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://tracxn.com",
+    "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html"
+   ],
+   "notes": "The latest recorded funding is the 2023 Series B, announced well before the 18-month window: https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html. The June-versus-July source discrepancy does not affect this window assessment."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a"
+   ],
+   "notes": "A readable Business Development Representative posting includes an application link: https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html",
+    "https://verifiable.com/press"
+   ],
+   "notes": "The newest launch identified in the readable press history was CredAgent on February 26, 2026, outside the six-month window: https://verifiable.com/press and https://www.prnewswire.com/news-releases/verifiable-launches-credagent-the-industrys-first-autonomous-ai-credentialing-agent-302698337.html. No newer qualifying company-specific launch was found."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown. The About page provides general team information rather than a complete named leadership roster with start dates: https://verifiable.com/about. The Brook West appointment found was dated December 18, 2024, outside the requested window; that cannot establish that no later leadership change occurred."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "Outreach"
+   ],
+   "citations": [
+    "https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a"
+   ],
+   "notes": "crm_stack_signal: The BDR posting explicitly refers to Verifiable's Salesforce instance and names Outreach among sales-tool requirements: https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a. Salesforce use is explicit; Outreach is a weaker signal because some wording describes proficiency or example tooling. | crm_stack_signal.0: The posting explicitly describes maintaining prospect data in Verifiable's Salesforce instance. | crm_stack_signal.1: The posting names Outreach/Salesloft among proficiency requirements; Outreach is a visible stack signal rather than unequivocal proof of deployment."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 293.8
+}

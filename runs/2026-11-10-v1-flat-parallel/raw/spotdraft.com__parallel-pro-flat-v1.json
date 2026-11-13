@@ -1,0 +1,542 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9f51b366e5dd006f",
+  "interaction_id": "trun_142119f6a1b4439e9f51b366e5dd006f",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "spotdraft.com"
+  },
+  "created_at": "2026-11-10T18:48:23.001747Z",
+  "modified_at": "2026-11-10T18:51:00.285254Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9f51b366e5dd006f",
+   "interaction_id": "trun_142119f6a1b4439e9f51b366e5dd006f",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "spotdraft.com"
+   },
+   "created_at": "2026-11-10T18:48:23.001747Z",
+   "modified_at": "2026-11-10T18:51:00.285254Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "SpotDraft Bolsters Leadership Team to Scale AI-Powered CLM Platform Globally",
+       "url": "https://www.businesswire.com/news/home/20251203715744/en/SpotDraft-Bolsters-Leadership-Team-to-Scale-AI-Powered-CLM-Platform-Globally",
+       "excerpts": [
+        "Founded in 2017 by Shashank Bijapur and Madhav Bhagat, SpotDraft has been recognized by Fast Company's Most Innovative Companies 2024 and Forbes Asia's 100 To Watch."
+       ]
+      }
+     ],
+     "reasoning": "The company-issued announcement explicitly states that SpotDraft was founded in 2017: https://www.businesswire.com/news/home/20251203715744/en/SpotDraft-Bolsters-Leadership-Team-to-Scale-AI-Powered-CLM-Platform-Globally",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Compliance frameworks followed by SpotDraft",
+       "url": "https://trustcenter.spotdraft.com/compliance",
+       "excerpts": [
+        "SOC 2 Compliant",
+        "ISO 27001 v2022 Compliant",
+        "HIPAA",
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "SpotDraft's compliance page lists these four frameworks as compliant, rather than in progress. These are public compliance claims; HIPAA and GDPR are not being characterized as independent certification schemes. Source: https://trustcenter.spotdraft.com/compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "SpotDraft Raises $54M to Scale the Future of AI CLM",
+       "url": "https://www.spotdraft.com/blog/spotdraft-secures-54-million-to-lead-ai-contract-lifecycle-management",
+       "excerpts": [
+        "SpotDraft is headquartered in Bengaluru, India with an office in New York, USA."
+       ]
+      }
+     ],
+     "reasoning": "SpotDraft explicitly identifies Bengaluru, India as its headquarters and New York as an office: https://www.spotdraft.com/blog/spotdraft-secures-54-million-to-lead-ai-contract-lifecycle-management . This explicit company statement is preferred over conflicting directory listings identifying New York.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Tech @ SpotDraft: Front-end Migration to Monorepo",
+       "url": "https://www.spotdraft.com/engineering-blog/frontend-migration-to-monorepo",
+       "excerpts": [
+        "Anirudh Varma",
+        "The front-end team at [SpotDraft](https://www.spotdraft.com/) migrated our conventional Angular workspace to an [Nx Monorepo](https://github.com/nrwl/nx/)."
+       ]
+      },
+      {
+       "title": "How We Used Bazel to Streamline Our AI Development",
+       "url": "https://www.spotdraft.com/engineering-blog/how-we-used-bazel-to-streamline-our-ai-development",
+       "excerpts": [
+        "By Dhanshree Arora",
+        "We pack our predictive models in neat little Flask apps integrating with the back-end and give you the experience of SpotDraft."
+       ]
+      }
+     ],
+     "reasoning": "Two authored engineering posts describe actual implementation work: Anirudh Varma explains the front-end team's Angular-to-Nx monorepo migration, and Dhanshree Arora describes deploying predictive models and using Bazel for ML development. Their engineering involvement is supported by first-person implementation accounts, although formal job titles are not supplied. Sources: https://www.spotdraft.com/engineering-blog/frontend-migration-to-monorepo and https://www.spotdraft.com/engineering-blog/how-we-used-bazel-to-streamline-our-ai-development",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Official AI Information: SpotDraft",
+       "url": "https://www.spotdraft.com/llm-info",
+       "excerpts": [
+        "SpotDraft is an AI-native contract lifecycle management (CLM) platform for legal teams. It brings the full contract lifecycle (contract intake, creation, review, negotiation, approvals, e-signatures, and post-signature management) into one system, with AI embedded across workflows."
+       ]
+      }
+     ],
+     "reasoning": "SpotDraft describes an AI-native CLM platform for legal teams covering creation, review, negotiation, approvals, e-signatures and post-signature management: https://www.spotdraft.com/llm-info",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "SpotDraft | LinkedIn",
+       "url": "https://linkedin.com/company/spotdraft",
+       "excerpts": [
+        "Website https://www.spotdraft.com External link for SpotDraft Industry Software Development Company size 201-500 employees Headquarters New York Type Privately Held Founded 2017 Products SpotDraft SpotDraft Contract Management Software SpotDraft \u2014 The co-pilot for legal teams that helps you draft, store, analyze, execute, and automate contracts and contract processes."
+       ]
+      },
+      {
+       "title": "Spotdraft",
+       "url": "https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+       "excerpts": [
+        "(last verified: 2026-10-16) Name: Spotdraft | Website Url: https://www.spotdraft.com/ | Primary Sector: Enterprise Applications | Primary Subsector: Legal Tech | Stage: Series B | Founded Year: 2017 | Employee Count Official: 234 | Location Country: United States | Location State: New York | Location City: New York City | Latest Revenue Usd: 14359391.25 | Latest Funding Round Amount Usd: 8000647.821 | Latest Funding Round Date: 2026-01-27 | Latest Funding Round Name: Series B | Latest Valuation Usd: 380000000.0 | Total Disclosed Funding Usd: 112946271.821 | Acquisitions As Acquirer Count: 0 | "
+       ]
+      }
+     ],
+     "reasoning": "The company profile lists 201\u2013500 employees, and the funding database profile reports 234 employees, which falls in the same requested band. Sources: https://linkedin.com/company/spotdraft and https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "VerifAI FAQs | SpotDraft Knowledge Base",
+       "url": "https://help.spotdraft.com/articles/5196339534-verifai-faqs",
+       "excerpts": [
+        "**GPT-4 (primary):** This is the most advanced model we use and is hosted securely on Microsoft Azure Enterprise."
+       ]
+      }
+     ],
+     "reasoning": "The VerifAI FAQ explicitly identifies GPT-4 as its primary model and says it is hosted on Microsoft Azure Enterprise: https://help.spotdraft.com/articles/5196339534-verifai-faqs",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "SpotDraft Pricing and Plans",
+       "url": "https://www.spotdraft.com/pricing",
+       "excerpts": [
+        "--- description: Flexible pricing based on users or contract volume."
+       ]
+      }
+     ],
+     "reasoning": "SpotDraft has a public pricing-and-plans page describing flexible pricing based on users or contract volume: https://www.spotdraft.com/pricing",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "SpotDraft Secures $8M from Qualcomm Ventures, Pioneering On-Device AI for Enterprise Legal",
+       "url": "https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal",
+       "excerpts": [
+        "AI-powered contract lifecycle management (CLM) platform, has raised $8 million from Qualcomm Ventures in a strategic Series B extension."
+       ]
+      },
+      {
+       "title": "Spotdraft",
+       "url": "https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+       "excerpts": [
+        "(last verified: 2026-10-16) Name: Spotdraft | Website Url: https://www.spotdraft.com/ | Primary Sector: Enterprise Applications | Primary Subsector: Legal Tech | Stage: Series B | Founded Year: 2017 | Employee Count Official: 234 | Location Country: United States | Location State: New York | Location City: New York City | Latest Revenue Usd: 14359391.25 | Latest Funding Round Amount Usd: 8000647.821 | Latest Funding Round Date: 2026-01-27 | Latest Funding Round Name: Series B | Latest Valuation Usd: 380000000.0 | Total Disclosed Funding Usd: 112946271.821 | Acquisitions As Acquirer Count: 0 | "
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round is the January 2026 Series B extension. The company announcement reports $8 million; that publicly announced amount is used rather than the database's more precise converted figure. Sources: https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal and https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Manage Employee Contracts Effortlessly with SpotDraft",
+       "url": "https://www.spotdraft.com/teams/hr",
+       "excerpts": [
+        "SpotDraft helps HR teams automate contract creation and approvals, so you never delay a hire due to paperwork. [Request a demo](https://www.spotdraft.com/request-a-demo) Trusted by fast moving teams ![Client logo - Doceree](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d259ed98fc94985291_Logo.svg) ![Client logo - LambdaTest](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d11378d4d26874b7b6_Logo-1.svg) ![Client logo - Oyster](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d1a29ac84edded5a73_Logo-2.svg) ![Client logo - Quizlet](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d1737d6e84f6367bdb_Logo-3.svg)"
+       ]
+      }
+     ],
+     "reasoning": "The customer-logo area labels both Oyster and Quizlet as clients under 'Trusted by fast moving teams': https://www.spotdraft.com/teams/hr",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "SpotDraft Secures $8M from Qualcomm Ventures, Pioneering On-Device AI for Enterprise Legal",
+       "url": "https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal",
+       "excerpts": [
+        "Jan 27, 2026 12:01 AM Eastern Standard Time"
+       ]
+      },
+      {
+       "title": "Spotdraft",
+       "url": "https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+       "excerpts": [
+        "(last verified: 2026-10-16) Name: Spotdraft | Website Url: https://www.spotdraft.com/ | Primary Sector: Enterprise Applications | Primary Subsector: Legal Tech | Stage: Series B | Founded Year: 2017 | Employee Count Official: 234 | Location Country: United States | Location State: New York | Location City: New York City | Latest Revenue Usd: 14359391.25 | Latest Funding Round Amount Usd: 8000647.821 | Latest Funding Round Date: 2026-01-27 | Latest Funding Round Name: Series B | Latest Valuation Usd: 380000000.0 | Total Disclosed Funding Usd: 112946271.821 | Acquisitions As Acquirer Count: 0 | "
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement is dated January 27, 2026, and the database identifies that date as the latest funding round, yielding 2026-01. Sources: https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal and https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "SpotDraft's Salesforce Integration",
+       "url": "https://www.spotdraft.com/integrations/salesforce",
+       "excerpts": [
+        "Empower your sales team to create, manage, and finalize contracts directly within Salesforce, streamlining the entire contract lifecycle."
+       ]
+      },
+      {
+       "title": "SpotDraft's HubSpot Integration",
+       "url": "https://www.spotdraft.com/products/integrations/hubspot",
+       "excerpts": [
+        "Create and track contracts within HubSpot for 2X faster deal closures."
+       ]
+      }
+     ],
+     "reasoning": "SpotDraft publicly documents Salesforce and HubSpot integrations. These are integration-based stack signals, not proof that SpotDraft uses either system internally. Sources: https://www.spotdraft.com/integrations/salesforce and https://www.spotdraft.com/products/integrations/hubspot",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "SpotDraft Bolsters Leadership Team to Scale AI-Powered CLM Platform Globally",
+       "url": "https://www.businesswire.com/news/home/20251203715744/en/SpotDraft-Bolsters-Leadership-Team-to-Scale-AI-Powered-CLM-Platform-Globally",
+       "excerpts": [
+        "Dec 3, 2025 3:01 AM Eastern Standard Time",
+        "_Alon Waks named Chief Marketing Officer, Amit Sharma named Chief Financial Officer as company accelerates Americas, EMEA, and India expansion_"
+       ]
+      }
+     ],
+     "reasoning": "The December 3, 2025 announcement names Alon Waks as Chief Marketing Officer and Amit Sharma as Chief Financial Officer, within the requested twelve-month window: https://www.businesswire.com/news/home/20251203715744/en/SpotDraft-Bolsters-Leadership-Team-to-Scale-AI-Powered-CLM-Platform-Globally",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Product Manager - AI @ SpotDraft",
+       "url": "https://jobs.ashbyhq.com/spotdraft/88fc1f00-e546-463a-8ba0-78bc89a95cc6",
+       "excerpts": [
+        "Product Manager - AI",
+        "[Apply for this Job](https://jobs.ashbyhq.com/spotdraft/88fc1f00-e546-463a-8ba0-78bc89a95cc6/application)"
+       ]
+      }
+     ],
+     "reasoning": "The live Product Manager - AI posting has an application link and contains AI in its title, meeting the stated title-based rule: https://jobs.ashbyhq.com/spotdraft/88fc1f00-e546-463a-8ba0-78bc89a95cc6",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "SpotDraft Secures $8M from Qualcomm Ventures, Pioneering On-Device AI for Enterprise Legal",
+       "url": "https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal",
+       "excerpts": [
+        "AI-powered contract lifecycle management (CLM) platform, has raised $8 million from Qualcomm Ventures in a strategic Series B extension."
+       ]
+      },
+      {
+       "title": "Spotdraft",
+       "url": "https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+       "excerpts": [
+        "(last verified: 2026-10-16) Name: Spotdraft | Website Url: https://www.spotdraft.com/ | Primary Sector: Enterprise Applications | Primary Subsector: Legal Tech | Stage: Series B | Founded Year: 2017 | Employee Count Official: 234 | Location Country: United States | Location State: New York | Location City: New York City | Latest Revenue Usd: 14359391.25 | Latest Funding Round Amount Usd: 8000647.821 | Latest Funding Round Date: 2026-01-27 | Latest Funding Round Name: Series B | Latest Valuation Usd: 380000000.0 | Total Disclosed Funding Usd: 112946271.821 | Acquisitions As Acquirer Count: 0 | "
+       ]
+      }
+     ],
+     "reasoning": "The announcement explicitly calls the Qualcomm Ventures investment a strategic Series B extension; the funding profile identifies the same January 2026 financing as the latest round. Sources: https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal and https://tracxn.com/a/d/company/582c1ccce4b0b8897fdab9a7/spotdraft#a:about",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Developer FAQ | SpotDraft Developer Portal | API Docs, SDKs & Webhooks",
+       "url": "https://developer.spotdraft.com/docs/developer-faq",
+       "excerpts": [
+        "Use [Platform 101](https://developer.spotdraft.com/docs/core-api/platform-101) and [Data Model](https://developer.spotdraft.com/docs/core-api/data-model) for the full orientation."
+       ]
+      },
+      {
+       "title": "VerifAI FAQs | SpotDraft Knowledge Base",
+       "url": "https://help.spotdraft.com/articles/5196339534-verifai-faqs",
+       "excerpts": [
+        "**GPT-4 (primary):** This is the most advanced model we use and is hosted securely on Microsoft Azure Enterprise."
+       ]
+      },
+      {
+       "title": "Key features of SpotDraft's Hubspot integration | SpotDraft Knowledge Base",
+       "url": "https://help.spotdraft.com/articles/6377755758-key-features-of-spotdraft-s-hubspot-integration",
+       "excerpts": [
+        "Complete CLM Access Within Your CRM"
+       ]
+      }
+     ],
+     "reasoning": "The public developer FAQ links separate Platform 101 and Data Model guides, while the knowledge base also contains VerifAI and HubSpot integration articles. This is a multi-article documentation offering, not a lone FAQ. Sources: https://developer.spotdraft.com/docs/developer-faq, https://help.spotdraft.com/articles/5196339534-verifai-faqs and https://help.spotdraft.com/articles/6377755758-key-features-of-spotdraft-s-hubspot-integration",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "SpotDraft Raises $54M to Scale the Future of AI CLM",
+       "url": "https://www.spotdraft.com/blog/spotdraft-secures-54-million-to-lead-ai-contract-lifecycle-management",
+       "excerpts": [
+        "SpotDraft is headquartered in Bengaluru, India with an office in New York, USA."
+       ]
+      }
+     ],
+     "reasoning": "The company's funding announcement explicitly says it is headquartered in Bengaluru, with an office in New York: https://www.spotdraft.com/blog/spotdraft-secures-54-million-to-lead-ai-contract-lifecycle-management . Conflicting directory listings reduce confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "SpotDraft Claude Connector: Query Contracts in Claude",
+       "url": "https://www.spotdraft.com/blog/spotdraft-claude-connector",
+       "excerpts": [
+        "TL;DR SpotDraft is now listed in the [ Claude connector directory](https://claude.ai/directory/spotdraft). Any SpotDraft customer on Claude can connect it from Settings and start asking questions about their contracts in plain English.",
+        "By Adityanarayan Ravishankar \u2022 Oct 29, 2026 \u2022 6 min read"
+       ]
+      }
+     ],
+     "reasoning": "On October 29, 2026, SpotDraft announced its Claude connector, allowing customers to connect contracts and query them in plain English. This new integration falls within the six-month window: https://www.spotdraft.com/blog/spotdraft-claude-connector",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive- US @ SpotDraft",
+       "url": "https://jobs.ashbyhq.com/spotdraft/fcf8da74-e8f4-439c-808e-7b42e59550e1",
+       "excerpts": [
+        "We're hiring high-impact Account Executives to drive revenue growth in the US market. This is a full-cycle sales role, you will own pipeline creation, run end-to-end sales cycles, and close deals across both enterprise and mid-market segments.",
+        "[Apply for this Job](https://jobs.ashbyhq.com/spotdraft/fcf8da74-e8f4-439c-808e-7b42e59550e1/application)"
+       ]
+      }
+     ],
+     "reasoning": "The live Account Executive - US posting explicitly says SpotDraft is hiring Account Executives and provides an application link: https://jobs.ashbyhq.com/spotdraft/fcf8da74-e8f4-439c-808e-7b42e59550e1",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "SpotDraft Secures $8M from Qualcomm Ventures, Pioneering On-Device AI for Enterprise Legal",
+       "url": "https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal",
+       "excerpts": [
+        "Jan 27, 2026 12:01 AM Eastern Standard Time",
+        "AI-powered contract lifecycle management (CLM) platform, has raised $8 million from Qualcomm Ventures in a strategic Series B extension."
+       ]
+      }
+     ],
+     "reasoning": "The announced $8 million Series B extension on January 27, 2026 falls within the eighteen months before November 9, 2026: https://www.businesswire.com/news/home/20260126696119/en/SpotDraft-Secures-%248M-from-Qualcomm-Ventures-Pioneering-On-Device-AI-for-Enterprise-Legal",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Compliance frameworks followed by SpotDraft",
+       "url": "https://trustcenter.spotdraft.com/compliance",
+       "excerpts": [
+        "SOC 2 Compliant"
+       ]
+      }
+     ],
+     "reasoning": "The compliance page labels SOC 2 compliant: https://trustcenter.spotdraft.com/compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Compliance frameworks followed by SpotDraft",
+       "url": "https://trustcenter.spotdraft.com/compliance",
+       "excerpts": [
+        "ISO 27001 v2022 Compliant"
+       ]
+      }
+     ],
+     "reasoning": "The compliance page labels ISO 27001 v2022 compliant: https://trustcenter.spotdraft.com/compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Compliance frameworks followed by SpotDraft",
+       "url": "https://trustcenter.spotdraft.com/compliance",
+       "excerpts": [
+        "HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is a named compliance claim on the trust page: https://trustcenter.spotdraft.com/compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Compliance frameworks followed by SpotDraft",
+       "url": "https://trustcenter.spotdraft.com/compliance",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is a named compliance claim on the trust page: https://trustcenter.spotdraft.com/compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Manage Employee Contracts Effortlessly with SpotDraft",
+       "url": "https://www.spotdraft.com/teams/hr",
+       "excerpts": [
+        "SpotDraft helps HR teams automate contract creation and approvals, so you never delay a hire due to paperwork. [Request a demo](https://www.spotdraft.com/request-a-demo) Trusted by fast moving teams ![Client logo - Doceree](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d259ed98fc94985291_Logo.svg) ![Client logo - LambdaTest](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d11378d4d26874b7b6_Logo-1.svg) ![Client logo - Oyster](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d1a29ac84edded5a73_Logo-2.svg) ![Client logo - Quizlet](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d1737d6e84f6367bdb_Logo-3.svg)"
+       ]
+      }
+     ],
+     "reasoning": "Oyster appears as a client logo in the customer section: https://www.spotdraft.com/teams/hr",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Manage Employee Contracts Effortlessly with SpotDraft",
+       "url": "https://www.spotdraft.com/teams/hr",
+       "excerpts": [
+        "SpotDraft helps HR teams automate contract creation and approvals, so you never delay a hire due to paperwork. [Request a demo](https://www.spotdraft.com/request-a-demo) Trusted by fast moving teams ![Client logo - Doceree](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d259ed98fc94985291_Logo.svg) ![Client logo - LambdaTest](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d11378d4d26874b7b6_Logo-1.svg) ![Client logo - Oyster](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d1a29ac84edded5a73_Logo-2.svg) ![Client logo - Quizlet](https://cdn.prod.website-files.com/5f2c07287a7a7437ea684517/6788b3d1737d6e84f6367bdb_Logo-3.svg)"
+       ]
+      }
+     ],
+     "reasoning": "Quizlet appears as a client logo in the customer section: https://www.spotdraft.com/teams/hr",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "SpotDraft's Salesforce Integration",
+       "url": "https://www.spotdraft.com/integrations/salesforce",
+       "excerpts": [
+        "Empower your sales team to create, manage, and finalize contracts directly within Salesforce, streamlining the entire contract lifecycle."
+       ]
+      }
+     ],
+     "reasoning": "The Salesforce integration page documents contract creation and management within Salesforce; this establishes an integration signal, not internal adoption: https://www.spotdraft.com/integrations/salesforce",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "SpotDraft's HubSpot Integration",
+       "url": "https://www.spotdraft.com/products/integrations/hubspot",
+       "excerpts": [
+        "Create and track contracts within HubSpot for 2X faster deal closures."
+       ]
+      }
+     ],
+     "reasoning": "The HubSpot integration page documents creating and tracking contracts within HubSpot; this establishes an integration signal, not internal adoption: https://www.spotdraft.com/products/integrations/hubspot",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "India",
+    "eng_blog": true,
+    "product_one_liner": "SpotDraft is an AI-native contract lifecycle management platform that helps legal teams create, review, negotiate, approve, sign, and manage contracts.",
+    "employee_band": "201-500",
+    "model_provider": "GPT-4, hosted on Microsoft Azure Enterprise",
+    "pricing_page": true,
+    "funding_amount_usd": 8000000.0,
+    "named_customers": [
+     "Oyster",
+     "Quizlet"
+    ],
+    "funding_date": "2026-01",
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B extension",
+    "public_docs": true,
+    "hq_city": "Bengaluru",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

@@ -1,0 +1,701 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9f627d086988d75b",
+  "interaction_id": "trun_142119f6a1b4439e9f627d086988d75b",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "fundraiseup.com"
+  },
+  "created_at": "2026-11-10T18:48:04.922314Z",
+  "modified_at": "2026-11-10T18:52:25.110666Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9f627d086988d75b",
+   "interaction_id": "trun_142119f6a1b4439e9f627d086988d75b",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "fundraiseup.com"
+   },
+   "created_at": "2026-11-10T18:48:04.922314Z",
+   "modified_at": "2026-11-10T18:52:25.110666Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "2017",
+        "founded",
+        "Story",
+        "### Why we exist",
+        "Nonprofits deserve better technology.",
+        "This was the premise under which we launched in 2017. We\u2019d encountered one too many donation forms that proved to be exercises in mental gymnastics rather than easy ways to give."
+       ]
+      }
+     ],
+     "reasoning": "The company About page labels 2017 as its founding year and says it launched in 2017.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "##### Compliance",
+        "CCPA Logo",
+        "G D P R Logo",
+        "ISO27001:2022 Logo",
+        "PCI DSS Level 1 Logo",
+        "PIPEDA Logo",
+        "SOC 2 Logo",
+        "SOC2 Type II Logo"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center compliance badge area explicitly names GDPR, ISO 27001:2022, PCI DSS Level 1, and SOC 2 Type II. These correspond to the listed certifications.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "NYC",
+        "Brooklyn,  ",
+        "New York",
+        "Headquarters",
+        "### Where we work",
+        "Built and based in Brooklyn, New York, Fundraise Up is a true NYC startup.",
+        "Now headquartered at [Industry City](https://industrycity.com/) , a sprawling campus of manufacturers, artisans, and technology companies like Fundraise Up, we collaborate in a space that connects our local, remote, and international teams."
+       ]
+      },
+      {
+       "title": "Subprocessors",
+       "url": "https://fundraiseup.com/subprocessors",
+       "excerpts": [
+        "[{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://fundraiseup.com/#organization\",\"url\":\"https://fundraiseup.com/\",\"name\":\"Fundraise Up\",\"legalName\":\"Fundraise Up, Inc.\",\"foundingDate\":\"2017\",\"description\":\"Fundraise Up is a donation platform that helps nonprofits increase online revenue with AI-optimized donor experiences, advanced payment options, and deep analytics.\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://fundraiseup.com/apple-touch-icon.png\"},\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"219 36th Street, Unit 4, Suite A100\",\"addressLocality\":\"Brooklyn\",\"addressRegion\":\"NY\",\"postalCode\":\"11232-2403\",\"addressCountry\":\"US\"},\"contactPoint\":{\"@type\":\"ContactPoint\",\"contactType\":\"customer support\",\"email\":\"support@fundraiseup.com\",\"availableLanguage\":[\"English\"]},\"sameAs\":[\"https://x.com/fundraiseup\",\"https://www.linkedin.com/company/fundraiseup/\",\"https://www.facebook.com/fundraiseup\",\"https://www.instagram.com/fundraiseup/\",\"https://www.youtube.com/@fundraiseup\",\"https://www.crunchbase.com/organization/fundraise-up\",\"https://www.g2.com/products/fundraise-up/reviews\",\"https://www.bloomberg.com/profile/company/2543709D:US\",\"https://www.capterra.com/p/174380/Fundraise-Up-Online-Giving-Widget/\",\"https://www.softwareadvice.com/nonprofit/fundraise-up-profile/\",\"https://www.trustpilot.com/review/fundraiseup.com\",\"https://www.trustradius.com/products/fundraise-up/\",\"https://appexchange.salesforce.com/appxListingDetail?listingId=bee72b5c-36a6-4ec8-b0b0-322875c7826d\"]}]"
+       ]
+      }
+     ],
+     "reasoning": "The About page identifies Brooklyn, New York as the headquarters; the organization address metadata gives country code US.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Smart online fundraising tips for nonprofits | Fundraise Up",
+       "url": "https://fundraiseup.com/blog",
+       "excerpts": [
+        "# Blog",
+        "- [All](https://fundraiseup.com/blog/)",
+        "- [Product](https://fundraiseup.com/blog/topics/product/)",
+        "- [Fundraising](https://fundraiseup.com/blog/topics/fundraising/)",
+        "- [News & Knowledge](https://fundraiseup.com/blog/topics/news-and-knowledge/)",
+        "News, research, and product updates from Fundraise\u00a0Up",
+        "[<h3>The year-end countdown: an\u00a08\u2011week checklist</h3>Fundraising\u00b7Nov 4, 2026![](https://max.ucarecdn.com/d8470af5-5db6-4b9f-bc99-ef19e46e6b9a/-/format/auto/-/quality/lighter/-/resize/1392x/)](https://fundraiseup.com/blog/year-end-countdown-eight-week-checklist/)",
+        "[![](https://max.ucarecdn.com/d8470af5-5db6-4b9f-bc99-ef19e46e6b9a/-/format/auto/-/quality/lighter/-/resize/1200x/)<h3>The year-end countdown: an\u00a08\u2011week checklist</h3>Fundraising\u00b7Nov 4, 2026](https://fundraiseup.com/blog/year-end-countdown-eight-week-checklist/)",
+        "[![](https://max.ucarecdn.com/47437dc6-fd25-45f0-8360-091917601201/-/preview/80x80/-/format/auto/-/quality/lighter/-/blur/36/)![](https://max.ucarecdn.com/47437dc6-fd25-45f0-8360-091917601201/-/format/auto/-/quality/lighter/-/resize/1200x/)<h3>Introducing Sponsorships: Your sponsorship program, finally on\u00a0the same platform as\u00a0the rest of\u00a0your fundraising</h3>Product\u00b7Nov 2, 2026](https://fundraiseup.com/blog/introducing-sponsorships/)",
+        "[![](https://max.ucarecdn.com/e6d01e21-e8a7-49d8-a200-4dee6ab06615/-/preview/80x80/-/format/auto/-/quality/lighter/-/blur/36/)![](https://max.ucarecdn.com/e6d01e21-e8a7-49d8-a200-4dee6ab06615/-/format/auto/-/quality/lighter/-/resize/1200x/)<h3>More money with fewer donors? Nonprofits find growth in\u00a0recurring giving</h3>News & Knowledge\u00b7Nov 2, 2026](https://fundraiseup.com/blog/more-money-fewer-donors-recurring-giving/)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index labels itself as news, research, and product updates and its categories are Product, Fundraising, and News & Knowledge; the displayed entries are fundraising/product content rather than a technical engineering blog. This supports false under the index-based criterion.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "### What we do",
+        "Everybody has an ability and willingness to give \u2014 we call it their generosity potential. Our mission is to unlock this potential by optimizing how people give.",
+        "We accomplish this through our donation platform. It helps nonprofits engage more supporters and grow revenue by providing easy ways to increase conversion, enable modern payment methods, and personalize the giving experience for every donor."
+       ]
+      }
+     ],
+     "reasoning": "The About page describes Fundraise Up as a donation platform for nonprofits that increases conversion, supports modern payment methods, and personalizes donor giving experiences to grow revenue.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/fundraiseup",
+       "excerpts": [
+        "Our donation platform helps nonprofits engage more supporters and grow revenue by providing easy ways to increase conversion, enable modern payment methods, and personalize the giving experience for every donor."
+       ]
+      }
+     ],
+     "reasoning": "The company LinkedIn profile excerpt reports 398 employees, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "##### Subprocessors",
+        "View all 25 subprocessors",
+        "Anthropic",
+        "\u2022",
+        "Artificial Intelligence",
+        "AI processing supporting Agentic Giving and platform features"
+       ]
+      },
+      {
+       "title": "Subprocessors",
+       "url": "https://fundraiseup.com/subprocessors",
+       "excerpts": [
+        "| Claude | |",
+        "| Claude | To provide Agentic Giving Feature if enabled, software development assistance and process automation. |"
+       ]
+      }
+     ],
+     "reasoning": "The current Trust Center lists Anthropic as an artificial-intelligence subprocessor for AI processing supporting Agentic Giving and platform features; the company subprocessor list names Claude.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Nonprofit Fundraising Pricing | Fundraise Up",
+       "url": "https://fundraiseup.com/pricing",
+       "excerpts": [
+        "performance-based pricing",
+        "# Raise more for your mission",
+        "Start with $0 upfront, no\u00a0setup fees, fixed subscriptions, or\u00a0long-term contracts. From day one, you get technology designed to\u00a0help you raise more and help donations go\u00a0farther."
+       ]
+      }
+     ],
+     "reasoning": "The cited page is Fundraise Up\u2019s public Nonprofit Fundraising Pricing page and describes its pricing terms.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Fundraise Up Secures $70 Million Growth Capital Investment Led by Summit Partners",
+       "url": "https://www.businesswire.com/news/home/20250122330643/en/Fundraise-Up-Secures-$70-Million-Growth-Capital-Investment-Led-by-Summit-Partners",
+       "excerpts": [
+        "Jan 23, 2025 9:00 AM Eastern Standard Time **Fundraise Up Secures $70 Million Growth Capital Investment Led by Summit Partners** Share * * _Investment to fuel Fundraise Up\u2019s AI-powered innovation and global expansion, enhancing online fundraising impact for nonprofits worldwide_ BROOKLYN, N.Y.--( [BUSINESS WIRE](https://www.businesswire.com/) )-- [Fundraise Up](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Ffundraiseup.com%2F&esheet=54188304&newsitemid=20250122330643&lan=en-US&anchor=Fundraise+Up&index=1&md5=8416d80d2724e59b1685f78244707de3) , a premier fundraising platform for nonprofits globally, today announced a minority growth investment led by"
+       ]
+      },
+      {
+       "title": "Fundraise Up \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/fundraise-up",
+       "excerpts": [
+        "|Deal type |Date |Amount |Valuation |Investors |Source | |**SERIES B** Other financing |Jan 2025 |$70M |$280M |[Summit Partners](https://dealroom.co/investors/summit-partners/) \u00b7 Telescope Partners |[\u2197](https://www.businesswire.com/news/home/20250122330643/en/Fundraise-Up-Secures-70-Million-Growth-Capital-Investment-Led-by-Summit-Partners/) |"
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement headline states a $70 million investment, and Dealroom records the Series B round at $70M in January 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Case Studies | Fundraise Up",
+       "url": "https://fundraiseup.com/case-studies",
+       "excerpts": [
+        "Jessica Bernat",
+        "Canadian Red Cross",
+        "[Read customer story](https://fundraiseup.com/case-studies/canadian-red-cross/)",
+        "Dean Gillespie",
+        "International Justice Mission UK",
+        "[Read customer story](https://fundraiseup.com/case-studies/international-justice-mission-uk/)"
+       ]
+      }
+     ],
+     "reasoning": "The company case-studies page identifies Canadian Red Cross and International Justice Mission UK as customer-story organizations.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Fundraise Up Funding History: $121.6M | Indexed.vc",
+       "url": "https://indexed.vc/companies/fundraise-up",
+       "excerpts": [
+        "It has raised $121.6M across 4 rounds, most recently a $70.0M Growth Equity in January 2025."
+       ]
+      },
+      {
+       "title": "Fundraise Up \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/fundraise-up",
+       "excerpts": [
+        "|Deal type |Date |Amount |Valuation |Investors |Source | |**SERIES B** Other financing |Jan 2025 |$70M |$280M |[Summit Partners](https://dealroom.co/investors/summit-partners/) \u00b7 Telescope Partners |[\u2197](https://www.businesswire.com/news/home/20250122330643/en/Fundraise-Up-Secures-70-Million-Growth-Capital-Investment-Led-by-Summit-Partners/) |"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile says its most recent round was in January 2025; Dealroom labels that round Series B and reports the month as January 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Subprocessors",
+       "url": "https://fundraiseup.com/subprocessors",
+       "excerpts": [
+        "| HubSpot | |",
+        "| HubSpot | Customer relationship management (CRM) and data storage. |",
+        "| Salesforce | |",
+        "| Salesforce | CRM services for storing Customer data as required. |",
+        "| Gong | |",
+        "| Gong | Sales team coaching and meeting analysis. |"
+       ]
+      },
+      {
+       "title": "GTM Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4705061005",
+       "excerpts": [
+        "* Build enrichment waterfalls, lead scoring models, and CRM sync pipelines with deduplication logic in Clay. Own the quality and reliability of data flowing into our GTM systems from prospecting sources.",
+        "* Administer Gong, build Flows and coaching triggers, and surface deal risk signals directly in Salesforce. Help revenue leadership turn conversation data into actionable insights.",
+        "* Ship AI-powered automations, including outreach generation, call summaries, and ICP scoring, using LLM APIs integrated into Clay, Salesforce, and Nooks. Identify new opportunities to apply AI across the GTM motion.",
+        "* Own CRM data quality end-to-end, including validation rules, deduplication, enrichment refresh cycles, and maintaining a GTM data dictionary. Data health is a metric you're accountable to.",
+        "* Build event-driven automations across the GTM stack and own the integration layer between Salesforce, Clay, Gong, and other revenue tools. When systems don't talk to each other, you fix that."
+       ]
+      }
+     ],
+     "reasoning": "The company subprocessor page names HubSpot, Salesforce, and Gong and describes their CRM/sales uses. The company\u2019s GTM Engineer posting names Clay, Gong, Salesforce, and Nooks as systems used in its go-to-market stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "John Schneider Joins Fundraise Up As Chief Marketing Officer | KARV Tech Insider",
+       "url": "https://karvtechinsider.com/martech/cxo-moves/john-schneider-joins-fundraise-up-as-chief-marketing-officer",
+       "excerpts": [
+        "# John Schneider Joins Fundraise Up As Chief Marketing Officer",
+        "By Ash Kate November 2, 2026",
+        "## Article content",
+        "[John Schneider](https://www.linkedin.com/in/schneider/) has joined Fundraise Up as Chief Marketing Officer, moving from the human resources technology sector into a business focused on modernising how people give to charitable causes.",
+        "John announced the appointment as an opportunity to bring his marketing leadership experience to a high-growth technology company operating at the intersection of artificial intelligence and social impact."
+       ]
+      }
+     ],
+     "reasoning": "The dated November 2, 2026 announcement says John Schneider joined Fundraise Up as Chief Marketing Officer, a C-level appointment within the 12 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Senior ML-Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4674966005",
+       "excerpts": [
+        "# Senior ML-Engineer",
+        "Department",
+        "Product ",
+        "Location",
+        "Georgia - Remote",
+        "[Apply Now](https://fundraiseup.com/careers/4674966005/#grnhse%5Fapp)"
+       ]
+      }
+     ],
+     "reasoning": "The current company-hosted Senior ML-Engineer posting has an Apply Now link and is explicitly recruiting for a Senior ML Engineer role.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Fundraise Up \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/fundraise-up",
+       "excerpts": [
+        "|Deal type |Date |Amount |Valuation |Investors |Source | |**SERIES B** Other financing |Jan 2025 |$70M |$280M |[Summit Partners](https://dealroom.co/investors/summit-partners/) \u00b7 Telescope Partners |[\u2197](https://www.businesswire.com/news/home/20250122330643/en/Fundraise-Up-Secures-70-Million-Growth-Capital-Investment-Led-by-Summit-Partners/) |"
+       ]
+      },
+      {
+       "title": "Fundraise Up Funding History: $121.6M | Indexed.vc",
+       "url": "https://indexed.vc/companies/fundraise-up",
+       "excerpts": [
+        "It has raised $121.6M across 4 rounds, most recently a $70.0M Growth Equity in January 2025."
+       ]
+      }
+     ],
+     "reasoning": "Dealroom labels the January 2025 $70M round Series B; a funding profile independently describes it as the most recent round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Documentation | Fundraise Up",
+       "url": "https://fundraiseup.com/docs/",
+       "excerpts": [
+        "# Welcome to Fundraise\u00a0Up Docs",
+        "Explore guides and ideas to strengthen your fundraising with Fundraise\u00a0Up.",
+        "## Onboarding guide",
+        "The place where it all begins. Think of this as your personal guide \u2014 just you, your organization, and Fundraise\u00a0Up. We\u2019ll walk through everything together, from setup to success.",
+        "[Let\u2019s go](https://fundraiseup.com/docs/onboarding/)",
+        "#### Get started",
+        "[Installation Activate Fundraise\u00a0Up in minutes](https://fundraiseup.com/docs/installation/)",
+        "[Migration Painless (and free) data transfer](https://fundraiseup.com/docs/migration/)",
+        "[Payment methods From Apple Pay to direct debits](https://fundraiseup.com/docs/payment-methods/)",
+        "[Test mode Make it shine before going live](https://fundraiseup.com/docs/test-donations/)",
+        "[Profile settings Customize your digital headquarters](https://fundraiseup.com/docs/profile-settings/)",
+        "[Accounts and subaccounts Organize your fundraising family tree](https://fundraiseup.com/docs/accounts-and-subaccounts/)",
+        "[Security and compliance Digital bodyguard for your fundraising](https://fundraiseup.com/docs/security/)",
+        "[Receipts Faster than your postal service](https://fundraiseup.com/docs/receipt-settings/)",
+        "[Image guidelines Make your campaigns picture-perfect](https://fundraiseup.com/docs/image-guidelines/)",
+        "[Audit Log Keep track of every action taken](https://fundraiseup.com/docs/audit-log/)",
+        "[Terminology guide Speak Fundraise\u00a0Up fluently](https://fundraiseup.com/docs/glossary/)",
+        "#### Run campaigns",
+        "[Campaign setup Craft your donor experience your way](https://fundraiseup.com/docs/campaign-setup/)",
+        "[Checkout Modal Fast-track for donations](https://fundraiseup.com/docs/checkout-modal/)",
+        "[Campaign Page Showcase your cause to the world](https://fundraiseup.com/docs/campaign-page/)",
+        "[Designations Direct money to the right bucket](https://fundraiseup.com/docs/designations-overview/)",
+        "[Elements Building blocks for donation success](https://fundraiseup.com/docs/elements/)",
+        "[Fundraisers Make your supporters fundraising heroes](https://fundraiseup.com/docs/fundraiser/)",
+        "[Benefits Perks that turn donors into superfans](https://fundraiseup.com/docs/benefits/)",
+        "[Virtual Terminal Donation machine for offline giving](https://fundraiseup.com/docs/virtual-terminal/)",
+        "#### Engage supporters",
+        "[Donor Portal The VIP lounge for your supporters](https://fundraiseup.com/docs/donor-portal/)",
+        "[Upgrade Links Turn one-time donors into loyal friends](https://fundraiseup.com/docs/upgrade-links/)",
+        "[Localization and regions Speak fluent generosity](https://fundraiseup.com/docs/localization-and-regions/)",
+        "[Emails Be grateful at the speed of light](https://fundraiseup.com/docs/emails-settings/)",
+        "[Accessibility Ensuring your cause is open to everyone](https://fundraiseup.com/docs/accessibility/)",
+        "#### Analyze results",
+        "[Insights Your crystal ball for fundraising success](https://fundraiseup.com/docs/insights/)",
+        "[Donations Track every penny](https://fundraiseup.com/docs/donations/)",
+        "[Supporters Those who make a difference](https://fundraiseup.com/docs/supporters/)",
+        "[Recurring plans Continuous support in one place](https://fundraiseup.com/docs/recurring-plans/)",
+        "[Marketing tools Where Google meets Meta](https://fundraiseup.com/docs/marketing-analytics/)",
+        "[Data export Your data, on your terms](https://fundraiseup.com/docs/exports/)",
+        "#### Build & integrate",
+        "[REST API Keys to next-level fundraising](https://api.fundraiseup.com/v1/docs/)",
+        "[URL API URLs with superpowers](https://fundraiseup.com/docs/url-api/)",
+        "[JavaScript API Endless tailored scenarios](https://fundraiseup.com/docs/javascript-api/)",
+        "[CRM and platform integrations Digital handshakes all around](https://fundraiseup.com/docs/integrations/)"
+       ]
+      }
+     ],
+     "reasoning": "The public Documentation site has an onboarding guide and many linked articles across setup, campaigns, supporters, analytics, APIs, and integrations.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "NYC",
+        "Brooklyn,  ",
+        "New York",
+        "Headquarters",
+        "### Where we work",
+        "Built and based in Brooklyn, New York, Fundraise Up is a true NYC startup.",
+        "Now headquartered at [Industry City](https://industrycity.com/) , a sprawling campus of manufacturers, artisans, and technology companies like Fundraise Up, we collaborate in a space that connects our local, remote, and international teams."
+       ]
+      }
+     ],
+     "reasoning": "The About page identifies Brooklyn, New York as Fundraise Up\u2019s headquarters.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Smart online fundraising tips for nonprofits | Fundraise Up",
+       "url": "https://fundraiseup.com/blog",
+       "excerpts": [
+        "[![](https://max.ucarecdn.com/47437dc6-fd25-45f0-8360-091917601201/-/preview/80x80/-/format/auto/-/quality/lighter/-/blur/36/)![](https://max.ucarecdn.com/47437dc6-fd25-45f0-8360-091917601201/-/format/auto/-/quality/lighter/-/resize/1200x/)<h3>Introducing Sponsorships: Your sponsorship program, finally on\u00a0the same platform as\u00a0the rest of\u00a0your fundraising</h3>Product\u00b7Nov 2, 2026](https://fundraiseup.com/blog/introducing-sponsorships/)"
+       ]
+      }
+     ],
+     "reasoning": "The company blog index labels a post \u201cIntroducing Sponsorships\u201d as a Product post dated November 2, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive, Education Vertical | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4735043005",
+       "excerpts": [
+        "[Back to open roles](https://fundraiseup.com/careers/#careers-jobs-list-table) [Apply Now](#grnhse_app)",
+        "[Back to open roles](https://fundraiseup.com/careers/#careers-jobs-list-table)",
+        "Department",
+        "Growth",
+        "Location",
+        "![](https://fundraiseup.com/images/country-flags/US.png)",
+        "USA (EST and CST) - Remote",
+        "[Apply Now](#grnhse_app)",
+        "# Account Executive, Education Vertical"
+       ]
+      }
+     ],
+     "reasoning": "The company-hosted open-roles page links to an Account Executive, Education Vertical job posting with an Apply Now link.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Fundraise Up Funding History: $121.6M | Indexed.vc",
+       "url": "https://indexed.vc/companies/fundraise-up",
+       "excerpts": [
+        "It has raised $121.6M across 4 rounds, most recently a $70.0M Growth Equity in January 2025.",
+        "It has raised $121.6M in total across 4 rounds, most recently a $70.0M Growth Equity round in Jan 2025."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile states the most recent round was January 2025; this predates the 18-month window beginning May 9, 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "G D P R Logo"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center displays GDPR in its compliance badges.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "ISO27001:2022 Logo"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center displays ISO 27001:2022 in its compliance badges.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "PCI DSS Level 1 Logo"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center displays PCI DSS Level 1 in its compliance badges.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "SOC 2 Logo",
+        "SOC2 Type II Logo"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center displays SOC 2 and SOC 2 Type II in its compliance badges.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Case Studies | Fundraise Up",
+       "url": "https://fundraiseup.com/case-studies",
+       "excerpts": [
+        "Jessica Bernat",
+        "Canadian Red Cross",
+        "[Read customer story](https://fundraiseup.com/case-studies/canadian-red-cross/)"
+       ]
+      }
+     ],
+     "reasoning": "The company case-studies page names Canadian Red Cross and links to its customer story.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Case Studies | Fundraise Up",
+       "url": "https://fundraiseup.com/case-studies",
+       "excerpts": [
+        "Dean Gillespie",
+        "International Justice Mission UK",
+        "[Read customer story](https://fundraiseup.com/case-studies/international-justice-mission-uk/)"
+       ]
+      }
+     ],
+     "reasoning": "The company case-studies page names International Justice Mission UK and links to its customer story.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Subprocessors",
+       "url": "https://fundraiseup.com/subprocessors",
+       "excerpts": [
+        "| HubSpot | |",
+        "| HubSpot | Customer relationship management (CRM) and data storage. |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessors page names HubSpot and identifies it as a CRM.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Subprocessors",
+       "url": "https://fundraiseup.com/subprocessors",
+       "excerpts": [
+        "| Salesforce | |",
+        "| Salesforce | CRM services for storing Customer data as required. |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessors page names Salesforce as a CRM service.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "GTM Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4705061005",
+       "excerpts": [
+        "* Build enrichment waterfalls, lead scoring models, and CRM sync pipelines with deduplication logic in Clay. Own the quality and reliability of data flowing into our GTM systems from prospecting sources."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Clay as part of its go-to-market data and enrichment systems.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "GTM Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4705061005",
+       "excerpts": [
+        "* Administer Gong, build Flows and coaching triggers, and surface deal risk signals directly in Salesforce. Help revenue leadership turn conversation data into actionable insights.",
+        "* Ship AI-powered automations, including outreach generation, call summaries, and ICP scoring, using LLM APIs integrated into Clay, Salesforce, and Nooks. Identify new opportunities to apply AI across the GTM motion.",
+        "* Own CRM data quality end-to-end, including validation rules, deduplication, enrichment refresh cycles, and maintaining a GTM data dictionary. Data health is a metric you're accountable to.",
+        "* Build event-driven automations across the GTM stack and own the integration layer between Salesforce, Clay, Gong, and other revenue tools. When systems don't talk to each other, you fix that."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Gong as a sales-team tool.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "GTM Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4705061005",
+       "excerpts": [
+        "* Ship AI-powered automations, including outreach generation, call summaries, and ICP scoring, using LLM APIs integrated into Clay, Salesforce, and Nooks. Identify new opportunities to apply AI across the GTM motion."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Nooks among the integrated systems in its GTM stack.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "GDPR",
+     "ISO 27001",
+     "PCI DSS",
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Fundraise Up provides nonprofits with a donation platform that helps engage more supporters and grow revenue by improving conversion, enabling modern payment methods, and personalizing the giving experience for each donor.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic (Claude)",
+    "pricing_page": true,
+    "funding_amount_usd": 70000000.0,
+    "named_customers": [
+     "Canadian Red Cross",
+     "International Justice Mission UK"
+    ],
+    "funding_date": "2025-01",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Salesforce",
+     "Clay",
+     "Gong",
+     "Nooks"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Brooklyn",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

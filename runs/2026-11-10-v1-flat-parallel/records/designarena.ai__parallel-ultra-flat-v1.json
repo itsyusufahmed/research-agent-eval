@@ -1,0 +1,165 @@
+{
+ "schema_version": "v0",
+ "company": "Design Arena",
+ "domain": "designarena.ai",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Design Arena lets people create websites, games, images, videos, presentations, and apps with AI models, then compare their outputs through a crowdsourced generative-AI benchmark.",
+   "citations": [
+    "https://www.designarena.ai/profile",
+    "https://docs.designarena.ai/introduction"
+   ],
+   "notes": "The product profile describes creating websites, games, images, videos, presentations, and apps with AI models; the public documentation calls Design Arena a crowdsourced generative-AI benchmarking platform."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://designarena.ai/",
+    "http://www.designarena.ai/contact"
+   ],
+   "notes": "The homepage navigation shows Get Started and See Leaderboards but no pricing link. The contact page is for questions, feedback, or support rather than a pricing plan or pricing form, so no public pricing page was found."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://notes.designarena.ai/how-microsoft-research-asia-used-design-arena-to-validate-their-aesthetic-coding-benchmark"
+   ],
+   "notes": "The closest public usage/case-study material identified Microsoft Research Asia, but the material reviewed did not establish two customer names. The requested rule calls for an empty list when the case-study evidence shows fewer than two."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "11-20",
+   "citations": [
+    "https://tracxn.com"
+   ],
+   "notes": "The company record reports 12 employees, which falls in the requested 11-20 band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "San Francisco",
+    "country": "United States"
+   },
+   "citations": [
+    "https://tracxn.com"
+   ],
+   "notes": "hq_city: The company record lists San Francisco as the location city. | hq_country: The Design Arena company record gives its location country as United States."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2025.0,
+   "citations": [
+    "https://www.ycombinator.com/companies/design-arena"
+   ],
+   "notes": "The Y Combinator Design Arena profile states that it was founded in 2025."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.designarena.ai/blog"
+   ],
+   "notes": "The blog index includes several technical topics, but the reviewed index and posts did not establish that at least two qualifying posts were authored by engineers. Since a blog exists but the required engineer-authorship evidence was not found, the strict threshold for true is not met."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.designarena.ai/introduction",
+    "https://docs.designarena.ai/api-reference/overview"
+   ],
+   "notes": "The public documentation introduces the API and lists multiple endpoints, including arena and model listings, satisfying the requirement for a public developer documentation site with multiple articles/endpoints."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/Intelligence/3de9ad79-9225-4aed-bb0f-8a9830818a8d"
+   ],
+   "notes": "A live job posting is titled Member of Technical Staff, ML Engineer, which directly matches the requested AI/ML role criteria."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic, OpenAI, and Google are named as model-provider values in the public API documentation; the leaderboard API also exposes OpenRouter model IDs.",
+   "citations": [
+    "https://docs.designarena.ai/api-reference/models",
+    "https://docs.designarena.ai/api-reference/overview"
+   ],
+   "notes": "The API documentation names Anthropic, OpenAI, and Google as example provider values and says leaderboard entries include an OpenRouter model identifier. The answer reports the named providers without claiming they are exhaustive."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001"
+   ],
+   "citations": [
+    "https://www.designarena.ai/security"
+   ],
+   "notes": "compliance_certs: The security page names SOC 2 and ISO 27001. Its wording associates the certifications with leading cloud providers, so this is a medium-confidence reading of the company's public certification claim. | compliance_certs.0: The security page explicitly names SOC 2. | compliance_certs.1: The security page explicitly names ISO 27001."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Seed",
+    "date": "2026-08",
+    "amount_usd": 7900000.0
+   },
+   "citations": [
+    "https://x.com/DesignArena/status/2084363282249625776",
+    "https://tracxn.com",
+    "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models"
+   ],
+   "notes": "funding_stage: The company announcement calls the round a seed, and the funding record identifies the latest round stage as Seed. | funding_date: The dated announcement is from August 2026, and the funding record dates the seed round to 2026-08-04; therefore the requested YYYY-MM value is 2026-08. | funding_amount_usd: The company announced a $7.9 million seed round, and the company funding record lists the latest round amount as USD 7,900,000."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://x.com/DesignArena/status/2084363282249625776",
+    "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models"
+   ],
+   "notes": "The company announced its $7.9 million seed round in August 2026, which is within the 18 months before the November 9, 2026 reference date."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://intelligence.ai/careers"
+   ],
+   "notes": "The careers page lists engineering, platform, and design roles, but no SDR, BDR, sales/business-development representative, or account executive role."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://x.com/DesignArena/status/2117353555011281191"
+   ],
+   "notes": "The company announced PDF Arena as a new evaluation in its Office Suite on November 2, 2026, within six months before the November 9, 2026 reference date."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "The team profile identifies Grace Li as founder/CEO and reports a team size of three, but it supplies no join or departure dates. The evidence does not establish whether a C-level or VP-level person joined or left during the requested period."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://intelligence.ai/careers",
+    "https://docs.designarena.ai/api-reference/overview"
+   ],
+   "notes": "The readable careers listing and public API documentation were checked; they identify roles and model identifiers but name no CRM or sales-and-marketing system. The list is therefore empty."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 745.7
+}

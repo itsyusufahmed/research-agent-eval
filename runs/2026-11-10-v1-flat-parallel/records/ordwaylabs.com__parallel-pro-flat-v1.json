@@ -1,0 +1,168 @@
+{
+ "schema_version": "v0",
+ "company": "Ordway",
+ "domain": "ordwaylabs.com",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Ordway automates subscription and usage-based billing, payment collection, revenue recognition, and SaaS reporting for finance and revenue operations teams at recurring-revenue businesses.",
+   "citations": [
+    "https://ordwaylabs.com/ai-llm"
+   ],
+   "notes": "The company describes the platform's billing, payments, revenue-recognition, and reporting functions, and explicitly identifies finance and revenue operations teams as users: https://ordwaylabs.com/ai-llm."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://ordwaylabs.com/"
+   ],
+   "notes": "The inspected homepage navigation and footer provide demo/contact routes rather than a public pricing link or plan page; the tested /pricing/ URL returned no page. This supports false under the requested negative-evidence rule: https://ordwaylabs.com/."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Merge",
+    "Ocrolus"
+   ],
+   "citations": [
+    "https://ordwaylabs.com/resources/case-studies/technology/merge-billing-case-study",
+    "https://ordwaylabs.com/customers"
+   ],
+   "notes": "named_customers: Merge is explicitly described as selecting Ordway in its case study, and Ocrolus appears in the customer logo area. Sources: https://ordwaylabs.com/resources/case-studies/technology/merge-billing-case-study and https://ordwaylabs.com/customers. | named_customers.0: The case study explicitly states that Merge selected Ordway for its order-to-cash process: https://ordwaylabs.com/resources/case-studies/technology/merge-billing-case-study. | named_customers.1: Ocrolus appears as a logo on Ordway's customer page. The identification comes from the logo asset rather than a narrative case-study statement: https://ordwaylabs.com/customers."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "51-100",
+   "citations": [
+    "https://linkedin.com/company/ordway"
+   ],
+   "notes": "The company profile reports 64 employees, which falls within 51-100. This is a profile snapshot rather than an audited headcount: https://linkedin.com/company/ordway."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Washington, DC",
+    "country": "United States"
+   },
+   "citations": [
+    "https://ordwaylabs.com/ai-llm"
+   ],
+   "notes": "hq_city: Ordway explicitly labels its Washington, DC address as headquarters: https://ordwaylabs.com/ai-llm. | hq_country: The headquarters address is Washington, DC, which places it in the United States; the country is normalized from that address: https://ordwaylabs.com/ai-llm."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2018.0,
+   "citations": [
+    "https://ordwaylabs.com/ai-llm"
+   ],
+   "notes": "Ordway's company summary explicitly gives 2018 as its founding year: https://ordwaylabs.com/ai-llm."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://ordwaylabs.com/resources/blog/page/12"
+   ],
+   "notes": "The inspected blog indexes show business, billing, implementation, and SaaS-metrics content rather than an engineering publication with two engineer-authored product-build posts. Research found only a lone older engineering-related post, so the specified two-post threshold was not met. Sources: https://ordwaylabs.com/resources/blog/ and https://ordwaylabs.com/resources/blog/page/12."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://support.ordwaylabs.com/hc/en-us"
+   ],
+   "notes": "The public support portal contains multiple documentation categories and linked product articles, including Matrix Pricing, Prepayment Wallet of Units, and Payment Automation Options: https://support.ordwaylabs.com/hc/en-us."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://ordwaylabs.com/careers/product-manager-ai-finance",
+    "https://ordwaylabs.com/careers"
+   ],
+   "notes": "The current openings index lists Product Manager \u2013 AI Finance, and its posting has an Apply Now link. It qualifies under the question's explicit AI-in-title rule, although it is a product-management rather than research-scientist role. Sources: https://ordwaylabs.com/careers and https://ordwaylabs.com/careers/product-manager-ai-finance."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic Claude (advertised AI chatbot integration)",
+   "citations": [
+    "https://ordwaylabs.com/products/integrations"
+   ],
+   "notes": "The integrations page explicitly advertises connecting Anthropic's Claude chatbot to Ordway for natural-language questions and workflow actions. This establishes an advertised Claude integration, not the undisclosed underlying model for every native AI feature: https://ordwaylabs.com/products/integrations."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2"
+   ],
+   "citations": [
+    "https://ordwaylabs.com/ai-llm"
+   ],
+   "notes": "compliance_certs: Ordway explicitly states that it is SOC 2 audited. SOC 1 is also mentioned but is outside the requested list: https://ordwaylabs.com/ai-llm. | compliance_certs.0: Ordway explicitly claims a completed SOC 2 audit, not merely an audit in progress: https://ordwaylabs.com/ai-llm."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2026-08",
+    "amount_usd": 20000000.0
+   },
+   "citations": [
+    "https://tracxn.com",
+    "https://ordwaylabs.com/press-releases/ordway-secures-growth-capital"
+   ],
+   "notes": "funding_stage: The funding profile labels the August 2026 round Series B. Ordway's announcement describes it as growth capital comprising equity and debt, without itself using the Series B label. Sources: https://tracxn.com and https://ordwaylabs.com/press-releases/ordway-secures-growth-capital. | funding_date: The latest-round profile and primary announcement both date the financing to August 5, 2026, normalized to 2026-08: https://ordwaylabs.com/press-releases/ordway-secures-growth-capital. | funding_amount_usd: The announcement states that Ordway secured access to $20 million in additional equity and debt funding; the funding profile identifies the same amount as the latest round. This is the combined financing package, not equity alone: https://ordwaylabs.com/press-releases/ordway-secures-growth-capital."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://ordwaylabs.com/press-releases/ordway-secures-growth-capital"
+   ],
+   "notes": "The August 5, 2026 announcement reports access to $20 million in additional equity and debt financing, within the requested eighteen-month window: https://ordwaylabs.com/press-releases/ordway-secures-growth-capital."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://ordwaylabs.com/careers/account-executive",
+    "https://ordwaylabs.com/careers"
+   ],
+   "notes": "An Account Executive posting has an active application link and is also advertised on the current careers index. Sources: https://ordwaylabs.com/careers/account-executive and https://ordwaylabs.com/careers."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://ordwaylabs.com/press-releases/ordway-launches-ai-powered-payments"
+   ],
+   "notes": "Ordway launched AI-powered Ordway Payments on July 22, 2026. The product unifies billing and payments in an integrated application, constituting a major launch within the six-month window: https://ordwaylabs.com/press-releases/ordway-launches-ai-powered-payments."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://ordwaylabs.com/press-releases/mike-miele-vice-president-sales/"
+   ],
+   "notes": "The April 1, 2026 announcement states that Mike Miele joined Ordway as Vice President of Sales, within the requested twelve-month window: https://ordwaylabs.com/press-releases/mike-miele-vice-president-sales/."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "HubSpot"
+   ],
+   "citations": [
+    "https://ordwaylabs.com/ai-llm"
+   ],
+   "notes": "crm_stack_signal: Ordway's integration documentation names Salesforce and HubSpot under CRM and sales. These are visible integration signals, not proof of its internal sales team's deployment: https://ordwaylabs.com/ai-llm. | crm_stack_signal.0: Salesforce is explicitly named in Ordway's CRM and sales integrations: https://ordwaylabs.com/ai-llm. | crm_stack_signal.1: HubSpot is explicitly named, with configurable field mapping, App Cards, and an in-CRM Plan Picker: https://ordwaylabs.com/ai-llm."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 374.7
+}

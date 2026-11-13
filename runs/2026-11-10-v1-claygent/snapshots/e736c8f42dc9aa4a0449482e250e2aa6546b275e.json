@@ -1,0 +1,22 @@
+{
+ "url": "https://spacelift.io/blog/introducing-kubernetes-native-workers",
+ "fetched_at": "2026-11-10T20:27:27.468656+00:00",
+ "hours_after_run": 44.5,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "43fc8869e6afc3b9ebe86afa8179f5adc6ad036abde4a6e25391e727132762cf",
+ "chars": 3437,
+ "truncated": false,
+ "title": "Introducing Kubernetes Native Workers",
+ "markdown": "\\[Virtual Event\\] Troubleshooting tofu: Spacelift Run Observability for OpenTofu\n\n[Register ➡️](https://events.spacelift.io/introducing-spacelift-run-observability-for-opentofu?refid=homepage-banner)\n\n[Product](https://spacelift.io/blog/product)\n\n# Introducing Kubernetes Native Workers\n\n![Introducing Kubernetes Native Workers](https://spacelift.io/_next/image?url=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F06dd10199866e44768e6554d78e5391485421dc85dbfa3e72abdd0667df7ca1e%3Fs%3D96%26d%3Dmm%26r%3Dg&w=96&q=75)\n\n[Flavius Dinu](https://spacelift.io/blog/author/flaviusd)\n\n29Jan2024·2 min read\n\n![Introducing Kubernetes Native Workers](https://spacelift.io/_next/image?url=https%3A%2F%2Fspacelift.io%2Fwp-content%2Fuploads%2F2024%2F01%2F331.kubernetes-native-workers.png&w=3840&q=75)\n\nWe are proud to announce that [Kubernetes native workers](https://docs.spacelift.io/concepts/worker-pools/kubernetes-workers) are now available. Our previous approach involved providing a helm chart designed to deploy worker pools within a Kubernetes environment, leveraging Docker in Docker.\n\nNow, we have introduced a new Kubernetes operator to manage these worker pools efficiently. This operator facilitates the creation and management of Worker resources directly in your Kubernetes cluster based on the WorkerPool configuration. Moreover, it integrates seamlessly with standard Kubernetes mechanisms, allowing for the effortless scaling of these worker pools both upwards and downwards to satisfy the requirements.\n\nIn a nutshell, to use Kubernetes native workers:\n\n- [Generate a private key for your worker](https://docs.spacelift.io/concepts/worker-pools#generate-worker-private-key)\n- Install it via kubectl or helm\n\n```bash\n# kubectl\nkubectl apply -f https://downloads.spacelift.io/kube-workerpool-controller/latest/manifests.yaml\n\n# helm\nhelm repo add spacelift https://downloads.spacelift.io/helm\nhelm repo update\nhelm upgrade spacelift-workerpool-controller spacelift/spacelift-workerpool-controller --install --namespace spacelift-worker-controller-system --create-namespace\n```\n\n- [Create a secret containing the private key and token generated in the first step](https://docs.spacelift.io/concepts/worker-pools/#generate-worker-private-key).\n- [Create the worker pool](https://docs.spacelift.io/concepts/worker-pools/#navigate-to-worker-pools).\n\nHere are some of the reasons Kubernetes native workers should be considered for any product:\n\n- **Improved scaling** – Automatically adjust worker nodes to handle varying loads, ensuring consistent performance.\n- **Resource efficiency** – Maximize resource utilization and reduce costs by using resources efficiently.\n- **Isolation and security**–Provide workload isolation in multi-tenant architectures, enhancing security and compliance.\n- **Portability and flexibility**–Enjoy deployment flexibility and meet diverse client needs rapidly.\n\nStay tuned tomorrow for a [deep dive into how Kubernetes native workers function and the motivation behind their introduction](https://spacelift.io/blog/spacelift-workerpool-operator).\n\n### The Most Flexible CI/CD Automation Tool\n\nSpacelift is an alternative to using homegrown solutions on top of a generic CI. It helps overcome common state management issues and adds several must-have capabilities for infrastructure management.\n\n[Start free trial](https://spacelift.io/free-trial)\n\nEmail\\*\n\nInterest\n\n© 2026 Spacelift, Inc. All rights reserved",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "eng_blog"
+ ],
+ "late": true
+}

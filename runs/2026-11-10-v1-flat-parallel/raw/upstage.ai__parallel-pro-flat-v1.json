@@ -1,0 +1,528 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ebd58d586ba8c83ff",
+  "interaction_id": "trun_142119f6a1b4439ebd58d586ba8c83ff",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "upstage.ai"
+  },
+  "created_at": "2026-11-10T18:47:27.568255Z",
+  "modified_at": "2026-11-10T18:50:32.493691Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ebd58d586ba8c83ff",
+   "interaction_id": "trun_142119f6a1b4439ebd58d586ba8c83ff",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "upstage.ai"
+   },
+   "created_at": "2026-11-10T18:47:27.568255Z",
+   "modified_at": "2026-11-10T18:50:32.493691Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Us | Upstage AI",
+       "url": "https://www.upstage.ai/about",
+       "excerpts": [
+        "Founded in 2020, we're a dynamic team of 100+ top AI researchers, engineers, and business leaders"
+       ]
+      }
+     ],
+     "reasoning": "Upstage\u2019s About page explicitly states that it was founded in 2020: https://www.upstage.ai/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Pricing On-premises",
+       "url": "https://www.upstage.ai/pricing/on-premises",
+       "excerpts": [
+        "Upstage is certified for **SOC 2,** **HIPAA** , and **ISO 27001/27701** compliance."
+       ]
+      }
+     ],
+     "reasoning": "Upstage expressly claims SOC 2, HIPAA and ISO 27001/27701 compliance. Only the requested standards are listed in the answer: https://www.upstage.ai/pricing/on-premises.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Upstage",
+       "url": "https://content.pitchbook.com/profiles/company/454835-53",
+       "excerpts": [
+        "Headquarters: Seoul, South Korea Website: www.upstage.ai"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies Upstage\u2019s headquarters as Seoul, South Korea: https://content.pitchbook.com/profiles/company/454835-53. This is a secondary-source headquarters designation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Next generation for AGI: Upstage\u2019s on-device LLM, WriteUp",
+       "url": "https://upstage.ai/blog/en/on-device-writeup",
+       "excerpts": [
+        "> `Written By: YoungHoon Jeon, NamJun Jo, Jaeho Lee, Junyeop Lee`",
+        "With our proprietary LLM, Solar, we successfully applied quantization, reducing the parameter size by over 50%."
+       ]
+      },
+      {
+       "title": "Junyeop Lee",
+       "url": "https://linkedin.com/in/leejunyeop",
+       "excerpts": [
+        "Role: Senior Machine Learning Engineer, Co-founder @ Upstage."
+       ]
+      },
+      {
+       "title": "AI-powered table recognition just got smarter\u2014here\u2019s how",
+       "url": "https://www.upstage.ai/blog/en/ai-powered-table-recognition-just-got-smarter",
+       "excerpts": [
+        "Minsoo Khang Minsoo Khang SeHwan Joo SeHwan Joo Teakgyu Hong",
+        "Instead of relying on bounding-box detection, TFLOP directly maps table elements to OCR text regions using a pointer-based approach."
+       ]
+      },
+      {
+       "title": "Teakgyu Hong",
+       "url": "https://linkedin.com/in/tghong",
+       "excerpts": [
+        "Role: AI Research Engineer, Lead @ Upstage."
+       ]
+      }
+     ],
+     "reasoning": "Two posts describe implementation rather than just product benefits: WriteUp covers Solar quantization and engine optimization, while the table-recognition post explains TFLOP\u2019s pointer-based OCR mapping. Their coauthors include Junyeop Lee and Teakgyu Hong, respectively, whose profiles identify engineering roles at Upstage. Sources: https://upstage.ai/blog/en/on-device-writeup; https://www.upstage.ai/blog/en/ai-powered-table-recognition-just-got-smarter; https://linkedin.com/in/leejunyeop; https://linkedin.com/in/tghong.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Upstage AI - Building intelligence for the future of work",
+       "url": "https://www.upstage.ai/",
+       "excerpts": [
+        "Upstage builds powerful large language models and document processing engines to transform workflows and empower leading businesses"
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes large language models and document-processing engines that transform business workflows: https://www.upstage.ai/.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Upstage company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/upstage_1",
+       "excerpts": [
+        "Employees [201-500people"
+       ]
+      },
+      {
+       "title": "About Us | Upstage AI",
+       "url": "https://www.upstage.ai/ko/about",
+       "excerpts": [
+        "2020\ub144 \uc124\ub9bd \uc774\ud6c4, 200\uba85\uc774 \ub118\ub294 AI \uc5f0\uad6c\uc790, \uc5d4\uc9c0\ub2c8\uc5b4, \ube44\uc988\ub2c8\uc2a4 \ub9ac\ub354\uac00 Upstage\uc5d0 \ubaa8\uc600\uc2b5\ub2c8\ub2e4. \uc804 \uc138\uacc4 \uc8fc\uc694 \uae30\uc5c5\uc774 \uc2e0\ub8b0\ud558\ub294 AI \uc194\ub8e8\uc158\uc744 \ud568\uaed8 \ub9cc\ub4e4\uc5b4 \uc654\uc2b5\ub2c8\ub2e4. \uc11c\uc6b8, \uc0cc\ud504\ub780\uc2dc\uc2a4\ucf54, \ub3c4\ucfc4\uc5d0 \uac70\uc810\uc744 \ub450\uace0 \uc6d0\uaca9\uc73c\ub85c \ud611\uc5c5\ud569\ub2c8\ub2e4."
+       ]
+      }
+     ],
+     "reasoning": "Dealroom lists 201\u2013500 employees, and Upstage\u2019s Korean About page describes more than 200 researchers, engineers and business leaders. Sources: https://app.dealroom.co/companies/upstage_1; https://www.upstage.ai/ko/about. The exact band relies on the secondary profile.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Next generation for AGI: Upstage's on-device LLM, WriteUp",
+       "url": "https://upstage.ai/blog/en/on-device-writeup",
+       "excerpts": [
+        "With our proprietary LLM, Solar, we successfully applied quantization, reducing the parameter size by over 50%."
+       ]
+      }
+     ],
+     "reasoning": "Upstage explicitly describes Solar as its proprietary LLM: https://upstage.ai/blog/en/on-device-writeup.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Upstage AI",
+       "url": "https://www.upstage.ai/pricing",
+       "excerpts": [
+        "Pricing plans to fit your needs"
+       ]
+      }
+     ],
+     "reasoning": "A public page explicitly presents pricing plans: https://www.upstage.ai/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Upstage secures NVIDIA investment, accelerating upgrades to \u2018Solar\u2019 - First-Class Business Newspaper Financial News",
+       "url": "https://en.fnnews.com/news/202611091915255020",
+       "excerpts": [
+        "The specific size of the investment has not been disclosed."
+       ]
+      },
+      {
+       "title": "\uc5c5\uc2a4\ud14c\uc774\uc9c0, \uc5d4\ube44\ub514\uc544 \ud22c\uc790 \uc720\uce58 \uc608\uc815\u2026\uc544\ub9c8\uc874\u00b7AMD \uc774\uc5b4 \uae00\ub85c\ubc8c \ube45\ud14c\ud06c \ud22c\uc790\uc790 \ud655\ubcf4 \ud655\ub300 < \uae30\uc5c5 < FOCUS < \uae30\uc0ac\ubcf8\ubb38 - \uc778\uacf5\uc9c0\ub2a5\uc2e0\ubb38",
+       "url": "https://www.aitimes.kr/news/articleView.html?idxno=42658",
+       "excerpts": [
+        "\ub2e4\ub9cc \uc5d4\ube44\ub514\uc544\uc758 \ud22c\uc790\ub294 \uc544\uc9c1 \uc644\ub8cc\ub418\uc9c0 \uc54a\uc740 \uc608\uc815 \ub2e8\uacc4\ub85c, \ucd5c\uc885 \ud22c\uc790 \uaddc\ubaa8\uc640 \uad6c\uccb4\uc801\uc778 \ud611\ub825 \ubc94\uc704\ub294 \ud5a5\ud6c4 \uacf5\uac1c\ub420 \ub0b4\uc6a9\uc5d0 \ub530\ub77c \ud655\uc778\ub420 \uc804\ub9dd\uc774\ub2e4."
+       ]
+      }
+     ],
+     "reasoning": "The amount of the latest announced NVIDIA investment is undisclosed, and that investment was not yet finalized. The USD amount is therefore unknown; the earlier April and October investment amounts are not substituted for it. Sources: https://en.fnnews.com/news/202611091915255020; https://www.aitimes.kr/news/articleView.html?idxno=42658.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer success stories | Upstage AI",
+       "url": "https://www.upstage.ai/customers",
+       "excerpts": [
+        "How Chosun Ilbo Built a Scalable English News Translation Pipeline with Solar Pro",
+        "How Amwins Transformed Group Benefits Underwriting with AI-Powered Document Extraction"
+       ]
+      }
+     ],
+     "reasoning": "Upstage\u2019s customer-success page names Chosun Ilbo and Amwins in implementation case studies: https://www.upstage.ai/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Upstage Secures NVIDIA Investment in Series C ",
+       "url": "https://www.chosun.com/english/industry-en/2026/11/09/H7PBDSMG2RBBROW6QMZ263ROBE",
+       "excerpts": [
+        "Published 2026.11.09.",
+        "Upstage announced on November 9, \u201cOnce this investment is finalized, Upstage will have global tech giants Amazon, AMD, and NVIDIA as investors.\u201d It added, \u201cIn the first round of its Series C funding, which concluded in April and amounted to 180 billion Korean won, Upstage was valued at over 1 trillion Korean won, becoming South Korea\u2019s first generative AI unicorn."
+       ]
+      }
+     ],
+     "reasoning": "November 2026 is the latest announcement month, not a claimed closing date: Upstage announced NVIDIA\u2019s planned participation on November 9 in the ongoing Series C second round. Source: https://www.chosun.com/english/industry-en/2026/11/09/H7PBDSMG2RBBROW6QMZ263ROBE.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "upstage.ai",
+       "url": "https://www.upstage.ai/privacy-policy/updated-mar-25-2026",
+       "excerpts": [
+        "|Upstage Service |Salesforce |Customer DB management and email sending |https://www.salesforce.com/kr/company/privacy/ |",
+        "|Upstage Service |Attio Ltd. |Corporate Customer CRM Management |https://attio.com/legal/privacy |1 year |",
+        "|Upstage Service |BREVO |Sending emails for service and marketing information |https://www.brevo.com/legal/privacypolicy/ |"
+       ]
+      }
+     ],
+     "reasoning": "Upstage\u2019s privacy policy lists Salesforce for customer-database management and email sending, Attio for corporate customer CRM management, and Brevo for service and marketing emails: https://www.upstage.ai/privacy-policy/updated-mar-25-2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "\uc5c5\uc2a4\ud14c\uc774\uc9c0, IPO \uc55e\ub450\uace0 VC \ucd9c\uc2e0 \uc9c4\uc724\uc815 CFO \uc601\uc785 - \ud30c\uc774\ub0b8\uc15c\ub274\uc2a4",
+       "url": "https://www.fnnews.com/news/202603061631389629",
+       "excerpts": [
+        "\ub274\uc2a41 \uc785\ub825 2026.03.06 16:32",
+        "6\uc77c \uc5c5\uacc4\uc5d0 \ub530\ub974\uba74 \uc5c5\uc2a4\ud14c\uc774\uc9c0\ub294 \ucd5c\uadfc \uc9c4\uc724\uc815 SBVA(\uad6c \uc18c\ud504\ud2b8\ubc45\ud06c\ubca4\ucc98\uc2a4) \uc0c1\ubb34\ub97c CFO\ub85c \uc601\uc785\ud588\ub2e4."
+       ]
+      }
+     ],
+     "reasoning": "A March 6, 2026 report states that Upstage recently recruited \uc9c4\uc724\uc815 as CFO, placing the C-level appointment inside the 12-month window. The exact joining day is not specified. Source: https://www.fnnews.com/news/202603061631389629.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "AI Engineer - LLM Serving Platform",
+       "url": "https://careers.upstage.ai/en/o/215818",
+       "excerpts": [
+        "AI Engineer - LLM Serving Platform Division Upstage Job group Tech Job Software Engineering Experience Level Experienced 3 years or more Job Types Full-time",
+        "[Apply](https://careers.upstage.ai/en/o/215818/apply)"
+       ]
+      }
+     ],
+     "reasoning": "Upstage has a live AI Engineer \u2013 LLM Serving Platform posting with an application link: https://careers.upstage.ai/en/o/215818.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Upstage Secures NVIDIA Investment in Series C ",
+       "url": "https://www.chosun.com/english/industry-en/2026/11/09/H7PBDSMG2RBBROW6QMZ263ROBE",
+       "excerpts": [
+        "AI startup Upstage has secured an investment from NVIDIA in its ongoing Series C Round 2."
+       ]
+      },
+      {
+       "title": "\uc5c5\uc2a4\ud14c\uc774\uc9c0, \uc5d4\ube44\ub514\uc544 \ud22c\uc790 \uc720\uce58 \uc608\uc815\u2026\uc544\ub9c8\uc874\u00b7AMD \uc774\uc5b4 \uae00\ub85c\ubc8c \ube45\ud14c\ud06c \ud22c\uc790\uc790 \ud655\ubcf4 \ud655\ub300 < \uae30\uc5c5 < FOCUS < \uae30\uc0ac\ubcf8\ubb38 - \uc778\uacf5\uc9c0\ub2a5\uc2e0\ubb38",
+       "url": "https://www.aitimes.kr/news/articleView.html?idxno=42658",
+       "excerpts": [
+        "\ub2e4\ub9cc \uc5d4\ube44\ub514\uc544\uc758 \ud22c\uc790\ub294 \uc544\uc9c1 \uc644\ub8cc\ub418\uc9c0 \uc54a\uc740 \uc608\uc815 \ub2e8\uacc4\ub85c, \ucd5c\uc885 \ud22c\uc790 \uaddc\ubaa8\uc640 \uad6c\uccb4\uc801\uc778 \ud611\ub825 \ubc94\uc704\ub294 \ud5a5\ud6c4 \uacf5\uac1c\ub420 \ub0b4\uc6a9\uc5d0 \ub530\ub77c \ud655\uc778\ub420 \uc804\ub9dd\uc774\ub2e4."
+       ]
+      }
+     ],
+     "reasoning": "The latest announced financing concerns the ongoing second Series C round. Reporting explicitly says NVIDIA\u2019s investment remained planned rather than completed, which is preserved in the answer. Sources: https://www.chosun.com/english/industry-en/2026/11/09/H7PBDSMG2RBBROW6QMZ263ROBE; https://www.aitimes.kr/news/articleView.html?idxno=42658.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Start Using Upstage AI | Setup Guide for Developers",
+       "url": "https://developers.upstage.ai/docs/getting-started",
+       "excerpts": [
+        "[Generate](https://developers.upstage.ai/docs/capabilities/generate) [Parse](https://developers.upstage.ai/docs/capabilities/parse) [Extract](https://developers.upstage.ai/docs/capabilities/extract)",
+        "[Rate limits](https://developers.upstage.ai/docs/guides/rate-limits) [Counting tokens](https://developers.upstage.ai/docs/guides/counting-tokens) [MCP server](https://developers.upstage.ai/docs/guides/mcp-server) [Regional endpoints](https://developers.upstage.ai/docs/guides/region-usage)"
+       ]
+      }
+     ],
+     "reasoning": "The public developer documentation links to separate Generate, Parse and Extract articles, plus guides such as rate limits and token counting: https://developers.upstage.ai/docs/getting-started.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Upstage",
+       "url": "https://content.pitchbook.com/profiles/company/454835-53",
+       "excerpts": [
+        "Headquarters: Seoul, South Korea Website: www.upstage.ai"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly identifies Seoul as the headquarters city: https://content.pitchbook.com/profiles/company/454835-53. This is a secondary-source designation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Upstage Launches Studio, Advancing Intelligent Document Processing from Data Extraction to Business Action",
+       "url": "https://www.upstage.ai/news/upstage-launches-studio-advancing-intelligent-document-processing-from-data-extraction-to-business-action",
+       "excerpts": [
+        "(October 6, 2026) Today, Upstage, an enterprise AI company, today launched [Upstage Studio](https://www.upstage.ai/products/studio) , the next-generation of its intelligent document processing (IDP) platform."
+       ]
+      }
+     ],
+     "reasoning": "Upstage announced the launch of its next-generation Studio document-processing platform on October 6, 2026, within the six-month window: https://www.upstage.ai/news/upstage-launches-studio-advancing-intelligent-document-processing-from-data-extraction-to-business-action.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "SDR (Sales Development Representative, \uacc4\uc57d\uc9c1 1\ub144)",
+       "url": "https://careers.upstage.ai/en/o/226753",
+       "excerpts": [
+        "[Apply](https://careers.upstage.ai/en/o/226753/apply)"
+       ]
+      }
+     ],
+     "reasoning": "The live posting is titled SDR (Sales Development Representative, \uacc4\uc57d\uc9c1 1\ub144) and includes an application link: https://careers.upstage.ai/en/o/226753.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Upstage Completes $45M Series B Bridge to Accelerate Enterprise-Grade GenAI and Global Expansion",
+       "url": "https://www.prnewswire.com/news-releases/upstage-completes-45m-series-b-bridge-to-accelerate-enterprise-grade-genai-and-global-expansion-302534044.html",
+       "excerpts": [
+        "20, 2025 /PRNewswire/ -- [Upstage](https://c212.net/c/link/?t=0&l=en&o=4491851-1&h=726720657&u=https%3A%2F%2Fwww.upstage.ai%2F&a=Upstage) , a key AI company specializing in enterprise-grade generative AI solutions, today announced a $45 million Series B bridge round backed by Korea Development Bank (KDB), Amazon, and AMD.",
+        "Aug 20, 2025, 08:53 ET"
+       ]
+      }
+     ],
+     "reasoning": "Upstage announced a completed $45 million Series B bridge on August 20, 2025, within the 18-month window. This establishes an actual raise independently of the pending NVIDIA investment: https://www.prnewswire.com/news-releases/upstage-completes-45m-series-b-bridge-to-accelerate-enterprise-grade-genai-and-global-expansion-302534044.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Pricing On-premises",
+       "url": "https://www.upstage.ai/pricing/on-premises",
+       "excerpts": [
+        "Upstage is certified for **SOC 2,** **HIPAA** , and **ISO 27001/27701** compliance."
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is explicitly named in Upstage\u2019s public compliance claim: https://www.upstage.ai/pricing/on-premises.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Pricing On-premises",
+       "url": "https://www.upstage.ai/pricing/on-premises",
+       "excerpts": [
+        "Upstage is certified for **SOC 2,** **HIPAA** , and **ISO 27001/27701** compliance."
+       ]
+      }
+     ],
+     "reasoning": "ISO 27001 is explicitly included in the ISO 27001/27701 claim: https://www.upstage.ai/pricing/on-premises.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Pricing On-premises",
+       "url": "https://www.upstage.ai/pricing/on-premises",
+       "excerpts": [
+        "Upstage is certified for **SOC 2,** **HIPAA** , and **ISO 27001/27701** compliance."
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is explicitly named in the public compliance claim: https://www.upstage.ai/pricing/on-premises.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer success stories | Upstage AI",
+       "url": "https://www.upstage.ai/customers",
+       "excerpts": [
+        "How Chosun Ilbo Built a Scalable English News Translation Pipeline with Solar Pro"
+       ]
+      }
+     ],
+     "reasoning": "Chosun Ilbo is named in a Solar Pro customer case study: https://www.upstage.ai/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customer success stories | Upstage AI",
+       "url": "https://www.upstage.ai/customers",
+       "excerpts": [
+        "How Amwins Transformed Group Benefits Underwriting with AI-Powered Document Extraction"
+       ]
+      }
+     ],
+     "reasoning": "Amwins is named in a document-extraction customer case study: https://www.upstage.ai/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "upstage.ai",
+       "url": "https://www.upstage.ai/privacy-policy/updated-mar-25-2026",
+       "excerpts": [
+        "|Upstage Service |Salesforce |Customer DB management and email sending |https://www.salesforce.com/kr/company/privacy/ |"
+       ]
+      }
+     ],
+     "reasoning": "Salesforce is listed for customer-database management and email sending: https://www.upstage.ai/privacy-policy/updated-mar-25-2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "upstage.ai",
+       "url": "https://www.upstage.ai/privacy-policy/updated-mar-25-2026",
+       "excerpts": [
+        "|Upstage Service |Attio Ltd. |Corporate Customer CRM Management |https://attio.com/legal/privacy |1 year |"
+       ]
+      }
+     ],
+     "reasoning": "Attio is listed for corporate customer CRM management: https://www.upstage.ai/privacy-policy/updated-mar-25-2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "upstage.ai",
+       "url": "https://www.upstage.ai/privacy-policy/updated-mar-25-2026",
+       "excerpts": [
+        "|Upstage Service |BREVO |Sending emails for service and marketing information |https://www.brevo.com/legal/privacypolicy/ |"
+       ]
+      }
+     ],
+     "reasoning": "Brevo is listed for sending service and marketing emails: https://www.upstage.ai/privacy-policy/updated-mar-25-2026.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2020.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA"
+    ],
+    "hq_country": "South Korea",
+    "eng_blog": true,
+    "product_one_liner": "Upstage develops large language models and document-processing tools that help enterprises automate document-heavy workflows.",
+    "employee_band": "201-500",
+    "model_provider": "Upstage\u2019s proprietary Solar family of large language models",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Chosun Ilbo",
+     "Amwins"
+    ],
+    "funding_date": "2026-11",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Attio",
+     "Brevo"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series C-2 (ongoing; NVIDIA investment announced but not finalized)",
+    "public_docs": true,
+    "hq_city": "Seoul",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

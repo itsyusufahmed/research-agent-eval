@@ -1,0 +1,456 @@
+{
+ "run": {
+  "routine_run_id": "run_0toaysuau3K7D6d9Gfb",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "horizon3.ai",
+    "status": "complete",
+    "result": {
+     "claygent-auto-A": {
+      "eng_blog": {
+       "notes": "Two technical posts by Naveen Sunkavally, identified on the team page as Distinguished Engineer: Advanced Data Pilfering (2025-11-04), explaining the ML/embedding/regex/LLM pipeline and isolation; and NodeZero vs. GOAD: Technical Deep Dive (2025-08-20), detailing autonomous attack execution and post-exploitation modules. These are technical articles within the main blog rather than a separately branded engineering blog.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/intelligence/blogs/introducing-nodezero-advanced-data-pilfering-view-your-data-through-the-eyes-of-an-attacker/",
+        "https://horizon3.ai/intelligence/blogs/nodezero-vs-goad-technical-deep-dive",
+        "https://horizon3.ai/about-us/"
+       ]
+      },
+      "reasoning": "Most findings are supported by official company pages, public documentation, dated company announcements, or company job postings mirrored by investors. Dates were evaluated against the requested November 9, 2026 run date. The major schema limitation is employee count: LinkedIn reports 501–1,000, which cannot be represented by the allowed bands, so that field is unknown rather than asserting an incorrect band. SOC 2 evidence relies on indexed official trust-center resource listings because the trust portal did not render. Live hiring evidence is supported by official indexed listings and readable job-board mirrors. Engineering-blog evidence includes two substantive engineer-authored technical articles, not merely product announcements.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Searched Google with query \"Horizon3.ai funding 2026 2025 Series D employees headquarters\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Raises $250M Series E at $2B+ Valuation\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"displayedLink\":\"https://horizon3.ai › news › press-release › horizon3-rai...\",\"snippet\":\"Horizon3, the AI-Native Proactive Security Company, today announced a $250 million Series E at a valuation of more than $2 billion.\",\"date\":\"Aug 3, 2026\",\"position\":1},{\"title\":\"Horizon3.ai Revenue...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"question\":\"What are the funding date, amount and stage, product description, founding year, and any new product announcements?\"}. The results are: \n \"Funding: Announced August 3, 2026; $250 million Series E; valuation over $2 billion. Round co-led by existing investors NightDragon and NEA, with seven new and five returning investors. Product description: Horizon3’s NodeZero® is an AI-native proactive security platform/“AI Hacker” that autonomously and safely tests production environments, uncovers and prioritizes exploitable attack paths, provides remediation guidance, verifies fixes, and can deploy honeypots to detect attackers. Founding ye...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/about-us/\",\"question\":\"What are the headquarters, founding year, leaders and their appointment dates, and links to pricing, docs, trust, blog, and customers?\"}. The results are: \n \"Horizon3: headquartered in San Francisco, CA; founded in 2019. Leadership listed: Snehal Antani (Co-Founder, CEO); Matthew Hartley (Chief Revenue Officer); Holly Grey (Chief Financial Officer, in memoriam; passed June 2026); Andres Botero (Chief Marketing Officer); Jill Passalacqua (Chief Legal Officer); Torie Runzel (Chief People Officer/VP People; joined 2023); Ellen Sundra (Chief Customer Officer); Erick Dean (VP Product Management; joined 2024); Keith Poyser (GM, EMEA); Drew Mullen (VP Reve...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/join-our-team/\",\"question\":\"What current job openings are listed and where is the live job board? Any AI/ML or account executive or SDR roles?\"}. The results are: \n \"Horizon3 Careers page: https://horizon3.ai/join-our-team. The page states Horizon3 is remote-first, with teammates clustered globally, and offers hybrid/remote positions globally from offices in San Francisco, Chicago, and Amsterdam. It includes a “Positions” section, but no specific current job openings or role titles are shown in the provided content, and no live job-board link is visible. No AI/ML, Account Executive, or SDR roles are listed in the provided content.\"",
+       "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/horizon3ai\",\"question\":\"What employee company size band, headquarters and founding year are listed?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/horizon3ai\",\"size\":\"501-1,000 employees\",\"locality\":\"San Francisco, CA\",\"locations\":[{\"address\":\"San Francisco, CA 94118, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"\",\"formatted_address\":\"94118, CA\",\"business_region\":\"NAM\",\"latitude\":37.78067398,\"locality\":\"San Francisco\",\"admin_district\":\"California\",\"admin_district2\":\"San Francisco County\",\"country_region\":\"United States\",\"locationstr\":\"San Francisco, CA 94118, US\",\"metro_area\":\"San Fran...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/pricing\",\"question\":\"Does the page list NodeZero pricing plans? What are the plans?\"}. The results are: \n \"NodeZero Packaging lists these plans and prices: NodeZero Flex — $15 per asset, per test; NodeZero Core — $50 per asset, unlimited; NodeZero Pro — $65 per asset, unlimited; NodeZero Elite — $85 per asset, unlimited. Core, Pro, and Elite are annual subscriptions with unlimited testing; Flex is for occasional testing. The page also lists NodeZero WebApp Flex ($10,000 per asset, per test) and NodeZero WebApp Continuous (custom pricing). Pricing page: https://horizon3.ai/pricing\"",
+       "Used visitWebpage {\"url\":\"https://docs.horizon3.ai/\",\"question\":\"What documentation articles exist? Any AI model providers, subprocessors or CRM integrations?\"}. The results are: \n \"Documentation sections/articles: Quickstart, Portal, Tripwires, Insights, Rapid Response, CLI, API, Release Notes, Downloads, Knowledge Base, Credits; specific articles include Integrations, Workflow, and Support; MCP Server (Horizon3-hosted and locally hosted); Authentication & Authorization Details; Settings > Integrations; CrowdStrike Setup Guide; Jira Setup Guide; ServiceNow VR Setup Guide; ServiceNow Ticketing Guide (Deprecated); Splunk Cloud Connection; Microsoft Sentinel Connection; API ...",
+       "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/\",\"question\":\"Which SOC 2, ISO 27001, HIPAA, GDPR or PCI DSS certifications are claimed and which AI model providers or subprocessors are listed?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/who-uses-nodezero\",\"question\":\"Which named customers use NodeZero? Find at least two named customers (not partners).\"}. The results are: \n \"No named customers are identified in the provided webpage content.\"",
+       "Searched Google with query \"site:horizon3.ai careers \"machine learning\" OR \"Account Executive\" OR \"Salesforce\"\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"... Machine Learning Engineer, Autonomous Defense. Engineering • US, Remote ... Account Executive, MSP. Sales • US, Remote • Full time • Hybrid · Channel ...\",\"position\":1},{\"title\":\"Home | Horizon3.ai\",\"link\":\"https://horizon3.ai/\",\"displayedLink\":\"https://horizon3.ai\",\"snippet\":\"NodeZero® uses the right AI for the r...",
+       "Searched Google with query \"Horizon3 2026 appointed chief vice president leadership\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Expands Global Partner Leadership\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-ai-expands-global-partner-leadership-to-accelerate-msp-and-partner-led-growth/\",\"displayedLink\":\"https://horizon3.ai › news › press-release › horizon3-ai-...\",\"snippet\":\"Horizon3 expands its global leadership team, appointing Tim Mackie to lead worldwide channels and recognizing Marc Inderhees as a 2026 CRN® ...\",\"date\":\"Feb 3, 2026\",\"position\":1},{\"title\":\"Horizon3 Na...",
+       "Searched Google with query \"site:horizon3.ai \"SOC 2\" \"ISO\"\". The results are: \n {\"search_results\":[{\"title\":\"Third-Party Risk Management (TPRM) | NodeZero\",\"link\":\"https://horizon3.ai/use-case/third-party-risk-management/\",\"displayedLink\":\"https://horizon3.ai › Use Case\",\"snippet\":\"High-quality pentest results and reports can be reused for audits, SOC 2, ISO 27001, CMMC, and other regulatory needs. With detailed reporting and no agent ...\",\"position\":1},{\"title\":\"Patch Tuesday Risk: Defense Industrial Base\",\"link\":\"https://horizon3.ai/intelligence/blogs/from-patch-tuesday-t...",
+       "Searched Google with query \"site:horizon3.ai \"OpenAI\" OR \"Anthropic\" OR \"subprocessors\"\". The results are: \n {\"search_results\":[{\"title\":\"Subprocessors - Trust Center - Horizon3.ai\",\"link\":\"https://trust.horizon3.ai/subprocessors\",\"displayedLink\":\"https://trust.horizon3.ai › subprocessors\",\"snippet\":\"Subprocessors · Purpose: CRM platform for enabling our Go-To-Market teams with Sales information and conversations, contracts, NDA's, and ...\",\"position\":1},{\"title\":\"Anthropic Mythos Finds Rejetto HFS RCE\",\"link\":\"https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/\",\"displaye...",
+       "Searched Google with query \"site:horizon3.ai \"2026\" \"introducing\" NodeZero\". The results are: \n {\"search_results\":[{\"title\":\"Introducing the New Face of NodeZero\",\"link\":\"https://horizon3.ai/intelligence/webinars/introducing-the-new-face-of-nodezero/\",\"displayedLink\":\"https://horizon3.ai › intelligence › webinars › introduci...\",\"snippet\":\"... 2026 event graphic. Featured. Proactive Security Summit 2026. Join us in ... Introducing the New Face of NodeZero. ,. Tap to unmute. Your browser can't play ...\",\"position\":1},{\"title\":\"Introducing NodeZero WebApp Webinar\",\"link\":\"https://horizon3.ai...",
+       "Searched Google with query \"Horizon3.ai jobs \"Machine Learning Engineer, Autonomous Defense\"\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"... Machine Learning Engineer, Autonomous Defense. Engineering • US, Remote • Full time • Remote · Senior Research Staff, Adversarial Intelligence. Engineering • US ...\",\"position\":1},{\"title\":\"Senior Machine Learning Engineer, Autonomous Defense\",\"link\":\"https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c4...",
+       "Searched Google with query \"Horizon3.ai \"Account Executive, MSP\" jobs\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"Account Executive, MSP. Sales • US, Remote • Full time • Hybrid · Channel Account Manager, Japan. Sales • Japan • Full time · Channel Account Manager, Singapore.\",\"position\":1},{\"title\":\"Account Executive, MSP @ Horizon3.ai\",\"link\":\"https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executiv...",
+       "Searched Google with query \"site:horizon3.ai customer story NodeZero customers\". The results are: \n {\"search_results\":[{\"title\":\"Category: Customer Stories\",\"link\":\"https://horizon3.ai/category/customer-story/\",\"displayedLink\":\"https://horizon3.ai › category › customer-story\",\"snippet\":\"See how a North American manufacturer used NodeZero to connect password weaknesses to real attack paths and turn security findings into measurable remediation.\",\"position\":1},{\"title\":\"Category: Customer Stories | Page 2\",\"link\":\"https://horizon3.ai/category/customer-story/page/2/\",\"displayedLink\":\"https://hori...",
+       "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/subprocessors\",\"question\":\"List all AI model providers and CRM/sales/marketing subprocessors and any compliance certifications shown.\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+       "Used visitWebpage {\"url\":\"https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974\",\"question\":\"Is this a live Senior Machine Learning Engineer posting accepting applications? What company and role?\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executive-msp\",\"question\":\"Is this a current Account Executive MSP job with application link? Which CRM sales or marketing systems are mentioned?\"}. The results are: \n \"Account Executive, MSP — Horizon3.ai; Sales & Business Development, full-time, United States/Remote; posted Nov. 5, 2026; compensation USD $160k–$200k/year + equity. Role focuses on selling through Managed Service Providers (MSPs) and the Pax8 Marketplace. Application link: https://jobs.ashbyhq.com/horizon3ai/21cf603f-78d8-4615-993c-3d2cc5087c58?gh_src=NightDragon+job+board&utm_medium=getro.com&utm_source=NightDragon+job+board. CRM/sales or marketing systems explicitly mentioned: none by name. ...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/chad-keefer-vp-federal-sales/\",\"question\":\"On what date did Chad Keefer join or get appointed VP Federal Sales?\"}. The results are: \n \"Horizon3 press release: “Horizon3 Names Chad Keefer Vice President of Federal Sales,” dated August 25, 2026. It states: “SAN FRANCISCO — August 25, 2026 — Horizon3 … announced the appointment of Chad Keefer as Vice President of Federal Sales.” Link: https://horizon3.ai/news/press-release/chad-keefer-vp-federal-sales\"",
+       "Used visitWebpage {\"url\":\"https://docs.horizon3.ai/release_notes/\",\"question\":\"Which major product features launched between May 9 2026 and November 9 2026, with exact dates? Provide the dated latest major feature release.\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/category/customer-story/\",\"question\":\"Name at least two actual customers featured in customer stories and their story links.\"}. The results are: \n \"Actual customers and customer-story links: Virginia Tech — https://horizon3.ai/customer-story/virginia-tech-automated-external-pentesting; Kyocera AVX — https://horizon3.ai/customer-story/kyocera-avx-global-security-validation; Happy Returns — https://horizon3.ai/customer-story/happy-returns-webapp-security-validation; TTEC — https://horizon3.ai/customer-story/ttec-security-validation-customer-story; Jerome’s Furniture — https://horizon3.ai/customer-story/jeromes-furniture-compliance-to-real-se...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-ai-joins-anthropics-project-glasswing/\",\"question\":\"Which specific AI models or providers does Horizon3 say are used within NodeZero, and what was announced and when?\"}. The results are: \n \"July 15, 2026: Horizon3 announced participation in Anthropic’s Project Glasswing. The announcement says Horizon3 will apply Anthropic’s Claude Mythos to its defensive security work and evaluate its capabilities. It also says Horizon3 looks forward to every new model release. NodeZero is described as an AI-powered autonomous hacker, but the page does not identify any specific model or provider used within NodeZero beyond mentioning Claude Mythos in the Project Glasswing announcement. Links: http...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/ai-in-horizon3-ai/\",\"question\":\"Which AI model providers or model names power NodeZero, and are technical engineering articles linked?\"}. The results are: \n \"NodeZero uses graph-based reasoning for attack planning, classical ML for file/behavior classification, deterministic logic for attacks, and scoped GenAI/LLMs for high-value targeting, narratives, exploit suggestions, data analysis, chatbot responses, and web-app pentesting. It does not train foundation models; it runs inference against select models hosted in secure AWS Amazon Bedrock clouds, with data residency and isolation. No specific AI model provider beyond AWS Bedrock or individual mode...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/resource-center/?_cat[]=blogs\",\"question\":\"Are there at least two engineer-authored technical posts describing how NodeZero is built? List titles authors and links.\"}. The results are: \n \"no relevant data\"",
+       "Searched Google with query \"site:trust.horizon3.ai \"SOC\"\". The results are: \n {\"search_results\":[{\"title\":\"Resources\",\"link\":\"https://trust.horizon3.ai/resources\",\"displayedLink\":\"https://trust.horizon3.ai › resources\",\"snippet\":\"SOC 2 Type II Bridge Letter. Covers current reporting period (2/1/25 - 1/31/26.) Request access FY26 - SOC2 Type II Bridge Letter ...\",\"position\":1},{\"title\":\"Controls\",\"link\":\"https://trust.horizon3.ai/controls\",\"displayedLink\":\"https://trust.horizon3.ai › controls\",\"snippet\":\"SOC 2 - System Description. Complete a description of your system for...",
+       "Searched Google with query \"site:horizon3.ai \"WebApp\" \"2026\" \"launch\"\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Launches NodeZero® WebApp Pentesting\",\"link\":\"https://horizon3.ai/news/press-release/nodezero-webapp-launch/\",\"displayedLink\":\"https://horizon3.ai › news › press-release › nodezero-w...\",\"snippet\":\"NodeZero WebApp Pentesting closes the gap by delivering ... Horizon3 will showcase the new solution live at Black Hat USA 2026, booth 4357.\",\"date\":\"Jul 29, 2026\",\"position\":1},{\"title\":\"WebApp Pentest\",\"link\":\"https://docs.horizon3.ai/portal/test_types/webapp/\",\"...",
+       "Searched Google with query \"\"Horizon3\" \"engineering\" \"blog\" architecture\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3.ai alternatives in 2026: Escape vs NodeZero and 4 ...\",\"link\":\"https://escape.tech/blog/horizon3-alternatives/\",\"displayedLink\":\"https://escape.tech › Blog › Offensive Security\",\"snippet\":\"Escape is the strongest Horizon3.ai alternative in 2026 for engineering ... Research Blog Customer stories Docs Proprietary Business Logic ...\",\"date\":\"Aug 20, 2026\",\"position\":1},{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"https://horizon3....",
+       "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/resources\",\"question\":\"What completed compliance certifications and audit reports are listed?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/nodezero-webapp-launch/\",\"question\":\"What was launched and on what date?\"}. The results are: \n \"Horizon3 announced the expansion of its NodeZero® platform with AI-powered web application pentesting capabilities on July 29, 2026. Source: https://horizon3.ai/news/press-release/nodezero-webapp-launch\"",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/blogs/introducing-nodezero-advanced-data-pilfering-view-your-data-through-the-eyes-of-an-attacker/\",\"question\":\"Who authored this post, what is their engineering role, and how does the feature work technically?\"}. The results are: \n \"Post: “Introducing NodeZero® Advanced Data Pilfering: View Your Data Through the Eyes of an Attacker,” authored by Naveen Sunkavally, published November 4, 2025. The supplied page does not state Naveen Sunkavally’s engineering role.\\n\\nTechnical operation: Advanced Data Pilfering (ADP) has two capabilities: (1) Advanced Credential Pilfering, which uses LLMs to find credentials in files and Active Directory metadata, validates discovered credentials by logging in, and uses them for lateral movem...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/blogs/nodezero-high-value-targeting-attacker-prioritization/\",\"question\":\"Who authored this article, are they an engineer, and how is NodeZero high value targeting implemented?\"}. The results are: \n \"Article: “Introducing NodeZero® High-Value Targeting: Think Like an Attacker, Prioritize What Matters,” authored by Anton Foltz, dated January 20, 2026. The provided page does not state whether Anton Foltz is an engineer. Relevant author/company links: Leadership—https://horizon3.ai/about-us; article—https://horizon3.ai/intelligence/blogs/nodezero-high-value-targeting-attacker-prioritization. HVT implementation: a two-phase process. (1) Rapid Classification uses pattern recognition to categoriz...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/privacy-policy/\",\"question\":\"Which CRM/sales/marketing systems are explicitly used in the cookie list or privacy policy?\"}. The results are: \n \"Relevant privacy/cookie-policy references: Google Analytics (http://google.com/policies/privacy/partners), LinkedIn Analytics (https://linkedin.com/legal/privacy-policy), Mixpanel (https://mixpanel.com/legal/privacy-policy), SalesIntel (https://salesintel.io/privacy-policy), and MixMax (https://mixmax.com/legal/privacy-policy). Horizon3.ai cookie policy: https://horizon3.ai/privacy-policy/#cookie-policy; Privacy Policy: https://horizon3.ai/privacy-policy.\"",
+       "Searched Google with query \"\"Horizon3\" \"Senior Machine Learning Engineer\" \"ashby\" \"2026\"\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3.ai Careers & Jobs (2026)\",\"link\":\"https://www.theantijobboard.com/startups/companies/horizon3\",\"displayedLink\":\"https://www.theantijobboard.com › Startups › Companies\",\"snippet\":\"Senior Machine Learning Engineer, Autonomous Defense ... How much does Horizon3.ai pay? As of October 31, 2026 ... Horizon3.ai uses Ashby. How competitive is it to ...\",\"position\":1}],\"related_searches\":[{\"query\":\"Horizon3 senior machine learning engineer ashby 2026 salary\"},{\"query...",
+       "Used visitWebpage {\"url\":\"https://jobs.ashbyhq.com/horizon3ai\",\"question\":\"List open AI or machine learning jobs and account executive roles and their live posting links.\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/blogs/nodezero-vs-goad-technical-deep-dive\",\"question\":\"Who wrote this post, what is their engineering role, and what product implementation details does it describe?\"}. The results are: \n \"Post: “NodeZero® vs. GOAD: Technical Deep Dive,” by Naveen Sunkavally, August 20, 2025. The provided webpage does not state the author’s engineering role. Product details: NodeZero autonomously tested a hardened AWS-based GOAD environment with only target IP ranges and no credentials or human input; performed ping sweeps, port scans, DNS enumeration, service fingerprinting, AD/user/group enumeration, Kerberoasting, BloodHound mapping, credential extraction, password cracking, lateral movement, ...",
+       "Searched Google with query \"\"Horizon3\" \"SOC 2 Type II\"\". The results are: \n {\"search_results\":[{\"title\":\"Trust Center - Horizon3.ai\",\"link\":\"https://trust.horizon3.ai/\",\"displayedLink\":\"https://trust.horizon3.ai\",\"snippet\":\"Resources ; Compliance Reports. FY26 - SOC 2 Type II · FY26 - SOC2 Type II Bridge Letter · FY26 - Business Continuity Test Result · Horizon3 EU Cyber Resilience ...\",\"position\":1},{\"title\":\"Senior Compliance Analyst @ Horizon3.ai\",\"link\":\"https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/87549229-senior-compliance-analyst\",\"displayedLink\":...",
+       "Searched Google with query \"\"Anton Foltz\" \"engineer\" Horizon3\". The results are: \n {\"search_results\":[{\"title\":\"DEF CON 31 Happy Hour Powered by Horizon3.ai | Corey B.\",\"link\":\"https://www.linkedin.com/posts/coreybrunkow_welcome-to-def-con-31-happy-hour-powered-activity-7089332600074342400-gU7A\",\"displayedLink\":\"30+ reactions  ·  3 years ago\",\"snippet\":\"... Anton Foltz Brian Zebrowski Kainen Buch Eleanor Ress Caitlin Smith. ... Engineer/Site Reliabilty Engineer@Virtru | Citizen Airman | CISSP ...\",\"date\":\"3 years ago\",\"position\":1},{\"title\":\"An Evaluation Framework for Autonom...",
+       "Searched Google with query \"\"Naveen Sunkavally\" \"chief\" architect\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3.ai's Post\",\"link\":\"https://www.linkedin.com/posts/horizon3ai_have-you-read-our-latest-blog-by-chief-architect-activity-7049760100235796480-jF5o\",\"displayedLink\":\"10+ reactions  ·  3 years ago\",\"snippet\":\"Have you read our latest blog by Chief Architect Naveen Sunkavally, 'Metrics That Matter: An Attacker's Perspective on Assessing Password Policy\",\"date\":\"3 years ago\",\"position\":1},{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"h...",
+       "Searched Google with query \"\"Horizon3\" \"Salesforce\" \"HubSpot\"\". The results are: \n {\"search_results\":[{\"title\":\"Senior Field Marketing Manager, Northwest – Remote, SAD\",\"link\":\"https://balkanfreelance.com/jobs/senior-field-marketing-manager-northwest-Z7wfE7\",\"displayedLink\":\"https://balkanfreelance.com › Poslovi\",\"snippet\":\"Horizon3 ... You will not be penalized for redacting or removing this information. Veštine. SalesforceHubSpot. O firmi. Horizon3.ai logo Horizon3.\",\"date\":\"7 days ago\",\"position\":1},{\"title\":\"Senior Channel Field Marketing, South Central\",\"link\":\"https://st...",
+       "Used visitWebpage {\"url\":\"https://jobs.signalfire.com/companies/horizon3-ai-2/jobs/93339640-staff-account-based-marketing-manager\",\"question\":\"What sales CRM and marketing systems does Horizon3 use or ask this employee to use?\"}. The results are: \n \"Relevant systems named in the Staff ABM Manager posting: Salesforce (campaign attribution, account-level pipeline tracking, ABM reporting, campaign membership, UTM structure, and pipeline influence reporting); Influ2 (contact-level advertising); ZoomInfo Co-Pilot (intent targeting); Reachdesk (direct mail and gifting); LinkedIn (paid media and account targeting); 6Sense and Bombora (listed as acceptable ABM/intent technology experience). The role would own the ABM technology stack in partnershi...",
+       "Used visitWebpage {\"url\":\"https://wfh.team/job/30008-senior-machine-learning-engineer-autonomous-defense-horizon3-ai\",\"question\":\"Is this role currently open at Horizon3.ai? What posting date and application URL?\"}. The results are: \n \"Role: Senior Machine Learning Engineer, Autonomous Defense — Horizon3 AI. Status evidence: listed as an active remote role; company page says Horizon3 AI has 87 active remote roles and the listing was “Verified recently” and “Checked today.” Posting date: not provided in the webpage content. Official application URL: https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974/application\"",
+       "Searched Google with query \"site:jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974 \"Apply\"\". The results are: \n {\"search_results\":[{\"title\":\"Senior Machine Learning Engineer, Autonomous Defense\",\"link\":\"https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974\",\"displayedLink\":\"https://jobs.ashbyhq.com › ...\",\"snippet\":\"We welcome candidates from all backgrounds and experiences, and we encourage all qualified individuals to apply. Come be a part of Horizon3, where your ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/se...",
+       "Searched Google with query \"site:horizon3.ai \"NodeZero\" \"technical\" \"Naveen\" \"pipeline\"\". The results are: \n {\"message\":\"No data returned from search query\"}"
+      ],
+      "hq_location": {
+       "notes": "",
+       "value": {
+        "city": "San Francisco",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/horizon3ai",
+        "https://horizon3.ai/about-us/"
+       ]
+      },
+      "public_docs": {
+       "notes": "Public documentation contains quickstart, portal guides, API and CLI references, integrations, knowledge base, and release notes.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.horizon3.ai/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The August 3, 2026 Series E falls within May 9, 2025–November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+       ]
+      },
+      "founded_year": {
+       "notes": "",
+       "value": 2019,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/horizon3ai",
+        "https://horizon3.ai/about-us/"
+       ]
+      },
+      "last_funding": {
+       "notes": "Announced August 3, 2026, at a valuation exceeding $2 billion; co-led by NightDragon and NEA.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Series E",
+        "amount_usd": 250000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "On July 29, 2026, Horizon3 launched AI-powered NodeZero WebApp penetration testing, within May 9–November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/nodezero-webapp-launch/"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public pricing includes Flex, Core, Pro, and Elite plans, plus WebApp offerings.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The current LinkedIn company profile reports 501–1,000 employees, outside every permitted answer band. No permitted band can be asserted; the required schema value is a placeholder, not an employee-count finding.",
+       "value": "201-500",
+       "status": "unknown",
+       "citations": []
+      },
+      "hiring_sdr_ae": {
+       "notes": "Account Executive, MSP, posted November 5, 2026, with an official Ashby application link.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executive-msp"
+       ]
+      },
+      "model_provider": {
+       "notes": "Horizon3 explicitly says NodeZero runs inference against selected models hosted through AWS Bedrock. Specific underlying foundation-model names are not disclosed on these pages; its separate Anthropic research partnership is not treated as proof of a NodeZero production model.",
+       "value": "Amazon Web Services — Amazon Bedrock",
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/ai-in-horizon3-ai/",
+        "https://horizon3.ai/intelligence/blogs/introducing-nodezero-advanced-data-pilfering-view-your-data-through-the-eyes-of-an-attacker/",
+        "https://horizon3.ai/intelligence/blogs/nodezero-high-value-targeting-attacker-prioritization/"
+       ]
+      },
+      "named_customers": {
+       "notes": "Named organizations appear in the company's customer-story index.",
+       "value": [
+        "Virginia Tech",
+        "Kyocera AVX",
+        "Happy Returns",
+        "TTEC",
+        "Jerome’s Furniture"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/category/customer-story/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "Senior Machine Learning Engineer, Autonomous Defense, US remote. The indexed official posting invites applications; the readable listing links to its official Ashby application and identifies the role as active.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974",
+        "https://wfh.team/job/30008-senior-machine-learning-engineer-autonomous-defense-horizon3-ai"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Search-indexed trust-center content lists FY26 SOC 2 Type II and a SOC 2 Type II bridge letter. The trust-center pages did not render readable content through the scraper; evidence is from their indexed resource listings.",
+       "value": [
+        "SOC 2"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://trust.horizon3.ai/",
+        "https://trust.horizon3.ai/resources"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The Staff Account-Based Marketing Manager posting names these tools for CRM attribution, contact-level advertising, intent targeting, gifting, and paid media. 6sense and Bombora are excluded because they appear as examples of acceptable prior experience rather than clear usage evidence.",
+       "value": [
+        "Salesforce",
+        "Influ2",
+        "ZoomInfo Co-Pilot",
+        "Reachdesk",
+        "LinkedIn"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://jobs.signalfire.com/companies/horizon3-ai-2/jobs/93339640-staff-account-based-marketing-manager"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Horizon3's NodeZero is an AI-powered autonomous penetration-testing platform that helps enterprise security teams and service providers identify exploitable attack paths, prioritize remediation, and verify fixes.",
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+        "https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executive-msp"
+       ]
+      },
+      "timeTakenInSeconds": "200.58",
+      "totalCreditsCharged": 11,
+      "leadership_change_12mo": {
+       "notes": "Horizon3 announced Chad Keefer's appointment as Vice President of Federal Sales on August 25, 2026, within the 12-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/chad-keefer-vp-federal-sales/"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "horizon3.ai",
+  "status": "complete",
+  "result": {
+   "claygent-auto-A": {
+    "eng_blog": {
+     "notes": "Two technical posts by Naveen Sunkavally, identified on the team page as Distinguished Engineer: Advanced Data Pilfering (2025-11-04), explaining the ML/embedding/regex/LLM pipeline and isolation; and NodeZero vs. GOAD: Technical Deep Dive (2025-08-20), detailing autonomous attack execution and post-exploitation modules. These are technical articles within the main blog rather than a separately branded engineering blog.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/intelligence/blogs/introducing-nodezero-advanced-data-pilfering-view-your-data-through-the-eyes-of-an-attacker/",
+      "https://horizon3.ai/intelligence/blogs/nodezero-vs-goad-technical-deep-dive",
+      "https://horizon3.ai/about-us/"
+     ]
+    },
+    "reasoning": "Most findings are supported by official company pages, public documentation, dated company announcements, or company job postings mirrored by investors. Dates were evaluated against the requested November 9, 2026 run date. The major schema limitation is employee count: LinkedIn reports 501–1,000, which cannot be represented by the allowed bands, so that field is unknown rather than asserting an incorrect band. SOC 2 evidence relies on indexed official trust-center resource listings because the trust portal did not render. Live hiring evidence is supported by official indexed listings and readable job-board mirrors. Engineering-blog evidence includes two substantive engineer-authored technical articles, not merely product announcements.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Searched Google with query \"Horizon3.ai funding 2026 2025 Series D employees headquarters\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Raises $250M Series E at $2B+ Valuation\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"displayedLink\":\"https://horizon3.ai › news › press-release › horizon3-rai...\",\"snippet\":\"Horizon3, the AI-Native Proactive Security Company, today announced a $250 million Series E at a valuation of more than $2 billion.\",\"date\":\"Aug 3, 2026\",\"position\":1},{\"title\":\"Horizon3.ai Revenue...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"question\":\"What are the funding date, amount and stage, product description, founding year, and any new product announcements?\"}. The results are: \n \"Funding: Announced August 3, 2026; $250 million Series E; valuation over $2 billion. Round co-led by existing investors NightDragon and NEA, with seven new and five returning investors. Product description: Horizon3’s NodeZero® is an AI-native proactive security platform/“AI Hacker” that autonomously and safely tests production environments, uncovers and prioritizes exploitable attack paths, provides remediation guidance, verifies fixes, and can deploy honeypots to detect attackers. Founding ye...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/about-us/\",\"question\":\"What are the headquarters, founding year, leaders and their appointment dates, and links to pricing, docs, trust, blog, and customers?\"}. The results are: \n \"Horizon3: headquartered in San Francisco, CA; founded in 2019. Leadership listed: Snehal Antani (Co-Founder, CEO); Matthew Hartley (Chief Revenue Officer); Holly Grey (Chief Financial Officer, in memoriam; passed June 2026); Andres Botero (Chief Marketing Officer); Jill Passalacqua (Chief Legal Officer); Torie Runzel (Chief People Officer/VP People; joined 2023); Ellen Sundra (Chief Customer Officer); Erick Dean (VP Product Management; joined 2024); Keith Poyser (GM, EMEA); Drew Mullen (VP Reve...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/join-our-team/\",\"question\":\"What current job openings are listed and where is the live job board? Any AI/ML or account executive or SDR roles?\"}. The results are: \n \"Horizon3 Careers page: https://horizon3.ai/join-our-team. The page states Horizon3 is remote-first, with teammates clustered globally, and offers hybrid/remote positions globally from offices in San Francisco, Chicago, and Amsterdam. It includes a “Positions” section, but no specific current job openings or role titles are shown in the provided content, and no live job-board link is visible. No AI/ML, Account Executive, or SDR roles are listed in the provided content.\"",
+     "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/horizon3ai\",\"question\":\"What employee company size band, headquarters and founding year are listed?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/horizon3ai\",\"size\":\"501-1,000 employees\",\"locality\":\"San Francisco, CA\",\"locations\":[{\"address\":\"San Francisco, CA 94118, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"\",\"formatted_address\":\"94118, CA\",\"business_region\":\"NAM\",\"latitude\":37.78067398,\"locality\":\"San Francisco\",\"admin_district\":\"California\",\"admin_district2\":\"San Francisco County\",\"country_region\":\"United States\",\"locationstr\":\"San Francisco, CA 94118, US\",\"metro_area\":\"San Fran...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/pricing\",\"question\":\"Does the page list NodeZero pricing plans? What are the plans?\"}. The results are: \n \"NodeZero Packaging lists these plans and prices: NodeZero Flex — $15 per asset, per test; NodeZero Core — $50 per asset, unlimited; NodeZero Pro — $65 per asset, unlimited; NodeZero Elite — $85 per asset, unlimited. Core, Pro, and Elite are annual subscriptions with unlimited testing; Flex is for occasional testing. The page also lists NodeZero WebApp Flex ($10,000 per asset, per test) and NodeZero WebApp Continuous (custom pricing). Pricing page: https://horizon3.ai/pricing\"",
+     "Used visitWebpage {\"url\":\"https://docs.horizon3.ai/\",\"question\":\"What documentation articles exist? Any AI model providers, subprocessors or CRM integrations?\"}. The results are: \n \"Documentation sections/articles: Quickstart, Portal, Tripwires, Insights, Rapid Response, CLI, API, Release Notes, Downloads, Knowledge Base, Credits; specific articles include Integrations, Workflow, and Support; MCP Server (Horizon3-hosted and locally hosted); Authentication & Authorization Details; Settings > Integrations; CrowdStrike Setup Guide; Jira Setup Guide; ServiceNow VR Setup Guide; ServiceNow Ticketing Guide (Deprecated); Splunk Cloud Connection; Microsoft Sentinel Connection; API ...",
+     "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/\",\"question\":\"Which SOC 2, ISO 27001, HIPAA, GDPR or PCI DSS certifications are claimed and which AI model providers or subprocessors are listed?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/who-uses-nodezero\",\"question\":\"Which named customers use NodeZero? Find at least two named customers (not partners).\"}. The results are: \n \"No named customers are identified in the provided webpage content.\"",
+     "Searched Google with query \"site:horizon3.ai careers \"machine learning\" OR \"Account Executive\" OR \"Salesforce\"\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"... Machine Learning Engineer, Autonomous Defense. Engineering • US, Remote ... Account Executive, MSP. Sales • US, Remote • Full time • Hybrid · Channel ...\",\"position\":1},{\"title\":\"Home | Horizon3.ai\",\"link\":\"https://horizon3.ai/\",\"displayedLink\":\"https://horizon3.ai\",\"snippet\":\"NodeZero® uses the right AI for the r...",
+     "Searched Google with query \"Horizon3 2026 appointed chief vice president leadership\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Expands Global Partner Leadership\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-ai-expands-global-partner-leadership-to-accelerate-msp-and-partner-led-growth/\",\"displayedLink\":\"https://horizon3.ai › news › press-release › horizon3-ai-...\",\"snippet\":\"Horizon3 expands its global leadership team, appointing Tim Mackie to lead worldwide channels and recognizing Marc Inderhees as a 2026 CRN® ...\",\"date\":\"Feb 3, 2026\",\"position\":1},{\"title\":\"Horizon3 Na...",
+     "Searched Google with query \"site:horizon3.ai \"SOC 2\" \"ISO\"\". The results are: \n {\"search_results\":[{\"title\":\"Third-Party Risk Management (TPRM) | NodeZero\",\"link\":\"https://horizon3.ai/use-case/third-party-risk-management/\",\"displayedLink\":\"https://horizon3.ai › Use Case\",\"snippet\":\"High-quality pentest results and reports can be reused for audits, SOC 2, ISO 27001, CMMC, and other regulatory needs. With detailed reporting and no agent ...\",\"position\":1},{\"title\":\"Patch Tuesday Risk: Defense Industrial Base\",\"link\":\"https://horizon3.ai/intelligence/blogs/from-patch-tuesday-t...",
+     "Searched Google with query \"site:horizon3.ai \"OpenAI\" OR \"Anthropic\" OR \"subprocessors\"\". The results are: \n {\"search_results\":[{\"title\":\"Subprocessors - Trust Center - Horizon3.ai\",\"link\":\"https://trust.horizon3.ai/subprocessors\",\"displayedLink\":\"https://trust.horizon3.ai › subprocessors\",\"snippet\":\"Subprocessors · Purpose: CRM platform for enabling our Go-To-Market teams with Sales information and conversations, contracts, NDA's, and ...\",\"position\":1},{\"title\":\"Anthropic Mythos Finds Rejetto HFS RCE\",\"link\":\"https://horizon3.ai/attack-research/disclosures/anthropic-mythos-rejetto-hfs-rce/\",\"displaye...",
+     "Searched Google with query \"site:horizon3.ai \"2026\" \"introducing\" NodeZero\". The results are: \n {\"search_results\":[{\"title\":\"Introducing the New Face of NodeZero\",\"link\":\"https://horizon3.ai/intelligence/webinars/introducing-the-new-face-of-nodezero/\",\"displayedLink\":\"https://horizon3.ai › intelligence › webinars › introduci...\",\"snippet\":\"... 2026 event graphic. Featured. Proactive Security Summit 2026. Join us in ... Introducing the New Face of NodeZero. ,. Tap to unmute. Your browser can't play ...\",\"position\":1},{\"title\":\"Introducing NodeZero WebApp Webinar\",\"link\":\"https://horizon3.ai...",
+     "Searched Google with query \"Horizon3.ai jobs \"Machine Learning Engineer, Autonomous Defense\"\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"... Machine Learning Engineer, Autonomous Defense. Engineering • US, Remote • Full time • Remote · Senior Research Staff, Adversarial Intelligence. Engineering • US ...\",\"position\":1},{\"title\":\"Senior Machine Learning Engineer, Autonomous Defense\",\"link\":\"https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c4...",
+     "Searched Google with query \"Horizon3.ai \"Account Executive, MSP\" jobs\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"Account Executive, MSP. Sales • US, Remote • Full time • Hybrid · Channel Account Manager, Japan. Sales • Japan • Full time · Channel Account Manager, Singapore.\",\"position\":1},{\"title\":\"Account Executive, MSP @ Horizon3.ai\",\"link\":\"https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executiv...",
+     "Searched Google with query \"site:horizon3.ai customer story NodeZero customers\". The results are: \n {\"search_results\":[{\"title\":\"Category: Customer Stories\",\"link\":\"https://horizon3.ai/category/customer-story/\",\"displayedLink\":\"https://horizon3.ai › category › customer-story\",\"snippet\":\"See how a North American manufacturer used NodeZero to connect password weaknesses to real attack paths and turn security findings into measurable remediation.\",\"position\":1},{\"title\":\"Category: Customer Stories | Page 2\",\"link\":\"https://horizon3.ai/category/customer-story/page/2/\",\"displayedLink\":\"https://hori...",
+     "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/subprocessors\",\"question\":\"List all AI model providers and CRM/sales/marketing subprocessors and any compliance certifications shown.\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+     "Used visitWebpage {\"url\":\"https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974\",\"question\":\"Is this a live Senior Machine Learning Engineer posting accepting applications? What company and role?\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executive-msp\",\"question\":\"Is this a current Account Executive MSP job with application link? Which CRM sales or marketing systems are mentioned?\"}. The results are: \n \"Account Executive, MSP — Horizon3.ai; Sales & Business Development, full-time, United States/Remote; posted Nov. 5, 2026; compensation USD $160k–$200k/year + equity. Role focuses on selling through Managed Service Providers (MSPs) and the Pax8 Marketplace. Application link: https://jobs.ashbyhq.com/horizon3ai/21cf603f-78d8-4615-993c-3d2cc5087c58?gh_src=NightDragon+job+board&utm_medium=getro.com&utm_source=NightDragon+job+board. CRM/sales or marketing systems explicitly mentioned: none by name. ...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/chad-keefer-vp-federal-sales/\",\"question\":\"On what date did Chad Keefer join or get appointed VP Federal Sales?\"}. The results are: \n \"Horizon3 press release: “Horizon3 Names Chad Keefer Vice President of Federal Sales,” dated August 25, 2026. It states: “SAN FRANCISCO — August 25, 2026 — Horizon3 … announced the appointment of Chad Keefer as Vice President of Federal Sales.” Link: https://horizon3.ai/news/press-release/chad-keefer-vp-federal-sales\"",
+     "Used visitWebpage {\"url\":\"https://docs.horizon3.ai/release_notes/\",\"question\":\"Which major product features launched between May 9 2026 and November 9 2026, with exact dates? Provide the dated latest major feature release.\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/category/customer-story/\",\"question\":\"Name at least two actual customers featured in customer stories and their story links.\"}. The results are: \n \"Actual customers and customer-story links: Virginia Tech — https://horizon3.ai/customer-story/virginia-tech-automated-external-pentesting; Kyocera AVX — https://horizon3.ai/customer-story/kyocera-avx-global-security-validation; Happy Returns — https://horizon3.ai/customer-story/happy-returns-webapp-security-validation; TTEC — https://horizon3.ai/customer-story/ttec-security-validation-customer-story; Jerome’s Furniture — https://horizon3.ai/customer-story/jeromes-furniture-compliance-to-real-se...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-ai-joins-anthropics-project-glasswing/\",\"question\":\"Which specific AI models or providers does Horizon3 say are used within NodeZero, and what was announced and when?\"}. The results are: \n \"July 15, 2026: Horizon3 announced participation in Anthropic’s Project Glasswing. The announcement says Horizon3 will apply Anthropic’s Claude Mythos to its defensive security work and evaluate its capabilities. It also says Horizon3 looks forward to every new model release. NodeZero is described as an AI-powered autonomous hacker, but the page does not identify any specific model or provider used within NodeZero beyond mentioning Claude Mythos in the Project Glasswing announcement. Links: http...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/ai-in-horizon3-ai/\",\"question\":\"Which AI model providers or model names power NodeZero, and are technical engineering articles linked?\"}. The results are: \n \"NodeZero uses graph-based reasoning for attack planning, classical ML for file/behavior classification, deterministic logic for attacks, and scoped GenAI/LLMs for high-value targeting, narratives, exploit suggestions, data analysis, chatbot responses, and web-app pentesting. It does not train foundation models; it runs inference against select models hosted in secure AWS Amazon Bedrock clouds, with data residency and isolation. No specific AI model provider beyond AWS Bedrock or individual mode...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/resource-center/?_cat[]=blogs\",\"question\":\"Are there at least two engineer-authored technical posts describing how NodeZero is built? List titles authors and links.\"}. The results are: \n \"no relevant data\"",
+     "Searched Google with query \"site:trust.horizon3.ai \"SOC\"\". The results are: \n {\"search_results\":[{\"title\":\"Resources\",\"link\":\"https://trust.horizon3.ai/resources\",\"displayedLink\":\"https://trust.horizon3.ai › resources\",\"snippet\":\"SOC 2 Type II Bridge Letter. Covers current reporting period (2/1/25 - 1/31/26.) Request access FY26 - SOC2 Type II Bridge Letter ...\",\"position\":1},{\"title\":\"Controls\",\"link\":\"https://trust.horizon3.ai/controls\",\"displayedLink\":\"https://trust.horizon3.ai › controls\",\"snippet\":\"SOC 2 - System Description. Complete a description of your system for...",
+     "Searched Google with query \"site:horizon3.ai \"WebApp\" \"2026\" \"launch\"\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Launches NodeZero® WebApp Pentesting\",\"link\":\"https://horizon3.ai/news/press-release/nodezero-webapp-launch/\",\"displayedLink\":\"https://horizon3.ai › news › press-release › nodezero-w...\",\"snippet\":\"NodeZero WebApp Pentesting closes the gap by delivering ... Horizon3 will showcase the new solution live at Black Hat USA 2026, booth 4357.\",\"date\":\"Jul 29, 2026\",\"position\":1},{\"title\":\"WebApp Pentest\",\"link\":\"https://docs.horizon3.ai/portal/test_types/webapp/\",\"...",
+     "Searched Google with query \"\"Horizon3\" \"engineering\" \"blog\" architecture\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3.ai alternatives in 2026: Escape vs NodeZero and 4 ...\",\"link\":\"https://escape.tech/blog/horizon3-alternatives/\",\"displayedLink\":\"https://escape.tech › Blog › Offensive Security\",\"snippet\":\"Escape is the strongest Horizon3.ai alternative in 2026 for engineering ... Research Blog Customer stories Docs Proprietary Business Logic ...\",\"date\":\"Aug 20, 2026\",\"position\":1},{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"https://horizon3....",
+     "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/resources\",\"question\":\"What completed compliance certifications and audit reports are listed?\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/nodezero-webapp-launch/\",\"question\":\"What was launched and on what date?\"}. The results are: \n \"Horizon3 announced the expansion of its NodeZero® platform with AI-powered web application pentesting capabilities on July 29, 2026. Source: https://horizon3.ai/news/press-release/nodezero-webapp-launch\"",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/blogs/introducing-nodezero-advanced-data-pilfering-view-your-data-through-the-eyes-of-an-attacker/\",\"question\":\"Who authored this post, what is their engineering role, and how does the feature work technically?\"}. The results are: \n \"Post: “Introducing NodeZero® Advanced Data Pilfering: View Your Data Through the Eyes of an Attacker,” authored by Naveen Sunkavally, published November 4, 2025. The supplied page does not state Naveen Sunkavally’s engineering role.\\n\\nTechnical operation: Advanced Data Pilfering (ADP) has two capabilities: (1) Advanced Credential Pilfering, which uses LLMs to find credentials in files and Active Directory metadata, validates discovered credentials by logging in, and uses them for lateral movem...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/blogs/nodezero-high-value-targeting-attacker-prioritization/\",\"question\":\"Who authored this article, are they an engineer, and how is NodeZero high value targeting implemented?\"}. The results are: \n \"Article: “Introducing NodeZero® High-Value Targeting: Think Like an Attacker, Prioritize What Matters,” authored by Anton Foltz, dated January 20, 2026. The provided page does not state whether Anton Foltz is an engineer. Relevant author/company links: Leadership—https://horizon3.ai/about-us; article—https://horizon3.ai/intelligence/blogs/nodezero-high-value-targeting-attacker-prioritization. HVT implementation: a two-phase process. (1) Rapid Classification uses pattern recognition to categoriz...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/privacy-policy/\",\"question\":\"Which CRM/sales/marketing systems are explicitly used in the cookie list or privacy policy?\"}. The results are: \n \"Relevant privacy/cookie-policy references: Google Analytics (http://google.com/policies/privacy/partners), LinkedIn Analytics (https://linkedin.com/legal/privacy-policy), Mixpanel (https://mixpanel.com/legal/privacy-policy), SalesIntel (https://salesintel.io/privacy-policy), and MixMax (https://mixmax.com/legal/privacy-policy). Horizon3.ai cookie policy: https://horizon3.ai/privacy-policy/#cookie-policy; Privacy Policy: https://horizon3.ai/privacy-policy.\"",
+     "Searched Google with query \"\"Horizon3\" \"Senior Machine Learning Engineer\" \"ashby\" \"2026\"\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3.ai Careers & Jobs (2026)\",\"link\":\"https://www.theantijobboard.com/startups/companies/horizon3\",\"displayedLink\":\"https://www.theantijobboard.com › Startups › Companies\",\"snippet\":\"Senior Machine Learning Engineer, Autonomous Defense ... How much does Horizon3.ai pay? As of October 31, 2026 ... Horizon3.ai uses Ashby. How competitive is it to ...\",\"position\":1}],\"related_searches\":[{\"query\":\"Horizon3 senior machine learning engineer ashby 2026 salary\"},{\"query...",
+     "Used visitWebpage {\"url\":\"https://jobs.ashbyhq.com/horizon3ai\",\"question\":\"List open AI or machine learning jobs and account executive roles and their live posting links.\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/blogs/nodezero-vs-goad-technical-deep-dive\",\"question\":\"Who wrote this post, what is their engineering role, and what product implementation details does it describe?\"}. The results are: \n \"Post: “NodeZero® vs. GOAD: Technical Deep Dive,” by Naveen Sunkavally, August 20, 2025. The provided webpage does not state the author’s engineering role. Product details: NodeZero autonomously tested a hardened AWS-based GOAD environment with only target IP ranges and no credentials or human input; performed ping sweeps, port scans, DNS enumeration, service fingerprinting, AD/user/group enumeration, Kerberoasting, BloodHound mapping, credential extraction, password cracking, lateral movement, ...",
+     "Searched Google with query \"\"Horizon3\" \"SOC 2 Type II\"\". The results are: \n {\"search_results\":[{\"title\":\"Trust Center - Horizon3.ai\",\"link\":\"https://trust.horizon3.ai/\",\"displayedLink\":\"https://trust.horizon3.ai\",\"snippet\":\"Resources ; Compliance Reports. FY26 - SOC 2 Type II · FY26 - SOC2 Type II Bridge Letter · FY26 - Business Continuity Test Result · Horizon3 EU Cyber Resilience ...\",\"position\":1},{\"title\":\"Senior Compliance Analyst @ Horizon3.ai\",\"link\":\"https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/87549229-senior-compliance-analyst\",\"displayedLink\":...",
+     "Searched Google with query \"\"Anton Foltz\" \"engineer\" Horizon3\". The results are: \n {\"search_results\":[{\"title\":\"DEF CON 31 Happy Hour Powered by Horizon3.ai | Corey B.\",\"link\":\"https://www.linkedin.com/posts/coreybrunkow_welcome-to-def-con-31-happy-hour-powered-activity-7089332600074342400-gU7A\",\"displayedLink\":\"30+ reactions  ·  3 years ago\",\"snippet\":\"... Anton Foltz Brian Zebrowski Kainen Buch Eleanor Ress Caitlin Smith. ... Engineer/Site Reliabilty Engineer@Virtru | Citizen Airman | CISSP ...\",\"date\":\"3 years ago\",\"position\":1},{\"title\":\"An Evaluation Framework for Autonom...",
+     "Searched Google with query \"\"Naveen Sunkavally\" \"chief\" architect\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3.ai's Post\",\"link\":\"https://www.linkedin.com/posts/horizon3ai_have-you-read-our-latest-blog-by-chief-architect-activity-7049760100235796480-jF5o\",\"displayedLink\":\"10+ reactions  ·  3 years ago\",\"snippet\":\"Have you read our latest blog by Chief Architect Naveen Sunkavally, 'Metrics That Matter: An Attacker's Perspective on Assessing Password Policy\",\"date\":\"3 years ago\",\"position\":1},{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"h...",
+     "Searched Google with query \"\"Horizon3\" \"Salesforce\" \"HubSpot\"\". The results are: \n {\"search_results\":[{\"title\":\"Senior Field Marketing Manager, Northwest – Remote, SAD\",\"link\":\"https://balkanfreelance.com/jobs/senior-field-marketing-manager-northwest-Z7wfE7\",\"displayedLink\":\"https://balkanfreelance.com › Poslovi\",\"snippet\":\"Horizon3 ... You will not be penalized for redacting or removing this information. Veštine. SalesforceHubSpot. O firmi. Horizon3.ai logo Horizon3.\",\"date\":\"7 days ago\",\"position\":1},{\"title\":\"Senior Channel Field Marketing, South Central\",\"link\":\"https://st...",
+     "Used visitWebpage {\"url\":\"https://jobs.signalfire.com/companies/horizon3-ai-2/jobs/93339640-staff-account-based-marketing-manager\",\"question\":\"What sales CRM and marketing systems does Horizon3 use or ask this employee to use?\"}. The results are: \n \"Relevant systems named in the Staff ABM Manager posting: Salesforce (campaign attribution, account-level pipeline tracking, ABM reporting, campaign membership, UTM structure, and pipeline influence reporting); Influ2 (contact-level advertising); ZoomInfo Co-Pilot (intent targeting); Reachdesk (direct mail and gifting); LinkedIn (paid media and account targeting); 6Sense and Bombora (listed as acceptable ABM/intent technology experience). The role would own the ABM technology stack in partnershi...",
+     "Used visitWebpage {\"url\":\"https://wfh.team/job/30008-senior-machine-learning-engineer-autonomous-defense-horizon3-ai\",\"question\":\"Is this role currently open at Horizon3.ai? What posting date and application URL?\"}. The results are: \n \"Role: Senior Machine Learning Engineer, Autonomous Defense — Horizon3 AI. Status evidence: listed as an active remote role; company page says Horizon3 AI has 87 active remote roles and the listing was “Verified recently” and “Checked today.” Posting date: not provided in the webpage content. Official application URL: https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974/application\"",
+     "Searched Google with query \"site:jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974 \"Apply\"\". The results are: \n {\"search_results\":[{\"title\":\"Senior Machine Learning Engineer, Autonomous Defense\",\"link\":\"https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974\",\"displayedLink\":\"https://jobs.ashbyhq.com › ...\",\"snippet\":\"We welcome candidates from all backgrounds and experiences, and we encourage all qualified individuals to apply. Come be a part of Horizon3, where your ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/se...",
+     "Searched Google with query \"site:horizon3.ai \"NodeZero\" \"technical\" \"Naveen\" \"pipeline\"\". The results are: \n {\"message\":\"No data returned from search query\"}"
+    ],
+    "hq_location": {
+     "notes": "",
+     "value": {
+      "city": "San Francisco",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/horizon3ai",
+      "https://horizon3.ai/about-us/"
+     ]
+    },
+    "public_docs": {
+     "notes": "Public documentation contains quickstart, portal guides, API and CLI references, integrations, knowledge base, and release notes.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.horizon3.ai/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The August 3, 2026 Series E falls within May 9, 2025–November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+     ]
+    },
+    "founded_year": {
+     "notes": "",
+     "value": 2019,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/horizon3ai",
+      "https://horizon3.ai/about-us/"
+     ]
+    },
+    "last_funding": {
+     "notes": "Announced August 3, 2026, at a valuation exceeding $2 billion; co-led by NightDragon and NEA.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Series E",
+      "amount_usd": 250000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "On July 29, 2026, Horizon3 launched AI-powered NodeZero WebApp penetration testing, within May 9–November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/nodezero-webapp-launch/"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public pricing includes Flex, Core, Pro, and Elite plans, plus WebApp offerings.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The current LinkedIn company profile reports 501–1,000 employees, outside every permitted answer band. No permitted band can be asserted; the required schema value is a placeholder, not an employee-count finding.",
+     "value": "201-500",
+     "status": "unknown",
+     "citations": []
+    },
+    "hiring_sdr_ae": {
+     "notes": "Account Executive, MSP, posted November 5, 2026, with an official Ashby application link.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executive-msp"
+     ]
+    },
+    "model_provider": {
+     "notes": "Horizon3 explicitly says NodeZero runs inference against selected models hosted through AWS Bedrock. Specific underlying foundation-model names are not disclosed on these pages; its separate Anthropic research partnership is not treated as proof of a NodeZero production model.",
+     "value": "Amazon Web Services — Amazon Bedrock",
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/ai-in-horizon3-ai/",
+      "https://horizon3.ai/intelligence/blogs/introducing-nodezero-advanced-data-pilfering-view-your-data-through-the-eyes-of-an-attacker/",
+      "https://horizon3.ai/intelligence/blogs/nodezero-high-value-targeting-attacker-prioritization/"
+     ]
+    },
+    "named_customers": {
+     "notes": "Named organizations appear in the company's customer-story index.",
+     "value": [
+      "Virginia Tech",
+      "Kyocera AVX",
+      "Happy Returns",
+      "TTEC",
+      "Jerome’s Furniture"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/category/customer-story/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "Senior Machine Learning Engineer, Autonomous Defense, US remote. The indexed official posting invites applications; the readable listing links to its official Ashby application and identifies the role as active.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974",
+      "https://wfh.team/job/30008-senior-machine-learning-engineer-autonomous-defense-horizon3-ai"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Search-indexed trust-center content lists FY26 SOC 2 Type II and a SOC 2 Type II bridge letter. The trust-center pages did not render readable content through the scraper; evidence is from their indexed resource listings.",
+     "value": [
+      "SOC 2"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://trust.horizon3.ai/",
+      "https://trust.horizon3.ai/resources"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The Staff Account-Based Marketing Manager posting names these tools for CRM attribution, contact-level advertising, intent targeting, gifting, and paid media. 6sense and Bombora are excluded because they appear as examples of acceptable prior experience rather than clear usage evidence.",
+     "value": [
+      "Salesforce",
+      "Influ2",
+      "ZoomInfo Co-Pilot",
+      "Reachdesk",
+      "LinkedIn"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://jobs.signalfire.com/companies/horizon3-ai-2/jobs/93339640-staff-account-based-marketing-manager"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Horizon3's NodeZero is an AI-powered autonomous penetration-testing platform that helps enterprise security teams and service providers identify exploitable attack paths, prioritize remediation, and verify fixes.",
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/",
+      "https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/99022249-account-executive-msp"
+     ]
+    },
+    "timeTakenInSeconds": "200.58",
+    "totalCreditsCharged": 11,
+    "leadership_change_12mo": {
+     "notes": "Horizon3 announced Chad Keefer's appointment as Vice President of Federal Sales on August 25, 2026, within the 12-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/chad-keefer-vp-federal-sales/"
+     ]
+    }
+   }
+  }
+ }
+}

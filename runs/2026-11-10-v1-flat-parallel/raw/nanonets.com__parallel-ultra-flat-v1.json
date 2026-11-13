@@ -1,0 +1,525 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e96c662be7bcdebf5",
+  "interaction_id": "trun_142119f6a1b4439e96c662be7bcdebf5",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "nanonets.com"
+  },
+  "created_at": "2026-11-10T18:48:10.621448Z",
+  "modified_at": "2026-11-10T18:54:40.676538Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e96c662be7bcdebf5",
+   "interaction_id": "trun_142119f6a1b4439e96c662be7bcdebf5",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "nanonets.com"
+   },
+   "created_at": "2026-11-10T18:48:10.621448Z",
+   "modified_at": "2026-11-10T18:54:40.676538Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "NanoNets: Automatic Data Extraction | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/nanonets",
+       "excerpts": [
+        "Latest News Nanonets gets Accel's backing to improve AI-based workflow automation | TechCrunch Mar 12, 2024 Nanonets lands $10 million to expedite document processing with AI | VentureBeat Feb 16, 2022 YC Photos Company photo Jobs at NanoNets View all jobs Account Executive - US Palo Alto, CA, US / Remote (Palo Alto, CA, US) $100K - $120K 0.25% 3+ years Apply Now \u203a Account Manager (Customer Success) Palo Alto, CA, US / Remote (San Francisco, CA, US) $80K - $140K 3+ years Apply Now \u203a Sales Engineer Palo Alto, CA, US $90K - $140K 1+ years Apply Now \u203a VP of AI Palo Alto, CA, US / Remote (Palo Alto, CA, US) $240K - $300K 3+ years Apply Now \u203a Senior Deep Learning Engineer Bengaluru, KA, IN / Bengaluru, Karnataka, IN \u20b940 - \u20b965 INR 3+ years Apply Now \u203a NanoNets NanoNets Founded: 2017 Batch: Winter 2017 Team Size: 102 Status: Active Location: San Francisco Primary Partner: Gustaf Alstromer X (Twitter) logo"
+       ]
+      }
+     ],
+     "reasoning": "The company profile at https://www.ycombinator.com/companies/nanonets explicitly lists \u201cFounded: 2017.\u201d",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Nanonets: AI Agents for Enterprise Data Processing",
+       "url": "https://nanonets.com/",
+       "excerpts": [
+        "SOC 2 Type II Certified for ongoing security controls. GDPR Aligned with EU data protection laws. ISO 27001 Compliant with global ISMS standards. HIPAA BAA available for enterprise plans."
+       ]
+      }
+     ],
+     "reasoning": "The compliance area at https://nanonets.com/ names SOC 2 Type II, ISO 27001, GDPR alignment, and HIPAA with a BAA available for enterprise plans. These are the company's public claims; the wording does not imply that HIPAA or GDPR is an independently issued certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Us | Nanonets",
+       "url": "https://nanonets.com/about",
+       "excerpts": [
+        "Backed by Elevation Capital Y Combinator Accel SVAngel Avalon Ventures FundersClub Soma Capital Where we are San Francisco, CA. Address 2261 Market Street #4010, San Francisco, CA 94114"
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/about identifies San Francisco, California, and gives its Market Street address. This establishes the United States, although the country is inferred from the address rather than spelled out.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Research \u2014 Nanonets | Nanonets",
+       "url": "https://nanonets.com/research",
+       "excerpts": [
+        "How we build and evaluate the models behind Nanonets agents \u2014 from the Nanonets-OCR family to our work on complex instruction following."
+       ]
+      },
+      {
+       "title": "Introducing Nanonets OCR-3",
+       "url": "https://nanonets.com/research/nanonets-ocr-3",
+       "excerpts": [
+        "Apr 2, 2026 Nanonets Research",
+        "The new architecture is a Mixture-of-Experts model.",
+        "We trained 75% of the time on low-resolution images and 25% on full resolution."
+       ]
+      },
+      {
+       "title": "Nanonets Ocr 2",
+       "url": "https://nanonets.com/research/nanonets-ocr-2/index.html",
+       "excerpts": [
+        "By Souvik Mandal",
+        "To train our new Visual-Language Model (VLM) for high-precision optical character recognition (OCR), we assembled a dataset of over 3 million pages.",
+        "We first trained the model on the synthetic dataset and then fine-tuned it on the manually annotated dataset."
+       ]
+      }
+     ],
+     "reasoning": "The research index at https://nanonets.com/research describes how its models are built and evaluated. Two substantive model-development posts qualify: https://nanonets.com/research/nanonets-ocr-3, credited to Nanonets Research, explains MoE architecture and mixed-resolution training; https://nanonets.com/research/nanonets-ocr-2/index.html, by Souvik Mandal, describes a three-million-page dataset and synthetic-to-manually-annotated training. Research authorship is established, though the bylines do not explicitly state engineering job titles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Us | Nanonets",
+       "url": "https://nanonets.com/about",
+       "excerpts": [
+        "What we do AI agents for the work that happens inside documents. Most enterprise data lives in documents \u2014 invoices ... Nanonets replaces that manual loop with agents that read, validate, route, and post \u2014 automatically. We are not a general-purpose AI platform. We are purpose-built for document-heavy business processes: accounts payable, order management, logistics, healthcare revenue cycle, and the dozens of other workflows where teams spend hours each day moving data from one place to another."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/about describes agents that read, validate, route, and post document data, purpose-built for accounts payable, order management, logistics, healthcare revenue cycle, and other document-heavy business processes.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/nanonets",
+       "excerpts": [
+        "employee count: 327"
+       ]
+      }
+     ],
+     "reasoning": "https://linkedin.com/company/nanonets reports 327 associated employees, placing it in the 201-500 band. Other profiles give differing counts, so this is a supported band rather than an exact payroll figure.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Nanonets: AI Agents for Enterprise Data Processing",
+       "url": "https://nanonets.com/",
+       "excerpts": [
+        "Nanonets OCR-3, our proprietary model, is the most accurate data extraction model in the world, making the rest of your pipeline safe to automate."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/ explicitly identifies Nanonets OCR-3 as \u201cour proprietary model,\u201d directly establishing a publicly disclosed model used by the product.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Nanonets",
+       "url": "https://nanonets.com/pricing",
+       "excerpts": [
+        "Enterprise Custom Tailored to your volume For large processing volumes with compliance, security, and deployment requirements."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/pricing is a public plans page, including an Enterprise plan with custom pricing and deployment requirements; it is not merely a contact form.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Nanonets Raises $29 Million to create Autonomous AI Agents for business workflows",
+       "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b",
+       "excerpts": [
+        "We\u2019re super thrilled to announce that we\u2019ve raised $29 million in our Series B funding round led by Accel India in our journey to reimagine how businesses manage workflows!"
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b explicitly announces $29 million. The answer uses the company's announced dollar amount rather than the slightly different amount recorded by a funding database.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Nanonets Agents: AI Workforce for Enterprise Data Processing | Nanonets",
+       "url": "http://nanonets.com/agents",
+       "excerpts": [
+        "Book a demo Start free Roche Ryanair Volkswagen Schneider Electric Procter & Gamble Mondelez Skip the Build Skip the Build Deploy a fully managed AI workforce without long development cycles."
+       ]
+      }
+     ],
+     "reasoning": "The customer logo wall at https://nanonets.com/agents names Roche and Ryanair.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Nanonets Raises $29 Million to create Autonomous AI Agents for business workflows",
+       "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b",
+       "excerpts": [
+        "March 12, 2024"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Nanonets; website_url: https://nanonets.com; latest_funding_round_name: Series B; latest_funding_round_date: 2024-03-12; latest_funding_round_amount_usd: 29279129.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 29279129.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2024-03-12; all_funding_rounds[0].round_investor_names: Y Combinator, Accel, Elevation Capital; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 10000000.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1"
+       ]
+      }
+     ],
+     "reasoning": "The announcement at https://nanonets.com/blog/nanonets-raises-29-million-in-series-b is dated March 12, 2024. The funding record identifies this as the latest round, yielding 2024-03.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Integrations \u2014 Connect to Your Stack | Nanonets",
+       "url": "https://nanonets.com/integrations",
+       "excerpts": [
+        "CRM, Ticketing & Collaboration Close the loop on every workflow. Agents update records and notify the right people. Salesforce, HubSpot, Zendesk, Slack, Jira, and Asana. The agent writes back to your CRM and creates tickets without anyone copy-pasting data."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/integrations explicitly lists Salesforce and HubSpot in its CRM integrations. This is an integration signal, not proof that Nanonets uses both internally as its own CRM.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Mishra Shubhra",
+       "url": "https://linkedin.com/in/mishra-shubhra",
+       "excerpts": [
+        "is current: true company name: Nanonets Locality: San Francisco Bay Area start date: 2026-03-01 start date year: 2026 start date month: 3 Title: Vice President Strategic Initiatives"
+       ]
+      }
+     ],
+     "reasoning": "The dated profile at https://linkedin.com/in/mishra-shubhra records a Nanonets Vice President Strategic Initiatives role beginning March 2026, within the twelve-month window. The profile establishes the role start, rather than providing a separate appointment announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for Deep Learning Engineer at Nanonets",
+       "url": "https://job-boards.greenhouse.io/nanonets/jobs/5372370008",
+       "excerpts": [
+        "Deep Learning Engineer"
+       ]
+      },
+      {
+       "title": "Jobs at Nanonets",
+       "url": "https://job-boards.greenhouse.io/nanonets",
+       "excerpts": [
+        "|[Deep Learning Engineer Bengaluru, Karnataka, India](https://job-boards.greenhouse.io/nanonets/jobs/5372370008) |"
+       ]
+      }
+     ],
+     "reasoning": "The current job board at https://job-boards.greenhouse.io/nanonets lists a Deep Learning Engineer role, with its live posting at https://job-boards.greenhouse.io/nanonets/jobs/5372370008.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Nanonets Raises $29 Million to create Autonomous AI Agents for business workflows",
+       "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b",
+       "excerpts": [
+        "We\u2019re super thrilled to announce that we\u2019ve raised $29 million in our Series B funding round led by Accel India in our journey to reimagine how businesses manage workflows!"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Nanonets; website_url: https://nanonets.com; latest_funding_round_name: Series B; latest_funding_round_date: 2024-03-12; latest_funding_round_amount_usd: 29279129.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 29279129.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2024-03-12; all_funding_rounds[0].round_investor_names: Y Combinator, Accel, Elevation Capital; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 10000000.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1"
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b calls the round Series B, and the funding record identifies that round as the most recent.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Nanonets Overview",
+       "url": "https://docs.nanonets.com/",
+       "excerpts": [
+        "[Add Team Members And User Roles](https://docs.nanonets.com/docs/add-team-members)",
+        "[Instant Learning Model](https://docs.nanonets.com/docs/setup-instant-learning-model)",
+        "[Introduction to Workflow](https://docs.nanonets.com/docs/how-to-setup-your-workflow)"
+       ]
+      }
+     ],
+     "reasoning": "https://docs.nanonets.com/ is a public documentation site containing multiple distinct articles, including team roles, instant learning models, and workflow setup.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Us | Nanonets",
+       "url": "https://nanonets.com/about",
+       "excerpts": [
+        "Backed by Elevation Capital Y Combinator Accel SVAngel Avalon Ventures FundersClub Soma Capital Where we are San Francisco, CA. Address 2261 Market Street #4010, San Francisco, CA 94114"
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/about identifies \u201cWhere we are\u201d as San Francisco and gives a San Francisco business address. This supports the headquarters location, although the page does not explicitly label it \u201cheadquarters.\u201d",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Atlas - Every AI tool you use should know how your company works | Product Hunt",
+       "url": "https://www.producthunt.com/products/nanonets/launches/atlas-40",
+       "excerpts": [
+        "Atlas [Atlas](https://www.producthunt.com/products/nanonets/launches/atlas-40) Every AI tool you use should know how your company works Launched on June 26th, 2026"
+       ]
+      }
+     ],
+     "reasoning": "https://www.producthunt.com/products/nanonets/launches/atlas-40 records the Atlas product launch on June 26, 2026, within the six-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Enterprise Account Executive at Nanonets",
+       "url": "https://job-boards.greenhouse.io/nanonets/jobs/5219252008",
+       "excerpts": [
+        "We're seeking a seasoned **Enterprise Account Executive** to own and close seven-figure deals with Fortune 1000 organizations.",
+        "Enterprise Account Executive Palo Alto, CA Apply"
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/nanonets/jobs/5219252008 is a live Enterprise Account Executive application page and explicitly says the company is seeking that role.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Nanonets Raises $29 Million to create Autonomous AI Agents for business workflows",
+       "url": "https://nanonets.com/blog/nanonets-raises-29-million-in-series-b",
+       "excerpts": [
+        "March 12, 2024"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Nanonets; website_url: https://nanonets.com; latest_funding_round_name: Series B; latest_funding_round_date: 2024-03-12; latest_funding_round_amount_usd: 29279129.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 29279129.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2024-03-12; all_funding_rounds[0].round_investor_names: Y Combinator, Accel, Elevation Capital; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 10000000.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded round is the March 12, 2024 Series B, announced at https://nanonets.com/blog/nanonets-raises-29-million-in-series-b. That date precedes the eighteen-month window beginning in May 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Nanonets: AI Agents for Enterprise Data Processing",
+       "url": "https://nanonets.com/",
+       "excerpts": [
+        "SOC 2 Type II Certified for ongoing security controls."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/ explicitly claims SOC 2 Type II certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Nanonets: AI Agents for Enterprise Data Processing",
+       "url": "https://nanonets.com/",
+       "excerpts": [
+        "ISO 27001 Compliant with global ISMS standards."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/ explicitly names ISO 27001 compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Nanonets: AI Agents for Enterprise Data Processing",
+       "url": "https://nanonets.com/",
+       "excerpts": [
+        "HIPAA BAA available for enterprise plans."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/ names HIPAA and says a BAA is available for enterprise plans.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Nanonets: AI Agents for Enterprise Data Processing",
+       "url": "https://nanonets.com/",
+       "excerpts": [
+        "GDPR Aligned with EU data protection laws."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/ explicitly claims GDPR alignment.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Nanonets Agents: AI Workforce for Enterprise Data Processing | Nanonets",
+       "url": "http://nanonets.com/agents",
+       "excerpts": [
+        "Book a demo Start free Roche Ryanair Volkswagen Schneider Electric Procter & Gamble Mondelez Skip the Build Skip the Build Deploy a fully managed AI workforce without long development cycles."
+       ]
+      }
+     ],
+     "reasoning": "Roche appears on the customer logo wall at https://nanonets.com/agents.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Nanonets Agents: AI Workforce for Enterprise Data Processing | Nanonets",
+       "url": "http://nanonets.com/agents",
+       "excerpts": [
+        "Book a demo Start free Roche Ryanair Volkswagen Schneider Electric Procter & Gamble Mondelez Skip the Build Skip the Build Deploy a fully managed AI workforce without long development cycles."
+       ]
+      }
+     ],
+     "reasoning": "Ryanair appears on the customer logo wall at https://nanonets.com/agents.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Integrations \u2014 Connect to Your Stack | Nanonets",
+       "url": "https://nanonets.com/integrations",
+       "excerpts": [
+        "CRM, Ticketing & Collaboration Close the loop on every workflow. Agents update records and notify the right people. Salesforce, HubSpot, Zendesk, Slack, Jira, and Asana. The agent writes back to your CRM and creates tickets without anyone copy-pasting data."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/integrations explicitly names Salesforce as a CRM integration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Integrations \u2014 Connect to Your Stack | Nanonets",
+       "url": "https://nanonets.com/integrations",
+       "excerpts": [
+        "CRM, Ticketing & Collaboration Close the loop on every workflow. Agents update records and notify the right people. Salesforce, HubSpot, Zendesk, Slack, Jira, and Asana. The agent writes back to your CRM and creates tickets without anyone copy-pasting data."
+       ]
+      }
+     ],
+     "reasoning": "https://nanonets.com/integrations explicitly names HubSpot as a CRM integration.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Nanonets provides AI agents that extract, validate, and route document data to automate document-heavy workflows for enterprise finance, operations, logistics, and healthcare teams.",
+    "employee_band": "201-500",
+    "model_provider": "Nanonets \u2014 proprietary Nanonets OCR-3 model",
+    "pricing_page": true,
+    "funding_amount_usd": 29000000.0,
+    "named_customers": [
+     "Roche",
+     "Ryanair"
+    ],
+    "funding_date": "2024-03",
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

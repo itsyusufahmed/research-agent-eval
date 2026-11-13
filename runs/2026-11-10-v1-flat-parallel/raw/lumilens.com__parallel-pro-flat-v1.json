@@ -1,0 +1,441 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ebcb748079c7e07a9",
+  "interaction_id": "trun_142119f6a1b4439ebcb748079c7e07a9",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "lumilens.com"
+  },
+  "created_at": "2026-11-10T18:47:49.546480Z",
+  "modified_at": "2026-11-10T18:53:11.704114Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ebcb748079c7e07a9",
+   "interaction_id": "trun_142119f6a1b4439ebcb748079c7e07a9",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "lumilens.com"
+   },
+   "created_at": "2026-11-10T18:47:49.546480Z",
+   "modified_at": "2026-11-10T18:53:11.704114Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://www.linkedin.com/company/lumilens",
+       "excerpts": [
+        "founded year: 2024"
+       ]
+      }
+     ],
+     "reasoning": "Lumilens's company profile explicitly gives its founding year as 2024.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Terms of Use",
+       "url": "https://lumilens.com/terms-of-use",
+       "excerpts": [
+        "Lumilens Website Terms of Use Last Updated and Effective Date: October 24, 2025 Lumilens"
+       ]
+      },
+      {
+       "title": "Privacy",
+       "url": "https://lumilens.com/privacy",
+       "excerpts": [
+        "**Meet legal, security, and other compliance obligations:** Enforce our Terms of Service or any other customer agreements, resolve disputes, or otherwise enforce or carry out our legal or contractual obligations and enforce our rights, and to protect our business interests and rights of third parties Audit our compliance with legal and contractual requirements and internal policies"
+       ]
+      }
+     ],
+     "reasoning": "The reviewed Terms of Use and Privacy Policy contain general legal and security obligations but no claims of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS compliance. The empty list reflects the reviewed legal pages, not a claim that the company has no certifications.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://www.linkedin.com/company/lumilens",
+       "excerpts": [
+        "country name: United States"
+       ]
+      },
+      {
+       "title": "Lumilens Inc. San Jose, CA - filing information",
+       "url": "https://www.bizprofile.net/ca/san-jose/lumilens-inc",
+       "excerpts": [
+        "2570 N 1st Street 300 San Jose, CA 95131"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies the United States, consistent with its principal address in San Jose, California.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "News & Insights",
+       "url": "https://lumilens.com/news-insights",
+       "excerpts": [
+        "Optical startups to watch as AI pushes optics",
+        "Lumilens emerges with $900M+ in Funding"
+       ]
+      }
+     ],
+     "reasoning": "The News & Insights index shows media coverage, a funding announcement, and one technical-adjacent blog article, 'Networks Are Now the AI Bottleneck.' It does not meet the requirement for at least two engineer-authored posts about building the product.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Photonic Interconnects",
+       "url": "https://lumilens.com/photonic-interconnects",
+       "excerpts": [
+        "Lumilens photonic interconnects enable next-generation scale out and scale up AI architectures, allowing hyperscalers to massively expand GPU clusters and build denser compute nodes."
+       ]
+      }
+     ],
+     "reasoning": "The product page states that its photonic interconnects enable scale-out and scale-up AI architectures, allowing hyperscalers to expand GPU clusters and build denser compute nodes.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://www.linkedin.com/company/lumilens",
+       "excerpts": [
+        "employee count: 164"
+       ]
+      },
+      {
+       "title": "Lumilens Number of Employees 2026 | Employee Count & Headcount Data | Revelio Labs",
+       "url": "https://www.reveliolabs.com/companies/lumilens/employees",
+       "excerpts": [
+        "is an Electronics Manufacturing company that employs **188** people worldwide as of March 2026."
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 164 associated employees; another headcount source reports 188 as of March 2026. Both fall within 101-200, though these are reported headcounts rather than a verified payroll census.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Next-gen Manufacturing Robotics & AI",
+       "url": "https://lumilens.com/next-gen-manufacturing-robotics-ai",
+       "excerpts": [
+        "Lumilens has developed highly automated manufacturing through the extensive use of robotics and AI-optimized processes."
+       ]
+      },
+      {
+       "title": "Privacy",
+       "url": "https://lumilens.com/privacy",
+       "excerpts": [
+        "For a list of all Service Providers we use, please contact us via email using the address provided in the Contact Us section, below."
+       ]
+      }
+     ],
+     "reasoning": "No AI model or provider was identified in the reviewed product, manufacturing, blog, or legal material. Manufacturing mentions AI-optimized processes without naming a provider. The privacy policy does not publish its service-provider list and instead directs readers to request it by email. The provider is therefore unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Home Main",
+       "url": "https://lumilens.com/",
+       "excerpts": [
+        "Technology [Photonic Interconnects](https://lumilens.com/photonic-interconnects) [Next-Gen Manufacturing](https://lumilens.com/next-gen-manufacturing-robotics-ai) Company [About Us](https://lumilens.com/company) [News & Insights](https://lumilens.com/news-insights) [Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog)",
+        "[Photonic Interconnects](https://lumilens.com/photonic-interconnects) [Next-Gen Manufacturing](https://lumilens.com/next-gen-manufacturing-robotics-ai) [About Us](https://lumilens.com/company) [Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog) [Privacy Policy](https://lumilens.com/privacy) [Terms of Use"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation and footer contain no pricing link, and the attempted pricing URL yielded no pricing page. This supports false under the specified website-navigation rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Lumilens; website_url: https://lumilens.com; founded_year: 2024; location_city: Belmont; location_country: United States; employee_count_official: 155; employee_count_history: []; latest_funding_round_amount_usd: 700000000.0; latest_funding_round_date: 2026-08-06",
+        "latest_funding_round_name: Series C; all_funding_rounds[0].round_name: Series C; all_funding_rounds[0].amount_usd: 700000000.0; all_funding_rounds[0].round_valuation_usd: 5510000000.0; all_funding_rounds[0].round_date: 2026-08-06"
+       ]
+      },
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile records $700 million for the August 2026 Series C. The company's announcement describes the new financing as 'more than $700 million'; 700000000 is the reported round figure, not an assertion of exact unrounded proceeds. The over-$900-million figure is cumulative funding, not this round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million."
+       ]
+      }
+     ],
+     "reasoning": "The closest customer-record section exposes no actual customer names, while the company's announcement refers to a customer agreement without identifying the customer. No two qualifying customer names were found. Investors, technology partners, and vendors have not been substituted for customers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Lumilens; website_url: https://lumilens.com; founded_year: 2024; location_city: Belmont; location_country: United States; employee_count_official: 155; employee_count_history: []; latest_funding_round_amount_usd: 700000000.0; latest_funding_round_date: 2026-08-06",
+        "latest_funding_round_name: Series C; all_funding_rounds[0].round_name: Series C; all_funding_rounds[0].amount_usd: 700000000.0; all_funding_rounds[0].round_valuation_usd: 5510000000.0; all_funding_rounds[0].round_date: 2026-08-06"
+       ]
+      },
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile dates the latest recorded round August 6, 2026, matching the dated company announcement. The requested year-month is 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Process Manager @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/01ae5f95-2cfc-4ed3-a51a-6e79e737b3f6",
+       "excerpts": [
+        "Hands-on experience working within or alongside enterprise systems including ERP (SAP, Oracle), CRM (Salesforce), ITSM (ServiceNow), PLM (Agile, Arena), and QMS (Arena) platforms."
+       ]
+      }
+     ],
+     "reasoning": "The Business Process Manager posting explicitly names CRM (Salesforce). This is a visible hiring-stack signal, although a job requirement alone does not conclusively establish the production deployment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Neera Patel",
+       "url": "https://linkedin.com/in/neera-patel-6097505",
+       "excerpts": [
+        "Role: Chief Financial Officer @ Lumilens. Returned fields: {experience_text='Lumilens San Francisco Bay Area 2026-10-01 Chief Financial Officer Applied Materials San Francisco Bay Area 2025-01-01 2026-09-01 Managing Director, Group CFO - Semiconductor Products Group Applied Materials San Francisco Bay Area 2022-01-01 2025-01-01 Sr."
+       ]
+      },
+      {
+       "title": "Company",
+       "url": "https://lumilens.com/company",
+       "excerpts": [
+        "Our leadership team The Lumilens leadership team brings deep experience in both photonics engineering and system-level infrastructure design from Cisco, Juniper, Meta, Lumentum and Coherent. [Ankur Singla CEO & founder](https://www.linkedin.com/in/ankur-singla-4863801/) [Ritesh Kapahi VP/GM India & founder](https://www.linkedin.com/in/ritesh-kapahi-a2a2652/) [Samuel Liu VP Products & founder](https://www.linkedin.com/in/samuel-liu-b3b954a/) [Dave Friedman VP Operations & founder](https://www.linkedin.com/in/davidrfriedman/) [Ted Schmidt CTO & founder](https://www.linkedin.com/in/theodore-schmidt/) [Harish Devanagondi VP Engineering, Silicon](https://www.linkedin.com/in/harish-devanagondi-38760314/) [Weich Fang VP Manufacturing & Ops](https://www.linkedin.com/in/weich-fang-5830842/) Jason Liow VP Silicon Photonics Ying Huang VP Silicon Photonics [Neera Patel CFO](https://www.linkedin.com/in/neera-patel-6097505/) [Mark Weiner"
+       ]
+      }
+     ],
+     "reasoning": "Neera Patel's employment history gives an October 2026 start as Lumilens's Chief Financial Officer, within the twelve-month window. The company's leadership page also lists her as CFO.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Join Lumilens",
+       "url": "https://lumilens.com/join-lumilens",
+       "excerpts": [
+        "Machine Learning Engineer",
+        "[Check Openings](https://jobs.ashbyhq.com/lumilens)"
+       ]
+      }
+     ],
+     "reasoning": "The official Join Lumilens page lists 'Machine Learning Engineer' and links to the company's openings. This is a qualifying title, although a separate role-specific application page was not verified.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Lumilens; website_url: https://lumilens.com; founded_year: 2024; location_city: Belmont; location_country: United States; employee_count_official: 155; employee_count_history: []; latest_funding_round_amount_usd: 700000000.0; latest_funding_round_date: 2026-08-06",
+        "latest_funding_round_name: Series C; all_funding_rounds[0].round_name: Series C; all_funding_rounds[0].amount_usd: 700000000.0; all_funding_rounds[0].round_valuation_usd: 5510000000.0; all_funding_rounds[0].round_date: 2026-08-06"
+       ]
+      },
+      {
+       "title": "Lumilens | Redpoint Ventures",
+       "url": "https://www.redpoint.com/companies/lumilens",
+       "excerpts": [
+        "We first partnered for their Series C in 2026."
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded funding round is labeled Series C, and investor Redpoint independently states that it first partnered with Lumilens for its Series C in 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home Main",
+       "url": "https://lumilens.com/",
+       "excerpts": [
+        "Technology [Photonic Interconnects](https://lumilens.com/photonic-interconnects) [Next-Gen Manufacturing](https://lumilens.com/next-gen-manufacturing-robotics-ai) Company [About Us](https://lumilens.com/company) [News & Insights](https://lumilens.com/news-insights) [Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog)",
+        "[Photonic Interconnects](https://lumilens.com/photonic-interconnects) [Next-Gen Manufacturing](https://lumilens.com/next-gen-manufacturing-robotics-ai) [About Us](https://lumilens.com/company) [Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog) [Privacy Policy](https://lumilens.com/privacy) [Terms of Use"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation and footer contain no documentation, help-center, or developer-portal link. The product pages reviewed are descriptive marketing pages, not a multi-article documentation site.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://www.linkedin.com/company/lumilens",
+       "excerpts": [
+        "Locality: San Jose, California"
+       ]
+      }
+     ],
+     "reasoning": "The company's profile identifies San Jose, and its principal address is in San Jose. These were preferred over other company-directory records showing Belmont; the conflicting directory locations lower confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million."
+       ]
+      },
+      {
+       "title": "Home Main",
+       "url": "https://lumilens.com/",
+       "excerpts": [
+        "Press release Lumilens emerges with $900M+ in Funding Now shipping optical interconnect products into production hyperscaler AI data centers under a multi-billion-dollar customer agreement"
+       ]
+      }
+     ],
+     "reasoning": "The August 6, 2026 emergence announcement introduced Lumilens publicly while announcing that its first product was commercially shipping into production AI data centers. This launch-type announcement falls within the six-month window; the precise first-shipment date is not established.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Customer Sales Representative @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/4a752f35-2963-49f6-a3e0-1c28fc39348f",
+       "excerpts": [
+        "Customer Sales Representative",
+        "[Apply for this Job](https://jobs.ashbyhq.com/lumilens/4a752f35-2963-49f6-a3e0-1c28fc39348f/application)",
+        "We are seeking a **Customer Service Representative** to join our rapidly growing team."
+       ]
+      }
+     ],
+     "reasoning": "A live official posting is titled 'Customer Sales Representative,' supporting true under the question's sales-representative title criterion. Important qualification: its description calls it a Customer Service Representative and emphasizes post-sales operations, so it is not evidence of a conventional outbound SDR or account-executive opening.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million."
+       ]
+      }
+     ],
+     "reasoning": "The company announced more than $700 million in new funding on August 6, 2026, within the eighteen-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Process Manager @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/01ae5f95-2cfc-4ed3-a51a-6e79e737b3f6",
+       "excerpts": [
+        "Hands-on experience working within or alongside enterprise systems including ERP (SAP, Oracle), CRM (Salesforce), ITSM (ServiceNow), PLM (Agile, Arena), and QMS (Arena) platforms."
+       ]
+      }
+     ],
+     "reasoning": "The official Business Process Manager posting explicitly names Salesforce as a CRM platform.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2024.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Lumilens builds photonic interconnects that help hyperscaler AI data centers expand GPU clusters and connect compute nodes.",
+    "employee_band": "101-200",
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": 700000000.0,
+    "named_customers": [],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series C",
+    "public_docs": false,
+    "hq_city": "San Jose",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

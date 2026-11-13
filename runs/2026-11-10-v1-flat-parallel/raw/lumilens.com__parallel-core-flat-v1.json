@@ -1,0 +1,504 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e806b00b48b2e94a2",
+  "interaction_id": "trun_142119f6a1b4439e806b00b48b2e94a2",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "lumilens.com"
+  },
+  "created_at": "2026-11-10T18:47:49.330219Z",
+  "modified_at": "2026-11-10T18:54:36.360061Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e806b00b48b2e94a2",
+   "interaction_id": "trun_142119f6a1b4439e806b00b48b2e94a2",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "lumilens.com"
+   },
+   "created_at": "2026-11-10T18:47:49.330219Z",
+   "modified_at": "2026-11-10T18:54:36.360061Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/lumilens",
+       "excerpts": [
+        "founded year: 2024"
+       ]
+      },
+      {
+       "title": "Optics & Photonics News - Lumilens Leaves Stealth Mode ",
+       "url": "https://www.optica-opn.org/home/industry/2026/august/lumilens_leaves_stealth_mode/",
+       "excerpts": [
+        "Lumilens was founded in early 2024 \u201cto solve networking bottlenecks limiting AI scale,\u201d according to the company."
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile gives Lumilens founded year 2024; the independent optical-industry profile likewise says it was founded in early 2024.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy",
+       "url": "https://lumilens.com/privacy",
+       "excerpts": [
+        "# Lumilens Privacy Policy",
+        "Last Updated and Effective Date: October 24, 2025",
+        "If you are an Authorized User using the Website, we retain your personal information as long as required by the administrator of your Account.",
+        "In some instances, we may choose to anonymize personal data instead of deleting it. When we choose to anonymize, we make sure that there is no way that the personal data can be linked back to any specific individual.",
+        "## 7\\. DATA SECURITY",
+        "At Lumilens, we take our responsibility to protect the security and privacy of personal information seriously. We have implemented what we believe to be reasonable and appropriate technical and organizational security measures designed to protect your information against unauthorized access, alteration, disclosure, or destruction.",
+        "However, no method of transmission over the Internet, or method of electronic storage, is 100% secure, and we cannot and do not guarantee that personal information is completely secure and safe from such risks. By using the Website, you understand and assume the risks associated with your activities on the Internet.",
+        "If you have reason to believe that your information is no longer secure, please let us know by contacting us using the methods provided in the Contact Us Section of this Privacy Policy."
+       ]
+      }
+     ],
+     "reasoning": "Lumilens has a public privacy/legal page and a data-security section. The checked policy names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS as a certification, so the supported list is empty; the Exaforce case-study badges are not Lumilens certifications.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/lumilens",
+       "excerpts": [
+        "country iso: US country name: United States locality: San Jose, California"
+       ]
+      }
+     ],
+     "reasoning": "The company profile places Lumilens in San Jose, California, and identifies its country as the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "News & Insights",
+       "url": "https://lumilens.com/news-insights",
+       "excerpts": [
+        "[Read more](https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding)",
+        "Blog",
+        "### Networks Are Now the AI Bottleneck",
+        "The focus in building out AI infra has long been on scaling GPUs. The bottleneck has now shifted to the network..",
+        "[Read more](https://lumilens.com/news-insights/networks-are-now-the-ai-bottleneck)",
+        "[](https://youtu.be/xypTJWVL3aY?si=mTSEma4I5KkSRIxS)",
+        "Video",
+        "### Why We Founded Lumilens",
+        "Starting with a clean sheet of paper to address the challenges of AI cluster sizes..",
+        "[Watch](https://youtu.be/xypTJWVL3aY?si=mTSEma4I5KkSRIxS)",
+        "Media article",
+        "### Startup Raises $700M",
+        "Lumilens, which makes optical gear to speed up data flowing between AI servers, is valued at $5.5 billion in new funding."
+       ]
+      }
+     ],
+     "reasoning": "The official News & Insights index has a Blog heading with one blog entry, \u201cNetworks Are Now the AI Bottleneck\u201d; the following entries shown are a video and media articles, so it does not show the two qualifying engineering/technical posts required for True.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Photonic Interconnects",
+       "url": "https://lumilens.com/photonic-interconnects",
+       "excerpts": [
+        "Lumilens photonic interconnects enable next-generation scale out and scale up AI architectures, allowing hyperscalers to massively expand GPU clusters and build denser compute nodes.",
+        "Lumilens provides next-gen photonic interconnects for massively scaling out \u2013 and scaling up \u2013 AI compute infrastructure.",
+        "## Full coverage for",
+        "scale-out + scale-up",
+        "Lumilens has a full portfolio of photonic interconnects including high-density pluggable, near-packaged, and co-packaged optics to support very large scale out and scale up architectures."
+       ]
+      }
+     ],
+     "reasoning": "Lumilens\u2019s photonic-interconnect page says the products let hyperscalers expand GPU clusters and build denser compute nodes for scale-out and scale-up AI architectures.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/lumilens",
+       "excerpts": [
+        "employee count: 164"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile reports 164 employees, which falls in the 101-200 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Home Main",
+       "url": "https://lumilens.com/",
+       "excerpts": [
+        "Company",
+        "[About Us](https://lumilens.com/company) [News & Insights](https://lumilens.com/news-insights)",
+        "[Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog)",
+        "[](https://lumilens.com/)",
+        "[Photonic Interconnects](https://lumilens.com/photonic-interconnects) [Next-Gen Manufacturing](https://lumilens.com/next-gen-manufacturing-robotics-ai) [About Us](https://lumilens.com/company) [Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog)",
+        "[Privacy Policy](https://lumilens.com/privacy) [Terms of Use](https://lumilens.com/terms-of-use)"
+       ]
+      }
+     ],
+     "reasoning": "The official homepage navigation and footer list product, company, join, blog, privacy, and terms links but no pricing page, supporting False under the requested rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Optical networking firm Lumilens valued at $5.5 billion in latest funding round | Reuters",
+       "url": "https://www.reuters.com/technology/optical-networking-firm-lumilens-valued-55-billion-latest-funding-round-2026-08-06",
+       "excerpts": [
+        "It raised more than $700 million in the Series C funding \u200bround co-led by Atreides Management, Bain Capital Ventures, Meritech, \u2060Seligman Ventures and Spark Capital, bringing its total funding to more \u200bthan $900 million."
+       ]
+      },
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "# Lumilens Emerges from Stealth with More Than $900 Million in Funding to Break AI\u2019s Connectivity Constraint",
+        "* Founded to solve the AI connectivity constraints confronting the world's largest hyperscalers",
+        "* Now shipping into production data centers under a multi-billion-dollar customer agreement",
+        "* Developing optical interconnect technology designed to connect thousands of GPUs as a single AI system",
+        "* Raised more than $700 million in its latest financing, bringing total funding to over $900 million at a valuation of $5.51 billion",
+        "\u200d",
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million.",
+        "The world's largest technology companies are spending historic sums on AI infrastructure \u2014 Citigroup projects the total will cross [$2.8 trillion by 2029](https://www.reuters.com/world/china/citigroup-forecasts-big-techs-ai-spending-cross-28-trillion-by-2029-2025-09-30/) \u2014 but buying GPUs is no longer the hard part. Connecting them is. Modern AI models are trained and served across hundreds of thousands of processors that must behave as a single computer, and the performance of that computer is now determined as much by the network linking those chips as by the chips themselves."
+       ]
+      }
+     ],
+     "reasoning": "Reuters reports the latest Series C as more than $700 million; funding coverage commonly reports the round as $700 million. The numeric value is the rounded reported round size, not Lumilens\u2019s total funding.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Home Main",
+       "url": "https://lumilens.com/",
+       "excerpts": [
+        "## Selected by top-tier customers & investors",
+        "Press release",
+        "### Lumilens emerges with $900M+ in Funding",
+        "Now shipping optical interconnect products into production hyperscaler AI data centers under a multi-billion-dollar customer agreement.",
+        "[Read more](https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding)"
+       ]
+      },
+      {
+       "title": "Optical networking firm Lumilens valued at $5.5 billion in latest funding round | Reuters",
+       "url": "https://www.reuters.com/technology/optical-networking-firm-lumilens-valued-55-billion-latest-funding-round-2026-08-06",
+       "excerpts": [
+        "Lumilens said it is already shipping products under a multi-billion-dollar agreement with a customer it declined to identify, but said it was one of the four hyperscalers."
+       ]
+      }
+     ],
+     "reasoning": "The official homepage refers to top-tier customers but does not name them, and Reuters says the customer under the disclosed multi-billion-dollar agreement declined to be identified. No two Lumilens customers can therefore be named from this evidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P."
+       ]
+      },
+      {
+       "title": "Optical networking firm Lumilens valued at $5.5 billion in latest funding round | Reuters",
+       "url": "https://www.reuters.com/technology/optical-networking-firm-lumilens-valued-55-billion-latest-funding-round-2026-08-06",
+       "excerpts": [
+        "August 6, 2026 9:42 AM EDT Updated August 6, 2026"
+       ]
+      }
+     ],
+     "reasoning": "Lumilens\u2019s funding announcement is dated August 6, 2026, so the requested YYYY-MM value is 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Process Manager @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/01ae5f95-2cfc-4ed3-a51a-6e79e737b3f6",
+       "excerpts": [
+        "Partner with Enterprise Architecture, IT, and platform owners to translate process requirements into functional and non-functional specifications for automation tooling such as ServiceNow, Salesforce, SAP, Appian, UiPath, or equivalent platforms. Serve as the business-side process owner and subject matter expert throughout the design, build, test, and deploy lifecycle for automation initiatives, ensuring solutions accurately reflect the intended process logic. ... Hands-on experience working within or alongside enterprise systems including ERP (SAP, Oracle), CRM (Salesforce), ITSM (ServiceNow), PLM (Agile, Arena), and QMS (Arena) platforms."
+       ]
+      }
+     ],
+     "reasoning": "A Lumilens Business Process Manager job post explicitly labels Salesforce as a CRM enterprise system in its requirements, providing a visible CRM-stack signal.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/neera-patel-6097505",
+       "excerpts": [
+        "company name: Lumilens title: Chief Financial Officer start date year: 2026 start date month: 10 start date: 2026-10-01"
+       ]
+      }
+     ],
+     "reasoning": "Neera Patel\u2019s LinkedIn profile lists her current title as Chief Financial Officer at Lumilens and a start date of October 1, 2026, within the 12 months before November 10, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Lumilens Jobs",
+       "url": "https://jobs.ashbyhq.com/lumilens",
+       "excerpts": [
+        "# Open Positions (162)"
+       ]
+      },
+      {
+       "title": "Senior/Staff Software Engineer, Data   @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/09219ea8-4882-4bb1-928a-e0126aa8f52d",
+       "excerpts": [
+        "* [](https://jobs.ashbyhq.com/lumilens)",
+        "# Senior/Staff Software Engineer, Data",
+        "## Location",
+        "San Jose",
+        "## Employment Type",
+        "Full time",
+        "## Department",
+        "Engineering"
+       ]
+      },
+      {
+       "title": "Analytics Engineer  @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/90335a55-2669-43e6-b259-0d8fb66b41d2",
+       "excerpts": [
+        "Analytics Engineer Location San Jose Employment Type Full time Location Type On-site Department Engineering"
+       ]
+      },
+      {
+       "title": "Data Engineer @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/80298651-1992-4b91-8207-a225c9934fab",
+       "excerpts": [
+        "Data Engineer Location India Employment Type Full time Location Type On-site Department Engineering"
+       ]
+      }
+     ],
+     "reasoning": "The live careers board is open and lists 162 positions. Current engineering/data roles inspected are titled Senior/Staff Software Engineer, Data, Analytics Engineer, and Data Engineer; those titles do not meet the specified AI/ML/data-science title test, and no qualifying live title was found.",
+     "confidence": "low"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Optical networking firm Lumilens valued at $5.5 billion in latest funding round | Reuters",
+       "url": "https://www.reuters.com/technology/optical-networking-firm-lumilens-valued-55-billion-latest-funding-round-2026-08-06",
+       "excerpts": [
+        "It raised more than $700 million in the Series C funding \u200bround co-led by Atreides Management, Bain Capital Ventures, Meritech, \u2060Seligman Ventures and Spark Capital, bringing its total funding to more \u200bthan $900 million."
+       ]
+      },
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "# Lumilens Emerges from Stealth with More Than $900 Million in Funding to Break AI\u2019s Connectivity Constraint",
+        "* Founded to solve the AI connectivity constraints confronting the world's largest hyperscalers",
+        "* Now shipping into production data centers under a multi-billion-dollar customer agreement",
+        "* Developing optical interconnect technology designed to connect thousands of GPUs as a single AI system",
+        "* Raised more than $700 million in its latest financing, bringing total funding to over $900 million at a valuation of $5.51 billion",
+        "\u200d",
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P. Morgan Private Capital](https://am.jpmorgan.com/us/en/asset-management/mod/growth-equity-partners/) , [Mayfield](https://www.mayfield.com/) , [MVP Ventures](https://mvp-vc.com/) , [Qualcomm Ventures](https://www.qualcommventures.com/) , [Peak XV,](https://peakxv.com/) [Redpoint Ventures](https://www.redpoint.com/) , [Seifdune](https://seifdune.com/) and other top-tier investors. The financing values the company at $5.51 billion and brings its total capital raised to over $900 million.",
+        "The world's largest technology companies are spending historic sums on AI infrastructure \u2014 Citigroup projects the total will cross [$2.8 trillion by 2029](https://www.reuters.com/world/china/citigroup-forecasts-big-techs-ai-spending-cross-28-trillion-by-2029-2025-09-30/) \u2014 but buying GPUs is no longer the hard part. Connecting them is. Modern AI models are trained and served across hundreds of thousands of processors that must behave as a single computer, and the performance of that computer is now determined as much by the network linking those chips as by the chips themselves."
+       ]
+      }
+     ],
+     "reasoning": "Reuters identifies the latest financing as Series C; Lumilens\u2019s August 2026 announcement gives the date and round funding amount.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home Main",
+       "url": "https://lumilens.com/",
+       "excerpts": [
+        "Company",
+        "[About Us](https://lumilens.com/company) [News & Insights](https://lumilens.com/news-insights)",
+        "[Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog)",
+        "[](https://lumilens.com/)",
+        "[Photonic Interconnects](https://lumilens.com/photonic-interconnects) [Next-Gen Manufacturing](https://lumilens.com/next-gen-manufacturing-robotics-ai) [About Us](https://lumilens.com/company) [Join Us](https://lumilens.com/join-lumilens) [Blog](https://lumilens.com/blog)",
+        "[Privacy Policy](https://lumilens.com/privacy) [Terms of Use](https://lumilens.com/terms-of-use)"
+       ]
+      }
+     ],
+     "reasoning": "The official homepage\u2019s navigation and footer provide no docs, help-center, or developer-portal link, supporting False under the specified rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/lumilens",
+       "excerpts": [
+        "locality: San Jose, California"
+       ]
+      }
+     ],
+     "reasoning": "The company profile lists Lumilens\u2019s locality as San Jose, California; the requested city value is San Jose.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P."
+       ]
+      },
+      {
+       "title": "Networks Are Now the AI Bottleneck",
+       "url": "https://lumilens.com/news-insights/networks-are-now-the-ai-bottleneck",
+       "excerpts": [
+        "Lumilens' initial product \u2014 a scale-out pluggable optical transceiver \u2014 completed qualification and began shipping into a top hyperscaler's production AI data centers earlier this year under a multi-billion-dollar supply agreement."
+       ]
+      }
+     ],
+     "reasoning": "Lumilens\u2019s August 6, 2026 announcement says it emerged from stealth and was commercially shipping its first product; the product-launch/market introduction falls within the six months before November 10, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Customer Sales Representative @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/4a752f35-2963-49f6-a3e0-1c28fc39348f",
+       "excerpts": [
+        "# Customer Sales Representative",
+        "## Location",
+        "Singapore",
+        "## Employment Type",
+        "Full time",
+        "## Location Type",
+        "On-site",
+        "## Department",
+        "**What You'll Do:**",
+        "* Drive customer demand and deliverables internally with the operation team to meet customer request and commits accordingly",
+        "* Manage customer expectation and satisfaction in all aspect of post sales activities",
+        "* Manage customer demand and forecast with the operation team to ensure that the plan is executed satisfactorily in customer and revenue commits for the quarter."
+       ]
+      }
+     ],
+     "reasoning": "The live Ashby posting is titled Customer Sales Representative, which includes the specified sales-representative title category, and links to an application. Its description concerns customer requests and post-sales work, but the title meets the stated title-based rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Lumilens emerges with $900M+ in Funding",
+       "url": "https://lumilens.com/news-insights/lumilens-emerges-with-900m-in-funding",
+       "excerpts": [
+        "SAN JOSE, Calif. \u2014 August 6, 2026 \u2014 [Lumilens](https://lumilens.com/) , the connectivity platform for AI infrastructure, today emerged from stealth, having been founded to solve the growing networking bottlenecks limiting AI scale. In just two years after its founding, the company is commercially shipping its first product into production AI data centers under a multi-billion-dollar customer agreement, and announced more than $700 million in new funding co-led by [Atreides Management](https://atreidesmgmt.com/) , [Bain Capital Ventures](https://baincapitalventures.com/) , [Meritech](https://www.meritechcapital.com/) , [Seligman Ventures](https://www.seligman.com/) and [Spark Capital](https://www.sparkcapital.com/) , with participation from [Addition](https://www.addition.com/) , [AICONIC VENTURES](https://aiconicventures.com/) , [Alkeon](https://www.alkeoncapital.com/) , [Harbourvest](https://www.harbourvest.com/us/en) , [J.P."
+       ]
+      },
+      {
+       "title": "Optical networking firm Lumilens valued at $5.5 billion in latest funding round | Reuters",
+       "url": "https://www.reuters.com/technology/optical-networking-firm-lumilens-valued-55-billion-latest-funding-round-2026-08-06",
+       "excerpts": [
+        "August 6, 2026 9:42 AM EDT Updated August 6, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The company announced the Series C on August 6, 2026, which is inside the 18-month window before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Process Manager @ Lumilens",
+       "url": "https://jobs.ashbyhq.com/lumilens/01ae5f95-2cfc-4ed3-a51a-6e79e737b3f6",
+       "excerpts": [
+        "Partner with Enterprise Architecture, IT, and platform owners to translate process requirements into functional and non-functional specifications for automation tooling such as ServiceNow, Salesforce, SAP, Appian, UiPath, or equivalent platforms. Serve as the business-side process owner and subject matter expert throughout the design, build, test, and deploy lifecycle for automation initiatives, ensuring solutions accurately reflect the intended process logic. ... Hands-on experience working within or alongside enterprise systems including ERP (SAP, Oracle), CRM (Salesforce), ITSM (ServiceNow), PLM (Agile, Arena), and QMS (Arena) platforms."
+       ]
+      }
+     ],
+     "reasoning": "The Lumilens job posting explicitly names Salesforce as its CRM example.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2024.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Lumilens makes photonic interconnects that help hyperscalers scale GPU clusters and build denser AI-compute nodes in data centers.",
+    "employee_band": "101-200",
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": 700000000.0,
+    "named_customers": [],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C",
+    "public_docs": false,
+    "hq_city": "San Jose",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

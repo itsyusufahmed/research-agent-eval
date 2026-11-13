@@ -1,0 +1,509 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eba973d59a0ac0194",
+  "interaction_id": "trun_142119f6a1b4439eba973d59a0ac0194",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "axure.com"
+  },
+  "created_at": "2026-11-10T18:48:44.564374Z",
+  "modified_at": "2026-11-10T19:02:35.745155Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eba973d59a0ac0194",
+   "interaction_id": "trun_142119f6a1b4439eba973d59a0ac0194",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "axure.com"
+   },
+   "created_at": "2026-11-10T18:48:44.564374Z",
+   "modified_at": "2026-11-10T19:02:35.745155Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Axure Software Solutions",
+       "url": "https://linkedin.com/company/axure-software-solutions",
+       "excerpts": [
+        "employee count: 17 founded year: 2002"
+       ]
+      }
+     ],
+     "reasoning": "Axure's company profile at https://linkedin.com/company/axure-software-solutions states a founding year of 2002.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Axure Security - Axure",
+       "url": "https://www.axure.com/security",
+       "excerpts": [
+        "**SOC 2 Type II Certification data** Through the SOC 2 Type II certification, Axure outlines the operational requirements that support the achievement of the principal service commitments, relevant laws and regulations, and other system requirements.",
+        "**ISO 27001 Certification** ISO 27001 certification underscores our commitment to the highest standards of information security.",
+        "**PCI compliant** PCI compliance certifies that the requirements for protecting cardholder data are met. We are PCI compliant for transmitting credit card information.",
+        "Our third-party credit card processor meets the highest industry standard and guidelines, PCI DSS Level 1."
+       ]
+      },
+      {
+       "title": "Axure's Commitment to GDPR Compliance - Axure",
+       "url": "https://www.axure.com/gdpr",
+       "excerpts": [
+        "Axure is committed to compliance with the European Union\u2019s General Data Protection Regulation (GDPR), effective May 25, 2018."
+       ]
+      }
+     ],
+     "reasoning": "https://www.axure.com/security claims SOC 2 Type II and ISO 27001 certification, and https://www.axure.com/gdpr states GDPR compliance. The security page also claims PCI compliance for transmitting credit-card information. PCI DSS is included with that limited scope: the separate Level 1 certification statement applies to Axure's payment processor, not to Axure itself.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Axure Software Solutions",
+       "url": "https://linkedin.com/company/axure-software-solutions",
+       "excerpts": [
+        "country name: United States locality: San Diego, California"
+       ]
+      }
+     ],
+     "reasoning": "The company location on https://linkedin.com/company/axure-software-solutions is San Diego, California, United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Tips, tricks, and the latest updates - Axure",
+       "url": "https://www.axure.com/blog",
+       "excerpts": [
+        "[Axure RP 9 updates are ending](https://www.axure.com/blog/axure-rp-9-updates-ended) Axure RP 9, originally released in 2019",
+        "[Introducing the new Axure Cloud](https://www.axure.com/blog/new-axure-cloud) We're thrilled to announce a major refresh to Axure Cloud",
+        "[Getting the Most Out of the Figma Plugin](https://www.axure.com/blog/maximizing-figma-plugin) If you're a Figma user"
+       ]
+      }
+     ],
+     "reasoning": "The readable index at https://www.axure.com/blog lists product announcements, tutorials, and UX/marketing content. It does not establish two engineer-authored posts explaining how Axure itself is built, so it does not meet the specified engineering-blog threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "UX Prototyping Tool - Axure",
+       "url": "https://www.axure.com/a/ux-prototyping-tool",
+       "excerpts": [
+        "Axure RP puts the power of wireframing and prototyping into the hands of UX designers, product managers, and business analysts. Before a single line of code is written, an app can prototyped and presented visually. [Download now](https://www.axure.com/downloadthanks) Quickly Create UX Deliverables Create wireframes, visual diagrams, user interfaces, flows and more. Quickly drag and drop UI elements from built-in or custom pattern libraries to create your concept. Then, style it with fills, gradients, line styles, and text formatting. Document for Development Annotate your wireframes and prototypes to specify functionality, keep track of tasks, or store project information. ... Create simple click-through diagrams or highly functional, rich UX prototypes with conditional logic, dynamic content, animations, math functions, and data-driven interactions without writing a single line of code."
+       ]
+      }
+     ],
+     "reasoning": "https://www.axure.com/a/ux-prototyping-tool identifies UX designers, product managers, and business analysts as users and describes no-code wireframing and interactive prototyping.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Axure Software Solutions",
+       "url": "https://linkedin.com/company/axure-software-solutions",
+       "excerpts": [
+        "employee count: 17 founded year: 2002"
+       ]
+      }
+     ],
+     "reasoning": "The company profile at https://linkedin.com/company/axure-software-solutions reports 17 employees, which maps to the required 11-20 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Using Axure RP with AI tools via MCP | Axure Docs",
+       "url": "https://docs.axure.com/axure-rp/reference/mcp/",
+       "excerpts": [
+        "Axure RP includes a built-in MCP server that gives AI tools read-only access to the files you have open in Axure RP.",
+        "Any AI tool that runs on your computer and supports MCP over streamable HTTP can connect to Axure RP using the following server URL:"
+       ]
+      },
+      {
+       "title": "Using Axure Cloud with AI tools via MCP | Axure Docs",
+       "url": "https://docs.axure.com/axure-cloud/reference/MCP",
+       "excerpts": [
+        "The Axure MCP server lets you give any MCP-compatible AI tool access to content from your whiteboard and document files on Axure Cloud."
+       ]
+      }
+     ],
+     "reasoning": "The documentation at https://docs.axure.com/axure-rp/reference/mcp/ and https://docs.axure.com/axure-cloud/reference/MCP describes MCP servers connecting user-selected external AI tools, not an underlying model provider used by Axure. The blog, security, privacy, and subprocessor disclosures were also checked without finding such a disclosure. Claude and ChatGPT compatibility therefore is not treated as evidence of Axure's own model provider.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Purchase Axure RP - Axure",
+       "url": "https://www.axure.com/pricing",
+       "excerpts": [
+        "Axure RP Pro $29 month/per user",
+        "Axure RP Team $49 month/per user"
+       ]
+      }
+     ],
+     "reasoning": "https://www.axure.com/pricing publicly lists Axure RP Pro and Team plans with per-user prices.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Axure - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE",
+       "excerpts": [
+        "Axure's funding and investors Axure has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE reports no funding rounds. Consequently, no latest-round amount applies; null does not represent a zero-dollar round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Axure Customers - Axure",
+       "url": "https://www.axure.com/axure-customers",
+       "excerpts": [
+        "PROS provides AI-driven, cloud-based revenue and price management software used by Lufthansa, HP, Siemans, and more. The PROS's team creates custom-tailored demos with Axure RP",
+        "Syncron offers an innovative service lifecycle management (SLM) platform to companies in aerospace, automotive, medical, and more. Syncron's teams use Axure RP prototypes"
+       ]
+      }
+     ],
+     "reasoning": "https://www.axure.com/axure-customers describes both PROS and Syncron using Axure RP.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Axure - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE",
+       "excerpts": [
+        "Axure's funding and investors Axure has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile at https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE reports no rounds, so there is no latest-round date to provide.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Axure's Commitment to GDPR Compliance - Axure",
+       "url": "https://www.axure.com/gdpr",
+       "excerpts": [
+        "|HubSpot |Email marketing and analytics",
+        "|Mailchimp |Email marketing |USA |<https://mailchimp.com/> |"
+       ]
+      }
+     ],
+     "reasoning": "Axure's subprocessor list at https://www.axure.com/gdpr identifies HubSpot for email marketing and analytics and Mailchimp for email marketing. These are direct operational-use disclosures rather than merely available integrations.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [],
+     "reasoning": "No dated qualifying executive appointment or departure was found, and a complete leadership history could not be established. Neither a positive nor the required evidence-based negative could be verified.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Careers at Axure - Axure",
+       "url": "https://www.axure.com/careers",
+       "excerpts": [
+        "Senior Software Engineer We\u2019re seeking a Senior Software Engineer to round out our Development team. The technology stack for Axure RP is large and varied and well-suited to engineers that love working on low level details as well as user interfaces. Engineers that work on Axure RP will need to be truly full-stack developers."
+       ]
+      }
+     ],
+     "reasoning": "The complete openings section at https://www.axure.com/careers lists Senior Software Engineer only. That title does not qualify as an AI, ML, or data-science opening under the specified rules.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Axure - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE",
+       "excerpts": [
+        "Axure's funding and investors Axure has not raised any funding rounds yet."
+       ]
+      },
+      {
+       "title": "Axure Software Solutions company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/axure_software_solutions",
+       "excerpts": [
+        "Overview Similar companies Patents (21) No known external funding"
+       ]
+      }
+     ],
+     "reasoning": "The profiles at https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE and https://app.dealroom.co/companies/axure_software_solutions report no funding rounds or known external funding. The required stage is therefore none.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Getting started with Axure RP | Axure Docs",
+       "url": "https://docs.axure.com/axure-rp",
+       "excerpts": [
+        "Getting started video",
+        "Learn how in the [Hiding and showing widgets tutorial](https://docs.axure.com/axure-rp/tutorials/hide-show-widgets) .",
+        "Learn how in the [Interactive button tutorial](https://docs.axure.com/axure-rp/tutorials/interactive-button) ."
+       ]
+      }
+     ],
+     "reasoning": "https://docs.axure.com/axure-rp is a public documentation portal containing multiple guides and tutorials, including getting started, hiding/showing widgets, and interactive buttons.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Axure Software Solutions",
+       "url": "https://linkedin.com/company/axure-software-solutions",
+       "excerpts": [
+        "country name: United States locality: San Diego, California"
+       ]
+      }
+     ],
+     "reasoning": "https://linkedin.com/company/axure-software-solutions lists the company's location as San Diego, California.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Axure RP MCP, Windows Snap, and faster Mac rendering - Axure",
+       "url": "https://www.axure.com/changelog/2026-09-24",
+       "excerpts": [
+        "Sep 24, 2026",
+        "You can now run a built-in **MCP server** from Axure RP to give AI agents and tools access to the pages, widgets, interactions, and notes in your RP files. The AI can use your designs for code generation, analysis, documentation, and more."
+       ]
+      }
+     ],
+     "reasoning": "The September 24, 2026 announcement at https://www.axure.com/changelog/2026-09-24 introduces a built-in Axure RP MCP server that exposes design context to AI tools. This substantive new integration falls inside the six-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Careers at Axure - Axure",
+       "url": "https://www.axure.com/careers",
+       "excerpts": [
+        "Senior Software Engineer We\u2019re seeking a Senior Software Engineer to round out our Development team. The technology stack for Axure RP is large and varied and well-suited to engineers that love working on low level details as well as user interfaces. Engineers that work on Axure RP will need to be truly full-stack developers."
+       ]
+      }
+     ],
+     "reasoning": "https://www.axure.com/careers lists only Senior Software Engineer, with no SDR, BDR, sales-development representative, business-development representative, or account-executive opening.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Axure - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE",
+       "excerpts": [
+        "Axure's funding and investors Axure has not raised any funding rounds yet."
+       ]
+      },
+      {
+       "title": "Axure Software Solutions company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/axure_software_solutions",
+       "excerpts": [
+        "Overview Similar companies Patents (21) No known external funding"
+       ]
+      }
+     ],
+     "reasoning": "The funding profiles at https://tracxn.com/d/companies/axure/__G0DHSuLnHkRVkS9_cp6rAQk-hMmzaofWA1Ei2s0vqtE and https://app.dealroom.co/companies/axure_software_solutions establish no known outside funding, supporting false under the specified rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Axure Security - Axure",
+       "url": "https://www.axure.com/security",
+       "excerpts": [
+        "**SOC 2 Type II Certification data** Through the SOC 2 Type II certification, Axure outlines the operational requirements that support the achievement of the principal service commitments, relevant laws and regulations, and other system requirements."
+       ]
+      }
+     ],
+     "reasoning": "Axure's security page explicitly claims SOC 2 Type II certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Axure Security - Axure",
+       "url": "https://www.axure.com/security",
+       "excerpts": [
+        "**ISO 27001 Certification** ISO 27001 certification underscores our commitment to the highest standards of information security."
+       ]
+      }
+     ],
+     "reasoning": "Axure describes its ISO 27001 certification as achieved, not in progress.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Axure's Commitment to GDPR Compliance - Axure",
+       "url": "https://www.axure.com/gdpr",
+       "excerpts": [
+        "Axure is committed to compliance with the European Union\u2019s General Data Protection Regulation (GDPR), effective May 25, 2018."
+       ]
+      }
+     ],
+     "reasoning": "Axure's legal page explicitly states its commitment to GDPR compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Axure Security - Axure",
+       "url": "https://www.axure.com/security",
+       "excerpts": [
+        "**PCI compliant** PCI compliance certifies that the requirements for protecting cardholder data are met. We are PCI compliant for transmitting credit card information.",
+        "Our third-party credit card processor meets the highest industry standard and guidelines, PCI DSS Level 1."
+       ]
+      }
+     ],
+     "reasoning": "Axure claims PCI compliance for transmitting credit-card information, and the page names PCI DSS. This does not establish that Axure itself holds the processor's separately stated Level 1 certification.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Axure Customers - Axure",
+       "url": "https://www.axure.com/axure-customers",
+       "excerpts": [
+        "PROS provides AI-driven, cloud-based revenue and price management software used by Lufthansa, HP, Siemans, and more. The PROS's team creates custom-tailored demos with Axure RP"
+       ]
+      }
+     ],
+     "reasoning": "The customer page describes PROS's team creating custom-tailored demonstrations with Axure RP.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Axure Customers - Axure",
+       "url": "https://www.axure.com/axure-customers",
+       "excerpts": [
+        "Syncron offers an innovative service lifecycle management (SLM) platform to companies in aerospace, automotive, medical, and more. Syncron's teams use Axure RP prototypes"
+       ]
+      }
+     ],
+     "reasoning": "The customer page states that Syncron's teams use Axure RP prototypes.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Axure's Commitment to GDPR Compliance - Axure",
+       "url": "https://www.axure.com/gdpr",
+       "excerpts": [
+        "|HubSpot |Email marketing and analytics"
+       ]
+      }
+     ],
+     "reasoning": "HubSpot is listed as an Axure subprocessor for email marketing and analytics.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Axure's Commitment to GDPR Compliance - Axure",
+       "url": "https://www.axure.com/gdpr",
+       "excerpts": [
+        "|Mailchimp |Email marketing |USA |<https://mailchimp.com/> |"
+       ]
+      }
+     ],
+     "reasoning": "Mailchimp is listed as an Axure subprocessor for email marketing.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2002.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Axure RP lets UX designers, product managers, and business analysts create wireframes and interactive software prototypes without writing code.",
+    "employee_band": "11-20",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "PROS",
+     "Syncron"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "HubSpot",
+     "Mailchimp"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "none",
+    "public_docs": true,
+    "hq_city": "San Diego",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

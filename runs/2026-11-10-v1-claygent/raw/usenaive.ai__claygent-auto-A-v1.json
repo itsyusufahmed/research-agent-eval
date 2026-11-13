@@ -1,0 +1,374 @@
+{
+ "run": {
+  "routine_run_id": "run_0toazb7pN3sk3334BFc",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "usenaive.ai",
+    "status": "complete",
+    "result": {
+     "claygent-auto-A": {
+      "eng_blog": {
+       "notes": "The blog index lists one Engineering-category post; other entries are launches, guides, or comparisons, so it does not meet the threshold of at least two technical engineering posts.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/blogs"
+       ]
+      },
+      "reasoning": "Core company facts were corroborated by the official site, its documentation and dated blog posts, Y Combinator's profile and live job board, and TechCrunch's dated funding report. The profile gives 12 employees, a San Francisco location, and a 2025 founding year; the current board has no qualifying AI/ML or SDR/AE title. Public pricing, docs, funding, and a recent product launch are directly documented. Customer names and leadership changes remain unknown because sources reviewed did not establish them. The GLM-5.2 reference is specifically in a benchmark context, not evidence that all customer agents use that model.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Searched Google with query \"site:usenaive.ai Naive AI company product\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naive docs\",\"link\":\"https://usenaive.ai/docs\",\"displayedLink\":\"https://usenaive.ai › Get started › Naive docs\",\"snippet\":\"Naive Managed Agents is a managed agent platform: you define an agent — mo...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/\",\"question\":\"Find company product description, navigation/footer links for pricing docs careers customers security, any location/founding or team information.\"}. The results are: \n \"Naïve (naïve, Inc.) builds environments and infrastructure for AI agents to run entire businesses end-to-end, including autonomous company templates, multi-agent orchestration, connected tools, real-world identities/actions, and code-governed budgets/tool policies. Tagline: “Infrastructure that lets agents autonomously operate businesses.”\\n\\nProduct/company details: Deployable autonomous company templates include Short Form, Long Form, Clipping, AI Music Channel, AI Influencer, AI Automation A...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs\",\"question\":\"List blog posts with dates/titles, identify latest launch announcements and any technical engineering articles.\"}. The results are: \n \"Blog posts shown:\\n\\nLaunches (latest first):\\n- November 2, 2026 — “Music: your agent writes an original song from a prompt”\\n- October 17, 2026 — “3D assets: generate a model for your video, build a part with code”\\n- October 6, 2026 — “Product Changelog: Week of 9/29” — https://usenaive.ai/blogs/product-changelog-week-of-9-29\\n- October 6, 2026 — “Introducing Social Data: Public Social Media for Every Agent” — https://usenaive.ai/blogs/introducing-social-data\\n- October 6, 2026 — “Introducin...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/docs\",\"question\":\"Find documentation articles, AI model providers named, integrations or CRM systems.\"}. The results are: \n \"Documentation articles: Overview — https://usenaive.ai/docs; Quickstart — https://usenaive.ai/docs/quickstart; How Naive Managed Agents works — https://usenaive.ai/docs/how-managed-agents-is-built; Agent — https://usenaive.ai/docs/capabilities/agent; Managed Agents — https://usenaive.ai/docs/concepts/agents; API Reference — https://usenaive.ai/docs/api/overview; SDK Reference (TypeScript) — https://usenaive.ai/docs/sdk/typescript; CLI Reference — https://usenaive.ai/docs/cli/overview; Messages-...",
+       "Searched Google with query \"Naïve usenaive.ai funding Relixir employees headquarters founded\". The results are: \n {\"search_results\":[{\"title\":\"Naïve: Autonomous Company Infrastructure\",\"link\":\"https://www.ycombinator.com/companies/naive\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive\",\"snippet\":\"Founded in 2025 by Sean Dorje and Dennis Zax, Naïve has 12 employees based in San Francisco. Naïve is an AI research lab building autonomous companies. Active ...\",\"position\":1},{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve i...",
+       "Searched Google with query \"site:usenaive.ai careers jobs Naive AI SDR engineer\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"usenaive.ai customers case study Naive\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"naïve (@usenaive) / X\",\"link\":\"https://x.com/usenaive?lang=en\",\"displayedLink\":\"15.5K+ followers\",\"snippet\":\"Naïve has raised a $28.5 million Series A to build the infrastructure AI agents need to run entire businesses. d...",
+       "Searched Google with query \"site:usenaive.ai security SOC 2 ISO HIPAA privacy subprocessor model provider\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/pricing\",\"question\":\"What pricing details/plans are shown? Cite page content.\"}. The results are: \n \"Pricing page: https://usenaive.ai/pricing\\n\\n- Free trial: $0 for 7 days; includes $10 credit; Standard features; card required; cancel before day 7 to avoid charge; then $20/mo Standard. One trial per organization/person, Standard only.\\n- Standard: $20/month per company, including $20 monthly credit; pay-as-you-go/top up for additional usage; no per-seat fee; MCP, SDK, and CLI not metered.\\n- Pro: $200/month, including $200 monthly credit; same published rates after included credit; pay-as-yo...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/privacy\",\"question\":\"Find named AI model/subprocessor providers and certifications such as SOC 2, ISO, HIPAA, GDPR, PCI.\"}. The results are: \n \"No named AI model/subprocessor providers or certifications (SOC 2, ISO, HIPAA, GDPR, PCI) are identified. The policy only refers generically to hosting, payment-processing, analytics, and AI model providers (Sections 5.1–5.2). Security measures include encryption in transit/at rest, access controls, and regular security assessments (Section 8). International transfers use Standard Contractual Clauses and adequacy decisions (Section 10). Privacy policy: https://usenaive.ai/privacy; Terms: https:...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/terms\",\"question\":\"Find entity/founding/headquarters information and any compliance claims.\"}. The results are: \n \"Entity: naïve (usenaive.ai); GitHub: https://github.com/usenaive. Relevant compliance/legal links: Terms (https://usenaive.ai/terms), Privacy Policy (https://usenaive.ai/privacy), Open Source Licenses (https://usenaive.ai/licenses). No founding date, headquarters, or specific compliance claims provided. Contact: https://cal.com/seandorjeceo/15min; phone: +1 251-575-2126.\"",
+       "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/naive\",\"question\":\"Find employee count, headquarters, founded year, founders, customers and funding details.\"}. The results are: \n \"Naïve — YC Spring 2025, Active. Employee/team count: 12. Headquarters/location: San Francisco. Founded: 2025. Founders: Sean Dorje (Founder/CEO) and Dennis Zax (Founder/CTO). Customers: No specific customer names or count disclosed; product serves new and existing businesses, including businesses using CRM, codebase, Shopify, or Notion. Funding: TechCrunch reports Naïve raised $28.5M (Aug. 6, 2026): https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-an...",
+       "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company\",\"question\":\"What amount, stage, and date was Naive's latest funding round?\"}. The results are: \n \"Naïve raised $28.5 million in a Series A funding round, announced August 6, 2026. Source: https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company\"",
+       "Searched Google with query \"site:usenaive.ai/businesses customer \"case study\" Naïve customer company results\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:usenaive.ai/jobs OR site:usenaive.ai/careers Naive jobs\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"usenaive.ai compliance security SOC 2 Naive AI\". The results are: \n {\"search_results\":[{\"title\":\"SOC 2 Compliance in the Age of AI: A Practical Guide\",\"link\":\"https://userfront.com/blog/soc-2-ai-compliance\",\"displayedLink\":\"https://userfront.com › blog › soc-2-ai-compliance\",\"snippet\":\"In this guide, we will cover the five pillars of SOC 2 compliance and how they relate to artificial intelligence.\",\"date\":\"Feb 13, 2025\",\"position\":1},{\"title\":\"SOC 2 for AI Startups (2026): Requirements & Fast Track\",\"link\":\"https://getsecureslate.com/blog/soc-2-for-ai-startups-w...",
+       "Searched Google with query \"site:usenaive.ai/blogs \"engineering\" Naïve engineering technical infrastructure posts\". The results are: \n {\"search_results\":[{\"title\":\"Attribution, MIT, and What We Actually Build | naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/blogs/on-paperclip-and-open-source\",\"displayedLink\":\"https://usenaive.ai › on-paperclip-and-open-source\",\"snippet\":\"EngineeringApril 8, 2026·Updated September 7, 2026·7 min read. Naïve and Paperclip: Attribution, MIT, and What We Actually Build. How Naïve ...\",\"date\":\"Apr 8, 2026\",\"position\":1},{\"title\":\"Blog | naïve\",\"link\":\"https://usenaive.ai/blogs\",\"displayedLink\":\"htt...",
+       "Searched Google with query \"Naive usenaive.ai customers customer case studies names autonomous company\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naïve: Autonomous Company Infrastructure\",\"link\":\"https://www.ycombinator.com/companies/naive\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive\",\"snippet\":\"Naïve is an AI research ...",
+       "Searched Google with query \"site:linkedin.com/jobs Naive usenaive.ai jobs AI ML sales\". The results are: \n {\"search_results\":[{\"title\":\"Founding Research Engineer at 60x - Jobs\",\"link\":\"https://uk.linkedin.com/jobs/view/founding-research-engineer-at-60x-4409459702\",\"displayedLink\":\"https://uk.linkedin.com › jobs › view\",\"snippet\":\"Founding Research Engineer at 60x. Full-time Entry level role. now score above 170 on IQ tests. Use naive RAG and retrieval breaks the moment the question gets ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.goog...",
+       "Searched Google with query \"Naïve usenaive.ai hiring jobs career 2026 SDR account executive\". The results are: \n {\"search_results\":[{\"title\":\"Sales development representative ai jobs\",\"link\":\"https://www.indeed.com/q-sales-development-representative-ai-jobs.html\",\"displayedLink\":\"https://www.indeed.com › q-sales-development-represe...\",\"snippet\":\"Browse 23661 Sales Development Representative Ai jobs. $70,000 - $80,000 a year … $20/hour base pay. Account Executive, $222,800 - $290,000 a year\",\"position\":1},{\"title\":\"Careers\",\"link\":\"https://sierra.ai/careers\",\"displayedLink\":\"https://sierra.ai › careers\",\"s...",
+       "Searched Google with query \"site:usenaive.ai/docs Salesforce HubSpot Shopify CRM integrations\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs/introducing-naive-managed-agents\",\"question\":\"Does this technical post name AI model providers, CRM/sales systems, or discuss implementation?\"}. The results are: \n \"The post names AI model providers/models: glm-5.2 (used in every benchmark arm), Claude Code, Codex, Hermes, and Pi. It mentions CRM/sales systems: a CRM OAuth connection (`crmAuth.id`) and an “Ava Sales” outbound SDR persona, but no specific CRM product is named. It discusses implementation extensively, including the Managed Agents harness, serverless durable runtime, completion windows, sandboxes/micro-VMs, identities/OAuth, vaults, budgets, API/CLI, SDK code examples, and deployment via `nai...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs\",\"question\":\"Does blog index have an engineering/technical category and how many relevant posts, and most recent launch with date?\"}. The results are: \n \"Blog index: 26 total posts; categories shown are Launch (12), Guide (12), Engineering (01), and Comparison (01). Engineering category contains 1 post: “Naïve and Paperclip: Attribution, MIT, and What We Actually Build” — April 8, 2026. Most recent Launch post: “Music: your agent writes an original song from a prompt” — November 2, 2026. Blog URL: https://usenaive.ai/blogs\"",
+       "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/naive/jobs\",\"question\":\"List all currently open roles and check whether any are AI/ML/data science titles or SDR/BDR/account executive/sales representative titles.\"}. The results are: \n \"Naïve currently open roles:\\n- In-House Video Editor — Remote (US), $5K–$10K/month, 0.50%, 3+ years. https://ycombinator.com/companies/naive/jobs/MZLbwFK-in-house-video-editor\\n- Growth Engineer Intern — Mountain View, CA / Remote (US), $6K–$10K/month, any experience. https://ycombinator.com/companies/naive/jobs/cDWbl15-growth-engineer-intern\\n- Founding Member of Technical Staff – Agents — Mountain View, CA, $190K–$225K, 2%–4%, 3+ years. https://ycombinator.com/companies/naive/jobs/qOwzkq2-fou...",
+       "Searched Google with query \"site:usenaive.ai/docs \"model\" provider Anthropic OpenAI glm Naive managed agents\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:usenaive.ai \"customers\" \"Naïve\" \"agency\" client named\". The results are: \n {\"search_results\":[{\"title\":\"Market Research Agency | naïve\",\"link\":\"https://usenaive.ai/businesses/market-research-agency\",\"displayedLink\":\"https://usenaive.ai › Companies\",\"snippet\":\"What is an AI market research agency? It is a ready-made naïve company. One deploy hires an agent team and installs the default apps: a CRM for ...\",\"date\":\"6 days ago\",\"position\":1},{\"title\":\"Security Testing Agency | naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/businesses/security-agency\",\"displayedLink\":\"ht...",
+       "Searched Google with query \"\"Naïve\" usenaive.ai \"customer\" company customer name\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"... Naïve raises $28.5M Series A led by Nexus VP to build Agent-Run ... Testers use each client's live product as a real customer would, push on its ...\",\"position\":1},{\"title\":\"Primitives | naïve\",\"link\":\"https://usenaive.ai/primitives\",\"displayedLink\":\"https://usenaive.ai › primitives\",\"snippet\":\"Campaign resultshello@customer.io. Re: Invoice #1042billing@stripe.com. webhook...",
+       "Searched Google with query \"site:usenaive.ai/docs integrations Salesforce HubSpot Pipedrive\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs/on-paperclip-and-open-source\",\"question\":\"Does the company engineering blog have additional technical posts linked or named beyond this post?\"}. The results are: \n \"Beyond this post, the page names/links these potentially technical resources: “Naïve Managed Agents: The Most Efficient Managed Agent for Long Horizon Tasks” (Launch); “Hosted vs Bring-Your-Own Harness for AI Agents” (Guide); “How Managed Agents works” (described as explaining the harness, tools, and runtime layers); “naive CLI reference”; and “harness documentation.” Blog index: https://usenaive.ai/blogs. The post itself: https://usenaive.ai/blogs/on-paperclip-and-open-source.\""
+      ],
+      "hq_location": {
+       "notes": "Y Combinator's profile identifies San Francisco as the company's location.",
+       "value": {
+        "city": "San Francisco",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive"
+       ]
+      },
+      "public_docs": {
+       "notes": "The public documentation site contains multiple documentation articles, including quickstart, API, SDK, CLI, and managed-agent documentation.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/docs"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The Series A was announced August 6, 2026, within the 18-month window preceding November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company"
+       ]
+      },
+      "founded_year": {
+       "notes": "Y Combinator lists the company as founded in 2025.",
+       "value": 2025,
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive"
+       ]
+      },
+      "last_funding": {
+       "notes": "TechCrunch reported the $28.5 million Series A on August 6, 2026.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Series A",
+        "amount_usd": 28500000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The blog index lists the launch post “Music: your agent writes an original song from a prompt,” dated November 2, 2026, inside the six-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/blogs"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public pricing page lists Standard and Pro plans with monthly prices, as well as a custom plan.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "Y Combinator's company profile lists 12 team members.",
+       "value": "11-20",
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The current job board lists open roles but none is an SDR, BDR, sales/business development representative, or account executive position.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive/jobs"
+       ]
+      },
+      "model_provider": {
+       "notes": "The Managed Agents post names GLM-5.2 as the model used in its benchmark arms. The public material reviewed does not establish a single provider used for all customer agent sessions.",
+       "value": "GLM-5.2",
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/blogs/introducing-naive-managed-agents"
+       ]
+      },
+      "named_customers": {
+       "notes": "I found no verifiable named customers on the company pages or in the press coverage reviewed; published examples describe types of businesses rather than identifying customer organizations.",
+       "value": [],
+       "status": "unknown",
+       "citations": []
+      },
+      "ai_ml_roles_open": {
+       "notes": "The current job board lists roles including technical staff for Agents and RL, growth engineering, and video editing, but none has a title matching the specified AI/ML/data-science role terms.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive/jobs"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The privacy page was checked and names no SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS certification.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/privacy"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The public docs were reviewed, but they do not identify a specific CRM or sales/marketing system by name. Generic references to a CRM do not identify a product.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/docs"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "The homepage describes the service as infrastructure for agents to autonomously operate businesses and invites users to deploy company templates.",
+       "value": "Naïve provides infrastructure and deployable company templates that let teams of AI agents autonomously operate businesses.",
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/"
+       ]
+      },
+      "timeTakenInSeconds": "122.06",
+      "totalCreditsCharged": 0.4,
+      "leadership_change_12mo": {
+       "notes": "I did not find a sufficiently complete team page or a dated, verifiable announcement/profile establishing a C-level or VP-level join or departure during the period.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "usenaive.ai",
+  "status": "complete",
+  "result": {
+   "claygent-auto-A": {
+    "eng_blog": {
+     "notes": "The blog index lists one Engineering-category post; other entries are launches, guides, or comparisons, so it does not meet the threshold of at least two technical engineering posts.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/blogs"
+     ]
+    },
+    "reasoning": "Core company facts were corroborated by the official site, its documentation and dated blog posts, Y Combinator's profile and live job board, and TechCrunch's dated funding report. The profile gives 12 employees, a San Francisco location, and a 2025 founding year; the current board has no qualifying AI/ML or SDR/AE title. Public pricing, docs, funding, and a recent product launch are directly documented. Customer names and leadership changes remain unknown because sources reviewed did not establish them. The GLM-5.2 reference is specifically in a benchmark context, not evidence that all customer agents use that model.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Searched Google with query \"site:usenaive.ai Naive AI company product\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naive docs\",\"link\":\"https://usenaive.ai/docs\",\"displayedLink\":\"https://usenaive.ai › Get started › Naive docs\",\"snippet\":\"Naive Managed Agents is a managed agent platform: you define an agent — mo...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/\",\"question\":\"Find company product description, navigation/footer links for pricing docs careers customers security, any location/founding or team information.\"}. The results are: \n \"Naïve (naïve, Inc.) builds environments and infrastructure for AI agents to run entire businesses end-to-end, including autonomous company templates, multi-agent orchestration, connected tools, real-world identities/actions, and code-governed budgets/tool policies. Tagline: “Infrastructure that lets agents autonomously operate businesses.”\\n\\nProduct/company details: Deployable autonomous company templates include Short Form, Long Form, Clipping, AI Music Channel, AI Influencer, AI Automation A...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs\",\"question\":\"List blog posts with dates/titles, identify latest launch announcements and any technical engineering articles.\"}. The results are: \n \"Blog posts shown:\\n\\nLaunches (latest first):\\n- November 2, 2026 — “Music: your agent writes an original song from a prompt”\\n- October 17, 2026 — “3D assets: generate a model for your video, build a part with code”\\n- October 6, 2026 — “Product Changelog: Week of 9/29” — https://usenaive.ai/blogs/product-changelog-week-of-9-29\\n- October 6, 2026 — “Introducing Social Data: Public Social Media for Every Agent” — https://usenaive.ai/blogs/introducing-social-data\\n- October 6, 2026 — “Introducin...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/docs\",\"question\":\"Find documentation articles, AI model providers named, integrations or CRM systems.\"}. The results are: \n \"Documentation articles: Overview — https://usenaive.ai/docs; Quickstart — https://usenaive.ai/docs/quickstart; How Naive Managed Agents works — https://usenaive.ai/docs/how-managed-agents-is-built; Agent — https://usenaive.ai/docs/capabilities/agent; Managed Agents — https://usenaive.ai/docs/concepts/agents; API Reference — https://usenaive.ai/docs/api/overview; SDK Reference (TypeScript) — https://usenaive.ai/docs/sdk/typescript; CLI Reference — https://usenaive.ai/docs/cli/overview; Messages-...",
+     "Searched Google with query \"Naïve usenaive.ai funding Relixir employees headquarters founded\". The results are: \n {\"search_results\":[{\"title\":\"Naïve: Autonomous Company Infrastructure\",\"link\":\"https://www.ycombinator.com/companies/naive\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive\",\"snippet\":\"Founded in 2025 by Sean Dorje and Dennis Zax, Naïve has 12 employees based in San Francisco. Naïve is an AI research lab building autonomous companies. Active ...\",\"position\":1},{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve i...",
+     "Searched Google with query \"site:usenaive.ai careers jobs Naive AI SDR engineer\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"usenaive.ai customers case study Naive\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"naïve (@usenaive) / X\",\"link\":\"https://x.com/usenaive?lang=en\",\"displayedLink\":\"15.5K+ followers\",\"snippet\":\"Naïve has raised a $28.5 million Series A to build the infrastructure AI agents need to run entire businesses. d...",
+     "Searched Google with query \"site:usenaive.ai security SOC 2 ISO HIPAA privacy subprocessor model provider\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/pricing\",\"question\":\"What pricing details/plans are shown? Cite page content.\"}. The results are: \n \"Pricing page: https://usenaive.ai/pricing\\n\\n- Free trial: $0 for 7 days; includes $10 credit; Standard features; card required; cancel before day 7 to avoid charge; then $20/mo Standard. One trial per organization/person, Standard only.\\n- Standard: $20/month per company, including $20 monthly credit; pay-as-you-go/top up for additional usage; no per-seat fee; MCP, SDK, and CLI not metered.\\n- Pro: $200/month, including $200 monthly credit; same published rates after included credit; pay-as-yo...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/privacy\",\"question\":\"Find named AI model/subprocessor providers and certifications such as SOC 2, ISO, HIPAA, GDPR, PCI.\"}. The results are: \n \"No named AI model/subprocessor providers or certifications (SOC 2, ISO, HIPAA, GDPR, PCI) are identified. The policy only refers generically to hosting, payment-processing, analytics, and AI model providers (Sections 5.1–5.2). Security measures include encryption in transit/at rest, access controls, and regular security assessments (Section 8). International transfers use Standard Contractual Clauses and adequacy decisions (Section 10). Privacy policy: https://usenaive.ai/privacy; Terms: https:...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/terms\",\"question\":\"Find entity/founding/headquarters information and any compliance claims.\"}. The results are: \n \"Entity: naïve (usenaive.ai); GitHub: https://github.com/usenaive. Relevant compliance/legal links: Terms (https://usenaive.ai/terms), Privacy Policy (https://usenaive.ai/privacy), Open Source Licenses (https://usenaive.ai/licenses). No founding date, headquarters, or specific compliance claims provided. Contact: https://cal.com/seandorjeceo/15min; phone: +1 251-575-2126.\"",
+     "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/naive\",\"question\":\"Find employee count, headquarters, founded year, founders, customers and funding details.\"}. The results are: \n \"Naïve — YC Spring 2025, Active. Employee/team count: 12. Headquarters/location: San Francisco. Founded: 2025. Founders: Sean Dorje (Founder/CEO) and Dennis Zax (Founder/CTO). Customers: No specific customer names or count disclosed; product serves new and existing businesses, including businesses using CRM, codebase, Shopify, or Notion. Funding: TechCrunch reports Naïve raised $28.5M (Aug. 6, 2026): https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-an...",
+     "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company\",\"question\":\"What amount, stage, and date was Naive's latest funding round?\"}. The results are: \n \"Naïve raised $28.5 million in a Series A funding round, announced August 6, 2026. Source: https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company\"",
+     "Searched Google with query \"site:usenaive.ai/businesses customer \"case study\" Naïve customer company results\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:usenaive.ai/jobs OR site:usenaive.ai/careers Naive jobs\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"usenaive.ai compliance security SOC 2 Naive AI\". The results are: \n {\"search_results\":[{\"title\":\"SOC 2 Compliance in the Age of AI: A Practical Guide\",\"link\":\"https://userfront.com/blog/soc-2-ai-compliance\",\"displayedLink\":\"https://userfront.com › blog › soc-2-ai-compliance\",\"snippet\":\"In this guide, we will cover the five pillars of SOC 2 compliance and how they relate to artificial intelligence.\",\"date\":\"Feb 13, 2025\",\"position\":1},{\"title\":\"SOC 2 for AI Startups (2026): Requirements & Fast Track\",\"link\":\"https://getsecureslate.com/blog/soc-2-for-ai-startups-w...",
+     "Searched Google with query \"site:usenaive.ai/blogs \"engineering\" Naïve engineering technical infrastructure posts\". The results are: \n {\"search_results\":[{\"title\":\"Attribution, MIT, and What We Actually Build | naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/blogs/on-paperclip-and-open-source\",\"displayedLink\":\"https://usenaive.ai › on-paperclip-and-open-source\",\"snippet\":\"EngineeringApril 8, 2026·Updated September 7, 2026·7 min read. Naïve and Paperclip: Attribution, MIT, and What We Actually Build. How Naïve ...\",\"date\":\"Apr 8, 2026\",\"position\":1},{\"title\":\"Blog | naïve\",\"link\":\"https://usenaive.ai/blogs\",\"displayedLink\":\"htt...",
+     "Searched Google with query \"Naive usenaive.ai customers customer case studies names autonomous company\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naïve: Autonomous Company Infrastructure\",\"link\":\"https://www.ycombinator.com/companies/naive\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive\",\"snippet\":\"Naïve is an AI research ...",
+     "Searched Google with query \"site:linkedin.com/jobs Naive usenaive.ai jobs AI ML sales\". The results are: \n {\"search_results\":[{\"title\":\"Founding Research Engineer at 60x - Jobs\",\"link\":\"https://uk.linkedin.com/jobs/view/founding-research-engineer-at-60x-4409459702\",\"displayedLink\":\"https://uk.linkedin.com › jobs › view\",\"snippet\":\"Founding Research Engineer at 60x. Full-time Entry level role. now score above 170 on IQ tests. Use naive RAG and retrieval breaks the moment the question gets ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.goog...",
+     "Searched Google with query \"Naïve usenaive.ai hiring jobs career 2026 SDR account executive\". The results are: \n {\"search_results\":[{\"title\":\"Sales development representative ai jobs\",\"link\":\"https://www.indeed.com/q-sales-development-representative-ai-jobs.html\",\"displayedLink\":\"https://www.indeed.com › q-sales-development-represe...\",\"snippet\":\"Browse 23661 Sales Development Representative Ai jobs. $70,000 - $80,000 a year … $20/hour base pay. Account Executive, $222,800 - $290,000 a year\",\"position\":1},{\"title\":\"Careers\",\"link\":\"https://sierra.ai/careers\",\"displayedLink\":\"https://sierra.ai › careers\",\"s...",
+     "Searched Google with query \"site:usenaive.ai/docs Salesforce HubSpot Shopify CRM integrations\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs/introducing-naive-managed-agents\",\"question\":\"Does this technical post name AI model providers, CRM/sales systems, or discuss implementation?\"}. The results are: \n \"The post names AI model providers/models: glm-5.2 (used in every benchmark arm), Claude Code, Codex, Hermes, and Pi. It mentions CRM/sales systems: a CRM OAuth connection (`crmAuth.id`) and an “Ava Sales” outbound SDR persona, but no specific CRM product is named. It discusses implementation extensively, including the Managed Agents harness, serverless durable runtime, completion windows, sandboxes/micro-VMs, identities/OAuth, vaults, budgets, API/CLI, SDK code examples, and deployment via `nai...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs\",\"question\":\"Does blog index have an engineering/technical category and how many relevant posts, and most recent launch with date?\"}. The results are: \n \"Blog index: 26 total posts; categories shown are Launch (12), Guide (12), Engineering (01), and Comparison (01). Engineering category contains 1 post: “Naïve and Paperclip: Attribution, MIT, and What We Actually Build” — April 8, 2026. Most recent Launch post: “Music: your agent writes an original song from a prompt” — November 2, 2026. Blog URL: https://usenaive.ai/blogs\"",
+     "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/naive/jobs\",\"question\":\"List all currently open roles and check whether any are AI/ML/data science titles or SDR/BDR/account executive/sales representative titles.\"}. The results are: \n \"Naïve currently open roles:\\n- In-House Video Editor — Remote (US), $5K–$10K/month, 0.50%, 3+ years. https://ycombinator.com/companies/naive/jobs/MZLbwFK-in-house-video-editor\\n- Growth Engineer Intern — Mountain View, CA / Remote (US), $6K–$10K/month, any experience. https://ycombinator.com/companies/naive/jobs/cDWbl15-growth-engineer-intern\\n- Founding Member of Technical Staff – Agents — Mountain View, CA, $190K–$225K, 2%–4%, 3+ years. https://ycombinator.com/companies/naive/jobs/qOwzkq2-fou...",
+     "Searched Google with query \"site:usenaive.ai/docs \"model\" provider Anthropic OpenAI glm Naive managed agents\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:usenaive.ai \"customers\" \"Naïve\" \"agency\" client named\". The results are: \n {\"search_results\":[{\"title\":\"Market Research Agency | naïve\",\"link\":\"https://usenaive.ai/businesses/market-research-agency\",\"displayedLink\":\"https://usenaive.ai › Companies\",\"snippet\":\"What is an AI market research agency? It is a ready-made naïve company. One deploy hires an agent team and installs the default apps: a CRM for ...\",\"date\":\"6 days ago\",\"position\":1},{\"title\":\"Security Testing Agency | naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/businesses/security-agency\",\"displayedLink\":\"ht...",
+     "Searched Google with query \"\"Naïve\" usenaive.ai \"customer\" company customer name\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"... Naïve raises $28.5M Series A led by Nexus VP to build Agent-Run ... Testers use each client's live product as a real customer would, push on its ...\",\"position\":1},{\"title\":\"Primitives | naïve\",\"link\":\"https://usenaive.ai/primitives\",\"displayedLink\":\"https://usenaive.ai › primitives\",\"snippet\":\"Campaign resultshello@customer.io. Re: Invoice #1042billing@stripe.com. webhook...",
+     "Searched Google with query \"site:usenaive.ai/docs integrations Salesforce HubSpot Pipedrive\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs/on-paperclip-and-open-source\",\"question\":\"Does the company engineering blog have additional technical posts linked or named beyond this post?\"}. The results are: \n \"Beyond this post, the page names/links these potentially technical resources: “Naïve Managed Agents: The Most Efficient Managed Agent for Long Horizon Tasks” (Launch); “Hosted vs Bring-Your-Own Harness for AI Agents” (Guide); “How Managed Agents works” (described as explaining the harness, tools, and runtime layers); “naive CLI reference”; and “harness documentation.” Blog index: https://usenaive.ai/blogs. The post itself: https://usenaive.ai/blogs/on-paperclip-and-open-source.\""
+    ],
+    "hq_location": {
+     "notes": "Y Combinator's profile identifies San Francisco as the company's location.",
+     "value": {
+      "city": "San Francisco",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive"
+     ]
+    },
+    "public_docs": {
+     "notes": "The public documentation site contains multiple documentation articles, including quickstart, API, SDK, CLI, and managed-agent documentation.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/docs"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The Series A was announced August 6, 2026, within the 18-month window preceding November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company"
+     ]
+    },
+    "founded_year": {
+     "notes": "Y Combinator lists the company as founded in 2025.",
+     "value": 2025,
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive"
+     ]
+    },
+    "last_funding": {
+     "notes": "TechCrunch reported the $28.5 million Series A on August 6, 2026.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Series A",
+      "amount_usd": 28500000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The blog index lists the launch post “Music: your agent writes an original song from a prompt,” dated November 2, 2026, inside the six-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/blogs"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public pricing page lists Standard and Pro plans with monthly prices, as well as a custom plan.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "Y Combinator's company profile lists 12 team members.",
+     "value": "11-20",
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The current job board lists open roles but none is an SDR, BDR, sales/business development representative, or account executive position.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive/jobs"
+     ]
+    },
+    "model_provider": {
+     "notes": "The Managed Agents post names GLM-5.2 as the model used in its benchmark arms. The public material reviewed does not establish a single provider used for all customer agent sessions.",
+     "value": "GLM-5.2",
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/blogs/introducing-naive-managed-agents"
+     ]
+    },
+    "named_customers": {
+     "notes": "I found no verifiable named customers on the company pages or in the press coverage reviewed; published examples describe types of businesses rather than identifying customer organizations.",
+     "value": [],
+     "status": "unknown",
+     "citations": []
+    },
+    "ai_ml_roles_open": {
+     "notes": "The current job board lists roles including technical staff for Agents and RL, growth engineering, and video editing, but none has a title matching the specified AI/ML/data-science role terms.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive/jobs"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The privacy page was checked and names no SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS certification.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/privacy"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The public docs were reviewed, but they do not identify a specific CRM or sales/marketing system by name. Generic references to a CRM do not identify a product.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/docs"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "The homepage describes the service as infrastructure for agents to autonomously operate businesses and invites users to deploy company templates.",
+     "value": "Naïve provides infrastructure and deployable company templates that let teams of AI agents autonomously operate businesses.",
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/"
+     ]
+    },
+    "timeTakenInSeconds": "122.06",
+    "totalCreditsCharged": 0.4,
+    "leadership_change_12mo": {
+     "notes": "I did not find a sufficiently complete team page or a dated, verifiable announcement/profile establishing a C-level or VP-level join or departure during the period.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    }
+   }
+  }
+ }
+}

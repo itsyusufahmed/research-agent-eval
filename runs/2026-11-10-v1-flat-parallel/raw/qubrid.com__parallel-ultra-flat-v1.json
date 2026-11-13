@@ -1,0 +1,525 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e906597e267893b58",
+  "interaction_id": "trun_142119f6a1b4439e906597e267893b58",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "qubrid.com"
+  },
+  "created_at": "2026-11-10T18:49:01.129536Z",
+  "modified_at": "2026-11-10T18:58:49.924972Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e906597e267893b58",
+   "interaction_id": "trun_142119f6a1b4439e906597e267893b58",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "qubrid.com"
+   },
+   "created_at": "2026-11-10T18:49:01.129536Z",
+   "modified_at": "2026-11-10T18:58:49.924972Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Qubrid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/533112-58",
+       "excerpts": [
+        "Year Founded 2023"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Qubrid; website_url: https://qubrid.com; founded_year: 2023"
+       ]
+      }
+     ],
+     "reasoning": "The company profile states the year founded as 2023, and the Tracxn record for qubrid.com also lists founded_year 2023.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "FAQ - Qubrid AI",
+       "url": "https://www.qubrid.com/faq",
+       "excerpts": [
+        "Yes, we use enterprise-grade encryption in transit and at rest, strict access controls, SOC 2 compliance, and undergo regular security audits."
+       ]
+      },
+      {
+       "title": "Managed AI Inference & GPU Infrastructure Hosting | Qubrid AI | Qubrid AI Platform",
+       "url": "https://qubrid.com/hosting",
+       "excerpts": [
+        "Tier III+ Compliance SOC Type 2 Security 24/7"
+       ]
+      }
+     ],
+     "reasoning": "Qubrid's FAQ explicitly says it uses SOC 2 compliance; its hosting page separately uses the wording \u201cSOC Type 2.\u201d I report SOC 2 and do not infer other certifications.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Qubrid AI Funding: $250K Pre-Seed (Apr 2024) & Investors | VCBacked",
+       "url": "https://www.vcbacked.co/company/qubrid-ai",
+       "excerpts": [
+        "Qubrid AI is headquartered in Mclean, United States."
+       ]
+      },
+      {
+       "title": "Contact Us | Sales & Enterprise Support | Qubrid AI | Qubrid AI Platform",
+       "url": "https://www.qubrid.com/contact",
+       "excerpts": [
+        "1356 Beverly Rd, Ste 250, McLean, VA 22101 Our headquarters in the Washington, D.C. metro area."
+       ]
+      }
+     ],
+     "reasoning": "The company is identified as headquartered in the United States, and its contact page gives a McLean, Virginia headquarters address.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog | Qubrid AI",
+       "url": "https://qubrid.com/blog",
+       "excerpts": [
+        "The Ultimate Guide to Advanced AI Image Editing Workflow Using Qubrid AI's ComfyUI Template",
+        "Streamlining Your Development Process with Qubrid AI's Integrated Platform",
+        "Enterprise AI Solutions: Scaling Your Infrastructure with Qubrid AI"
+       ]
+      }
+     ],
+     "reasoning": "The blog index shows workflow guides, platform/product content, and enterprise-solution material, but the reviewed index did not show at least two posts by engineers explaining how Qubrid itself is built.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Introduction | Qubrid Documentation",
+       "url": "https://docs.platform.qubrid.com/",
+       "excerpts": [
+        "Qubrid provides a unified environment where developers, researchers, and enterprises can build, deploy, manage, and scale AI/ML workloads with ease.",
+        "Whether you are a **solo developer testing models** , a **researcher experimenting with new architectures** , or an **enterprise team scaling production AI workloads"
+       ]
+      }
+     ],
+     "reasoning": "The documentation describes a unified environment for developers, researchers, and enterprises to build, deploy, manage, and scale AI/ML workloads.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Qubrid AI",
+       "url": "https://content.pitchbook.com/profiles/company/533112-58",
+       "excerpts": [
+        "Employees: 16 (as of 2026-01-29)"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Qubrid; website_url: https://qubrid.com; founded_year: 2023; employee_count_official: 16"
+       ]
+      }
+     ],
+     "reasoning": "The cited records give an employee count of 16, which falls in the required 11-20 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "FAQ - Qubrid AI",
+       "url": "https://www.qubrid.com/faq",
+       "excerpts": [
+        "We support 30+ open-source models including LLaMA, Mistral, CodeLlama, Stable Diffusion, and many others."
+       ]
+      },
+      {
+       "title": "Now on Dify Marketplace: Qubrid AI Brings Multi-Model Access to Every Dify Workflow - Dify",
+       "url": "https://dify.ai/blog/now-on-dify-marketplace-qubrid-ai-brings-multi-model-access-to-every-dify-workflow",
+       "excerpts": [
+        "Install the Qubrid AI plugin on Dify to unlock unified access to DeepSeek, Kimi, Qwen, MiniMax, GLM, and more, all through one API key."
+       ]
+      }
+     ],
+     "reasoning": "Qubrid's FAQ names open-source models it supports, while the Dify Marketplace announcement lists additional models accessible through the Qubrid plugin. The sources describe a multi-model offering rather than one exclusive provider.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Qubrid AI Platform | Qubrid AI Platform",
+       "url": "https://qubrid.com/pricing",
+       "excerpts": [
+        "Simple, transparent pricing"
+       ]
+      }
+     ],
+     "reasoning": "Qubrid has a public page titled Pricing that presents its pricing information.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Qubrid Funding Rounds & Investors \u2014 $500K Raised | Premier Alternatives",
+       "url": "https://www.premieralts.com/companies/qubrid/funding-rounds",
+       "excerpts": [
+        "Jun 2024 Angel (individual) $250K \u25ae"
+       ]
+      },
+      {
+       "title": "Qubrid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/533112-58",
+       "excerpts": [
+        "|2\\. Angel (individual) |14-Jun-2024 | | | |Completed"
+       ]
+      }
+     ],
+     "reasoning": "A funding-round listing gives $250K for the June 2024 Angel round; PitchBook identifies the June 2024 Angel transaction as completed. The amount is from a secondary funding listing, so this field carries some source uncertainty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "More than a NeoCloud - The Unified Platform for GPUs & Open Models",
+       "url": "https://www.qubrid.com/",
+       "excerpts": [
+        "> \" Qubrid support, responsiveness and platform have helped us go to market faster than was previously possible with other Tier 1 HyperScalers. \" \u2014 **Dan Japa** , Chief Revenue Officer \u00b7 Lern.Law"
+       ]
+      },
+      {
+       "title": "Case Studies | Real-World AI Deployments | Qubrid AI | Qubrid AI Platform",
+       "url": "https://www.qubrid.com/case-studies",
+       "excerpts": [
+        "[Accelerating Cancer Research with NVIDIA GPUs ### Accelerating Cancer Research with NVIDIA GPUs How Chaitanya Bharathi Institute of Technology scaled advanced clinical image classification using NVIDIA GPUs on Qubrid AI Shubham Tribedi Shubham Tribedi \\+2](https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus?from=case-studies)"
+       ]
+      }
+     ],
+     "reasoning": "The homepage includes a customer testimonial attributed to Lern.Law, and Qubrid's case-study index names Chaitanya Bharathi Institute of Technology in a case study.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Qubrid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/533112-58",
+       "excerpts": [
+        "|2\\. Angel (individual) |14-Jun-2024 | | | |Completed"
+       ]
+      },
+      {
+       "title": "Qubrid Funding Rounds & Investors \u2014 $500K Raised | Premier Alternatives",
+       "url": "https://www.premieralts.com/companies/qubrid/funding-rounds",
+       "excerpts": [
+        "Jun 2024 Angel (individual) $250K \u25ae"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook dates the completed Angel transaction to June 14, 2024; the separate funding-round listing gives June 2024. The requested YYYY-MM value is therefore 2024-06.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "AI Techincal Marketing Associate with 1 - 3 Years of Experience at qubrid ai in India",
+       "url": "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078",
+       "excerpts": [
+        "Maintain and update CRM (HubSpot/Zoho)."
+       ]
+      }
+     ],
+     "reasoning": "A Qubrid AI job posting explicitly names HubSpot and Zoho in its CRM instruction.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "About Us | A Note From Our Founder | Qubrid AI | Qubrid AI Platform",
+       "url": "https://www.qubrid.com/about",
+       "excerpts": [
+        "A note from our founder",
+        "Pranay Prakash \u2014 Founder and CEO of Qubrid AI"
+       ]
+      },
+      {
+       "title": "Pranay Prakash",
+       "url": "https://linkedin.com/in/pranay-prakash-717542",
+       "excerpts": [
+        "Returned fields: {experience_text=\"Qubrid AI McLean, Virginia, United States 2024-04-01"
+       ]
+      }
+     ],
+     "reasoning": "The About page is a founder note listing Pranay Prakash, not a complete leadership roster. The retrieved CEO profile shows a Qubrid AI start date of 2024-04-01, outside the 12-month window, but the available evidence cannot establish a full leadership roster or departures; the answer is unknown.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Careers | Qubrid AI",
+       "url": "https://www.qubrid.com/careers/jobs",
+       "excerpts": [
+        "[Full Stack AI Engineer Remote Full time](https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6)"
+       ]
+      }
+     ],
+     "reasoning": "The current careers listing includes an open Full Stack AI Engineer position, which meets the title-based AI-role criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Qubrid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/533112-58",
+       "excerpts": [
+        "|2\\. Angel (individual) |14-Jun-2024 | | | |Completed",
+        "(Upcoming)"
+       ]
+      },
+      {
+       "title": "Qubrid Funding Rounds & Investors \u2014 $500K Raised | Premier Alternatives",
+       "url": "https://www.premieralts.com/companies/qubrid/funding-rounds",
+       "excerpts": [
+        "Jun 2024 Angel (individual) $250K \u25ae"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook lists the June 2024 Angel (individual) transaction as completed and marks the $25M Seed round as upcoming. A secondary listing reports a September 2026 Seed round without establishing that it closed, so the latest confirmed completed stage is Angel (individual).",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction | Qubrid Documentation",
+       "url": "https://docs.platform.qubrid.com/",
+       "excerpts": [
+        "Documentation Changelog Model Comparison API Reference",
+        "[Next Quickstart](https://docs.platform.qubrid.com/quickstart)"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation portal exposes multiple sections, including a changelog, model comparison, API reference, getting started, introduction, and quickstart.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Contact Us | Sales & Enterprise Support | Qubrid AI | Qubrid AI Platform",
+       "url": "https://www.qubrid.com/contact",
+       "excerpts": [
+        "1356 Beverly Rd, Ste 250, McLean, VA 22101"
+       ]
+      },
+      {
+       "title": "Qubrid AI Funding: $250K Pre-Seed (Apr 2024) & Investors | VCBacked",
+       "url": "https://www.vcbacked.co/company/qubrid-ai",
+       "excerpts": [
+        "Qubrid AI is headquartered in Mclean, United States."
+       ]
+      }
+     ],
+     "reasoning": "Qubrid's contact page gives a McLean, Virginia address, and a company profile explicitly identifies McLean as its headquarters city.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Now on Dify Marketplace: Qubrid AI Brings Multi-Model Access to Every Dify Workflow - Dify",
+       "url": "https://dify.ai/blog/now-on-dify-marketplace-qubrid-ai-brings-multi-model-access-to-every-dify-workflow",
+       "excerpts": [
+        "Written on Jul 17, 2026",
+        "Now on Dify Marketplace: Qubrid AI Brings Multi-Model Access to Every Dify Workflow",
+        "Install the Qubrid AI plugin on Dify to unlock unified access to DeepSeek, Kimi, Qwen, MiniMax, GLM, and more, all through one API key."
+       ]
+      }
+     ],
+     "reasoning": "The July 17, 2026 announcement says the Qubrid AI plugin is now on the Dify Marketplace and enables multi-model access, within the six months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Careers | Qubrid AI",
+       "url": "https://www.qubrid.com/careers/jobs",
+       "excerpts": [
+        "[GPU Kubernetes Cluster Engineer Remote Full time]",
+        "[Full Stack AI Engineer Remote Full time]"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists GPU Kubernetes Cluster Engineer and Full Stack AI Engineer roles; neither is an SDR, BDR, or account executive title.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Qubrid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/533112-58",
+       "excerpts": [
+        "|2\\. Angel (individual) |14-Jun-2024 | | | |Completed",
+        "(Upcoming)"
+       ]
+      },
+      {
+       "title": "Qubrid Funding Rounds & Investors \u2014 $500K Raised | Premier Alternatives",
+       "url": "https://www.premieralts.com/companies/qubrid/funding-rounds",
+       "excerpts": [
+        "Jun 2024 Angel (individual) $250K \u25ae"
+       ]
+      }
+     ],
+     "reasoning": "The latest confirmed completed round is dated June 2024, before the 18-month window beginning May 9, 2025. The $25M Seed round in PitchBook is explicitly marked upcoming, not completed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "FAQ - Qubrid AI",
+       "url": "https://www.qubrid.com/faq",
+       "excerpts": [
+        "Yes, we use enterprise-grade encryption in transit and at rest, strict access controls, SOC 2 compliance, and undergo regular security audits."
+       ]
+      }
+     ],
+     "reasoning": "The FAQ names SOC 2 compliance.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "More than a NeoCloud - The Unified Platform for GPUs & Open Models",
+       "url": "https://www.qubrid.com/",
+       "excerpts": [
+        "> \" Qubrid support, responsiveness and platform have helped us go to market faster than was previously possible with other Tier 1 HyperScalers. \" \u2014 **Dan Japa** , Chief Revenue Officer \u00b7 Lern.Law"
+       ]
+      }
+     ],
+     "reasoning": "The testimonial is attributed to Lern.Law's Chief Revenue Officer.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Case Studies | Real-World AI Deployments | Qubrid AI | Qubrid AI Platform",
+       "url": "https://www.qubrid.com/case-studies",
+       "excerpts": [
+        "[Accelerating Cancer Research with NVIDIA GPUs ### Accelerating Cancer Research with NVIDIA GPUs How Chaitanya Bharathi Institute of Technology scaled advanced clinical image classification using NVIDIA GPUs on Qubrid AI Shubham Tribedi Shubham Tribedi \\+2](https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus?from=case-studies)"
+       ]
+      }
+     ],
+     "reasoning": "The official case-study index names Chaitanya Bharathi Institute of Technology in a case study.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "AI Techincal Marketing Associate with 1 - 3 Years of Experience at qubrid ai in India",
+       "url": "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078",
+       "excerpts": [
+        "Maintain and update CRM (HubSpot/Zoho)."
+       ]
+      }
+     ],
+     "reasoning": "The Qubrid AI job post names HubSpot.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "AI Techincal Marketing Associate with 1 - 3 Years of Experience at qubrid ai in India",
+       "url": "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078",
+       "excerpts": [
+        "Maintain and update CRM (HubSpot/Zoho)."
+       ]
+      }
+     ],
+     "reasoning": "The Qubrid AI job post names Zoho.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2023.0,
+    "compliance_certs": [
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Qubrid provides developers, researchers, and enterprises a unified AI platform for building, deploying, managing, and scaling AI/ML workloads.",
+    "employee_band": "11-20",
+    "model_provider": "Qubrid publicly supports 30+ open-source models, including LLaMA, Mistral, CodeLlama, and Stable Diffusion; its Dify Marketplace plugin also lists DeepSeek, Kimi, Qwen, MiniMax, and GLM.",
+    "pricing_page": true,
+    "funding_amount_usd": 250000.0,
+    "named_customers": [
+     "Lern.Law",
+     "Chaitanya Bharathi Institute of Technology"
+    ],
+    "funding_date": "2024-06",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Zoho"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Angel (individual)",
+    "public_docs": true,
+    "hq_city": "McLean",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

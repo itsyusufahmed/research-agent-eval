@@ -1,0 +1,472 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea0d9a150b972b79c",
+  "interaction_id": "trun_142119f6a1b4439ea0d9a150b972b79c",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "verticalinsure.com"
+  },
+  "created_at": "2026-11-10T18:47:28.337781Z",
+  "modified_at": "2026-11-10T18:53:02.869517Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea0d9a150b972b79c",
+   "interaction_id": "trun_142119f6a1b4439ea0d9a150b972b79c",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "verticalinsure.com"
+   },
+   "created_at": "2026-11-10T18:47:28.337781Z",
+   "modified_at": "2026-11-10T18:53:02.869517Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Vertical Insure, Inc. Asset Profile | Preqin",
+       "url": "https://www.preqin.com/data/profile/asset/vertical-insure--inc-/529375",
+       "excerpts": [
+        "Vertical Insure, Inc. - overview Established 2022 Location Minneapolis, MN-Minnesota, US Primary Industry Insurance About Founded in 2022"
+       ]
+      }
+     ],
+     "reasoning": "Preqin explicitly states that Vertical Insure was founded in 2022: https://www.preqin.com/data/profile/asset/vertical-insure--inc-/529375.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Policy - Vertical Insure",
+       "url": "https://verticalinsure.com/legal/privacy-policy/",
+       "excerpts": [
+        "EU General Data Protection Regulation (GDPR) Compliance"
+       ]
+      }
+     ],
+     "reasoning": "The privacy policy explicitly names GDPR compliance: https://verticalinsure.com/legal/privacy-policy/. This records a public compliance claim, not independent certification. Generic PCI-compliant wording in the documentation was not expanded into a PCI DSS certification claim.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Vertical Insure | LinkedIn",
+       "url": "https://linkedin.com/company/vertical-insure",
+       "excerpts": [
+        "Minneapolis, MN, US"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies its headquarters location as Minneapolis, Minnesota, US: https://linkedin.com/company/vertical-insure.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "blog Archives - Vertical Insure",
+       "url": "https://verticalinsure.com/blog",
+       "excerpts": [
+        "[Why Surety Bonds Belong Inside Legal Platforms](https://verticalinsure.com/blog/surety-bonds-inside-legal-platforms/)",
+        "Why Builder\u2019s Risk Insurance Still Feels Outdated Residential construction software has modernized nearly every part of the build process."
+       ]
+      },
+      {
+       "title": "Insights - Vertical Insure",
+       "url": "https://verticalinsure.com/insights",
+       "excerpts": [
+        "Explore expert insights, industry trends, product strategy, and practical guidance for software platforms"
+       ]
+      }
+     ],
+     "reasoning": "The blog and Insights indexes present insurance, industry and product-strategy content, rather than at least two engineer-authored posts explaining how the product is built: https://verticalinsure.com/blog and https://verticalinsure.com/insights.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Inside Sales Representative",
+       "url": "https://ats.rippling.com/vertical-insure/jobs/6a7390f3-bc79-4471-bb5f-8311ca434398",
+       "excerpts": [
+        "Vertical Insure is a leading embedded insurance platform built for vertical SaaS platforms. We help software platforms offer customized insurance solutions to each business and its customers by creating new revenue streams and value without added complexity."
+       ]
+      },
+      {
+       "title": "Protection, Built Into Your Platform - Vertical Insure",
+       "url": "https://verticalinsure.com/",
+       "excerpts": [
+        "Vertical Insure gives software platforms everything needed to launch and scale embedded protection, from implementation and optimization to insurance operations, claims, and customer support."
+       ]
+      }
+     ],
+     "reasoning": "The company describes an embedded-insurance platform for vertical SaaS, including implementation, insurance operations, claims and support: https://verticalinsure.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Vertical Insure Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/vertical-insure/638f49db19e0e0895b2b596e",
+       "excerpts": [
+        "Minus sign icon Plus sign icon As of October 2026 , Vertical Insure has approximately 52 employees"
+       ]
+      }
+     ],
+     "reasoning": "LeadIQ reports approximately 52 employees as of October 2026, placing the company in the 51-100 band: https://leadiq.com/c/vertical-insure/638f49db19e0e0895b2b596e.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Vertical Insure transforms risk assessment with AI-powered location intelligence",
+       "url": "https://tsw.blankmetal.ai/p/vertical-insure-transforms-risk-assessment",
+       "excerpts": [
+        "Blank Metal partnered with Vertical Insure to rebuild their location intelligence system from the ground up using OpenAI models."
+       ]
+      }
+     ],
+     "reasoning": "Implementation partner Blank Metal publicly states that it rebuilt Vertical Insure\u2019s location-intelligence system using OpenAI models: https://tsw.blankmetal.ai/p/vertical-insure-transforms-risk-assessment. This is partner-published implementation evidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Protection, Built Into Your Platform - Vertical Insure",
+       "url": "https://verticalinsure.com/",
+       "excerpts": [
+        "Product [Platform Overview](https://verticalinsure.com/vi-platform/) [Developer Docs](https://docs.verticalinsure.com/) [ViCoverage](https://vicoverage.com/) Company [About Vi](https://verticalinsure.com/company/) [Careers](https://verticalinsure.com/careers/) Resources [The Hidden Growth Lever](https://verticalinsure.com/hidden-growth-lever-for-vertical-saas/) [News](https://verticalinsure.com/news/) [Insights](https://verticalinsure.com/insights/) [Partner Stories"
+       ]
+      },
+      {
+       "title": "Contact Us - Vertical Insure",
+       "url": "https://verticalinsure.com/contact-us/",
+       "excerpts": [
+        "partner with us Let\u2019s build protection into your platform. Tell us about your platform and we\u2019ll show you how built-in coverage becomes a new layer of revenue, trust, and differentiation for your customers. 10 2nd Street NE #103 Minneapolis, MN 55413 [Contact Us](https://verticalinsure.com/contact-us/)"
+       ]
+      }
+     ],
+     "reasoning": "No pricing link appears in the company website\u2019s navigation/footer, the conventional pricing URL yielded no page, and the sales destination is an enquiry page without plans or prices: https://verticalinsure.com/ and https://verticalinsure.com/contact-us/. A third-party G2 pricing listing exists, but no company-hosted pricing page was found.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Vertical Insure 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/515799-28",
+       "excerpts": [
+        "|3\\. Later Stage VC (Series A1) |17-Aug-2026 |$21M |"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook lists the latest completed round at $21 million, equivalent to USD 21,000,000: https://pitchbook.com/profiles/company/515799-28.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Goodshuffle Optimizes Liability Coverage with Vertical Insure",
+       "url": "https://verticalinsure.com/partner-stories/goodshuffle-event-host-liability",
+       "excerpts": [
+        "Goodshuffle, an event rental software company, partnered with Vertical insure to embed event host liability insurance and rental coverage insurance that rental companies can offer their customers. The result: fewer coverage gaps, a higher conversion rate, and increased monthly recurring revenue."
+       ]
+      },
+      {
+       "title": "How MySlabs & Vertical Insure Built a Unique Embedded Solution",
+       "url": "https://verticalinsure.com/partner-stories/partner-story-how-myslabs-and-vertical-insure-built-a-unique-insurance-solution-designed-for-collectibles",
+       "excerpts": [
+        "[MySlabs,](https://myslabs.com/) a leading peer-to-peer marketplace for sports cards, comics, coins, and other collectible items, partnered with Vertical Insure to embed Shipping Protection directly into their platform. **The result?** Seamless seller protection, reduced risk, faster claims processing, and a stronger foundation of trust within a growing community of over 77,000 passionate collectors."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s case studies describe Goodshuffle and MySlabs actually implementing its embedded-insurance products, rather than merely appearing as investors or general partners. Sources: https://verticalinsure.com/partner-stories/goodshuffle-event-host-liability and https://verticalinsure.com/partner-stories/partner-story-how-myslabs-and-vertical-insure-built-a-unique-insurance-solution-designed-for-collectibles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Vertical Insure 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/515799-28",
+       "excerpts": [
+        "|3\\. Later Stage VC (Series A1) |17-Aug-2026 |"
+       ]
+      },
+      {
+       "title": "Vertical Insure Secures New Funding from Updata Partners",
+       "url": "https://verticalinsure.com/news/vertical-insure-secures-investment-from-updata-partners",
+       "excerpts": [
+        "August 4, 2026"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook dates the latest round August 17, 2026; the company\u2019s financing announcement was published August 4, 2026. Both support the requested month, 2026-08: https://pitchbook.com/profiles/company/515799-28 and https://verticalinsure.com/news/vertical-insure-secures-investment-from-updata-partners.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive",
+       "url": "https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2",
+       "excerpts": [
+        "Maintain accurate records of all sales activities in HubSpot CRM"
+       ]
+      },
+      {
+       "title": "Events and Campaign Marketing Specialist",
+       "url": "https://ats.rippling.com/vertical-insure/jobs/fe1af864-9229-409d-8ba5-a25c800ce91d",
+       "excerpts": [
+        "Tag and organize campaign assets in HubSpot's Campaigns tool so results roll up correctly."
+       ]
+      }
+     ],
+     "reasoning": "Sales responsibilities explicitly require recording activity in HubSpot CRM, and marketing responsibilities use HubSpot\u2019s Campaigns tool: https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2 and https://ats.rippling.com/vertical-insure/jobs/fe1af864-9229-409d-8ba5-a25c800ce91d. Salesforce was excluded because it appeared only as an example of prior CRM experience.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Ryan Kasprzak",
+       "url": "https://linkedin.com/in/ryan-kasprzak",
+       "excerpts": [
+        "Role: Chief Underwriting Officer @ Vertical Insure.",
+        "Returned fields: {experience_text='Vertical Insure Minnesota, United States 2026-04-01 Chief Underwriting Officer"
+       ]
+      }
+     ],
+     "reasoning": "Ryan Kasprzak\u2019s profile records his Chief Underwriting Officer role at Vertical Insure beginning in April 2026, within the preceding 12 months: https://linkedin.com/in/ryan-kasprzak.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Vertical Insure",
+       "url": "https://ats.rippling.com/vertical-insure/jobs",
+       "excerpts": [
+        "9 roles across all departments in all locations",
+        "Product [Sr. Product Manager](https://ats.rippling.com/vertical-insure/jobs/2bbe1cb4-7411-4219-828b-d54fa6b665bb) Product Minneapolis, MN View job",
+        "[Vice President, Partner Implementation](https://ats.rippling.com/vertical-insure/jobs/c9358eb9-8bb6-4e19-82e5-1f6b7150b9ab) Customer Success Minneapolis, MN View job",
+        "[Head of Strategic Accounts & Growth](https://ats.rippling.com/vertical-insure/jobs/86d18cce-c9b0-42bb-90af-dabaf06d3227) Customer Success Minneapolis, MN View job",
+        "Customer Success [Account Manager - Sports Vertical](https://ats.rippling.com/vertical-insure/jobs/a2dbd10a-f4c6-4507-bbb5-f464ed4a2769) Customer Success Minneapolis, MN View job",
+        "[Inside Sales Manager](https://ats.rippling.com/vertical-insure/jobs/dc6b245d-f097-4ce3-b5f9-469251496a3d) Sales Minneapolis, MN View job",
+        "Marketing [Events and Campaign Marketing Specialist](https://ats.rippling.com/vertical-insure/jobs/fe1af864-9229-409d-8ba5-a25c800ce91d) Marketing Minneapolis, MN View job",
+        "[Inside Sales Representative](https://ats.rippling.com/vertical-insure/jobs/6a7390f3-bc79-4471-bb5f-8311ca434398) Sales Minneapolis, MN View job",
+        "Sales [Client Development Representative (CDR)](https://ats.rippling.com/vertical-insure/jobs/ea3e3ea6-1804-47fa-a62d-7429cd98159f) Sales Minneapolis, MN View job",
+        "[Enterprise Account Executive](https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2) Sales Minneapolis, MN View job"
+       ]
+      }
+     ],
+     "reasoning": "The job board lists nine openings across all departments and locations. None of the nine titles is an AI, ML or data-science role under the requested title criteria: https://ats.rippling.com/vertical-insure/jobs.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Vertical Insure 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/515799-28",
+       "excerpts": [
+        "|3\\. Later Stage VC (Series A1)"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook labels the latest completed financing as Later Stage VC, Series A1: https://pitchbook.com/profiles/company/515799-28.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Quick Start",
+       "url": "https://docs.verticalinsure.com/",
+       "excerpts": [
+        "[Documentation](https://docs.verticalinsure.com/) [API Reference]",
+        "[Quick Start](https://docs.verticalinsure.com/) [Authentication](https://docs.verticalinsure.com/authentication) [Testing & Debugging]"
+       ]
+      }
+     ],
+     "reasoning": "The public developer site provides documentation and API reference, with separate Quick Start, Authentication, Testing & Debugging, Payments and other articles: https://docs.verticalinsure.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Careers - Vertical Insure",
+       "url": "https://verticalinsure.com/careers",
+       "excerpts": [
+        "Minneapolis Headquarters"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s careers page explicitly identifies its Minneapolis headquarters: https://verticalinsure.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "EstateMin and Vertical Insure Bring Probate Bonds Inside Estate Administration Software - Vertical Insure",
+       "url": "https://verticalinsure.com/news/estatemin-and-vertical-insure-bring-probate-bonds-inside-estate-administration-software",
+       "excerpts": [
+        "October 23, 2026",
+        "Law firms can now quote, buy, and file probate bonds through an embedded insurance integration within EstateMin, removing a step that used to take days of back-and-forth."
+       ]
+      }
+     ],
+     "reasoning": "On October 23, 2026, the company announced an embedded probate-bond integration enabling law firms to quote, buy and file bonds within EstateMin. This is a substantive launch within the six-month window: https://verticalinsure.com/news/estatemin-and-vertical-insure-bring-probate-bonds-inside-estate-administration-software.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive",
+       "url": "https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2",
+       "excerpts": [
+        "Enterprise Account Executive"
+       ]
+      }
+     ],
+     "reasoning": "A live Enterprise Account Executive posting meets the requested hiring criterion: https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Vertical Insure Secures New Funding from Updata Partners",
+       "url": "https://verticalinsure.com/news/vertical-insure-secures-investment-from-updata-partners",
+       "excerpts": [
+        "August 4, 2026",
+        "Vertical Insure secures a new investment from Updata Partners to advance embedded insurance for vertical SaaS. MINNEAPOLIS, MN, UNITED STATES, August 4, 2026 \u2014 [Vertical Insure](https://verticalinsure.com/) , the leader in [embedded insurance](https://verticalinsure.com/what-is-embedded-insurance/) for vertical SaaS, today announced new financing led by [Updata Partners."
+       ]
+      }
+     ],
+     "reasoning": "The company announced new financing led by Updata Partners on August 4, 2026, within the preceding 18 months: https://verticalinsure.com/news/vertical-insure-secures-investment-from-updata-partners.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Privacy Policy - Vertical Insure",
+       "url": "https://verticalinsure.com/legal/privacy-policy/",
+       "excerpts": [
+        "EU General Data Protection Regulation (GDPR) Compliance"
+       ]
+      }
+     ],
+     "reasoning": "GDPR compliance is explicitly named in the company\u2019s privacy policy: https://verticalinsure.com/legal/privacy-policy/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Goodshuffle Optimizes Liability Coverage with Vertical Insure",
+       "url": "https://verticalinsure.com/partner-stories/goodshuffle-event-host-liability",
+       "excerpts": [
+        "Goodshuffle, an event rental software company, partnered with Vertical insure to embed event host liability insurance and rental coverage insurance that rental companies can offer their customers. The result: fewer coverage gaps, a higher conversion rate, and increased monthly recurring revenue."
+       ]
+      }
+     ],
+     "reasoning": "The case study describes Goodshuffle implementing Vertical Insure\u2019s event-host liability and rental coverage products: https://verticalinsure.com/partner-stories/goodshuffle-event-host-liability.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "How MySlabs & Vertical Insure Built a Unique Embedded Solution",
+       "url": "https://verticalinsure.com/partner-stories/partner-story-how-myslabs-and-vertical-insure-built-a-unique-insurance-solution-designed-for-collectibles",
+       "excerpts": [
+        "[MySlabs,](https://myslabs.com/) a leading peer-to-peer marketplace for sports cards, comics, coins, and other collectible items, partnered with Vertical Insure to embed Shipping Protection directly into their platform. **The result?** Seamless seller protection, reduced risk, faster claims processing, and a stronger foundation of trust within a growing community of over 77,000 passionate collectors."
+       ]
+      }
+     ],
+     "reasoning": "The case study describes MySlabs embedding Vertical Insure\u2019s Shipping Protection into its marketplace: https://verticalinsure.com/partner-stories/partner-story-how-myslabs-and-vertical-insure-built-a-unique-insurance-solution-designed-for-collectibles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive",
+       "url": "https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2",
+       "excerpts": [
+        "Maintain accurate records of all sales activities in HubSpot CRM"
+       ]
+      }
+     ],
+     "reasoning": "The sales posting explicitly requires maintaining records in HubSpot CRM: https://ats.rippling.com/vertical-insure/jobs/8e7b1129-3c07-48fb-a596-4d304046c9c2.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Vertical Insure helps vertical SaaS platforms embed customized insurance into their customer experience, providing implementation, insurance operations, claims and customer support.",
+    "employee_band": "51-100",
+    "model_provider": "OpenAI",
+    "pricing_page": false,
+    "funding_amount_usd": 21000000.0,
+    "named_customers": [
+     "Goodshuffle",
+     "MySlabs"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A1",
+    "public_docs": true,
+    "hq_city": "Minneapolis",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

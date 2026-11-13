@@ -1,0 +1,489 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e97635982c9a70c8e",
+  "interaction_id": "trun_142119f6a1b4439e97635982c9a70c8e",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "horizon3.ai"
+  },
+  "created_at": "2026-11-10T18:47:48.563917Z",
+  "modified_at": "2026-11-10T18:49:01.755608Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e97635982c9a70c8e",
+   "interaction_id": "trun_142119f6a1b4439e97635982c9a70c8e",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "horizon3.ai"
+   },
+   "created_at": "2026-11-10T18:47:48.563917Z",
+   "modified_at": "2026-11-10T18:49:01.755608Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "The Team | Horizon3",
+       "url": "https://horizon3.ai/about-us",
+       "excerpts": [
+        "Founded in 2019, Horizon3 is headquartered in San Francisco, CA, and 100% made in the USA."
+       ]
+      }
+     ],
+     "reasoning": "The company about page states it was founded in 2019.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Horizon3.ai",
+       "url": "https://trust.horizon3.ai/?requestAccessOpen=true&requestedResources=65ea66396af50d8aa7bb5fc8",
+       "excerpts": [
+        "Compliance SOC 2 Type II GDPR CMMC 2.0"
+       ]
+      }
+     ],
+     "reasoning": "The trust center names SOC 2 Type II and GDPR among its compliance credentials; CMMC is not in the requested list.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Horizon3.ai | Company Overview & News",
+       "url": "https://www.forbes.com/companies/horizon3ai",
+       "excerpts": [
+        "As of March 2026 Industry Security Founded 2019 Headquarters San Francisco, California Country/Territory United States"
+       ]
+      }
+     ],
+     "reasoning": "The company overview gives its headquarters in San Francisco, California, and identifies the country as the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Category: Attack Blogs | Horizon3.ai",
+       "url": "https://horizon3.ai/category/attack-research/attack-blogs",
+       "excerpts": [
+        "Attack Blogs (82)"
+       ]
+      },
+      {
+       "title": "AhsayCBS Auth Bypass & RCE: CVE Analysis | Horizon3",
+       "url": "https://horizon3.ai/attack-research/attack-blogs/ahsaycbs-cve-2026-105133-cve-2026-105134-technical-analysis",
+       "excerpts": [
+        "[Attack Blogs](https://horizon3.ai/category/attack-research/attack-blogs/)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index is the Attack Blogs category, and the cited example is a CVE/authentication-bypass analysis rather than a post about how the product is built. The available blog evidence does not establish an engineering blog meeting the stated threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "The NodeZero Platform | Horizon3.ai",
+       "url": "https://horizon3.ai/product/nodezero",
+       "excerpts": [
+        "NodeZero transforms how organizations secure their environments by running unlimited pentests that uncover exploitable paths, guide remediation, and immediately verify that your fixes are effective."
+       ]
+      },
+      {
+       "title": "Testimonials | Horizon3",
+       "url": "https://horizon3.ai/testimonials",
+       "excerpts": [
+        "Discover how security professionals use NodeZero to identify real, exploitable risks, cut through the noise, and strengthen their security posture. Hear real-world testimonials from teams that trust our autonomous pentesting platform to stay ahead of threats."
+       ]
+      }
+     ],
+     "reasoning": "The product page says NodeZero runs pentests to find exploitable paths, guide remediation, and verify fixes; the testimonials page identifies security professionals as its users.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Horizon3.ai Funding History: $510.0M | Indexed.vc",
+       "url": "https://indexed.vc/companies/horizon3ai",
+       "excerpts": [
+        "Employees 201\u2013500 Founded 2019"
+       ]
+      },
+      {
+       "title": "Horizon3.ai | LinkedIn",
+       "url": "https://linkedin.com/company/64735114",
+       "excerpts": [
+        "Industry Computer and Network Security Company size 501-1,000 employees Headquarters San Francisco, CA Type Privately Held Founded 2019"
+       ]
+      }
+     ],
+     "reasoning": "Indexed.vc reports an employee band of 201\u2013500, which matches an allowed answer band. LinkedIn reports 501\u20131,000, so sources conflict and this selection is uncertain.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI at Horizon3 | Horizon3",
+       "url": "https://horizon3.ai/ai-in-horizon3-ai",
+       "excerpts": [
+        "NodeZero doesn't train foundation models. Instead, it builds deeply structured prompts from live data and runs inference against select models hosted in AWS Bedrock. This keeps results accurate, token costs low, and performance consistent as better models emerge."
+       ]
+      }
+     ],
+     "reasoning": "Horizon3 says NodeZero runs inference against select models hosted in AWS Bedrock.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "NodeZero Packages: Flex, Core, Pro, and Elite | Horizon3",
+       "url": "https://horizon3.ai/use-case/pricing",
+       "excerpts": [
+        "Autonomous Pentesting",
+        "$50"
+       ]
+      }
+     ],
+     "reasoning": "The public NodeZero Packages page presents product packages and pricing amounts, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Horizon3 Raises $250M Series E at $2B+ Valuation | Horizon3",
+       "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era",
+       "excerpts": [
+        "NightDragon and NEA Co-Lead Oversubscribed Round; Company triples valuation and surpasses 7,000 customers amid 120% ARR growth_ **SAN FRANCISCO \u2014 August 3, 2026** \u2014 Horizon3, the AI-Native Proactive Security Company behind NodeZero\u00ae, the World's Best AI Hacker\u2122, today announced a $250 million Series E"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement identifies the latest round as a $250 million Series E.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Testimonials | Horizon3",
+       "url": "https://horizon3.ai/testimonials",
+       "excerpts": [
+        "JTI Cybersecurity [Case Study \u2192](https://horizon3.ai/customer-story/the-critical-role-of-autonomous-penetration-testing-in-strengthening-defense-in-depth/) Airiam Logo Airiam [Case Study \u2192](https://horizon3.ai/customer-story/airiam-turning-cyber-resilience-into-a-superpower/) F12 Logo F12.net"
+       ]
+      }
+     ],
+     "reasoning": "The customer/testimonial page displays JTI Cybersecurity, Airiam, and F12.net as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Horizon3 Raises $250M Series E at $2B+ Valuation | Horizon3",
+       "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era",
+       "excerpts": [
+        "August 3, 2026",
+        "NightDragon and NEA Co-Lead Oversubscribed Round; Company triples valuation and surpasses 7,000 customers amid 120% ARR growth_ **SAN FRANCISCO \u2014 August 3, 2026** \u2014 Horizon3, the AI-Native Proactive Security Company behind NodeZero\u00ae, the World's Best AI Hacker\u2122, today announced a $250 million Series E"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement is dated August 3, 2026, and identifies the $250 million Series E; the requested YYYY-MM date is 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Trust Center - Horizon3.ai",
+       "url": "https://trust.horizon3.ai/",
+       "excerpts": [
+        "Salesforce \u2022 CRM Platform"
+       ]
+      }
+     ],
+     "reasoning": "The trust center identifies Salesforce as the CRM platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Horizon3 Names Ellen Sundra Chief Customer Officer | Horizon3",
+       "url": "https://horizon3.ai/news/press-release/ellen-sundra-chief-customer-officer-horizon3",
+       "excerpts": [
+        "**SAN FRANCISCO, October 14, 2026** \u2014 [Horizon3 today announced the promotion of Ellen Sundra to Chief Customer Officer](https://horizon3.ai/about-us/) ."
+       ]
+      }
+     ],
+     "reasoning": "On October 14, 2026, Horizon3 announced Ellen Sundra\u2019s promotion to Chief Customer Officer, within the 12-month period.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Senior Machine Learning Engineer, Autonomous Defense @ Horizon3",
+       "url": "https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974",
+       "excerpts": [
+        "[Apply for this Job](https://jobs.ashbyhq.com/horizon3ai/d29ee5f3-2b4f-416f-8771-7c419e7db974/application)",
+        "**What You'll Do** As a Senior Machine Learning Engineer on the Autonomous Defense team, you'll be the person who gets our defensive models into production and keeps them there."
+       ]
+      }
+     ],
+     "reasoning": "The live job posting is titled Senior Machine Learning Engineer, Autonomous Defense, and describes the role\u2019s machine-learning work.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Horizon3 Raises $250M Series E at $2B+ Valuation | Horizon3",
+       "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era",
+       "excerpts": [
+        "NightDragon and NEA Co-Lead Oversubscribed Round; Company triples valuation and surpasses 7,000 customers amid 120% ARR growth_ **SAN FRANCISCO \u2014 August 3, 2026** \u2014 Horizon3, the AI-Native Proactive Security Company behind NodeZero\u00ae, the World's Best AI Hacker\u2122, today announced a $250 million Series E"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement calls its latest funding round a Series E.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "NodeZero API - HORIZON3",
+       "url": "https://docs.horizon3.ai/api",
+       "excerpts": [
+        "NodeZero API \u00b6 Horizon3 provides a publicly accessible Application Programming Interface (API), powered by GraphQL."
+       ]
+      },
+      {
+       "title": "Quickstart Guide for NodeZero - HORIZON3",
+       "url": "https://docs.horizon3.ai/quickstart",
+       "excerpts": [
+        "Ready to strengthen your security? Set up your account, create a host, and run your first pentest in just a few steps!"
+       ]
+      }
+     ],
+     "reasoning": "Horizon3 provides a public NodeZero API reference and a multi-step Quickstart guide, establishing public documentation with multiple articles.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "The Team | Horizon3",
+       "url": "https://horizon3.ai/about-us",
+       "excerpts": [
+        "Founded in 2019, Horizon3 is headquartered in San Francisco, CA, and 100% made in the USA."
+       ]
+      }
+     ],
+     "reasoning": "The company about page says Horizon3 is headquartered in San Francisco, California.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Horizon3 Launches NodeZero\u00ae WebApp Pentesting | Horizon3",
+       "url": "https://horizon3.ai/news/press-release/nodezero-webapp-launch",
+       "excerpts": [
+        "July 29, 2026",
+        "_New capabilities deliver continuous, end-to-end attack-path validation across web apps, infrastructure, cloud, data, and identity \u2013 proving real business impact, not isolated findings_"
+       ]
+      }
+     ],
+     "reasoning": "Horizon3 announced the NodeZero WebApp pentesting launch on July 29, 2026, inside the six-month window ending November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Senior Account Executive, SLED - Illinois @ Horizon3",
+       "url": "https://jobs.ashbyhq.com/horizon3ai/9ae35020-4775-4457-8ebd-52fa5b16e614",
+       "excerpts": [
+        "[Apply for this Job](https://jobs.ashbyhq.com/horizon3ai/9ae35020-4775-4457-8ebd-52fa5b16e614/application)"
+       ]
+      }
+     ],
+     "reasoning": "The active job posting is for a Senior Account Executive, SLED - Illinois, a qualifying role.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Horizon3 Raises $250M Series E at $2B+ Valuation | Horizon3",
+       "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era",
+       "excerpts": [
+        "August 3, 2026",
+        "NightDragon and NEA Co-Lead Oversubscribed Round; Company triples valuation and surpasses 7,000 customers amid 120% ARR growth_ **SAN FRANCISCO \u2014 August 3, 2026** \u2014 Horizon3, the AI-Native Proactive Security Company behind NodeZero\u00ae, the World's Best AI Hacker\u2122, today announced a $250 million Series E"
+       ]
+      }
+     ],
+     "reasoning": "The $250 million Series E was announced August 3, 2026, within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Horizon3.ai",
+       "url": "https://trust.horizon3.ai/?requestAccessOpen=true&requestedResources=65ea66396af50d8aa7bb5fc8",
+       "excerpts": [
+        "Compliance SOC 2 Type II GDPR CMMC 2.0"
+       ]
+      }
+     ],
+     "reasoning": "The trust center names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Horizon3.ai",
+       "url": "https://trust.horizon3.ai/?requestAccessOpen=true&requestedResources=65ea66396af50d8aa7bb5fc8",
+       "excerpts": [
+        "Compliance SOC 2 Type II GDPR CMMC 2.0"
+       ]
+      }
+     ],
+     "reasoning": "The trust center names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Testimonials | Horizon3",
+       "url": "https://horizon3.ai/testimonials",
+       "excerpts": [
+        "JTI Cybersecurity [Case Study \u2192](https://horizon3.ai/customer-story/the-critical-role-of-autonomous-penetration-testing-in-strengthening-defense-in-depth/) Airiam Logo Airiam [Case Study \u2192](https://horizon3.ai/customer-story/airiam-turning-cyber-resilience-into-a-superpower/) F12 Logo F12.net"
+       ]
+      }
+     ],
+     "reasoning": "The testimonials page names JTI Cybersecurity.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Testimonials | Horizon3",
+       "url": "https://horizon3.ai/testimonials",
+       "excerpts": [
+        "JTI Cybersecurity [Case Study \u2192](https://horizon3.ai/customer-story/the-critical-role-of-autonomous-penetration-testing-in-strengthening-defense-in-depth/) Airiam Logo Airiam [Case Study \u2192](https://horizon3.ai/customer-story/airiam-turning-cyber-resilience-into-a-superpower/) F12 Logo F12.net"
+       ]
+      }
+     ],
+     "reasoning": "The testimonials page names Airiam.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Testimonials | Horizon3",
+       "url": "https://horizon3.ai/testimonials",
+       "excerpts": [
+        "JTI Cybersecurity [Case Study \u2192](https://horizon3.ai/customer-story/the-critical-role-of-autonomous-penetration-testing-in-strengthening-defense-in-depth/) Airiam Logo Airiam [Case Study \u2192](https://horizon3.ai/customer-story/airiam-turning-cyber-resilience-into-a-superpower/) F12 Logo F12.net"
+       ]
+      }
+     ],
+     "reasoning": "The testimonials page names F12.net.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Trust Center - Horizon3.ai",
+       "url": "https://trust.horizon3.ai/",
+       "excerpts": [
+        "Salesforce \u2022 CRM Platform"
+       ]
+      }
+     ],
+     "reasoning": "The trust center names Salesforce as the CRM platform.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2019.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "NodeZero autonomously pentests organizations\u2019 environments to uncover exploitable attack paths, guide remediation, and verify fixes for security teams.",
+    "employee_band": "201-500",
+    "model_provider": "AWS Bedrock",
+    "pricing_page": true,
+    "funding_amount_usd": 250000000.0,
+    "named_customers": [
+     "JTI Cybersecurity",
+     "Airiam",
+     "F12.net"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series E",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

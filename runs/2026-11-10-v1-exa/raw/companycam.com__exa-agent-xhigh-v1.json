@@ -1,0 +1,962 @@
+{
+ "id": "agent_run_7bb4108077be42078848720d6e4c804a",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:49:28.807Z",
+ "completedAt": "2026-11-10T18:53:40.840Z",
+ "request": {
+  "query": "Research the company CompanyCam (companycam.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"CompanyCam helps contractors document job sites with organized photos and videos, track progress, collaborate with crews and customers, and automate reporting with AI.\",\"citations\":[\"https://companycam.com/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://companycam.com/pricing\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Reliant Roofing\",\"BK Restoration\"],\"citations\":[\"https://companycam.com/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://linkedin.com/company/companycam\",\"https://pitchbook.com/profiles/company/223056-55\"],\"notes\":\"Company profile reports 362 employees; PitchBook separately reports 366, both within this band.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Lincoln\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/companycam\",\"https://companycam.com/careers\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2015,\"citations\":[\"https://linkedin.com/company/companycam\",\"https://pitchbook.com/profiles/company/223056-55\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://dev.to/companycam\",\"https://dev.to/companycam/sidekiq-request-id-tracking-2cdm\",\"https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8\"],\"notes\":\"The separate CompanyCam engineering publication includes technical posts on request-ID tracking and asynchronous search reindexing, not just marketing content.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://help.companycam.com/en/\",\"https://help.companycam.com/en/collections/19688322-ai-tools\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://jobs.ashbyhq.com/companycam\",\"https://jobs.insightpartners.com/companies/companycam/jobs/76468289-machine-learning-engineer-computer-vision\"],\"notes\":\"The current board lists ten openings, none with a qualifying AI/ML/data-science title. A historical Machine Learning Engineer\u2013Computer Vision listing explicitly says it no longer accepts applications; analyst and general software-engineering roles do not count.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"Reviewed the AI product page, help documentation, security FAQ, blog, privacy notice, terms and DPA subprocessor list. No company-issued disclosure clearly identifies the underlying providers for native AI features. The DPA names Anthropic for access to internal systems via MCPs, not explicitly as a native-feature model provider. A former engineer personally reports historical use of Anthropic, OpenAI and Groq, but that is not a company-issued disclosure or confirmation of the current stack.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type II\",\"GDPR\"],\"citations\":[\"https://companycam.com/trust-center\"],\"notes\":\"The company claims SOC 2 Type II certification and GDPR compliance; GDPR is a compliance claim rather than an independently issued certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series C\",\"date\":\"2025-08\",\"amount_usd\":415000000},\"citations\":[\"https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html\",\"https://pitchbook.com/profiles/company/223056-55\"],\"notes\":\"Announced August 21, 2025. The amount is reported by PitchBook; the company announcement does not disclose an amount.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html\"],\"notes\":\"The August 21, 2025 Series C falls within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703\",\"https://jobs.ashbyhq.com/companycam\"],\"notes\":\"A live Inside Sales Representative role in England qualifies as sales-representative hiring; its responsibilities include engaging leads, qualifying them and delivering demos. This answer does not rely on older AE/SDR listings on the separate Greenhouse board.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://intercom.news/companycam/155515-one-place-for-every-project-conversation\"],\"notes\":\"On August 27, 2026, CompanyCam announced its new Conversations Hub was live on web and mobile, consolidating project conversations and attachments; this is within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/in/will-martin-11161997\"],\"notes\":\"Will Martin\u2019s public profile records joining CompanyCam as Vice President of Mid-Market Sales in July 2026, within November 9, 2025\u2013November 9, 2026.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"Marketo\",\"Intercom\",\"Twilio\"],\"citations\":[\"https://companycam.com/data-processing-addendum\"],\"notes\":\"The DPA subprocessor list explicitly identifies Salesforce for customer account management, Marketo for transactional and marketing services, Intercom for customer service, and Twilio for transactional and marketing messages.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The separate CompanyCam engineering publication includes technical posts on request-ID tracking and asynchronous search reindexing, not just marketing content.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://dev.to/companycam",
+     "https://dev.to/companycam/sidekiq-request-id-tracking-2cdm",
+     "https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Lincoln",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/companycam",
+     "https://companycam.com/careers"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://help.companycam.com/en/",
+     "https://help.companycam.com/en/collections/19688322-ai-tools"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The August 21, 2025 Series C falls within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html"
+    ]
+   },
+   "founded_year": {
+    "value": 2015,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/companycam",
+     "https://pitchbook.com/profiles/company/223056-55"
+    ]
+   },
+   "last_funding": {
+    "notes": "Announced August 21, 2025. The amount is reported by PitchBook; the company announcement does not disclose an amount.",
+    "value": {
+     "date": "2025-08",
+     "stage": "Series C",
+     "amount_usd": 415000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html",
+     "https://pitchbook.com/profiles/company/223056-55"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "On August 27, 2026, CompanyCam announced its new Conversations Hub was live on web and mobile, consolidating project conversations and attachments; this is within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://intercom.news/companycam/155515-one-place-for-every-project-conversation"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://companycam.com/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "Company profile reports 362 employees; PitchBook separately reports 366, both within this band.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/companycam",
+     "https://pitchbook.com/profiles/company/223056-55"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "A live Inside Sales Representative role in England qualifies as sales-representative hiring; its responsibilities include engaging leads, qualifying them and delivering demos. This answer does not rely on older AE/SDR listings on the separate Greenhouse board.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703",
+     "https://jobs.ashbyhq.com/companycam"
+    ]
+   },
+   "model_provider": {
+    "notes": "Reviewed the AI product page, help documentation, security FAQ, blog, privacy notice, terms and DPA subprocessor list. No company-issued disclosure clearly identifies the underlying providers for native AI features. The DPA names Anthropic for access to internal systems via MCPs, not explicitly as a native-feature model provider. A former engineer personally reports historical use of Anthropic, OpenAI and Groq, but that is not a company-issued disclosure or confirmation of the current stack.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "value": [
+     "Reliant Roofing",
+     "BK Restoration"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://companycam.com/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The current board lists ten openings, none with a qualifying AI/ML/data-science title. A historical Machine Learning Engineer\u2013Computer Vision listing explicitly says it no longer accepts applications; analyst and general software-engineering roles do not count.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/companycam",
+     "https://jobs.insightpartners.com/companies/companycam/jobs/76468289-machine-learning-engineer-computer-vision"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The company claims SOC 2 Type II certification and GDPR compliance; GDPR is a compliance claim rather than an independently issued certification.",
+    "value": [
+     "SOC 2 Type II",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://companycam.com/trust-center"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The DPA subprocessor list explicitly identifies Salesforce for customer account management, Marketo for transactional and marketing services, Intercom for customer service, and Twilio for transactional and marketing messages.",
+    "value": [
+     "Salesforce",
+     "Marketo",
+     "Intercom",
+     "Twilio"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://companycam.com/data-processing-addendum"
+    ]
+   },
+   "product_one_liner": {
+    "value": "CompanyCam helps contractors document job sites with organized photos and videos, track progress, collaborate with crews and customers, and automate reporting with AI.",
+    "status": "asserted",
+    "citations": [
+     "https://companycam.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Will Martin\u2019s public profile records joining CompanyCam as Vice President of Mid-Market Sales in July 2026, within November 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/in/will-martin-11161997"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://companycam.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://companycam.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://companycam.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/companycam"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/223056-55"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/companycam"
+     },
+     {
+      "url": "https://companycam.com/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/companycam"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/223056-55"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://dev.to/companycam"
+     },
+     {
+      "url": "https://dev.to/companycam/sidekiq-request-id-tracking-2cdm"
+     },
+     {
+      "url": "https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://help.companycam.com/en/"
+     },
+     {
+      "url": "https://help.companycam.com/en/collections/19688322-ai-tools"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/companycam"
+     },
+     {
+      "url": "https://jobs.insightpartners.com/companies/companycam/jobs/76468289-machine-learning-engineer-computer-vision"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://companycam.com/ai-features"
+     },
+     {
+      "url": "https://companycam.com/trust-center"
+     },
+     {
+      "url": "https://companycam.com/privacy-notice"
+     },
+     {
+      "url": "https://companycam.com/terms"
+     },
+     {
+      "url": "https://companycam.com/data-processing-addendum"
+     },
+     {
+      "url": "https://austn.net/work/companycam"
+     },
+     {
+      "url": "https://help.companycam.com/en/collections/19688322-ai-tools"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://companycam.com/trust-center"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/223056-55"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703"
+     },
+     {
+      "url": "https://jobs.ashbyhq.com/companycam"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://intercom.news/companycam/155515-one-place-for-every-project-conversation"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/in/will-martin-11161997"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://companycam.com/data-processing-addendum"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

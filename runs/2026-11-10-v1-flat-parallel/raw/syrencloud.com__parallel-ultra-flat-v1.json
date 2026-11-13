@@ -1,0 +1,589 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e85ef56b7f16b0050",
+  "interaction_id": "trun_142119f6a1b4439e85ef56b7f16b0050",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "syrencloud.com"
+  },
+  "created_at": "2026-11-10T18:49:03.712669Z",
+  "modified_at": "2026-11-10T18:55:05.558880Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e85ef56b7f16b0050",
+   "interaction_id": "trun_142119f6a1b4439e85ef56b7f16b0050",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "syrencloud.com"
+   },
+   "created_at": "2026-11-10T18:49:03.712669Z",
+   "modified_at": "2026-11-10T18:55:05.558880Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "License Agreement | Syren Cloud",
+       "url": "https://syrencloud.com/licence-agreement",
+       "excerpts": [
+        "Founded in 2020, SYREN is dedicated to delivering innovative tools that enable businesses to enhance efficiency, collaboration, and resilience across supply chains."
+       ]
+      }
+     ],
+     "reasoning": "Syren's own page explicitly says it was founded in 2020: https://syrencloud.com/licence-agreement. This primary-source statement is preferred over the conflicting 2019 date in the third-party funding profile.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "SOC 2",
+        "ISO 27001:2022",
+        "HIPAA",
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "Syren's trust center names SOC 2, ISO 27001:2022, HIPAA and GDPR: https://compliance.syrencloud.com/. These are reported as public claims, without implying that GDPR or HIPAA is a formal certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "License Agreement | Syren Cloud",
+       "url": "https://syrencloud.com/licence-agreement",
+       "excerpts": [
+        "Headquartered in Bellevue, Washington, with a key office in Hyderabad, India, SYREN operates across the Americas and APAC regions. ... **Our headquarters** Syren Cloud 230, 2018, 156th Ave, Building F Suite 100 Bellevue, WA, Washington 98007 United States of America"
+       ]
+      }
+     ],
+     "reasoning": "The company identifies its headquarters in Bellevue and provides a United States address: https://syrencloud.com/licence-agreement.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Shivam Porwal",
+       "url": "https://syrencloud.com/blogs/author/shivam-porwal/",
+       "excerpts": [
+        "Shivam Porwal **Designation: Solution Architect** Specialized in Databricks-powered data platforms, covering Lakehouse architecture, data pipeline engineering, and AI and GenAI integration to deliver solutions that are production-ready, governed, and built to perform at scale.",
+        "By [Shivam Porwal](https://syrencloud.com/blogs/author/shivam-porwal/ \"View all posts by Shivam Porwal\") / June 9, 2026"
+       ]
+      },
+      {
+       "title": "Syren Sales Journey AI: AI-Powered Field Sales Planning | Syren",
+       "url": "https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning",
+       "excerpts": [
+        "Behind the field app is a Databricks Lakeflow Declarative Pipeline that turns raw operational data into actionable visit priorities."
+       ]
+      },
+      {
+       "title": "Anmol Hans, Author at Syren",
+       "url": "https://syrencloud.com/blogs/author/anmol/",
+       "excerpts": [
+        "**Designation: AI Solutions Architect**",
+        "By [Anmol Hans](https://syrencloud.com/blogs/author/anmol/ \"View all posts by Anmol Hans\") / July 2, 2026"
+       ]
+      },
+      {
+       "title": "TrueTrack: A Real-Time Order Visibility Portal on Lakebase | Syren",
+       "url": "https://syrencloud.com/blogs/syren-truetrack-real-time-order-visibility-portal-databricks-lakebase",
+       "excerpts": [
+        "The TrueTrack portal is a real web application: a React front end talking to a FastAPI backend, and that backend reads and writes only to Lakebase PostgreSQL."
+       ]
+      }
+     ],
+     "reasoning": "Two technical posts describe how Syren products are built: Sales Journey AI's data pipelines and TrueTrack's React/FastAPI/Lakebase architecture. Author indexes identify their authors as solution architects: https://syrencloud.com/blogs/author/shivam-porwal/ and https://syrencloud.com/blogs/author/anmol/. Articles: https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning and https://syrencloud.com/blogs/syren-truetrack-real-time-order-visibility-portal-databricks-lakebase. Confidence is reduced because TrueTrack's article page uses an editorial byline while its author index attributes it to Anmol Hans.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Syren Cloud - Agentic AI & Data Engineering Solutions | Syren",
+       "url": "https://syrencloud.com/",
+       "excerpts": [
+        "Syren is your last-mile partner for Data & AI adoption \u2014 delivering Agentic AI, data engineering, and migration solutions across retail, CPG, healthcare & BFSI."
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes agentic AI, data engineering and migration solutions and names the target industries: https://syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Syren | LinkedIn",
+       "url": "https://linkedin.com/company/31334310",
+       "excerpts": [
+        "Industry Software Development Company size 201-500 employees Headquarters Bellevue, Washington Type Privately Held Founded 2020"
+       ]
+      }
+     ],
+     "reasoning": "Syren's company profile explicitly lists 201\u2013500 employees: https://linkedin.com/company/31334310.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "GenAI-Driven Control Tower for Faster RCA - Syren",
+       "url": "https://syrencloud.com/case-studies/gen-ai-control-tower",
+       "excerpts": [
+        "Embedded with conversational AI capabilities powered by RAG models and LLMs like Azure OpenAI and VannaAI."
+       ]
+      }
+     ],
+     "reasoning": "Syren's GenAI control-tower case study explicitly names Azure OpenAI and VannaAI. This supports their use in that solution, not necessarily every Syren offering: https://syrencloud.com/case-studies/gen-ai-control-tower.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Agentic AI & Data Engineering Solutions | Syren",
+       "url": "https://syrencloud.com/",
+       "excerpts": [
+        "Explore Agentic & GenAI Smarter Decisions Powered By AI Agents About Us Who we are Careers Contact Services Agentic AI & Gen AI Data Engineering"
+       ]
+      },
+      {
+       "title": "Page not found - Syren",
+       "url": "https://syrencloud.com/pricing",
+       "excerpts": [
+        "This page doesn't seem to exist."
+       ]
+      },
+      {
+       "title": "Syren Data Quality Application Pricing",
+       "url": "https://www.g2.com/products/syren-data-quality-application/pricing",
+       "excerpts": [
+        "Information about Syren Data Quality Application pricing, plan availability, and costs is not listed on G2 by the vendor."
+       ]
+      }
+     ],
+     "reasoning": "The rendered homepage navigation/footer has no pricing link (https://syrencloud.com/), and https://syrencloud.com/pricing is missing. G2 also states that Syren's plans and costs are not listed; its displayed prices concern alternatives, not Syren: https://www.g2.com/products/syren-data-quality-application/pricing.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Syren - 2026 Company Profile, Team, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70",
+       "excerpts": [
+        "Syren is an unfunded company based in Hyderabad (India), founded in 2019 by [Sid Varma](https://platform.tracxn.com/a/d/people/69afca34dc0e1c2e4b1102d6/sidvarma) and [Venkata Kiran Meduri](https://platform.tracxn.com/a/d/people/69afc95fe84b005e15245a49/venkatakiranmeduri) ."
+       ]
+      }
+     ],
+     "reasoning": "The public profile identifies Syren as unfunded, so there is no latest outside-round amount to report; null is used rather than inventing an amount: https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "With over 400 employees, development centers in the USA and India within 3 years of starting operations, SyrenCloud serves F500 or high-technology clients such as Johnson & Johnson, eBay, Microsoft, GitHub among others."
+       ]
+      }
+     ],
+     "reasoning": "Syren's trust center explicitly identifies Johnson & Johnson, eBay, Microsoft and GitHub as clients, rather than merely partners or investors: https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Syren - 2026 Company Profile, Team, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70",
+       "excerpts": [
+        "Syren is an unfunded company based in Hyderabad (India), founded in 2019 by [Sid Varma](https://platform.tracxn.com/a/d/people/69afca34dc0e1c2e4b1102d6/sidvarma) and [Venkata Kiran Meduri](https://platform.tracxn.com/a/d/people/69afc95fe84b005e15245a49/venkatakiranmeduri) ."
+       ]
+      }
+     ],
+     "reasoning": "The company is described as unfunded, so there is no outside-round date to report: https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Uplers | Sales Development Representative Job Opportunity",
+       "url": "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "excerpts": [
+        "**Tools & Technology** Experience with modern sales and prospecting platforms such as: **LinkedIn Sales Navigator | Apollo | HubSpot | ZoomInfo | ChatGPT / Claude or other AI tools**"
+       ]
+      }
+     ],
+     "reasoning": "Syren's SDR posting names LinkedIn Sales Navigator, Apollo, HubSpot and ZoomInfo as relevant sales-platform experience. These are recruitment-based stack signals, not confirmation that every platform is internally deployed: https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Syren Appoints Vibhu Tiwari as Vice President GTM and Channels",
+       "url": "https://techachievemedia.com/latest-news/syren-appoints-vibhu-tiwari-as-vice-president-gtm-and-channels",
+       "excerpts": [
+        "November 11, 2025",
+        "Syren has announced the appointment of Vibhu Tiwari as its Vice President \u2013 Go-to-Market (GTM) and Channels, a move that strengthens the company\u2019s leadership bench as it accelerates its growth strategy in data engineering and supply chain intelligence."
+       ]
+      }
+     ],
+     "reasoning": "A November 11, 2025 announcement reports Vibhu Tiwari's appointment as Vice President, Go-to-Market and Channels, within the requested twelve-month window: https://techachievemedia.com/latest-news/syren-appoints-vibhu-tiwari-as-vice-president-gtm-and-channels.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "syrencloud.keka.com",
+       "url": "https://syrencloud.keka.com/careers/jobdetails/141085",
+       "excerpts": [
+        "AI Engineer + Knowledge Graph/Ontology",
+        "Apply for this job"
+       ]
+      }
+     ],
+     "reasoning": "The live AI Engineer + Knowledge Graph/Ontology posting includes an application action, and the role also appears on the current official board: https://syrencloud.keka.com/careers/jobdetails/141085 and https://syrencloud.keka.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Syren - 2026 Company Profile, Team, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70",
+       "excerpts": [
+        "Syren is an unfunded company based in Hyderabad (India), founded in 2019 by [Sid Varma](https://platform.tracxn.com/a/d/people/69afca34dc0e1c2e4b1102d6/sidvarma) and [Venkata Kiran Meduri](https://platform.tracxn.com/a/d/people/69afc95fe84b005e15245a49/venkatakiranmeduri) ."
+       ]
+      }
+     ],
+     "reasoning": "The public funding profile explicitly describes Syren as unfunded, supporting stage \"none\": https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Agentic AI & Data Engineering Solutions | Syren",
+       "url": "https://syrencloud.com/",
+       "excerpts": [
+        "Skip to content Who we are Careers Latest News Industries Services Solutions Partnerships Knowledge Hub Contact Us See you at the",
+        "Explore Agentic & GenAI Smarter Decisions Powered By AI Agents About Us Who we are Careers Contact Services Agentic AI & Gen AI Data Engineering",
+        "[Cookie Policy](https://syrencloud.com/cookie-policy) | [Privacy Policy](https://syrencloud.com/privacy-policy) | [Licence Agreement](https://syrencloud.com/licence-agreement)"
+       ]
+      }
+     ],
+     "reasoning": "The inspected homepage navigation and footer link to services, solutions and marketing resources but contain no documentation, help-center or developer-portal link, meeting the specified negative criterion: https://syrencloud.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "License Agreement | Syren Cloud",
+       "url": "https://syrencloud.com/licence-agreement",
+       "excerpts": [
+        "Headquartered in Bellevue, Washington, with a key office in Hyderabad, India, SYREN operates across the Americas and APAC regions. ... **Our headquarters** Syren Cloud 230, 2018, 156th Ave, Building F Suite 100 Bellevue, WA, Washington 98007 United States of America"
+       ]
+      }
+     ],
+     "reasoning": "Syren explicitly identifies Bellevue as its headquarters city: https://syrencloud.com/licence-agreement.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Syren Sales Journey AI: AI-Powered Field Sales Planning | Syren",
+       "url": "https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning",
+       "excerpts": [
+        "By [Shivam Porwal](https://syrencloud.com/blogs/author/shivam-porwal/ \"View all posts by Shivam Porwal\") | June 9, 2026",
+        "Early access deployments are running in cement and one adjacent distribution segment, with additional customers onboarding in Q3 FY27.",
+        "We are scaling the early access cohort through Q3 FY27 and opening Syren Sales Journey AI to additional customers in cement, FMCG, and pharma distribution."
+       ]
+      }
+     ],
+     "reasoning": "The June 9, 2026 Sales Journey AI announcement describes running early-access deployments and opening the product to additional customers, within the six-month window: https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Uplers | Sales Development Representative Job Opportunity",
+       "url": "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "excerpts": [
+        "Sales Development Representative Syren Full time Permanent Position Remote Apply"
+       ]
+      },
+      {
+       "title": "Syren Jobs & Careers - 20 Open Positions - Sep 2026",
+       "url": "https://www.uplers.com/company/syren-7135",
+       "excerpts": [
+        "[Apply Now](https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09)"
+       ]
+      }
+     ],
+     "reasoning": "Uplers' Syren vacancy listing and its individual SDR posting both provide an application action: https://www.uplers.com/company/syren-7135 and https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09. Current availability is less certain because these are recruiter listings without a posting/expiry date, and the role is absent from Syren's current Keka board.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Syren - 2026 Company Profile, Team, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70",
+       "excerpts": [
+        "Syren is an unfunded company based in Hyderabad (India), founded in 2019 by [Sid Varma](https://platform.tracxn.com/a/d/people/69afca34dc0e1c2e4b1102d6/sidvarma) and [Venkata Kiran Meduri](https://platform.tracxn.com/a/d/people/69afc95fe84b005e15245a49/venkatakiranmeduri) ."
+       ]
+      }
+     ],
+     "reasoning": "The current public funding profile describes Syren as unfunded, supporting no outside funding during the eighteen-month window: https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is named at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "ISO 27001:2022 is named at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is named at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is named at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "With over 400 employees, development centers in the USA and India within 3 years of starting operations, SyrenCloud serves F500 or high-technology clients such as Johnson & Johnson, eBay, Microsoft, GitHub among others."
+       ]
+      }
+     ],
+     "reasoning": "Johnson & Johnson is explicitly named as a client at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "With over 400 employees, development centers in the USA and India within 3 years of starting operations, SyrenCloud serves F500 or high-technology clients such as Johnson & Johnson, eBay, Microsoft, GitHub among others."
+       ]
+      }
+     ],
+     "reasoning": "eBay is explicitly named as a client at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "With over 400 employees, development centers in the USA and India within 3 years of starting operations, SyrenCloud serves F500 or high-technology clients such as Johnson & Johnson, eBay, Microsoft, GitHub among others."
+       ]
+      }
+     ],
+     "reasoning": "Microsoft is explicitly named as a client at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.3",
+     "citations": [
+      {
+       "title": "Syren - Syren Cloud",
+       "url": "https://compliance.syrencloud.com/",
+       "excerpts": [
+        "With over 400 employees, development centers in the USA and India within 3 years of starting operations, SyrenCloud serves F500 or high-technology clients such as Johnson & Johnson, eBay, Microsoft, GitHub among others."
+       ]
+      }
+     ],
+     "reasoning": "GitHub is explicitly named as a client at https://compliance.syrencloud.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Uplers | Sales Development Representative Job Opportunity",
+       "url": "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "excerpts": [
+        "**Tools & Technology** Experience with modern sales and prospecting platforms such as: **LinkedIn Sales Navigator | Apollo | HubSpot | ZoomInfo | ChatGPT / Claude or other AI tools**"
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn Sales Navigator is named as relevant platform experience in the cited Syren SDR posting; this is a recruitment signal, not confirmed deployment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Uplers | Sales Development Representative Job Opportunity",
+       "url": "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "excerpts": [
+        "**Tools & Technology** Experience with modern sales and prospecting platforms such as: **LinkedIn Sales Navigator | Apollo | HubSpot | ZoomInfo | ChatGPT / Claude or other AI tools**"
+       ]
+      }
+     ],
+     "reasoning": "Apollo is named as relevant platform experience in the cited Syren SDR posting; this is a recruitment signal, not confirmed deployment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Uplers | Sales Development Representative Job Opportunity",
+       "url": "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "excerpts": [
+        "**Tools & Technology** Experience with modern sales and prospecting platforms such as: **LinkedIn Sales Navigator | Apollo | HubSpot | ZoomInfo | ChatGPT / Claude or other AI tools**"
+       ]
+      }
+     ],
+     "reasoning": "HubSpot is named as relevant platform experience in the cited Syren SDR posting; this is a recruitment signal, not confirmed deployment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Uplers | Sales Development Representative Job Opportunity",
+       "url": "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "excerpts": [
+        "**Tools & Technology** Experience with modern sales and prospecting platforms such as: **LinkedIn Sales Navigator | Apollo | HubSpot | ZoomInfo | ChatGPT / Claude or other AI tools**"
+       ]
+      }
+     ],
+     "reasoning": "ZoomInfo is named as relevant platform experience in the cited Syren SDR posting; this is a recruitment signal, not confirmed deployment.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2020.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Syren provides agentic AI, data engineering and migration solutions that help enterprises in retail, CPG, healthcare and financial services adopt data and AI.",
+    "employee_band": "201-500",
+    "model_provider": "Azure OpenAI and VannaAI",
+    "pricing_page": false,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Johnson & Johnson",
+     "eBay",
+     "Microsoft",
+     "GitHub"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "LinkedIn Sales Navigator",
+     "Apollo",
+     "HubSpot",
+     "ZoomInfo"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "none",
+    "public_docs": false,
+    "hq_city": "Bellevue",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

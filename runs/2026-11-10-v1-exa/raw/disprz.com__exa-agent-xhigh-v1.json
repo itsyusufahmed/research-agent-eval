@@ -1,0 +1,975 @@
+{
+ "id": "agent_run_4472dd0879f64e6d8086228b54de89f7",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:08:49.415Z",
+ "completedAt": "2026-11-10T19:13:15.206Z",
+ "request": {
+  "query": "Research the company Disprz (disprz.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Disprz is an AI-powered enterprise learning and skilling platform that helps HR and L&D teams onboard, train, upskill, and develop their workforce.\",\"citations\":[\"https://disprz.ai/company/about-us\",\"https://disprz.ai/pricing\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://disprz.ai/pricing\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Amazon\",\"Starbucks\"],\"citations\":[\"https://disprz.ai/pricing\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://pitchbook.com/profiles/company/169456-51\"],\"notes\":\"The company profile reports 296 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"West Orange\",\"country\":\"United States\"},\"citations\":[\"https://pitchbook.com/profiles/company/169456-51\",\"https://disprz.ai/company/about-us\"],\"notes\":\"West Orange is listed as headquarters by the company profile and as North America HQ by Disprz; Disprz also identifies Chennai as its Corporate & Technology HQ.\"},\"founded_year\":{\"status\":\"asserted\",\"value\":2015,\"citations\":[\"https://pitchbook.com/profiles/company/169456-51\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://disprz.ai/blog\",\"https://disprz.ai/blog/automate-learning-content-creation-with-ai\",\"https://disprz.ai/blog/how-to-win-in-the-2021-workplace-with-learntech-techhr-sea-2021\"],\"notes\":\"The blog is focused on L&D, product and marketing content; the detailed Turo workflow article is by Debashree Patnaik, whose bio identifies her as Product and Content Marketing Manager, not an engineer. No qualifying engineering blog with two engineer-authored build posts was found.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://disprz.atlassian.net/wiki/spaces/PS/pages/2701492248/Knowledge+Base\",\"https://disprz.atlassian.net/wiki/spaces/PS/pages/2771157020/Infrastructure\",\"https://disprz.atlassian.net/wiki/spaces/PS/pages/2771091471/General+InfoSec\"],\"notes\":\"Public knowledge-base material includes implementation resources, infrastructure documentation and security FAQs.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://builtin.com/company/disprz/jobs\",\"https://lumoscapitalgroup.getro.com/companies/disprz/jobs/64882348-ai-engineer\"],\"notes\":\"The readable current jobs board lists no qualifying AI/ML/data-science role. The AI Engineer posting explicitly says it is no longer accepting applications. The AI Content Operations Intern role concerns educational content production, not AI/ML or data-science work.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Azure OpenAI (Microsoft/OpenAI)\",\"citations\":[\"https://www.microsoft.com/en-in/aifirstmovers/disprz\"],\"notes\":\"Microsoft explicitly describes Disprz using Azure OpenAI for learning personalisation.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://disprz.atlassian.net/wiki/spaces/PS/pages/2771091471/General+InfoSec\"],\"notes\":\"The public security FAQ claims ISO 27001 certification, SOC 2 Type 1 and Type 2 certification, and GDPR compliance; it says PCI DSS and HIPAA are not applicable. These are public claims, not independent verification of certification validity.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series C\",\"date\":\"2023-08\",\"amount_usd\":30000000},\"citations\":[\"https://disprz.ai/blog/series-c-announcement\",\"https://inc42.com/company/disprz/funding/\",\"https://www.vccircle.com/silverneedlego1-others-back-skill-development-startup-disprz-\",\"https://textilevaluechain.in/silverneedle-ventures-and-others-help-disprz-secure-funding-in-a-bridge-round\"],\"notes\":\"Company announcement dated 7 August 2023. A September 2025 article about a bridge between Series B and C repeats the January 2023 bridge-round news; it is not evidence of a new 2025 round.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://disprz.ai/blog/series-c-announcement\",\"https://inc42.com/company/disprz/funding/\"],\"notes\":\"The latest recorded round is August 2023, before the 2025-05-09 to 2026-11-09 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://builtin.com/company/disprz/jobs\",\"https://lumoscapitalgroup.getro.com/companies/disprz/jobs/72184328-senior-business-development-representative\",\"https://lumoscapitalgroup.getro.com/companies/disprz/jobs/86968087-business-development-representative-sharjah-ajman\"],\"notes\":\"The current readable jobs board lists no qualifying SDR, BDR or account executive title. Located BDR postings explicitly say they are no longer accepting applications; AD Sales and presales roles do not meet the requested title criteria.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://disprz.ai/blog/disprz-launches-autonomous-enablement-os\"],\"notes\":\"Disprz announced Autonomous Enablement OS on 2026-09-28, inside the 2026-05-09 to 2026-11-09 window, including autonomous onboarding, sales enablement/coaching and talent development.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/anand-venkatesan\",\"https://disprz.ai/company/about-us\"],\"notes\":\"Anand Venkatesan joined as Senior Vice President & Head of Engineering in March 2026, within the 2025-11-09 to 2026-11-09 window.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"Salesforce\",\"Clay\",\"HeyReach\",\"Lusha\"],\"citations\":[\"https://in.linkedin.com/jobs/view/renewal-specialist-at-disprz-4432646210\",\"https://jobs.highfivepartners.com/companies/disprz/jobs/72184328-senior-business-development-representative\"],\"notes\":\"The renewal-operations posting names HubSpot/Salesforce for maintaining CRM data; the BDR posting names HubSpot, Clay, HeyReach and Lusha as sales tools.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog is focused on L&D, product and marketing content; the detailed Turo workflow article is by Debashree Patnaik, whose bio identifies her as Product and Content Marketing Manager, not an engineer. No qualifying engineering blog with two engineer-authored build posts was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/blog",
+     "https://disprz.ai/blog/automate-learning-content-creation-with-ai",
+     "https://disprz.ai/blog/how-to-win-in-the-2021-workplace-with-learntech-techhr-sea-2021"
+    ]
+   },
+   "hq_location": {
+    "notes": "West Orange is listed as headquarters by the company profile and as North America HQ by Disprz; Disprz also identifies Chennai as its Corporate & Technology HQ.",
+    "value": {
+     "city": "West Orange",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/169456-51",
+     "https://disprz.ai/company/about-us"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public knowledge-base material includes implementation resources, infrastructure documentation and security FAQs.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://disprz.atlassian.net/wiki/spaces/PS/pages/2701492248/Knowledge+Base",
+     "https://disprz.atlassian.net/wiki/spaces/PS/pages/2771157020/Infrastructure",
+     "https://disprz.atlassian.net/wiki/spaces/PS/pages/2771091471/General+InfoSec"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest recorded round is August 2023, before the 2025-05-09 to 2026-11-09 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/blog/series-c-announcement",
+     "https://inc42.com/company/disprz/funding/"
+    ]
+   },
+   "founded_year": {
+    "value": 2015,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/169456-51"
+    ]
+   },
+   "last_funding": {
+    "notes": "Company announcement dated 7 August 2023. A September 2025 article about a bridge between Series B and C repeats the January 2023 bridge-round news; it is not evidence of a new 2025 round.",
+    "value": {
+     "date": "2023-08",
+     "stage": "Series C",
+     "amount_usd": 30000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/blog/series-c-announcement",
+     "https://inc42.com/company/disprz/funding/",
+     "https://www.vccircle.com/silverneedlego1-others-back-skill-development-startup-disprz-",
+     "https://textilevaluechain.in/silverneedle-ventures-and-others-help-disprz-secure-funding-in-a-bridge-round"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Disprz announced Autonomous Enablement OS on 2026-09-28, inside the 2026-05-09 to 2026-11-09 window, including autonomous onboarding, sales enablement/coaching and talent development.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/blog/disprz-launches-autonomous-enablement-os"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 296 employees.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/169456-51"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The current readable jobs board lists no qualifying SDR, BDR or account executive title. Located BDR postings explicitly say they are no longer accepting applications; AD Sales and presales roles do not meet the requested title criteria.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://builtin.com/company/disprz/jobs",
+     "https://lumoscapitalgroup.getro.com/companies/disprz/jobs/72184328-senior-business-development-representative",
+     "https://lumoscapitalgroup.getro.com/companies/disprz/jobs/86968087-business-development-representative-sharjah-ajman"
+    ]
+   },
+   "model_provider": {
+    "notes": "Microsoft explicitly describes Disprz using Azure OpenAI for learning personalisation.",
+    "value": "Azure OpenAI (Microsoft/OpenAI)",
+    "status": "asserted",
+    "citations": [
+     "https://www.microsoft.com/en-in/aifirstmovers/disprz"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Amazon",
+     "Starbucks"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/pricing"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The readable current jobs board lists no qualifying AI/ML/data-science role. The AI Engineer posting explicitly says it is no longer accepting applications. The AI Content Operations Intern role concerns educational content production, not AI/ML or data-science work.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://builtin.com/company/disprz/jobs",
+     "https://lumoscapitalgroup.getro.com/companies/disprz/jobs/64882348-ai-engineer"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The public security FAQ claims ISO 27001 certification, SOC 2 Type 1 and Type 2 certification, and GDPR compliance; it says PCI DSS and HIPAA are not applicable. These are public claims, not independent verification of certification validity.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://disprz.atlassian.net/wiki/spaces/PS/pages/2771091471/General+InfoSec"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The renewal-operations posting names HubSpot/Salesforce for maintaining CRM data; the BDR posting names HubSpot, Clay, HeyReach and Lusha as sales tools.",
+    "value": [
+     "HubSpot",
+     "Salesforce",
+     "Clay",
+     "HeyReach",
+     "Lusha"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://in.linkedin.com/jobs/view/renewal-specialist-at-disprz-4432646210",
+     "https://jobs.highfivepartners.com/companies/disprz/jobs/72184328-senior-business-development-representative"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Disprz is an AI-powered enterprise learning and skilling platform that helps HR and L&D teams onboard, train, upskill, and develop their workforce.",
+    "status": "asserted",
+    "citations": [
+     "https://disprz.ai/company/about-us",
+     "https://disprz.ai/pricing"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Anand Venkatesan joined as Senior Vice President & Head of Engineering in March 2026, within the 2025-11-09 to 2026-11-09 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/anand-venkatesan",
+     "https://disprz.ai/company/about-us"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://disprz.ai/company/about-us"
+     },
+     {
+      "url": "https://disprz.ai/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://disprz.ai/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://disprz.ai/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/169456-51"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/169456-51"
+     },
+     {
+      "url": "https://disprz.ai/company/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/169456-51"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://disprz.ai/blog"
+     },
+     {
+      "url": "https://disprz.ai/blog/automate-learning-content-creation-with-ai"
+     },
+     {
+      "url": "https://disprz.ai/blog/how-to-win-in-the-2021-workplace-with-learntech-techhr-sea-2021"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://disprz.atlassian.net/wiki/spaces/PS/pages/2701492248/Knowledge+Base"
+     },
+     {
+      "url": "https://disprz.atlassian.net/wiki/spaces/PS/pages/2771157020/Infrastructure"
+     },
+     {
+      "url": "https://disprz.atlassian.net/wiki/spaces/PS/pages/2771091471/General+InfoSec"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://builtin.com/company/disprz/jobs"
+     },
+     {
+      "url": "https://lumoscapitalgroup.getro.com/companies/disprz/jobs/64882348-ai-engineer"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://www.microsoft.com/en-in/aifirstmovers/disprz"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://disprz.atlassian.net/wiki/spaces/PS/pages/2771091471/General+InfoSec"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://disprz.ai/blog/series-c-announcement"
+     },
+     {
+      "url": "https://inc42.com/company/disprz/funding/"
+     },
+     {
+      "url": "https://www.vccircle.com/silverneedlego1-others-back-skill-development-startup-disprz-"
+     },
+     {
+      "url": "https://textilevaluechain.in/silverneedle-ventures-and-others-help-disprz-secure-funding-in-a-bridge-round"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://disprz.ai/blog/series-c-announcement"
+     },
+     {
+      "url": "https://inc42.com/company/disprz/funding/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://builtin.com/company/disprz/jobs"
+     },
+     {
+      "url": "https://lumoscapitalgroup.getro.com/companies/disprz/jobs/72184328-senior-business-development-representative"
+     },
+     {
+      "url": "https://lumoscapitalgroup.getro.com/companies/disprz/jobs/86968087-business-development-representative-sharjah-ajman"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://disprz.ai/blog/disprz-launches-autonomous-enablement-os"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/anand-venkatesan"
+     },
+     {
+      "url": "https://disprz.ai/company/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://in.linkedin.com/jobs/view/renewal-specialist-at-disprz-4432646210"
+     },
+     {
+      "url": "https://jobs.highfivepartners.com/companies/disprz/jobs/72184328-senior-business-development-representative"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

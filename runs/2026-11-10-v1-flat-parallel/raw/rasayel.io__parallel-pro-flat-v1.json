@@ -1,0 +1,531 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e985a1e2238375599",
+  "interaction_id": "trun_142119f6a1b4439e985a1e2238375599",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "rasayel.io"
+  },
+  "created_at": "2026-11-10T18:49:01.605419Z",
+  "modified_at": "2026-11-10T18:56:53.737149Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e985a1e2238375599",
+   "interaction_id": "trun_142119f6a1b4439e985a1e2238375599",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "rasayel.io"
+   },
+   "created_at": "2026-11-10T18:49:01.605419Z",
+   "modified_at": "2026-11-10T18:56:53.737149Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Rasayel | Seedcamp Job Board",
+       "url": "https://talent.seedcamp.com/companies/rasayel",
+       "excerpts": [
+        "founded in 2022"
+       ]
+      }
+     ],
+     "reasoning": "Seedcamp's Rasayel profile says it was founded in 2022. Tracxn's profile excerpt also gives 2022 (d167.s0). PitchBook separately lists 2020, so the selected year has some source conflict and is not high confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security Policy - Rasayel",
+       "url": "https://docs.rasayel.io/security-policy",
+       "excerpts": [
+        "Overview At Rasayel, protecting our customers\u2019 data is a top priority. This Security Policy outlines the technical and organizational controls we have in place across our platform to prevent unauthorized access, misuse, alteration, or disclosure of customer data. Rasayel\u2019s infrastructure is built on Amazon Web Services (AWS), and unless stated otherwise, the practices described below refer to our AWS-based environment. We also encourage you to read our Terms of Service and Privacy Policy to learn more about how we operate."
+       ]
+      },
+      {
+       "title": "Privacy Policy",
+       "url": "https://docs.rasayel.io/privacy",
+       "excerpts": [
+        "We actually hand it off to Stripe, our payment processing partner which is a certified **PCI** Level 1 Service Provider.",
+        "**Legal Basis for Processing Personal Data Under General Data Protection Regulation (GDPR)** Rasayel legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it."
+       ]
+      }
+     ],
+     "reasoning": "The security policy is the relevant security page, and it does not claim any of the listed certifications. The privacy policy refers to GDPR legal bases and rights, not a Rasayel certification; its PCI Level 1 statement is explicitly about Stripe, not Rasayel. Thus the list is empty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Rasayel Corporate Headquarters, Office Locations and Addresses | Craft.co",
+       "url": "https://craft.co/rasayel/locations",
+       "excerpts": [
+        "Rasayel is headquartered in Cork, Ireland, and has 1 office location."
+       ]
+      },
+      {
+       "title": "Rasayel - 2026 Company Profile, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs",
+       "excerpts": [
+        "Rasayel is headquartered in Dublin, [Ireland](https://tracxn.com/d/geographies/ireland/__9l0N-lPO4CQLkug5v7jJAs9p_la0FixP-hVJ5iqXhdI) ."
+       ]
+      }
+     ],
+     "reasoning": "Craft explicitly identifies Cork, Ireland as headquarters. A Tracxn page instead reports Dublin, Ireland, so Ireland is supported across both sources, while the HQ location remains somewhat inconsistent.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Rasayel - Grow your business over WhatsApp - Rasayel Blog",
+       "url": "https://learn.rasayel.io/en/blog",
+       "excerpts": [
+        "Rasayel Learning Center WhatsApp Business guides for B2B sales teams",
+        "Why CRMs Fail at Conversational Levels + How to Fix This [News & Updates](https://learn.rasayel.io/en/blog/news-updates/) \\- 8 min read [Why CRMs Fail at Conversational Levels + How to Fix This](https://learn.rasayel.io/en/blog/why-crms-fail-conversational-level/) CRMs record deals, but they fail at recording conversations data. Here\u2019s why businesses need to integrate CRM with a WhatsApp inbox for better workflows and team collaboration. Mohamed Ashraf Noaman's photograph [Mohamed Ashraf Noaman](https://learn.rasayel.io/en/contributors/mohamed-ashraf-noaman/) Last updated July 10, 2025",
+        "Chatbot Design for Sales: Best Practices and Real Examples [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 11 min read [Chatbot Design for Sales: Best Practices and Real Examples](https://learn.rasayel.io/en/blog/chatbot-sales-examples/) Learn how to design sales-ready chatbots that actually convert. Discover best practices, UI examples, and common mistakes to avoid so your bot drives leads, qualifies prospects, and boosts revenue. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated August 14, 2025"
+       ]
+      }
+     ],
+     "reasoning": "The blog index presents WhatsApp business guides and marketing, sales, support, success-story, and news/update content. It does not show at least two engineer-authored posts explaining product implementation, so it does not meet the stated threshold for an engineering blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://www.rasayel.io/",
+       "excerpts": [
+        "The WhatsApp platform trusted by sales teams Track every conversation, automate follow ups, and sync WhatsApp with your CRM\u2014so your team sells faster, stays organized, and never drops a deal."
+       ]
+      },
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "Introduction > Rasayel helps businesses connect with customers through WhatsApp Business messaging, campaigns, and integrations with your favorite tools. Highlights <CardGroup cols=\"2\"> <Card title=\"Shared team inbox\" icon=\"inbox\" href=\"/en/inbox/overview\"> A collaborative WhatsApp team inbox for sales and support team </Card> <Card title=\"WhatsApp Business\" icon=\"whatsapp\" href=\"/en/whatsapp-business/overview\"> Connect with customers through the world's most popular messaging platform </Card> <Card title=\"Automation\" icon=\"bullhorn\" href=\"/en/automations\"> Create and manage automations such as chatbots, sequences, and more. </Card> <Card title=\"Integrations\" icon=\"plug\" href=\"/en/introduction#integrations\"> Connect Rasayel with your favorite CRM (HubSpot, Salesforce, etc.) </Card> </CardGroup>"
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes a WhatsApp platform for sales teams, with conversation tracking, follow-ups, and CRM syncing. The public documentation describes WhatsApp Business messaging, campaigns, a shared team inbox, automation, and integrations for businesses.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Rasayel; website_url: https://www.rasayel.io/; founded_year: 2022; location_city: Dublin; location_country: Ireland; employee_count_official: 15; employee_count_history: []; funded: Yes; latest_funding_round_name: Seed; latest_funding_round_date: null; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Seed; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: null; all_funding_rounds[0].round_investor_names: Founder Collective; total_disclosed_funding_usd: 0.0"
+       ]
+      }
+     ],
+     "reasoning": "The company profile lists 15 employees, which falls in the 11-20 band. Other sources give nearby counts, but they are consistent with this band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Support AI",
+       "url": "https://docs.rasayel.io/en/automations/chatbots/chatbots-support-ai",
+       "excerpts": [
+        "Once the knowledge source processes completely, it will enter a **Trained** state, at which, you will be able to know how many LLM Tokens we have consumed to train it. ![Support Ai 4 Pn](https://mintcdn.com/rasayel-0ad99d68/OGgFm2GTmIRRXKY8/images/support-ai-4.png?fit=max\\&auto=format\\&n=OGgFm2GTmIRRXKY8\\&q=85\\&s=19c491b52422e0dd16a4685a75dbdcfd) Token limits Each data source that you add consumes LLM tokens to train, therefore, it can become expensive for Rasayel to maintain your data sources indefinitely. For this reason, Rasayel imposes a limit of **10 million tokens/month** for each workspace. The amount of tokens consumed by a data source depends on how big the source is."
+       ]
+      },
+      {
+       "title": "Privacy Policy",
+       "url": "https://docs.rasayel.io/privacy",
+       "excerpts": [
+        "**Stripe** Personal Data: Data specified in the privacy policy **Interaction with external social networks and platforms** **Twitter Tweet button and social widgets and Facebook Like button and social widgets** Personal Data: Cookies; Usage Data **Hosting and backend infrastructure** **Amazon Web Services (AWS)** Is a comprehensive, evolving cloud computing platform provided by Amazon that includes a mixture of infrastructure as a service (IaaS), platform as a service (PaaS) and software as a service (SaaS). **Tools and Software** **Sentry** Sentry is Open-source error tracking that helps developers to monitor, fix crashes in real time. **SparkPost** SparkPost is an email infrastructure provider - Predictive email intelligence platform. **GitHub** GitHub is Git repository hosting service. Rasayel uses GitHub to host their system\u2019s source code. **CircleCI** CircleCI is a continuous integration and continuous delivery (CI/CD) platform."
+       ]
+      },
+      {
+       "title": "Rasayel - Grow your business over WhatsApp - Rasayel Blog",
+       "url": "https://learn.rasayel.io/en/blog",
+       "excerpts": [
+        "Rasayel Learning Center WhatsApp Business guides for B2B sales teams Chatbot Design for Sales: Best Practices and Real Examples [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 11 min read [Chatbot Design for Sales: Best Practices and Real Examples](https://learn.rasayel.io/en/blog/chatbot-sales-examples/) Learn how to design sales-ready chatbots that actually convert. Discover best practices, UI examples, and common mistakes to avoid so your bot drives leads, qualifies prospects, and boosts revenue. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated August 14, 2025 How to Send WhatsApp Bulk Messages Without a Ban [+Templates] [WhatsApp for Marketing](https://learn.rasayel.io/en/blog/whatsapp-for-marketing/) \\- 10 min read [How to Send WhatsApp Bulk Messages Without a Ban [+Templates]](https://learn.rasayel.io/en/blog/whatsapp-bulk-messages/) Learn how to send bulk WhatsApp messages through the WhatsApp Business App or API and get tips on compliance, segmentation, templates, and metrics that drive B2B sales. Esraa Osama's photograph [Esraa Osama](https://learn.rasayel.io/en/contributors/esraa-osama/) Last updated August 11, 2025 WhatsApp Marketing vs Email Marketing: What Converts Better? [WhatsApp for Marketing](https://learn.rasayel.io/en/blog/whatsapp-for-marketing/) \\- 5 min read [WhatsApp Marketing vs Email Marketing: What Converts Better?](https://learn.rasayel.io/en/blog/whatsapp-vs-email-marketing/) Is WhatsApp marketing or email marketing better for B2B campaigns? Read our guide to know why businesses are turning to WhatsApp now more than ever. Omar Nabil's photograph [Omar Nabil](https://learn.rasayel.io/en/contributors/omar-nabil/) Last updated August 11, 2025 How to Collect Customer Feedback on WhatsApp [5+ Methods]\" [WhatsApp for Marketing](https://learn.rasayel.io/en/blog/whatsapp-for-marketing/) \\- 9 min read [How to Collect Customer Feedback on WhatsApp [5+ Methods]\"](https://learn.rasayel.io/en/blog/whatsapp-customer-feedback/) Learn how to use WhatsApp to gather customer feedback. Discover the best timing, tools, and message templates to collect insights at scale. Miodrag Magyar's photograph [Miodrag Magyar](https://learn.rasayel.io/en/contributors/miodrag-magyar/) Last updated August 11, 2025 How to Send Personalized Product Recommendations on WhatsApp [WhatsApp for Marketing](https://learn.rasayel.io/en/blog/whatsapp-for-marketing/) \\- 8 min read [How to Send Personalized Product Recommendations on WhatsApp](https://learn.rasayel.io/en/blog/whatsapp-product-recommendations/) Struggling to engage customers on WhatsApp? Learn how to send personalized product recommendations on WhatsApp that actually get replies. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated August 11, 2025 How to Segment Your WhatsApp Audience in 2025 [WhatsApp for Marketing](https://learn.rasayel.io/en/blog/whatsapp-for-marketing/) \\- 13 min read [How to Segment Your WhatsApp Audience in 2025](https://learn.rasayel.io/en/blog/whatsapp-customer-segmentation/) Need better engagement? Discover how WhatsApp customer segmentation boosts sales and connects you with your audience effectively. Miodrag Magyar's photograph [Miodrag Magyar](https://learn.rasayel.io/en/contributors/miodrag-magyar/) Last updated August 11, 2025 How to Use WhatsApp Newsletters [Complete Guide for 2025] [WhatsApp for Marketing](https://learn.rasayel.io/en/blog/whatsapp-for-marketing/) \\- 10 min read [How to Use WhatsApp Newsletters [Complete Guide for 2025]](https://learn.rasayel.io/en/blog/whatsapp-newsletter/) Want smoother handoffs and fewer dropped leads? Learn how to collaborate as sales and support team on WhatsApp to give your customers a smooth experience. Miodrag Magyar's photograph [Miodrag Magyar](https://learn.rasayel.io/en/contributors/miodrag-magyar/) Last updated July 18, 2025 How to Collaborate as a Sales and Support Team on WhatsApp [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 8 min read [How to Collaborate as a Sales and Support Team on WhatsApp](https://learn.rasayel.io/en/blog/sales-support-collaboration/) Want smoother handoffs and fewer dropped leads? Learn how to collaborate as sales and support team on WhatsApp to give your customers a smooth experience. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated July 18, 2025 Why CRMs Fail at Conversational Levels + How to Fix This [News & Updates](https://learn.rasayel.io/en/blog/news-updates/) \\- 8 min read [Why CRMs Fail at Conversational Levels + How to Fix This](https://learn.rasayel.io/en/blog/why-crms-fail-conversational-level/) CRMs record deals, but they fail at recording conversations data. Here\u2019s why businesses need to integrate CRM with a WhatsApp inbox for better workflows and team collaboration. Mohamed Ashraf Noaman's photograph [Mohamed Ashraf Noaman](https://learn.rasayel.io/en/contributors/mohamed-ashraf-noaman/) Last updated July 10, 2025 How to Improve WhatsApp Support Conversation Management [WhatsApp for Customer Support](https://learn.rasayel.io/en/blog/whatsapp-for-customer-support/) \\- 6 min read [How to Improve WhatsApp Support Conversation Management](https://learn.rasayel.io/en/blog/whatsapp-conversation-management-shared-inbox/) Struggling to manage WhatsApp support as a team? Learn how Rasayel\u2019s shared inbox helps you assign, track, and collaborate on conversations without the chaos. Miodrag Magyar's photograph [Miodrag Magyar](https://learn.rasayel.io/en/contributors/miodrag-magyar/) Last updated July 10, 2025 How to Improve Sales Team Collaboration with Rasayel\u2019s WhatsApp Inbox [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 9 min read [How to Improve Sales Team Collaboration With Rasayel\u2019s WhatsApp Inbox](https://learn.rasayel.io/en/blog/sales-collaboration-whatsapp-inbox/) Struggling with sales team collaboration on WhatsApp? Discover how Rasayel helps you assign chats, share context, and keep every lead on track. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated July 10, 2025 How to Fix Sales Handoff with Rasayel\u2019s WhatsApp Inbox [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 4 min read [How to Fix Sales Handoff With Rasayel\u2019s WhatsApp Inbox](https://learn.rasayel.io/en/blog/sales-handoff-whatsapp-inbox/) Struggling with messy sales-to-support handoffs? Learn how Rasayel helps your team share context, assign ownership, and support customers on WhatsApp. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated June 27, 2025 How a SaaS Team Fixed Sales Handoff on WhatsApp with Rasayel [Success Stories](https://learn.rasayel.io/en/blog/success-stories/) \\- 6 min read [How a SaaS Team Fixed Sales Handoff on WhatsApp With Rasayel](https://learn.rasayel.io/en/blog/success-stories/saas-team-sales-handoff/) See how this SaaS company fixed sales handoff and improved customer service on WhatsApp with Rasayel to boost visibility and response time. Miodrag Magyar's photograph [Miodrag Magyar](https://learn.rasayel.io/en/contributors/miodrag-magyar/) Last updated June 27, 2025 5 Ways to Improve Sales Team Collaboration on WhatsApp [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 9 min read [5 Ways to Improve Sales Team Collaboration on WhatsApp](https://learn.rasayel.io/en/blog/sales-team-collaboration-whatsapp/) Is your sales team operating independently? This guide gives you 5 strategies you can try to improve your sales team collaboration using WhatsApp. Hania Elmessiry's photograph [Hania Elmessiry](https://learn.rasayel.io/en/contributors/hania-elmessiry/) Last updated June 27, 2025 How to Automate Sales Handoff on WhatsApp [2025 Guide] [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 7 min read [How to Automate Sales Handoff on WhatsApp [2025 Guide]](https://learn.rasayel.io/en/blog/whatsapp-sales-support-handoff/) Learn how to fix your sales to support handoffs on WhatsApp to reduce delays, improve alignment, and give customers a smoother experience. Miodrag Magyar's photograph [Miodrag Magyar](https://learn.rasayel.io/en/contributors/miodrag-magyar/) Last updated June 20, 2025 Try Rasayel today, or talk to us. [Start 7-day free trial](https://app.rasayel.io/signup) [Book a demo](https://calendly.com/rasayel-for-you/grow-over-whatsapp?utm_source=blog_footer_CTA) \u00a9\ufe0f 2024 Rasayel, Inc. [Privacy](https://docs.rasayel.io/privacy) [Terms](https://docs.rasayel.io/terms)"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's AI documentation refers generically to its assistant and LLM tokens but does not identify an underlying model or provider. The privacy and security materials and the blog index likewise do not disclose one. The model provider is therefore unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Rasayel - Pricing",
+       "url": "https://rasayel.io/pricing",
+       "excerpts": [
+        "Simple pricing. No hidden fees."
+       ]
+      }
+     ],
+     "reasoning": "The cited Rasayel pricing page contains pricing content; the public page exists, so this is true even aside from whether its listed plans include prices.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Rasayel 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/507248-38",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |01-Feb-2022 | | | |Completed |Generating Revenue"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Rasayel; website_url: https://www.rasayel.io/; founded_year: 2022; location_city: Dublin; location_country: Ireland; employee_count_official: 15; employee_count_history: []; funded: Yes; latest_funding_round_name: Seed; latest_funding_round_date: null; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Seed; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: null; all_funding_rounds[0].round_investor_names: Founder Collective; total_disclosed_funding_usd: 0.0"
+       ]
+      }
+     ],
+     "reasoning": "The latest listed round is a Seed round, but the funding profile's Amount field is blank and the company profile gives no round amount. The amount is undisclosed, so it is null rather than zero.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://rasayel.io/",
+       "excerpts": [
+        "\" Joao Arthur Ferreira Global Sales Operations Specialist @FactorialHR",
+        "A. from Casita](https://learn.rasayel.io/en/blog/success-stories/casita/?utm_source=website) [I can't imagine selling on WhatsApp without Rasayel."
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's homepage testimonial identifies a sales operations specialist at FactorialHR, and another testimonial identifies a customer from Casita. Both names are presented in customer-testimonial context.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Rasayel 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/507248-38",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |01-Feb-2022 | | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile dates the Seed round to 01-Feb-2022, which yields 2022-02.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "<CardGroup cols=\"3\"> <Card title=\"HubSpot\" icon=\"h\" href=\"/en/integrations/hubspot/hubspot-overview\"> Connect Rasayel with HubSpot CRM </Card> <Card title=\"Salesforce\" icon=\"cloud\" href=\"/en/integrations/salesforce/salesforce-overview\"> Integrate with Salesforce for seamless customer management </Card>",
+        "<Card title=\"Pipedrive\" icon=\"pipe-section\" href=\"/en/integrations/pipedrive/pipedrive-overview\"> Integrate with Pipedrive CRM </Card> <Card title=\"Zoho\" icon=\"z\" href=\"/en/integrations/zoho/zoho-overview\"> Connect with Zoho's suite of business tools </Card> </CardGroup>"
+       ]
+      },
+      {
+       "title": "Rasayel - Pricing",
+       "url": "https://rasayel.io/pricing",
+       "excerpts": [
+        "Pipedrive & Zapier integrations"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's documentation names HubSpot, Salesforce, Pipedrive, and Zoho integrations; its pricing page also names Pipedrive and Zapier integrations. Each system listed is explicitly named on a cited Rasayel page.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Rasayel - About us",
+       "url": "https://www.rasayel.io/about",
+       "excerpts": [
+        "+5 years in the making We have been working hard for over 5 years and are optimising for long-term impact.",
+        "Tarek Khalil CEO & Co-founder Tarek previously worked as product engineer at Intercom. Prior to that, he travelled to live and work in numerous places around the world. He's now living in a small fishing town in rural south Ireland, and enjoys the nature around.He climbs hills whenever he can, and enjoys the rare, but lovely Irish sunny days. \ud83c\uddee\ud83c\uddea Ireland Mohamed Elbadwihi COO & Co-founder Mohamed has a background in digital enterprise strategy and software engineering.",
+        "Alexandra Golubeva Customer Success & Support Alexandra is a customer success lead who does her best to help every customer make full use of our product. After travelling the world, she now permanently resides in Portugal. Her main passion is music. To take a break from her laptop, she runs and does yoga. \ud83c\uddf5\ud83c\uddf9 Portugal Antoine Pirard Product & Design Antoine has 8+ years experience researching and designing products from start to finish. He worked at CitizenLab, Remi, CentralApp and is certified from Cambridge University. He is a new dad and loves playing tennis multiple times a week. \ud83c\udde7\ud83c\uddea Belgium Abdelrahman Awad Engineering Abdelrahman is a frontend engineer. He is passionate about open-source and contributes regularly to popular projects and has a few of his own. When not working, Abdelrahman is a competitive gamer trying to climb the MMR ladder in Dota 2. \ud83c\uddea\ud83c\uddec Egypt Youssef Walid Engineering Youssef is a backend engineer residing in bustling Cairo, when he's not busy building Rasayel or solving problems, you'll find him dominating online games like a pro. \ud83c\uddea\ud83c\uddec Egypt Brian Cooper Growth & Operations Brian is a growth & operations expert bringing over 10 years of experience in SaaS growth & operations. As a co-founder of several companies & a Techstars alum, he helped launch Wayflyer, which became a unicorn in 2022. Currently, Brian supports founders in growth & operational projects. Off-duty, he enjoys surfing & hiking. \ud83c\uddee\ud83c\uddea Ireland Ahmed Hesham Engineering Hesham is a software engineer with many years of experience in backend development. He excels in dynamic environments, ensuring robust backend & infrastructure for Rasayel. Outside work, he enjoys fitness, gaming, karting & Formula 1. \ud83c\uddea\ud83c\uddec Egypt Mohamed Ashraf Sales Ashraf is a senior sales executive with over 5 years in B2B sales. He\u2019s an expert in crafting growth strategies & optimizing sales pipelines. Ashraf aligns sales approaches with customer needs, driving growth & fostering client relationships. In leisure, he enjoys reading, drumming & playing tennis. \ud83c\uddea\ud83c\uddec Egypt Sarah Islam Product Marketing Sarah is a seasoned digital marketer specializing in strategy & planning. Her expertise includes developing digital marketing campaigns & optimizing web presence through SEO. A lover of writing and adventure, Sarah enjoys exploring new places with friends, traveling, and discovering new music. \ud83c\uddea\ud83c\uddec Egypt Miodrag Magyar Product Marketing Miodrag Magyar is an experienced content writer and marketing pro with over 15 years of experience. His passion for writing and creativity shines through in every project he tackles. Excited to join the team, Miodrag brings a wealth of knowledge and skills to help drive success. \ud83c\uddf2\ud83c\uddf0 North Macedonia Ahmed Awad Engineering"
+       ]
+      }
+     ],
+     "reasoning": "The small team page lists 12 people and identifies the C-level leaders as co-founders Tarek Khalil and Mohamed Elbadwihi, with no VP role shown. The company also says it has been working for over five years. No recent C-level/VP join or departure is established by the checked team information; this is a cautious negative assessment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Rasayel - Careers Page",
+       "url": "https://careerspage.io/rasayel",
+       "excerpts": [
+        "[Senior Software Engineer](https://careerspage.io/rasayel/senior-software-engineer-ra101) Remote Full time Mid-Senior Level"
+       ]
+      },
+      {
+       "title": "Senior Software Engineer - Rasayel - Careers Page",
+       "url": "https://careerspage.io/rasayel/senior-software-engineer-ra101",
+       "excerpts": [
+        "Senior Software Engineer"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists a Senior Software Engineer role. Although the job description mentions AI-powered work, AI/ML is not in the title, and the question's criteria exclude roles based on responsibilities alone.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Rasayel 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/507248-38",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |01-Feb-2022 | | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the most recent listed round as a Seed Round.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "Introduction > Rasayel helps businesses connect with customers through WhatsApp Business messaging, campaigns, and integrations with your favorite tools. Highlights <CardGroup cols=\"2\"> <Card title=\"Shared team inbox\" icon=\"inbox\" href=\"/en/inbox/overview\"> A collaborative WhatsApp team inbox for sales and support team </Card> <Card title=\"WhatsApp Business\" icon=\"whatsapp\" href=\"/en/whatsapp-business/overview\"> Connect with customers through the world's most popular messaging platform </Card> <Card title=\"Automation\" icon=\"bullhorn\" href=\"/en/automations\"> Create and manage automations such as chatbots, sequences, and more. </Card> <Card title=\"Integrations\" icon=\"plug\" href=\"/en/introduction#integrations\"> Connect Rasayel with your favorite CRM (HubSpot, Salesforce, etc.) </Card> </CardGroup>"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel has a public documentation site with multiple product sections, including inbox, WhatsApp Business, automations, and integrations, so public_docs is true.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Rasayel Corporate Headquarters, Office Locations and Addresses | Craft.co",
+       "url": "https://craft.co/rasayel/locations",
+       "excerpts": [
+        "Rasayel is headquartered in Cork, Ireland, and has 1 office location."
+       ]
+      },
+      {
+       "title": "Rasayel - 2026 Company Profile, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs",
+       "excerpts": [
+        "Rasayel is headquartered in Dublin, [Ireland](https://tracxn.com/d/geographies/ireland/__9l0N-lPO4CQLkug5v7jJAs9p_la0FixP-hVJ5iqXhdI) ."
+       ]
+      }
+     ],
+     "reasoning": "Craft explicitly identifies Rasayel's headquarters as Cork, while a Tracxn source reports Dublin. Cork is selected based on Craft's explicit HQ statement and the separate partner listing that places Rasayel in Cork, Ireland; the conflicting report lowers confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Changelog",
+       "url": "https://docs.rasayel.io/en/changelog",
+       "excerpts": [
+        "<Update label=\"April 28, 2026\"> Added - Automated HubSpot property updates You can now select and automatically set specific HubSpot properties\u2014such as \u201cCreated from Rasayel\u201d, \u201cPhone Number\u201d, and more.",
+        "<Update label=\"April 5, 2026\"> Added - Support for multi-language Authentication templates Authentication templates now support multiple languages. Previously available only in English, you can now create and send them in different languages to better match your audience. </Update>"
+       ]
+      }
+     ],
+     "reasoning": "The newest launch-type item shown in Rasayel's changelog is automated HubSpot property updates dated April 28, 2026. The next listed entry is April 5, 2026, and the changelog contains no newer launch in the six-month window before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Rasayel - Careers Page",
+       "url": "https://careerspage.io/rasayel",
+       "excerpts": [
+        "[Senior Software Engineer](https://careerspage.io/rasayel/senior-software-engineer-ra101) Remote Full time Mid-Senior Level"
+       ]
+      }
+     ],
+     "reasoning": "The readable careers page lists a Senior Software Engineer posting, not an SDR, BDR, sales/business development representative, or account executive role.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Rasayel 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/507248-38",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |01-Feb-2022 | | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "The latest listed funding round is the Seed round dated February 2022, well before the 18-month window ending November 9, 2026, so raised_18mo is false.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://rasayel.io/",
+       "excerpts": [
+        "\" Joao Arthur Ferreira Global Sales Operations Specialist @FactorialHR"
+       ]
+      }
+     ],
+     "reasoning": "The homepage testimonial identifies a FactorialHR sales operations specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://rasayel.io/",
+       "excerpts": [
+        "A. from Casita](https://learn.rasayel.io/en/blog/success-stories/casita/?utm_source=website) [I can't imagine selling on WhatsApp without Rasayel."
+       ]
+      }
+     ],
+     "reasoning": "The homepage testimonial identifies a customer from Casita.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "<CardGroup cols=\"3\"> <Card title=\"HubSpot\" icon=\"h\" href=\"/en/integrations/hubspot/hubspot-overview\"> Connect Rasayel with HubSpot CRM </Card>"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's public documentation names HubSpot as an integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "<Card title=\"Salesforce\" icon=\"cloud\" href=\"/en/integrations/salesforce/salesforce-overview\"> Integrate with Salesforce for seamless customer management </Card>"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's public documentation names Salesforce as an integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "<Card title=\"Pipedrive\" icon=\"pipe-section\" href=\"/en/integrations/pipedrive/pipedrive-overview\"> Integrate with Pipedrive CRM </Card>"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's public documentation names Pipedrive as an integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "<Card title=\"Zoho\" icon=\"z\" href=\"/en/integrations/zoho/zoho-overview\"> Connect with Zoho's suite of business tools </Card> </CardGroup>"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's public documentation names Zoho as an integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "Rasayel - Pricing",
+       "url": "https://rasayel.io/pricing",
+       "excerpts": [
+        "Pipedrive & Zapier integrations"
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's pricing page names Zapier as an integration.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [],
+    "hq_country": "Ireland",
+    "eng_blog": false,
+    "product_one_liner": "Rasayel provides a collaborative WhatsApp messaging platform with shared inboxes, campaigns, automation, and integrations for business sales and support teams.",
+    "employee_band": "11-20",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "FactorialHR",
+     "Casita"
+    ],
+    "funding_date": "2022-02",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Salesforce",
+     "Pipedrive",
+     "Zoho",
+     "Zapier"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": true,
+    "hq_city": "Cork",
+    "launched_6mo": false,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,354 @@
+{
+ "run": {
+  "routine_run_id": "run_0toazbiTA4CNM7tVNWB",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "usenaive.ai",
+    "status": "complete",
+    "result": {
+     "claygent-luna": {
+      "eng_blog": {
+       "notes": "The blog contains an Engineering category and technical posts; this cited example discusses open-source attribution and what the team builds.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/blogs",
+        "https://usenaive.ai/blogs/on-paperclip-and-open-source"
+       ]
+      },
+      "reasoning": "Core company information, public product materials, YC company/job profile, pricing, and a dated funding announcement were available. Hiring, launches and docs are supported by live indexed company resources. Customer names, model vendor, and leadership changes could not be substantiated. The company homepage and its materials are cited where they support explicit negatives.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Searched Google with query \"site:usenaive.ai Naïve AI\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Company marketplace | naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/businesses\",\"displayedLink\":\"https://usenaive.ai › businesses\",\"snippet\":\"AI Channel Cloning is a template that builds an age...",
+       "Searched Google with query \"Naïve usenaive.ai funding team jobs customers\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve is an AI research lab building autonomous companies. We develop the systems, environme...",
+       "Searched Google with query \"site:usenaive.ai/blog Naive AI\". The results are: \n {\"search_results\":[{\"title\":\"What Is an Autonomous Company? A Founder's Guide — Naïve\",\"link\":\"https://usenaive.ai/blog/what-is-an-autonomous-company\",\"displayedLink\":\"https://usenaive.ai › Blog\",\"snippet\":\"An autonomous company is a real legal entity run by AI employees instead of humans. Here's what one looks like, what it can actually do today, ...\",\"position\":1},{\"title\":\"Hosted vs Bring-Your-Own Runtime for AI Agents | Naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/blog/hosted-vs-bring-yo...",
+       "Searched Google with query \"usenaive.ai pricing documentation\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Product. Home · Templates · Primitives · Doomscroll · Pricing · Managed. Resources. Docs ...\",\"position\":1},{\"title\":\"Pricing | naïve\",\"link\":\"https://usenaive.ai/pricing\",\"displayedLink\":\"https://usenaive.ai › pricing\",\"snippet\":\"Standard is $20/mo per organization with $20 of credit included and a 7-day free tr...",
+       "Searched Google with query \"Naive usenaive.ai Crunchbase LinkedIn employees headquarters founded\". The results are: \n {\"search_results\":[{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve is an AI research lab building autonomous companies. We develop the systems, environments, and agent infrastructure required for AI to operate real ...\",\"position\":1},{\"title\":\"Naive - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/naive-technologies-inc\",\"displayedLink\":\"https://www.crunchbase.com › naive-technologies-i...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/\",\"question\":\"Find product description, footer/navigation links, customers, docs, trust/compliance information and company details.\"}. The results are: \n \"Naïve builds infrastructure and pre-built agent teams for autonomous companies, enabling agents to operate businesses end-to-end. Products include company templates (content creation, AI influencer, automation/SEO/recruiting/advertising agencies, online store, newsletter, security testing, market research, and more), multi-agent orchestration, tool integrations, agent identities and accounts, and code-governed permissions and budgets. Product links: https://usenaive.ai, Primitives https://usena...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs/on-paperclip-and-open-source\",\"question\":\"Find article date and determine whether engineering/technical blog post.\"}. The results are: \n \"Article: “Naïve and Paperclip: Attribution, MIT, and What We Actually Build” (https://usenaive.ai/blogs/on-paperclip-and-open-source). Published April 8, 2026; updated September 7, 2026. Categorized as Engineering and discusses technical/product architecture, open-source software, and managed agents.\"",
+       "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/naive\",\"question\":\"Find founded year, employee count, headquarters, description, founders, current jobs.\"}. The results are: \n \"Founded: 2025. Employees: 12. Headquarters: San Francisco. Description: AI research lab building autonomous companies; develops systems, environments, and agent infrastructure for AI to operate businesses end-to-end. Founders: Sean Dorje (Founder/CEO) and Dennis Zax (Founder/CTO). Current jobs: Founding Growth Engineer; Founding Product Engineer; Founding Member of Technical Staff — RL; Founding Member of Technical Staff — Agents; Growth Engineer Intern. Jobs: https://ycombinator.com/companies/...",
+       "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/\",\"question\":\"Find funding round stage date amount, named customers, product description.\"}. The results are: \n \"Funding: $28.5 million Series A, announced August 6, 2026; led by Nexus Venture Partners. Participants included Y Combinator, Zetta, Liquid 2, and angels Gokul Rajaram, Tim Zheng, and JD Sherman. Total raised: roughly $32 million.\\nNamed customers: None identified; the article mentions customer businesses including AI automation agencies, faceless TikTok/YouTube content channels, and a rental-car agency, but gives no customer names.\\nProduct: Infrastructure/API for AI agents to set up and run b...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/docs\",\"question\":\"Find model providers, documentation articles, compliance/security claims, integrations or CRM systems.\"}. The results are: \n \"Relevant documentation links: [How Naive Managed Agents works](https://usenaive.ai/docs/how-managed-agents-is-built); [API Reference](https://usenaive.ai/docs/api/overview); [SDK Reference](https://usenaive.ai/docs/sdk/typescript); [built-in tools](https://usenaive.ai/docs/capabilities/tools#built-in-tools); [model proxy](https://usenaive.ai/docs/api/proxy); [observability](https://usenaive.ai/docs/capabilities/observability); [audit logs](https://usenaive.ai/docs/api/audit-logs); [Privacy](htt...",
+       "Used visitWebpage {\"url\":\"https://usenaive.ai/pricing\",\"question\":\"Confirm public pricing plans.\"}. The results are: \n \"Public pricing plans: Standard is $20/month per company, including $20 monthly usage credit; Pro is $200/month, including $200 monthly usage credit. Both have the same platform and usage rates, no per-seat fee, and unused credits roll over and never expire. Standard has a 7-day free trial with $10 credit; add a card to start and cancel before day 7 to avoid charges. Custom pricing is available for committed volume or procurement. Pricing page: https://usenaive.ai/pricing\"",
+       "Searched Google with query \"site:usenaive.ai security SOC 2 Naive AI privacy subprocessor OpenAI Anthropic\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:usenaive.ai/blogs Naive 2026 launch introducing\". The results are: \n {\"search_results\":[{\"title\":\"Blog | naïve\",\"link\":\"https://usenaive.ai/blogs\",\"displayedLink\":\"https://usenaive.ai › blogs\",\"snippet\":\"#LaunchNovember 2, 2026 · #LaunchOctober 17, 2026 · The week of September 29: a redesigned site, live voice calls, set-up-before- Launch #LaunchOctober 6, 2026 ...\",\"position\":1},{\"title\":\"The Most Efficient Managed Agent for Long Horizon Tasks\",\"link\":\"https://usenaive.ai/blogs/introducing-naive-managed-agents\",\"displayedLink\":\"https://usenaive.ai › introducing-...",
+       "Searched Google with query \"Naïve usenaive.ai jobs careers hiring\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Jobs at Naïve\",\"link\":\"https://www.ycombinator.com/companies/naive/jobs\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive › jobs\",\"snippet\":\"Jobs at Naïve ; In-House Video Editor. Remote (US). $5K - $10K /...",
+       "Searched Google with query \"Naïve AI autonomous company customers usenaive.ai case study customer\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve is an AI research lab building autonomous companies. We develop the systems, environme...",
+       "Searched Google with query \"Naive usenaive.ai founders joined 2026 leadership VP\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Naïve raises $28.5M Series A led by Nexus VP to build Agent-Run Companies•Join. We develop the environments & infrastructure required for AI … with pre-built ...\",\"position\":1},{\"title\":\"Naïve: Autonomous Company Infrastructure\",\"link\":\"https://www.ycombinator.com/companies/naive\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive\",\"snippet\":\"Founded in 2025 by S...",
+       "Searched Google with query \"site:usenaive.ai integrations HubSpot Salesforce jobs Naive\". The results are: \n {\"message\":\"No data returned from search query\"}"
+      ],
+      "hq_location": {
+       "notes": "YC lists San Francisco as location/headquarters.",
+       "value": {
+        "city": "San Francisco",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive"
+       ]
+      },
+      "public_docs": {
+       "notes": "Public documentation includes multiple product, API and SDK articles.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/docs"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The August 2026 Series A falls within the 18-month window before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+       ]
+      },
+      "founded_year": {
+       "notes": "YC profile says founded in 2025.",
+       "value": 2025,
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive"
+       ]
+      },
+      "last_funding": {
+       "notes": "Naïve announced a $28.5 million Series A on August 6, 2026.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Series A",
+        "amount_usd": 28500000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The blog lists launch posts dated November 2, 2026 and October 17, 2026, including Music and 3D Assets launches.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/blogs"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public Standard and Pro plans are listed.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "YC reports 12 employees.",
+       "value": "11-20",
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The live job board lists engineering and growth roles, not SDR, BDR, sales/business development representative, or account executive roles.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive/jobs"
+       ]
+      },
+      "model_provider": {
+       "notes": "Public docs reviewed do not identify specific models or providers; no positive provider disclosure located.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "The coverage describes customer business categories but does not name any customers; no named customer roster could be found.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "YC job listings include Member of Technical Staff — RL and Member of Technical Staff — Agents, roles explicitly focused on AI/ML.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive/jobs"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Homepage and footer present product and legal links but no named SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS certification.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "Reviewed job listings and docs; no CRM or sales/marketing system was visibly named.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://www.ycombinator.com/companies/naive/jobs",
+        "https://usenaive.ai/docs"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Homepage describes infrastructure and templates for agents to autonomously operate businesses.",
+       "value": "Naïve provides agent infrastructure and ready-made autonomous company templates so founders and teams can deploy AI agent teams to operate businesses end-to-end.",
+       "status": "asserted",
+       "citations": [
+        "https://usenaive.ai/"
+       ]
+      },
+      "timeTakenInSeconds": "31.53",
+      "totalCreditsCharged": 0.2,
+      "leadership_change_12mo": {
+       "notes": "No dated C-level/VP join or departure was verified. Available team/profile information is insufficient to establish a negative.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "usenaive.ai",
+  "status": "complete",
+  "result": {
+   "claygent-luna": {
+    "eng_blog": {
+     "notes": "The blog contains an Engineering category and technical posts; this cited example discusses open-source attribution and what the team builds.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/blogs",
+      "https://usenaive.ai/blogs/on-paperclip-and-open-source"
+     ]
+    },
+    "reasoning": "Core company information, public product materials, YC company/job profile, pricing, and a dated funding announcement were available. Hiring, launches and docs are supported by live indexed company resources. Customer names, model vendor, and leadership changes could not be substantiated. The company homepage and its materials are cited where they support explicit negatives.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Searched Google with query \"site:usenaive.ai Naïve AI\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Company marketplace | naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/businesses\",\"displayedLink\":\"https://usenaive.ai › businesses\",\"snippet\":\"AI Channel Cloning is a template that builds an age...",
+     "Searched Google with query \"Naïve usenaive.ai funding team jobs customers\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve is an AI research lab building autonomous companies. We develop the systems, environme...",
+     "Searched Google with query \"site:usenaive.ai/blog Naive AI\". The results are: \n {\"search_results\":[{\"title\":\"What Is an Autonomous Company? A Founder's Guide — Naïve\",\"link\":\"https://usenaive.ai/blog/what-is-an-autonomous-company\",\"displayedLink\":\"https://usenaive.ai › Blog\",\"snippet\":\"An autonomous company is a real legal entity run by AI employees instead of humans. Here's what one looks like, what it can actually do today, ...\",\"position\":1},{\"title\":\"Hosted vs Bring-Your-Own Runtime for AI Agents | Naïve - usenaive.ai\",\"link\":\"https://usenaive.ai/blog/hosted-vs-bring-yo...",
+     "Searched Google with query \"usenaive.ai pricing documentation\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Product. Home · Templates · Primitives · Doomscroll · Pricing · Managed. Resources. Docs ...\",\"position\":1},{\"title\":\"Pricing | naïve\",\"link\":\"https://usenaive.ai/pricing\",\"displayedLink\":\"https://usenaive.ai › pricing\",\"snippet\":\"Standard is $20/mo per organization with $20 of credit included and a 7-day free tr...",
+     "Searched Google with query \"Naive usenaive.ai Crunchbase LinkedIn employees headquarters founded\". The results are: \n {\"search_results\":[{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve is an AI research lab building autonomous companies. We develop the systems, environments, and agent infrastructure required for AI to operate real ...\",\"position\":1},{\"title\":\"Naive - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/naive-technologies-inc\",\"displayedLink\":\"https://www.crunchbase.com › naive-technologies-i...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/\",\"question\":\"Find product description, footer/navigation links, customers, docs, trust/compliance information and company details.\"}. The results are: \n \"Naïve builds infrastructure and pre-built agent teams for autonomous companies, enabling agents to operate businesses end-to-end. Products include company templates (content creation, AI influencer, automation/SEO/recruiting/advertising agencies, online store, newsletter, security testing, market research, and more), multi-agent orchestration, tool integrations, agent identities and accounts, and code-governed permissions and budgets. Product links: https://usenaive.ai, Primitives https://usena...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/blogs/on-paperclip-and-open-source\",\"question\":\"Find article date and determine whether engineering/technical blog post.\"}. The results are: \n \"Article: “Naïve and Paperclip: Attribution, MIT, and What We Actually Build” (https://usenaive.ai/blogs/on-paperclip-and-open-source). Published April 8, 2026; updated September 7, 2026. Categorized as Engineering and discusses technical/product architecture, open-source software, and managed agents.\"",
+     "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/naive\",\"question\":\"Find founded year, employee count, headquarters, description, founders, current jobs.\"}. The results are: \n \"Founded: 2025. Employees: 12. Headquarters: San Francisco. Description: AI research lab building autonomous companies; develops systems, environments, and agent infrastructure for AI to operate businesses end-to-end. Founders: Sean Dorje (Founder/CEO) and Dennis Zax (Founder/CTO). Current jobs: Founding Growth Engineer; Founding Product Engineer; Founding Member of Technical Staff — RL; Founding Member of Technical Staff — Agents; Growth Engineer Intern. Jobs: https://ycombinator.com/companies/...",
+     "Used visitWebpage {\"url\":\"https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/\",\"question\":\"Find funding round stage date amount, named customers, product description.\"}. The results are: \n \"Funding: $28.5 million Series A, announced August 6, 2026; led by Nexus Venture Partners. Participants included Y Combinator, Zetta, Liquid 2, and angels Gokul Rajaram, Tim Zheng, and JD Sherman. Total raised: roughly $32 million.\\nNamed customers: None identified; the article mentions customer businesses including AI automation agencies, faceless TikTok/YouTube content channels, and a rental-car agency, but gives no customer names.\\nProduct: Infrastructure/API for AI agents to set up and run b...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/docs\",\"question\":\"Find model providers, documentation articles, compliance/security claims, integrations or CRM systems.\"}. The results are: \n \"Relevant documentation links: [How Naive Managed Agents works](https://usenaive.ai/docs/how-managed-agents-is-built); [API Reference](https://usenaive.ai/docs/api/overview); [SDK Reference](https://usenaive.ai/docs/sdk/typescript); [built-in tools](https://usenaive.ai/docs/capabilities/tools#built-in-tools); [model proxy](https://usenaive.ai/docs/api/proxy); [observability](https://usenaive.ai/docs/capabilities/observability); [audit logs](https://usenaive.ai/docs/api/audit-logs); [Privacy](htt...",
+     "Used visitWebpage {\"url\":\"https://usenaive.ai/pricing\",\"question\":\"Confirm public pricing plans.\"}. The results are: \n \"Public pricing plans: Standard is $20/month per company, including $20 monthly usage credit; Pro is $200/month, including $200 monthly usage credit. Both have the same platform and usage rates, no per-seat fee, and unused credits roll over and never expire. Standard has a 7-day free trial with $10 credit; add a card to start and cancel before day 7 to avoid charges. Custom pricing is available for committed volume or procurement. Pricing page: https://usenaive.ai/pricing\"",
+     "Searched Google with query \"site:usenaive.ai security SOC 2 Naive AI privacy subprocessor OpenAI Anthropic\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:usenaive.ai/blogs Naive 2026 launch introducing\". The results are: \n {\"search_results\":[{\"title\":\"Blog | naïve\",\"link\":\"https://usenaive.ai/blogs\",\"displayedLink\":\"https://usenaive.ai › blogs\",\"snippet\":\"#LaunchNovember 2, 2026 · #LaunchOctober 17, 2026 · The week of September 29: a redesigned site, live voice calls, set-up-before- Launch #LaunchOctober 6, 2026 ...\",\"position\":1},{\"title\":\"The Most Efficient Managed Agent for Long Horizon Tasks\",\"link\":\"https://usenaive.ai/blogs/introducing-naive-managed-agents\",\"displayedLink\":\"https://usenaive.ai › introducing-...",
+     "Searched Google with query \"Naïve usenaive.ai jobs careers hiring\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Jobs at Naïve\",\"link\":\"https://www.ycombinator.com/companies/naive/jobs\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive › jobs\",\"snippet\":\"Jobs at Naïve ; In-House Video Editor. Remote (US). $5K - $10K /...",
+     "Searched Google with query \"Naïve AI autonomous company customers usenaive.ai case study customer\". The results are: \n {\"search_results\":[{\"title\":\"Naive: Build Your Autonomous Company\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Infrastructure that lets agents autonomously operate businesses. Pick a company template, deploy it, and watch an agent team run it.\",\"position\":1},{\"title\":\"Naïve\",\"link\":\"https://www.linkedin.com/company/usenaive\",\"displayedLink\":\"16.4K+ followers\",\"snippet\":\"Naïve is an AI research lab building autonomous companies. We develop the systems, environme...",
+     "Searched Google with query \"Naive usenaive.ai founders joined 2026 leadership VP\". The results are: \n {\"search_results\":[{\"title\":\"usenaive.ai\",\"link\":\"https://usenaive.ai/\",\"displayedLink\":\"https://usenaive.ai\",\"snippet\":\"Naïve raises $28.5M Series A led by Nexus VP to build Agent-Run Companies•Join. We develop the environments & infrastructure required for AI … with pre-built ...\",\"position\":1},{\"title\":\"Naïve: Autonomous Company Infrastructure\",\"link\":\"https://www.ycombinator.com/companies/naive\",\"displayedLink\":\"https://www.ycombinator.com › companies › naive\",\"snippet\":\"Founded in 2025 by S...",
+     "Searched Google with query \"site:usenaive.ai integrations HubSpot Salesforce jobs Naive\". The results are: \n {\"message\":\"No data returned from search query\"}"
+    ],
+    "hq_location": {
+     "notes": "YC lists San Francisco as location/headquarters.",
+     "value": {
+      "city": "San Francisco",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive"
+     ]
+    },
+    "public_docs": {
+     "notes": "Public documentation includes multiple product, API and SDK articles.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/docs"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The August 2026 Series A falls within the 18-month window before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+     ]
+    },
+    "founded_year": {
+     "notes": "YC profile says founded in 2025.",
+     "value": 2025,
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive"
+     ]
+    },
+    "last_funding": {
+     "notes": "Naïve announced a $28.5 million Series A on August 6, 2026.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Series A",
+      "amount_usd": 28500000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The blog lists launch posts dated November 2, 2026 and October 17, 2026, including Music and 3D Assets launches.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/blogs"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public Standard and Pro plans are listed.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "YC reports 12 employees.",
+     "value": "11-20",
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The live job board lists engineering and growth roles, not SDR, BDR, sales/business development representative, or account executive roles.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive/jobs"
+     ]
+    },
+    "model_provider": {
+     "notes": "Public docs reviewed do not identify specific models or providers; no positive provider disclosure located.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "The coverage describes customer business categories but does not name any customers; no named customer roster could be found.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/08/06/naive-raises-28-5m-to-automate-the-grunt-work-of-setting-up-and-running-a-company/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "YC job listings include Member of Technical Staff — RL and Member of Technical Staff — Agents, roles explicitly focused on AI/ML.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive/jobs"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Homepage and footer present product and legal links but no named SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS certification.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "Reviewed job listings and docs; no CRM or sales/marketing system was visibly named.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://www.ycombinator.com/companies/naive/jobs",
+      "https://usenaive.ai/docs"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Homepage describes infrastructure and templates for agents to autonomously operate businesses.",
+     "value": "Naïve provides agent infrastructure and ready-made autonomous company templates so founders and teams can deploy AI agent teams to operate businesses end-to-end.",
+     "status": "asserted",
+     "citations": [
+      "https://usenaive.ai/"
+     ]
+    },
+    "timeTakenInSeconds": "31.53",
+    "totalCreditsCharged": 0.2,
+    "leadership_change_12mo": {
+     "notes": "No dated C-level/VP join or departure was verified. Available team/profile information is insufficient to establish a negative.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    }
+   }
+  }
+ }
+}

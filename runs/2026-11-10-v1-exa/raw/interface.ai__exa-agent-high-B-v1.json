@@ -1,0 +1,929 @@
+{
+ "id": "agent_run_50031735b43d406eacd679d41e0f2e7e",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:57:51.084Z",
+ "completedAt": "2026-11-10T19:02:02.389Z",
+ "request": {
+  "query": "Research the company interface.ai (interface.ai). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"interface.ai provides agentic AI assistants that automate customer service and transactions across voice, chat, and employee-assisted channels for credit unions and community banks.\",\"citations\":[\"https://interface.ai\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://interface.ai\"],\"notes\":\"No public pricing link or plans page was found in site navigation; the /pricing address yielded no readable page.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"America\u2019s Credit Union\",\"Radiant Credit Union\",\"Credit Union of America\",\"We Florida Financial Credit Union\",\"Securityplus Federal Credit Union\",\"Dupaco Community Credit Union\",\"WEOKIE Federal Credit Union\",\"Del-One Federal Credit Union\",\"Bank of Guam\",\"Northern Credit Union\",\"KeyPoint Credit Union\",\"Dover Federal Credit Union\",\"Pasadena Service Federal Credit Union\",\"Neighborhood Credit Union\",\"University Credit Union\"],\"citations\":[\"https://interface.ai/case-studies\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"101-200\",\"citations\":[\"https://linkedin.com/company/interface-ai\"],\"notes\":\"Public company profile reports 193 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"San Francisco\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/interface-ai\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2019,\"citations\":[\"https://interface.ai/careers\",\"https://linkedin.com/company/interface-ai\"],\"notes\":\"The company timeline identifies 2019 as the birth of interface.ai; predecessor Payjo operated during 2015\u20132018.\"},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://interface.ai/blog\"],\"notes\":\"The blog is aimed at financial-institution leaders and contains product, industry, and marketing articles; no qualifying engineering-authored series about building the product was found.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://interface.ai\"],\"notes\":\"No public product-documentation or help-center link was found; docs.interface.ai and help.interface.ai yielded no readable documentation. Security reports and marketing resources are not product documentation.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.ashbyhq.com/interface-ai/c4d8b111-8084-4e02-86d5-c28591439612\"],\"notes\":\"Live posting: Applied AI Engineer, Business Automation; responsibilities include applied AI/LLM engineering and agentic workflows.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"Reviewed platform descriptions, security/compliance material, privacy policy, blog results, and the trust center\u2019s subprocessor section. Public material describes multiple LLMs but does not establish a named production model provider; subprocessor details were not publicly readable.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://trust.interface.ai/\"],\"notes\":\"Trust center lists SOC 2 Type 2, ISO/IEC 27001:2022, and GDPR. GDPR is a compliance claim, not a certification in the same sense as ISO 27001.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series A\",\"date\":\"2024-10\",\"amount_usd\":30000000},\"citations\":[\"https://interface.ai/newsroom/interface-ai-secures-funding-to-become-the-most-valuable-agentic-ai-company-in-banking\",\"https://interface.ai/careers\"],\"notes\":\"Company reports $30M Series A financing; funding records distinguish $20M equity and $10M debt in the same October 2024 financing. No newer corroborated announcement was found.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://interface.ai/newsroom/interface-ai-secures-funding-to-become-the-most-valuable-agentic-ai-company-in-banking\",\"https://interface.ai/careers\"],\"notes\":\"Latest corroborated financing announcement is October 2024, before the 2025-05-09 cutoff. One database lists later uncorroborated entries, which could not be verified in company announcements.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.ashbyhq.com/interface-ai\"],\"notes\":\"The live careers board lists an Account Executive opening in San Francisco.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://interface.ai/webinar-getting-started-v6-console-sandbox\",\"https://interface.ai/solutions/assemble\"],\"notes\":\"The dated September 17 / October 1, 2026 customer announcement introduces the new Assemble console and V6 sandbox, enabling self-service configuration, governance, testing, and analytics; this is a major capability introduction within the six-month window, not a bug fix.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://interface.ai/webinar-meet-interface-ais-new-executive-leaders\"],\"notes\":\"The June 18, 2026 company announcement introduces new executive hires Michael Azevedo (VP, Sales) and Bryan Dooley (SVP, Customer Experience).\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce Service Cloud\"],\"citations\":[\"https://jobs.ashbyhq.com/interface-ai/3cb8c4a6-158b-4e05-90cd-b1df24a814dc\"],\"notes\":\"Technical Support Engineer posting requires resolving escalated tickets and maintaining audit-ready case documentation in Salesforce Service Cloud.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog is aimed at financial-institution leaders and contains product, industry, and marketing articles; no qualifying engineering-authored series about building the product was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/blog"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "San Francisco",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/interface-ai"
+    ]
+   },
+   "public_docs": {
+    "notes": "No public product-documentation or help-center link was found; docs.interface.ai and help.interface.ai yielded no readable documentation. Security reports and marketing resources are not product documentation.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "Latest corroborated financing announcement is October 2024, before the 2025-05-09 cutoff. One database lists later uncorroborated entries, which could not be verified in company announcements.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/newsroom/interface-ai-secures-funding-to-become-the-most-valuable-agentic-ai-company-in-banking",
+     "https://interface.ai/careers"
+    ]
+   },
+   "founded_year": {
+    "notes": "The company timeline identifies 2019 as the birth of interface.ai; predecessor Payjo operated during 2015\u20132018.",
+    "value": 2019,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/careers",
+     "https://linkedin.com/company/interface-ai"
+    ]
+   },
+   "last_funding": {
+    "notes": "Company reports $30M Series A financing; funding records distinguish $20M equity and $10M debt in the same October 2024 financing. No newer corroborated announcement was found.",
+    "value": {
+     "date": "2024-10",
+     "stage": "Series A",
+     "amount_usd": 30000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/newsroom/interface-ai-secures-funding-to-become-the-most-valuable-agentic-ai-company-in-banking",
+     "https://interface.ai/careers"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "The dated September 17 / October 1, 2026 customer announcement introduces the new Assemble console and V6 sandbox, enabling self-service configuration, governance, testing, and analytics; this is a major capability introduction within the six-month window, not a bug fix.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/webinar-getting-started-v6-console-sandbox",
+     "https://interface.ai/solutions/assemble"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No public pricing link or plans page was found in site navigation; the /pricing address yielded no readable page.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai"
+    ]
+   },
+   "employee_band": {
+    "notes": "Public company profile reports 193 employees.",
+    "value": "101-200",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/interface-ai"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The live careers board lists an Account Executive opening in San Francisco.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/interface-ai"
+    ]
+   },
+   "model_provider": {
+    "notes": "Reviewed platform descriptions, security/compliance material, privacy policy, blog results, and the trust center\u2019s subprocessor section. Public material describes multiple LLMs but does not establish a named production model provider; subprocessor details were not publicly readable.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "value": [
+     "America\u2019s Credit Union",
+     "Radiant Credit Union",
+     "Credit Union of America",
+     "We Florida Financial Credit Union",
+     "Securityplus Federal Credit Union",
+     "Dupaco Community Credit Union",
+     "WEOKIE Federal Credit Union",
+     "Del-One Federal Credit Union",
+     "Bank of Guam",
+     "Northern Credit Union",
+     "KeyPoint Credit Union",
+     "Dover Federal Credit Union",
+     "Pasadena Service Federal Credit Union",
+     "Neighborhood Credit Union",
+     "University Credit Union"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/case-studies"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "Live posting: Applied AI Engineer, Business Automation; responsibilities include applied AI/LLM engineering and agentic workflows.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/interface-ai/c4d8b111-8084-4e02-86d5-c28591439612"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Trust center lists SOC 2 Type 2, ISO/IEC 27001:2022, and GDPR. GDPR is a compliance claim, not a certification in the same sense as ISO 27001.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://trust.interface.ai/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "Technical Support Engineer posting requires resolving escalated tickets and maintaining audit-ready case documentation in Salesforce Service Cloud.",
+    "value": [
+     "Salesforce Service Cloud"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/interface-ai/3cb8c4a6-158b-4e05-90cd-b1df24a814dc"
+    ]
+   },
+   "product_one_liner": {
+    "value": "interface.ai provides agentic AI assistants that automate customer service and transactions across voice, chat, and employee-assisted channels for credit unions and community banks.",
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "The June 18, 2026 company announcement introduces new executive hires Michael Azevedo (VP, Sales) and Bryan Dooley (SVP, Customer Experience).",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://interface.ai/webinar-meet-interface-ais-new-executive-leaders"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://interface.ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://interface.ai"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://interface.ai/case-studies"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/interface-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/interface-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://interface.ai/careers"
+     },
+     {
+      "url": "https://linkedin.com/company/interface-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://interface.ai/blog"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://interface.ai"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/interface-ai/c4d8b111-8084-4e02-86d5-c28591439612"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://trust.interface.ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://interface.ai/newsroom/interface-ai-secures-funding-to-become-the-most-valuable-agentic-ai-company-in-banking"
+     },
+     {
+      "url": "https://interface.ai/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://interface.ai/newsroom/interface-ai-secures-funding-to-become-the-most-valuable-agentic-ai-company-in-banking"
+     },
+     {
+      "url": "https://interface.ai/careers"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/interface-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://interface.ai/webinar-getting-started-v6-console-sandbox"
+     },
+     {
+      "url": "https://interface.ai/solutions/assemble"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://interface.ai/webinar-meet-interface-ais-new-executive-leaders"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/interface-ai/3cb8c4a6-158b-4e05-90cd-b1df24a814dc"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

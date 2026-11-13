@@ -1,0 +1,24 @@
+{
+ "url": "https://docs.druidai.com/docs/Content/Governance%20%26%20Security/AI%20Evaluation%20and%20Response%20Guardrails.htm",
+ "fetched_at": "2026-11-11T01:28:44.852341+00:00",
+ "hours_after_run": 49.5,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "f92b13e5cc69c388fa485e9a0ad35257a2a2b600b03789371e262d2383f8a67f",
+ "chars": 2700,
+ "truncated": false,
+ "title": "AI Evaluation and Response Guardrails",
+ "markdown": "# AI Evaluation and Response Guardrails\n\nDruid provides a comprehensive set of native guardrails to ensure AI Agent reliability and factual integrity. These controls govern how models interpret user intent and generate content, ensuring that every interaction remains within authorized business boundaries and adheres to enterprise safety standards.\n\n## Hallucination Prevention (Knowledgebase with GPT V4)\n\nTo eliminate the risk of fabricated information, Druid uses Retrieval-Augmented Generation (RAG) and Graph RAG to ground AI Agent responses in verified enterprise data.\n\n- **Factual Grounding**: Instead of relying on general model knowledge, the AI Agent specifically queries your uploaded documents and data services to construct answers.\n\n- **Source Citations**: Every response generated through this framework includes built-in citations. These citations provide a transparent link to the source documentation, allowing users and auditors to verify the evidence chain for any given answer.\n\n\n## LLM Resource Management and Governance\n\nDruid features an LLM-agnostic orchestration layer that decouples AI Agent logic from specific model providers. This centralized management ensures that all model activity is auditable and secure.\n\n- **Provider Flexibility**: Administrators can centrally configure and switch between Azure OpenAI, Anthropic Claude, Google Gemini, Mistral, LLaMA, or Druid’s private Becus model without rewriting agent flows.\n\n- **Centralized Control**: By managing resources in a single administrative location, the platform enforces consistent Role-Based Access Control (RBAC) and security policies across all model connections.\n\n\n## Content and Policy Enforcement\n\nTo maintain a professional tone and ensure the AI Agent stays on task, administrators can define specific boundaries for conversational behavior and response generation.\n\n- **Topic Filtering**: Configure the platform to identify and deflect queries that fall outside the defined business domain or represent a conflict of interest. This prevents the AI Agent from engaging in off-topic discussions that could pose a reputational or legal risk.\n\n- **Keyword and Sentiment Restrictions**: Using System Prompt definitions, administrators can enforce specific linguistic boundaries. By defining strict behavioral instructions within the prompt, you ensure the AI Agent avoids restricted terminology and maintains a neutral or helpful sentiment regardless of the user's tone.\n\n- **NLU Thresholds**: Define the confidence levels required for an AI Agent to trigger a response. This serves as a safety gate to prevent the model from \"guessing\" user intent during ambiguous or low-confidence interactions.\n\n\nTop",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-11T01:07:54.554783+00:00",
+ "hours_after_launch": 0.35
+}

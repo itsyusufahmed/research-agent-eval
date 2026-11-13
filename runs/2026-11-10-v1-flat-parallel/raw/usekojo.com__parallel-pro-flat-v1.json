@@ -1,0 +1,460 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea60cc9034c6633ac",
+  "interaction_id": "trun_142119f6a1b4439ea60cc9034c6633ac",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "usekojo.com"
+  },
+  "created_at": "2026-11-10T18:47:57.977562Z",
+  "modified_at": "2026-11-10T18:51:25.187179Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea60cc9034c6633ac",
+   "interaction_id": "trun_142119f6a1b4439ea60cc9034c6633ac",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "usekojo.com"
+   },
+   "created_at": "2026-11-10T18:47:57.977562Z",
+   "modified_at": "2026-11-10T18:51:25.187179Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "url": "https://linkedin.com/company/kojotechnologies",
+       "excerpts": [
+        "Founded 2018 Website [www.usekojo.com](https://www.linkedin.com/redir/redirect?url=http%3A%2F%2Fwww%2Eusekojo%2Ecom&urlhash=do7E&trk=about_website) External link for Kojo Industry Software Development Company size 51-200 employees Headquarters San Francisco, California Type Privately Held Founded 2018"
+       ]
+      }
+     ],
+     "reasoning": "Kojo's company profile explicitly lists 2018 as its founding year: https://linkedin.com/company/kojotechnologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security | Kojo",
+       "url": "https://www.usekojo.com/security",
+       "excerpts": [
+        "Our successful completion of the SOC 2 audit attests to our adherence to information security practices."
+       ]
+      }
+     ],
+     "reasoning": "Kojo states that it successfully completed a SOC 2 audit, rather than describing certification as in progress: https://www.usekojo.com/security.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "url": "https://linkedin.com/company/kojotechnologies",
+       "excerpts": [
+        "Website: www.usekojo.com employee count: 163 founded year: 2018 follower count: 12788 linkedin url: https://www.linkedin.com/company/kojotechnologies country iso: US country name: United States Locality: San Francisco, California Type: Privately Held Size: 50 company headline Kojo is the construction industry's leading materials procurement platform, powered by AI. postal code: 94103 Region: California slug status: A Inferred Location Latitude: 37.7801 Longitude: -122.42 Locationstr: San Francisco, California country iso: US admin district: CA admin district2: San Francisco County country region: United States formatted address: San Francisco, CA Locality: San Francisco Name: San Francisco, CA Specialties Name: SaaS Name: Commercial Building Name: Construction Name: Supply Chain Name: contractors Name: Materials Management Industries Name: Software Development Primary: true Locations Address: San Francisco, California 94103, US is primary"
+       ]
+      }
+     ],
+     "reasoning": "Kojo's company profile identifies its primary location as San Francisco, California, United States: https://linkedin.com/company/kojotechnologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "The Kojo Blog",
+       "url": "https://www.usekojo.com/blog",
+       "excerpts": [
+        "Blog Get the latest insights, trends, and news for trade contractors. Displaying result of total Displaying Sort by Date Blog Press Releases Procurement Tips Industry Insights Product Updates Company Announcements"
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://medium.com/kojo-engineering/rebranding-to-kojo-4ad8d8660e5d",
+       "excerpts": [
+        "My team at the time was the Field team, so we were in charge of rebranding the mobile application, which is written in React Native."
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://medium.com/kojo-engineering",
+       "excerpts": [
+        "[Kojo Engineering](https://medium.com/kojo-engineering)"
+       ]
+      }
+     ],
+     "reasoning": "The public blog index is oriented toward procurement, product updates, industry news, and company announcements: https://www.usekojo.com/blog. One qualifying engineering implementation post was located, about rebranding the React Native application: https://medium.com/kojo-engineering/rebranding-to-kojo-4ad8d8660e5d. The engineering publication index did not expose a second qualifying post, so the two-post threshold is not met by the available evidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Kojo Poised to Revolutionize Construction Materials Management",
+       "url": "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+       "excerpts": [
+        "Kojo is the construction industry's leading materials and inventory management platform. Kojo enables trade and self-perform general contractors to streamline every step in the procurement and inventory management process from takeoff to closeout. By connecting field, office, warehouse, accounting, and distributor teams on one platform, Kojo gives contractors visibility into real-time materials spending and usage, helps them more effectively collaborate with their vendors, reduces material waste, and increases labor productivity."
+       ]
+      }
+     ],
+     "reasoning": "The company announcement describes materials procurement and inventory management for trade and self-perform general contractors, connecting the named teams from takeoff to closeout: https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "url": "https://linkedin.com/company/kojotechnologies",
+       "excerpts": [
+        "Website: www.usekojo.com employee count: 163 founded year: 2018 follower count: 12788 linkedin url: https://www.linkedin.com/company/kojotechnologies country iso: US country name: United States Locality: San Francisco, California Type: Privately Held Size: 50 company headline Kojo is the construction industry's leading materials procurement platform, powered by AI. postal code: 94103 Region: California slug status: A Inferred Location Latitude: 37.7801 Longitude: -122.42 Locationstr: San Francisco, California country iso: US admin district: CA admin district2: San Francisco County country region: United States formatted address: San Francisco, CA Locality: San Francisco Name: San Francisco, CA Specialties Name: SaaS Name: Commercial Building Name: Construction Name: Supply Chain Name: contractors Name: Materials Management Industries Name: Software Development Primary: true Locations Address: San Francisco, California 94103, US is primary"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 163 employees, which falls within 101\u2013200: https://linkedin.com/company/kojotechnologies. A profile-associated employee count is a proxy rather than an audited workforce total.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Kojo Launches AI-Powered Kojo Intelligence Layer | Kojo Blog",
+       "url": "https://www.usekojo.com/blog/kojo-intelligence-layer",
+       "excerpts": [
+        "Using state-of-the-art technologies like OpenAI's GPT-4 and Hugging Face transformer models, along with comprehensive statistical and machine learning methods, the Kojo Intelligence Layer helps contractors efficiently find project-appropriate materials at optimal prices."
+       ]
+      }
+     ],
+     "reasoning": "Kojo explicitly names OpenAI's GPT-4 and Hugging Face transformer models in its Intelligence Layer announcement: https://www.usekojo.com/blog/kojo-intelligence-layer.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Kojo Construction Material Management Software",
+       "url": "https://www.usekojo.com/pricing",
+       "excerpts": [
+        "Pricing Unlimited users and data. No hidden fees Get a Custom Quote Request a Quote"
+       ]
+      }
+     ],
+     "reasoning": "Kojo has a public pricing page describing unlimited users and data, no hidden fees, and custom quotes; published dollar prices are not required: https://www.usekojo.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "6 contech startups net $124.5M in new funds | Construction Dive",
+       "url": "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986",
+       "excerpts": [
+        "San Francisco-based Kojo, a materials and inventory management platform for the construction industry, [received a $10 million Series C extension](https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management) from Pittsburgh-based distribution and logistics services firm Wesco International, according to an Oct. 16 announcement."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified funding report describes a $10 million Series C extension from Wesco: https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Pricing | Kojo Construction Material Management Software",
+       "url": "https://www.usekojo.com/pricing",
+       "excerpts": [
+        "Premier service company logo DP electric logo Owl logo Syserco logo BCH mechanical logo Tharco Inc logo Tutor Electrical Service Logo Gallo mechanical logo Hardy corporation logo JT electric logo"
+       ]
+      }
+     ],
+     "reasoning": "DP Electric and Gallo Mechanical both appear in the customer logo area on Kojo's pricing page: https://www.usekojo.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "6 contech startups net $124.5M in new funds | Construction Dive",
+       "url": "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986",
+       "excerpts": [
+        "San Francisco-based Kojo, a materials and inventory management platform for the construction industry, [received a $10 million Series C extension](https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management) from Pittsburgh-based distribution and logistics services firm Wesco International, according to an Oct. 16 announcement."
+       ]
+      }
+     ],
+     "reasoning": "The funding report dates the Series C extension announcement to October 16, 2025, giving 2025-10: https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Revenue Operations Support Analyst @ Kojo",
+       "url": "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7",
+       "excerpts": [
+        "Kojo's Sales and Customer Success teams run on Salesforce, and when something in that world needs a hand \u2014 a quote that has to be built by hand, an account that needs to move, a duplicate that needs merging, a report that doesn't add up \u2014 the request lands in one queue."
+       ]
+      }
+     ],
+     "reasoning": "Kojo's Revenue Operations Support Analyst posting explicitly says its Sales and Customer Success teams run on Salesforce: https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/micah-rodman-589776160",
+       "excerpts": [
+        "company name: Kojo title: Co-Founder & CEO start date year: 2026 start date month: 1 start date: 2026-01-01"
+       ]
+      },
+      {
+       "title": "Maria Davidson",
+       "url": "https://maria-davidson.com/",
+       "excerpts": [
+        "I started out as Joe Lonsdale's Chief of Staff at 8VC, and founded [Kojo](https://www.usekojo.com) 2 years later which I ran for 8 years as CEO before becoming Executive Chair."
+       ]
+      }
+     ],
+     "reasoning": "Micah Rodman's profile dates his Co-Founder & CEO role to January 2026, within the twelve-month window: https://linkedin.com/in/micah-rodman-589776160. Maria Davidson also states that she moved from CEO to Executive Chair: https://maria-davidson.com/. This supports a CEO transition, not an external hire.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Kojo Jobs",
+       "url": "https://jobs.ashbyhq.com/Kojo",
+       "excerpts": [
+        "[### Demand Gen Lead Marketing \u2022 Canada; United States \u2022 Full time \u2022 Remote $75K \u2013 $100K](https://jobs.ashbyhq.com/Kojo/2a7151c0-1610-4126-81d0-6072894083fb)",
+        "[### Revenue Operations Support Analyst Operations \u2022 Brazil; Colombia; Mexico City \u2022 Full time](https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7)"
+       ]
+      }
+     ],
+     "reasoning": "The readable current job board lists Demand Gen Lead and Revenue Operations Support Analyst. Neither title is a qualifying AI, ML, or data-science role: https://jobs.ashbyhq.com/Kojo.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Kojo Poised to Revolutionize Construction Materials Management",
+       "url": "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+       "excerpts": [
+        "SAN FRANCISCO--( [BUSINESS WIRE](https://www.businesswire.com/) )-- [Kojo](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.usekojo.com%2F&esheet=54340064&newsitemid=20251016530530&lan=en-US&anchor=Kojo&index=1&md5=bef2b5ae2517651a43a36e4ad7246dff) , the leading construction procurement platform, today announced it has received Series C extension funding from [Wesco International](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.wesco.com%2Fus%2Fen.html&esheet=54340064&newsitemid=20251016530530&lan=en-US&anchor=Wesco+International&index=2&md5=b8120ce0d189b4596c35f51bb6d27dac) (NYSE: WCC), a leading provider of business-to-business distribution, logistics services and supply chain solutions."
+       ]
+      },
+      {
+       "title": "6 contech startups net $124.5M in new funds | Construction Dive",
+       "url": "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986",
+       "excerpts": [
+        "San Francisco-based Kojo, a materials and inventory management platform for the construction industry, [received a $10 million Series C extension](https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management) from Pittsburgh-based distribution and logistics services firm Wesco International, according to an Oct. 16 announcement."
+       ]
+      }
+     ],
+     "reasoning": "Kojo's announcement explicitly calls the investment Series C extension funding, corroborated by the funding report: https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management and https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Authentication | Kojo API",
+       "url": "https://docs.kojo.tech/docs/",
+       "excerpts": [
+        "Authentication",
+        "API Limits",
+        "GraphQL API Reference",
+        "REST API Reference"
+       ]
+      }
+     ],
+     "reasoning": "Kojo's public developer documentation includes authentication, API limits, GraphQL and REST references, and additional documentation sections: https://docs.kojo.tech/docs/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "url": "https://linkedin.com/company/kojotechnologies",
+       "excerpts": [
+        "Founded 2018 Website [www.usekojo.com](https://www.linkedin.com/redir/redirect?url=http%3A%2F%2Fwww%2Eusekojo%2Ecom&urlhash=do7E&trk=about_website) External link for Kojo Industry Software Development Company size 51-200 employees Headquarters San Francisco, California Type Privately Held Founded 2018"
+       ]
+      }
+     ],
+     "reasoning": "Kojo's company profile explicitly identifies its headquarters as San Francisco, California: https://linkedin.com/company/kojotechnologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Weekly Release Notes: August 17-23, 2026 \u2013 Kojo",
+       "url": "https://support.usekojo.com/hc/en-us/articles/54889286601491-Weekly-Release-Notes-August-17-23-2026",
+       "excerpts": [
+        "Weekly Release Notes: August 17-23, 2026",
+        "This week's release includes a refreshed Document Comparison Agent interface, configurable invoice matching tolerances for Accounts Payable, and enhanced Project Management features such as Designation Type visibility on Major PO surfaces and Major POs displayed on Job Orders."
+       ]
+      },
+      {
+       "title": "Weekly Release Notes: Aug 1-7, 2026 \u2013 Kojo",
+       "url": "https://support.usekojo.com/hc/en-us/articles/54206867976979-Weekly-Release-Notes-Aug-1-7-2026",
+       "excerpts": [
+        "Tool Inventory Permissions **Available: August 2026 | Generally Available** Tool inventory permissions can now be managed by admins using our role-based permissions system, providing control over which roles can see and work with tools."
+       ]
+      }
+     ],
+     "reasoning": "August 2026 releases introduced configurable invoice-matching tolerances and role-based tool-inventory permissions, within the six-month window: https://support.usekojo.com/hc/en-us/articles/54889286601491-Weekly-Release-Notes-August-17-23-2026 and https://support.usekojo.com/hc/en-us/articles/54206867976979-Weekly-Release-Notes-Aug-1-7-2026. These add functional controls rather than only UI fixes; whether they meet the subjective 'major' threshold is less certain.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Kojo Jobs",
+       "url": "https://jobs.ashbyhq.com/Kojo",
+       "excerpts": [
+        "[### Demand Gen Lead Marketing \u2022 Canada; United States \u2022 Full time \u2022 Remote $75K \u2013 $100K](https://jobs.ashbyhq.com/Kojo/2a7151c0-1610-4126-81d0-6072894083fb)",
+        "[### Revenue Operations Support Analyst Operations \u2022 Brazil; Colombia; Mexico City \u2022 Full time](https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7)"
+       ]
+      }
+     ],
+     "reasoning": "The current job board lists only Demand Gen Lead and Revenue Operations Support Analyst, neither an SDR, BDR, or account executive: https://jobs.ashbyhq.com/Kojo.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "6 contech startups net $124.5M in new funds | Construction Dive",
+       "url": "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986",
+       "excerpts": [
+        "San Francisco-based Kojo, a materials and inventory management platform for the construction industry, [received a $10 million Series C extension](https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management) from Pittsburgh-based distribution and logistics services firm Wesco International, according to an Oct. 16 announcement."
+       ]
+      },
+      {
+       "title": "Kojo Poised to Revolutionize Construction Materials Management",
+       "url": "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+       "excerpts": [
+        "SAN FRANCISCO--( [BUSINESS WIRE](https://www.businesswire.com/) )-- [Kojo](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.usekojo.com%2F&esheet=54340064&newsitemid=20251016530530&lan=en-US&anchor=Kojo&index=1&md5=bef2b5ae2517651a43a36e4ad7246dff) , the leading construction procurement platform, today announced it has received Series C extension funding from [Wesco International](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.wesco.com%2Fus%2Fen.html&esheet=54340064&newsitemid=20251016530530&lan=en-US&anchor=Wesco+International&index=2&md5=b8120ce0d189b4596c35f51bb6d27dac) (NYSE: WCC), a leading provider of business-to-business distribution, logistics services and supply chain solutions."
+       ]
+      }
+     ],
+     "reasoning": "The October 16, 2025 Series C extension falls within the eighteen months before November 9, 2026: https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986 and https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security | Kojo",
+       "url": "https://www.usekojo.com/security",
+       "excerpts": [
+        "Our successful completion of the SOC 2 audit attests to our adherence to information security practices."
+       ]
+      }
+     ],
+     "reasoning": "Kojo's security page explicitly confirms successful completion of a SOC 2 audit.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Pricing | Kojo Construction Material Management Software",
+       "url": "https://www.usekojo.com/pricing",
+       "excerpts": [
+        "Premier service company logo DP electric logo Owl logo Syserco logo BCH mechanical logo Tharco Inc logo Tutor Electrical Service Logo Gallo mechanical logo Hardy corporation logo JT electric logo"
+       ]
+      }
+     ],
+     "reasoning": "DP Electric appears in the customer logo area of Kojo's pricing page.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Pricing | Kojo Construction Material Management Software",
+       "url": "https://www.usekojo.com/pricing",
+       "excerpts": [
+        "Premier service company logo DP electric logo Owl logo Syserco logo BCH mechanical logo Tharco Inc logo Tutor Electrical Service Logo Gallo mechanical logo Hardy corporation logo JT electric logo"
+       ]
+      }
+     ],
+     "reasoning": "Gallo Mechanical appears in the customer logo area of Kojo's pricing page.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Revenue Operations Support Analyst @ Kojo",
+       "url": "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7",
+       "excerpts": [
+        "Kojo's Sales and Customer Success teams run on Salesforce, and when something in that world needs a hand \u2014 a quote that has to be built by hand, an account that needs to move, a duplicate that needs merging, a report that doesn't add up \u2014 the request lands in one queue."
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Support Analyst posting explicitly identifies Salesforce as the system used by Kojo's Sales and Customer Success teams.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2018.0,
+    "compliance_certs": [
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Kojo helps trade and self-perform general contractors manage materials procurement and inventory, connecting field, office, warehouse, accounting, and distributor teams from takeoff to closeout.",
+    "employee_band": "101-200",
+    "model_provider": "OpenAI GPT-4 and Hugging Face transformer models",
+    "pricing_page": true,
+    "funding_amount_usd": 10000000.0,
+    "named_customers": [
+     "DP Electric",
+     "Gallo Mechanical"
+    ],
+    "funding_date": "2025-10",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C extension",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

@@ -1,0 +1,494 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb4b2400d3c3e8ead",
+  "interaction_id": "trun_142119f6a1b4439eb4b2400d3c3e8ead",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "druidai.com"
+  },
+  "created_at": "2026-11-10T18:47:44.727860Z",
+  "modified_at": "2026-11-10T18:53:06.740031Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb4b2400d3c3e8ead",
+   "interaction_id": "trun_142119f6a1b4439eb4b2400d3c3e8ead",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "druidai.com"
+   },
+   "created_at": "2026-11-10T18:47:44.727860Z",
+   "modified_at": "2026-11-10T18:53:06.740031Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Contact Us - Druid AI",
+       "url": "https://www.druidai.com/about-us",
+       "excerpts": [
+        "Founded in 2018 by a team of AI PhDs, enterprise software engineers, and business consultants, Druid has proven to be one of the most successful global providers focused on enterprise conversational and agentic AI."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s about page explicitly states that Druid was founded in 2018: https://www.druidai.com/about-us",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Enterprise AI Security and Governance - Druid AI Platform",
+       "url": "https://www.druidai.com/platform/security",
+       "excerpts": [
+        "druid-ai-aicpa-soc2-type2 druid-ai-iso-27001 druid-ai-hipaa druid-ai-gdpr"
+       ]
+      }
+     ],
+     "reasoning": "The security page displays badges naming SOC 2 Type II, ISO 27001, HIPAA, and GDPR. These are reported as public compliance claims, not independent verification of certification; PCI DSS is not included: https://www.druidai.com/platform/security",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Druid AI | LinkedIn",
+       "url": "https://linkedin.com/company/18649492",
+       "excerpts": [
+        "11th Floor, Room 1102, New York, NY 10017 New York, NY 10017, US"
+       ]
+      },
+      {
+       "title": "Druid AI | LinkedIn",
+       "url": "https://linkedin.com/company/druidplatform",
+       "excerpts": [
+        "Headquarters New York, NY"
+       ]
+      }
+     ],
+     "reasoning": "Druid\u2019s LinkedIn company profiles identify New York as headquarters and give a New York address ending in US, supporting United States: https://linkedin.com/company/18649492 and https://linkedin.com/company/druidplatform",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Druid AI Agents Blog",
+       "url": "https://www.druidai.com/blog/all",
+       "excerpts": [
+        "AI agents in action: trends, use cases, and best practices for enterprise automation Stay ahead with expert insights, real-world success stories, and proven strategies for deploying AI agents that transform business processes, boost productivity, and drive enterprise growth. [ai agents JULY 21, 2026 #### The AI agent reference model: a complete anatomy of a production agent"
+       ]
+      }
+     ],
+     "reasoning": "The readable blog index emphasizes enterprise use cases, best practices, and deployment strategies and shows one reference-model article, without establishing two engineer-authored posts about how Druid is built. This meets the specified negative criterion: https://www.druidai.com/blog/all",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Druid AI Expands Enterprise Agentic AI Platform with Voice Enhancements, Agent Interoperability and Governance Capabilities",
+       "url": "https://www.businesswire.com/news/home/20261014498211/en/Druid-AI-Expands-Enterprise-Agentic-AI-Platform-with-Voice-Enhancements-Agent-Interoperability-and-Governance-Capabilities",
+       "excerpts": [
+        "Proven, industry-ready AI Agents for Higher Education, Healthcare, Retail, Banking, and Insurance, built on a best-in-class Conversational AI Platform. Druid helps organizations deploy always-on, policy-accurate agents across chat, SMS, voice, and email that automate end-to-end customer and employee journeys while integrating seamlessly with existing enterprise systems. With reusable workflows, content packs and embedded multilingual capability, Druid enables secure, governed automation at enterprise scale."
+       ]
+      }
+     ],
+     "reasoning": "The company-issued announcement describes enterprise AI agents that automate customer and employee journeys across chat, SMS, voice, and email and integrate with existing enterprise systems: https://www.businesswire.com/news/home/20261014498211/en/Druid-AI-Expands-Enterprise-Agentic-AI-Platform-with-Voice-Enhancements-Agent-Interoperability-and-Governance-Capabilities",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Druid AI \u2014 Open Jobs, Headcount & Hiring Trends (Nov 2026)",
+       "url": "https://jobspipe.dev/hiring/druidai.com",
+       "excerpts": [
+        "The company employs about 216 employees and is headquartered in New York, United\" canonical: https://jobspipe.dev/hiring/druidai.com ---"
+       ]
+      }
+     ],
+     "reasoning": "The November 2026 hiring profile reports approximately 216 employees, which falls in the 201\u2013500 band. This is a secondary-source estimate: https://jobspipe.dev/hiring/druidai.com",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI Agents that Automate Business Processes - Druid AI Platform",
+       "url": "https://www.druidai.com/platform/druid-ai-agents",
+       "excerpts": [
+        "Use Azure OpenAI, Anthropic Claude, or Druid's private LLM Becus while keeping governance and orchestration consistent.",
+        "Becus is Druid\u2019s proprietary language model designed for air-gapped and on-premises deployments where data cannot leave your infrastructure."
+       ]
+      }
+     ],
+     "reasoning": "The AI-agents product page explicitly names Azure OpenAI, Anthropic Claude, and Druid\u2019s private LLM Becus. It identifies Becus as proprietary and intended for air-gapped or on-premises deployments; no universal default model is claimed: https://www.druidai.com/platform/druid-ai-agents",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Agentic AI Pricing | Tailored Pricing | Global Partners - Druid AI",
+       "url": "https://www.druidai.com/pricing",
+       "excerpts": [
+        "Get a Druid AI pricing plan built for your use case Join 300+ enterprises using Druid AI to automate 1.2B+ conversations. Talk to a Druid AI expert to get a quote tailored to your needs. You get: AI Pricing plan you can explain and control. A pricing model tailored to your use case and deployment requirements."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page describes tailored pricing plans and a pricing model based on use case and deployment requirements. Public dollar prices are not required by the question: https://www.druidai.com/pricing",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim",
+       "url": "https://www.druidai.com/news/druid-ai-raises-31-million-series-c",
+       "excerpts": [
+        "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim"
+       ]
+      },
+      {
+       "title": "Druid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/343763-92",
+       "excerpts": [
+        "|11\\. Later Stage VC (Series C) |16-Sep-2025 |$31M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement reports a $31 million Series C, and PitchBook identifies the September 2025 $31 million round as its latest listed financing. This is the latest consistently documented round; an investor webpage contained conflicting amounts and did not reliably establish a newer round. Sources: https://www.druidai.com/news/druid-ai-raises-31-million-series-c and https://pitchbook.com/profiles/company/343763-92",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Agentic AI orchestration with AI agents and intelligent apps - Druid AI",
+       "url": "https://www.druidai.com/",
+       "excerpts": [
+        "MatrixCare",
+        "Liberty Global"
+       ]
+      }
+     ],
+     "reasoning": "MatrixCare and Liberty Global appear in Druid\u2019s homepage customer-logo material. The retained excerpts contain the names but limited surrounding context: https://www.druidai.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim",
+       "url": "https://www.druidai.com/news/druid-ai-raises-31-million-series-c",
+       "excerpts": [
+        "September 16, 2025"
+       ]
+      },
+      {
+       "title": "Druid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/343763-92",
+       "excerpts": [
+        "|11\\. Later Stage VC (Series C) |16-Sep-2025 |$31M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement is dated September 16, 2025, and PitchBook assigns the same date to the latest listed Series C. The requested month format is 2025-09. A conflicting investor webpage makes the latest-round designation less certain: https://www.druidai.com/news/druid-ai-raises-31-million-series-c and https://pitchbook.com/profiles/company/343763-92",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Account Executive - Druid AI | BeBee",
+       "url": "https://bebee.com/us/jobs/account-executive-druid-ai--fj-2410962862",
+       "excerpts": [
+        "Maintain accurate and timely account, opportunity, activity, and forecasting information within HubSpot and other sales systems."
+       ]
+      }
+     ],
+     "reasoning": "The Account Executive posting explicitly requires maintaining account, opportunity, activity, and forecasting information in HubSpot, indicating internal sales-system use rather than merely an available integration: https://bebee.com/us/jobs/account-executive-druid-ai--fj-2410962862",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [],
+     "reasoning": "Unknown. No dated C-level or VP join/departure inside the window was verified, and the leadership stories do not provide a complete current roster with start dates. Joseph Kim\u2019s September 2025 appointment predates the window; the September 2026 Andreea Ple\u0219ea story is an interview, not an appointment announcement. Pages checked: https://www.druidai.com/stories/tag/leadership-team and https://www.druidai.com/news/druid-ai-raises-31-million-series-c",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "\n\t\tBambooHR\n\t",
+       "url": "https://druidsa.bamboohr.com/careers",
+       "excerpts": [
+        "DRUID SA Current Openings Thanks for checking out our job openings. See something that interests you? Apply here. * * [Technical Consultant](https://druidsa.bamboohr.com/careers/88) Delivery Hybrid Bucuresti, Sector 5, Bucuresti (Hybrid) Delivery Full-Time [Privacy Policy"
+       ]
+      }
+     ],
+     "reasoning": "The live official job board lists Technical Consultant as its current opening and no qualifying AI, ML, or data-science title. The separate sales listing does not qualify as an AI/ML role: https://druidsa.bamboohr.com/careers",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim",
+       "url": "https://www.druidai.com/news/druid-ai-raises-31-million-series-c",
+       "excerpts": [
+        "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim"
+       ]
+      },
+      {
+       "title": "Druid AI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/343763-92",
+       "excerpts": [
+        "|11\\. Later Stage VC (Series C) |16-Sep-2025 |$31M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement and latest listed PitchBook round both identify Series C. The reported financing is the latest consistently documented round, with conflicting investor-page information treated cautiously: https://www.druidai.com/news/druid-ai-raises-31-million-series-c and https://pitchbook.com/profiles/company/343763-92",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Druid AI Documentation",
+       "url": "https://docs.druidai.com/",
+       "excerpts": [
+        "[Druid Voice](https://docs.druidai.com/Druid%20Voice/Druid%20Voice.htm)",
+        "[Synonyms Dictionary](https://docs.druidai.com/Knowledgebase/Synonyms%20Dictionary.htm)",
+        "[HigherEd Agentic Advisor](https://docs.druidai.com/Solution%20Library/Agentic%20Solutions/HigherEd/HigherEd%20Agentic%20Advisor.htm)"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation portal links to multiple guides, including Druid Voice, Synonyms Dictionary, and HigherEd Agentic Advisor, establishing more than a single FAQ: https://docs.druidai.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Druid AI | LinkedIn",
+       "url": "https://linkedin.com/company/druidplatform",
+       "excerpts": [
+        "Headquarters New York, NY"
+       ]
+      }
+     ],
+     "reasoning": "Druid\u2019s LinkedIn company profile explicitly lists New York, NY as headquarters: https://linkedin.com/company/druidplatform",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Druid AI Expands Enterprise Agentic AI Platform with Voice Enhancements, Agent Interoperability and Governance Capabilities",
+       "url": "https://finance.yahoo.com/technology/ai/articles/druid-ai-expands-enterprise-agentic-130000542.html",
+       "excerpts": [
+        "Wed, October 14, 2026 at 9:00 AM EDT 3 min read"
+       ]
+      },
+      {
+       "title": "Druid AI Expands Enterprise Agentic AI Platform with Voice Enhancements, Agent Interoperability and Governance Capabilities",
+       "url": "https://www.businesswire.com/news/home/20261014498211/en/Druid-AI-Expands-Enterprise-Agentic-AI-Platform-with-Voice-Enhancements-Agent-Interoperability-and-Governance-Capabilities",
+       "excerpts": [
+        "Purpose-tuned voice models that incorporate industry-specific terminology and regulatory language",
+        "Druid MCP connects external agents to line-of-business applications while keeping orchestration, governance and business logic within Druid."
+       ]
+      }
+     ],
+     "reasoning": "The October 14, 2026 announcement introduces substantial voice, agent-interoperability, and governance capabilities, including purpose-tuned voice models and Druid MCP. October 14 falls within the six-month window. Date: https://finance.yahoo.com/technology/ai/articles/druid-ai-expands-enterprise-agentic-130000542.html ; announcement: https://www.businesswire.com/news/home/20261014498211/en/Druid-AI-Expands-Enterprise-Agentic-AI-Platform-with-Voice-Enhancements-Agent-Interoperability-and-Governance-Capabilities",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive - Druid AI | BeBee",
+       "url": "https://bebee.com/us/jobs/account-executive-druid-ai--fj-2410962862",
+       "excerpts": [
+        "Account Executive Sales Druid AI 1 week ago Until12/17/2026 Full time Fully remote Save Apply now"
+       ]
+      }
+     ],
+     "reasoning": "The Druid AI Account Executive listing is presented as posted one week earlier, accepting applications, and expiring December 17, 2026. Confidence is limited because this is a third-party listing and the official board lists only a Technical Consultant role: https://bebee.com/us/jobs/account-executive-druid-ai--fj-2410962862",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim",
+       "url": "https://www.druidai.com/news/druid-ai-raises-31-million-series-c",
+       "excerpts": [
+        "September 16, 2025",
+        "DRUID AI Raises $31 Million Series C to Accelerate Agentic AI Platform Growth Under New CEO Joseph Kim"
+       ]
+      }
+     ],
+     "reasoning": "The dated company announcement establishes a $31 million Series C on September 16, 2025, within the preceding 18 months: https://www.druidai.com/news/druid-ai-raises-31-million-series-c",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Enterprise AI Security and Governance - Druid AI Platform",
+       "url": "https://www.druidai.com/platform/security",
+       "excerpts": [
+        "druid-ai-aicpa-soc2-type2 druid-ai-iso-27001 druid-ai-hipaa druid-ai-gdpr"
+       ]
+      }
+     ],
+     "reasoning": "The security-page badge explicitly names SOC 2 Type II: https://www.druidai.com/platform/security",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Enterprise AI Security and Governance - Druid AI Platform",
+       "url": "https://www.druidai.com/platform/security",
+       "excerpts": [
+        "druid-ai-aicpa-soc2-type2 druid-ai-iso-27001 druid-ai-hipaa druid-ai-gdpr"
+       ]
+      }
+     ],
+     "reasoning": "The security-page badge explicitly names ISO 27001: https://www.druidai.com/platform/security",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Enterprise AI Security and Governance - Druid AI Platform",
+       "url": "https://www.druidai.com/platform/security",
+       "excerpts": [
+        "druid-ai-aicpa-soc2-type2 druid-ai-iso-27001 druid-ai-hipaa druid-ai-gdpr"
+       ]
+      }
+     ],
+     "reasoning": "The security-page badge explicitly names HIPAA: https://www.druidai.com/platform/security",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Enterprise AI Security and Governance - Druid AI Platform",
+       "url": "https://www.druidai.com/platform/security",
+       "excerpts": [
+        "druid-ai-aicpa-soc2-type2 druid-ai-iso-27001 druid-ai-hipaa druid-ai-gdpr"
+       ]
+      }
+     ],
+     "reasoning": "The security-page badge explicitly names GDPR: https://www.druidai.com/platform/security",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Agentic AI orchestration with AI agents and intelligent apps - Druid AI",
+       "url": "https://www.druidai.com/",
+       "excerpts": [
+        "MatrixCare"
+       ]
+      }
+     ],
+     "reasoning": "MatrixCare appears in the homepage customer-logo material: https://www.druidai.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Agentic AI orchestration with AI agents and intelligent apps - Druid AI",
+       "url": "https://www.druidai.com/",
+       "excerpts": [
+        "Liberty Global"
+       ]
+      }
+     ],
+     "reasoning": "Liberty Global appears in the homepage customer-logo material: https://www.druidai.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Account Executive - Druid AI | BeBee",
+       "url": "https://bebee.com/us/jobs/account-executive-druid-ai--fj-2410962862",
+       "excerpts": [
+        "Maintain accurate and timely account, opportunity, activity, and forecasting information within HubSpot and other sales systems."
+       ]
+      }
+     ],
+     "reasoning": "The Account Executive duties explicitly identify HubSpot for account, opportunity, activity, and forecasting records: https://bebee.com/us/jobs/account-executive-druid-ai--fj-2410962862",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2018.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Druid AI helps enterprises build and deploy AI agents that automate customer and employee workflows across chat, voice, SMS, and email while integrating with existing business systems.",
+    "employee_band": "201-500",
+    "model_provider": "Azure OpenAI, Anthropic Claude, and Druid\u2019s proprietary Becus private LLM are publicly named configurable models/providers.",
+    "pricing_page": true,
+    "funding_amount_usd": 31000000.0,
+    "named_customers": [
+     "MatrixCare",
+     "Liberty Global"
+    ],
+    "funding_date": "2025-09",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "New York",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

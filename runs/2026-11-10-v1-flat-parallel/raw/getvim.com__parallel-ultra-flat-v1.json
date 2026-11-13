@@ -1,0 +1,565 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e96981420595535c5",
+  "interaction_id": "trun_142119f6a1b4439e96981420595535c5",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "getvim.com"
+  },
+  "created_at": "2026-11-10T18:47:35.220736Z",
+  "modified_at": "2026-11-10T18:56:11.287872Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e96981420595535c5",
+   "interaction_id": "trun_142119f6a1b4439e96981420595535c5",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "getvim.com"
+   },
+   "created_at": "2026-11-10T18:47:35.220736Z",
+   "modified_at": "2026-11-10T18:56:11.287872Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Us - Vim's Mission, Story & Leadership",
+       "url": "https://getvim.com/about-us",
+       "excerpts": [
+        "2015 **Vim was founded** to reduce the cost of care in the U.S. **Seed funding** led by Sequoia Capital"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/about-us explicitly dates Vim's founding to 2015.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security that earns",
+       "url": "https://www.getvim.ai/trust-center",
+       "excerpts": [
+        "Healthcare's most demanding security and privacy standards \u2014 HITRUST CSF certified, SOC 2 Type II audited, HIPAA-compliant."
+       ]
+      }
+     ],
+     "reasoning": "https://www.getvim.ai/trust-center explicitly claims SOC 2 Type II auditing and HIPAA compliance. HITRUST is omitted because it is outside the five requested frameworks.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Press Kit - Vim Company Overview & Media Assets",
+       "url": "https://getvim.com/press-kit",
+       "excerpts": [
+        "Headquarters: New York, NY and Tel Aviv Employees: 132 across the U.S. and Israel"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/press-kit lists headquarters in New York, NY and Tel Aviv, corresponding to the United States and Israel. Both headquarters are retained.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Vim Engineering",
+       "url": "https://medium.com/getvim",
+       "excerpts": [
+        "Vim Engineering 41 follow"
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://medium.com/getvim/using-node-js-to-write-safer-bash-scripts-ad6a523a5324",
+       "excerpts": [
+        "We wrote a tiny module that solves all of the above for Node.js: [@getvim/execute](https://www.npmjs.com/package/@getvim/execute) ."
+       ]
+      },
+      {
+       "title": "Put the hack back in hackathon. Our journey started a few months ago\u2026 | by Nandy Vaisman | Vim Engineering | Medium",
+       "url": "https://medium.com/getvim/put-the-hack-back-in-hackathon-1a67f935c845",
+       "excerpts": [
+        "In today\u2019s post, I\u2019d like to focus on Vim\u2019s first-ever hackathon and how you can replicate our success."
+       ]
+      }
+     ],
+     "reasoning": "https://medium.com/getvim is an engineering-branded publication, but only one qualifying technical implementation post was verified: https://medium.com/getvim/using-node-js-to-write-safer-bash-scripts-ad6a523a5324. The other located post, https://medium.com/getvim/put-the-hack-back-in-hackathon-1a67f935c845, focuses on organizing a security hackathon rather than explaining product implementation. Thus the two-post threshold was not established. Confidence is low because the publication and category indexes did not expose a complete readable archive.",
+     "confidence": "low"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Vim: Healthcare Integration Solutions Platform",
+       "url": "https://getvim.com/",
+       "excerpts": [
+        "Vim connects healthcare's key players such as providers, payers, EHRs, and developers, through a powerful, in-workflow platform. We deliver the right data, tools, actions and AI-driven apps at the point of care to streamline operations, improve outcomes, and unlock innovation."
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/ describes the audiences served and the delivery of data, tools, actions, and AI-driven applications within point-of-care workflows.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Press Kit - Vim Company Overview & Media Assets",
+       "url": "https://getvim.com/press-kit",
+       "excerpts": [
+        "Headquarters: New York, NY and Tel Aviv Employees: 132 across the U.S. and Israel"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/press-kit reports 132 employees, which falls within the requested 101-200 band.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Vim Applications Description - Vim",
+       "url": "https://getvim.com/documents/vim-applications-description/",
+       "excerpts": [
+        "Note: The above list reflects the languages currently supported by the underlying AI model technology used by Vim Scribe"
+       ]
+      },
+      {
+       "title": "Privacy Policy (English) - Vim",
+       "url": "https://getvim.com/privacy-policy",
+       "excerpts": [
+        "**We Use Vendors and Service Providers** . We may share any information we receive with vendors and service providers."
+       ]
+      }
+     ],
+     "reasoning": "Unknown. https://getvim.com/documents/vim-applications-description/ refers to Vim Scribe's underlying AI-model technology without naming its provider. Product documentation, security/trust pages, relevant blog posts, and https://getvim.com/privacy-policy were reviewed without finding a named underlying product model or provider. No public subprocessor list was located. An internal Claude requirement and a third-party scribe integration were not treated as disclosures of Vim's underlying model.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Vim Canvas\u2122 Pricing - Vim",
+       "url": "https://getvim.com/vim-canvas-pricing",
+       "excerpts": [
+        "Vim makes it easy for you to scale your application costs with our diverse package and pricing options:"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/vim-canvas-pricing is a public page describing Vim Canvas packages and pricing options.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "\n\tIsraeli digital health co Vim raises $60m - Globes\n",
+       "url": "http://en.globes.co.il/en/article-israeli-digital-health-co-vim-raises-60-1001370051",
+       "excerpts": [
+        "Israeli digital health company [Vim](https://getvim.com/) has completed a $60 million financing round from leading US healthcare funds including health insurance giant Anthem, pharma store chain Walgreens and Optum Ventures."
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Vim; all_funding_rounds[1].round_investor_names: Premera, Optum Ventures, GreatPoint Ventures, Sequoia Capital; all_funding_rounds[2].round_name: Series A; all_funding_rounds[2].amount_usd: 11058383.0; all_funding_rounds[2].round_valuation_usd: null; all_funding_rounds[2].round_date: 2016-11-18; all_funding_rounds[2].round_investor_names: null; tracxn_url: https://platform.tracxn.com/a/d/company/58de1b11e4b0d836de6bf7b8/vim?utm_source=parallel&utm_medium=ai#a:about",
+        "name: Vim; website_url: https://getvim.com; latest_funding_round_name: Series C; latest_funding_round_date: 2021-05-05; lates"
+       ]
+      }
+     ],
+     "reasoning": "https://en.globes.co.il/en/article-israeli-digital-health-co-vim-raises-60-1001370051 reports a completed $60 million financing round, consistent with the funding record for getvim.com. This is preferred over the conflicting $24.7 million July 2021 entry at https://pitchbook.com/profiles/company/166321-18; that discrepancy prevents high confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Humana Digitizes Data Exchange and Capture - Vim Case Study",
+       "url": "https://getvim.com/case-studies/humana",
+       "excerpts": [
+        "Humana partnered with Vim to digitize data exchange and data capture"
+       ]
+      },
+      {
+       "title": "MyCare Medical improves performance with Vim - Case Study",
+       "url": "https://getvim.com/case-studies/mycare-medical",
+       "excerpts": [
+        "The Solution To support its diverse network of owned and affiliate providers operating across multiple EHRs, MyCare Medical deployed Vim's point-of-care platform to replace legacy, hard-wired approaches with a scalable, easy-to-implement solution."
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/case-studies/humana describes Humana's use of Vim for data exchange and capture. https://getvim.com/case-studies/mycare-medical states that MyCare Medical deployed Vim's point-of-care platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Vim closes investments from Walgreens, Anthem, and Frist Cressey Ventures to build digital infrastructure for higher performing health care - Vim",
+       "url": "https://getvim.com/news-and-events/vim-closes-investments",
+       "excerpts": [
+        "**May 5, 2021** \u2013 Vim, a leading technology company building digital infrastructure for US health care, today announced investments from Walgreens Boots Alliance (WBA), Anthem (ANTM), and Frist Cressey Ventures."
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Vim; all_funding_rounds[1].round_investor_names: Premera, Optum Ventures, GreatPoint Ventures, Sequoia Capital; all_funding_rounds[2].round_name: Series A; all_funding_rounds[2].amount_usd: 11058383.0; all_funding_rounds[2].round_valuation_usd: null; all_funding_rounds[2].round_date: 2016-11-18; all_funding_rounds[2].round_investor_names: null; tracxn_url: https://platform.tracxn.com/a/d/company/58de1b11e4b0d836de6bf7b8/vim?utm_source=parallel&utm_medium=ai#a:about",
+        "name: Vim; website_url: https://getvim.com; latest_funding_round_name: Series C; latest_funding_round_date: 2021-05-05; lates"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/news-and-events/vim-closes-investments dates the financing announcement to May 5, 2021, matching the funding record's 2021-05-05 date. The answer is normalized to YYYY-MM. A conflicting July 2021 entry in another funding profile leaves uncertainty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Operations Manager at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7938820",
+       "excerpts": [
+        "Own HubSpot end-to-end: workflows, custom objects, properties, dashboards, data hygiene, and ticket queue.",
+        "Build automations and integrations across HubSpot, BigQuery, Notion, Meta Ads, Clay, HeyReach, Fathom, and n8n."
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/vim/jobs/7938820 explicitly assigns ownership of HubSpot and names integrations across Clay, HeyReach, and Meta Ads, establishing visible use of these CRM, sales, and marketing systems.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "About Us - Vim\u2019s Mission, Story & Leadership",
+       "url": "https://getvim.com/about-us",
+       "excerpts": [
+        "Oron Afek Oron Afek Co-Founder & CEO Asaf David Asaf David Co-Founder, President & CTO Malvin Hoxhallari Malvin Hoxhallari Chief Financial Officer Josh Stern Josh Stern Chief Business Officer & GM, Value-Based Care Nandy Vaisman Nandy Vaisman Chief Information Officer Hila Dovev David Hila Dovev David VP of Product, Connect Inbal Golany Inbal Golany VP of Legal Shiri Guy Shiri Guy VP of People Nicole Hess Nicole Hess VP of Marketing Timothy Barry Timothy Barry Head of Partnerships Nicola Braginsky Nicola Braginsky Head of Product Growth, Connect Merav Ben David Merav Ben David Head of Customer Success & Enablement, Connect Sivan Hizkiev Sivan Hizkiev Head of Engineering, Value-Based Care Nico Mendzylewski Nico Mendzylewski Field Chief Technology Officer Yuval Rechter Yuval Rechter GM, Clinical Programs Gal Avram Gal Avram Director of Finance Yaniv Gal Yaniv Gal Senior Product Manager, Connect"
+       ]
+      },
+      {
+       "title": "Timothy Barry",
+       "url": "https://linkedin.com/in/timothypbarry",
+       "excerpts": [
+        "Returned fields: {experience_text=\"Vim New York, United States 2023-02-01 2026-09-01 Vim is the leading developer & provider engagement platform in healthcare. I lead strategic partnerships, supporting providers, payers, AI innovators and digital health companies in deploying insights and solutions directly into clinical workflow. VP & Head of Partnerships Innovaccer San Francisco Bay Area 2020-11-01 2023-02-01 Leading strategic partnerships with consultancies, SIs and advisors for a high-growth healthcare technology & data c..."
+       ]
+      }
+     ],
+     "reasoning": "Unknown. https://getvim.com/about-us lists the leadership roster without appointment dates. Reviewed profiles did not establish a qualifying change. https://linkedin.com/in/timothypbarry contains an unlabeled September 2026 date, which was insufficient to establish an executive departure. Neither a qualifying change nor a reliable negative could be verified.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for AI Ops Engineer at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7820586",
+       "excerpts": [
+        "AI Ops Engineer New York, New York, United States Apply **AI Ops Engineer** |**LOCATION** New- York |**TYPE** Full-time |**LEVEL** Mid / Senior |**REPORTS TO** CIO |"
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/vim/jobs/7820586 is a live AI Ops Engineer posting, verified on November 10, 2026. The title explicitly qualifies under the requested AI-role criteria.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Vim; all_funding_rounds[1].round_investor_names: Premera, Optum Ventures, GreatPoint Ventures, Sequoia Capital; all_funding_rounds[2].round_name: Series A; all_funding_rounds[2].amount_usd: 11058383.0; all_funding_rounds[2].round_valuation_usd: null; all_funding_rounds[2].round_date: 2016-11-18; all_funding_rounds[2].round_investor_names: null; tracxn_url: https://platform.tracxn.com/a/d/company/58de1b11e4b0d836de6bf7b8/vim?utm_source=parallel&utm_medium=ai#a:about",
+        "name: Vim; website_url: https://getvim.com; latest_funding_round_name: Series C; latest_funding_round_date: 2021-05-05; lates"
+       ]
+      },
+      {
+       "title": "About Us - Vim\u2019s Mission, Story & Leadership",
+       "url": "https://getvim.com/about-us",
+       "excerpts": [
+        "2021 **Vim Introduced Vim Connect** , the company\u2019s flagship product, achieving 100 integrations **Series C funding** from Anthem Venture Partners, Elevance Health, Optum Ventures, and Walgreens Boots Alliance"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/about-us identifies the 2021 financing as Series C, consistent with the company funding record.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Vim Docs",
+       "url": "https://docs.getvim.com/",
+       "excerpts": [
+        "Main Navigation [Home](https://docs.getvim.com/) [Platform](https://docs.getvim.com/platform/platform) [How to guide](https://docs.getvim.com/testing/managing-account) [VimOS JS](https://docs.getvim.com/vim-os-js/setting-up) [VimOS API](https://docs.getvim.com/api/)"
+       ]
+      },
+      {
+       "title": "Changelog | Vim Docs",
+       "url": "https://docs.getvim.com/change-log",
+       "excerpts": [
+        "2\\.x.x (sdk) / 2.0.20 (npm) - March 10, 2026 \u200b"
+       ]
+      }
+     ],
+     "reasoning": "https://docs.getvim.com/ publicly links platform documentation, how-to guides, JavaScript SDK documentation, and API documentation. https://docs.getvim.com/change-log additionally exposes versioned developer release documentation.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Press Kit - Vim Company Overview & Media Assets",
+       "url": "https://getvim.com/press-kit",
+       "excerpts": [
+        "Headquarters: New York, NY and Tel Aviv Employees: 132 across the U.S. and Israel"
+       ]
+      }
+     ],
+     "reasoning": "https://getvim.com/press-kit explicitly lists New York, NY and Tel Aviv as headquarters; both are preserved rather than selecting one.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Changelog | Vim Docs",
+       "url": "https://docs.getvim.com/change-log",
+       "excerpts": [
+        "2\\.x.x (sdk) / 2.0.20 (npm) - March 10, 2026 \u200b SDK capability triggers return structured results new feature Breaking change \u200b `autoPopup()` and `pushNotification.show()` now return `Promise<TriggerResult>` instead of void."
+       ]
+      },
+      {
+       "title": "Vim and Heidi Health Partner to Accelerate Healthcare Innovation",
+       "url": "https://getvim.com/news-and-events/vim-and-heidi-health-partner-to-accelerate-innovation-at-the-point-of-care",
+       "excerpts": [
+        "**October 16, 2025** \u2013 [**Vim**](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fgetvim.com%2F&esheet=54339923&newsitemid=20251016587595&lan=en-US&anchor=Vim&index=1&md5=8ea7974502bb6c5d3c0eb7bcef7dd2bc) , the leading healthcare technology company powering seamless connections at the point of care, today announced a strategic partnership with [**Heidi Health**](https://cts.businesswire.com/ct/CT?id=smartlink&url=https%3A%2F%2Fwww.heidihealth.com%2F&esheet=54339923&newsitemid=20251016587595&lan=en-US&anchor=Heidi+Health&index=2&md5=3f2c98f0bc67bd8a7412a715bc877850) , an AI-powered medical scribe platform. Together, the companies are launching an integrated AI scribe within Vim Connect, enabling clinicians to eliminate administrative burdens and focus on patient care."
+       ]
+      },
+      {
+       "title": "Where Vim shows up in the",
+       "url": "https://www.getvim.ai/media",
+       "excerpts": [
+        "20264 stories [ 03/31/2026Press release New research finds strong VBC adoption momentum, but operational barriers persist \u2197](https://www.getvim.ai/media/new-research-vbc)[ 03/18/2026Press release Vim to spotlight how payer\u2013provider collaboration moves from intent to action at RISE \u2197](https://www.getvim.ai/media/rise-2026)[ 02/12/2026Article Beyond interoperability: why healthcare needs execution, not more access \u2197](https://www.healthcarebusinesstoday.com/healthcare-needs-execution-not-interoperability/)[ 01/20/2026Article The top healthcare technology CEOs of 2025 \u2197](https://thehealthcaretechnologyreport.com/the-top-healthcare-technology-ceos-of-2025/)"
+       ]
+      }
+     ],
+     "reasoning": "The newest release on https://docs.getvim.com/change-log is March 10, 2026, and the dated integrated AI-scribe launch at https://getvim.com/news-and-events/vim-and-heidi-health-partner-to-accelerate-innovation-at-the-point-of-care is October 16, 2025. The readable 2026 archive at https://www.getvim.ai/media contains entries only through March 2026. These precede the six-month window; no qualifying in-window launch was found. Undated product messaging limits confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Enterprise Account Executive at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7722125",
+       "excerpts": [
+        "We're hiring 2\u20133 Enterprise AEs to build the commercial engine for a product that already works."
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/vim/jobs/7722125 explicitly states that Vim is hiring two to three Enterprise Account Executives. The posting was verified on November 10, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Vim closes investments from Walgreens, Anthem, and Frist Cressey Ventures to build digital infrastructure for higher performing health care - Vim",
+       "url": "https://getvim.com/news-and-events/vim-closes-investments",
+       "excerpts": [
+        "**May 5, 2021** \u2013 Vim, a leading technology company building digital infrastructure for US health care, today announced investments from Walgreens Boots Alliance (WBA), Anthem (ANTM), and Frist Cressey Ventures."
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Vim; all_funding_rounds[1].round_investor_names: Premera, Optum Ventures, GreatPoint Ventures, Sequoia Capital; all_funding_rounds[2].round_name: Series A; all_funding_rounds[2].amount_usd: 11058383.0; all_funding_rounds[2].round_valuation_usd: null; all_funding_rounds[2].round_date: 2016-11-18; all_funding_rounds[2].round_investor_names: null; tracxn_url: https://platform.tracxn.com/a/d/company/58de1b11e4b0d836de6bf7b8/vim?utm_source=parallel&utm_medium=ai#a:about",
+        "name: Vim; website_url: https://getvim.com; latest_funding_round_name: Series C; latest_funding_round_date: 2021-05-05; lates"
+       ]
+      }
+     ],
+     "reasoning": "The latest supported funding round dates to 2021, corroborated by https://getvim.com/news-and-events/vim-closes-investments and the funding history. Even the conflicting July 2021 funding-profile date is well outside the requested 18-month window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security that earns",
+       "url": "https://www.getvim.ai/trust-center",
+       "excerpts": [
+        "Healthcare's most demanding security and privacy standards \u2014 HITRUST CSF certified, SOC 2 Type II audited, HIPAA-compliant."
+       ]
+      }
+     ],
+     "reasoning": "The trust center explicitly states that Vim is SOC 2 Type II audited.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security that earns",
+       "url": "https://www.getvim.ai/trust-center",
+       "excerpts": [
+        "Healthcare's most demanding security and privacy standards \u2014 HITRUST CSF certified, SOC 2 Type II audited, HIPAA-compliant."
+       ]
+      }
+     ],
+     "reasoning": "The trust center explicitly states that Vim is HIPAA-compliant.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Operations Manager at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7938820",
+       "excerpts": [
+        "Own HubSpot end-to-end: workflows, custom objects, properties, dashboards, data hygiene, and ticket queue."
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Manager posting explicitly assigns end-to-end ownership of HubSpot.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Operations Manager at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7938820",
+       "excerpts": [
+        "Build automations and integrations across HubSpot, BigQuery, Notion, Meta Ads, Clay, HeyReach, Fathom, and n8n."
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Manager posting explicitly names Clay in the operational integration stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Operations Manager at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7938820",
+       "excerpts": [
+        "Build automations and integrations across HubSpot, BigQuery, Notion, Meta Ads, Clay, HeyReach, Fathom, and n8n."
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Manager posting explicitly names HeyReach in the operational integration stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Operations Manager at Vim",
+       "url": "https://job-boards.greenhouse.io/vim/jobs/7938820",
+       "excerpts": [
+        "Build automations and integrations across HubSpot, BigQuery, Notion, Meta Ads, Clay, HeyReach, Fathom, and n8n."
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Manager posting explicitly names Meta Ads in the operational integration stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Humana Digitizes Data Exchange and Capture - Vim Case Study",
+       "url": "https://getvim.com/case-studies/humana",
+       "excerpts": [
+        "Humana partnered with Vim to digitize data exchange and data capture"
+       ]
+      }
+     ],
+     "reasoning": "Humana's case study describes using Vim to digitize data exchange and capture, establishing a customer deployment rather than an investor relationship.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "MyCare Medical improves performance with Vim - Case Study",
+       "url": "https://getvim.com/case-studies/mycare-medical",
+       "excerpts": [
+        "The Solution To support its diverse network of owned and affiliate providers operating across multiple EHRs, MyCare Medical deployed Vim's point-of-care platform to replace legacy, hard-wired approaches with a scalable, easy-to-implement solution."
+       ]
+      }
+     ],
+     "reasoning": "MyCare Medical's case study explicitly states that it deployed Vim's point-of-care platform.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "SOC 2",
+     "HIPAA"
+    ],
+    "hq_country": "United States and Israel",
+    "eng_blog": false,
+    "product_one_liner": "Vim connects healthcare providers, payers, EHRs, and developers through a workflow platform that delivers data, tools, and AI applications at the point of care.",
+    "employee_band": "101-200",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 60000000.0,
+    "named_customers": [
+     "Humana",
+     "MyCare Medical"
+    ],
+    "funding_date": "2021-05",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Clay",
+     "HeyReach",
+     "Meta Ads"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "New York and Tel Aviv",
+    "launched_6mo": false,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

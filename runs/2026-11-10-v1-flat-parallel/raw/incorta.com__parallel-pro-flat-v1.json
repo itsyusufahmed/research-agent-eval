@@ -1,0 +1,509 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e92eed42393c3d63e",
+  "interaction_id": "trun_142119f6a1b4439e92eed42393c3d63e",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "incorta.com"
+  },
+  "created_at": "2026-11-10T18:48:06.617617Z",
+  "modified_at": "2026-11-10T18:53:19.445847Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e92eed42393c3d63e",
+   "interaction_id": "trun_142119f6a1b4439e92eed42393c3d63e",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "incorta.com"
+   },
+   "created_at": "2026-11-10T18:48:06.617617Z",
+   "modified_at": "2026-11-10T18:53:19.445847Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Incorta Raises $120M in Series D Funding Amid Soaring Global Demand for Unified Data Analytics | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+       "excerpts": [
+        "Since Incorta\u2019s founding in 2014, the company has raised $195 million in total funding."
+       ]
+      }
+     ],
+     "reasoning": "Incorta explicitly states that it was founded in 2014. Its separate history of prototypes beginning in 2013 is not an explicit founding date. Source: https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Analytics Data Security, Privacy & Compliance | Incorta",
+       "url": "http://incorta.com/platform/security",
+       "excerpts": [
+        "Incorta's SOC 2 Type II Report is available for review upon request by contacting infosec@incorta.com",
+        "Ensure data security and compliance with the European Union's General Data Privacy Regulation (GDPR)"
+       ]
+      }
+     ],
+     "reasoning": "The security page identifies an available SOC 2 Type II report and claims GDPR compliance. GDPR is included as a requested compliance claim, not characterized as an independently issued certification. Source: http://incorta.com/platform/security",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Contact Us | Incorta",
+       "url": "https://www.incorta.com/contact",
+       "excerpts": [
+        "Main Headquarters 950 Tower LaneSuite 1550, Foster City, CA 94404"
+       ]
+      }
+     ],
+     "reasoning": "The main headquarters address is Foster City, California 94404, placing it in the United States. Source: https://www.incorta.com/contact",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Engineering@Incorta",
+       "url": "https://medium.com/engineering-incorta",
+       "excerpts": [
+        "[Engineering@Incorta](https://medium.com/engineering-incorta) [Engineering@Incorta"
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127",
+       "excerpts": [
+        "Incorta: Bringing Agility To The Star-Schema World",
+        "Incorta has developed a proprietary algorithm that automatically constructs a flexible join path that is always stored in memory."
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://medium.com/@ahmad.ihab.badr/incorta-4-0-a-tale-of-2-apps-92ca64dafaf5",
+       "excerpts": [
+        "UX Designer at LinkedIn. Previously at Incorta."
+       ]
+      }
+     ],
+     "reasoning": "Only one qualifying engineer-written product-build article was established: the star-schema architecture article. The publication index did not expose a second qualifying post; the other implementation case study located was authored by a UX designer. False applies the requested two-post threshold, but index visibility makes this conclusion uncertain. Sources: https://medium.com/engineering-incorta and https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127",
+     "confidence": "low"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Governed Data, Analytics & AI Platform | Incorta",
+       "url": "https://www.incorta.com/",
+       "excerpts": [
+        "Incorta is a governed data and AI platform that connects live, detailed data from systems of record to analytics, AI agents, applications, and workflows. Teams can analyze, build, and act from one trusted data foundation instead of exporting stale data into disconnected tools."
+       ]
+      },
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes the governed platform and connected workloads; the demo page identifies data and AI teams as users. Sources: https://www.incorta.com/ and https://www.incorta.com/demo",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Governed Data, Analytics & AI Platform | Incorta",
+       "url": "https://www.incorta.com/",
+       "excerpts": [
+        "Name: Incorta | Employees In Linkedin: 328.0 | Company Size: 201-500 employees | Website: https://www.incorta.com/"
+       ]
+      }
+     ],
+     "reasoning": "The company profile evidence reports 328 LinkedIn-associated employees and a company-size band of 201\u2013500. The band is explicit, although LinkedIn-associated headcount is not audited staffing. Source associated with the profile: https://www.incorta.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Governed Data, Analytics & AI Platform | Incorta",
+       "url": "https://www.incorta.com/",
+       "excerpts": [
+        "Claude Gemini OpenAI"
+       ]
+      },
+      {
+       "title": "Incorta - Senior Software Engineer",
+       "url": "https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6",
+       "excerpts": [
+        "Develop and optimize the data plane to ensure streaming, tool calls, and LLM APIs (such as Anthropic and OpenAI) remain fast, robust, and accurate."
+       ]
+      }
+     ],
+     "reasoning": "The homepage names Claude, Gemini, and OpenAI. The AI Gateway engineering posting explicitly names Anthropic and OpenAI APIs used in its data plane. Sources: https://www.incorta.com/ and https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "INCORTA OPEN DATA DELIVERY PLATFORM",
+       "url": "https://marketplace.microsoft.com/en-us/marketplace/apps/incorta.incorta_direct_data_platform?tab=PlansAndPrice",
+       "excerpts": [
+        "Plan Description Price/payment options Billing term Subtotal Incorta Workbench for Workday Get it now Specific to Workday customers. Includes 1 Production Environment and 1 Development Environment, 64 GB RAM, 1 Data Application. Limited to 10 users and Delivering of data to Workday Products $4,166.67/1-month $50,000.00/1-year $100,000.00/one-time payment"
+       ]
+      }
+     ],
+     "reasoning": "Incorta has a public Microsoft Marketplace Plans + Pricing page describing its Workbench for Workday plan and prices. This is marketplace-hosted pricing rather than an incorta.com pricing page. Source: https://marketplace.microsoft.com/en-us/marketplace/apps/incorta.incorta_direct_data_platform?tab=PlansAndPrice",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Incorta; website_url: https://www.incorta.com/; latest_funding_round_name: Conventional Debt; latest_funding_round_date: 2021-06-24; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Conventional Debt; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2021-06-24; all_funding_rounds[0].round_investor_names: SVB; all_funding_rounds[1].round_name: Series D; all_funding_rounds[1].amount_usd: 120000000.0; all_funding_rounds[1].round_valuation_usd: 511140000.0; all_funding_rounds[1].round_date: 2021"
+       ]
+      }
+     ],
+     "reasoning": "The latest financing record is conventional debt dated June 24, 2021, with no disclosed amount in the structured record. Other sources inconsistently attribute amounts between debt and the preceding Series D, so the debt amount is not reliably confirmed. Public funding profile: https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+     "confidence": "low"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Incorta's customer logo area explicitly names Starbucks and Comcast under 'Trusted by data & AI teams at'. Source: https://www.incorta.com/demo",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Incorta; website_url: https://www.incorta.com/; latest_funding_round_name: Conventional Debt; latest_funding_round_date: 2021-06-24; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Conventional Debt; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2021-06-24; all_funding_rounds[0].round_investor_names: SVB; all_funding_rounds[1].round_name: Series D; all_funding_rounds[1].amount_usd: 120000000.0; all_funding_rounds[1].round_valuation_usd: 511140000.0; all_funding_rounds[1].round_date: 2021"
+       ]
+      },
+      {
+       "title": "Incorta - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+       "excerpts": [
+        "|Jun 24, 2021 |6853211 |Conventional Debt |1570319 |6639737 |4610537 |7351317 |"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded financing is dated June 24, 2021, yielding 2021-06. This includes debt financing; the preceding equity round was the June 23, 2021 Series D. Source: https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31",
+       "excerpts": [
+        "Update and manage prospect interactions in Salesforce and Outreach to ensure accurate lead tracking and efficient follow-ups."
+       ]
+      }
+     ],
+     "reasoning": "The SDR posting instructs employees to manage prospect interactions in Salesforce and Outreach, providing an operational-use signal rather than merely listing compatible integrations. Source: https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Omar Hajsaleh",
+       "url": "https://linkedin.com/in/omar-hajsaleh",
+       "excerpts": [
+        "Role: Vice President of Sales EMEA @ Incorta.",
+        "Returned fields: {experience_text='Incorta Riyadh, Saudi Arabia 2025-12-01 Vice President of Sales EMEA Amazon Web Services (AWS) Riyadh, Saudi Arabia 2024-07-01 2025-11-01 Head of Saudi Arabia- Public Sector Amazon Web Services (AWS) Riyadh, Saudi Arabia 2023-01-01 2024-07-01 Head of Central Gulf Amazon Web Services (AWS) Saudi Arabia 2020-07-01 2023-01-01 Country Manager- Public Sector- KSA Amazon Web Services (AWS) Bahrain 2018-10-01 2020-07-01 Partner Development Manager Microsoft Riyadh 2016-12-01 2018-10-01 Enter..., slug='omar-hajsaleh', url='https://linkedin.com/in/omar-hajsaleh', name='Omar Hajsaleh', company_name='Incorta', title='Vice President of Sales EMEA'}"
+       ]
+      }
+     ],
+     "reasoning": "Omar Hajsaleh's profile dates his Incorta Vice President of Sales EMEA role to December 2025, following AWS. This is a new-company join within the requested 12-month window. The evidence is a self-reported career profile rather than a company announcement. Source: https://linkedin.com/in/omar-hajsaleh",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Incorta",
+       "url": "https://jobs.lever.co/incorta",
+       "excerpts": [
+        "[##### Solution Engineer- India Remote \u2014 Full-time Bangalore](https://jobs.lever.co/incorta/4d08d4e9-138e-462a-86ab-151aeb126445)",
+        "[##### Principle Software Engineer On-site \u2014 Full-time Cairo](https://jobs.lever.co/incorta/7637ea82-5651-4400-9b87-6da61f913e95)",
+        "[##### Senior Software Engineer On-site \u2014 Full-time Cairo](https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6)",
+        "[##### Account Executive Remote \u2014 Full-time Mid West](https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73)"
+       ]
+      }
+     ],
+     "reasoning": "The live board lists Solution Engineer, Principle Software Engineer, Senior Software Engineer, and Account Executive. None has a qualifying AI/ML/data-science term in its title; AI-related duties in software-engineering descriptions do not satisfy the title-only rule. Source: https://jobs.lever.co/incorta",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Incorta; website_url: https://www.incorta.com/; latest_funding_round_name: Conventional Debt; latest_funding_round_date: 2021-06-24; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Conventional Debt; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2021-06-24; all_funding_rounds[0].round_investor_names: SVB; all_funding_rounds[1].round_name: Series D; all_funding_rounds[1].amount_usd: 120000000.0; all_funding_rounds[1].round_valuation_usd: 511140000.0; all_funding_rounds[1].round_date: 2021"
+       ]
+      },
+      {
+       "title": "Incorta - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+       "excerpts": [
+        "|Jun 24, 2021 |6853211 |Conventional Debt |1570319 |6639737 |4610537 |7351317 |"
+       ]
+      }
+     ],
+     "reasoning": "Including debt financing, the latest recorded round is Conventional Debt on June 24, 2021. The separately announced $120 million Series D occurred the previous day and is not used as the amount of this debt transaction. Source: https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Welcome to Incorta Documentation",
+       "url": "https://docs.incorta.com/",
+       "excerpts": [
+        "Welcome to Incorta Documentation Find the guides, references, and other resources you need to jumpstart your data management and analytics experience with Incorta. Latest Release Documentation * * Learn how to acquire, enrich, analyze, and act on data using the latest Incorta Cloud and On-Premises releases starting 2024.1.0. [Go to Latest Release Docs"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation portal provides guides, references, and release documentation for Incorta Cloud and on-premises products. Source: https://docs.incorta.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Contact Us | Incorta",
+       "url": "https://www.incorta.com/contact",
+       "excerpts": [
+        "Main Headquarters 950 Tower LaneSuite 1550, Foster City, CA 94404"
+       ]
+      }
+     ],
+     "reasoning": "The contact page explicitly labels its Foster City address as Main Headquarters. Source: https://www.incorta.com/contact",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Incorta Adds Governed Data Transformation for Agentic Workflows with Incorta Intelligence | Press Release | Incorta",
+       "url": "https://www.incorta.com/press-releases/incorta-adds-governed-data-transformation-for-agentic-workflows-with-incorta-intelligence",
+       "excerpts": [
+        "**Foster City, CA \u2013 September 30, 2026** \u2013 [Incorta](http://www.incorta.com/) , the governed data and AI platform company, today announced an addition to [Incorta Intelligence](https://www.incorta.com/incorta-intelligence?=undefined&utm_source=cpc&utm_medium=google&utm_campaign=brand-campaign&utm_term=incorta%20analytics&gad_source=1&gad_campaignid=20961059019&gbraid=0AAAAACV-JTlHMpucllBI9aObtOseGPUpZ&gclid=CjwKCAjww-3VBhAcEiwAwUUIuxOTRjEaxw1DsKKF3fCDbEddhXPjsMxWlBo50FytoeLd4UAUYWEOMhoCmGIQAvD_BwE) . New to the platform, Analyst Studio provides governed data transformation capabilities to support analyst and agent-driven workflows. Designed to eliminate tool sprawl, speed real-time access to business data, and extend data governance, Analyst Studio accelerates time to decisions that are trusted and actionable."
+       ]
+      }
+     ],
+     "reasoning": "On September 30, 2026, Incorta announced Analyst Studio, adding governed data transformation for analyst and agent-driven workflows. This substantive feature launch falls within the six-month window. Source: https://www.incorta.com/press-releases/incorta-adds-governed-data-transformation-for-agentic-workflows-with-incorta-intelligence",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Incorta - Account Executive",
+       "url": "https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73",
+       "excerpts": [
+        "Account Executive Mid West Sales & Marketing \u2013 Enterprise AE / Full-time / Remote [Apply for this job](https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73/apply) Incorta is a next-generation data analytics and business intelligence platform that excels at rapidly delivering business value from transactional data, this is the first real breakthrough in data analytics in 20 years."
+       ]
+      },
+      {
+       "title": "Incorta",
+       "url": "https://jobs.lever.co/incorta",
+       "excerpts": [
+        "[##### Account Executive Remote \u2014 Full-time Mid West](https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73)"
+       ]
+      }
+     ],
+     "reasoning": "An Account Executive opening has a live application page and is listed on the current job board. Sources: https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73 and https://jobs.lever.co/incorta",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Incorta; website_url: https://www.incorta.com/; latest_funding_round_name: Conventional Debt; latest_funding_round_date: 2021-06-24; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Conventional Debt; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2021-06-24; all_funding_rounds[0].round_investor_names: SVB; all_funding_rounds[1].round_name: Series D; all_funding_rounds[1].amount_usd: 120000000.0; all_funding_rounds[1].round_valuation_usd: 511140000.0; all_funding_rounds[1].round_date: 2021"
+       ]
+      },
+      {
+       "title": "Incorta - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+       "excerpts": [
+        "Here is the list of all funding rounds of Incorta:",
+        "|Jun 24, 2021 |6853211 |Conventional Debt |1570319 |6639737 |4610537 |7351317 |"
+       ]
+      }
+     ],
+     "reasoning": "The funding history's newest transaction is June 2021, before the May 2025 start of the 18-month window. No later round appears in the funding history reviewed. Source: https://tracxn.com/d/companies/incorta/__ix_-YAO-d2ich_O5OQ4_fDOT3p40QwIVJyRk0C6ZgQE/funding-and-investors",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Analytics Data Security, Privacy & Compliance | Incorta",
+       "url": "http://incorta.com/platform/security",
+       "excerpts": [
+        "Incorta's SOC 2 Type II Report is available for review upon request by contacting infosec@incorta.com"
+       ]
+      }
+     ],
+     "reasoning": "An available SOC 2 Type II report is explicitly claimed at http://incorta.com/platform/security.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Analytics Data Security, Privacy & Compliance | Incorta",
+       "url": "http://incorta.com/platform/security",
+       "excerpts": [
+        "Ensure data security and compliance with the European Union's General Data Privacy Regulation (GDPR)"
+       ]
+      }
+     ],
+     "reasoning": "GDPR compliance is explicitly named at http://incorta.com/platform/security.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Starbucks appears in the customer trust area at https://www.incorta.com/demo.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Get a Demo | Incorta",
+       "url": "https://www.incorta.com/demo",
+       "excerpts": [
+        "Trusted by data & AI teams at Starbucks Comcast Broadcom Skechers"
+       ]
+      }
+     ],
+     "reasoning": "Comcast appears in the customer trust area at https://www.incorta.com/demo.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31",
+       "excerpts": [
+        "Update and manage prospect interactions in Salesforce and Outreach to ensure accurate lead tracking and efficient follow-ups."
+       ]
+      }
+     ],
+     "reasoning": "The SDR posting explicitly instructs employees to use Salesforce: https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Incorta - Sales Development Representative - USA",
+       "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31",
+       "excerpts": [
+        "Update and manage prospect interactions in Salesforce and Outreach to ensure accurate lead tracking and efficient follow-ups."
+       ]
+      }
+     ],
+     "reasoning": "The SDR posting explicitly instructs employees to use Outreach: https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2014.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Incorta gives data and AI teams a governed platform connecting live operational data to analytics, AI agents, applications, and workflows.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic (Claude), OpenAI, and Gemini",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Starbucks",
+     "Comcast"
+    ],
+    "funding_date": "2021-06",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Outreach"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Conventional Debt",
+    "public_docs": true,
+    "hq_city": "Foster City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

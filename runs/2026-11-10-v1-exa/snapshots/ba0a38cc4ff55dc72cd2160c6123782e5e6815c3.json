@@ -1,0 +1,22 @@
+{
+ "url": "https://usenaive.ai/benchmarks/business-bench",
+ "fetched_at": "2026-11-10T19:48:32.362257+00:00",
+ "hours_after_run": 43.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "30439a1a2a3d72b41b6429c1f213a4637b64a3dcc6566136872f568e534c22f8",
+ "chars": 3131,
+ "truncated": false,
+ "title": "Business Bench | naïve",
+ "markdown": "[← Benchmarks](https://usenaive.ai/benchmarks)\n\n# Business Bench\n\nPractical business work across spreadsheets, bookkeeping, reports, document reformatting, extraction, drafting, and tooling. Every harness ran the same 25-task stratified slice withGLM-5.3-Flash.\n\nLast run: September 2026 [Task suite: Business Bench ↗](https://github.com/erphq/business-bench)\n\nCost per successful task · same model and task slice\n\n$0.0223 / success · tied for most tasks solved\n\nNaive Managed Agents solved 12 of 25 tasks, tying Stock Pi and Hermes for the most successes in the field. At $0.0223 per successful task, it was 13% less expensive than Stock Pi and 68% less expensive than Hermes.\n\n## Efficiency leaderboard?Published harness results on the same benchmark configuration, ordered by measured model cost per successful task.\n\nAgent-model cost per successful task. Every harness used the same tasks, model, provider route, rate card, and one-attempt protocol.\n\nNaive Managed Agents$0.0223\n\nStock Pi$0.0258\n\nClaude Code$0.0518\n\nHermes$0.0688\n\nCodex$0.294\n\n| Harness | Cost / successful task | Tasks solved | Success rate | Time / task | Input tokens / task | Output tokens / task | Turns / task |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n| Naive Managed Agents | $0.0223 | 12 / 25 | 48.0% | 3.8 min | 141.6k | 7.5k | 12.0 |\n| Claude Code | $0.0518 | 10 / 25 | 40.0% | 3.4 min | 320.4k | 7.7k | 11.9 |\n| Codex | $0.294 | 7 / 25 | 28.0% | 8.2 min | 1.8M | 15.2k | 37.9 |\n| Hermes | $0.0688 | 12 / 25 | 48.0% | 5.6 min | 533.8k | 9.5k | 17.7 |\n| Stock Pi | $0.0258 | 12 / 25 | 48.0% | 6.3 min | 124.9k | 10.3k | 12.2 |\n\nA task succeeds only when every required official check passes. Benchmark failures and task-limit timeouts remain valid unsuccessful attempts. This is a matched 25-task study, not the full benchmark leaderboard. Figures come from our internal benchmark database. The trial-level rows are not public yet.\n\n## Why we run this benchmark\n\nCoding tests cover only one part of day-to-day work. Business Bench measures whether an agent can turn messy source files and written instructions into correct spreadsheets, reports, reconciliations, notices, and other concrete business deliverables.\n\n## Methodology\n\nFive harnesses each attempted the same stratified sample of 25 Business Bench tasks once. The sample used seed 20260928 and spans seven task categories. Each attempt ran in the official task container with an isolated workspace and home directory, using GLM-5.3-Flash through OpenRouter at low reasoning effort.\n\nThe benchmark's deterministic checks grade the produced files. Infrastructure-invalid attempts were recovered before publication; ordinary harness failures and eight task-limit timeouts were kept. All 125 published trials are graded and none are excluded.\n\nCost is calculated from each harness's recorded uncached input, cache-read input, and output tokens on one pinned OpenRouter Z.AI rate card. Time, token, and turn figures are means across all 25 attempts, including unsuccessful ones.\n\nWant to try it? [Read the docs](https://usenaive.ai/docs) or see [pricing](https://usenaive.ai/pricing).",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider"
+ ],
+ "late": true
+}

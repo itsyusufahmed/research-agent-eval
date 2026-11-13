@@ -1,0 +1,1272 @@
+{
+ "id": "agent_run_28a64ad2d5b94ada87b59e9a8677c9b7",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:48:57.385Z",
+ "completedAt": "2026-11-10T18:53:17.585Z",
+ "request": {
+  "query": "Research the company Auterion (auterion.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Auterion provides a vendor-independent operating system and autonomy platform that lets defense, government and commercial operators deploy and coordinate fleets of drones and other autonomous vehicles.\",\"citations\":[\"https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/\",\"https://auterion.com/product/suite/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://auterion.com/product/suite/\"],\"notes\":\"The Suite product page publicly lists Basic, Pro and Enterprise plans and prices.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"GE Aviation\",\"Watts Innovations\"],\"citations\":[\"https://auterion.com/auterion-delivers-new-high-precision-mapping-capabilities/\"],\"notes\":\"The announcement explicitly includes both companies in Auterion\u2019s global customer base.\"},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://www.linkedin.com/company/auterion\"],\"notes\":\"The company profile reports 205 employees and a 201\u2013500 company-size band.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Arlington\",\"country\":\"United States\"},\"citations\":[\"https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/\"],\"notes\":\"Auterion also has a European headquarters in Munich, Germany.\"},\"founded_year\":{\"status\":\"asserted\",\"value\":2017,\"citations\":[\"https://www.linkedin.com/company/auterion\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://auterion.com/enabling_uav_navigation_in_environments_with_limited_or_no_gps_signal/\",\"https://auterion.com/making_autonomous_uav_missions_smarter/\"],\"notes\":\"Two technical implementation posts: GPS-denied navigation by Computer Vision Engineer Kamil Ritz, and collision prevention by Software Engineer Tanja Bauman and Autonomy Lead Julian Kent.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.auterion.com/app-development/auterion-sdk\",\"https://docs.auterion.com/app-development/auterion-sdk/object-detection-api\",\"https://docs.auterion.com/hardware-integration/ai-node\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://auterion.com/company/careers-open-position/8926308002?gh_jid=8926308002\"],\"notes\":\"Computer Vision Engineer is an open qualifying role.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Spleenlab \u2014 VISIONAIRY perception software\",\"citations\":[\"https://auterion.com/product/skynode/spleenlabs-modular-visonairy-perception-software/\"],\"notes\":\"Auterion publicly offers Spleenlab\u2019s machine-learning perception software for installation on its AI Node. This is an onboard integration, not evidence of a hosted LLM provider or use across every Auterion product.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"GDPR\"],\"citations\":[\"https://auterion.com/wp-content/uploads/2023/05/2023.04.04-Sub-processor-statement.pdf\",\"https://auterion.com/wp-content/uploads/2023/05/2023.04.06-Privacy-Policy.pdf\"],\"notes\":\"The documents name GDPR and GDPR-compliant safeguards; GDPR is a regulatory compliance claim, not an independently awarded certification. No completed SOC 2, ISO 27001, HIPAA or PCI DSS certification was established.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Corporate minority investment\",\"date\":\"2025-11\"},\"citations\":[\"https://www.cbinsights.com/company/auterion/financials\",\"https://www.reuters.com/business/aerospace-defense/auterion-says-rheinmetall-stake-boost-drone-software-groups-growth-2025-11-20/\"],\"notes\":\"Rheinmetall\u2019s investment was announced November 18, 2025; its amount was not disclosed. The earlier September 23, 2025 Series B announcement reported $130 million, including $25 million in non-dilutive financing. A June 2026 UK research-program award is not treated as an investment round.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/\"],\"notes\":\"The September 23, 2025 Series B falls within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://auterion.com/company/careers/\",\"https://job-boards.greenhouse.io/auterion\",\"https://www.roboticsnxt.com/companies/auterion\",\"https://tools.yukai.uk/hiring/company/auterion.com\"],\"notes\":\"The November 9, 2026 snapshot lists 25 openings, with no SDR, BDR or Account Executive titles. Mission Coordinator and Solutions Engineer do not qualify.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://auterion.com/auterion-introduces-nemyx-vertical-launch-system-for-drones-from-any-vendor/\"],\"notes\":\"Auterion introduced the Nemyx Vertical Launch System on October 5, 2026, within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/posts/kiranhebbar_i-am-excited-to-announce-my-new-role-as-cfo-activity-7424941013875564545-x7nF\"],\"notes\":\"Kiran Hebbar announced his new role as Auterion CFO on February 4, 2026, within November 9, 2025\u2013November 9, 2026.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"NetSuite\",\"n8n\",\"Clay\"],\"citations\":[\"https://auterion.com/company/careers-open-position/8424364002?gh_jid=8424364002\"],\"notes\":\"The RevOps posting explicitly describes ownership of HubSpot, its NetSuite integration, and data-quality automation using n8n and Clay. Salesforce is mentioned only as desirable experience, so it is not listed as confirmed usage.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Two technical implementation posts: GPS-denied navigation by Computer Vision Engineer Kamil Ritz, and collision prevention by Software Engineer Tanja Bauman and Autonomy Lead Julian Kent.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/enabling_uav_navigation_in_environments_with_limited_or_no_gps_signal/",
+     "https://auterion.com/making_autonomous_uav_missions_smarter/"
+    ]
+   },
+   "hq_location": {
+    "notes": "Auterion also has a European headquarters in Munich, Germany.",
+    "value": {
+     "city": "Arlington",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.auterion.com/app-development/auterion-sdk",
+     "https://docs.auterion.com/app-development/auterion-sdk/object-detection-api",
+     "https://docs.auterion.com/hardware-integration/ai-node"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The September 23, 2025 Series B falls within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+    ]
+   },
+   "founded_year": {
+    "value": 2017,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/auterion"
+    ]
+   },
+   "last_funding": {
+    "notes": "Rheinmetall\u2019s investment was announced November 18, 2025; its amount was not disclosed. The earlier September 23, 2025 Series B announcement reported $130 million, including $25 million in non-dilutive financing. A June 2026 UK research-program award is not treated as an investment round.",
+    "value": {
+     "date": "2025-11",
+     "stage": "Corporate minority investment"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.cbinsights.com/company/auterion/financials",
+     "https://www.reuters.com/business/aerospace-defense/auterion-says-rheinmetall-stake-boost-drone-software-groups-growth-2025-11-20/"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Auterion introduced the Nemyx Vertical Launch System on October 5, 2026, within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/auterion-introduces-nemyx-vertical-launch-system-for-drones-from-any-vendor/"
+    ]
+   },
+   "pricing_page": {
+    "notes": "The Suite product page publicly lists Basic, Pro and Enterprise plans and prices.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/product/suite/"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 205 employees and a 201\u2013500 company-size band.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/auterion"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The November 9, 2026 snapshot lists 25 openings, with no SDR, BDR or Account Executive titles. Mission Coordinator and Solutions Engineer do not qualify.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/company/careers/",
+     "https://job-boards.greenhouse.io/auterion",
+     "https://www.roboticsnxt.com/companies/auterion",
+     "https://tools.yukai.uk/hiring/company/auterion.com"
+    ]
+   },
+   "model_provider": {
+    "notes": "Auterion publicly offers Spleenlab\u2019s machine-learning perception software for installation on its AI Node. This is an onboard integration, not evidence of a hosted LLM provider or use across every Auterion product.",
+    "value": "Spleenlab \u2014 VISIONAIRY perception software",
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/product/skynode/spleenlabs-modular-visonairy-perception-software/"
+    ]
+   },
+   "named_customers": {
+    "notes": "The announcement explicitly includes both companies in Auterion\u2019s global customer base.",
+    "value": [
+     "GE Aviation",
+     "Watts Innovations"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/auterion-delivers-new-high-precision-mapping-capabilities/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "Computer Vision Engineer is an open qualifying role.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/company/careers-open-position/8926308002?gh_jid=8926308002"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The documents name GDPR and GDPR-compliant safeguards; GDPR is a regulatory compliance claim, not an independently awarded certification. No completed SOC 2, ISO 27001, HIPAA or PCI DSS certification was established.",
+    "value": [
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/wp-content/uploads/2023/05/2023.04.04-Sub-processor-statement.pdf",
+     "https://auterion.com/wp-content/uploads/2023/05/2023.04.06-Privacy-Policy.pdf"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The RevOps posting explicitly describes ownership of HubSpot, its NetSuite integration, and data-quality automation using n8n and Clay. Salesforce is mentioned only as desirable experience, so it is not listed as confirmed usage.",
+    "value": [
+     "HubSpot",
+     "NetSuite",
+     "n8n",
+     "Clay"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/company/careers-open-position/8424364002?gh_jid=8424364002"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Auterion provides a vendor-independent operating system and autonomy platform that lets defense, government and commercial operators deploy and coordinate fleets of drones and other autonomous vehicles.",
+    "status": "asserted",
+    "citations": [
+     "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/",
+     "https://auterion.com/product/suite/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Kiran Hebbar announced his new role as Auterion CFO on February 4, 2026, within November 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/kiranhebbar_i-am-excited-to-announce-my-new-role-as-cfo-activity-7424941013875564545-x7nF"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     },
+     {
+      "url": "https://auterion.com/product/suite/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     },
+     {
+      "url": "https://auterion.com/product/suite/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/product/suite/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/product/suite/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/product/suite/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-delivers-new-high-precision-mapping-capabilities/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-delivers-new-high-precision-mapping-capabilities/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-delivers-new-high-precision-mapping-capabilities/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/auterion"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/auterion"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/auterion"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/auterion"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/auterion"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/enabling_uav_navigation_in_environments_with_limited_or_no_gps_signal/"
+     },
+     {
+      "url": "https://auterion.com/making_autonomous_uav_missions_smarter/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/enabling_uav_navigation_in_environments_with_limited_or_no_gps_signal/"
+     },
+     {
+      "url": "https://auterion.com/making_autonomous_uav_missions_smarter/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/enabling_uav_navigation_in_environments_with_limited_or_no_gps_signal/"
+     },
+     {
+      "url": "https://auterion.com/making_autonomous_uav_missions_smarter/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://docs.auterion.com/app-development/auterion-sdk"
+     },
+     {
+      "url": "https://docs.auterion.com/app-development/auterion-sdk/object-detection-api"
+     },
+     {
+      "url": "https://docs.auterion.com/hardware-integration/ai-node"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://docs.auterion.com/app-development/auterion-sdk"
+     },
+     {
+      "url": "https://docs.auterion.com/app-development/auterion-sdk/object-detection-api"
+     },
+     {
+      "url": "https://docs.auterion.com/hardware-integration/ai-node"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers-open-position/8926308002?gh_jid=8926308002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers-open-position/8926308002?gh_jid=8926308002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers-open-position/8926308002?gh_jid=8926308002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/product/skynode/spleenlabs-modular-visonairy-perception-software/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/product/skynode/spleenlabs-modular-visonairy-perception-software/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/product/skynode/spleenlabs-modular-visonairy-perception-software/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/wp-content/uploads/2023/05/2023.04.04-Sub-processor-statement.pdf"
+     },
+     {
+      "url": "https://auterion.com/wp-content/uploads/2023/05/2023.04.06-Privacy-Policy.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/wp-content/uploads/2023/05/2023.04.04-Sub-processor-statement.pdf"
+     },
+     {
+      "url": "https://auterion.com/wp-content/uploads/2023/05/2023.04.06-Privacy-Policy.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/wp-content/uploads/2023/05/2023.04.04-Sub-processor-statement.pdf"
+     },
+     {
+      "url": "https://auterion.com/wp-content/uploads/2023/05/2023.04.06-Privacy-Policy.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://www.cbinsights.com/company/auterion/financials"
+     },
+     {
+      "url": "https://www.reuters.com/business/aerospace-defense/auterion-says-rheinmetall-stake-boost-drone-software-groups-growth-2025-11-20/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://www.cbinsights.com/company/auterion/financials"
+     },
+     {
+      "url": "https://www.reuters.com/business/aerospace-defense/auterion-says-rheinmetall-stake-boost-drone-software-groups-growth-2025-11-20/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://www.cbinsights.com/company/auterion/financials"
+     },
+     {
+      "url": "https://www.reuters.com/business/aerospace-defense/auterion-says-rheinmetall-stake-boost-drone-software-groups-growth-2025-11-20/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-raises-130-million-series-b-as-their-ai-enabled-software-powering-low-cost-commercial-hardware-at-scale-transforms-warfare/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers/"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/auterion"
+     },
+     {
+      "url": "https://www.roboticsnxt.com/companies/auterion"
+     },
+     {
+      "url": "https://tools.yukai.uk/hiring/company/auterion.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers/"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/auterion"
+     },
+     {
+      "url": "https://www.roboticsnxt.com/companies/auterion"
+     },
+     {
+      "url": "https://tools.yukai.uk/hiring/company/auterion.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers/"
+     },
+     {
+      "url": "https://job-boards.greenhouse.io/auterion"
+     },
+     {
+      "url": "https://www.roboticsnxt.com/companies/auterion"
+     },
+     {
+      "url": "https://tools.yukai.uk/hiring/company/auterion.com"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-introduces-nemyx-vertical-launch-system-for-drones-from-any-vendor/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-introduces-nemyx-vertical-launch-system-for-drones-from-any-vendor/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/auterion-introduces-nemyx-vertical-launch-system-for-drones-from-any-vendor/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/kiranhebbar_i-am-excited-to-announce-my-new-role-as-cfo-activity-7424941013875564545-x7nF"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/kiranhebbar_i-am-excited-to-announce-my-new-role-as-cfo-activity-7424941013875564545-x7nF"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/kiranhebbar_i-am-excited-to-announce-my-new-role-as-cfo-activity-7424941013875564545-x7nF"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers-open-position/8424364002?gh_jid=8424364002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers-open-position/8424364002?gh_jid=8424364002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://auterion.com/company/careers-open-position/8424364002?gh_jid=8424364002"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

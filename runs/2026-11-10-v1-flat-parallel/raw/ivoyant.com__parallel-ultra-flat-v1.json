@@ -1,0 +1,494 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea74fa818d7910982",
+  "interaction_id": "trun_142119f6a1b4439ea74fa818d7910982",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "ivoyant.com"
+  },
+  "created_at": "2026-11-10T18:48:53.065855Z",
+  "modified_at": "2026-11-10T19:02:16.887632Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea74fa818d7910982",
+   "interaction_id": "trun_142119f6a1b4439ea74fa818d7910982",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "ivoyant.com"
+   },
+   "created_at": "2026-11-10T18:48:53.065855Z",
+   "modified_at": "2026-11-10T19:02:16.887632Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "iVoyant | LinkedIn",
+       "url": "https://linkedin.com/company/ivoyant-llc",
+       "excerpts": [
+        "Founded 2014"
+       ]
+      }
+     ],
+     "reasoning": "iVoyant\u2019s company profile explicitly lists 2014 as its founding year: https://linkedin.com/company/ivoyant-llc.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "iVoyant | LinkedIn",
+       "url": "https://linkedin.com/company/ivoyant-llc",
+       "excerpts": [
+        "\ud83d\udd13 Milestone unlocked, and we could not be prouder! ivoyant is now SOC 2 Type II certified."
+       ]
+      }
+     ],
+     "reasoning": "iVoyant publicly states that it is now SOC 2 Type II certified on its corporate page: https://linkedin.com/company/ivoyant-llc. This completed corporate claim is distinct from Koodisi\u2019s security page, which describes certificates awaiting issuance; pending certifications were not added.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "iVoyant - Products, Competitors, Financials, Employees, Headquarters Locations",
+       "url": "https://www.cbinsights.com/company/ivoyant",
+       "excerpts": [
+        "Headquarters Location 1155 Perimeter Center W Suite 600 Atlanta, Georgia, 30338, United States"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters address explicitly identifies the United States: https://www.cbinsights.com/company/ivoyant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Boost Enterprise Efficiency with LLMs & Text Classification AI | ivoyant",
+       "url": "https://www.ivoyant.com/blogs/text-classification-with-llms-powering-intelligent-user-content-routing-in-enterprises",
+       "excerpts": [
+        "Ayush Sharma [](https://www.linkedin.com/in/sharma-ayush/)",
+        "In our Co-pilot (a Gen AI application that has been created for ivoyant's in-house product PlatformNX) System, the incoming user query must be correctly classified to route it to the appropriate agent."
+       ]
+      },
+      {
+       "title": "Ayush Sharma \u2013 Machine Learning Engineer at iVoyant",
+       "url": "https://neuron.com/profile/5962800669/ayush-sharma",
+       "excerpts": [
+        "Machine Learning Engineer at iVoyant"
+       ]
+      },
+      {
+       "title": "Overcoming Developer Self-Doubt & API Challenges | ivoyant",
+       "url": "https://www.ivoyant.com/blogs/struggling-forward-cursor-mock-apis-and-the-weight-of-self-doubt",
+       "excerpts": [
+        "Carlos Gutierrez [](https://www.linkedin.com/in/cargdev/)",
+        "I ended up rebuilding the core structure of the mock API\u2014again.",
+        "Next steps? You\u2019ll hear more soon about the new project I\u2019m building in collaboration with [**ivoyant**](https://www.ivoyant.com/) . We\u2019re starting small: a tight MVP for a handful of users, then iterating with a Kaizen mindset\u2014 **continuous, mindful improvement** ."
+       ]
+      },
+      {
+       "title": "Carlos Gutierrez",
+       "url": "https://linkedin.com/in/cargdev",
+       "excerpts": [
+        "Role: Software Engineer @ iVoyant."
+       ]
+      }
+     ],
+     "reasoning": "The mixed company blog contains at least two engineer-authored implementation accounts: Ayush Sharma explains LLM-based routing inside PlatformNX\u2019s co-pilot, and Carlos Gutierrez describes mock-API construction and refactoring for a project being built with iVoyant. Sources: https://www.ivoyant.com/blogs/text-classification-with-llms-powering-intelligent-user-content-routing-in-enterprises and https://www.ivoyant.com/blogs/struggling-forward-cursor-mock-apis-and-the-weight-of-self-doubt. Their engineering roles are supported by https://neuron.com/profile/5962800669/ayush-sharma and https://linkedin.com/in/cargdev. Classification requires judgment because the blog also contains marketing and personal-development material.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "What is Koodisi? \u2014 Enterprise iPaaS Platform by Ivoyant",
+       "url": "https://koodisi.com/what-is-koodisi",
+       "excerpts": [
+        "Koodisi is an enterprise iPaaS platform \u2014 a software product by Ivoyant LLC that connects your entire stack with no-code workflow automation and built-in API management.",
+        "Koodisi is designed for enterprise and mid-market organizations that need reliable,",
+        "\u2192 **IT and integration teams** that manage complex cross-system workflows and need a structured deployment pipeline with change control."
+       ]
+      }
+     ],
+     "reasoning": "The product overview identifies Koodisi as an Ivoyant LLC product, describes its no-code integration and API-management capabilities, and names enterprise/mid-market organizations and IT/integration teams as its audience: https://koodisi.com/what-is-koodisi.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "iVoyant Employee Directory, Headcount & Staff | LeadIQ",
+       "url": "https://leadiq.com/c/ivoyant/5c54a9d921000027af661378/employee-directory",
+       "excerpts": [
+        "Minus sign icon Plus sign icon iVoyant has approximately 81 employees as of September 2026 ."
+       ]
+      }
+     ],
+     "reasoning": "A September 2026 numerical headcount of approximately 81 places iVoyant in the 51\u2013100 band: https://leadiq.com/c/ivoyant/5c54a9d921000027af661378/employee-directory. This is preferred over the conflicting, broader company-profile size category.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "OpenAI | Koodisi Documentation",
+       "url": "https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai",
+       "excerpts": [
+        "Use the OpenAI group to work with the models available to your OpenAI account.",
+        "The activities call the OpenAI REST API and return its response to the workflow."
+       ]
+      }
+     ],
+     "reasoning": "Koodisi\u2019s documentation explicitly states that its OpenAI activities call the OpenAI REST API and return responses to workflows: https://docs.koodisi.com/working-with-activities/list-of-available-activities/openai. This establishes an available product integration, not necessarily the provider behind every internal AI feature.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing \u2014 Koodisi",
+       "url": "https://koodisi.com/pricing",
+       "excerpts": [
+        "One enterprise plan, quoted against your deployment model, scale, and support needs.",
+        "Koodisi is sold as one enterprise plan with unlimited workflows, executions, and users."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page describes an enterprise plan and its inclusions, although pricing is quoted rather than published numerically: https://koodisi.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Ivoyant - 2026 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo",
+       "excerpts": [
+        "Ivoyant's funding and investors Ivoyant has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "No funding round is recorded, so there is no applicable latest-round amount; null avoids inventing a zero-dollar round. Source: https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Capability Statement | ivoyant",
+       "url": "https://www.ivoyant.com/capability-statement",
+       "excerpts": [
+        "PODS | Logistics & Real-Time Data",
+        "UPS | Customer Insights & Analytics",
+        "NAPA Auto Parts | Inventory & Pricing Engine"
+       ]
+      }
+     ],
+     "reasoning": "iVoyant names PODS, UPS and NAPA Auto Parts in its past-performance examples, rather than as investors or partners: https://www.ivoyant.com/capability-statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Ivoyant - 2026 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo",
+       "excerpts": [
+        "Ivoyant's funding and investors Ivoyant has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "The profile records no funding rounds, so no latest-round date applies: https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Sales Development Representative with 2 - 4 Years of Experience at iVoyant in Bengaluru / Bangalore,India | Position Closed",
+       "url": "https://www.foundit.in/job/sales-development-representative-ivoyant-bengaluru-bangalore-69518852",
+       "excerpts": [
+        "You will run our outbound engine: Apollo for lead data, LinkedIn and email for outreach, and HubSpot for tracking."
+       ]
+      }
+     ],
+     "reasoning": "An iVoyant SDR job description explicitly identifies Apollo for lead data and HubSpot for tracking. The posting is closed, but remains direct evidence of the systems used: https://www.foundit.in/job/sales-development-representative-ivoyant-bengaluru-bangalore-69518852.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [],
+     "reasoning": "Unknown. The official team page was reviewed, but it does not supply appointment dates, and additional executive profiles did not establish a qualifying dated join or departure. An absence of announcements was not treated as proof of no turnover. Team page: https://www.ivoyant.com/about-us.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for AI/ML Engineer at iVoyant",
+       "url": "https://boards.greenhouse.io/ivoyant/jobs/5257928004",
+       "excerpts": [
+        "AI/ML Engineer at iVoyant [(View all jobs)](https://boards.greenhouse.io/ivoyant) Bangalore"
+       ]
+      },
+      {
+       "title": "Jobs at iVoyant",
+       "url": "https://boards.greenhouse.io/ivoyant",
+       "excerpts": [
+        "Current Job Openings Talent Management [AI/ML Engineer](https://boards.greenhouse.io/ivoyant/jobs/5257928004) Bangalore"
+       ]
+      }
+     ],
+     "reasoning": "The current job board lists an AI/ML Engineer vacancy with an application page: https://boards.greenhouse.io/ivoyant/jobs/5257928004.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Ivoyant - 2026 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo",
+       "excerpts": [
+        "Ivoyant's funding and investors Ivoyant has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile explicitly says iVoyant has not raised any funding rounds, supporting stage \u201cnone\u201d: https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Koodisi Documentation",
+       "url": "https://docs.koodisi.com/",
+       "excerpts": [
+        "Koodisi documentation",
+        "[Build your first workflow](https://docs.koodisi.com/building-your-first-workflow/)",
+        "[Explore use cases](https://docs.koodisi.com/koodisi-use-cases/)",
+        "[Develop with Git](https://docs.koodisi.com/using-git-to-develop-applications/)"
+       ]
+      }
+     ],
+     "reasoning": "A publicly accessible documentation portal contains multiple distinct guides, including workflow creation, use cases and Git-based development: https://docs.koodisi.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Ivoyant | Koodisi",
+       "url": "https://koodisi.com/about",
+       "excerpts": [
+        "Contact Get in touch [Visit ivoyant.com \u2192](https://www.ivoyant.com/) Headquarters 1155 Perimeter Center West Atlanta, GA 30338 Phone [\\+1 (770) 274 4336](tel:+17702744336) Email [info@ivoyant.com](mailto:info@ivoyant.com)"
+       ]
+      }
+     ],
+     "reasoning": "The Ivoyant about page explicitly labels its Atlanta address as headquarters: https://koodisi.com/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Workflow Automation Blog | Koodisi",
+       "url": "https://koodisi.com/blog",
+       "excerpts": [
+        "October 12, 2026 Read more](https://koodisi.com/blog/vocabulary-treadmill-prompt-to-graph-engineering) [Best iPaaS platforms in 2026: an enterprise comparison ipaas Enterprise Integration ## Best iPaaS platforms in 2026: an enterprise comparison A side-by-side comparison of 13 iPaaS platforms, including Koodisi, on pricing model, deployment options and best fit, with a proof-of-concept plan that tests failure handling.",
+        "October 9, 2026 Read more](https://koodisi.com/blog/best-ipaas-platforms-in-2026-compared) [PaaS vs iPaaS: key differences, examples, and which you need ipaas paas ## PaaS vs iPaaS: key differences, examples, and which you need PaaS is where you build and run your own applications; iPaaS is where you connect the ones you already have."
+       ]
+      },
+      {
+       "title": "Expose Your APIs to Agents Without Losing Control | Koodisi",
+       "url": "https://koodisi.com/blog/expose-your-apis-to-agents-without-losing-control",
+       "excerpts": [
+        "[](https://www.linkedin.com/in/sanjay-v-k-030247146/) [Sanjay Kumar](https://www.linkedin.com/in/sanjay-v-k-030247146/) \u2022 Posted on Jul 2, 2026 \u2022 4 min read",
+        "Here's how a governed MCP server lets you expose what you already built, on your own terms."
+       ]
+      },
+      {
+       "title": "Integration Monitoring Isn't Recovery \u2014 Meet Koodisi Engage",
+       "url": "https://koodisi.com/blog/integration-monitoring-vs-recovery-layer",
+       "excerpts": [
+        "[](https://www.linkedin.com/in/sanjay-v-k-030247146/) [Sanjay Kumar](https://www.linkedin.com/in/sanjay-v-k-030247146/) \u2022 Posted on Apr 6, 2026 \u2022 5 min read"
+       ]
+      }
+     ],
+     "reasoning": "No qualifying new-product or major-feature launch was identified in the readable history for the requested six-month window. The recent blog index contains educational and comparison posts; the July 2 MCP post explains access to existing APIs, rather than announcing a new release. The Engage feature overview is dated April 6, before the window. Sources: https://koodisi.com/blog, https://koodisi.com/blog/expose-your-apis-to-agents-without-losing-control and https://koodisi.com/blog/integration-monitoring-vs-recovery-layer. This is a limited negative based on the available publication history.",
+     "confidence": "low"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at iVoyant",
+       "url": "https://boards.greenhouse.io/ivoyant",
+       "excerpts": [
+        "Current Job Openings Talent Management [AI/ML Engineer](https://boards.greenhouse.io/ivoyant/jobs/5257928004) Bangalore"
+       ]
+      }
+     ],
+     "reasoning": "The current board lists AI/ML, frontend, full-stack lead, test-engineering and UX roles, but no SDR, BDR or account-executive opening: https://boards.greenhouse.io/ivoyant.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Ivoyant - 2026 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo",
+       "excerpts": [
+        "Ivoyant's funding and investors Ivoyant has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "The company is recorded as having no funding rounds, supporting no outside funding raised during the requested 18-month window: https://tracxn.com/d/companies/ivoyant/__GHS4A09BBZYQHq0c5ZqR43d-kAgP44kGTKVEWSoDWgo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "iVoyant | LinkedIn",
+       "url": "https://linkedin.com/company/ivoyant-llc",
+       "excerpts": [
+        "\ud83d\udd13 Milestone unlocked, and we could not be prouder! ivoyant is now SOC 2 Type II certified."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly claims completed SOC 2 Type II certification: https://linkedin.com/company/ivoyant-llc.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Capability Statement | ivoyant",
+       "url": "https://www.ivoyant.com/capability-statement",
+       "excerpts": [
+        "PODS | Logistics & Real-Time Data"
+       ]
+      }
+     ],
+     "reasoning": "PODS is named in iVoyant\u2019s past-performance examples: https://www.ivoyant.com/capability-statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Capability Statement | ivoyant",
+       "url": "https://www.ivoyant.com/capability-statement",
+       "excerpts": [
+        "UPS | Customer Insights & Analytics"
+       ]
+      }
+     ],
+     "reasoning": "UPS is named in iVoyant\u2019s past-performance examples: https://www.ivoyant.com/capability-statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Capability Statement | ivoyant",
+       "url": "https://www.ivoyant.com/capability-statement",
+       "excerpts": [
+        "NAPA Auto Parts | Inventory & Pricing Engine"
+       ]
+      }
+     ],
+     "reasoning": "NAPA Auto Parts is named in iVoyant\u2019s past-performance examples: https://www.ivoyant.com/capability-statement.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Sales Development Representative with 2 - 4 Years of Experience at iVoyant in Bengaluru / Bangalore,India | Position Closed",
+       "url": "https://www.foundit.in/job/sales-development-representative-ivoyant-bengaluru-bangalore-69518852",
+       "excerpts": [
+        "You will run our outbound engine: Apollo for lead data, LinkedIn and email for outreach, and HubSpot for tracking."
+       ]
+      }
+     ],
+     "reasoning": "The SDR description explicitly names Apollo as the lead-data system: https://www.foundit.in/job/sales-development-representative-ivoyant-bengaluru-bangalore-69518852.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Sales Development Representative with 2 - 4 Years of Experience at iVoyant in Bengaluru / Bangalore,India | Position Closed",
+       "url": "https://www.foundit.in/job/sales-development-representative-ivoyant-bengaluru-bangalore-69518852",
+       "excerpts": [
+        "You will run our outbound engine: Apollo for lead data, LinkedIn and email for outreach, and HubSpot for tracking."
+       ]
+      }
+     ],
+     "reasoning": "The SDR description explicitly names HubSpot as the tracking system: https://www.foundit.in/job/sales-development-representative-ivoyant-bengaluru-bangalore-69518852.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2014.0,
+    "compliance_certs": [
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "iVoyant\u2019s Koodisi connects business systems through no-code workflow automation and built-in API management for enterprise and mid-market IT and integration teams.",
+    "employee_band": "51-100",
+    "model_provider": "OpenAI",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "PODS",
+     "UPS",
+     "NAPA Auto Parts"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Apollo",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "none",
+    "public_docs": true,
+    "hq_city": "Atlanta",
+    "launched_6mo": false,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,613 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eae92dab4b25f3390",
+  "interaction_id": "trun_142119f6a1b4439eae92dab4b25f3390",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "askethos.com"
+  },
+  "created_at": "2026-11-10T18:48:35.510378Z",
+  "modified_at": "2026-11-10T18:55:15.006737Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eae92dab4b25f3390",
+   "interaction_id": "trun_142119f6a1b4439eae92dab4b25f3390",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "askethos.com"
+   },
+   "created_at": "2026-11-10T18:48:35.510378Z",
+   "modified_at": "2026-11-10T18:55:15.006737Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Ethos | LinkedIn",
+       "url": "https://linkedin.com/company/99316157",
+       "excerpts": [
+        "Company size 2-10 employees Type Privately Held Founded 2024"
+       ]
+      }
+     ],
+     "reasoning": "Ethos's LinkedIn company profile identifies the company as founded in 2024.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Data Processing Agreement | Ethos",
+       "url": "https://agent.askethos.com/ethos-dpa",
+       "excerpts": [
+        "## Purpose of this DPA",
+        "This DPA sets forth the terms under which the Processor will process personal data on behalf of the Data Controller, ensuring compliance with:",
+        "* The UK General Data Protection Regulation (UK GDPR);",
+        "* The General Data Protection Regulation (EU GDPR), where applicable;",
+        "* Other applicable data protection or privacy legislation.",
+        "The Processor will process Personal Data exclusively:",
+        "1. In accordance with the written instructions of the Data Controller, as detailed in this DPA and the Agreement.",
+        "2. For the purposes necessary to fulfill the services defined in the Agreement and any related agreements.",
+        "## Relationship to Privacy Policy and Expert Terms"
+       ]
+      }
+     ],
+     "reasoning": "Ethos's Data Processing Agreement says its processing is intended to ensure compliance with UK GDPR and, where applicable, EU GDPR; GDPR is the named item in the requested list. The source describes a regulation rather than a formal certification, so this is a cautious mapping to the schema's list.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Ethos Privacy Policy | Ethos",
+       "url": "https://agent.askethos.com/privacy",
+       "excerpts": [
+        "## 1\\. Who We Are",
+        "We are Ethos Artificial Intelligence Limited. Our registered office is located at Office 3.01, MYO, 42-50 York Way, Kings Cross, London, N1 9AB, United Kingdom.",
+        "For privacy-related matters, you can contact us at:  ",
+        "Email: [support@askethos.com](mailto:support@askethos.com)"
+       ]
+      },
+      {
+       "title": "Compliance Associate (Contract, London)",
+       "url": "https://agent.askethos.com/opportunities/compliance-associate-6-month-contract-300-per-day-depending-on-experience",
+       "excerpts": [
+        "This role works directly for Ethos and is based in our London HQ, in Kings Cross."
+       ]
+      }
+     ],
+     "reasoning": "Ethos's own role listing calls its London location the London HQ, and its privacy policy places its registered office in London, United Kingdom; together these support the headquarters country.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Latest Updates - Ethos",
+       "url": "https://askethos.com/updates",
+       "excerpts": [
+        "# Latest updates.",
+        "Jul 1, 2025",
+        "#### Company Profiles",
+        "Quick access to Company Website, LinkedIn, Crunchbase, Funding, Employment and other data",
+        "Jun 16, 2025",
+        "#### Run all your Expert Calls with AI",
+        "Ask AI to find and call experts for what you need. Get transcripts in hours.",
+        "Jun 9, 2025",
+        "#### Introducing Investment Researcher",
+        "Our first agent that can autonomously research companies, people and products, learning from human experts, end-to-end.",
+        "Jun 3, 2025",
+        "#### Delegate Expert Calls to AI",
+        "Ask AI to interview experts for you when you don't have time.",
+        "May 12, 2025",
+        "#### Deep Research Reports",
+        "Generate Deep Research with interactive visualisations and data on 500M people, 60M+ companies, 5M academic papers and more.",
+        "Apr 22, 2025",
+        "#### Get Insights on 60M+ Companies",
+        "Research companies, markets and more with cutting edge AI",
+        "Mar 27, 2025",
+        "#### Expert Search with AI",
+        "Use AI to search, reach and book experts across 500M profiles in seconds."
+       ]
+      }
+     ],
+     "reasoning": "The complete Latest Updates index lists product announcements and feature updates, with its newest dated item July 1, 2025; it does not show a technical engineering blog with at least two build-focused posts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "askethos.com",
+       "url": "https://askethos.com/",
+       "excerpts": [
+        "Featured opportunities  [Try Ethos](https://agent.askethos.com/agent)",
+        "# We make you irreplaceable.",
+        "Companies are looking for experts with your background. Get matched to paid consulting, advisory calls, and research projects.",
+        "[Get matched to opportunities](https://agent.askethos.com/agent)"
+       ]
+      },
+      {
+       "title": "Ethos | General Catalyst Job Board",
+       "url": "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a",
+       "excerpts": [
+        "Ethos is an AI-driven platform that matches individuals with opportunities. It uses AI to scan hundreds of millions of profiles and match clients with the most relevant experts for insight-driven calls. The platform streamlines the entire process from booking to communication and compensation, making it equitable for clients and experts. While currently focused on expert calls, Ethos is expanding to match advisors with startups, speakers with events, and talent with employers."
+       ]
+      }
+     ],
+     "reasoning": "The AskEthos homepage says companies seek people with users' backgrounds and offers paid consulting, advisory calls, and research; the company profile describes AI matching clients with experts. These support the sentence's product and audience.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Subprocessor List | Ethos",
+       "url": "https://agent.askethos.com/ethos-subprocessors",
+       "excerpts": [
+        "|Subprocessor Name |Purpose |Location |",
+        "| --- | --- | --- |",
+        "|Amazon Web Services (AWS) |Cloud infrastructure and hosting |Worldwide |",
+        "|Anthropic |Artificial intelligence and language processing services |Worldwide |",
+        "|Apollo |B2B sales intelligence and lead generation |Worldwide |",
+        "|Auth0 (Okta) |Identity, authentication and user management |Worldwide |",
+        "|Bright Data |Web data collection infrastructure |Worldwide |",
+        "|Cartesia |Text-to-speech services for the voice agent |Worldwide |",
+        "|Composio |Managed third-party integrations (e.g., Gmail, calendar) |Worldwide |",
+        "|Daily.co |Real-time audio and video room infrastructure |Worldwide |",
+        "|Datadog |Application performance monitoring, logging and observability |Worldwide |",
+        "|Deepgram |Speech-to-text services for the voice agent |Worldwide |",
+        "|ElevenLabs |Speech-to-text and text-to-speech services for the voice agent |Worldwide |",
+        "|EnrichLayer |Professional profile data enrichment |Worldwide |",
+        "|Firecrawl |Web scraping and content extraction |Worldwide |",
+        "|Google |Artificial intelligence and language processing services (Gemini), and email services (Gmail API) |Worldwide |",
+        "|Groq |Artificial intelligence and inference services |Worldwide |",
+        "|Hunter |Email verification and discovery |Worldwide |",
+        "|LangSmith (LangChain) |LLM tracing, evaluation and observability |Worldwide |",
+        "|LiveKit |Real-time voice and video infrastructure for the voice agent |Worldwide |",
+        "|OpenAI |Artificial intelligence and language processing services |Worldwide |",
+        "|OpenRouter |Artificial intelligence model gateway and routing |Worldwide |",
+        "|Pipecat Cloud |Voice agent hosting and orchestration |Worldwide |",
+        "|PostHog |Product analytics, feature flags and session replay |Worldwide |",
+        "|Postmark |Transactional email delivery services |Worldwide |",
+        "|Respondent.io |Research participant scheduling and management |Worldwide |",
+        "|RevenueBase |B2B sales intelligence and lead generation |Worldwide |",
+        "|Revolut |Payout processing for Experts |Worldwide |",
+        "|Stripe |Payment processing and billing |Worldwide |",
+        "|Twilio |SMS and WhatsApp messaging services |Worldwide |",
+        "|Zerobounce |Email validation and verification services |Worldwide |"
+       ]
+      }
+     ],
+     "reasoning": "The public subprocessor list names Anthropic and identifies Google Gemini, Groq, OpenAI, and OpenRouter as AI/language, inference, or model-routing services engaged by Ethos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing \u00b7 Ethos Evals",
+       "url": "https://evals.askethos.com/pricing",
+       "excerpts": [
+        "Pricing Simple pricing. No subscription. Pay for what each eval uses, and see an estimate before it runs. $0 Platform fee No seats, no minimum \\+ 30% on top of model token cost The model under test and LLM grading \\+ Compute sandboxes for agentic benchmarks Charged per task, for what it uses"
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/askethos",
+       "excerpts": [
+        "posted date: 2026-11-06 content html Today we\u2019re excited to open a private beta of our Eval platform: run any frontier eval, on any model, including your own. ... \u2192 Run evals from your agent - Add our MCP server to Claude Code, Cursor or Codex and ask in plain English. Your agent shows you the cost, runs the eval and reads back the results."
+       ]
+      }
+     ],
+     "reasoning": "Ethos's Ethos Evals page has a public Pricing page with its per-task fee structure, and the company's LinkedIn post identifies the Eval platform as Ethos's own product. Therefore the company does have a public pricing page.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Ethos raises $22.75M from a16z for its expert network with voice onboarding | TechCrunch",
+       "url": "https://techcrunch.com/2026/05/06/ethos-raises-22.75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+       "excerpts": [
+        "8:00 AM PDT \u00b7 May 6, 2026 ... When companies are looking for opinions or advice on a project, they tend to go to LinkedIn or use expert networks such as GLG, Third Bridge, or AlphaSights. ... London-based [Ethos](https://agent.askethos.com/) thinks that AI can improve both sides of this experience. ... Today, Ethos announced a $22.75 million Series A round led by a16z with participation from General Catalyst, XTX Markets, Evantic Capital, and Common Magic."
+       ]
+      },
+      {
+       "title": "Ethos company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/ethos_4",
+       "excerpts": [
+        "After emerging from stealth with a $3.25 million seed in March 2025 led by General Catalyst (with 8VC, Conviction and others), Ethos raised a $22.75 million Series A in May 2026 led by Andreessen Horowitz, with General Catalyst, XTX Markets, Evantic Capital and Common Magic, to expand the network and product. Sources: TechCrunch 6 May 2026; Tech.eu March 2025."
+       ]
+      }
+     ],
+     "reasoning": "TechCrunch reports Ethos's $22.75 million Series A on May 6, 2026; Dealroom's round history identifies it as the later round after the March 2025 seed. The amount converts to 22,750,000 USD.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Ethos Recruiting | Expert-Led Talent Network",
+       "url": "https://www.recruiting.askethos.com/",
+       "excerpts": [
+        "---",
+        "title: \"Ethos Recruiting | Expert-Led Talent Network\"",
+        "description: Access exceptional candidates through Ethos, the expert-led recruiting network for full-time, part-time, and specialist hiring.",
+        "published: \"Aug 25, 2026, 11:31 AM UTC\"",
+        "Ethos raises $23m led by a16z and crosses 200,000 members \u00b7 [Learn more](./) ->",
+        "[We just raised $23M led by a16z](https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/)",
+        "# Recruit from the world\u2019s fastest growing expert network",
+        "Get applications from over 220,000 pre-screened professionals - or have them refer top talent they can vouch for.[Post your roles](./step-1)",
+        "COMPANIES HIRING WITH ETHOS",
+        "Elm Labs, Kendal.ai, Built for growing teams, AD, AI Engineer \u00b7 Ethos",
+        "New application from Andrey!",
+        "557",
+        "candidates hired since January 2026"
+       ]
+      }
+     ],
+     "reasoning": "Ethos Recruiting's first-party homepage labels the section 'Companies hiring with Ethos' and names Elm Labs and Kendal.ai.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Ethos raises $22.75M from a16z for its expert network with voice onboarding | TechCrunch",
+       "url": "https://techcrunch.com/2026/05/06/ethos-raises-22.75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+       "excerpts": [
+        "8:00 AM PDT \u00b7 May 6, 2026 ... When companies are looking for opinions or advice on a project, they tend to go to LinkedIn or use expert networks such as GLG, Third Bridge, or AlphaSights. ... London-based [Ethos](https://agent.askethos.com/) thinks that AI can improve both sides of this experience. ... Today, Ethos announced a $22.75 million Series A round led by a16z with participation from General Catalyst, XTX Markets, Evantic Capital, and Common Magic."
+       ]
+      },
+      {
+       "title": "Ethos company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/ethos_4",
+       "excerpts": [
+        "After emerging from stealth with a $3.25 million seed in March 2025 led by General Catalyst (with 8VC, Conviction and others), Ethos raised a $22.75 million Series A in May 2026 led by Andreessen Horowitz, with General Catalyst, XTX Markets, Evantic Capital and Common Magic, to expand the network and product. Sources: TechCrunch 6 May 2026; Tech.eu March 2025."
+       ]
+      }
+     ],
+     "reasoning": "The announced latest round is dated May 6, 2026, so its month-formatted date is 2026-05; Dealroom confirms it followed the March 2025 seed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Subprocessor List | Ethos",
+       "url": "https://agent.askethos.com/ethos-subprocessors",
+       "excerpts": [
+        "|Apollo |B2B sales intelligence and lead generation |Worldwide |",
+        "|RevenueBase |B2B sales intelligence and lead generation |Worldwide |"
+       ]
+      }
+     ],
+     "reasoning": "Ethos's subprocessor list names Apollo and RevenueBase and describes both as B2B sales-intelligence and lead-generation providers, which are visible sales/marketing stack signals.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "AI Engineer",
+       "url": "https://agent.askethos.com/opportunities/ai-engineer",
+       "excerpts": [
+        "AI Engineer Ethos Closed This opportunity is closed and is no longer accepting applications. Role ai-engineer Status No longer accepting applications"
+       ]
+      },
+      {
+       "title": "Ethos | General Catalyst Job Board",
+       "url": "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a",
+       "excerpts": [
+        "Showing 520 jobs",
+        "Expert Calls: Account Executives at Open-Weight AI Neolabs (Solutions & Forward-Deployed Engineers)",
+        "Location:",
+        "Bengaluru, Karnataka, India",
+        "Posted:",
+        "1 month",
+        "View job",
+        "Expert Calls: GTM Leads at Open-Weight AI Model Companies (Solutions & Forward-Deployed Engineers)"
+       ]
+      }
+     ],
+     "reasoning": "The direct Ethos AI Engineer opportunity is marked closed. The live board entries shown are expert-call or expert-opportunity assignments for outside clients, not Ethos employee openings; no open in-house AI/ML posting is shown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Ethos raises $22.75M from a16z for its expert network with voice onboarding | TechCrunch",
+       "url": "https://techcrunch.com/2026/05/06/ethos-raises-22.75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+       "excerpts": [
+        "8:00 AM PDT \u00b7 May 6, 2026 ... When companies are looking for opinions or advice on a project, they tend to go to LinkedIn or use expert networks such as GLG, Third Bridge, or AlphaSights. ... London-based [Ethos](https://agent.askethos.com/) thinks that AI can improve both sides of this experience. ... Today, Ethos announced a $22.75 million Series A round led by a16z with participation from General Catalyst, XTX Markets, Evantic Capital, and Common Magic."
+       ]
+      },
+      {
+       "title": "Ethos company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/ethos_4",
+       "excerpts": [
+        "After emerging from stealth with a $3.25 million seed in March 2025 led by General Catalyst (with 8VC, Conviction and others), Ethos raised a $22.75 million Series A in May 2026 led by Andreessen Horowitz, with General Catalyst, XTX Markets, Evantic Capital and Common Magic, to expand the network and product. Sources: TechCrunch 6 May 2026; Tech.eu March 2025."
+       ]
+      }
+     ],
+     "reasoning": "The most recent round is explicitly described as a Series A in May 2026, after the March 2025 seed round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "evals.askethos.com",
+       "url": "https://evals.askethos.com/llms.txt",
+       "excerpts": [
+        "Docs [MCP server docs](https://evals.askethos.com/mcp): connect Claude Code, Claude, Cursor or Codex, sign in, example agent workflows, costs and the full tool list"
+       ]
+      },
+      {
+       "title": "askethos.com",
+       "url": "https://askethos.com/",
+       "excerpts": [
+        "Ethos is always free to use.",
+        "[Home](https://agent.askethos.com/pollen/home) [Privacy Policy](https://agent.askethos.com/privacy) [Terms of Use](https://agent.askethos.com/terms) [Expert Terms](https://agent.askethos.com/expert-terms) Cookie preferences",
+        "Find people Find opportunities",
+        "Ethos - Human intelligence, on-demand"
+       ]
+      }
+     ],
+     "reasoning": "The Ethos Evals documentation index lists only one MCP-server documentation article; the main Ethos site footer links to privacy, terms, and expert terms but no docs/help center. The observed materials do not meet the requirement for several public documentation articles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Ethos Privacy Policy | Ethos",
+       "url": "https://agent.askethos.com/privacy",
+       "excerpts": [
+        "## 1\\. Who We Are",
+        "We are Ethos Artificial Intelligence Limited. Our registered office is located at Office 3.01, MYO, 42-50 York Way, Kings Cross, London, N1 9AB, United Kingdom.",
+        "For privacy-related matters, you can contact us at:  ",
+        "Email: [support@askethos.com](mailto:support@askethos.com)"
+       ]
+      },
+      {
+       "title": "Compliance Associate (Contract, London)",
+       "url": "https://agent.askethos.com/opportunities/compliance-associate-6-month-contract-300-per-day-depending-on-experience",
+       "excerpts": [
+        "This role works directly for Ethos and is based in our London HQ, in Kings Cross."
+       ]
+      }
+     ],
+     "reasoning": "Ethos's own role listing identifies its London HQ in Kings Cross, and its privacy policy gives the registered office in London.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/askethos",
+       "excerpts": [
+        "posted date: 2026-11-06 content html Today we\u2019re excited to open a private beta of our Eval platform: run any frontier eval, on any model, including your own. ... \u2192 Run evals from your agent - Add our MCP server to Claude Code, Cursor or Codex and ask in plain English. Your agent shows you the cost, runs the eval and reads back the results."
+       ]
+      }
+     ],
+     "reasoning": "Ethos's LinkedIn company page dates its announcement opening a private beta of its Eval platform to November 6, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Ethos | General Catalyst Job Board",
+       "url": "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a",
+       "excerpts": [
+        "Showing 520 jobs",
+        "Expert Calls: Account Executives at Open-Weight AI Neolabs (Solutions & Forward-Deployed Engineers)",
+        "Location:",
+        "Bengaluru, Karnataka, India",
+        "Posted:",
+        "1 month",
+        "View job",
+        "Expert Calls: GTM Leads at Open-Weight AI Model Companies (Solutions & Forward-Deployed Engineers)"
+       ]
+      },
+      {
+       "title": "Account Executive",
+       "url": "https://agent.askethos.com/opportunities/account-executive",
+       "excerpts": [
+        "Account Executive Train a leading AI lab's model on presentations and slide decks Share [Apply](https://agent.askethos.com/opportunities/account-executive/apply) Role Account Executive Interview AI voice screen included About this opportunity We're working with a leading foundational AI lab to find experienced account executives from top B2B and SaaS companies who can help train their latest language model on professional presentation and slide deck tasks."
+       ]
+      }
+     ],
+     "reasoning": "The visible Account Executive opportunity is to train an outside AI lab's model, not an Ethos employee job; the current board entries are expert gigs and show no in-house SDR/BDR/AE vacancy.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Ethos raises $22.75M from a16z for its expert network with voice onboarding | TechCrunch",
+       "url": "https://techcrunch.com/2026/05/06/ethos-raises-22.75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+       "excerpts": [
+        "8:00 AM PDT \u00b7 May 6, 2026 ... When companies are looking for opinions or advice on a project, they tend to go to LinkedIn or use expert networks such as GLG, Third Bridge, or AlphaSights. ... London-based [Ethos](https://agent.askethos.com/) thinks that AI can improve both sides of this experience. ... Today, Ethos announced a $22.75 million Series A round led by a16z with participation from General Catalyst, XTX Markets, Evantic Capital, and Common Magic."
+       ]
+      }
+     ],
+     "reasoning": "Ethos announced the Series A on May 6, 2026, which falls within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Data Processing Agreement | Ethos",
+       "url": "https://agent.askethos.com/ethos-dpa",
+       "excerpts": [
+        "## Purpose of this DPA",
+        "This DPA sets forth the terms under which the Processor will process personal data on behalf of the Data Controller, ensuring compliance with:",
+        "* The UK General Data Protection Regulation (UK GDPR);",
+        "* The General Data Protection Regulation (EU GDPR), where applicable;",
+        "* Other applicable data protection or privacy legislation.",
+        "The Processor will process Personal Data exclusively:",
+        "1. In accordance with the written instructions of the Data Controller, as detailed in this DPA and the Agreement.",
+        "2. For the purposes necessary to fulfill the services defined in the Agreement and any related agreements.",
+        "## Relationship to Privacy Policy and Expert Terms"
+       ]
+      }
+     ],
+     "reasoning": "The DPA explicitly names UK GDPR and EU GDPR.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Ethos Recruiting | Expert-Led Talent Network",
+       "url": "https://www.recruiting.askethos.com/",
+       "excerpts": [
+        "---",
+        "title: \"Ethos Recruiting | Expert-Led Talent Network\"",
+        "description: Access exceptional candidates through Ethos, the expert-led recruiting network for full-time, part-time, and specialist hiring.",
+        "published: \"Aug 25, 2026, 11:31 AM UTC\"",
+        "Ethos raises $23m led by a16z and crosses 200,000 members \u00b7 [Learn more](./) ->",
+        "[We just raised $23M led by a16z](https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/)",
+        "# Recruit from the world\u2019s fastest growing expert network",
+        "Get applications from over 220,000 pre-screened professionals - or have them refer top talent they can vouch for.[Post your roles](./step-1)",
+        "COMPANIES HIRING WITH ETHOS",
+        "Elm Labs, Kendal.ai, Built for growing teams, AD, AI Engineer \u00b7 Ethos",
+        "New application from Andrey!",
+        "557",
+        "candidates hired since January 2026"
+       ]
+      }
+     ],
+     "reasoning": "Elm Labs is named in the 'Companies hiring with Ethos' section.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Ethos Recruiting | Expert-Led Talent Network",
+       "url": "https://www.recruiting.askethos.com/",
+       "excerpts": [
+        "---",
+        "title: \"Ethos Recruiting | Expert-Led Talent Network\"",
+        "description: Access exceptional candidates through Ethos, the expert-led recruiting network for full-time, part-time, and specialist hiring.",
+        "published: \"Aug 25, 2026, 11:31 AM UTC\"",
+        "Ethos raises $23m led by a16z and crosses 200,000 members \u00b7 [Learn more](./) ->",
+        "[We just raised $23M led by a16z](https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/)",
+        "# Recruit from the world\u2019s fastest growing expert network",
+        "Get applications from over 220,000 pre-screened professionals - or have them refer top talent they can vouch for.[Post your roles](./step-1)",
+        "COMPANIES HIRING WITH ETHOS",
+        "Elm Labs, Kendal.ai, Built for growing teams, AD, AI Engineer \u00b7 Ethos",
+        "New application from Andrey!",
+        "557",
+        "candidates hired since January 2026"
+       ]
+      }
+     ],
+     "reasoning": "Kendal.ai is named in the 'Companies hiring with Ethos' section.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Subprocessor List | Ethos",
+       "url": "https://agent.askethos.com/ethos-subprocessors",
+       "excerpts": [
+        "|Apollo |B2B sales intelligence and lead generation |Worldwide |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list names Apollo and classifies it as B2B sales intelligence and lead generation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Subprocessor List | Ethos",
+       "url": "https://agent.askethos.com/ethos-subprocessors",
+       "excerpts": [
+        "|RevenueBase |B2B sales intelligence and lead generation |Worldwide |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list names RevenueBase and classifies it as B2B sales intelligence and lead generation.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2024.0,
+    "compliance_certs": [
+     "GDPR"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": false,
+    "product_one_liner": "Ethos uses AI to match professionals with paid consulting, advisory, research, and other work opportunities, while helping companies find and engage the expertise they need.",
+    "employee_band": null,
+    "model_provider": "Google (Gemini), Anthropic, Groq, OpenAI, and OpenRouter.",
+    "pricing_page": true,
+    "funding_amount_usd": 22750000.0,
+    "named_customers": [
+     "Elm Labs",
+     "Kendal.ai"
+    ],
+    "funding_date": "2026-05",
+    "crm_stack_signal": [
+     "Apollo",
+     "RevenueBase"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A",
+    "public_docs": false,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

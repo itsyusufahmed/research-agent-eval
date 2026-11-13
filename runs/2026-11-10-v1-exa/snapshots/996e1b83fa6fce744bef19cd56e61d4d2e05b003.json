@@ -1,0 +1,22 @@
+{
+ "url": "https://orgvault.md/subprocessors",
+ "fetched_at": "2026-11-10T19:46:11.520190+00:00",
+ "hours_after_run": 43.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "890e20d67ad575d86d2c62891f5443a6f6746cc1637f7547a16b3d659efa99a2",
+ "chars": 2710,
+ "truncated": false,
+ "title": "OrgVault service providers and subprocessors | OrgVault",
+ "markdown": "# OrgVault service providers and subprocessors\n\nUpdated September 8, 2026. Provider: [SiteVue AI, Inc.](https://sitevue.ai/). Questions and change notices: [andrew@sitevue.ai](mailto:andrew@sitevue.ai).\n\n## Current providers\n\n- **Amazon Web Services (AWS):** application hosting, DynamoDB records/history, S3 files and recovery objects, private search, encrypted recovery cache, infrastructure monitoring and protected backups. Primary application region: us-east-2 (Ohio); recovery copies can be stored in us-west-2 (Oregon). Processes customer content/ciphertext and infrastructure metadata as needed for hosting.\n- **Cloudflare:** domain/network delivery and protection for orgvault.md. Global edge processing can include IP addresses, request metadata and traffic passing through the service. Only explicitly public routes are eligible for shared application caching; private responses are marked no-store.\n- **Resend:** transactional account, invitation and verification email. Processes recipient addresses and email bodies containing the information needed for those messages, such as bot/organization identifiers and short-lived codes. Provider infrastructure can involve processing outside the primary application region. OrgVault does not promise a particular Resend data-residency option.\n- **Stripe:** billing and payments. Processes payer/customer details, subscriptions, invoices, payment events and payment-method information. Stripe also has independent obligations and purposes, including fraud prevention and financial compliance; it is not simply a workspace-content subprocessor. Ordinary workspace file bodies are not sent to Stripe.\n\nThe list describes the providers actually used by the hosted service. Their publicly available privacy and service terms provide additional information about their own processing. It does not assert that each acts as a processor for every data category.\n\n## Customer-selected integrations\n\nCustomer-run connector bots, source systems such as Attio, Granola and Fireflies, and the customer's selected LLM provider are chosen and configured by the customer. Their API keys and rules run at the customer's end. They are not automatically enabled hosted subprocessors for every OrgVault organization. Customers must evaluate their own providers, contracts, data transfers and access rules.\n\n## Changes\n\nSeptember 8, 2026: initial public provider inventory. Notice and objection arrangements for new processing subprocessors are described in the [DPA](https://orgvault.md/dpa). We will update this list when the service's providers change.\n\n[Security](https://orgvault.md/security) · [Privacy](https://orgvault.md/privacy) · [Terms](https://orgvault.md/terms)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "crm_stack_signal"
+ ],
+ "late": true
+}

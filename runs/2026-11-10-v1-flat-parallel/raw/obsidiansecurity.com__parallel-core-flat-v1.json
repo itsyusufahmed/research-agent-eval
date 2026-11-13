@@ -1,0 +1,485 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eaaf39ee5d50d6bdb",
+  "interaction_id": "trun_142119f6a1b4439eaaf39ee5d50d6bdb",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "obsidiansecurity.com"
+  },
+  "created_at": "2026-11-10T18:47:25.267682Z",
+  "modified_at": "2026-11-10T18:52:09.566825Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eaaf39ee5d50d6bdb",
+   "interaction_id": "trun_142119f6a1b4439eaaf39ee5d50d6bdb",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "obsidiansecurity.com"
+   },
+   "created_at": "2026-11-10T18:47:25.267682Z",
+   "modified_at": "2026-11-10T18:52:09.566825Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Join the Obsidian Security Team",
+       "url": "https://www.obsidiansecurity.com/careers",
+       "excerpts": [
+        "Founded in 2017, Obsidian Security was created to close a critical gap: securing the third-party applications"
+       ]
+      }
+     ],
+     "reasoning": "The company careers page states that Obsidian Security was founded in 2017.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Obsidian Security Trust Center | Powered by SafeBase",
+       "url": "https://trust.obsidiansecurity.com/",
+       "excerpts": [
+        "ISO/IEC 27001](https://trust.obsidiansecurity.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [ISO/IEC 27701](https://trust.obsidiansecurity.com/?itemUid=dc79cbc7-c99d-4eb9-891e-f5dc44b943d7&source=click) [SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "The company Trust Center lists ISO/IEC 27001 and SOC 2 among its certifications; the other items listed there are not among the requested set.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Obsidian Security revenue, growth rate & news | Sacra",
+       "url": "https://sacra.com/c/obsidian-security",
+       "excerpts": [
+        "Headquarters Palo Alto, United States"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies its headquarters as Palo Alto, United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Latest SaaS Security News & Tips",
+       "url": "https://www.obsidiansecurity.com/blog",
+       "excerpts": [
+        "# The latest updates from Obsidian",
+        "[Third Party Integration Security ## The Third-Party Vendor Access Problem: What the ConnectWise Attack Means for Your SaaS Security See how the ConnectWise and Atera attacks exposed third-party app risks, how Obsidian detected the campaign, and how to protect your SaaS environment. October 29, 2026 5 min Priya Balakrishnan, SVP, Product and Corporate Marketing Read more](https://www.obsidiansecurity.com/blog/what-the-connectwise-attack-means-for-your-saas-security)"
+       ]
+      },
+      {
+       "title": "Modern Threat Detection: Making Impossible Travel Possible",
+       "url": "https://www.obsidiansecurity.com/blog/modern-threat-detection-impossible-travel",
+       "excerpts": [
+        "**_This blog was co-authored by Obsidian Senior Security Researcher Jody Forness and Machine Learning Engineer Marcus McCurdy._**  ",
+        "## **Creating Obsidian\u2019s Impossible Travel Model**"
+       ]
+      }
+     ],
+     "reasoning": "The company blog index displays a latest post by its SVP of Product and Corporate Marketing. The inspected blog includes one clearly technical post co-authored by an ML engineer and security researcher, but the evidence does not establish a second engineering-authored post about how the product is built, so it does not meet the stated two-post threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Obsidian Security",
+       "url": "https://www.obsidiansecurity.com/",
+       "excerpts": [
+        "delivers complete SaaS security\u2014gain control, stop threats, and ensure compliance across all your business apps"
+       ]
+      },
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "Trusted by Fortune 1000 and Global 2000 enterprises, Obsidian gives security teams visibility into what's connected, controls to enforce what's allowed, and the runtime context to govern AI and agent activity before it causes damage inside critical business systems. Headquartered in Palo Alto, California"
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes complete SaaS security across business apps, while the company announcement explains that the platform gives security teams visibility, controls, and runtime context for AI and agent activity.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Obsidian Security Number of Employees 2026 | Employee Count & Headcount Data | Revelio Labs",
+       "url": "https://www.reveliolabs.com/companies/obsidian-security/employees",
+       "excerpts": [
+        "Obsidian Security, Inc. is an Information Technology Services company that employs **249** people worldwide as of March 2026."
+       ]
+      }
+     ],
+     "reasoning": "The cited headcount of 249 falls within the 201-500 employee band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Flexible SaaS Security Pricing | Obsidian",
+       "url": "https://www.obsidiansecurity.com/pricing",
+       "excerpts": [
+        "Start free. Expand into the modules your team needs, across AI and third-party application security. No bloated bundles."
+       ]
+      }
+     ],
+     "reasoning": "The company has a public pricing page that describes free pricing and modular plans.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "August 4, 2026 \u2014** Obsidian Security, the leading platform securing non-human identities and AI agents across third-party applications, today announced $85 million"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement states that its Series D raised $85 million.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Join the Obsidian Security Team",
+       "url": "https://www.obsidiansecurity.com/careers",
+       "excerpts": [
+        "trusted by global enterprises like Snowflake, T-Mobile, and Wyndham Hotels and Resorts"
+       ]
+      }
+     ],
+     "reasoning": "The company careers page explicitly identifies Snowflake and T-Mobile as enterprises that trust Obsidian.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "August 4, 2026 \u2014** Obsidian Security, the leading platform securing non-human identities and AI agents across third-party applications, today announced $85 million"
+       ]
+      }
+     ],
+     "reasoning": "The most recent identified funding announcement is dated August 4, 2026, which corresponds to 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "page_title",
+       "url": "https://job-boards.greenhouse.io/obsidiansecurity/jobs/5449057008",
+       "excerpts": [
+        "* An **AI-first approach to problem-solving** \u2014 you default to evaluating where agentic or LLM-driven workflows can replace manual, ad hoc reporting rather than reaching for another one-off script or dashboard.",
+        "* Hands-on experience with **Databricks** (or a comparable modern data platform), including querying, data modeling on governed marts, and metric/semantic views.",
+        "* Familiarity with **Python** or another scripting language for data transformation and automation.",
+        "* Strong communication skills \u2014 able to translate ambiguous business reporting needs into concrete data requirements.",
+        "* Experience with Salesforce data and/or customer success platforms (e.g., Totango, Zendesk, Gainsight) is a plus.",
+        "* Understanding of data access governance and security best practices, particularly around customer-tenant data.",
+        "* Comfortable operating with ambiguity, partnering directly with engineering/business systems teams that own the broader data warehouse."
+       ]
+      }
+     ],
+     "reasoning": "The Customer Success Operations Analyst posting explicitly names Salesforce data and customer-success platforms as tools relevant to the role; Salesforce is the CRM system identified in the posting.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/yanxin-zhang-05a60115",
+       "excerpts": [
+        "Role: VP of Engineering, Platform and Infrastructure @ Obsidian Security. Returned fields: {experience_text='Obsidian Security Palo Alto, California, United States 2026-06-01 VP of Engineering, Platform and Infrastructure"
+       ]
+      }
+     ],
+     "reasoning": "The profile records the VP of Engineering, Platform and Infrastructure beginning at Obsidian on June 1, 2026, within the 12 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at Obsidian Security",
+       "url": "https://job-boards.greenhouse.io/obsidiansecurity",
+       "excerpts": [
+        "## 15 jobs",
+        "### Corporate",
+        "|Job |",
+        "| --- |",
+        "|[Chief Information Security Officer (CISO) Palo Alto, CA](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5417263008) |",
+        "### Support - Customer Success",
+        "|[Customer Success Operations Analyst US Remote (East/Central)](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5449057008) |",
+        "### Engineering (D2010)",
+        "|[Agent Security Research Engineer \u2013 Taiwan Taipei, Taiwan](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5466463008) |",
+        "|[AI Security Engineer - Taiwan Taipei, Taiwan](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5406173008) |",
+        "|[Product Security Engineer (AI & Platform Security) \u2013 Taiwan Taipei, Taiwan](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5446033008) |",
+        "|[Senior Threat Research Engineer \u2013 Taiwan Taipei, Taiwan](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5414562008) |"
+       ]
+      }
+     ],
+     "reasoning": "The official live Greenhouse openings list includes AI Security Engineer, Agent Security Research Engineer, and Software Engineer - AI Security Product roles.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "August 4, 2026 \u2014** Obsidian Security, the leading platform securing non-human identities and AI agents across third-party applications, today announced $85 million"
+       ]
+      }
+     ],
+     "reasoning": "The announcement identifies the latest round as a Series D.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Obsidian Product Documentation",
+       "url": "https://docs.obsidiansecurity.com/obsidian/api/graphql",
+       "excerpts": [
+        "# Session Expired",
+        "To access Obsidian's product documentation,  ",
+        "please click the \ud83d\udcd6 book icon in your Obsidian portal."
+       ]
+      },
+      {
+       "title": "Obsidian Product Documentation",
+       "url": "https://docs.obsidiansecurity.com/obsidian/settings/api-access-tokens",
+       "excerpts": [
+        "# Session Expired",
+        "To access Obsidian's product documentation,  ",
+        "please click the \ud83d\udcd6 book icon in your Obsidian portal."
+       ]
+      }
+     ],
+     "reasoning": "The product documentation URLs return a session-expired page and instruct readers to open documentation through the authenticated Obsidian portal, so the material is not publicly accessible documentation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "Headquartered in Palo Alto, California, Obsidian is backed by Crescent Cove Advisors"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement identifies Palo Alto as its headquarters city.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "August 4, 2026 \u2014** Obsidian Security, the leading platform securing non-human identities and AI agents across third-party applications, today announced $85 million",
+        "Obsidian's New AI Security Capabilities"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s August 4, 2026 announcement includes a section announcing new AI security capabilities, a product-feature launch within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at Obsidian Security",
+       "url": "https://job-boards.greenhouse.io/obsidiansecurity",
+       "excerpts": [
+        "### Int'l Sales - Enterprise",
+        "|Job |",
+        "| --- |",
+        "|[Enterprise Account Executive \u2013 ANZ Melbourne, AUS](https://job-boards.greenhouse.io/obsidiansecurity/jobs/4106967008) |",
+        "|[Enterprise Account Executive \u2013 EMEA (UK, London preferred) UK - Remote](https://job-boards.greenhouse.io/obsidiansecurity/jobs/5022752008) |",
+        "### US Sales - Enterprise",
+        "|[Enterprise Account Executive - Central US Remote (Central)](https://job-boards.greenhouse.io/obsidiansecurity/jobs/4993906008) |",
+        "|[Enterprise Account Executive - San Francisco Bay Area Palo Alto, CA](https://job-boards.greenhouse.io/obsidiansecurity/jobs/4864479008) |"
+       ]
+      }
+     ],
+     "reasoning": "The current official openings list includes multiple Enterprise Account Executive roles, which meet the stated hiring-title criteria.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Obsidian Raises $85 Million Series D to Scale AI Agent Security Growth",
+       "url": "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "excerpts": [
+        "August 4, 2026 \u2014** Obsidian Security, the leading platform securing non-human identities and AI agents across third-party applications, today announced $85 million"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round was announced in August 2026, inside the 18-month period ending November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Obsidian Security Trust Center | Powered by SafeBase",
+       "url": "https://trust.obsidiansecurity.com/",
+       "excerpts": [
+        "ISO/IEC 27001](https://trust.obsidiansecurity.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [ISO/IEC 27701"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names ISO/IEC 27001.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Obsidian Security Trust Center | Powered by SafeBase",
+       "url": "https://trust.obsidiansecurity.com/",
+       "excerpts": [
+        "SOC 2](https://trust.obsidiansecurity.com/?itemUid=7bfa66da-33ab-49de-8391-e329738a1ae9&source=click) [ISO/IEC 42001:2023"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names SOC 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Join the Obsidian Security Team",
+       "url": "https://www.obsidiansecurity.com/careers",
+       "excerpts": [
+        "trusted by global enterprises like Snowflake, T-Mobile"
+       ]
+      }
+     ],
+     "reasoning": "Snowflake is explicitly named as a company that trusts Obsidian.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Join the Obsidian Security Team",
+       "url": "https://www.obsidiansecurity.com/careers",
+       "excerpts": [
+        "Snowflake, T-Mobile, and Wyndham Hotels and Resorts"
+       ]
+      }
+     ],
+     "reasoning": "T-Mobile is explicitly named as a company that trusts Obsidian.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "page_title",
+       "url": "https://job-boards.greenhouse.io/obsidiansecurity/jobs/5449057008",
+       "excerpts": [
+        "* An **AI-first approach to problem-solving** \u2014 you default to evaluating where agentic or LLM-driven workflows can replace manual, ad hoc reporting rather than reaching for another one-off script or dashboard.",
+        "* Hands-on experience with **Databricks** (or a comparable modern data platform), including querying, data modeling on governed marts, and metric/semantic views.",
+        "* Familiarity with **Python** or another scripting language for data transformation and automation.",
+        "* Strong communication skills \u2014 able to translate ambiguous business reporting needs into concrete data requirements.",
+        "* Experience with Salesforce data and/or customer success platforms (e.g., Totango, Zendesk, Gainsight) is a plus.",
+        "* Understanding of data access governance and security best practices, particularly around customer-tenant data.",
+        "* Comfortable operating with ambiguity, partnering directly with engineering/business systems teams that own the broader data warehouse."
+       ]
+      }
+     ],
+     "reasoning": "The role posting explicitly names Salesforce data.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Obsidian Security is a SaaS security platform for enterprise security teams that provides visibility across business apps and AI agents, detects threats, and enforces least-privilege access.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 85000000.0,
+    "named_customers": [
+     "Snowflake",
+     "T-Mobile"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series D",
+    "public_docs": false,
+    "hq_city": "Palo Alto",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

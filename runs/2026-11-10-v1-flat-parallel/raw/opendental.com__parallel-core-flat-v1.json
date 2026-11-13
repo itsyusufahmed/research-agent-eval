@@ -1,0 +1,435 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e909dfde99b3dcd4b",
+  "interaction_id": "trun_142119f6a1b4439e909dfde99b3dcd4b",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "opendental.com"
+  },
+  "created_at": "2026-11-10T18:48:58.540566Z",
+  "modified_at": "2026-11-10T18:52:04.229329Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e909dfde99b3dcd4b",
+   "interaction_id": "trun_142119f6a1b4439e909dfde99b3dcd4b",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "opendental.com"
+   },
+   "created_at": "2026-11-10T18:48:58.540566Z",
+   "modified_at": "2026-11-10T18:52:04.229329Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "Employment at Open Dental Open Dental is a growing dental practice management software company founded in 2003 and located in Salem, Oregon."
+       ]
+      }
+     ],
+     "reasoning": "The company employment page states it was founded in 2003.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Open Dental Software - HIPAA at Open Dental Software, Inc.",
+       "url": "https://www.opendental.com/site/hipaaopendental.html",
+       "excerpts": [
+        "**Our HIPAA procedures and policies are up to date and available** Open Dental Software, Inc.",
+        "follows HIPAA guidelines and standards for security and privacy, implementing physical and electronic safeguards, including encryption."
+       ]
+      }
+     ],
+     "reasoning": "Open Dental\u2019s HIPAA page says its HIPAA procedures and policies are current and that it follows HIPAA security and privacy guidelines. It names HIPAA, although it does not say that Open Dental holds a formal certification, so this interpretation has some uncertainty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Open Dental Software",
+       "url": "https://linkedin.com/company/open-dental-software",
+       "excerpts": [
+        "country iso: US country name: United States locality: Salem, Oregon"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies the locality as Salem, Oregon, and the country as the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Open Dental Blog -",
+       "url": "https://opendental.blog/",
+       "excerpts": [
+        "November 3, 2026",
+        "[Software Update: Stable Version 26.1 Highlights](https://opendental.blog/software-update-stable-version-26-1-highlights/)",
+        "[3 Key Strategies to Help Move More Dental Care Forward](https://opendental.blog/3-key-strategies-to-help-move-more-dental-care-forward/)"
+       ]
+      },
+      {
+       "title": "Questions & Answers with an Open Dental Expert: Software Engineer - Open Dental Blog",
+       "url": "https://opendental.blog/questions-answers-with-an-open-dental-expert-software-engineer",
+       "excerpts": [
+        "[April 6, 2023](https://opendental.blog/questions-answers-with-an-open-dental-expert-software-engineer/)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index shows product/update and marketing-oriented posts; the available engineering interview is a single post from 2023, not two posts about how the product is built. This meets the rule for false, though the conclusion is based on the visible index and retrieved post history.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Open Dental Software - Practice Management Software",
+       "url": "https://www.opendental.com/",
+       "excerpts": [
+        "Quality Software for Dental Offices Comprehensive, highly customizable dental practice management software at an affordable price for practices of any size."
+       ]
+      }
+     ],
+     "reasoning": "Open Dental\u2019s homepage describes customizable dental practice-management software for practices of any size.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Open Dental Software",
+       "url": "https://linkedin.com/company/open-dental-software",
+       "excerpts": [
+        "employee count: 221"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s LinkedIn profile lists 221 employees, which falls in the 201\u2013500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Open Dental Software - Fees for Support and Services",
+       "url": "https://www.opendental.com/site/fees.html",
+       "excerpts": [
+        "Software License & Support Fees",
+        "Open Dental Software's only upfront cost is the first month of support fees."
+       ]
+      }
+     ],
+     "reasoning": "The company has a public Fees for Support and Services page, and it describes its upfront support-fee cost; a public fees/pricing page exists even if it is not a conventional SaaS plan table.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Open Dental Software Overview, Reviews, Pricing 2026 | TrustRadius",
+       "url": "https://www.trustradius.com/products/open-dental-software",
+       "excerpts": [
+        "Front Desk Receptionist in Customer Service at Aspen Hill Smiles Family Dentistry (11-50 employees)"
+       ]
+      },
+      {
+       "title": "New Garden Dental Case Study",
+       "url": "https://learn.flex.dental/hubfs/New%20Garden%20Dental%20Case%20Study%20(1).pdf",
+       "excerpts": [
+        "New Garden Dental Viejo, CA **How New Garden Dental Streamlined Payments and Saved Hours Every Week** New Garden Dental, a growing practice in Viejo, California was doing everything right - using Open Dental and Flex Dental Solutions, delivering great care, and building a strong team."
+       ]
+      }
+     ],
+     "reasoning": "A TrustRadius review identifies Aspen Hill Smiles Family Dentistry as a practice using Open Dental; the New Garden Dental case study says the practice used Open Dental.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Open Dental Software Technology Stack | Open Dental Software Technology Profile",
+       "url": "https://rocketreach.co/open-dental-software-technology-stack_b54a5c01f6a6c176",
+       "excerpts": [
+        "Open Dental Software Marketing Technology Adobe Marketing Cloud"
+       ]
+      }
+     ],
+     "reasoning": "The technology-profile page lists Adobe Marketing Cloud under Open Dental Software\u2019s marketing technology; this is a third-party stack attribution rather than a first-party statement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Open Dental Software | The Org",
+       "url": "https://theorg.com/org/open-dental-software",
+       "excerpts": [
+        "NS Nathan Sparks Founder & CEO 32 NS Nathan Sparks"
+       ]
+      },
+      {
+       "title": "Open Dental Through the Years - Open Dental Blog",
+       "url": "https://opendental.blog/open-dental-through-the-years",
+       "excerpts": [
+        "He brought on engineers, hired a CEO (Nathan Sparks), and his staff built an incredible support team. Today, Open Dental has over 300 employees across multiple teams: Engineering, Technical Support, Human Resources, Conversions, Training, Advanced Services, Marketing & Communications, Accounting, and Maintenance."
+       ]
+      },
+      {
+       "title": "Open Dental Becomes First Electronic Dental Record Technology To Connect To Kno2 Advancing Dental Interoperability Nationwide 302830390",
+       "url": "https://www.prnewswire.com/news-releases/open-dental-becomes-first-electronic-dental-record-technology-to-connect-to-kno2-advancing-dental-interoperability-nationwide-302830390.html",
+       "excerpts": [
+        "\"Partnering with Kno2 and CareQuest Innovation Partners fits the way we think about the role our software should play in dental care,\" said Nathan Sparks, CEO of Open Dental."
+       ]
+      }
+     ],
+     "reasoning": "The available org chart lists Nathan Sparks as founder and CEO and shows no other C-level or VP-level leader. A company history says Nathan was hired as CEO by 2022, and a July 2026 announcement still identifies him as CEO; the checked leadership evidence shows no C/VP change in the window, but the org-chart source is unverified.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "We are actively hiring for the following positions. Dental Assistant/Software Support",
+        "Software Engineer II (UI/UX Engineer)",
+        "Software Engineer I (UI/UX)"
+       ]
+      }
+     ],
+     "reasoning": "The active careers page lists roles including Dental Assistant/Software Support and UI/UX software-engineering positions, with no AI, ML, data-science, or related-title role shown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Open Dental - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "excerpts": [
+        "Open Dental has not raised any funding yet."
+       ]
+      }
+     ],
+     "reasoning": "The Tracxn profile states that Open Dental has not raised any funding, so the most recent funding stage is none; no date or amount applies.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Open Dental Software - Documentation",
+       "url": "https://www.opendental.com/site/documentation.html",
+       "excerpts": [
+        "For a brief overview of our features, browse our public [Quick Manual](https://www.opendental.com/site/quickmanual.html) ."
+       ]
+      },
+      {
+       "title": "Open Dental Software - API Developer Portal",
+       "url": "https://www.opendental.com/site/apideveloperportal.html",
+       "excerpts": [
+        "**Example Requests:** GET /apikeys"
+       ]
+      },
+      {
+       "title": "Open Dental Software - Programming Resources",
+       "url": "https://www.opendental.com/site/programmingresources.html",
+       "excerpts": [
+        "See [Database Schema](https://www.opendental.com/site/databaseschema.html)"
+       ]
+      }
+     ],
+     "reasoning": "The site links to a public Quick Manual, API Developer Portal, and programming resources, meeting the requirement for public documentation/developer resources.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Open Dental: Contact Information",
+       "url": "https://www.opendental.com/site/contact.html",
+       "excerpts": [
+        "Address Open Dental Software 3275 Marietta St SE Salem, OR 97317"
+       ]
+      }
+     ],
+     "reasoning": "The company contact page gives its address in Salem, Oregon.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Open Dental Software - Version 26.1",
+       "url": "https://www.opendental.com/site/version26_1.html",
+       "excerpts": [
+        "Version 26.1 was released as stable on 08/06/2026.",
+        "New pharmacies feature"
+       ]
+      }
+     ],
+     "reasoning": "The company says Version 26.1 was released as stable on August 6, 2026, within the six-month window; the version page lists new features.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "We are actively hiring for the following positions. Dental Assistant/Software Support",
+        "Open Positions: Dental Assistant/Software Support"
+       ]
+      }
+     ],
+     "reasoning": "The active positions shown on the careers page include support roles and no SDR, BDR, sales representative, business development representative, or account executive position.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Open Dental - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "excerpts": [
+        "Open Dental has not raised any funding yet."
+       ]
+      }
+     ],
+     "reasoning": "Tracxn states that Open Dental has not raised any funding, so it did not raise a round in the 18-month window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Open Dental Software - HIPAA at Open Dental Software, Inc.",
+       "url": "https://www.opendental.com/site/hipaaopendental.html",
+       "excerpts": [
+        "**Our HIPAA procedures and policies are up to date and available** Open Dental Software, Inc.",
+        "follows HIPAA guidelines and standards for security and privacy, implementing physical and electronic safeguards, including encryption."
+       ]
+      }
+     ],
+     "reasoning": "The cited company page names HIPAA and describes Open Dental\u2019s HIPAA procedures and guidelines.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Open Dental Software Overview, Reviews, Pricing 2026 | TrustRadius",
+       "url": "https://www.trustradius.com/products/open-dental-software",
+       "excerpts": [
+        "Front Desk Receptionist in Customer Service at Aspen Hill Smiles Family Dentistry (11-50 employees)"
+       ]
+      }
+     ],
+     "reasoning": "The review identifies Aspen Hill Smiles Family Dentistry as a practice using Open Dental.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "New Garden Dental Case Study",
+       "url": "https://learn.flex.dental/hubfs/New%20Garden%20Dental%20Case%20Study%20(1).pdf",
+       "excerpts": [
+        "New Garden Dental Viejo, CA **How New Garden Dental Streamlined Payments and Saved Hours Every Week** New Garden Dental, a growing practice in Viejo, California was doing everything right - using Open Dental and Flex Dental Solutions, delivering great care, and building a strong team."
+       ]
+      }
+     ],
+     "reasoning": "The case study says New Garden Dental used Open Dental.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Open Dental Software Technology Stack | Open Dental Software Technology Profile",
+       "url": "https://rocketreach.co/open-dental-software-technology-stack_b54a5c01f6a6c176",
+       "excerpts": [
+        "Open Dental Software Marketing Technology Adobe Marketing Cloud"
+       ]
+      }
+     ],
+     "reasoning": "The technology-profile page names Adobe Marketing Cloud under marketing technology for Open Dental Software.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2003.0,
+    "compliance_certs": [
+     "HIPAA"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Open Dental provides customizable dental practice-management software for dental offices of any size.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Aspen Hill Smiles Family Dentistry",
+     "New Garden Dental"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Adobe Marketing Cloud"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "none",
+    "public_docs": true,
+    "hq_city": "Salem",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,185 @@
+{
+ "schema_version": "v0",
+ "company": "Sauce Labs",
+ "domain": "saucelabs.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Sauce Labs provides a cloud platform for development and QA teams to run automated and manual web and mobile application tests across browsers, operating systems, and real and virtual devices.",
+   "citations": [
+    "https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf"
+   ],
+   "notes": "The company\u2019s assurance report describes its cloud testing platform, development and quality-team users, browser/OS/device coverage, and automated and manual testing: https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://saucelabs.com/pricing"
+   ],
+   "notes": "The public pricing page lists plans and published prices, including Live Testing: https://saucelabs.com/pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Walmart",
+    "Aryaka Networks"
+   ],
+   "citations": [
+    "https://saucelabs.com/resources/case-studies/walmart-embraces-test-automation-and-open-source-to-increase-coverage-and-deploy-more-often",
+    "https://saucelabs.com/resources/case-studies/aryaka-networks-accelerates-end-to-end-platform-coverage-using-autonomiq-sauce-labs"
+   ],
+   "notes": "named_customers: Official customer case studies identify Walmart and Aryaka Networks as users: https://saucelabs.com/resources/case-studies/walmart-embraces-test-automation-and-open-source-to-increase-coverage-and-deploy-more-often and https://saucelabs.com/resources/case-studies/aryaka-networks-accelerates-end-to-end-platform-coverage-using-autonomiq-sauce-labs. | named_customers.0: The official case study says Walmart runs 50,000 tests per day on Sauce Labs. | named_customers.1: The official customer case study names Aryaka Networks as using Sauce Labs."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/sauce-labs"
+   ],
+   "notes": "The company profile reports 331 employees, placing Sauce Labs in the 201\u2013500 band. LinkedIn-associated headcount may differ from payroll headcount: https://linkedin.com/company/sauce-labs."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "San Francisco",
+    "country": "United States"
+   },
+   "citations": [
+    "https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf",
+    "https://linkedin.com/company/sauce-labs"
+   ],
+   "notes": "hq_city: The company assurance report explicitly states that Sauce Labs is headquartered in San Francisco, California: https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf. | hq_country: The company profile identifies the country as United States and the locality as San Francisco, California: https://linkedin.com/company/sauce-labs."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2008.0,
+   "citations": [
+    "https://linkedin.com/company/sauce-labs"
+   ],
+   "notes": "Sauce Labs\u2019 LinkedIn company profile states that it was founded in 2008: https://linkedin.com/company/sauce-labs."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://opensource.saucelabs.com/blog",
+    "https://opensource.saucelabs.com/blog/ubuntu_autoinstall_and_iac_data_centers_operations/",
+    "https://opensource.saucelabs.com/blog/react_network_viewer/"
+   ],
+   "notes": "The engineering blog contains Daniel Louvier\u2019s infrastructure provisioning implementation and Farhan Iqbalhusain Chauhan\u2019s React Network Viewer implementation, integrated into Sauce Labs. These are first-person engineering writeups, although the posts do not explicitly state the authors\u2019 job titles. Sources: https://opensource.saucelabs.com/blog/ubuntu_autoinstall_and_iac_data_centers_operations/ and https://opensource.saucelabs.com/blog/react_network_viewer/."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.saucelabs.com/sauce-ai/index.html"
+   ],
+   "notes": "The public documentation index links numerous product articles, including test authoring, generating tests, prompting and MCP tools: https://docs.saucelabs.com/sauce-ai/index.html."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "http://job-boards.greenhouse.io/saucelabs/jobs/7096532",
+    "https://job-boards.greenhouse.io/saucelabs?error=true"
+   ],
+   "notes": "The live AI Architect posting in Gurugram describes designing AI-powered continuous-testing capabilities, and the current job board lists the role: https://job-boards.greenhouse.io/saucelabs/jobs/7096532."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Google Gemini AI and Vertex API",
+   "citations": [
+    "https://trust.saucelabs.com/subprocessors"
+   ],
+   "notes": "The subprocessor disclosure names Google Cloud Platform, Gemini AI and Vertex API, and explicitly describes Gemini/Vertex use in natural-language queries, analysis and the support chatbot: https://trust.saucelabs.com/subprocessors."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "GDPR"
+   ],
+   "citations": [
+    "https://www.saucelabs.com/security"
+   ],
+   "notes": "compliance_certs: The official security page names SOC 2 Type II, ISO 27001:2022 and GDPR. Only the requested compliance categories are included: https://www.saucelabs.com/security. | compliance_certs.0: The security page explicitly names SOC 2 Type II. | compliance_certs.1: The security page explicitly names ISO 27001:2022. | compliance_certs.2: The security page explicitly names GDPR."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Debt",
+    "date": "2024-06",
+    "amount_usd": null
+   },
+   "citations": [
+    "https://pitchbook.com/profiles/company/55089-10",
+    "https://www.premieralts.com/companies/sauce-labs/funding-history"
+   ],
+   "notes": "funding_stage: PitchBook labels the latest deal Debt, while Premier Alternatives specifies Debt - General. Both support reporting Debt rather than the earlier Series G equity stage: https://pitchbook.com/profiles/company/55089-10 and https://www.premieralts.com/companies/sauce-labs/funding-history. | funding_date: Premier Alternatives dates the last debt financing to June 2024; PitchBook independently identifies the latest deal type as Debt. This is later than the January 2024 equity round reported elsewhere, but the date is supported only by a secondary profile: https://www.premieralts.com/companies/sauce-labs/funding-history and https://pitchbook.com/profiles/company/55089-10. | funding_amount_usd: The latest identified financing is listed as June 2024 debt with its amount undisclosed. The earlier January 2024 Series G amount is not substituted for this later financing: https://www.premieralts.com/companies/sauce-labs/funding-history."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.premieralts.com/companies/sauce-labs/funding-history",
+    "https://pitchbook.com/profiles/company/55089-10"
+   ],
+   "notes": "The latest identified financing is debt dated June 2024, before the May 9, 2025 start of the eighteen-month window. No later financing was identified. This conclusion relies on secondary financing profiles rather than a dated company announcement: https://www.premieralts.com/companies/sauce-labs/funding-history and https://pitchbook.com/profiles/company/55089-10."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://job-boards.greenhouse.io/saucelabs/jobs/8267329",
+    "https://job-boards.greenhouse.io/saucelabs?error=true"
+   ],
+   "notes": "The live Account Executive posting is for London, and the current job board lists it: https://job-boards.greenhouse.io/saucelabs/jobs/8267329."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://saucelabs.com/company/news/sauce-labs-launches-the-industrys-first-arm-native-android-testing-cloud-for-the-enterprise-at-scale"
+   ],
+   "notes": "On September 29, 2026, Sauce Labs announced ARM-native Android virtual devices in its Virtual Device Cloud, a substantial new capability within the six-month window: https://saucelabs.com/company/news/sauce-labs-launches-the-industrys-first-arm-native-android-testing-cloud-for-the-enterprise-at-scale."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/sauce-labs-assembles-%22new-sauce%22-leadership-team-to-dominate-1157999"
+   ],
+   "notes": "The April 16, 2026 announcement states that Steven Fitz joined as Chief Revenue Officer and Arun Lal as SVP of Global Marketing, within the requested twelve-month window: https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/sauce-labs-assembles-%22new-sauce%22-leadership-team-to-dominate-1157999."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "Outreach",
+    "Marketo",
+    "Inflection",
+    "Segment",
+    "Clay",
+    "Clearbit",
+    "LeadIQ",
+    "LeanData",
+    "Gong",
+    "Nooks",
+    "Gong Engage"
+   ],
+   "citations": [
+    "https://job-boards.greenhouse.io/saucelabs/jobs/8107367",
+    "https://job-boards.greenhouse.io/saucelabs/jobs/8164409"
+   ],
+   "notes": "crm_stack_signal: The growth-leadership posting explicitly names the enterprise marketing infrastructure; the sales posting additionally requests Outreach experience. Outreach is therefore a hiring signal rather than an explicit statement of deployment. Sources: https://job-boards.greenhouse.io/saucelabs/jobs/8164409 and https://job-boards.greenhouse.io/saucelabs/jobs/8107367. | crm_stack_signal.0: Salesforce is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.1: The sales posting requests Outreach experience, providing a hiring-based stack signal rather than explicit deployment confirmation. | crm_stack_signal.2: Marketo is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.3: Inflection is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.4: Segment is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.5: Clay is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.6: Clearbit is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.7: LeadIQ is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.8: LeanData is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.9: Gong is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.10: Nooks is explicitly included in the company's enterprise marketing infrastructure. | crm_stack_signal.11: Gong Engage is explicitly included in the company's enterprise marketing infrastructure."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 313.7
+}

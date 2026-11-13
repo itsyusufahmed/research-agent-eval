@@ -1,0 +1,457 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eac46dc6268147e82",
+  "interaction_id": "trun_142119f6a1b4439eac46dc6268147e82",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "owl.co"
+  },
+  "created_at": "2026-11-10T18:48:59.476337Z",
+  "modified_at": "2026-11-10T18:53:55.910168Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eac46dc6268147e82",
+   "interaction_id": "trun_142119f6a1b4439eac46dc6268147e82",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "owl.co"
+   },
+   "created_at": "2026-11-10T18:48:59.476337Z",
+   "modified_at": "2026-11-10T18:53:55.910168Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Owl.co | Company Overview & News",
+       "url": "https://www.forbes.com/companies/owlco",
+       "excerpts": [
+        "Owl.co Stats As of January 2024 Industry Finance Founded 2018 Headquarters Vancouver Country/Territory Canada"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Owl Technologies; website_url: https://owl.co; founded_year: 2018",
+        "latest_funding_round_name: Series B; latest_funding_round_date: 2021-11-03; latest_funding_round_amount_usd: 30000000.0; cxo_team[0].full_name: Sean Merat; cxo_team[0].title: Co-Founder & CEO; cxo_team[0].linkedin.list[0].element: http://linkedin.com/in/sean-merat-49444617; cxo_team[1].full_name: Alexey Zhigaltsov; cxo_team[1].title: Chief Information Security Officer; cxo_team[1].linkedin.list[0].element: https://www.linkedin.com/in/alexey-zhigaltsov-b103277/; tracxn_url: https://platform.tracxn.com/a/d/company/5905cac2e4b"
+       ]
+      }
+     ],
+     "reasoning": "https://www.forbes.com/companies/owlco lists Founded 2018, consistent with the company funding profile. A conflicting LinkedIn entry gives 2019, so 2018 is selected with limited confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security, Owl",
+       "url": "https://owl.co/security",
+       "excerpts": [
+        "02 Compliance SOC 2 Type II HIPAA GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/security explicitly lists SOC 2 Type II, HIPAA, and GDPR. CCPA is excluded because it is outside the five requested categories.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Owl.co | Company Overview & News",
+       "url": "https://www.forbes.com/companies/owlco",
+       "excerpts": [
+        "Owl.co Stats As of January 2024 Industry Finance Founded 2018 Headquarters Vancouver Country/Territory Canada"
+       ]
+      }
+     ],
+     "reasoning": "https://www.forbes.com/companies/owlco identifies the headquarters country as Canada.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Resources, Owl",
+       "url": "https://owl.co/resources",
+       "excerpts": [
+        "Aug 28, 2026 Read \u2192](https://owl.co/resources/the-hidden-knowledge-behind-every-insurance-claim) [Cover image for \u201cAgentic AI for Insurance: How it Benefits Claims Processing",
+        "May 27, 2026 Read \u2192](https://owl.co/resources/claims-fraud-analysis-with-ai-and-machine-learning) [Cover image for \u201cHow AI Helps Insurance-Legal Teams with Demand Letters"
+       ]
+      }
+     ],
+     "reasoning": "The index at https://owl.co/resources contains insurance-industry education, product-use cases, and marketing content. It did not establish two engineer-authored posts explaining how Owl's product is built, so it does not meet the requested engineering-blog definition.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Owl: The products",
+       "url": "https://owl.co/products",
+       "excerpts": [
+        "One AI platform for the entire claim file. Owl is four products with a single job \u2014 turning every document, signal, and record in the claim into structured, cited evidence your team can act on. Built for insurance. Agnostic to line and lifecycle."
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/products describes an insurance platform that turns documents, signals, and records into structured, cited evidence for teams to act on.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Owl.co: Funding, Investors & Team (Nov 2026) | FundedIQ",
+       "url": "https://fundediq.co/owl-co-owl-co-funding",
+       "excerpts": [
+        "Employees 51-100 reported band"
+       ]
+      }
+     ],
+     "reasoning": "https://fundediq.co/owl-co-owl-co-funding explicitly reports the 51-100 employee band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Documentation, Owl",
+       "url": "https://owl.co/documentation",
+       "excerpts": [
+        "Model cards What Owl-1.5 and Owl-Bench are trained on, evaluated against, and validated for, with their published limitations."
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/documentation publicly names Owl-1.5 in its model-card description. No third-party model provider was identified in the reviewed documentation, security, privacy, or blog materials; Owl-Bench is not included because its role as a model was not established.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Owl: AI that reads the entire claim file and answers with citations",
+       "url": "https://owl.co/",
+       "excerpts": [
+        "Products [OwlVision](https://owl.co/owlvision) [OwlSignal](https://owl.co/owlsignal) [OwlAssist](https://owl.co/owlassist) [OwlEnrich](https://owl.co/owlenrich) Solutions [Life & Health](https://owl.co/solutions/life-and-health) [Property & Casualty](https://owl.co/solutions/property-and-casualty) [Health](https://owl.co/solutions/health) [Government programs](https://owl.co/solutions/government-programs) Company [About](https://owl.co/about) [Careers](https://owl.co/careers) [Security](https://owl.co/security) [Contact](https://owl.co/contact) Resources [Blog](https://owl.co/resources) [Success Stories](https://owl.co/success-stories) [Press](https://owl.co/press) [Podcast](https://owl.co/podcast)",
+        "[Book a briefing](https://owl.co/book-briefing?source=nav)"
+       ]
+      }
+     ],
+     "reasoning": "The navigation and footer at https://owl.co/ provide product, company, resource, and briefing links but no pricing link. The /pricing URL returned no readable pricing page.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Owl.Co 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/233015-50",
+       "excerpts": [
+        "Early Stage VC (Series B) |03-Nov-2021 |$30M | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "https://pitchbook.com/profiles/company/233015-50 lists the latest disclosed Series B round as $30 million; the current company funding profile agrees.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Success stories, Owl",
+       "url": "https://owl.co/success-stories",
+       "excerpts": [
+        "[Cover image for \u201cStreamlining Claims Management with Owl.co AI Solutions\u201d Featured Success Stories ## Streamlining Claims Management with Owl.co AI Solutions How Owl.co's AI-driven solutions enabled a leading insurer to transform claims processing, minimize errors, and combat fraud, delivering exceptional improvements in efficiency and accuracy. Jun 10, 2026 Read the story \u2192](https://owl.co/resources/case-study-streamlining-claims-management-with-owl-co-ai-solutions) [Cover image for \u201cEvaluating AI-Assisted Claims Review Across Five Lines of Business\u201d Success Stories ### Evaluating AI-Assisted Claims Review Across Five Lines of Business A multiline U.S. property and casualty insurer conducted a 45-day OwlVision POC across five lines of business. See how claims professionals evaluated AI-assisted claim review, Large Loss Report generation, line-specific insights, and OwlAssist, with OwlVision generating approximately 70\u201380% of required LLR content and delivering measurable time savings across the claims tested."
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/success-stories contains case studies, but the customers are described anonymously as a leading insurer and a multiline U.S. property-and-casualty insurer. Fewer than two customer companies are named, so the requested negative value is an empty list.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Owl.Co 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/233015-50",
+       "excerpts": [
+        "Early Stage VC (Series B) |03-Nov-2021 |$30M | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "https://pitchbook.com/profiles/company/233015-50 dates the round to November 3, 2021, which is formatted as 2021-11.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive, Careers at Owl",
+       "url": "https://owl.co/careers/enterprise-account-executive-559258",
+       "excerpts": [
+        "Forecast with precision in Salesforce; maintain clean hygiene across **CRM**"
+       ]
+      }
+     ],
+     "reasoning": "The live Enterprise Account Executive posting at https://owl.co/careers/enterprise-account-executive-559258 explicitly requires forecasting in Salesforce.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "About, Owl",
+       "url": "https://owl.co/about",
+       "excerpts": [
+        "01 Executive team 03 Advisors CEO Sean Merat Co-founder. Previously co-founded Imperus Technologies (now Tangelo), an AI-powered compliance company that grew to over $200M in revenue before its IPO. CMO Sohrab Merat Co-founder. Helped build Imperus Technologies (now Tangelo) into a $200M+ AI-powered compliance business ahead of its IPO. CTO Sam Merat Previously at Meta, with deep expertise in applied AI and large-scale machine-learning systems used by billions. CISO Alexey Zhigaltsov Stood up Owl's security and GRC program from zero \u2014 SOC 2 Type II and HIPAA compliance with clean annual audits. Previously Owl's CTO. CLO Ali Davar Founder of Zite, an AI-powered personalized news platform acquired by CNN. VP of People Shams Albayati Leading the company's people strategy, including talent acquisition, employee experience, performance management Dir Partner Experience Jennifer Queen Leading partner success strategies and client experience across owl\u2019s enterprise insurance solutions. VP Eng Jared Kim Previously at Instagram, where he led feed-optimization initiatives, scaling ranking systems and ML infrastructure."
+       ]
+      },
+      {
+       "title": "Shams Albayati",
+       "url": "https://linkedin.com/in/salbayati",
+       "excerpts": [
+        "Returned fields: {experience_text=\"owl.co 2023-11-01 VP of People"
+       ]
+      },
+      {
+       "title": "Sam Merat",
+       "url": "https://linkedin.com/in/sammerat",
+       "excerpts": [
+        "Returned fields: {experience_text='owl.co New York, New York, United States 2021-08-01 Chief Technology Officer"
+       ]
+      }
+     ],
+     "reasoning": "The small leadership roster at https://owl.co/about was reviewed in full, and no in-window join or departure announcement was identified. Available dated profiles place several executives' starts before the requested window. Because the team page does not date every role and some profile titles differ, this is a qualified negative rather than a definitive personnel history.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Careers, Owl",
+       "url": "https://owl.co/careers",
+       "excerpts": [
+        "[Part-time Data Quality Analyst Join Owl.co as a Part-time Data Quality Analyst: work remotely 15+ hrs/week, use open data to ensure claim accuracy, and make impact with a supportive, secure team. Review Toronto View \u2192](https://owl.co/careers/part-time-data-quality-analyst-719055) [Senior Product Manager Senior Product Manager needed to lead an AI-powered insurance product from discovery to delivery. Collaborate across teams, shape strategy, and ship enterprise-ready solutions on-site in ... Engineering New York View \u2192](https://owl.co/careers/senior-product-manager-663070) [Senior Product Manager Senior Product Manager needed to own AI-powered insurance solutions from discovery to delivery. Lead cross-functional teams, define value, and ship enterprise-ready, fair, auditable produ... Engineering Toronto View \u2192](https://owl.co/careers/senior-product-manager-653696) [Senior Software Engineer (Product) Senior Software Engineer (Product) at Owl.co \u2014 on-site in Vancouver or Toronto. Build AI-powered products with a collaborative, high-impact team. Grow, ship, and own meaningful features. Engineering Toronto View \u2192](https://owl.co/careers/senior-software-engineer-product-597662) [Solutions Engineer Join Owl.co in Toronto as a Solutions Engineer: own the technical relationship, deliver seamless AI integrations, and drive real-world impact in insurance. Engineering Toronto View \u2192](https://owl.co/careers/solutions-engineer-583384) [Principal Software Engineer Lead the architecture of a scalable AI platform for real-world insurance decisions, mentor engineers, and ship high-impact features in NYC or Toronto. Join Owl.co. Engineering New York View \u2192](https://owl.co/careers/principal-software-engineer-583383) [Principal Software Engineer Lead the architecture of a scalable AI platform for real-world insurance decisions, mentor engineers, and ship high-impact features in NYC or Toronto. Join Owl.co. Engineering Toronto View \u2192](https://owl.co/careers/principal-software-engineer-583382) [Senior Software Engineer (Product) Senior Software Engineer (Product) at Owl.co \u2014 on-site in NYC. Build AI-powered products with a collaborative, high-impact team. Grow, ship, and own meaningful features. Engineering New York View \u2192](https://owl.co/careers/senior-software-engineer-product-559260) [Senior Software Engineer (Infrastructure) Senior Software Engineer (Infrastructure): own end-to-end AWS infra, IaC, and deployment pipelines; impact-focused, hands-on, onsite in NYC or Vancouver with a stellar team. Engineering New York, Toronto View \u2192](https://owl.co/careers/senior-software-engineer-infrastructure-559259) [Enterprise Account Executive Join Owl as an Enterprise Account Executive: own full-cycle, multi\u2011stakeholder sales; shape business cases and land strategic, measurable outcomes with our AI\u2011driven platform. Sales Vancouver View \u2192](https://owl.co/careers/enterprise-account-executive-559258)"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/careers lists product, software engineering, solutions engineering, data-quality analysis, and account-executive roles, but none has a qualifying AI, ML, or data-science title. AI-related responsibilities and the Data Quality Analyst title do not qualify under the question's rules.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Owl.Co 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/233015-50",
+       "excerpts": [
+        "Early Stage VC (Series B) |03-Nov-2021 |$30M | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "https://pitchbook.com/profiles/company/233015-50 identifies the latest disclosed round as Series B, consistent with the current company funding profile.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Owl: AI that reads the entire claim file and answers with citations",
+       "url": "https://owl.co/",
+       "excerpts": [
+        "Products [OwlVision](https://owl.co/owlvision) [OwlSignal](https://owl.co/owlsignal) [OwlAssist](https://owl.co/owlassist) [OwlEnrich](https://owl.co/owlenrich) Solutions [Life & Health](https://owl.co/solutions/life-and-health) [Property & Casualty](https://owl.co/solutions/property-and-casualty) [Health](https://owl.co/solutions/health) [Government programs](https://owl.co/solutions/government-programs) Company [About](https://owl.co/about) [Careers](https://owl.co/careers) [Security](https://owl.co/security) [Contact](https://owl.co/contact) Resources [Blog](https://owl.co/resources) [Success Stories](https://owl.co/success-stories) [Press](https://owl.co/press) [Podcast](https://owl.co/podcast)"
+       ]
+      },
+      {
+       "title": "Documentation, Owl",
+       "url": "https://owl.co/documentation",
+       "excerpts": [
+        "01 Documentation Start where you are. Eight categories, from the first connection to the model cards behind every output. Pick the one that matches",
+        "02 Popular guides The walkthroughs teams open first. Short, task-shaped guides that take you from a cold start to a working integration. 6 min Connect Owl to a Guidewire ClaimCenter instance 9 min Read your first file with the OwlVision API 5 min Verify a span-grounded citation in a response 8 min Configure single-tenant VPC processing 4 min Subscribe to claim-event webhooks"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/ has no documentation or help link in its reviewed navigation/footer. Although https://owl.co/documentation exists, its category and guide cards link only to placeholder anchors, not readable articles. The docs and help subdomains also returned no readable pages, so the multiple-public-articles requirement is not met.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Owl.co | Company Overview & News",
+       "url": "https://www.forbes.com/companies/owlco",
+       "excerpts": [
+        "Owl.co Stats As of January 2024 Industry Finance Founded 2018 Headquarters Vancouver Country/Territory Canada"
+       ]
+      }
+     ],
+     "reasoning": "https://www.forbes.com/companies/owlco identifies Vancouver as the headquarters city, consistent with the company's LinkedIn headquarters entry.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Template Assistant AI: Improving Insurance Document Workflows, Owl",
+       "url": "https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows",
+       "excerpts": [
+        "This article introduces and explains Template Assistant, a new feature from Owl.co that helps claims adjusters, SIU teams, and insurance lawyers iterate on templates with agentic AI when generating documents.",
+        "Published May 9, 2026."
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows explicitly introduces Template Assistant as a new feature and is dated May 9, 2026. This falls on the inclusive opening boundary of the user's explicitly requested May 9\u2013November 9, 2026 window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive, Careers at Owl",
+       "url": "https://owl.co/careers/enterprise-account-executive-559258",
+       "excerpts": [
+        "Enterprise Account Executive",
+        "[Apply for this role](https://owlco.na.teamtailor.com/jobs/559258-enterprise-account-executive/applications/new)"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/careers/enterprise-account-executive-559258 is a live Enterprise Account Executive posting with an application link, and the role also appears on the careers index.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Owl.Co 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/233015-50",
+       "excerpts": [
+        "Early Stage VC (Series B) |03-Nov-2021 |$30M | | |Completed |Generating Revenue"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Owl Technologies; website_url: https://owl.co; founded_year: 2018; latest_funding_round_name: Series B; latest_funding_round_date: 2021-11-03",
+        "latest_funding_round_amount_usd: 30000000.0; cxo_team[0].full_name: Sean Merat; cxo_team[0].title: Co-Founder & CEO; cxo_team[0].linkedin.list[0].element: http://linkedin.com/in/sean-merat-49444617; cxo_team[1].full_name: Alexey Zhigaltsov; cxo_team[1].title: Chief Information Security Officer; cxo_team[1].linkedin.list[0].element: https://www.linkedin.com/in/alexey-zhigaltsov-b103277/; tracxn_url: https://platform.tracxn.com/a/d/company/5905cac2e4b"
+       ]
+      }
+     ],
+     "reasoning": "https://pitchbook.com/profiles/company/233015-50 and the current company funding profile identify November 2021 as the latest disclosed round. That predates the requested May 9, 2025\u2013November 9, 2026 window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security, Owl",
+       "url": "https://owl.co/security",
+       "excerpts": [
+        "02 Compliance SOC 2 Type II"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/security explicitly names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security, Owl",
+       "url": "https://owl.co/security",
+       "excerpts": [
+        "02 Compliance SOC 2 Type II HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/security explicitly names HIPAA.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Security, Owl",
+       "url": "https://owl.co/security",
+       "excerpts": [
+        "02 Compliance SOC 2 Type II HIPAA GDPR"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/security explicitly names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive, Careers at Owl",
+       "url": "https://owl.co/careers/enterprise-account-executive-559258",
+       "excerpts": [
+        "Forecast with precision in Salesforce; maintain clean hygiene across **CRM**"
+       ]
+      }
+     ],
+     "reasoning": "https://owl.co/careers/enterprise-account-executive-559258 explicitly names Salesforce as the system used for forecasting.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2018.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "Canada",
+    "eng_blog": false,
+    "product_one_liner": "Owl.co helps insurance claims teams turn claim documents, records, and external signals into structured, source-cited evidence for reviewing claims.",
+    "employee_band": "51-100",
+    "model_provider": "Owl-1.5",
+    "pricing_page": false,
+    "funding_amount_usd": 30000000.0,
+    "named_customers": [],
+    "funding_date": "2021-11",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": false,
+    "hq_city": "Vancouver",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

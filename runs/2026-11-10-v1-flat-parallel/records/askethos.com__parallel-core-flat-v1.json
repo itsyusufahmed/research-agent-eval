@@ -1,0 +1,165 @@
+{
+ "schema_version": "v0",
+ "company": "Ethos",
+ "domain": "askethos.com",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Ethos uses AI to match professionals with paid consulting, advisory, research, and other work opportunities, while helping companies find and engage the expertise they need.",
+   "citations": [
+    "https://askethos.com/",
+    "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a"
+   ],
+   "notes": "The AskEthos homepage says companies seek people with users' backgrounds and offers paid consulting, advisory calls, and research; the company profile describes AI matching clients with experts. These support the sentence's product and audience."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://evals.askethos.com/pricing",
+    "https://linkedin.com/company/askethos"
+   ],
+   "notes": "Ethos's Ethos Evals page has a public Pricing page with its per-task fee structure, and the company's LinkedIn post identifies the Eval platform as Ethos's own product. Therefore the company does have a public pricing page."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Elm Labs",
+    "Kendal.ai"
+   ],
+   "citations": [
+    "https://www.recruiting.askethos.com/"
+   ],
+   "notes": "named_customers: Ethos Recruiting's first-party homepage labels the section 'Companies hiring with Ethos' and names Elm Labs and Kendal.ai. | named_customers.0: Elm Labs is named in the 'Companies hiring with Ethos' section. | named_customers.1: Kendal.ai is named in the 'Companies hiring with Ethos' section."
+  },
+  "employee_band": {
+   "status": "unknown",
+   "value": null,
+   "citations": []
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "London",
+    "country": "United Kingdom"
+   },
+   "citations": [
+    "https://agent.askethos.com/privacy",
+    "https://agent.askethos.com/opportunities/compliance-associate-6-month-contract-300-per-day-depending-on-experience"
+   ],
+   "notes": "hq_city: Ethos's own role listing identifies its London HQ in Kings Cross, and its privacy policy gives the registered office in London. | hq_country: Ethos's own role listing calls its London location the London HQ, and its privacy policy places its registered office in London, United Kingdom; together these support the headquarters country."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2024.0,
+   "citations": [
+    "https://linkedin.com/company/99316157"
+   ],
+   "notes": "Ethos's LinkedIn company profile identifies the company as founded in 2024."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://askethos.com/updates"
+   ],
+   "notes": "The complete Latest Updates index lists product announcements and feature updates, with its newest dated item July 1, 2025; it does not show a technical engineering blog with at least two build-focused posts."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://evals.askethos.com/llms.txt",
+    "https://askethos.com/"
+   ],
+   "notes": "The Ethos Evals documentation index lists only one MCP-server documentation article; the main Ethos site footer links to privacy, terms, and expert terms but no docs/help center. The observed materials do not meet the requirement for several public documentation articles."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://agent.askethos.com/opportunities/ai-engineer",
+    "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a"
+   ],
+   "notes": "The direct Ethos AI Engineer opportunity is marked closed. The live board entries shown are expert-call or expert-opportunity assignments for outside clients, not Ethos employee openings; no open in-house AI/ML posting is shown."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Google (Gemini), Anthropic, Groq, OpenAI, and OpenRouter.",
+   "citations": [
+    "https://agent.askethos.com/ethos-subprocessors"
+   ],
+   "notes": "The public subprocessor list names Anthropic and identifies Google Gemini, Groq, OpenAI, and OpenRouter as AI/language, inference, or model-routing services engaged by Ethos."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR"
+   ],
+   "citations": [
+    "https://agent.askethos.com/ethos-dpa"
+   ],
+   "notes": "compliance_certs: Ethos's Data Processing Agreement says its processing is intended to ensure compliance with UK GDPR and, where applicable, EU GDPR; GDPR is the named item in the requested list. The source describes a regulation rather than a formal certification, so this is a cautious mapping to the schema's list. | compliance_certs.0: The DPA explicitly names UK GDPR and EU GDPR."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series A",
+    "date": "2026-05",
+    "amount_usd": 22750000.0
+   },
+   "citations": [
+    "https://techcrunch.com/2026/05/06/ethos-raises-22.75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+    "https://app.dealroom.co/companies/ethos_4"
+   ],
+   "notes": "funding_stage: The most recent round is explicitly described as a Series A in May 2026, after the March 2025 seed round. | funding_date: The announced latest round is dated May 6, 2026, so its month-formatted date is 2026-05; Dealroom confirms it followed the March 2025 seed. | funding_amount_usd: TechCrunch reports Ethos's $22.75 million Series A on May 6, 2026; Dealroom's round history identifies it as the later round after the March 2025 seed. The amount converts to 22,750,000 USD."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://techcrunch.com/2026/05/06/ethos-raises-22.75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+   ],
+   "notes": "Ethos announced the Series A on May 6, 2026, which falls within the 18 months before November 9, 2026."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a",
+    "https://agent.askethos.com/opportunities/account-executive"
+   ],
+   "notes": "The visible Account Executive opportunity is to train an outside AI lab's model, not an Ethos employee job; the current board entries are expert gigs and show no in-house SDR/BDR/AE vacancy."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/company/askethos"
+   ],
+   "notes": "Ethos's LinkedIn company page dates its announcement opening a private beta of its Eval platform to November 6, 2026, within the six months before November 9, 2026."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": []
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Apollo",
+    "RevenueBase"
+   ],
+   "citations": [
+    "https://agent.askethos.com/ethos-subprocessors"
+   ],
+   "notes": "crm_stack_signal: Ethos's subprocessor list names Apollo and RevenueBase and describes both as B2B sales-intelligence and lead-generation providers, which are visible sales/marketing stack signals. | crm_stack_signal.0: The subprocessor list names Apollo and classifies it as B2B sales intelligence and lead generation. | crm_stack_signal.1: The subprocessor list names RevenueBase and classifies it as B2B sales intelligence and lead generation."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 416.3
+}

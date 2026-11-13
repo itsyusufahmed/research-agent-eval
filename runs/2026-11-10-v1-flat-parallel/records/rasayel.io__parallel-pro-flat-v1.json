@@ -1,0 +1,169 @@
+{
+ "schema_version": "v0",
+ "company": "Rasayel",
+ "domain": "rasayel.io",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Rasayel provides a collaborative WhatsApp messaging platform with shared inboxes, campaigns, automation, and integrations for business sales and support teams.",
+   "citations": [
+    "https://www.rasayel.io/",
+    "https://docs.rasayel.io/"
+   ],
+   "notes": "The homepage describes a WhatsApp platform for sales teams, with conversation tracking, follow-ups, and CRM syncing. The public documentation describes WhatsApp Business messaging, campaigns, a shared team inbox, automation, and integrations for businesses."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://rasayel.io/pricing"
+   ],
+   "notes": "The cited Rasayel pricing page contains pricing content; the public page exists, so this is true even aside from whether its listed plans include prices."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "FactorialHR",
+    "Casita"
+   ],
+   "citations": [
+    "https://rasayel.io/"
+   ],
+   "notes": "named_customers: Rasayel's homepage testimonial identifies a sales operations specialist at FactorialHR, and another testimonial identifies a customer from Casita. Both names are presented in customer-testimonial context. | named_customers.0: The homepage testimonial identifies a FactorialHR sales operations specialist. | named_customers.1: The homepage testimonial identifies a customer from Casita."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "11-20",
+   "citations": [
+    "https://tracxn.com"
+   ],
+   "notes": "The company profile lists 15 employees, which falls in the 11-20 band. Other sources give nearby counts, but they are consistent with this band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Cork",
+    "country": "Ireland"
+   },
+   "citations": [
+    "https://craft.co/rasayel/locations",
+    "https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs"
+   ],
+   "notes": "hq_city: Craft explicitly identifies Rasayel's headquarters as Cork, while a Tracxn source reports Dublin. Cork is selected based on Craft's explicit HQ statement and the separate partner listing that places Rasayel in Cork, Ireland; the conflicting report lowers confidence. | hq_country: Craft explicitly identifies Cork, Ireland as headquarters. A Tracxn page instead reports Dublin, Ireland, so Ireland is supported across both sources, while the HQ location remains somewhat inconsistent."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2022.0,
+   "citations": [
+    "https://talent.seedcamp.com/companies/rasayel"
+   ],
+   "notes": "Seedcamp's Rasayel profile says it was founded in 2022. Tracxn's profile excerpt also gives 2022 (d167.s0). PitchBook separately lists 2020, so the selected year has some source conflict and is not high confidence."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://learn.rasayel.io/en/blog"
+   ],
+   "notes": "The blog index presents WhatsApp business guides and marketing, sales, support, success-story, and news/update content. It does not show at least two engineer-authored posts explaining product implementation, so it does not meet the stated threshold for an engineering blog."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.rasayel.io/"
+   ],
+   "notes": "Rasayel has a public documentation site with multiple product sections, including inbox, WhatsApp Business, automations, and integrations, so public_docs is true."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://careerspage.io/rasayel",
+    "https://careerspage.io/rasayel/senior-software-engineer-ra101"
+   ],
+   "notes": "The careers page lists a Senior Software Engineer role. Although the job description mentions AI-powered work, AI/ML is not in the title, and the question's criteria exclude roles based on responsibilities alone."
+  },
+  "model_provider": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Rasayel's AI documentation refers generically to its assistant and LLM tokens but does not identify an underlying model or provider. The privacy and security materials and the blog index likewise do not disclose one. The model provider is therefore unknown."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://docs.rasayel.io/security-policy",
+    "https://docs.rasayel.io/privacy"
+   ],
+   "notes": "The security policy is the relevant security page, and it does not claim any of the listed certifications. The privacy policy refers to GDPR legal bases and rights, not a Rasayel certification; its PCI Level 1 statement is explicitly about Stripe, not Rasayel. Thus the list is empty."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Seed",
+    "date": "2022-02",
+    "amount_usd": null
+   },
+   "citations": [
+    "https://pitchbook.com/profiles/company/507248-38",
+    "https://tracxn.com"
+   ],
+   "notes": "funding_stage: The funding profile identifies the most recent listed round as a Seed Round. | funding_date: The funding profile dates the Seed round to 01-Feb-2022, which yields 2022-02. | funding_amount_usd: The latest listed round is a Seed round, but the funding profile's Amount field is blank and the company profile gives no round amount. The amount is undisclosed, so it is null rather than zero."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://pitchbook.com/profiles/company/507248-38"
+   ],
+   "notes": "The latest listed funding round is the Seed round dated February 2022, well before the 18-month window ending November 9, 2026, so raised_18mo is false."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://careerspage.io/rasayel"
+   ],
+   "notes": "The readable careers page lists a Senior Software Engineer posting, not an SDR, BDR, sales/business development representative, or account executive role."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://docs.rasayel.io/en/changelog"
+   ],
+   "notes": "The newest launch-type item shown in Rasayel's changelog is automated HubSpot property updates dated April 28, 2026. The next listed entry is April 5, 2026, and the changelog contains no newer launch in the six-month window before November 9, 2026."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.rasayel.io/about"
+   ],
+   "notes": "The small team page lists 12 people and identifies the C-level leaders as co-founders Tarek Khalil and Mohamed Elbadwihi, with no VP role shown. The company also says it has been working for over five years. No recent C-level/VP join or departure is established by the checked team information; this is a cautious negative assessment."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot",
+    "Salesforce",
+    "Pipedrive",
+    "Zoho",
+    "Zapier"
+   ],
+   "citations": [
+    "https://docs.rasayel.io/",
+    "https://rasayel.io/pricing"
+   ],
+   "notes": "crm_stack_signal: Rasayel's documentation names HubSpot, Salesforce, Pipedrive, and Zoho integrations; its pricing page also names Pipedrive and Zapier integrations. Each system listed is explicitly named on a cited Rasayel page. | crm_stack_signal.0: Rasayel's public documentation names HubSpot as an integration. | crm_stack_signal.1: Rasayel's public documentation names Salesforce as an integration. | crm_stack_signal.2: Rasayel's public documentation names Pipedrive as an integration. | crm_stack_signal.3: Rasayel's public documentation names Zoho as an integration. | crm_stack_signal.4: Rasayel's pricing page names Zapier as an integration."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 488.7
+}

@@ -1,0 +1,1456 @@
+{
+ "id": "agent_run_3b873bfeca6949feb094e5d6d049ec76",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:50:28.522Z",
+ "completedAt": "2026-11-10T18:54:32.051Z",
+ "request": {
+  "query": "Research the company Eden (edenmed.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Eden provides a cloud-native diagnostic operating system and medical-imaging AI that unify imaging workflows, interpretation and reporting for radiologists, imaging centers and health systems.\",\"citations\":[\"https://edenmed.com\",\"https://www.edenmed.com/technology\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://internal.edenmed.com/en/register\"],\"notes\":\"A publicly accessible registration page lists study-volume plans and monthly prices; it is on the older site, not linked from the current homepage.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Dr. Simi\",\"Dasa\",\"Lumiax\"],\"citations\":[\"https://edenmed.com/customers-stories/building-a-national-diagnostic-imaging-network-at-dr-simi\",\"https://edenmed.com/customers-stories/building-a-centralized-architecture-for-hospitals-and-teleradiology-at-dasa-and-lumiax\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://www.firmdex.net/company/eden-1tmpet/\",\"https://linkedin.com/company/edenmed-ai\",\"https://www.ycombinator.com/companies/eden-2/jobs\"],\"notes\":\"Reported company-size band; published headcount estimates conflict, including a 100-person team size on Y Combinator and 541 on the company profile.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Palo Alto\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/edenmed-ai\",\"https://www.firmdex.net/company/eden-1tmpet/\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2016,\"citations\":[\"https://linkedin.com/company/edenmed-ai\",\"https://www.firmdex.net/company/eden-1tmpet/\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://edenmed.com/blog\",\"https://edenmed.com/blog?a74c19a1_page=2\"],\"notes\":\"The readable indexes contain product guides, healthcare education and marketing content, not two engineer-authored accounts of building the product.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://edenmed.com/whitepapers\",\"https://edenmed.com/whitepapers?4dd65ef1_page=3\"],\"notes\":\"Public product guides contain multiple articles with operating instructions, including keyboard shortcuts, study preloading and mammography hanging protocols.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.ycombinator.com/companies/eden-2/jobs/6PuixMH-member-of-technical-staff-ai-research-radiology-foundation-model\"],\"notes\":\"Live listing: Member of Technical Staff, AI Research \u2013 Radiology Foundation Model.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Eden Cortex\",\"citations\":[\"https://www.edenmed.com/technology\",\"https://www.linkedin.com/posts/edenmed-ai_what-if-your-radiology-report-was-ready-before-activity-7523113375648628736-3F7f\"],\"notes\":\"Eden publicly names its own transformer-based medical-imaging foundation model; the technology page labels Cortex an investigational device. No external model provider is asserted.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\"],\"citations\":[\"https://www.edenmed.com/technology\"],\"notes\":\"These are publicly displayed compliance claims, not independent verification of certification; HIPAA is a compliance framework rather than a certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series A\",\"date\":\"2025-10\",\"amount_usd\":22000000},\"citations\":[\"https://latamlist.com/eden-raises-22m-series-a/\"]},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://latamlist.com/eden-raises-22m-series-a/\"],\"notes\":\"The October 2025 round falls within 2025-05-09 through 2026-11-09.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.ycombinator.com/companies/eden-2/jobs\",\"https://internal.edenmed.com/en/about-us\"],\"notes\":\"The current Y Combinator board lists only the AI research role. The older company careers section lists Sales Executive, but not an SDR, BDR or Account Executive title; it is not counted under the specified title rules.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/posts/edenmed-ai_meet-eden-cortex-activity-7513357297109270528-T3Ug\"],\"notes\":\"Eden announced Cortex on 2026-10-06: medical-image analysis and complete diagnostic report generation for radiologist review.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/posts/felipekitamura_i-am-thrilled-to-join-eden-as-chief-medical-activity-7434258157746683904-UCDK\",\"https://www.linkedin.com/posts/edenmedicalglobal_a-leading-voice-in-radiology-ai-joins-eden-activity-7437151532908920832-oGZe\"],\"notes\":\"Felipe Kitamura announced joining as Chief Medical Officer on 2026-03-02; Eden published a welcome announcement on 2026-03-10.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\"],\"citations\":[\"https://es.linkedin.com/posts/erikarosasdelangel_vacantes-activity-7221694027778113536-JEUU\"],\"notes\":\"A 2024-07-24 Senior Business Development Representative recruitment post explicitly requests HubSpot; this establishes a historical usage signal, not verified usage in November 2026.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The readable indexes contain product guides, healthcare education and marketing content, not two engineer-authored accounts of building the product.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://edenmed.com/blog",
+     "https://edenmed.com/blog?a74c19a1_page=2"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Palo Alto",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/edenmed-ai",
+     "https://www.firmdex.net/company/eden-1tmpet/"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public product guides contain multiple articles with operating instructions, including keyboard shortcuts, study preloading and mammography hanging protocols.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://edenmed.com/whitepapers",
+     "https://edenmed.com/whitepapers?4dd65ef1_page=3"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The October 2025 round falls within 2025-05-09 through 2026-11-09.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://latamlist.com/eden-raises-22m-series-a/"
+    ]
+   },
+   "founded_year": {
+    "value": 2016,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/edenmed-ai",
+     "https://www.firmdex.net/company/eden-1tmpet/"
+    ]
+   },
+   "last_funding": {
+    "value": {
+     "date": "2025-10",
+     "stage": "Series A",
+     "amount_usd": 22000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://latamlist.com/eden-raises-22m-series-a/"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Eden announced Cortex on 2026-10-06: medical-image analysis and complete diagnostic report generation for radiologist review.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/edenmed-ai_meet-eden-cortex-activity-7513357297109270528-T3Ug"
+    ]
+   },
+   "pricing_page": {
+    "notes": "A publicly accessible registration page lists study-volume plans and monthly prices; it is on the older site, not linked from the current homepage.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://internal.edenmed.com/en/register"
+    ]
+   },
+   "employee_band": {
+    "notes": "Reported company-size band; published headcount estimates conflict, including a 100-person team size on Y Combinator and 541 on the company profile.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://www.firmdex.net/company/eden-1tmpet/",
+     "https://linkedin.com/company/edenmed-ai",
+     "https://www.ycombinator.com/companies/eden-2/jobs"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The current Y Combinator board lists only the AI research role. The older company careers section lists Sales Executive, but not an SDR, BDR or Account Executive title; it is not counted under the specified title rules.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.ycombinator.com/companies/eden-2/jobs",
+     "https://internal.edenmed.com/en/about-us"
+    ]
+   },
+   "model_provider": {
+    "notes": "Eden publicly names its own transformer-based medical-imaging foundation model; the technology page labels Cortex an investigational device. No external model provider is asserted.",
+    "value": "Eden Cortex",
+    "status": "asserted",
+    "citations": [
+     "https://www.edenmed.com/technology",
+     "https://www.linkedin.com/posts/edenmed-ai_what-if-your-radiology-report-was-ready-before-activity-7523113375648628736-3F7f"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Dr. Simi",
+     "Dasa",
+     "Lumiax"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://edenmed.com/customers-stories/building-a-national-diagnostic-imaging-network-at-dr-simi",
+     "https://edenmed.com/customers-stories/building-a-centralized-architecture-for-hospitals-and-teleradiology-at-dasa-and-lumiax"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "Live listing: Member of Technical Staff, AI Research \u2013 Radiology Foundation Model.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.ycombinator.com/companies/eden-2/jobs/6PuixMH-member-of-technical-staff-ai-research-radiology-foundation-model"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "These are publicly displayed compliance claims, not independent verification of certification; HIPAA is a compliance framework rather than a certification.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.edenmed.com/technology"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "A 2024-07-24 Senior Business Development Representative recruitment post explicitly requests HubSpot; this establishes a historical usage signal, not verified usage in November 2026.",
+    "value": [
+     "HubSpot"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://es.linkedin.com/posts/erikarosasdelangel_vacantes-activity-7221694027778113536-JEUU"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Eden provides a cloud-native diagnostic operating system and medical-imaging AI that unify imaging workflows, interpretation and reporting for radiologists, imaging centers and health systems.",
+    "status": "asserted",
+    "citations": [
+     "https://edenmed.com",
+     "https://www.edenmed.com/technology"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Felipe Kitamura announced joining as Chief Medical Officer on 2026-03-02; Eden published a welcome announcement on 2026-03-10.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/felipekitamura_i-am-thrilled-to-join-eden-as-chief-medical-activity-7434258157746683904-UCDK",
+     "https://www.linkedin.com/posts/edenmedicalglobal_a-leading-voice-in-radiology-ai-joins-eden-activity-7437151532908920832-oGZe"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.status",
+    "citations": [
+     {
+      "url": "https://edenmed.com"
+     },
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://edenmed.com"
+     },
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://edenmed.com"
+     },
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.status",
+    "citations": [
+     {
+      "url": "https://internal.edenmed.com/en/register"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://internal.edenmed.com/en/register"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://internal.edenmed.com/en/register"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.notes",
+    "citations": [
+     {
+      "url": "https://internal.edenmed.com/en/register"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.status",
+    "citations": [
+     {
+      "url": "https://edenmed.com/customers-stories/building-a-national-diagnostic-imaging-network-at-dr-simi"
+     },
+     {
+      "url": "https://edenmed.com/customers-stories/building-a-centralized-architecture-for-hospitals-and-teleradiology-at-dasa-and-lumiax"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://edenmed.com/customers-stories/building-a-national-diagnostic-imaging-network-at-dr-simi"
+     },
+     {
+      "url": "https://edenmed.com/customers-stories/building-a-centralized-architecture-for-hospitals-and-teleradiology-at-dasa-and-lumiax"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://edenmed.com/customers-stories/building-a-national-diagnostic-imaging-network-at-dr-simi"
+     },
+     {
+      "url": "https://edenmed.com/customers-stories/building-a-centralized-architecture-for-hospitals-and-teleradiology-at-dasa-and-lumiax"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.status",
+    "citations": [
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     },
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     },
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     },
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     },
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.status",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.status",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/edenmed-ai"
+     },
+     {
+      "url": "https://www.firmdex.net/company/eden-1tmpet/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.status",
+    "citations": [
+     {
+      "url": "https://edenmed.com/blog"
+     },
+     {
+      "url": "https://edenmed.com/blog?a74c19a1_page=2"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://edenmed.com/blog"
+     },
+     {
+      "url": "https://edenmed.com/blog?a74c19a1_page=2"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://edenmed.com/blog"
+     },
+     {
+      "url": "https://edenmed.com/blog?a74c19a1_page=2"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://edenmed.com/blog"
+     },
+     {
+      "url": "https://edenmed.com/blog?a74c19a1_page=2"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.status",
+    "citations": [
+     {
+      "url": "https://edenmed.com/whitepapers"
+     },
+     {
+      "url": "https://edenmed.com/whitepapers?4dd65ef1_page=3"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://edenmed.com/whitepapers"
+     },
+     {
+      "url": "https://edenmed.com/whitepapers?4dd65ef1_page=3"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://edenmed.com/whitepapers"
+     },
+     {
+      "url": "https://edenmed.com/whitepapers?4dd65ef1_page=3"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.notes",
+    "citations": [
+     {
+      "url": "https://edenmed.com/whitepapers"
+     },
+     {
+      "url": "https://edenmed.com/whitepapers?4dd65ef1_page=3"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.status",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs/6PuixMH-member-of-technical-staff-ai-research-radiology-foundation-model"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs/6PuixMH-member-of-technical-staff-ai-research-radiology-foundation-model"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs/6PuixMH-member-of-technical-staff-ai-research-radiology-foundation-model"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs/6PuixMH-member-of-technical-staff-ai-research-radiology-foundation-model"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.status",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_what-if-your-radiology-report-was-ready-before-activity-7523113375648628736-3F7f"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_what-if-your-radiology-report-was-ready-before-activity-7523113375648628736-3F7f"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_what-if-your-radiology-report-was-ready-before-activity-7523113375648628736-3F7f"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_what-if-your-radiology-report-was-ready-before-activity-7523113375648628736-3F7f"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.status",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://www.edenmed.com/technology"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.status",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.status",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://latamlist.com/eden-raises-22m-series-a/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.status",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     },
+     {
+      "url": "https://internal.edenmed.com/en/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     },
+     {
+      "url": "https://internal.edenmed.com/en/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     },
+     {
+      "url": "https://internal.edenmed.com/en/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://www.ycombinator.com/companies/eden-2/jobs"
+     },
+     {
+      "url": "https://internal.edenmed.com/en/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.status",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_meet-eden-cortex-activity-7513357297109270528-T3Ug"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_meet-eden-cortex-activity-7513357297109270528-T3Ug"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_meet-eden-cortex-activity-7513357297109270528-T3Ug"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/edenmed-ai_meet-eden-cortex-activity-7513357297109270528-T3Ug"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.status",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/felipekitamura_i-am-thrilled-to-join-eden-as-chief-medical-activity-7434258157746683904-UCDK"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmedicalglobal_a-leading-voice-in-radiology-ai-joins-eden-activity-7437151532908920832-oGZe"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/felipekitamura_i-am-thrilled-to-join-eden-as-chief-medical-activity-7434258157746683904-UCDK"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmedicalglobal_a-leading-voice-in-radiology-ai-joins-eden-activity-7437151532908920832-oGZe"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/felipekitamura_i-am-thrilled-to-join-eden-as-chief-medical-activity-7434258157746683904-UCDK"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmedicalglobal_a-leading-voice-in-radiology-ai-joins-eden-activity-7437151532908920832-oGZe"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/felipekitamura_i-am-thrilled-to-join-eden-as-chief-medical-activity-7434258157746683904-UCDK"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/edenmedicalglobal_a-leading-voice-in-radiology-ai-joins-eden-activity-7437151532908920832-oGZe"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.status",
+    "citations": [
+     {
+      "url": "https://es.linkedin.com/posts/erikarosasdelangel_vacantes-activity-7221694027778113536-JEUU"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://es.linkedin.com/posts/erikarosasdelangel_vacantes-activity-7221694027778113536-JEUU"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://es.linkedin.com/posts/erikarosasdelangel_vacantes-activity-7221694027778113536-JEUU"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://es.linkedin.com/posts/erikarosasdelangel_vacantes-activity-7221694027778113536-JEUU"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

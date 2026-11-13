@@ -1,0 +1,972 @@
+{
+ "id": "agent_run_e0aa335b65f7439ca4e4dcabe2c8028d",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:06:20.908Z",
+ "completedAt": "2026-11-10T19:10:12.268Z",
+ "request": {
+  "query": "Research the company Alice (Formerly ActiveFence) (activefence.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Alice provides AI safety and security testing, runtime guardrails, and ongoing monitoring for foundation-model labs, enterprises deploying AI applications and agents, and user-generated-content platforms.\",\"citations\":[\"https://alice.io/llm\",\"https://alice.io\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://alice.io\",\"https://alice.io/demo\"],\"notes\":\"No public pricing plans were found in the site navigation; the commercial call to action is a demo/contact form, and /pricing returned no page.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Anthropic\",\"Google\",\"Meta\",\"TikTok\",\"Deliveroo\",\"Niantic\",\"Cohere\",\"Udemy\"],\"citations\":[\"https://alice.io/llm\",\"https://alice.io\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://alice.io\",\"https://dealroom.co/news/146846-alice-raises-140m-series-d-at-800m-valuation-to-secure-ai-models/\"],\"notes\":\"The August 2026 funding coverage reports approximately 400 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"New York\",\"country\":\"United States\"},\"citations\":[\"https://alice.io/llm\",\"https://alice.io/blog/alice-raises-140m\"],\"notes\":\"The company identifies dual headquarters: New York, United States, and Tel Aviv, Israel.\"},\"founded_year\":{\"status\":\"asserted\",\"value\":2018,\"citations\":[\"https://alice.io/llm\",\"https://alice.io/blog/alice-raises-140m\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://medium.com/engineering-activefence/a-tale-about-scale-124980340bff\",\"https://medium.com/engineering-activefence/safety-by-design-for-llms-b959df9066ff\"],\"notes\":\"Engineering @ Alice publishes Noam Levy\u2019s implementation posts on ActiveScore scaling and NeMo Guardrails integration.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.activefence.com/\",\"https://docs.alice.io/wondersuite/wonderfence/introducing-wonderfence\"],\"notes\":\"Public documentation includes product user guides, API documentation and SDK documentation.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://alice.io/positions/position-49_473\",\"https://alice.io/careers\"],\"notes\":\"The live Principal Data Scientist posting qualifies.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Google ShieldGemma (based on Gemma 2), used as the teacher model to distill Alice\u2019s production WonderFence safety detectors.\",\"citations\":[\"https://alice.io/blog/knowledge-distillation-transformer-ai\"]},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\"],\"citations\":[\"https://alice.io\",\"https://alice.io/llm\",\"https://alice.io/privacy-policy\"],\"notes\":\"These are publicly claimed badges/certifications; the HIPAA badge says HIPAA compliant. This is not independent attestation verification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series D\",\"date\":\"2026-08\",\"amount_usd\":140000000},\"citations\":[\"https://alice.io/blog/alice-raises-140m\",\"https://dealroom.co/news/146846-alice-raises-140m-series-d-at-800m-valuation-to-secure-ai-models/\"],\"notes\":\"Announced August 25, 2026; led by Apax Digital.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://alice.io/blog/alice-raises-140m\"],\"notes\":\"The August 25, 2026 financing falls within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://alice.io/positions/position-0d_f61\",\"https://alice.io/positions/position-a5_f69\"],\"notes\":\"Live Sales Development Representative and GenAI Account Executive postings.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://alice.io/blog/introducing-guardrails-trained-for-your-policies\"],\"notes\":\"May 13, 2026: introduced policy-specific WonderFence guardrails trained on customer policies and real-world adversarial examples, within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/posts/yossi-mizrahi-a3341436_excited-to-share-that-ive-joined-alice-activity-7446867358574501889-jNuq\"],\"notes\":\"On April 6, 2026, Yossi Mizrahi announced joining Alice as VP GenAI.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"Mailchimp\",\"Google Analytics\",\"Hotjar\"],\"citations\":[\"https://alice.io/privacy-policy\"],\"notes\":\"The privacy policy names these systems for CRM, mailing-list management, and website analytics. The SDR posting additionally lists HubSpot, Outreach and Salesloft as example tools for candidate experience, not definitive proof of deployment.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Engineering @ Alice publishes Noam Levy\u2019s implementation posts on ActiveScore scaling and NeMo Guardrails integration.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://medium.com/engineering-activefence/a-tale-about-scale-124980340bff",
+     "https://medium.com/engineering-activefence/safety-by-design-for-llms-b959df9066ff"
+    ]
+   },
+   "hq_location": {
+    "notes": "The company identifies dual headquarters: New York, United States, and Tel Aviv, Israel.",
+    "value": {
+     "city": "New York",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/llm",
+     "https://alice.io/blog/alice-raises-140m"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public documentation includes product user guides, API documentation and SDK documentation.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.activefence.com/",
+     "https://docs.alice.io/wondersuite/wonderfence/introducing-wonderfence"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The August 25, 2026 financing falls within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/blog/alice-raises-140m"
+    ]
+   },
+   "founded_year": {
+    "value": 2018,
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/llm",
+     "https://alice.io/blog/alice-raises-140m"
+    ]
+   },
+   "last_funding": {
+    "notes": "Announced August 25, 2026; led by Apax Digital.",
+    "value": {
+     "date": "2026-08",
+     "stage": "Series D",
+     "amount_usd": 140000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/blog/alice-raises-140m",
+     "https://dealroom.co/news/146846-alice-raises-140m-series-d-at-800m-valuation-to-secure-ai-models/"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "May 13, 2026: introduced policy-specific WonderFence guardrails trained on customer policies and real-world adversarial examples, within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/blog/introducing-guardrails-trained-for-your-policies"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No public pricing plans were found in the site navigation; the commercial call to action is a demo/contact form, and /pricing returned no page.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://alice.io",
+     "https://alice.io/demo"
+    ]
+   },
+   "employee_band": {
+    "notes": "The August 2026 funding coverage reports approximately 400 employees.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://alice.io",
+     "https://dealroom.co/news/146846-alice-raises-140m-series-d-at-800m-valuation-to-secure-ai-models/"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Live Sales Development Representative and GenAI Account Executive postings.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/positions/position-0d_f61",
+     "https://alice.io/positions/position-a5_f69"
+    ]
+   },
+   "model_provider": {
+    "value": "Google ShieldGemma (based on Gemma 2), used as the teacher model to distill Alice\u2019s production WonderFence safety detectors.",
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/blog/knowledge-distillation-transformer-ai"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Anthropic",
+     "Google",
+     "Meta",
+     "TikTok",
+     "Deliveroo",
+     "Niantic",
+     "Cohere",
+     "Udemy"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/llm",
+     "https://alice.io"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The live Principal Data Scientist posting qualifies.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/positions/position-49_473",
+     "https://alice.io/careers"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "These are publicly claimed badges/certifications; the HIPAA badge says HIPAA compliant. This is not independent attestation verification.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://alice.io",
+     "https://alice.io/llm",
+     "https://alice.io/privacy-policy"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The privacy policy names these systems for CRM, mailing-list management, and website analytics. The SDR posting additionally lists HubSpot, Outreach and Salesloft as example tools for candidate experience, not definitive proof of deployment.",
+    "value": [
+     "Salesforce",
+     "Mailchimp",
+     "Google Analytics",
+     "Hotjar"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/privacy-policy"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Alice provides AI safety and security testing, runtime guardrails, and ongoing monitoring for foundation-model labs, enterprises deploying AI applications and agents, and user-generated-content platforms.",
+    "status": "asserted",
+    "citations": [
+     "https://alice.io/llm",
+     "https://alice.io"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "On April 6, 2026, Yossi Mizrahi announced joining Alice as VP GenAI.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/yossi-mizrahi-a3341436_excited-to-share-that-ive-joined-alice-activity-7446867358574501889-jNuq"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://alice.io/llm"
+     },
+     {
+      "url": "https://alice.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://alice.io"
+     },
+     {
+      "url": "https://alice.io/demo"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://alice.io/llm"
+     },
+     {
+      "url": "https://alice.io"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://alice.io"
+     },
+     {
+      "url": "https://dealroom.co/news/146846-alice-raises-140m-series-d-at-800m-valuation-to-secure-ai-models/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://alice.io/llm"
+     },
+     {
+      "url": "https://alice.io/blog/alice-raises-140m"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://alice.io/llm"
+     },
+     {
+      "url": "https://alice.io/blog/alice-raises-140m"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://medium.com/engineering-activefence/a-tale-about-scale-124980340bff"
+     },
+     {
+      "url": "https://medium.com/engineering-activefence/safety-by-design-for-llms-b959df9066ff"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://docs.activefence.com/"
+     },
+     {
+      "url": "https://docs.alice.io/wondersuite/wonderfence/introducing-wonderfence"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://alice.io/positions/position-49_473"
+     },
+     {
+      "url": "https://alice.io/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://alice.io/blog/knowledge-distillation-transformer-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://alice.io"
+     },
+     {
+      "url": "https://alice.io/llm"
+     },
+     {
+      "url": "https://alice.io/privacy-policy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://alice.io/blog/alice-raises-140m"
+     },
+     {
+      "url": "https://dealroom.co/news/146846-alice-raises-140m-series-d-at-800m-valuation-to-secure-ai-models/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://alice.io/blog/alice-raises-140m"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://alice.io/positions/position-0d_f61"
+     },
+     {
+      "url": "https://alice.io/positions/position-a5_f69"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://alice.io/blog/introducing-guardrails-trained-for-your-policies"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/yossi-mizrahi-a3341436_excited-to-share-that-ive-joined-alice-activity-7446867358574501889-jNuq"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://alice.io/privacy-policy"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

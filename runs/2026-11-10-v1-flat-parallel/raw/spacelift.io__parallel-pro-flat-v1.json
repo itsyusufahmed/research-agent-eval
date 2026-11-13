@@ -1,0 +1,501 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e90a6b8707d35a675",
+  "interaction_id": "trun_142119f6a1b4439e90a6b8707d35a675",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "spacelift.io"
+  },
+  "created_at": "2026-11-10T18:47:55.597697Z",
+  "modified_at": "2026-11-10T18:51:10.308756Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e90a6b8707d35a675",
+   "interaction_id": "trun_142119f6a1b4439e90a6b8707d35a675",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "spacelift.io"
+   },
+   "created_at": "2026-11-10T18:47:55.597697Z",
+   "modified_at": "2026-11-10T18:51:10.308756Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Careers at Spacelift | Build the Future of Infrastructure - Spacelift",
+       "url": "https://careers.spacelift.io/",
+       "excerpts": [
+        "Founded in 2020, we are a dynamic start-up with more than 130 employees living across the United States and Europe."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly states that it was founded in 2020: https://careers.spacelift.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Spacelift",
+       "url": "https://trust.spacelift.io/",
+       "excerpts": [
+        "Compliance SOC 2 AWS Foundational Technical Review GDPR",
+        "[SOC 2 Type II Report](https://trust.spacelift.io/?requestAccessOpen=true&requestedResources=6719062a75ab1e885e2b99c3)",
+        "[PCI-DSS SAQ-A 2025.pdf](https://trust.spacelift.io/?requestAccessOpen=true&requestedResources=68e9141d4bdf37f09ace6159)"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names SOC 2 and GDPR and provides a SOC 2 Type II report and a PCI-DSS SAQ-A 2025 document: https://trust.spacelift.io/. PCI DSS is supported by the published self-assessment document, not a claim of independent certification. ISO 27001 and HIPAA are not included.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Spacelift",
+       "url": "https://linkedin.com/company/spacelift-io",
+       "excerpts": [
+        "Spacelift Spacelift Industry Software Development Company size 51-200 employees Headquarters Redwood City, California Type Privately Held Founded 2020."
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies headquarters as Redwood City, California, placing it in the United States: https://linkedin.com/company/spacelift-io.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Spacelift WorkerPool Operator: Technical Overview",
+       "url": "https://spacelift.io/blog/spacelift-workerpool-operator",
+       "excerpts": [
+        "Before going any further, it\u2019s worth giving a quick overview of the architecture of Spacelift workers.",
+        "Adam is a backend software engineer at Spacelift."
+       ]
+      },
+      {
+       "title": "Autoscaling Native Kubernetes Workers",
+       "url": "https://spacelift.io/blog/autoscaling-native-kubernetes-workers",
+       "excerpts": [
+        "A Spacelift Worker Pool Controller is installed in the cluster to manage the worker pool.",
+        "A KEDA ScaledObject is installed in the cluster to monitor the queue length and scale the worker pool based on the queue length from a Prometheus query.",
+        "Joey Stout is a seasoned programmer with over a decade of experience using AWS, specializing in Site Reliability Engineering and DevOps."
+       ]
+      }
+     ],
+     "reasoning": "Two engineer-authored technical posts meet the content test. Adam Connelly, identified as a Spacelift backend engineer, explains worker and launcher architecture in https://spacelift.io/blog/spacelift-workerpool-operator. Joey Stout, identified as a programmer specializing in SRE and DevOps, explains the worker controller, Prometheus exporter, and KEDA autoscaling implementation in https://spacelift.io/blog/autoscaling-native-kubernetes-workers. These are technical infrastructure articles within the company blog rather than a separately branded engineering publication.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Spacelift | Enterprise Infrastructure Automation Redefined",
+       "url": "https://spacelift.io/about-us",
+       "excerpts": [
+        "Spacelift is used by DevOps, platform, and SRE teams at startups and global enterprises to standardize infrastructure as code (IaC) delivery, security, and governance. Customers span fintech, e-commerce, mobility, media, and SaaS.",
+        "The Spacelift Infrastructure Orchestration Platform delivers compliance, control, and rapid scalability by managing the entire infrastructure lifecycle \u2013 provisioning, configuration and governance. Spacelift integrates with existing infrastructure tooling (e.g., Terraform, OpenTofu, CloudFormation, Pulumi, Ansible) to provide a single integrated workflow to deliver secure, cost-effective and resilient infrastructure, fast."
+       ]
+      }
+     ],
+     "reasoning": "The about page identifies DevOps, platform, and SRE users and describes infrastructure provisioning, configuration, governance, and integration with IaC tooling: https://spacelift.io/about-us.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Careers at Spacelift | Build the Future of Infrastructure - Spacelift",
+       "url": "https://careers.spacelift.io/",
+       "excerpts": [
+        "Founded in 2020, we are a dynamic start-up with more than 130 employees living across the United States and Europe."
+       ]
+      },
+      {
+       "title": "Spacelift",
+       "url": "https://linkedin.com/company/spacelift-io",
+       "excerpts": [
+        "Spacelift Spacelift Industry Software Development Company size 51-200 employees Headquarters Redwood City, California Type Privately Held Founded 2020."
+       ]
+      }
+     ],
+     "reasoning": "The careers page reports more than 130 employees, while the company profile gives an upper band of 200; together these support 101-200: https://careers.spacelift.io/ and https://linkedin.com/company/spacelift-io.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Spacelift Intelligence Terms of Use (AI Terms) - Spacelift Documentation",
+       "url": "https://docs.spacelift.io/legal/ai-terms",
+       "excerpts": [
+        "|Amazon Web Services - Amazon Bedrock |Anthropic - Claude models |AWS Responsible AI Policy ( <https://aws.amazon.com/ai/responsible-ai/policy/> ) |"
+       ]
+      }
+     ],
+     "reasoning": "The AI terms explicitly list Amazon Web Services\u2014Amazon Bedrock and Anthropic\u2014Claude models: https://docs.spacelift.io/legal/ai-terms.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Plans and Pricing | Free plan | Spacelift",
+       "url": "https://spacelift.io/pricing",
+       "excerpts": [
+        "Spacelift plans are built to give you the functionality you need at every stage of your growth."
+       ]
+      }
+     ],
+     "reasoning": "A public plans and pricing page exists and describes plans for different stages of growth: https://spacelift.io/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Spacelift Raises $51M Series C to Redefine Enterprise Infrastructure Automation",
+       "url": "https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html",
+       "excerpts": [
+        "REDWOOD CITY, Calif. , July 10, 2025 /PRNewswire/ -- [Spacelift](https://c212.net/c/link/?t=0&l=en&o=4465297-1&h=3995451660&u=https%3A%2F%2Fspacelift.io%2F&a=Spacelift) , a leading infrastructure orchestration platform, today announced it has raised $51 million in a Series C funding round."
+       ]
+      }
+     ],
+     "reasoning": "The company's funding announcement discloses a $51 million Series C round: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html. The amount is reported as disclosed, without adding unsupported precision.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer Success Stories | Spacelift",
+       "url": "https://www.spacelift.io/customers",
+       "excerpts": [
+        "Design Services # How Figma orchestrates infrastructure at scale with Spacelift",
+        "How 1Password boosted productivity 10x by delegating IaC management with Spacelift"
+       ]
+      }
+     ],
+     "reasoning": "The customer stories page explicitly names Figma and 1Password in case-study titles: https://www.spacelift.io/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Spacelift Raises $51M Series C to Redefine Enterprise Infrastructure Automation",
+       "url": "https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html",
+       "excerpts": [
+        "Jul 10, 2025, 10:00 ET"
+       ]
+      }
+     ],
+     "reasoning": "The Series C announcement is dated July 10, 2025, supporting the requested month 2025-07: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive (remote US, Texas) - Spacelift",
+       "url": "https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas",
+       "excerpts": [
+        "Experience in working with Salesforce and other sales-oriented tracking tools."
+       ]
+      },
+      {
+       "title": "Trust Center - Spacelift",
+       "url": "https://trust.spacelift.io/subprocessors",
+       "excerpts": [
+        "|HubSpot \u2022 Marketing US delivered by HubSpot, Inc., Two Canal Park, Cambridge, MA 02141, USA |"
+       ]
+      }
+     ],
+     "reasoning": "The Enterprise Account Executive posting names Salesforce: https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas. The subprocessor list identifies HubSpot for marketing: https://trust.spacelift.io/subprocessors.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Spacelift Adds Senior Leaders in Sales and Product as Growth Momentum Accelerates With Spacelift Intelligence",
+       "url": "https://www.prnewswire.com/news-releases/spacelift-adds-senior-leaders-in-sales-and-product-as-growth-momentum-accelerates-with-spacelift-intelligence-302762880.html",
+       "excerpts": [
+        "May 05, 2026, 11:25 ET",
+        "REDWOOD CITY, Calif. , May 5, 2026 /PRNewswire/ -- [Spacelift](https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680405-1&h=1702219514&u=https%3A%2F%2Fspacelift.io%2F&a=Spacelift) , the company behind the infrastructure orchestration platform built for the AI-accelerated software era, today announced two senior additions to its executive team: [John Henry Archer](https://edge.prnewswire.com/c/link/?t=0&l=en&o=4680405-1&h=3742603589&u=https%3A%2F%2Fwww.linkedin.com%2Fin%2Farcherjohnhenry&a=John+Henry+Archer) as senior vice president of sales and channel, and [Jonah Kowall](h"
+       ]
+      }
+     ],
+     "reasoning": "On May 5, 2026, Spacelift announced John Henry Archer as senior vice president of sales and channel and Jonah Kowall as senior vice president of product and design, within the 12-month window: https://www.prnewswire.com/news-releases/spacelift-adds-senior-leaders-in-sales-and-product-as-growth-momentum-accelerates-with-spacelift-intelligence-302762880.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs list - Spacelift",
+       "url": "https://careers.spacelift.io/jobs",
+       "excerpts": [
+        "[Enterprise Account Executive (remote US, Texas) Sales \u00b7 Remote United States \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas) [Field Marketing Manager, Senior Manager (remote... Marketing \u00b7 Remote United States \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8592260-field-marketing-manager-senior-manager-remote-us-east-coast) [Partner Account Manager (remote, US East Coast) Remote United States \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8516220-partner-account-manager-remote-us-east-coast) [People Partner / HRBP (remote, European Union) People \u00b7 Remote Europe \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8660530-people-partner-hrbp-remote-european-union)"
+       ]
+      }
+     ],
+     "reasoning": "The readable jobs board lists eight openings across sales, marketing, partnerships, people, Kubernetes engineering/product, product operations, and software engineering. None has a qualifying AI, ML, or data-science title: https://careers.spacelift.io/jobs.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Spacelift Raises $51M Series C to Redefine Enterprise Infrastructure Automation",
+       "url": "https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html",
+       "excerpts": [
+        "REDWOOD CITY, Calif. , July 10, 2025 /PRNewswire/ -- [Spacelift](https://c212.net/c/link/?t=0&l=en&o=4465297-1&h=3995451660&u=https%3A%2F%2Fspacelift.io%2F&a=Spacelift) , a leading infrastructure orchestration platform, today announced it has raised $51 million in a Series C funding round."
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement explicitly identifies the round as Series C: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Getting started with Spacelift Deploy - Spacelift Documentation",
+       "url": "https://docs.spacelift.io/",
+       "excerpts": [
+        "Spacelift Documentation",
+        "[Step 1. Integrate source code](https://docs.spacelift.io/getting-started/integrate-source-code) Step 1. Integrate source code",
+        "[Step 2. Connect cloud account](https://docs.spacelift.io/getting-started/integrate-cloud) Step 2. Connect cloud account",
+        "[Step 3. Create a stack](https://docs.spacelift.io/getting-started/create-stack) Step 3. Create a stack"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation portal contains multiple setup articles and extensive product and integration documentation: https://docs.spacelift.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Spacelift",
+       "url": "https://linkedin.com/company/spacelift-io",
+       "excerpts": [
+        "Spacelift Spacelift Industry Software Development Company size 51-200 employees Headquarters Redwood City, California Type Privately Held Founded 2020."
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly identifies Redwood City, California as headquarters: https://linkedin.com/company/spacelift-io.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "\n      Careers at Spacelift | Build the Future of Infrastructure - Spacelift\n    ",
+       "url": "https://careers.spacelift.io/",
+       "excerpts": [
+        "June 2026 \ud83e\ude90 New Product Launch: Flows"
+       ]
+      }
+     ],
+     "reasoning": "The company's dated timeline records the launch of Flows in June 2026, within the six-month window: https://careers.spacelift.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs list - Spacelift",
+       "url": "https://careers.spacelift.io/jobs",
+       "excerpts": [
+        "[Enterprise Account Executive (remote US, Texas) Sales \u00b7 Remote United States \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas) [Field Marketing Manager, Senior Manager (remote... Marketing \u00b7 Remote United States \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8592260-field-marketing-manager-senior-manager-remote-us-east-coast) [Partner Account Manager (remote, US East Coast) Remote United States \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8516220-partner-account-manager-remote-us-east-coast) [People Partner / HRBP (remote, European Union) People \u00b7 Remote Europe \u00b7 Fully Remote](https://careers.spacelift.io/jobs/8660530-people-partner-hrbp-remote-european-union)"
+       ]
+      },
+      {
+       "title": "Enterprise Account Executive (remote US, Texas) - Spacelift",
+       "url": "https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas",
+       "excerpts": [
+        "Experience in working with Salesforce and other sales-oriented tracking tools."
+       ]
+      }
+     ],
+     "reasoning": "The current jobs board links an Enterprise Account Executive opening for remote US/Texas, and the posting is readable: https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Spacelift Raises $51M Series C to Redefine Enterprise Infrastructure Automation",
+       "url": "https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html",
+       "excerpts": [
+        "Jul 10, 2025, 10:00 ET",
+        "REDWOOD CITY, Calif. , July 10, 2025 /PRNewswire/ -- [Spacelift](https://c212.net/c/link/?t=0&l=en&o=4465297-1&h=3995451660&u=https%3A%2F%2Fspacelift.io%2F&a=Spacelift) , a leading infrastructure orchestration platform, today announced it has raised $51 million in a Series C funding round."
+       ]
+      }
+     ],
+     "reasoning": "The $51 million Series C was announced in July 2025, within the preceding 18 months: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Spacelift",
+       "url": "https://trust.spacelift.io/",
+       "excerpts": [
+        "[SOC 2 Type II Report](https://trust.spacelift.io/?requestAccessOpen=true&requestedResources=6719062a75ab1e885e2b99c3)"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly provides a SOC 2 Type II report: https://trust.spacelift.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Spacelift",
+       "url": "https://trust.spacelift.io/",
+       "excerpts": [
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly listed in the Trust Center's compliance section: https://trust.spacelift.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Spacelift",
+       "url": "https://trust.spacelift.io/",
+       "excerpts": [
+        "[PCI-DSS SAQ-A 2025.pdf](https://trust.spacelift.io/?requestAccessOpen=true&requestedResources=68e9141d4bdf37f09ace6159)"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists a PCI-DSS SAQ-A 2025 document. This supports a public self-assessed PCI DSS compliance claim, not independent certification: https://trust.spacelift.io/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer Success Stories | Spacelift",
+       "url": "https://www.spacelift.io/customers",
+       "excerpts": [
+        "Design Services # How Figma orchestrates infrastructure at scale with Spacelift"
+       ]
+      }
+     ],
+     "reasoning": "Figma is named in a customer case-study title: https://www.spacelift.io/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customer Success Stories | Spacelift",
+       "url": "https://www.spacelift.io/customers",
+       "excerpts": [
+        "How 1Password boosted productivity 10x by delegating IaC management with Spacelift"
+       ]
+      }
+     ],
+     "reasoning": "1Password is named in a customer case-study title: https://www.spacelift.io/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive (remote US, Texas) - Spacelift",
+       "url": "https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas",
+       "excerpts": [
+        "Experience in working with Salesforce and other sales-oriented tracking tools."
+       ]
+      }
+     ],
+     "reasoning": "The account executive job posting explicitly names Salesforce as a sales tracking tool: https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Trust Center - Spacelift",
+       "url": "https://trust.spacelift.io/subprocessors",
+       "excerpts": [
+        "|HubSpot \u2022 Marketing US delivered by HubSpot, Inc., Two Canal Park, Cambridge, MA 02141, USA |"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list explicitly identifies HubSpot for marketing: https://trust.spacelift.io/subprocessors.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2020.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Spacelift automates infrastructure provisioning, configuration, and governance for DevOps, platform, and SRE teams using infrastructure as code.",
+    "employee_band": "101-200",
+    "model_provider": "Anthropic Claude models through Amazon Web Services' Amazon Bedrock",
+    "pricing_page": true,
+    "funding_amount_usd": 51000000.0,
+    "named_customers": [
+     "Figma",
+     "1Password"
+    ],
+    "funding_date": "2025-07",
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "Redwood City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

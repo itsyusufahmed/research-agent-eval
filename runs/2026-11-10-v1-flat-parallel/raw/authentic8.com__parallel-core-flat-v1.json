@@ -1,0 +1,656 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ebc9d9719b41df87b",
+  "interaction_id": "trun_142119f6a1b4439ebc9d9719b41df87b",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "authentic8.com"
+  },
+  "created_at": "2026-11-10T18:47:41.250876Z",
+  "modified_at": "2026-11-10T18:51:42.861587Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ebc9d9719b41df87b",
+   "interaction_id": "trun_142119f6a1b4439ebc9d9719b41df87b",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "authentic8.com"
+   },
+   "created_at": "2026-11-10T18:47:41.250876Z",
+   "modified_at": "2026-11-10T18:51:42.861587Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Us | Authentic8",
+       "url": "https://authentic8.com/about-us",
+       "excerpts": [
+        "Established in 2010 by Scott Petry and Ramesh Rajagopal, Authentic8 has continued to rethink and improve the approach to web access for hundreds of commercial enterprises and government agencies around the world."
+       ]
+      }
+     ],
+     "reasoning": "Authentic8\u2019s About Us page says it was established in 2010, directly supporting the founding year.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Platform Assurance | Authentic8",
+       "url": "https://authentic8.com/certifications",
+       "excerpts": [
+        "10 security and compliance certifications FedRAMP, SOC 2, PCI DSS, HIPAA, GDPR, DFARS, ISO 27001, ISO 27701, CMMC, and CSA."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s Platform Assurance page names SOC 2, PCI DSS, HIPAA, GDPR, and ISO 27001 among its certifications; only those five requested names are included.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "AUTHENTIC8, INC. - LEI 2549009TD9M2J0O7Q179",
+       "url": "https://www.gleif.org/lei/2549009TD9M2J0O7Q179",
+       "excerpts": [
+        "Headquarters Address (en) Country: US | United States of America (the)"
+       ]
+      }
+     ],
+     "reasoning": "The LEI record identifies the headquarters country as the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog | Authentic8",
+       "url": "https://authentic8.com/blog",
+       "excerpts": [
+        "Blog](https://authentic8.com/blog/osint-stack-tools-workflow/) [Managed attribution ### VPN vs.",
+        "OSINT ### The Collaboration Gap in OSINT Investigations: 6 Challenges and How to Solve Them View Blog](https://authentic8.com/blog/osint-collaboration-challenges/) [Hands typing at a keyboard hover"
+       ]
+      }
+     ],
+     "reasoning": "Authentic8 has a blog index, whose displayed subjects are marketing/product topics (for example OSINT collaboration and VPN/managed-attribution explainers), not multiple engineering-authored posts describing how the product is built; therefore the engineering-blog criterion is not met.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/authentic8",
+       "excerpts": [
+        "Authentic8 helps intelligence and security teams investigate the digital world without exposing who they are, where they are, or what they are working on."
+       ]
+      }
+     ],
+     "reasoning": "Authentic8 describes its product as helping intelligence and security teams investigate the digital world without exposing who they are, where they are, or what they are working on; the one-liner restates this function and audience.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Authentic8 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/52264-81",
+       "excerpts": [
+        "Employees 127 Employees"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook reports 127 employees, which falls within the requested 101\u2013200 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Authentic8",
+       "url": "https://authentic8.com/pricing",
+       "excerpts": [
+        "Plans and Pricing Silo Workspace is priced per user, per year."
+       ]
+      }
+     ],
+     "reasoning": "Authentic8 has a public page titled Plans and Pricing, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Vistara Invests $12M in Authentic8 to Accelerate Global Growth",
+       "url": "https://vistaragrowth.com/portfolio-news/vistara-growth-invests-12m-in-authentic8",
+       "excerpts": [
+        "October 8, 2025 We are pleased to announce our US$12 million investment in [Authentic8](https://www.authentic8.com/use-cases) , a leading cybersecurity company pioneering secure, cloud-based web isolation and anonymous browsing solutions. This debt facility helps Authentic8 refinance and expand its capital base to support the next stage of growth, broadening its technology platform and"
+       ]
+      }
+     ],
+     "reasoning": "Vistara Growth\u2019s dated announcement states it invested US$12 million in Authentic8 and describes the investment as a debt facility.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Better together: Silo and MPGSOC",
+       "url": "https://authentic8.com/success-story/security-operations-mssp",
+       "excerpts": [
+        "Organization MindPoint Group SOC Authentic8 Product Silo Workspace MPGSOC, a managed security services provider, promises its customers the expertise, tools and experience required to implement a system that fits their unique needs quickly and effectively. A critical tool to that promise is Silo. We sat down with Tom Bakry, manager at MPGSOC, to learn how he leverages Silo to improve his service to customers \u2014 and to make his job easier. Watch the video to learn why he turns to Silo every day to investigate security issues raised by customers, protect his own organization and deliver the best intel possible."
+       ]
+      },
+      {
+       "title": "Silo helps white hat hackers secure clients' networks | authentic8",
+       "url": "https://www.authentic8.com/why-authentic8/success-stories/silo-helps-white-hat-hackers-secure-clients-networks",
+       "excerpts": [
+        "Secure Network Technologies"
+       ]
+      }
+     ],
+     "reasoning": "Authentic8\u2019s customer success story identifies MindPoint Group SOC as the organization using Silo; another Authentic8 success story names Secure Network Technologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Vistara Invests $12M in Authentic8 to Accelerate Global Growth",
+       "url": "https://vistaragrowth.com/portfolio-news/vistara-growth-invests-12m-in-authentic8",
+       "excerpts": [
+        "October 8, 2025 We are pleased to announce our US$12 million investment in [Authentic8](https://www.authentic8.com/use-cases) , a leading cybersecurity company pioneering secure, cloud-based web isolation and anonymous browsing solutions. This debt facility helps Authentic8 refinance and expand its capital base to support the next stage of growth, broadening its technology platform and"
+       ]
+      }
+     ],
+     "reasoning": "Vistara Growth dates its US$12 million debt-facility announcement to October 8, 2025, so the requested YYYY-MM value is 2025-10.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Authentic8 - Sales Development Representative, Commercial",
+       "url": "https://jobs.lever.co/authentic8/0cdeb8d9-72b8-4eba-ba13-1432e6eb24cc",
+       "excerpts": [
+        "Maintain accurate and up-to-date activity and opportunity tracking in Salesforce"
+       ]
+      },
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      },
+      {
+       "title": "Third Party Processors | authentic8",
+       "url": "https://www.authentic8.com/third-party-processors",
+       "excerpts": [
+        "|##### Marketo |Processes forms completed on website |United States |United States |"
+       ]
+      }
+     ],
+     "reasoning": "The SDR job posting names Salesforce for opportunity tracking; a marketing job posting lists Google Analytics, Search Console, Tag Manager, WordPress, SEMrush, and Frontify; the official processor list names Marketo for website-form processing.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Leadership Team | Authentic8",
+       "url": "https://authentic8.com/company/leadership-team",
+       "excerpts": [
+        "# Leadership",
+        "Authentic8\u2019s leadership team brings decades of experience across a variety of disciplines including cybersecurity, scaled cloud-based platforms, IT infrastructure, and more.",
+        "Ramesh Rajagopal",
+        "### Ramesh Rajagopal",
+        "Co-Founder and CEO",
+        "Scott Petry",
+        "### Scott Petry",
+        "Co-Founder And Executive Chairman",
+        "Kevin Lund",
+        "### Kevin Lund",
+        "Chief Technology Officer",
+        "Chirag Vasavada",
+        "### Chirag Vasavada",
+        "Chief Operating Officer / Chief Financial Officer",
+        "Miguel Ramos",
+        "### Miguel Ramos",
+        "Chief Product Officer",
+        "### Nabeel Ahmadieh",
+        "Chief Revenue Officer",
+        "Matt Ashburn",
+        "### Matt Ashburn",
+        "Chief Customer Officer",
+        "Christina Calderon",
+        "### Christina Calderon",
+        "Head of Human Resources",
+        "### Mike Burwick",
+        "VP, Technical Engagement",
+        "* [Follow on LinkedIn](https://www.linkedin.com/in/nabeel-ahmadieh-02ba2a33/)",
+        "Nabeel is responsible for all sales and marketing efforts at Authentic8. Since joining the company in late 2017, he has played a pivotal role in shaping Authentic8\u2019s go-to-market strategy, refining sales processes, and building high-performing teams. Nabeel has been instrumental in driving revenue growth and has served as a trusted advisor to both public and private sector customers.",
+        "Prior to Authentic8, Nabeel was a senior sales leader at immixGroup, where he managed over $250 million in annual cybersecurity sales to the government. In this role, he helped more than 100 technology companies navigate the complexities of selling to the public sector, expanding their federal footprint and accelerating growth.",
+        "* [Follow on LinkedIn](https://www.linkedin.com/in/mburwick)",
+        "Mike Burwick serves as Vice President of Technical Engagement at Authentic8, overseeing Sales Engineering, Professional Services, and Customer Support. In this role, he is responsible for the technical success of Authentic8's enterprise, government, and commercial customers across every stage of the customer journey \u2014 including organizations that use the Silo platform for cyber threat intelligence, OSINT investigations, financial crime compliance, and incident response workflows.",
+        "Since joining Authentic8 in 2019 as Director of Sales Engineering, Mike has built and scaled the technical customer organization while working closely with product and engineering to translate client requirements into platform capabilities. He also leads Authentic8's AI and API integration initiatives, developing automation that connects the Silo platform to customer workflows and Tech Alliance Partner integrations \u2014 a key component of the company's evolving AI product strategy."
+       ]
+      }
+     ],
+     "reasoning": "The complete, small leadership roster and its biographies show no C-level or VP-level appointment within the 12 months before 2026-11-09; the dated tenures shown for the CRO and VP are 2017 and 2019, respectively, and no departure is announced on the team page.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Authentic8",
+       "url": "https://jobs.lever.co/authentic8",
+       "excerpts": [
+        "[##### Sales Development Representative, Commercial Remote \u2014 Full-time Remote - United",
+        "[##### Governance Administration Specialist Remote \u2014 Full-time Remote - United States](https://jobs.lever.co/authentic8/9c09ad9d-dbc7-4da5-aa7a-a9a8f5c30576)"
+       ]
+      }
+     ],
+     "reasoning": "The current Authentic8 job-board entries reviewed were Sales Development Representative and Governance Administration Specialist, with no AI, ML, or data-science role title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Vistara Invests $12M in Authentic8 to Accelerate Global Growth",
+       "url": "https://vistaragrowth.com/portfolio-news/vistara-growth-invests-12m-in-authentic8",
+       "excerpts": [
+        "October 8, 2025 We are pleased to announce our US$12 million investment in [Authentic8](https://www.authentic8.com/use-cases) , a leading cybersecurity company pioneering secure, cloud-based web isolation and anonymous browsing solutions. This debt facility helps Authentic8 refinance and expand its capital base to support the next stage of growth, broadening its technology platform and"
+       ]
+      }
+     ],
+     "reasoning": "Vistara Growth\u2019s announcement directly characterizes its October 2025 $12 million investment as a debt facility, which is the stage/type reported here.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": " Silo Nexus AI : Authentic8 Support ",
+       "url": "https://support.authentic8.com/support/solutions/articles/16000236939-silo-nexus-ai",
+       "excerpts": [
+        "## Silo Nexus AI Print",
+        "Modified on: Tue, Apr 28, 2026 at 12:45 PM",
+        "* * *",
+        "**Silo Nexus** is an AI analysis layer built directly into Silo Workspace for digital investigations. Unlike general-purpose AI tools, Nexus operates entirely within your Silo session\u2014analyzing your open tabs and captured content without exposing your research intent or identity to external providers.",
+        "Silo Nexus AI enables organizations to leverage AI-driven analysis without compromising their security or privacy requirements. Nexus AI operates entirely within Silo\u2019s established secure architecture and follows the same principles of isolation and ephemeral execution that define the platform. All Nexus AI activity is logged in accordance with the customer\u2019s existing Silo logging configuration. These logs are encrypted and remain fully under customer control, providing customers complete visibility into how the feature is used.",
+        "**What Nexus Does**",
+        "* **Automated analysis** \u2014 Captures and summarizes content automatically as you work. No prompt required to start.",
+        "* **Active Annotations** \u2014 Surfaces relevant leads and research threads with one-click pivots that do not disrupt your investigation flow.",
+        "* **Grounded responses** \u2014 Every answer is anchored to a verified source URL, giving you a clear path from analysis to evidence.",
+        "* **Persistent conversations** \u2014 AI conversation threads persist across your session and can be exported, imported, or shared via Silo Drive.",
+        "* **Total anonymity** \u2014 Queries are processed through the Authentic8 obfuscation layer. External AI providers see the request, never the requester, and queries are never retained for vendor training."
+       ]
+      },
+      {
+       "title": "User Management API Reference Guide : Authentic8 Support",
+       "url": "https://support.authentic8.com/support/solutions/articles/16000102110-user-management-api",
+       "excerpts": [
+        "Modified on: Mon, Feb 2, 2026 at 8:18 AM"
+       ]
+      }
+     ],
+     "reasoning": "Authentic8 publishes a substantive Silo Nexus AI support article and a separate User Management API reference guide, establishing public product documentation across multiple articles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Third Party Processors | authentic8",
+       "url": "https://www.authentic8.com/third-party-processors",
+       "excerpts": [
+        "333 Twin Dolphin Drive Suite 112 Redwood City, CA 94065"
+       ]
+      }
+     ],
+     "reasoning": "Authentic8\u2019s official third-party-processors page footer gives its address in Redwood City, California.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "What\u2019s New with Silo Nexus AI v2 | Authentic8",
+       "url": "https://authentic8.com/blog/whats-new-with-silo-nexus-ai-v2",
+       "excerpts": [
+        "Product news What\u2019s New with Silo Nexus AI v2 [By Miguel Ramos](https://authentic8.com/blog/author/mramos/) August 19, 2026 When we introduced [Silo Nexus AI](https://authentic8.com/silo-nexus-ai/) , the goal was never to build another chatbot. ... **Silo Drive integration.** Send files stored in Silo Drive straight to Nexus AI. Free to start Every Silo Workspace user now gets 10 Nexus AI prompts a day at no additional cost. That\u2019s enough to try investigation roles, test the browser integration, and see the difference role-specific analysis makes. ... Six investigation roles, new file formats, right-click browser integration, Silo Drive integration, user-managed custom prompts, and conversation search, on top of the anonymity and audit protections from v1."
+       ]
+      }
+     ],
+     "reasoning": "Authentic8 announced Silo Nexus AI v2 on August 19, 2026, with major feature additions; this falls within the six months before 2026-11-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Authentic8",
+       "url": "https://jobs.lever.co/authentic8",
+       "excerpts": [
+        "[##### Sales Development Representative, Commercial Remote \u2014 Full-time Remote - United"
+       ]
+      },
+      {
+       "title": "Authentic8 - Sales Development Representative, Commercial",
+       "url": "https://jobs.lever.co/authentic8/0cdeb8d9-72b8-4eba-ba13-1432e6eb24cc",
+       "excerpts": [
+        "Maintain accurate and up-to-date activity and opportunity tracking in Salesforce"
+       ]
+      }
+     ],
+     "reasoning": "The job board lists a Sales Development Representative, Commercial role, and the linked live posting confirms the SDR position.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Vistara Invests $12M in Authentic8 to Accelerate Global Growth",
+       "url": "https://vistaragrowth.com/portfolio-news/vistara-growth-invests-12m-in-authentic8",
+       "excerpts": [
+        "October 8, 2025 We are pleased to announce our US$12 million investment in [Authentic8](https://www.authentic8.com/use-cases) , a leading cybersecurity company pioneering secure, cloud-based web isolation and anonymous browsing solutions. This debt facility helps Authentic8 refinance and expand its capital base to support the next stage of growth, broadening its technology platform and"
+       ]
+      }
+     ],
+     "reasoning": "Vistara Growth announced its $12 million debt facility for Authentic8 on October 8, 2025, which is within the 18 months before 2026-11-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Platform Assurance | Authentic8",
+       "url": "https://authentic8.com/certifications",
+       "excerpts": [
+        "10 security and compliance certifications FedRAMP, SOC 2, PCI DSS, HIPAA, GDPR, DFARS, ISO 27001, ISO 27701, CMMC, and CSA."
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is explicitly named on the Platform Assurance page.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Platform Assurance | Authentic8",
+       "url": "https://authentic8.com/certifications",
+       "excerpts": [
+        "10 security and compliance certifications FedRAMP, SOC 2, PCI DSS, HIPAA, GDPR, DFARS, ISO 27001, ISO 27701, CMMC, and CSA."
+       ]
+      }
+     ],
+     "reasoning": "PCI DSS is explicitly named on the Platform Assurance page.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Platform Assurance | Authentic8",
+       "url": "https://authentic8.com/certifications",
+       "excerpts": [
+        "10 security and compliance certifications FedRAMP, SOC 2, PCI DSS, HIPAA, GDPR, DFARS, ISO 27001, ISO 27701, CMMC, and CSA."
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is explicitly named on the Platform Assurance page.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Platform Assurance | Authentic8",
+       "url": "https://authentic8.com/certifications",
+       "excerpts": [
+        "10 security and compliance certifications FedRAMP, SOC 2, PCI DSS, HIPAA, GDPR, DFARS, ISO 27001, ISO 27701, CMMC, and CSA."
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly named on the Platform Assurance page.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.4",
+     "citations": [
+      {
+       "title": "Platform Assurance | Authentic8",
+       "url": "https://authentic8.com/certifications",
+       "excerpts": [
+        "10 security and compliance certifications FedRAMP, SOC 2, PCI DSS, HIPAA, GDPR, DFARS, ISO 27001, ISO 27701, CMMC, and CSA."
+       ]
+      }
+     ],
+     "reasoning": "ISO 27001 is explicitly named on the Platform Assurance page.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Better together: Silo and MPGSOC",
+       "url": "https://authentic8.com/success-story/security-operations-mssp",
+       "excerpts": [
+        "Organization MindPoint Group SOC Authentic8 Product Silo Workspace MPGSOC, a managed security services provider, promises its customers the expertise, tools and experience required to implement a system that fits their unique needs quickly and effectively. A critical tool to that promise is Silo. We sat down with Tom Bakry, manager at MPGSOC, to learn how he leverages Silo to improve his service to customers \u2014 and to make his job easier. Watch the video to learn why he turns to Silo every day to investigate security issues raised by customers, protect his own organization and deliver the best intel possible."
+       ]
+      }
+     ],
+     "reasoning": "The success story identifies MindPoint Group SOC as the organization for which Silo Workspace is the featured product.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Silo helps white hat hackers secure clients' networks | authentic8",
+       "url": "https://www.authentic8.com/why-authentic8/success-stories/silo-helps-white-hat-hackers-secure-clients-networks",
+       "excerpts": [
+        "Secure Network Technologies"
+       ]
+      }
+     ],
+     "reasoning": "The success story names Secure Network Technologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Authentic8 - Sales Development Representative, Commercial",
+       "url": "https://jobs.lever.co/authentic8/0cdeb8d9-72b8-4eba-ba13-1432e6eb24cc",
+       "excerpts": [
+        "Maintain accurate and up-to-date activity and opportunity tracking in Salesforce"
+       ]
+      }
+     ],
+     "reasoning": "The SDR job posting explicitly names Salesforce for activity and opportunity tracking.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting explicitly names Google Analytics.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting explicitly names Google Search Console.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting explicitly names Google Tag Manager.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting explicitly names WordPress.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.5",
+     "citations": [
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting explicitly names SEMrush.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.6",
+     "citations": [
+      {
+       "title": "Authentic8 - Sr. Content Marketing Manager",
+       "url": "https://jobs.lever.co/authentic8/adfd9fa8-f386-41a9-bdd3-b62ea4e5012d",
+       "excerpts": [
+        "Comfortable with the tools listed and confident pulling your own reports:Google Analytics, Google Search Console, Google Tag Manager, WordPress, Claude Code, SEMrush, Asana, Zoom, Google Workspace Suite, Frontify content management system"
+       ]
+      }
+     ],
+     "reasoning": "The marketing job posting explicitly names Frontify as its content management system.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.7",
+     "citations": [
+      {
+       "title": "Third Party Processors | authentic8",
+       "url": "https://www.authentic8.com/third-party-processors",
+       "excerpts": [
+        "|##### Marketo |Processes forms completed on website |United States |United States |"
+       ]
+      }
+     ],
+     "reasoning": "The official third-party-processors page names Marketo as processing forms completed on the company website.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2010.0,
+    "compliance_certs": [
+     "SOC 2",
+     "PCI DSS",
+     "HIPAA",
+     "GDPR",
+     "ISO 27001"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Authentic8\u2019s Silo is a cloud-based, isolated browser that enables intelligence and security teams to investigate the web anonymously without exposing their identity, location, or mission.",
+    "employee_band": "101-200",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 12000000.0,
+    "named_customers": [
+     "MindPoint Group SOC",
+     "Secure Network Technologies"
+    ],
+    "funding_date": "2025-10",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Google Analytics",
+     "Google Search Console",
+     "Google Tag Manager",
+     "WordPress",
+     "SEMrush",
+     "Frontify",
+     "Marketo"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "debt facility",
+    "public_docs": true,
+    "hq_city": "Redwood City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

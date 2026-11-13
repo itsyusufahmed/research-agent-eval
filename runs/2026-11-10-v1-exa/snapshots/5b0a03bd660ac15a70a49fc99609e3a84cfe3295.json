@@ -1,0 +1,23 @@
+{
+ "url": "https://docs.twelvelabs.io/docs/concepts/models/marengo.mdx",
+ "fetched_at": "2026-11-10T19:30:42.618306+00:00",
+ "hours_after_run": 43.5,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "fb777b5dfc65a87a59e24a3b0c8d71025235692ae277f4aa6a3bb1c91b17af69",
+ "chars": 3697,
+ "truncated": false,
+ "title": "",
+ "markdown": "> This page is for version v1.3 (default).\n> For other versions, use one of these documentation indexes:\n> - v1.3 (default): https://docs.twelvelabs.io/v1.3/llms.txt\n\n> For clean Markdown of any page, append .md to the page URL.\n> For a complete documentation index, see https://docs.twelvelabs.io/llms.txt.\n\n# Marengo\n\n> Marengo is an embedding model. It analyzes visual, audio, and text information.\n\nMarengo is an embedding model for comprehensive video understanding. It analyzes visual, audio, and text information to provide a holistic understanding similar to human comprehension.\n\n# Available versions\n\n#### [Marengo 3.5](/v1.3/docs/concepts/models/marengo/marengo-3-5)\n\nCreate embeddings from video, audio, images, text, and documents.\n\n#### [Marengo 3.0](/v1.3/docs/concepts/models/marengo/marengo-3-0)\n\nSearch your content with the platform, and create embeddings from video, audio, images, and text.\n\n# Examples\n\nThe examples in this section are from the [Playground](https://playground.twelvelabs.io). However, the principles demonstrated are similar when invoking the API programmatically.\n\n## Steve Jobs introducing the iPhone\n\nIn the example screenshot below, the query was \"How did Steve Jobs introduce the iPhone?\".  The Marengo video understanding model used information found in the visual and conversation audio to perform the following tasks:\n\n* Visual recognition of a famous person (Steve Jobs)\n* Joint speech and visual recognition to semantically search for the moment when Steve Jobs introduced the iPhone. Note that semantic search finds information based on the intended meaning of the query rather than the literal words you used, meaning that the platform identified the matching video fragments even if Steve Jobs didn't explicitly say the words in the query.\n\n![](/_fern-files/_img/c18654c85c03cbe61b796eca685042cdb565b5c96cd1ab72348de69e293fda14.webp)\n\n## Polar bear holding a Coca-Cola bottle\n\nIn the example screenshot below, the query was \"Polar bear holding a Coca-Cola bottle.\" The Marengo video understanding model used information found in the visual and logo modalities to perform the following tasks:\n\n* Recognition of a cartoon character (polar bear)\n* Identification of an object (bottle)\n* Detection of a specific brand logo (Coca-Cola)\n* Identification of an action (polar bear holding a bottle)\n\n![](/_fern-files/_img/24b43c456ac39ff582e3aae21167cfdac9bd1e751a9df681812821994a1b3605.webp)\n\nTo see this example in the Playground, ensure you're logged in, and then open [this URL](https://playground.twelvelabs.io/indexes/691bc2e7d4fd5772d3a41e02/search?qt=Polar+bear+holding+a+Coca-Cola+bottle.) in your browser.\n\n## Using different languages\n\nThis section provides examples of using different languages to perform search requests.\n\n### Spanish\n\nIn the example screenshot below, the query was \"¿Cómo presentó Steve Jobs el iPhone?\" (\"How did Steve Jobs introduce the iPhone?\"). The Marengo video understanding model used information from the visual and audio modalities.\n\n![](/_fern-files/_img/d8df0adc221ba986d05536059887bc7c1d72ef9a168be754d0f08216a927ff13.webp)\n\n### Chinese\n\nIn the example screenshot below, the query was \"猫做有趣的事情\" (\"Cats doing funny things.\"). The Marengo video understanding model used information from the visual modality.\n\n![](/_fern-files/_img/be100105b4db77b186cd9cdcc9a328ebd6b87c77b8d0e15182d19a1600df4856.webp)\n\nTo see this example in the Playground, ensure you're logged in, and then open [this URL](https://playground.twelvelabs.io/indexes/691bc2e7d4fd5772d3a41e02/search?qt=猫做有趣的事情) in your browser.\n\n# Support\n\nFor support or feedback regarding Marengo, contact [support@twelvelabs.io](mailto:support@twelvelabs.io).",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider",
+  "public_docs"
+ ],
+ "late": true
+}

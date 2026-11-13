@@ -1,0 +1,414 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob16m937Qocqe5VzJ",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "authenticate.com",
+    "status": "complete",
+    "result": {
+     "claygent-auto-A": {
+      "eng_blog": {
+       "notes": "The blog index shows primarily product announcements and explanatory/marketing articles; it does not show at least two engineer-authored posts about how the product is built.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://authenticate.com/resources/blog"
+       ]
+      },
+      "reasoning": "The company’s own homepage, pricing section, blog, compliance information, and developer portal provide direct evidence for product, pricing, docs, and compliance. LinkedIn supplies the company’s location, founding year, and employee count; its 13-person figure maps to the requested 11-20 band. A third-party report names three clients, while Tracxn reports no funding rounds. The current careers board reports no openings. I found no public model-provider disclosure or sufficiently verifiable leadership-change evidence, so those remain unknown.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Searched Google with query \"site:authenticate.com Authenticate company about product pricing customers careers\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate is an identity verification platform that confirms a person is real and who they claim to be, then checks the criminal, driving, employment and ...\",\"position\":1},{\"title\":\"Top 5 Best Customer Onboarding Tools for Fraud Detection ...\",\"link\":\"https://authenticate.com/resources/blog/customer-onboarding-tools...",
+       "Searched Google with query \"Authenticate authenticate.com funding employees headquarters founded\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate is an identity verification platform that confirms a person is real and who they claim to be, then checks the criminal, driving, employment and ...\",\"position\":1},{\"title\":\"Authenticate\",\"link\":\"https://www.linkedin.com/company/authenticatedotcom\",\"displayedLink\":\"49.4K+ followers\",\"snippet\":\"Headquarters P...",
+       "Searched Google with query \"site:authenticate.com blog docs security compliance Authenticate\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate Blog\",\"link\":\"https://authenticate.com/resources/blog\",\"displayedLink\":\"https://authenticate.com › resources › blog\",\"snippet\":\"Discover how Authenticate® ensures trust and security by adhering to SOC 2, HIPAA, GDPR, and other compliance standards. Contact Toll Free: (833) 2-VERIFY ...\",\"position\":1},{\"title\":\"Security & Compliance in Identity Verification - Authenticate\",\"link\":\"https://authenticate.com/resources/security-and-compliance\",\"displayedLink\"...",
+       "Searched Google with query \"Authenticate authenticate.com LinkedIn jobs careers\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate\",\"link\":\"https://www.linkedin.com/company/authenticatedotcom\",\"displayedLink\":\"49.4K+ followers\",\"snippet\":\"Developer jobs. 258,935 open jobs · User Experience Designer jobs. 13,659 open jobs · Manager jobs. 1,880,925 open jobs · Associate jobs. 1,091,945 open jobs ...\",\"position\":1},{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate ...",
+       "Searched Google with query \"Authenticate.com customer case studies\". The results are: \n {\"search_results\":[{\"title\":\"A Look Inside Authenticate.com's Customer Portal\",\"link\":\"https://authenticate.com/resources/blog/effective-verifications-customer-portal/\",\"displayedLink\":\"https://authenticate.com › resources › blog › effective-ve...\",\"snippet\":\"A Use Case of Our User-Friendly Customer Portal. Meet Sarah, an online marketplace owner that sells luxury handcrafted goods. She wants to ...\",\"date\":\"May 5, 2023\",\"position\":1},{\"title\":\"Identity Authentication & Background Verification A...",
+       "Searched Google with query \"Authenticate.com Crunchbase funding\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/authenticating-com\",\"displayedLink\":\"https://www.crunchbase.com › authenticating-com\",\"snippet\":\"Authenticate is a software platform that provides businesses with advanced digital identity verification and fraud‑prevention tools.\",\"position\":1},{\"title\":\"Crunchbase | Private Company Data & Predictive Intelligence\",\"link\":\"https://www.crunchbase.com/\",\"displayedLink\":\"...",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/\",\"question\":\"What product does company provide, pricing links, footer/navigation links for docs, careers, customers, address?\"}. The results are: \n \"Product: Authenticate® identity verification platform—confirms a person is real, verifies government ID/liveness/face match, and checks criminal, driving, employment, education, business/financial, and global watchlist records; includes continuous monitoring and developer APIs/SDKs.\\n\\nPricing: https://authenticate.com/#pricing — listed examples: Government ID Verification $2; Knowledge Based Authentication $1; SSN Verification $1; Facial Recognition & Liveness Detection free; employment/educat...",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/security-and-compliance\",\"question\":\"Which named compliance certifications or standards are claimed? AI/model provider references?\"}. The results are: \n \"Authenticate claims compliance with: SOC 2 Type 2, HIPAA, GDPR, CCPA, DPPA, GLBA, and PCI DSS. It also mentions audits for compliance with industry security standards and FCRA in a legal disclaimer. AWS is named as the cloud backup provider; no AI/model provider is referenced. Compliance page: https://info.authenticate.com/compliance\"",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog\",\"question\":\"Is this blog about engineering/product internals? List newest dated posts and index evidence.\"}. The results are: \n \"Blog index: https://authenticate.com/resources/blog. No publication dates are provided in the supplied webpage content, so newest dated posts cannot be determined. Indexed posts and evidence:\\n- “User Identity Verification in 2026: The Complete Platform Guide” — Identity; explains how verification methods work and what they catch. https://authenticate.com/resources/blog/identity-verification-guide-2026\\n- “KYC & Identity Verification APIs (2026)” — Identity; compares 14 APIs using public docume...",
+       "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/authenticatedotcom\",\"question\":\"Headquarters, founded year, employee count, leadership roster or recent changes?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/authenticatedotcom\",\"structured_locations\":[{\"is_headquarters\":true,\"city\":\"Park City\",\"state\":\"Utah\",\"postal_code\":\"84060\",\"country_iso\":\"US\",\"region\":\"NAM\"}],\"locations\":[{\"address\":\"1743 Sidewinder Dr, 109, Park City, Utah 84060, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"1743 Sidewinder Dr\",\"formatted_address\":\"1743 Sidewinder Dr, Park City, UT 84060\",\"business_region\":\"NAM\",\"latitude\":40.662665,\"locality\":\"Park City\",\"admin_district\":...",
+       "Used visitWebpage {\"url\":\"https://www.crunchbase.com/organization/authenticating-com\",\"question\":\"Funding rounds, amounts and dates; employee count?\"}. The results are: \n \"Authenticate funding rounds/amounts/dates: no relevant funding-round data is provided in the webpage content. Employee count: 11–50 (Crunchbase).\"",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/pricing\",\"question\":\"Does this page have public plans/prices or a contact form?\"}. The results are: \n \"Page not found (404). The only available link is “Go home” to https://authenticate.com. No public plans/prices or contact form information is shown.\"",
+       "Searched Google with query \"site:authenticate.com \"Careers\" Authenticate jobs\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Employment and education verification, criminal history and global watchlist searches. ... Terms of UsePrivacy PolicyGet StartedMedallion™CareersSystem Status ...\",\"position\":1},{\"title\":\"Instant & Reliable Background Checks for Fraud Prevention\",\"link\":\"https://authenticate.com/products/background-check\",\"displayedLink...",
+       "Searched Google with query \"Authenticate.com funding raised seed round company 2018\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate is an identity verification platform that confirms a person is real and who they claim to be, then checks the criminal, driving, employment and ...\",\"position\":1},{\"title\":\"Authenticate - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/authenticating-com\",\"displayedLink...",
+       "Used visitWebpage {\"url\":\"https://apply.workable.com/authenticate\",\"question\":\"List current open jobs and job titles; any AI/ML/data science or SDR/BDR/account executive positions?\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://docs.authenticate.com\",\"question\":\"Is this a public developer documentation portal with multiple articles? Does documentation name AI model providers or CRM integrations?\"}. The results are: \n \"Authenticate Developer Hub (https://docs.authenticate.com/) is a public developer documentation portal with Guides, API Reference, Search, and multiple documented topics, including Get Started, user creation, JWTs, webhooks, ReAuthenticate™, results analysis, and Mock APIs. The provided content does not name any AI model providers or CRM integrations. Documentation index: https://docs.authenticate.com/llms.txt.\"",
+       "Used visitWebpage {\"url\":\"https://info.authenticate.com/compliance\",\"question\":\"What specific certifications are publicly claimed, and any AI vendor or subprocessors?\"}. The results are: \n \"Authenticate® publicly claims compliance with SOC 2 Type 2, HIPAA, PCI DSS, GDPR, CCPA, FCRA, DPPA, and GLBA. The provided webpage content does not identify any AI vendor or subprocessors. Relevant source: https://info.authenticate.com/before-you-begin?hsLang=en#data-coverage-compliance\"",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog\",\"question\":\"What dated latest posts and any product launch announcements in recent months? Does index show engineering posts describing product internals?\"}. The results are: \n \"Relevant webpage entries:\\n- “How to Verify User Identity in 2026: The Complete Platform Guide” — https://authenticate.com/resources/blog/identity-verification-guide-2026\\n- “Airbnb Host Asking for ID? When It's OK” — https://authenticate.com/resources/blog/airbnb-host-asking-for-id\\n- “KYC & Identity Verification APIs (2026)” — https://authenticate.com/resources/blog/identity-verification-api\\n- “Liveness Detection Now Has Two Tests” — https://authenticate.com/resources/blog/liveness-detection...",
+       "Used visitWebpage {\"url\":\"https://siliconangle.com/2022/08/31/authenticate-com-service-integrates-id-authentication-applications-platforms/\",\"question\":\"Which organizations are identified as customers/users of Authenticate, and company background?\"}. The results are: \n \"Authenticate.com launched Identity Verification Infrastructure as a Service in August 2022, integrating photo ID and passport authentication into applications and platforms. It is designed for high-risk businesses and supports facial recognition, liveness detection, knowledge quizzes, background checks, AML/watch-list screening, enhanced due diligence, and fraud/criminal-data detection. The service supports identity-document authentication across 200 countries and territories and covers peer-to...",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/authenticate-lending-valley-fraud-business-funding/\",\"question\":\"Is Lending Valley a customer case study and what evidence?\"}. The results are: \n \"The page is titled “How Authenticate Helped Lending Valley Cut Business Funding Fraud by 78%,” published 7 December 2025. It explicitly describes Lending Valley as partnering with Authenticate to reduce fraud. Reported outcomes include a 78%+ reduction in fraudulent submissions, a 62% reduction in manual reviews, and faster approvals; figures are attributed to “Lending Valley internal analysis, 2025.” The page includes a quote from Lending Valley’s compliance lead: “Authenticate.com gave us the...",
+       "Searched Google with query \"site:authenticate.com/resources/blog \"Introducing\" Authenticate 2025 OR 2026 product launch\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate Blog\",\"link\":\"https://authenticate.com/resources/blog\",\"displayedLink\":\"https://authenticate.com › resources › blog\",\"snippet\":\"Introducing ReAuthenticate™: Revolutionary, Free eKYC. Discover how ReAuthenticate™, a groundbreaking free eKYC service, can help financial institutions comply ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Aauthenticate.com%2Fresources%2Fbl...",
+       "Searched Google with query \"Authenticate.com employees LinkedIn 11-50 13 team leadership executives\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate\",\"link\":\"https://www.linkedin.com/company/authenticatedotcom\",\"displayedLink\":\"49.4K+ followers\",\"snippet\":\"We offer comprehensive solutions that streamline verification processes while leveraging state-of-the-art technology and sophisticated algorithms while boosting ...\",\"position\":1},{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authentica...",
+       "Searched Google with query \"site:authenticate.com Salesforce HubSpot integration Authenticate\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:authenticate.com/resources/blog \"engineer\" Authenticate architecture infrastructure\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:authenticate.com/privacy subprocessor AWS AI OpenAI Authenticate\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/\",\"question\":\"Does the company publish its pricing on the homepage? Find any public price figures or pricing section.\"}. The results are: \n \"Homepage includes a dedicated “Pricing” section and Pricing navigation link: https://authenticate.com/#pricing. Public prices include: Risk Score $0.50; Government ID Verification $2; Knowledge Based Authentication $1; SSN Verification $1; Facial Recognition & Liveness Detection Free; Authoritative Database Search Free; Email Verification Free; Phone Number Verification Free; FEIN/Tax ID/DUNS Verification $1; Full US Business Verification $5; Financial Account Ownership Verification $2; US Empl...",
+       "Searched Google with query \"site:authenticate.com/resources/blog/authenticate \"2026\" \"launches\" OR \"Introducing\" Authenticate product\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"site:authenticate.com/resources/blog/ \"Introducing ReAuthenticate\" date\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate Blog\",\"link\":\"https://authenticate.com/resources/blog\",\"displayedLink\":\"https://authenticate.com › resources › blog\",\"snippet\":\"Introducing ReAuthenticate™: Revolutionary, Free eKYC. Discover how ReAuthenticate™, a groundbreaking free eKYC service, can help financial institutions comply ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Aauthenticate.com%2Fresources%2Fbl...",
+       "Searched Google with query \"site:authenticate.com/resources/blog \"Financial Account Ownership Verification\" date Authenticate\". The results are: \n {\"search_results\":[{\"title\":\"Financial Account Ownership Verification: Enhancing Security ...\",\"link\":\"https://authenticate.com/resources/blog/financial-account-ownership-verification/\",\"displayedLink\":\"https://authenticate.com › resources › blog › financial-ac...\",\"snippet\":\"Enter Authenticate's Financial Account Ownership Verification, a ... Users must provide their date of birth (DOB) for enhanced accuracy ...\",\"date\":\"Nov 29, 2023\",\"position\":1},{\"title\":\"Authenticate Blog\",\"link\":\"https://a...",
+       "Searched Google with query \"site:apply.workable.com/authenticate/ Authenticate jobs open\". The results are: \n {\"search_results\":[{\"title\":\"Careers at Authenticate - Job Openings\",\"link\":\"https://apply.workable.com/authenticate/\",\"displayedLink\":\"https://apply.workable.com › authenticate\",\"snippet\":\"Sorry, no job openings at the moment. We open new jobs from time to time, so please check again soon!\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Aapply.workable.com%2Fauthenticate%2F%20Authenticate%20jobs%20open&hl=en&gl=...",
+       "Searched Google with query \"site:authenticate.com/careers Authenticate open positions\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/introducing-medallion-user-friendly-identity-verification-solution\",\"question\":\"What date was this product launch post published?\"}. The results are: \n \"Product post: “Introducing Medallion™ - A User-Friendly Identity Verification Solution.” Published 19 July 2023.\"",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/free-kyc\",\"question\":\"What date was ReAuthenticate product launch post published?\"}. The results are: \n \"Page title: “Introducing ReAuthenticate™: Revolutionary, Free eKYC.” The post metadata states: “Published 2 April 2024.”\"",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/financial-account-ownership-verification\",\"question\":\"What date is this product feature launch post published?\"}. The results are: \n \"Product feature launch post: “Financial Account Ownership Verification: Enhancing Security and Compliance” — Published 29 November 2023.\"",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog\",\"question\":\"Check blog index for latest dated launch announcements or product release entries, and latest date.\"}. The results are: \n \"Blog index: https://authenticate.com/resources/blog. Relevant launch/product-release entries shown (dates not provided in the webpage content supplied):\\n- “Authenticating.com launches Airnode” — Product/Partners — https://authenticate.com/resources/blog/authenticating-launches-airnode\\n- “Authenticate.com Launches its Identity Verification Infrastructure as a Service (IaaS) for Platforms” — Press Release — https://authenticate.com/resources/blog/Identity-Verification-Infrastructure-as-a-Servic...",
+       "Used visitWebpage {\"url\":\"https://authenticate.com/privacy\",\"question\":\"Does privacy page list subprocessors or AI/model providers?\"}. The results are: \n \"The page is a 404 “Page not found” page and contains no privacy-policy, subprocessor, or AI/model-provider information. Link provided: https://authenticate.com\"",
+       "Searched Google with query \"site:authenticate.com/resources/blog/authenticate-launches-ethicAi published date\". The results are: \n {\"message\":\"No data returned from search query\"}"
+      ],
+      "hq_location": {
+       "notes": "The company profile identifies Park City, Utah, United States, as its headquarters.",
+       "value": {
+        "city": "Park City",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/authenticatedotcom"
+       ]
+      },
+      "public_docs": {
+       "notes": "Authenticate has a public developer documentation portal with guides, API reference, and multiple topics such as webhooks, JWTs, and results analysis.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.authenticate.com/",
+        "https://docs.authenticate.com/llms.txt"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The company is listed as unfunded with no funding rounds, so it did not raise in the 18 months before 2026-11-09.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://tracxn.com/d/companies/authenticate/__nLkX70v1Md2Oox91onhqKGJk65gEvBCHQHdzp1cCnHw"
+       ]
+      },
+      "founded_year": {
+       "notes": "The company profile lists 2018 as the founding year.",
+       "value": 2018,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/authenticatedotcom"
+       ]
+      },
+      "last_funding": {
+       "notes": "Tracxn describes Authenticate as unfunded and says it has not raised any funding rounds; no date or amount applies.",
+       "value": {
+        "date": "",
+        "stage": "none",
+        "amount_usd": 0
+       },
+       "status": "asserted",
+       "citations": [
+        "https://tracxn.com/d/companies/authenticate/__nLkX70v1Md2Oox91onhqKGJk65gEvBCHQHdzp1cCnHw"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The readable blog index does not show a product or major-feature launch in the six months before 2026-11-09. Its dated product-launch post for ReAuthenticate is from 2024; the more recent visible material is informational blog content, not a launch announcement.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://authenticate.com/resources/blog",
+        "https://authenticate.com/resources/blog/free-kyc"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The homepage has a Pricing navigation link and publishes prices for multiple checks and services.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://authenticate.com/#pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "LinkedIn lists 13 employees, which falls in the 11-20 band.",
+       "value": "11-20",
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/authenticatedotcom"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The careers board reports no current job openings.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://apply.workable.com/authenticate/"
+       ]
+      },
+      "model_provider": {
+       "notes": "I checked the public developer documentation, blog, security/compliance material, and privacy page; none of the available material publicly names an AI model or model provider.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "The article identifies all three as clients/users of Authenticate.com.",
+       "value": [
+        "Call Emmy Inc.",
+        "RunnerCity Inc.",
+        "NotaryHub"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://siliconangle.com/2022/08/31/authenticate-com-service-integrates-id-authentication-applications-platforms/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The careers board says there are no job openings at the moment.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://apply.workable.com/authenticate/"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The compliance page names SOC 2 Type 2, HIPAA, GDPR, and PCI DSS. Other legal or regulatory frameworks on the page are omitted because the requested list is limited to these five.",
+       "value": [
+        "SOC 2",
+        "HIPAA",
+        "GDPR",
+        "PCI DSS"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://info.authenticate.com/before-you-begin?hsLang=en#data-coverage-compliance"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The public developer documentation is available, but the material reviewed does not name a CRM or sales/marketing system.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://docs.authenticate.com/",
+        "https://docs.authenticate.com/llms.txt"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "The homepage describes its identity verification platform and related identity, background, and continuous-monitoring checks.",
+       "value": "Authenticate® provides identity-verification, fraud-prevention, and background-screening tools—including APIs and SDKs—for businesses that need to verify customers or users during onboarding and ongoing monitoring.",
+       "status": "asserted",
+       "citations": [
+        "https://authenticate.com/"
+       ]
+      },
+      "timeTakenInSeconds": "128.52",
+      "totalCreditsCharged": 0.4,
+      "leadership_change_12mo": {
+       "notes": "I could not verify a sufficiently complete current team roster or a dated C-level/VP join or departure within the window.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "authenticate.com",
+  "status": "complete",
+  "result": {
+   "claygent-auto-A": {
+    "eng_blog": {
+     "notes": "The blog index shows primarily product announcements and explanatory/marketing articles; it does not show at least two engineer-authored posts about how the product is built.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://authenticate.com/resources/blog"
+     ]
+    },
+    "reasoning": "The company’s own homepage, pricing section, blog, compliance information, and developer portal provide direct evidence for product, pricing, docs, and compliance. LinkedIn supplies the company’s location, founding year, and employee count; its 13-person figure maps to the requested 11-20 band. A third-party report names three clients, while Tracxn reports no funding rounds. The current careers board reports no openings. I found no public model-provider disclosure or sufficiently verifiable leadership-change evidence, so those remain unknown.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Searched Google with query \"site:authenticate.com Authenticate company about product pricing customers careers\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate is an identity verification platform that confirms a person is real and who they claim to be, then checks the criminal, driving, employment and ...\",\"position\":1},{\"title\":\"Top 5 Best Customer Onboarding Tools for Fraud Detection ...\",\"link\":\"https://authenticate.com/resources/blog/customer-onboarding-tools...",
+     "Searched Google with query \"Authenticate authenticate.com funding employees headquarters founded\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate is an identity verification platform that confirms a person is real and who they claim to be, then checks the criminal, driving, employment and ...\",\"position\":1},{\"title\":\"Authenticate\",\"link\":\"https://www.linkedin.com/company/authenticatedotcom\",\"displayedLink\":\"49.4K+ followers\",\"snippet\":\"Headquarters P...",
+     "Searched Google with query \"site:authenticate.com blog docs security compliance Authenticate\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate Blog\",\"link\":\"https://authenticate.com/resources/blog\",\"displayedLink\":\"https://authenticate.com › resources › blog\",\"snippet\":\"Discover how Authenticate® ensures trust and security by adhering to SOC 2, HIPAA, GDPR, and other compliance standards. Contact Toll Free: (833) 2-VERIFY ...\",\"position\":1},{\"title\":\"Security & Compliance in Identity Verification - Authenticate\",\"link\":\"https://authenticate.com/resources/security-and-compliance\",\"displayedLink\"...",
+     "Searched Google with query \"Authenticate authenticate.com LinkedIn jobs careers\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate\",\"link\":\"https://www.linkedin.com/company/authenticatedotcom\",\"displayedLink\":\"49.4K+ followers\",\"snippet\":\"Developer jobs. 258,935 open jobs · User Experience Designer jobs. 13,659 open jobs · Manager jobs. 1,880,925 open jobs · Associate jobs. 1,091,945 open jobs ...\",\"position\":1},{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate ...",
+     "Searched Google with query \"Authenticate.com customer case studies\". The results are: \n {\"search_results\":[{\"title\":\"A Look Inside Authenticate.com's Customer Portal\",\"link\":\"https://authenticate.com/resources/blog/effective-verifications-customer-portal/\",\"displayedLink\":\"https://authenticate.com › resources › blog › effective-ve...\",\"snippet\":\"A Use Case of Our User-Friendly Customer Portal. Meet Sarah, an online marketplace owner that sells luxury handcrafted goods. She wants to ...\",\"date\":\"May 5, 2023\",\"position\":1},{\"title\":\"Identity Authentication & Background Verification A...",
+     "Searched Google with query \"Authenticate.com Crunchbase funding\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/authenticating-com\",\"displayedLink\":\"https://www.crunchbase.com › authenticating-com\",\"snippet\":\"Authenticate is a software platform that provides businesses with advanced digital identity verification and fraud‑prevention tools.\",\"position\":1},{\"title\":\"Crunchbase | Private Company Data & Predictive Intelligence\",\"link\":\"https://www.crunchbase.com/\",\"displayedLink\":\"...",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/\",\"question\":\"What product does company provide, pricing links, footer/navigation links for docs, careers, customers, address?\"}. The results are: \n \"Product: Authenticate® identity verification platform—confirms a person is real, verifies government ID/liveness/face match, and checks criminal, driving, employment, education, business/financial, and global watchlist records; includes continuous monitoring and developer APIs/SDKs.\\n\\nPricing: https://authenticate.com/#pricing — listed examples: Government ID Verification $2; Knowledge Based Authentication $1; SSN Verification $1; Facial Recognition & Liveness Detection free; employment/educat...",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/security-and-compliance\",\"question\":\"Which named compliance certifications or standards are claimed? AI/model provider references?\"}. The results are: \n \"Authenticate claims compliance with: SOC 2 Type 2, HIPAA, GDPR, CCPA, DPPA, GLBA, and PCI DSS. It also mentions audits for compliance with industry security standards and FCRA in a legal disclaimer. AWS is named as the cloud backup provider; no AI/model provider is referenced. Compliance page: https://info.authenticate.com/compliance\"",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog\",\"question\":\"Is this blog about engineering/product internals? List newest dated posts and index evidence.\"}. The results are: \n \"Blog index: https://authenticate.com/resources/blog. No publication dates are provided in the supplied webpage content, so newest dated posts cannot be determined. Indexed posts and evidence:\\n- “User Identity Verification in 2026: The Complete Platform Guide” — Identity; explains how verification methods work and what they catch. https://authenticate.com/resources/blog/identity-verification-guide-2026\\n- “KYC & Identity Verification APIs (2026)” — Identity; compares 14 APIs using public docume...",
+     "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/authenticatedotcom\",\"question\":\"Headquarters, founded year, employee count, leadership roster or recent changes?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/authenticatedotcom\",\"structured_locations\":[{\"is_headquarters\":true,\"city\":\"Park City\",\"state\":\"Utah\",\"postal_code\":\"84060\",\"country_iso\":\"US\",\"region\":\"NAM\"}],\"locations\":[{\"address\":\"1743 Sidewinder Dr, 109, Park City, Utah 84060, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"1743 Sidewinder Dr\",\"formatted_address\":\"1743 Sidewinder Dr, Park City, UT 84060\",\"business_region\":\"NAM\",\"latitude\":40.662665,\"locality\":\"Park City\",\"admin_district\":...",
+     "Used visitWebpage {\"url\":\"https://www.crunchbase.com/organization/authenticating-com\",\"question\":\"Funding rounds, amounts and dates; employee count?\"}. The results are: \n \"Authenticate funding rounds/amounts/dates: no relevant funding-round data is provided in the webpage content. Employee count: 11–50 (Crunchbase).\"",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/pricing\",\"question\":\"Does this page have public plans/prices or a contact form?\"}. The results are: \n \"Page not found (404). The only available link is “Go home” to https://authenticate.com. No public plans/prices or contact form information is shown.\"",
+     "Searched Google with query \"site:authenticate.com \"Careers\" Authenticate jobs\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Employment and education verification, criminal history and global watchlist searches. ... Terms of UsePrivacy PolicyGet StartedMedallion™CareersSystem Status ...\",\"position\":1},{\"title\":\"Instant & Reliable Background Checks for Fraud Prevention\",\"link\":\"https://authenticate.com/products/background-check\",\"displayedLink...",
+     "Searched Google with query \"Authenticate.com funding raised seed round company 2018\". The results are: \n {\"search_results\":[{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authenticate is an identity verification platform that confirms a person is real and who they claim to be, then checks the criminal, driving, employment and ...\",\"position\":1},{\"title\":\"Authenticate - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/authenticating-com\",\"displayedLink...",
+     "Used visitWebpage {\"url\":\"https://apply.workable.com/authenticate\",\"question\":\"List current open jobs and job titles; any AI/ML/data science or SDR/BDR/account executive positions?\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://docs.authenticate.com\",\"question\":\"Is this a public developer documentation portal with multiple articles? Does documentation name AI model providers or CRM integrations?\"}. The results are: \n \"Authenticate Developer Hub (https://docs.authenticate.com/) is a public developer documentation portal with Guides, API Reference, Search, and multiple documented topics, including Get Started, user creation, JWTs, webhooks, ReAuthenticate™, results analysis, and Mock APIs. The provided content does not name any AI model providers or CRM integrations. Documentation index: https://docs.authenticate.com/llms.txt.\"",
+     "Used visitWebpage {\"url\":\"https://info.authenticate.com/compliance\",\"question\":\"What specific certifications are publicly claimed, and any AI vendor or subprocessors?\"}. The results are: \n \"Authenticate® publicly claims compliance with SOC 2 Type 2, HIPAA, PCI DSS, GDPR, CCPA, FCRA, DPPA, and GLBA. The provided webpage content does not identify any AI vendor or subprocessors. Relevant source: https://info.authenticate.com/before-you-begin?hsLang=en#data-coverage-compliance\"",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog\",\"question\":\"What dated latest posts and any product launch announcements in recent months? Does index show engineering posts describing product internals?\"}. The results are: \n \"Relevant webpage entries:\\n- “How to Verify User Identity in 2026: The Complete Platform Guide” — https://authenticate.com/resources/blog/identity-verification-guide-2026\\n- “Airbnb Host Asking for ID? When It's OK” — https://authenticate.com/resources/blog/airbnb-host-asking-for-id\\n- “KYC & Identity Verification APIs (2026)” — https://authenticate.com/resources/blog/identity-verification-api\\n- “Liveness Detection Now Has Two Tests” — https://authenticate.com/resources/blog/liveness-detection...",
+     "Used visitWebpage {\"url\":\"https://siliconangle.com/2022/08/31/authenticate-com-service-integrates-id-authentication-applications-platforms/\",\"question\":\"Which organizations are identified as customers/users of Authenticate, and company background?\"}. The results are: \n \"Authenticate.com launched Identity Verification Infrastructure as a Service in August 2022, integrating photo ID and passport authentication into applications and platforms. It is designed for high-risk businesses and supports facial recognition, liveness detection, knowledge quizzes, background checks, AML/watch-list screening, enhanced due diligence, and fraud/criminal-data detection. The service supports identity-document authentication across 200 countries and territories and covers peer-to...",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/authenticate-lending-valley-fraud-business-funding/\",\"question\":\"Is Lending Valley a customer case study and what evidence?\"}. The results are: \n \"The page is titled “How Authenticate Helped Lending Valley Cut Business Funding Fraud by 78%,” published 7 December 2025. It explicitly describes Lending Valley as partnering with Authenticate to reduce fraud. Reported outcomes include a 78%+ reduction in fraudulent submissions, a 62% reduction in manual reviews, and faster approvals; figures are attributed to “Lending Valley internal analysis, 2025.” The page includes a quote from Lending Valley’s compliance lead: “Authenticate.com gave us the...",
+     "Searched Google with query \"site:authenticate.com/resources/blog \"Introducing\" Authenticate 2025 OR 2026 product launch\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate Blog\",\"link\":\"https://authenticate.com/resources/blog\",\"displayedLink\":\"https://authenticate.com › resources › blog\",\"snippet\":\"Introducing ReAuthenticate™: Revolutionary, Free eKYC. Discover how ReAuthenticate™, a groundbreaking free eKYC service, can help financial institutions comply ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Aauthenticate.com%2Fresources%2Fbl...",
+     "Searched Google with query \"Authenticate.com employees LinkedIn 11-50 13 team leadership executives\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate\",\"link\":\"https://www.linkedin.com/company/authenticatedotcom\",\"displayedLink\":\"49.4K+ followers\",\"snippet\":\"We offer comprehensive solutions that streamline verification processes while leveraging state-of-the-art technology and sophisticated algorithms while boosting ...\",\"position\":1},{\"title\":\"Identity Authentication & Background Verification API & SDK\",\"link\":\"https://authenticate.com/\",\"displayedLink\":\"https://authenticate.com\",\"snippet\":\"Authentica...",
+     "Searched Google with query \"site:authenticate.com Salesforce HubSpot integration Authenticate\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:authenticate.com/resources/blog \"engineer\" Authenticate architecture infrastructure\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:authenticate.com/privacy subprocessor AWS AI OpenAI Authenticate\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/\",\"question\":\"Does the company publish its pricing on the homepage? Find any public price figures or pricing section.\"}. The results are: \n \"Homepage includes a dedicated “Pricing” section and Pricing navigation link: https://authenticate.com/#pricing. Public prices include: Risk Score $0.50; Government ID Verification $2; Knowledge Based Authentication $1; SSN Verification $1; Facial Recognition & Liveness Detection Free; Authoritative Database Search Free; Email Verification Free; Phone Number Verification Free; FEIN/Tax ID/DUNS Verification $1; Full US Business Verification $5; Financial Account Ownership Verification $2; US Empl...",
+     "Searched Google with query \"site:authenticate.com/resources/blog/authenticate \"2026\" \"launches\" OR \"Introducing\" Authenticate product\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"site:authenticate.com/resources/blog/ \"Introducing ReAuthenticate\" date\". The results are: \n {\"search_results\":[{\"title\":\"Authenticate Blog\",\"link\":\"https://authenticate.com/resources/blog\",\"displayedLink\":\"https://authenticate.com › resources › blog\",\"snippet\":\"Introducing ReAuthenticate™: Revolutionary, Free eKYC. Discover how ReAuthenticate™, a groundbreaking free eKYC service, can help financial institutions comply ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Aauthenticate.com%2Fresources%2Fbl...",
+     "Searched Google with query \"site:authenticate.com/resources/blog \"Financial Account Ownership Verification\" date Authenticate\". The results are: \n {\"search_results\":[{\"title\":\"Financial Account Ownership Verification: Enhancing Security ...\",\"link\":\"https://authenticate.com/resources/blog/financial-account-ownership-verification/\",\"displayedLink\":\"https://authenticate.com › resources › blog › financial-ac...\",\"snippet\":\"Enter Authenticate's Financial Account Ownership Verification, a ... Users must provide their date of birth (DOB) for enhanced accuracy ...\",\"date\":\"Nov 29, 2023\",\"position\":1},{\"title\":\"Authenticate Blog\",\"link\":\"https://a...",
+     "Searched Google with query \"site:apply.workable.com/authenticate/ Authenticate jobs open\". The results are: \n {\"search_results\":[{\"title\":\"Careers at Authenticate - Job Openings\",\"link\":\"https://apply.workable.com/authenticate/\",\"displayedLink\":\"https://apply.workable.com › authenticate\",\"snippet\":\"Sorry, no job openings at the moment. We open new jobs from time to time, so please check again soon!\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Aapply.workable.com%2Fauthenticate%2F%20Authenticate%20jobs%20open&hl=en&gl=...",
+     "Searched Google with query \"site:authenticate.com/careers Authenticate open positions\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/introducing-medallion-user-friendly-identity-verification-solution\",\"question\":\"What date was this product launch post published?\"}. The results are: \n \"Product post: “Introducing Medallion™ - A User-Friendly Identity Verification Solution.” Published 19 July 2023.\"",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/free-kyc\",\"question\":\"What date was ReAuthenticate product launch post published?\"}. The results are: \n \"Page title: “Introducing ReAuthenticate™: Revolutionary, Free eKYC.” The post metadata states: “Published 2 April 2024.”\"",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog/financial-account-ownership-verification\",\"question\":\"What date is this product feature launch post published?\"}. The results are: \n \"Product feature launch post: “Financial Account Ownership Verification: Enhancing Security and Compliance” — Published 29 November 2023.\"",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/resources/blog\",\"question\":\"Check blog index for latest dated launch announcements or product release entries, and latest date.\"}. The results are: \n \"Blog index: https://authenticate.com/resources/blog. Relevant launch/product-release entries shown (dates not provided in the webpage content supplied):\\n- “Authenticating.com launches Airnode” — Product/Partners — https://authenticate.com/resources/blog/authenticating-launches-airnode\\n- “Authenticate.com Launches its Identity Verification Infrastructure as a Service (IaaS) for Platforms” — Press Release — https://authenticate.com/resources/blog/Identity-Verification-Infrastructure-as-a-Servic...",
+     "Used visitWebpage {\"url\":\"https://authenticate.com/privacy\",\"question\":\"Does privacy page list subprocessors or AI/model providers?\"}. The results are: \n \"The page is a 404 “Page not found” page and contains no privacy-policy, subprocessor, or AI/model-provider information. Link provided: https://authenticate.com\"",
+     "Searched Google with query \"site:authenticate.com/resources/blog/authenticate-launches-ethicAi published date\". The results are: \n {\"message\":\"No data returned from search query\"}"
+    ],
+    "hq_location": {
+     "notes": "The company profile identifies Park City, Utah, United States, as its headquarters.",
+     "value": {
+      "city": "Park City",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/authenticatedotcom"
+     ]
+    },
+    "public_docs": {
+     "notes": "Authenticate has a public developer documentation portal with guides, API reference, and multiple topics such as webhooks, JWTs, and results analysis.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.authenticate.com/",
+      "https://docs.authenticate.com/llms.txt"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The company is listed as unfunded with no funding rounds, so it did not raise in the 18 months before 2026-11-09.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://tracxn.com/d/companies/authenticate/__nLkX70v1Md2Oox91onhqKGJk65gEvBCHQHdzp1cCnHw"
+     ]
+    },
+    "founded_year": {
+     "notes": "The company profile lists 2018 as the founding year.",
+     "value": 2018,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/authenticatedotcom"
+     ]
+    },
+    "last_funding": {
+     "notes": "Tracxn describes Authenticate as unfunded and says it has not raised any funding rounds; no date or amount applies.",
+     "value": {
+      "date": "",
+      "stage": "none",
+      "amount_usd": 0
+     },
+     "status": "asserted",
+     "citations": [
+      "https://tracxn.com/d/companies/authenticate/__nLkX70v1Md2Oox91onhqKGJk65gEvBCHQHdzp1cCnHw"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The readable blog index does not show a product or major-feature launch in the six months before 2026-11-09. Its dated product-launch post for ReAuthenticate is from 2024; the more recent visible material is informational blog content, not a launch announcement.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://authenticate.com/resources/blog",
+      "https://authenticate.com/resources/blog/free-kyc"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The homepage has a Pricing navigation link and publishes prices for multiple checks and services.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://authenticate.com/#pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "LinkedIn lists 13 employees, which falls in the 11-20 band.",
+     "value": "11-20",
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/authenticatedotcom"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The careers board reports no current job openings.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://apply.workable.com/authenticate/"
+     ]
+    },
+    "model_provider": {
+     "notes": "I checked the public developer documentation, blog, security/compliance material, and privacy page; none of the available material publicly names an AI model or model provider.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "The article identifies all three as clients/users of Authenticate.com.",
+     "value": [
+      "Call Emmy Inc.",
+      "RunnerCity Inc.",
+      "NotaryHub"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://siliconangle.com/2022/08/31/authenticate-com-service-integrates-id-authentication-applications-platforms/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The careers board says there are no job openings at the moment.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://apply.workable.com/authenticate/"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The compliance page names SOC 2 Type 2, HIPAA, GDPR, and PCI DSS. Other legal or regulatory frameworks on the page are omitted because the requested list is limited to these five.",
+     "value": [
+      "SOC 2",
+      "HIPAA",
+      "GDPR",
+      "PCI DSS"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://info.authenticate.com/before-you-begin?hsLang=en#data-coverage-compliance"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The public developer documentation is available, but the material reviewed does not name a CRM or sales/marketing system.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://docs.authenticate.com/",
+      "https://docs.authenticate.com/llms.txt"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "The homepage describes its identity verification platform and related identity, background, and continuous-monitoring checks.",
+     "value": "Authenticate® provides identity-verification, fraud-prevention, and background-screening tools—including APIs and SDKs—for businesses that need to verify customers or users during onboarding and ongoing monitoring.",
+     "status": "asserted",
+     "citations": [
+      "https://authenticate.com/"
+     ]
+    },
+    "timeTakenInSeconds": "128.52",
+    "totalCreditsCharged": 0.4,
+    "leadership_change_12mo": {
+     "notes": "I could not verify a sufficiently complete current team roster or a dated C-level/VP join or departure within the window.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    }
+   }
+  }
+ }
+}

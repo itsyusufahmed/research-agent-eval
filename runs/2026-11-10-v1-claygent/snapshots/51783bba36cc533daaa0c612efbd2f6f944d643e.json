@@ -1,0 +1,22 @@
+{
+ "url": "https://fly.io/changelog/link-agent-wallet/",
+ "fetched_at": "2026-11-10T20:15:30.461801+00:00",
+ "hours_after_run": 44.3,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "40f6bf681d7c16bad8f474110ae4997d77225eb265a07c09eb2104514776583e",
+ "chars": 3202,
+ "truncated": false,
+ "title": "Pocket money for agents · Fly.io Changelog",
+ "markdown": "[Changelog](https://fly.io/changelog/)\nCopy\n\n\nCopy URLCopy Markdown[View as Markdown](https://fly.io/changelog/link-agent-wallet.md)\n\nAgents are good at finding the thing you want. They’re bad at paying for it, because the only way to let one pay has been to hand it your card number and hope it doesn’t discover .ai domains. Now you can connect Link, Stripe’s wallet, to your Sprites, and give your agent a better option: a one-time card for each purchase, approved by you.\n\nFrom the [connectors page](https://fly.io/dashboard/personal/sprites/connectors), configure the connector once. Then an agent in one of your Sprites can ask Link for a one-time virtual card for a specific purchase: this merchant, this amount, and a plain-English line about why. You get a push notification in the Link app and approve or deny it. Approve it and the agent gets a single-use card, capped at that amount, that’s invalid after 12 hours. Your real card number never leaves Link.\n\nSprites has [dozens of connectors](https://fly.io/sprites/ecosystem/#connectors/link), and the list keeps growing, but this one is special: behind the credential is money. That’s why the gateway forwards only the routes an agent needs to request and collect a payment, and blocks the ones that would let it approve its own.\n\n## How it works\n\nHere’s what it looks like from inside a Sprite, using Stripe’s `link-cli`:\n\n```bash\nlink-cli spend-request create \\\n  --merchant-name \"Stripe Press\" --merchant-url \"https://press.stripe.com\" \\\n  --context \"Buying 'Working in Public' from press.stripe.com for the user, who asked for it in today's session and set a $40 budget.\" \\\n  --amount 3500\n```\n\n```json\n{\n  \"id\": \"lsrq_...\",\n  \"status\": \"pending_approval\",\n  \"amount\": 3500,\n  \"currency\": \"usd\",\n  \"merchant_name\": \"Stripe Press\",\n  \"merchant_url\": \"https://press.stripe.com\",\n  \"credential_type\": \"card\",\n  \"approval_url\": \"https://app.link.com/activity/approve/lsrq_...\"\n}\n```\n\nAt this point your phone buzzes. Once you approve, your agent can request the card:\n\n```bash\nlink-cli spend-request retrieve lsrq_... --include card\n```\n\n```json\n{\n  \"id\": \"lsrq_...\",\n  \"status\": \"approved\",\n  \"card\": {\n    \"brand\": \"visa\",\n    \"number\": \"4242424242424242\",\n    \"cvc\": \"100\",\n    \"exp_month\": 6,\n    \"exp_year\": 2029,\n    \"billing_address\": {\n      \"name\": \"Jenny Rosen\",\n      \"line1\": \"354 Oyster Point Blvd\",\n      \"city\": \"South San Francisco\",\n      \"state\": \"CA\",\n      \"postal_code\": \"94080\",\n      \"country\": \"US\"\n    },\n    \"valid_until\": \"2026-11-09T21:40:10Z\"\n  }\n}\n```\n\nExpand +Collapse −\n\n* * *\n\n## Try it\n\n1. On the connectors page for your org in the dashboard, pick **Link Agent Payments** and choose **Continue with Link**. Approve it in Link.\n2. Choose which Sprites get access.\n3. In a Sprite, install the CLI and point it at the gateway.\n\nWe’d like to hear what your agents end up buying. Tell us in the thread below, or have the agent tell us itself through the [feedback API](https://docs.fly.io/reference/feedback-api).\n\n_Link Agent Payments is available to Link accounts in the US and Canada, with a $500 cap per request. The [connector card](https://fly.io/sprites/ecosystem/#connectors/link) has the full limits._",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "launched_6mo"
+ ],
+ "late": true
+}

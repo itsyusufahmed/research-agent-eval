@@ -1,0 +1,1251 @@
+{
+ "id": "agent_run_5e69646c16a14387a263c9b9e82a08d4",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:57:19.552Z",
+ "completedAt": "2026-11-10T19:02:42.804Z",
+ "request": {
+  "query": "Research the company ComplyAdvantage (complyadvantage.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"ComplyAdvantage provides AI-driven financial-crime risk intelligence, customer screening, and transaction and payment monitoring for financial institutions, fintechs, and other businesses managing AML and compliance risk.\",\"citations\":[\"https://complyadvantage.com/pricing/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://complyadvantage.com/pricing/\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Santander UK\",\"Paxos\"],\"citations\":[\"https://complyadvantage.com/customer-stories/santander-case-study/\",\"https://complyadvantage.com/customer-stories/paxos/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://www.linkedin.com/company/complyadvantage\"],\"notes\":\"The company profile explicitly lists the 201\u2013500 size band; its separate associated-person estimate is 510, so the headcount signals are inconsistent.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"London\",\"country\":\"United Kingdom\"},\"citations\":[\"https://www.linkedin.com/company/complyadvantage\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2014,\"citations\":[\"https://www.linkedin.com/company/complyadvantage\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://technology.complyadvantage.com/lessons-from-building-aml-and-fraud-detection-with-distributed-sql---dss-2024/\",\"https://technology.complyadvantage.com/four-concepts-to-get-started-with-elasticsearch/\"],\"notes\":\"Two engineering-authored posts explain the distributed-SQL platform and the Payment Screening team\u2019s Elasticsearch implementation.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.mesh.complyadvantage.com/docs/overview\",\"https://docs.mesh.complyadvantage.com/docs/getting-started\"],\"notes\":\"Public Mesh documentation includes onboarding, screening, authentication, monitoring, and API integration guidance.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true\"],\"notes\":\"The current official board lists 16 openings, none with a qualifying AI, ML, or data-science title. Third-party Data Scientist reposts are not present on that board.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Google Gemini\",\"citations\":[\"https://complyadvantage.com/insights/scale-or-speed-compliance-teams-no-longer-have-to-choose/\"],\"notes\":\"The company explicitly says it runs Gemini in production for adverse-media article classification; no model version is specified.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type II\",\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://complyadvantage.com/mesh/\"],\"notes\":\"SOC 2 Type II and ISO 27001 are explicit certification claims; GDPR is described as alignment, not a separate certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Debt financing\",\"date\":\"2025-05\",\"amount_usd\":16800000},\"citations\":[\"https://pitchbook.com/profiles/company/108421-12\",\"https://find-and-update.company-information.service.gov.uk/company/08964733/charges\",\"https://find-and-update.company-information.service.gov.uk/company/08964733/filing-history/MzUyMzA3ODU4OWFkaXF6a2N4/document?format=pdf&download=0\"],\"notes\":\"Latest identifiable financing round: debt dated 2025-05-19. A later filing records small ordinary-share cash allotments over 2025-02-27 to 2025-12-19; it does not identify a separate new funding round or disclose a USD round amount.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://pitchbook.com/profiles/company/108421-12\",\"https://find-and-update.company-information.service.gov.uk/company/08964733/charges\"],\"notes\":\"The debt round is dated 2025-05-19, inside 2025-05-09 through 2026-11-09; Companies House records related secured-debt activity in May 2025.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true\",\"https://complyadvantage.com/careers/jobs/8471671002?gh_jid=8471671002\"],\"notes\":\"The current official board includes Account Executive, Commercial; Account Executive; Business Development Representative; and Strategic Account Executive.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://complyadvantage.com/press-media/complyadvantage-integrates-real-time-payment-screening-into-mesh-platform/\"],\"notes\":\"Payment Screening on Mesh launched on 2026-05-19, inside the requested six-month window.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/posts/rhiannon-prothero-a983a9_im-delighted-to-share-that-ive-joined-complyadvantage-activity-7468696722488352768-Gllj\"],\"notes\":\"Rhiannon Prothero announced joining as Global Vice President, Marketing on 2026-06-05, inside the requested twelve-month window.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"HubSpot\",\"Outreach\",\"Clay\"],\"citations\":[\"https://complyadvantage.com/careers/jobs/8902109002?gh_jid=8902109002\",\"https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true\"],\"notes\":\"The Founding GTM Engineer posting explicitly names these systems and calls Salesforce the system of record.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Two engineering-authored posts explain the distributed-SQL platform and the Payment Screening team\u2019s Elasticsearch implementation.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://technology.complyadvantage.com/lessons-from-building-aml-and-fraud-detection-with-distributed-sql---dss-2024/",
+     "https://technology.complyadvantage.com/four-concepts-to-get-started-with-elasticsearch/"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "London",
+     "country": "United Kingdom"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/complyadvantage"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public Mesh documentation includes onboarding, screening, authentication, monitoring, and API integration guidance.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.mesh.complyadvantage.com/docs/overview",
+     "https://docs.mesh.complyadvantage.com/docs/getting-started"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The debt round is dated 2025-05-19, inside 2025-05-09 through 2026-11-09; Companies House records related secured-debt activity in May 2025.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/108421-12",
+     "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+    ]
+   },
+   "founded_year": {
+    "value": 2014,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/complyadvantage"
+    ]
+   },
+   "last_funding": {
+    "notes": "Latest identifiable financing round: debt dated 2025-05-19. A later filing records small ordinary-share cash allotments over 2025-02-27 to 2025-12-19; it does not identify a separate new funding round or disclose a USD round amount.",
+    "value": {
+     "date": "2025-05",
+     "stage": "Debt financing",
+     "amount_usd": 16800000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/108421-12",
+     "https://find-and-update.company-information.service.gov.uk/company/08964733/charges",
+     "https://find-and-update.company-information.service.gov.uk/company/08964733/filing-history/MzUyMzA3ODU4OWFkaXF6a2N4/document?format=pdf&download=0"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Payment Screening on Mesh launched on 2026-05-19, inside the requested six-month window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/press-media/complyadvantage-integrates-real-time-payment-screening-into-mesh-platform/"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/pricing/"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile explicitly lists the 201\u2013500 size band; its separate associated-person estimate is 510, so the headcount signals are inconsistent.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/complyadvantage"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The current official board includes Account Executive, Commercial; Account Executive; Business Development Representative; and Strategic Account Executive.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true",
+     "https://complyadvantage.com/careers/jobs/8471671002?gh_jid=8471671002"
+    ]
+   },
+   "model_provider": {
+    "notes": "The company explicitly says it runs Gemini in production for adverse-media article classification; no model version is specified.",
+    "value": "Google Gemini",
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/insights/scale-or-speed-compliance-teams-no-longer-have-to-choose/"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Santander UK",
+     "Paxos"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/customer-stories/santander-case-study/",
+     "https://complyadvantage.com/customer-stories/paxos/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The current official board lists 16 openings, none with a qualifying AI, ML, or data-science title. Third-party Data Scientist reposts are not present on that board.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "SOC 2 Type II and ISO 27001 are explicit certification claims; GDPR is described as alignment, not a separate certification.",
+    "value": [
+     "SOC 2 Type II",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/mesh/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The Founding GTM Engineer posting explicitly names these systems and calls Salesforce the system of record.",
+    "value": [
+     "Salesforce",
+     "HubSpot",
+     "Outreach",
+     "Clay"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/careers/jobs/8902109002?gh_jid=8902109002",
+     "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+    ]
+   },
+   "product_one_liner": {
+    "value": "ComplyAdvantage provides AI-driven financial-crime risk intelligence, customer screening, and transaction and payment monitoring for financial institutions, fintechs, and other businesses managing AML and compliance risk.",
+    "status": "asserted",
+    "citations": [
+     "https://complyadvantage.com/pricing/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Rhiannon Prothero announced joining as Global Vice President, Marketing on 2026-06-05, inside the requested twelve-month window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/rhiannon-prothero-a983a9_im-delighted-to-share-that-ive-joined-complyadvantage-activity-7468696722488352768-Gllj"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/pricing/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/customer-stories/santander-case-study/"
+     },
+     {
+      "url": "https://complyadvantage.com/customer-stories/paxos/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/customer-stories/santander-case-study/"
+     },
+     {
+      "url": "https://complyadvantage.com/customer-stories/paxos/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/complyadvantage"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://technology.complyadvantage.com/lessons-from-building-aml-and-fraud-detection-with-distributed-sql---dss-2024/"
+     },
+     {
+      "url": "https://technology.complyadvantage.com/four-concepts-to-get-started-with-elasticsearch/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://technology.complyadvantage.com/lessons-from-building-aml-and-fraud-detection-with-distributed-sql---dss-2024/"
+     },
+     {
+      "url": "https://technology.complyadvantage.com/four-concepts-to-get-started-with-elasticsearch/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://technology.complyadvantage.com/lessons-from-building-aml-and-fraud-detection-with-distributed-sql---dss-2024/"
+     },
+     {
+      "url": "https://technology.complyadvantage.com/four-concepts-to-get-started-with-elasticsearch/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://docs.mesh.complyadvantage.com/docs/overview"
+     },
+     {
+      "url": "https://docs.mesh.complyadvantage.com/docs/getting-started"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://docs.mesh.complyadvantage.com/docs/overview"
+     },
+     {
+      "url": "https://docs.mesh.complyadvantage.com/docs/getting-started"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.notes",
+    "citations": [
+     {
+      "url": "https://docs.mesh.complyadvantage.com/docs/overview"
+     },
+     {
+      "url": "https://docs.mesh.complyadvantage.com/docs/getting-started"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/insights/scale-or-speed-compliance-teams-no-longer-have-to-choose/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/insights/scale-or-speed-compliance-teams-no-longer-have-to-choose/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/insights/scale-or-speed-compliance-teams-no-longer-have-to-choose/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/mesh/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/mesh/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/mesh/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/108421-12"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/filing-history/MzUyMzA3ODU4OWFkaXF6a2N4/document?format=pdf&download=0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/108421-12"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/filing-history/MzUyMzA3ODU4OWFkaXF6a2N4/document?format=pdf&download=0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/108421-12"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/filing-history/MzUyMzA3ODU4OWFkaXF6a2N4/document?format=pdf&download=0"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/108421-12"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/108421-12"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/108421-12"
+     },
+     {
+      "url": "https://find-and-update.company-information.service.gov.uk/company/08964733/charges"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     },
+     {
+      "url": "https://complyadvantage.com/careers/jobs/8471671002?gh_jid=8471671002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     },
+     {
+      "url": "https://complyadvantage.com/careers/jobs/8471671002?gh_jid=8471671002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     },
+     {
+      "url": "https://complyadvantage.com/careers/jobs/8471671002?gh_jid=8471671002"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/press-media/complyadvantage-integrates-real-time-payment-screening-into-mesh-platform/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/press-media/complyadvantage-integrates-real-time-payment-screening-into-mesh-platform/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/press-media/complyadvantage-integrates-real-time-payment-screening-into-mesh-platform/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/rhiannon-prothero-a983a9_im-delighted-to-share-that-ive-joined-complyadvantage-activity-7468696722488352768-Gllj"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/rhiannon-prothero-a983a9_im-delighted-to-share-that-ive-joined-complyadvantage-activity-7468696722488352768-Gllj"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/rhiannon-prothero-a983a9_im-delighted-to-share-that-ive-joined-complyadvantage-activity-7468696722488352768-Gllj"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/careers/jobs/8902109002?gh_jid=8902109002"
+     },
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/careers/jobs/8902109002?gh_jid=8902109002"
+     },
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://complyadvantage.com/careers/jobs/8902109002?gh_jid=8902109002"
+     },
+     {
+      "url": "https://api.greenhouse.io/v1/boards/complyadvantage/jobs?content=true"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

@@ -1,0 +1,958 @@
+{
+ "id": "agent_run_f7733742d996469995281ef6fdd1c609",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:57:50.263Z",
+ "completedAt": "2026-11-10T19:01:30.099Z",
+ "request": {
+  "query": "Research the company Incorta (incorta.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Incorta gives enterprise business users and data teams a governed platform to analyze live operational data and build AI-powered applications and workflows without complex ETL.\",\"citations\":[\"https://www.incorta.com/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.incorta.com/\"],\"notes\":\"No pricing link or public pricing page was found on the company website; prospects are directed to a demo. Separately, its AWS Marketplace listing publishes Standard and Premium pricing: https://aws.amazon.com/marketplace/pp/prodview-4vnhp7q2eyppg\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Comcast\",\"Starbucks\"],\"citations\":[\"https://www.incorta.com/case-study/comcast\",\"https://www.incorta.com/case-study/starbucks\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://www.linkedin.com/company/incorta\"]},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Foster City\",\"country\":\"United States\"},\"citations\":[\"https://www.linkedin.com/company/incorta\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2013,\"citations\":[\"https://www.linkedin.com/company/incorta\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://medium.com/engineering-incorta/atomicity-guarantees-in-java-ef313b2de38\",\"https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127\"],\"notes\":\"Engineering@Incorta includes Mostafa Elganainy\u2019s posts on Incorta\u2019s off-heap memory implementation and Direct Data Mapping architecture.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.incorta.com/latest/incorta-premium/\",\"https://docs.incorta.com/latest/guides-configure-server/\",\"https://docs.incorta.com/latest/references-llm-recipe/\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://jobs.lever.co/incorta\"],\"notes\":\"No qualifying AI, ML or data-science title was found. AI-related responsibilities appear in openings titled Principle Software Engineer and Senior Software Engineer, which do not meet the requested title test.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"OpenAI; Azure OpenAI; Meta Llama 3.1 through Incorta Nexus\",\"citations\":[\"https://docs.incorta.com/latest/guides-configure-server/\",\"https://docs.incorta.com/latest/references-llm-recipe/\"],\"notes\":\"These are publicly documented supported or configured providers/models, not a claim that every deployment uses all of them.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\",\"GDPR\"],\"citations\":[\"https://www.incorta.com/incorta-intelligence\",\"https://community.incorta.com/t5/administration-knowledgebase/implementing-data-security-in-incorta/ta-p/152\",\"https://www.incorta.com/legal-pages/incorta-business-continuity-and-disaster-recovery-overview\"],\"notes\":\"Incorta Intelligence explicitly claims SOC 2 Type II certification. Other cited pages claim adherence to ISO 27001, HIPAA and GDPR; these are public compliance claims, not independently verified certificates. PCI DSS is omitted because the security terms only mention possible audit-report scopes.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series D\",\"date\":\"2021-06\",\"amount_usd\":120000000},\"citations\":[\"https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics\",\"https://www.incorta.com/about-us\"],\"notes\":\"Latest publicly announced round found. A conflicting database entry dates the same $120 million Series D to April 2025; the company\u2019s dated announcement establishes June 23, 2021.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics\",\"https://www.incorta.com/press-releases\"],\"notes\":\"No later announced financing was found in the May 9, 2025\u2013November 9, 2026 window; the latest official funding announcement is June 23, 2021.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31\"],\"notes\":\"Sales Development Representative - USA is publicly listed.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.incorta.com/press-releases/incorta-intelligence-moves-enterprise-analytics-from-dashboards-to-decisions\"],\"notes\":\"Incorta Intelligence became generally available June 30, 2026, including AI applications, Smart Agent and workflow automation, within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"The leadership page and dated appointment announcements were checked, but start dates for the full leadership roster and departures could not be established. Ragy Eleish\u2019s October 7, 2025 appointment falls outside the window; Noha Rizk\u2019s appointment was December 4, 2024, despite a later directory update.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"Outreach\",\"Gong\",\"Apollo\"],\"citations\":[\"https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31\"],\"notes\":\"The SDR posting explicitly requires managing prospect interactions in Salesforce and Outreach; Gong and Apollo appear as sales-tool experience requirements, which are weaker evidence of deployment.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Engineering@Incorta includes Mostafa Elganainy\u2019s posts on Incorta\u2019s off-heap memory implementation and Direct Data Mapping architecture.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://medium.com/engineering-incorta/atomicity-guarantees-in-java-ef313b2de38",
+     "https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Foster City",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/incorta"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.incorta.com/latest/incorta-premium/",
+     "https://docs.incorta.com/latest/guides-configure-server/",
+     "https://docs.incorta.com/latest/references-llm-recipe/"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "No later announced financing was found in the May 9, 2025\u2013November 9, 2026 window; the latest official funding announcement is June 23, 2021.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+     "https://www.incorta.com/press-releases"
+    ]
+   },
+   "founded_year": {
+    "value": 2013,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/incorta"
+    ]
+   },
+   "last_funding": {
+    "notes": "Latest publicly announced round found. A conflicting database entry dates the same $120 million Series D to April 2025; the company\u2019s dated announcement establishes June 23, 2021.",
+    "value": {
+     "date": "2021-06",
+     "stage": "Series D",
+     "amount_usd": 120000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+     "https://www.incorta.com/about-us"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Incorta Intelligence became generally available June 30, 2026, including AI applications, Smart Agent and workflow automation, within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/press-releases/incorta-intelligence-moves-enterprise-analytics-from-dashboards-to-decisions"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No pricing link or public pricing page was found on the company website; prospects are directed to a demo. Separately, its AWS Marketplace listing publishes Standard and Premium pricing: https://aws.amazon.com/marketplace/pp/prodview-4vnhp7q2eyppg",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/"
+    ]
+   },
+   "employee_band": {
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/incorta"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Sales Development Representative - USA is publicly listed.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31"
+    ]
+   },
+   "model_provider": {
+    "notes": "These are publicly documented supported or configured providers/models, not a claim that every deployment uses all of them.",
+    "value": "OpenAI; Azure OpenAI; Meta Llama 3.1 through Incorta Nexus",
+    "status": "asserted",
+    "citations": [
+     "https://docs.incorta.com/latest/guides-configure-server/",
+     "https://docs.incorta.com/latest/references-llm-recipe/"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Comcast",
+     "Starbucks"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/case-study/comcast",
+     "https://www.incorta.com/case-study/starbucks"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "No qualifying AI, ML or data-science title was found. AI-related responsibilities appear in openings titled Principle Software Engineer and Senior Software Engineer, which do not meet the requested title test.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.lever.co/incorta"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Incorta Intelligence explicitly claims SOC 2 Type II certification. Other cited pages claim adherence to ISO 27001, HIPAA and GDPR; these are public compliance claims, not independently verified certificates. PCI DSS is omitted because the security terms only mention possible audit-report scopes.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/incorta-intelligence",
+     "https://community.incorta.com/t5/administration-knowledgebase/implementing-data-security-in-incorta/ta-p/152",
+     "https://www.incorta.com/legal-pages/incorta-business-continuity-and-disaster-recovery-overview"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The SDR posting explicitly requires managing prospect interactions in Salesforce and Outreach; Gong and Apollo appear as sales-tool experience requirements, which are weaker evidence of deployment.",
+    "value": [
+     "Salesforce",
+     "Outreach",
+     "Gong",
+     "Apollo"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Incorta gives enterprise business users and data teams a governed platform to analyze live operational data and build AI-powered applications and workflows without complex ETL.",
+    "status": "asserted",
+    "citations": [
+     "https://www.incorta.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "The leadership page and dated appointment announcements were checked, but start dates for the full leadership roster and departures could not be established. Ragy Eleish\u2019s October 7, 2025 appointment falls outside the window; Noha Rizk\u2019s appointment was December 4, 2024, despite a later directory update.",
+    "status": "unknown",
+    "citations": []
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/"
+     },
+     {
+      "url": "https://aws.amazon.com/marketplace/pp/prodview-4vnhp7q2eyppg"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/case-study/comcast"
+     },
+     {
+      "url": "https://www.incorta.com/case-study/starbucks"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/incorta"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/incorta"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/incorta"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://medium.com/engineering-incorta/atomicity-guarantees-in-java-ef313b2de38"
+     },
+     {
+      "url": "https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://docs.incorta.com/latest/incorta-premium/"
+     },
+     {
+      "url": "https://docs.incorta.com/latest/guides-configure-server/"
+     },
+     {
+      "url": "https://docs.incorta.com/latest/references-llm-recipe/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/incorta"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://docs.incorta.com/latest/guides-configure-server/"
+     },
+     {
+      "url": "https://docs.incorta.com/latest/references-llm-recipe/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/incorta-intelligence"
+     },
+     {
+      "url": "https://community.incorta.com/t5/administration-knowledgebase/implementing-data-security-in-incorta/ta-p/152"
+     },
+     {
+      "url": "https://www.incorta.com/legal-pages/incorta-business-continuity-and-disaster-recovery-overview"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics"
+     },
+     {
+      "url": "https://www.incorta.com/about-us"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/62315-56"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics"
+     },
+     {
+      "url": "https://www.incorta.com/press-releases"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/press-releases/incorta-intelligence-moves-enterprise-analytics-from-dashboards-to-decisions"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://www.incorta.com/leadership"
+     },
+     {
+      "url": "https://www.incorta.com/press-releases/incorta-appoints-ragy-eleish-as-chief-technology-officer-to-drive-innovation-scale-and-product-excellence"
+     },
+     {
+      "url": "https://www.incorta.com/press-releases/incorta-welcomes-noha-rizk-as-cmo-amidst-record-growth-and-innovation"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

@@ -1,0 +1,1208 @@
+{
+ "id": "agent_run_871e58ebacce415fbaa9a3d6a658499e",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:47:10.259Z",
+ "completedAt": "2026-11-10T18:51:07.389Z",
+ "request": {
+  "query": "Research the company Vim (getvim.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Vim connects healthcare systems, data and applications inside EHR workflows so providers, payers and health-tech companies can deploy clinical tools and AI-powered workflows.\",\"citations\":[\"https://www.getvim.ai/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.getvim.ai/\",\"https://launchpad.getvim.com/explore\"],\"notes\":\"No pricing link appears in the public navigation/footer; the commercial information directs buyers to request a quote rather than publishing plans.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"MaxHealth\",\"MyCare Medical\"],\"citations\":[\"https://www.getvim.ai/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://app.dealroom.co/companies/vim\",\"https://leadiq.com/c/vim/5a1d9dbb2300005b008d9c8c\"]},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"New York City\",\"country\":\"United States\"},\"citations\":[\"https://app.dealroom.co/companies/vim\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2015,\"citations\":[\"https://getvim.com/about-us/\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://getvim.com/blog/\",\"https://www.getvim.ai/blog/secure-coding-mcp-a-gift-or-a-cursor\"],\"notes\":\"The blog is predominantly product, industry and marketing content. One clearly engineer-authored secure-coding post was found, but not the required two posts about building the product.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://developer-docs.getvim.ai/\",\"https://docs.getvim.com/vim-os-js/setting-up\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://job-boards.greenhouse.io/vim\"],\"notes\":\"The official job board states: There are no current openings.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No named product model/provider was found in the public developer documentation, AI/product material, trust center or privacy/vendor disclosures reviewed; no public AI subprocessor list was located. Cursor references concern internal development, not the product model provider.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"HIPAA\"],\"citations\":[\"https://www.getvim.ai/trust-center\"],\"notes\":\"Vim claims SOC 2 Type II and HIPAA compliance; HIPAA is a compliance claim rather than an independent certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series C\",\"date\":\"2021-05\"},\"citations\":[\"https://getvim.com/about-us/\",\"https://www.getvim.ai/media/closes-investments\"],\"notes\":\"The company identifies its 2021 financing as Series C; the investment announcement is dated May 5, 2021. Amount is omitted because funding databases report $36 million while contemporaneous reporting describes $60 million; the company announcement does not disclose an amount.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.getvim.ai/media/closes-investments\",\"https://app.dealroom.co/companies/vim\"],\"notes\":\"The latest documented financing is May 2021, before the May 9, 2025\u2013November 9, 2026 window.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://job-boards.greenhouse.io/vim\"],\"notes\":\"The official job board states: There are no current openings; archived sales postings are not counted.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://getvim.com/blog/\",\"https://www.getvim.ai/media\",\"https://www.getvim.ai/media/vim-connect-innovators\"],\"notes\":\"No dated major launch was found during May 9\u2013November 9, 2026. The readable announcement history places the Vim Connect platform/marketplace announcement on October 20, 2025. The current site introduces AgentFlow without a launch date, so it cannot establish an in-window launch.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.linkedin.com/posts/ember-search-partners_congrats-to-jonah-remz-on-his-appointment-activity-7417674429733924864-9a0C\"],\"notes\":\"A January 15, 2026 announcement congratulates Jonah Remz on his appointment as VP of Finance at Vim, inside the November 9, 2025\u2013November 9, 2026 window.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"Clay\",\"HeyReach\",\"Meta Ads\",\"Google Ads\",\"n8n\"],\"citations\":[\"https://careers.fcventures.com/companies/vim/jobs/79190154-revenue-operations-manager\"],\"notes\":\"The archived Revenue Operations Manager posting describes ownership of HubSpot and operating these marketing/outbound automation systems. Salesforce and Zapier/Make/Workato appear as candidate experience alternatives, not confirmed Vim deployments.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog is predominantly product, industry and marketing content. One clearly engineer-authored secure-coding post was found, but not the required two posts about building the product.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://getvim.com/blog/",
+     "https://www.getvim.ai/blog/secure-coding-mcp-a-gift-or-a-cursor"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "New York City",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://app.dealroom.co/companies/vim"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://developer-docs.getvim.ai/",
+     "https://docs.getvim.com/vim-os-js/setting-up"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest documented financing is May 2021, before the May 9, 2025\u2013November 9, 2026 window.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.getvim.ai/media/closes-investments",
+     "https://app.dealroom.co/companies/vim"
+    ]
+   },
+   "founded_year": {
+    "value": 2015,
+    "status": "asserted",
+    "citations": [
+     "https://getvim.com/about-us/"
+    ]
+   },
+   "last_funding": {
+    "notes": "The company identifies its 2021 financing as Series C; the investment announcement is dated May 5, 2021. Amount is omitted because funding databases report $36 million while contemporaneous reporting describes $60 million; the company announcement does not disclose an amount.",
+    "value": {
+     "date": "2021-05",
+     "stage": "Series C"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://getvim.com/about-us/",
+     "https://www.getvim.ai/media/closes-investments"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "No dated major launch was found during May 9\u2013November 9, 2026. The readable announcement history places the Vim Connect platform/marketplace announcement on October 20, 2025. The current site introduces AgentFlow without a launch date, so it cannot establish an in-window launch.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://getvim.com/blog/",
+     "https://www.getvim.ai/media",
+     "https://www.getvim.ai/media/vim-connect-innovators"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No pricing link appears in the public navigation/footer; the commercial information directs buyers to request a quote rather than publishing plans.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.getvim.ai/",
+     "https://launchpad.getvim.com/explore"
+    ]
+   },
+   "employee_band": {
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://app.dealroom.co/companies/vim",
+     "https://leadiq.com/c/vim/5a1d9dbb2300005b008d9c8c"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The official job board states: There are no current openings; archived sales postings are not counted.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/vim"
+    ]
+   },
+   "model_provider": {
+    "notes": "No named product model/provider was found in the public developer documentation, AI/product material, trust center or privacy/vendor disclosures reviewed; no public AI subprocessor list was located. Cursor references concern internal development, not the product model provider.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "value": [
+     "MaxHealth",
+     "MyCare Medical"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.getvim.ai/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The official job board states: There are no current openings.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://job-boards.greenhouse.io/vim"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Vim claims SOC 2 Type II and HIPAA compliance; HIPAA is a compliance claim rather than an independent certification.",
+    "value": [
+     "SOC 2",
+     "HIPAA"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.getvim.ai/trust-center"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The archived Revenue Operations Manager posting describes ownership of HubSpot and operating these marketing/outbound automation systems. Salesforce and Zapier/Make/Workato appear as candidate experience alternatives, not confirmed Vim deployments.",
+    "value": [
+     "HubSpot",
+     "Clay",
+     "HeyReach",
+     "Meta Ads",
+     "Google Ads",
+     "n8n"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://careers.fcventures.com/companies/vim/jobs/79190154-revenue-operations-manager"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Vim connects healthcare systems, data and applications inside EHR workflows so providers, payers and health-tech companies can deploy clinical tools and AI-powered workflows.",
+    "status": "asserted",
+    "citations": [
+     "https://www.getvim.ai/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "A January 15, 2026 announcement congratulates Jonah Remz on his appointment as VP of Finance at Vim, inside the November 9, 2025\u2013November 9, 2026 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/ember-search-partners_congrats-to-jonah-remz-on-his-appointment-activity-7417674429733924864-9a0C"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     },
+     {
+      "url": "https://launchpad.getvim.com/explore"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     },
+     {
+      "url": "https://launchpad.getvim.com/explore"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.notes",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     },
+     {
+      "url": "https://launchpad.getvim.com/explore"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     },
+     {
+      "url": "https://leadiq.com/c/vim/5a1d9dbb2300005b008d9c8c"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     },
+     {
+      "url": "https://leadiq.com/c/vim/5a1d9dbb2300005b008d9c8c"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://getvim.com/about-us/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://getvim.com/about-us/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://getvim.com/blog/"
+     },
+     {
+      "url": "https://www.getvim.ai/blog/secure-coding-mcp-a-gift-or-a-cursor"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://getvim.com/blog/"
+     },
+     {
+      "url": "https://www.getvim.ai/blog/secure-coding-mcp-a-gift-or-a-cursor"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://getvim.com/blog/"
+     },
+     {
+      "url": "https://www.getvim.ai/blog/secure-coding-mcp-a-gift-or-a-cursor"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://developer-docs.getvim.ai/"
+     },
+     {
+      "url": "https://docs.getvim.com/vim-os-js/setting-up"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://developer-docs.getvim.ai/"
+     },
+     {
+      "url": "https://docs.getvim.com/vim-os-js/setting-up"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/trust-center"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/trust-center"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/trust-center"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://getvim.com/about-us/"
+     },
+     {
+      "url": "https://www.getvim.ai/media/closes-investments"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://getvim.com/about-us/"
+     },
+     {
+      "url": "https://www.getvim.ai/media/closes-investments"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://getvim.com/about-us/"
+     },
+     {
+      "url": "https://www.getvim.ai/media/closes-investments"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/media/closes-investments"
+     },
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/media/closes-investments"
+     },
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://www.getvim.ai/media/closes-investments"
+     },
+     {
+      "url": "https://app.dealroom.co/companies/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://job-boards.greenhouse.io/vim"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://getvim.com/blog/"
+     },
+     {
+      "url": "https://www.getvim.ai/media"
+     },
+     {
+      "url": "https://www.getvim.ai/media/vim-connect-innovators"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://getvim.com/blog/"
+     },
+     {
+      "url": "https://www.getvim.ai/media"
+     },
+     {
+      "url": "https://www.getvim.ai/media/vim-connect-innovators"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://getvim.com/blog/"
+     },
+     {
+      "url": "https://www.getvim.ai/media"
+     },
+     {
+      "url": "https://www.getvim.ai/media/vim-connect-innovators"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/ember-search-partners_congrats-to-jonah-remz-on-his-appointment-activity-7417674429733924864-9a0C"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/ember-search-partners_congrats-to-jonah-remz-on-his-appointment-activity-7417674429733924864-9a0C"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/ember-search-partners_congrats-to-jonah-remz-on-his-appointment-activity-7417674429733924864-9a0C"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://careers.fcventures.com/companies/vim/jobs/79190154-revenue-operations-manager"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://careers.fcventures.com/companies/vim/jobs/79190154-revenue-operations-manager"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://careers.fcventures.com/companies/vim/jobs/79190154-revenue-operations-manager"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

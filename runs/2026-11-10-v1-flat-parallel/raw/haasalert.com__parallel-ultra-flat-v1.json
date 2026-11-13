@@ -1,0 +1,550 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9d46a15a27a33a57",
+  "interaction_id": "trun_142119f6a1b4439e9d46a15a27a33a57",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "haasalert.com"
+  },
+  "created_at": "2026-11-10T18:48:50.368107Z",
+  "modified_at": "2026-11-10T18:56:12.432276Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9d46a15a27a33a57",
+   "interaction_id": "trun_142119f6a1b4439e9d46a15a27a33a57",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "haasalert.com"
+   },
+   "created_at": "2026-11-10T18:48:50.368107Z",
+   "modified_at": "2026-11-10T18:56:12.432276Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Safety Cloud for Automotive Expands: Four Products, One Vision for Connected Road Safety | HAAS Alert",
+       "url": "http://haasalert.com/news/safety-cloud-for-auto",
+       "excerpts": [
+        "Since our founding in 2015, we've been driven by a singular mission: to protect the people who keep our roads safe and ensure everyone gets home at the end of the day."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly states that it was founded in 2015. This primary-source statement takes precedence over a conflicting directory entry: http://haasalert.com/news/safety-cloud-for-auto.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "SOC 2 Type 1, 2 & SOC 3",
+        "ISO/IEC 27001",
+        "GDPR Compliance"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center publicly claims SOC 2, ISO/IEC 27001 and GDPR compliance, without describing these as in progress: https://www.haasalert.com/trust-center. GDPR is included as requested, although it is a compliance claim rather than a conventional certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "HAAS Alert - The Emergency Services Show 2026",
+       "url": "https://www.emergencyuk.com/exhibitors/haas-alert",
+       "excerpts": [
+        "Address HAAS Alert Global Headquarters 2071 N Southport Ave Suite 206 Chicago IL 60614 United States * * * * * * Visit website (opens in a new tab) Associated Speakers Gareth Evans Director of Strategy and Business Development EMEA HAAS Alert"
+       ]
+      }
+     ],
+     "reasoning": "The exhibitor profile explicitly labels the Chicago, United States address as HAAS Alert\u2019s global headquarters: https://www.emergencyuk.com/exhibitors/haas-alert.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Digital Alerting Resources & Case Studies | HAAS Alert",
+       "url": "https://haasalert.com/media",
+       "excerpts": [
+        "the HAAS Alert Team Dylan Strother Blogs Safety Cloud Product Update: Spring 2026",
+        "Blog the HAAS Alert Team Cory Hohs Blogs Distracted Driving: The Problem Laws Alone Can't Solve"
+       ]
+      }
+     ],
+     "reasoning": "The readable media index contains product updates and roadway-safety marketing content, including a Spring 2026 product update and a distracted-driving article. It does not establish two engineer-authored posts explaining how the product is built: https://haasalert.com/media.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Safety Cloud\u00ae | HAAS Alert",
+       "url": "https://haasalert.com/safety-cloud",
+       "excerpts": [
+        "Safety Cloud service by HAAS Alert reduces the risk of collision by delivering real-time notifications called \" [digital alerts](https://www.haasalert.com/news/digital-alerting-system) ,\" directly to nearby and approaching motorists. Digital alerts warn drivers of emergency vehicles and crews, work zones, and other hazards, allowing them more time to slow down, move over and make safer maneuvers."
+       ]
+      },
+      {
+       "title": "About Us | HAAS Alert",
+       "url": "https://www.haasalert.com/about",
+       "excerpts": [
+        "Our digital alerting solution is the biggest data provider to navigation apps like Waze and available on millions of passenger vehicles, connecting thousands of emergency and roadway fleets directly to the motoring public every day."
+       ]
+      }
+     ],
+     "reasoning": "The product page describes collision prevention through real-time alerts about emergency vehicles, crews, work zones and hazards. The About page identifies emergency and roadway fleets, connected vehicles and navigation apps: https://haasalert.com/safety-cloud and https://www.haasalert.com/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "HAAS Alert Chicago Office: Careers, Perks + Culture | Built In Chicago",
+       "url": "https://www.builtinchicago.org/company/haas-alert",
+       "excerpts": [
+        "70 Total Employees"
+       ]
+      }
+     ],
+     "reasoning": "Built In reports 70 total employees, which falls within 51\u2013100: https://www.builtinchicago.org/company/haas-alert. This is a third-party headcount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Privacy & Cookie Policy | HAAS Alert",
+       "url": "https://www.haasalert.com/privacy",
+       "excerpts": [
+        "HAAS Alert resides on leading cloud service providers (linked on our security page) utilizing industry-standard security protocols to protect Personal Data."
+       ]
+      },
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "How do you manage third-party risk? We conduct thorough due diligence and regular security assessments of our third-party vendors and partners to ensure they meet our security and compliance standards."
+       ]
+      },
+      {
+       "title": "HAAS Alert and Neutron Edge Partner to Deliver AI-Powered Emergency Response for Fire and EMS Agencies  | HAAS Alert",
+       "url": "https://www.haasalert.com/news/haas-alert-neutron-edge-ai-powered-emergency-response",
+       "excerpts": [
+        "The partnership brings together Neutron Edge's AI-powered routing, traffic signal integration, and in-vehicle responder applications with HAAS Alert's Safety Cloud platform, which delivers digital alerts to connected vehicles and navigation applications so motorists receive advance warning of approaching emergency vehicles and roadside incidents."
+       ]
+      }
+     ],
+     "reasoning": "Unknown. Product documentation, the media index, Trust Center and privacy policy did not identify an AI model or model-inference provider. The Neutron Edge announcement describes an AI-routing platform partnership, not a disclosed model vendor. Sources checked include https://support.haasalert.com/help, https://haasalert.com/media, https://www.haasalert.com/trust-center, https://www.haasalert.com/privacy and https://www.haasalert.com/news/haas-alert-neutron-edge-ai-powered-emergency-response.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Safety Cloud\u00ae Pricing | HAAS Alert",
+       "url": "https://www.haasalert.com/pricing",
+       "excerpts": [
+        "Get equipped with Safety Cloud\u00ae [Public Safety](https://www.haasalert.com/pricing-public-safety) [Towing](https://www.haasalert.com/pricing-towing) [Construction & Utility](https://www.haasalert.com/pricing-roads) _HA-7: Connect any vehicle with HAAS Alert's reliable, road-proven device, sold separately ($399)"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page links industry-specific plans and lists the separately sold HA-7 device at $399: https://www.haasalert.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: HAAS Alert; website_url: https://www.haasalert.com/; latest_funding_round_name: Seed; latest_funding_round_date: 2024-01-08; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Seed; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2024-01-08; all_funding_rounds[0].round_investor_names: Volition Capital; all_funding_rounds[1].round_name: Seed; all_funding_rounds[1].amount_usd: 5000000.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2021-08-30; all_funding_r"
+       ]
+      }
+     ],
+     "reasoning": "Unknown. The latest funding record leaves the round amount unavailable, and the investor announcement does not disclose it: https://www.volitioncapital.com/news/haas-alert-announcement. The public funding table contains inconsistent figures, so none was treated as a reliable USD amount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "WJ Group Leads the Way in Road Worker Safety with Safety Cloud\u00ae | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/wj-group-safety-cloud",
+       "excerpts": [
+        "WJ Group Leads the Way in Road Worker Safety with Safety Cloud"
+       ]
+      },
+      {
+       "title": "Case Study: DC Fire & EMS Department  | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/case-study-dc-fire-ems-department",
+       "excerpts": [
+        "That's why leaders at DC Fire and EMS department added Safety Cloud protection to their fleet."
+       ]
+      }
+     ],
+     "reasoning": "HAAS Alert publishes customer case studies for WJ Group and DC Fire and EMS Department. The latter explicitly says the department added Safety Cloud protection to its fleet: https://www.haasalert.com/case-study/wj-group-safety-cloud and https://www.haasalert.com/case-study/case-study-dc-fire-ems-department.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "HAAS Alert - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/haas-alert/__LefkJ0oPZ_A4vq8A8kKpHf-SNw0zgpjgdSCQCsDavNE/funding-and-investors",
+       "excerpts": [
+        "[Volition Capital](https://tracxn.com/d/private-equity/volition-capital/__S6vw7eJe7fJOa4D2kH9V506pwTFS2q-IucLGhMr9GOs) is the lead investor in HAAS Alert's latest funding round held onJan 08, 2024.",
+        "Last updated: November 4, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile, updated November 4, 2026, identifies January 8, 2024 as the latest round, yielding 2024-01: https://tracxn.com/d/companies/haas-alert/__LefkJ0oPZ_A4vq8A8kKpHf-SNw0zgpjgdSCQCsDavNE/funding-and-investors. The investor announcement corroborates the event: https://www.volitioncapital.com/news/haas-alert-announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero, and more) and own the architecture and integrations behind it."
+       ]
+      }
+     ],
+     "reasoning": "The RevOps Manager / GTM Engineer posting explicitly names HubSpot, RevOps.io, Gong and RevHero as the existing stack the employee will administer: https://www.haasalert.com/roles/revops-manager-gtm-engineer.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "HAAS Alert - Leadership Team | The Org",
+       "url": "https://theorg.com/org/haas-alert/teams/leadership-team",
+       "excerpts": [
+        "People (8) HZ Hussein Zaarour Head Of Detroit | VP Of Automotive Surya Sonti VP Maps Technology Marcel Chudoba Chief Financial Officer JP Jigar Patel CTO Jeremy Agulnek Chief Product Officer Brock Aun Chief Strategy Officer Cory James Hohs CEO / Co-Founder Thomas Parbs Senior Director Of Sales"
+       ]
+      },
+      {
+       "title": "Brock Aun",
+       "url": "https://linkedin.com/in/brockaun",
+       "excerpts": [
+        "Returned fields: {experience_text='HAAS Alert 2026-07-01 Chief Strategy Officer HAAS Alert 2025-07-01 2026-07-01 Vice President of Product HAAS Alert 2023-09-01 2025-07-01 Vice President of Communications and Public Policy HAAS Alert 2023-03-01 2023-09-01 Vice President of Communications HAAS Alert 2022-08-01 2023-03-01 Senior Director of Communications HAAS Alert Greater Chicago Area 2019-04-01 2022-08-01 Director Of Communications Intelligent Transportation Society of America 2023-03-01 Chairperson - Beyond 5..., slug='brockaun', url='https://linkedin.com/in/brockaun', name='Brock Aun', company_name='HAAS Alert', title='Chief Strategy Officer'}"
+       ]
+      },
+      {
+       "title": "Mitsubishi Electric's FLEXConnect\u2122 Joins the Safety Cloud\u00ae Network  | HAAS Alert",
+       "url": "https://www.haasalert.com/news/mitsubishi-electrics-flexconnect-joins-safety-cloud",
+       "excerpts": [
+        "May 30, 2025",
+        "\u201cHAAS Alert is thrilled to enter into this partnership with Mitsubishi Electric,\u201d said Hussein Zaarour, Vice President of Business Development - Connected Vehicles at HAAS Alert."
+       ]
+      }
+     ],
+     "reasoning": "The small eight-person leadership roster and available dated profiles were checked, with no company-level C-suite/VP hire or departure identified during the window. Hussein Zaarour was already a HAAS Alert VP in May 2025. Brock Aun\u2019s July 2026 move to Chief Strategy Officer was an internal promotion, not joining or leaving the company. Sources: https://theorg.com/org/haas-alert/teams/leadership-team, https://linkedin.com/in/brockaun and https://www.haasalert.com/news/mitsubishi-electrics-flexconnect-joins-safety-cloud. The negative conclusion remains subject to incomplete public announcements.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Careers | HAAS Alert",
+       "url": "https://www.haasalert.com/careers",
+       "excerpts": [
+        "Job openings Join our mission in reshaping roadway safety RevOps Manager / GTM Engineer [details](https://www.haasalert.com/roles/revops-manager-gtm-engineer) Product Manager [details](https://www.haasalert.com/roles/product-manager) Technical Delivery & Solutions Lead [details](https://www.haasalert.com/roles/technical-delivery-solutions-lead)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists RevOps Manager / GTM Engineer, Product Manager and Technical Delivery & Solutions Lead. None has a qualifying AI, ML or data-science title: https://www.haasalert.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "HAAS Alert: Volition Capital Closes Growth Investment",
+       "url": "https://www.volitioncapital.com/news/haas-alert-announcement",
+       "excerpts": [
+        "HAAS Alert: Volition Capital Closes Growth Investment"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: HAAS Alert; website_url: https://www.haasalert.com/; latest_funding_round_name: Seed; latest_funding_round_date: 2024-01-08; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Seed; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2024-01-08; all_funding_rounds[0].round_investor_names: Volition Capital; all_funding_rounds[1].round_name: Seed; all_funding_rounds[1].amount_usd: 5000000.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2021-08-30; all_funding_r"
+       ]
+      }
+     ],
+     "reasoning": "The investor calls the latest transaction a growth investment, whereas Tracxn classifies it as Seed. Both labels are retained rather than silently resolving that classification difference: https://www.volitioncapital.com/news/haas-alert-announcement and https://tracxn.com/d/companies/haas-alert/__LefkJ0oPZ_A4vq8A8kKpHf-SNw0zgpjgdSCQCsDavNE/funding-and-investors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Digital Alerting | HAAS Alert Knowledge Base",
+       "url": "https://haas.knowledgeowl.com/help/digital-alerting",
+       "excerpts": [
+        "[What are Digital Alerts from HAAS Alert?](https://support.haasalert.com/help/what-are-digital-alerts)",
+        "[How do I install my HAAS Alert transponder?](https://support.haasalert.com/help/how-do-i-install-my-haas-alert-digital-alerting-transponder)",
+        "[Using an External Antenna with the HA-5 or HA-7 Digital Alerting Transponder](https://support.haasalert.com/help/can-an-external-antenna-be-used-with-the-digital-alerting-transponder)"
+       ]
+      }
+     ],
+     "reasoning": "The public knowledge base exposes multiple product articles, including digital-alert explanations, transponder installation and external-antenna guidance: https://haas.knowledgeowl.com/help/digital-alerting. It is more than a single FAQ page.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "HAAS Alert - The Emergency Services Show 2026",
+       "url": "https://www.emergencyuk.com/exhibitors/haas-alert",
+       "excerpts": [
+        "Address HAAS Alert Global Headquarters 2071 N Southport Ave Suite 206 Chicago IL 60614 United States * * * * * * Visit website (opens in a new tab) Associated Speakers Gareth Evans Director of Strategy and Business Development EMEA HAAS Alert"
+       ]
+      }
+     ],
+     "reasoning": "The exhibitor profile explicitly labels the Chicago address as HAAS Alert\u2019s global headquarters: https://www.emergencyuk.com/exhibitors/haas-alert.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "HAAS Alert launches Safety Cloud For Android Automotive, Giving Automakers A Ready-To-Deploy Connected Safety Experience  | HAAS Alert",
+       "url": "https://www.haasalert.com/news/haas-alert-safety-cloud-for-android-automotive",
+       "excerpts": [
+        "Jun 2, 2026",
+        "**CHICAGO, IL -** HAAS Alert today announced Safety Cloud\u00ae for Android Automotive, an embedded application that connects AAOS-equipped vehicles directly to its Safety Cloud network.",
+        "The launch gives automakers a production-ready connected safety experience they can deliver to customers over existing cellular connectivity, without dedicated V2X hardware."
+       ]
+      }
+     ],
+     "reasoning": "HAAS Alert announced Safety Cloud for Android Automotive on June 2, 2026, within the six-month window. It is a substantive embedded automotive application, not a minor UI change: https://www.haasalert.com/news/haas-alert-safety-cloud-for-android-automotive.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Careers | HAAS Alert",
+       "url": "https://www.haasalert.com/careers",
+       "excerpts": [
+        "Job openings Join our mission in reshaping roadway safety RevOps Manager / GTM Engineer [details](https://www.haasalert.com/roles/revops-manager-gtm-engineer) Product Manager [details](https://www.haasalert.com/roles/product-manager) Technical Delivery & Solutions Lead [details](https://www.haasalert.com/roles/technical-delivery-solutions-lead)"
+       ]
+      }
+     ],
+     "reasoning": "None of the three openings on the careers page is an SDR, BDR or account-executive role; RevOps does not qualify under the requested definition: https://www.haasalert.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "HAAS Alert - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/haas-alert/__LefkJ0oPZ_A4vq8A8kKpHf-SNw0zgpjgdSCQCsDavNE/funding-and-investors",
+       "excerpts": [
+        "[Volition Capital](https://tracxn.com/d/private-equity/volition-capital/__S6vw7eJe7fJOa4D2kH9V506pwTFS2q-IucLGhMr9GOs) is the lead investor in HAAS Alert's latest funding round held onJan 08, 2024.",
+        "Last updated: November 4, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile updated in November 2026 still identifies January 8, 2024 as the latest round, before the May 2025 start of the 18-month window: https://tracxn.com/d/companies/haas-alert/__LefkJ0oPZ_A4vq8A8kKpHf-SNw0zgpjgdSCQCsDavNE/funding-and-investors. The dated investment announcement is https://www.volitioncapital.com/news/haas-alert-announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "SOC 2 Type 1, 2 & SOC 3"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names SOC 2 Type 1 and Type 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "ISO/IEC 27001"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names ISO/IEC 27001.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "GDPR Compliance"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly claims GDPR compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "WJ Group Leads the Way in Road Worker Safety with Safety Cloud\u00ae | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/wj-group-safety-cloud",
+       "excerpts": [
+        "WJ Group Leads the Way in Road Worker Safety with Safety Cloud"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s case study identifies WJ Group using Safety Cloud for road-worker safety.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Case Study: DC Fire & EMS Department  | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/case-study-dc-fire-ems-department",
+       "excerpts": [
+        "That's why leaders at DC Fire and EMS department added Safety Cloud protection to their fleet."
+       ]
+      }
+     ],
+     "reasoning": "The case study explicitly states that DC Fire and EMS Department added Safety Cloud protection to its fleet.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero, and more) and own the architecture and integrations behind it."
+       ]
+      }
+     ],
+     "reasoning": "HubSpot is explicitly named in the existing RevOps stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero, and more) and own the architecture and integrations behind it."
+       ]
+      }
+     ],
+     "reasoning": "RevOps.io is explicitly named in the existing RevOps stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero, and more) and own the architecture and integrations behind it."
+       ]
+      }
+     ],
+     "reasoning": "Gong is explicitly named in the existing RevOps stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero, and more) and own the architecture and integrations behind it."
+       ]
+      }
+     ],
+     "reasoning": "RevHero is explicitly named in the existing RevOps stack.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "HAAS Alert\u2019s Safety Cloud helps emergency and roadway fleets prevent collisions by sending real-time hazard alerts to approaching drivers through connected vehicles and navigation apps.",
+    "employee_band": "51-100",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "WJ Group",
+     "DC Fire and EMS Department"
+    ],
+    "funding_date": "2024-01",
+    "crm_stack_signal": [
+     "HubSpot",
+     "RevOps.io",
+     "Gong",
+     "RevHero"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Growth investment (classified as Seed by Tracxn)",
+    "public_docs": true,
+    "hq_city": "Chicago",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

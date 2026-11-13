@@ -1,0 +1,682 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9ac9d7e51da191d8",
+  "interaction_id": "trun_142119f6a1b4439e9ac9d7e51da191d8",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "saucelabs.com"
+  },
+  "created_at": "2026-11-10T18:48:18.681223Z",
+  "modified_at": "2026-11-10T18:53:14.460604Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9ac9d7e51da191d8",
+   "interaction_id": "trun_142119f6a1b4439e9ac9d7e51da191d8",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "saucelabs.com"
+   },
+   "created_at": "2026-11-10T18:48:18.681223Z",
+   "modified_at": "2026-11-10T18:53:14.460604Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Sauce Labs",
+       "url": "https://linkedin.com/company/sauce-labs",
+       "excerpts": [
+        "website: https://saucelabs.com employee count: 331 founded year: 2008"
+       ]
+      }
+     ],
+     "reasoning": "Sauce Labs\u2019 LinkedIn company profile states that it was founded in 2008: https://linkedin.com/company/sauce-labs.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Sauce Labs",
+       "url": "https://www.saucelabs.com/security",
+       "excerpts": [
+        "Compliance SOC 2 Type II ISO 27001: 2022 ISO 27701: 2019 Digital Operational Resilience Act GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "The official security page names SOC 2 Type II, ISO 27001:2022 and GDPR. Only the requested compliance categories are included: https://www.saucelabs.com/security.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Sauce Labs",
+       "url": "https://linkedin.com/company/sauce-labs",
+       "excerpts": [
+        "country iso: US country name: United States locality: San Francisco, California type: Privately Held"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies the country as United States and the locality as San Francisco, California: https://linkedin.com/company/sauce-labs.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Sauce Labs Open Source Blog",
+       "url": "https://opensource.saucelabs.com/blog",
+       "excerpts": [
+        "[Ubuntu Autoinstall & IaC in Data Centers operations](https://opensource.saucelabs.com/blog/ubuntu_autoinstall_and_iac_data_centers_operations/)"
+       ]
+      },
+      {
+       "title": "Ubuntu Autoinstall & IaC in Data Centers operations",
+       "url": "https://opensource.saucelabs.com/blog/ubuntu_autoinstall_and_iac_data_centers_operations/",
+       "excerpts": [
+        "Published on Jan 14, 2022 by Daniel Louvier",
+        "To provision our barebones we use the [nocloud](https://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html) datasource passing the configuration via a second USB Stick labeled as \u201ccidata\u201d."
+       ]
+      },
+      {
+       "title": "Visualize HAR Files With The New React Network Viewer Component",
+       "url": "https://opensource.saucelabs.com/blog/react_network_viewer/",
+       "excerpts": [
+        "Published on Oct 01, 2020 by [Farhan Iqbalhusain Chauhan](https://twitter.com/FARHANCHAUHAN)",
+        "To take advantage of HAR file information and provide a modern UI to visualize them, we have implemented a library called Network Viewer which is an open source library that is built with React.js.",
+        "The Network Viewer is integrated within the Sauce Labs Test Details page."
+       ]
+      }
+     ],
+     "reasoning": "The engineering blog contains Daniel Louvier\u2019s infrastructure provisioning implementation and Farhan Iqbalhusain Chauhan\u2019s React Network Viewer implementation, integrated into Sauce Labs. These are first-person engineering writeups, although the posts do not explicitly state the authors\u2019 job titles. Sources: https://opensource.saucelabs.com/blog/ubuntu_autoinstall_and_iac_data_centers_operations/ and https://opensource.saucelabs.com/blog/react_network_viewer/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Report on Sauce Labs Inc. Continuous Testing Cloud System",
+       "url": "https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf",
+       "excerpts": [
+        "(last verified: 2026-10-28) The Company is a cloud- hosted, web and mobile application testing platform provider headquartered in San Francisco, California. Sauce Labs software allows its customers to ensure their mobile apps, web apps, and websites work on every browser, operating system, and device. This is accomplished by providing software development and quality teams with instant access to both real and virtual devices in the cloud for running automated and manual tests. In addition to providing the infrastructure to execute the tests across a broad range of browsers, operating systems and devices, Sauce Labs also provides the software needed to debug issues once found, such as videos of each test, screen shots, logs and analytics."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s assurance report describes its cloud testing platform, development and quality-team users, browser/OS/device coverage, and automated and manual testing: https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Sauce Labs",
+       "url": "https://linkedin.com/company/sauce-labs",
+       "excerpts": [
+        "website: https://saucelabs.com employee count: 331 founded year: 2008"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 331 employees, placing Sauce Labs in the 201\u2013500 band. LinkedIn-associated headcount may differ from payroll headcount: https://linkedin.com/company/sauce-labs.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Trust Center - Sauce Labs",
+       "url": "https://trust.saucelabs.com/subprocessors",
+       "excerpts": [
+        "For Gemini AI and Vertex API, used in customer support chatbot and natural language data query service, and data analysis, personal data may include username, email, IP address, device id, and any personal data submitted by the user in queries.",
+        "Cloud provider (Google Cloud Platform, Looker, Gemini AI, Vertex API)"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor disclosure names Google Cloud Platform, Gemini AI and Vertex API, and explicitly describes Gemini/Vertex use in natural-language queries, analysis and the support chatbot: https://trust.saucelabs.com/subprocessors.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Sauce Labs",
+       "url": "https://saucelabs.com/pricing",
+       "excerpts": [
+        "AI-Driven Platform for Quality Pricing Plans Monthly Annually Live Testing $39 Per month, billed annually or $49 month to month"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page lists plans and published prices, including Live Testing: https://saucelabs.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Sauce Labs Valuation 2026: N/A | Private Company Worth",
+       "url": "https://www.premieralts.com/companies/sauce-labs/funding-history",
+       "excerpts": [
+        "Last Round Debt - General Amount undisclosed Last Funding Jun 2024"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified financing is listed as June 2024 debt with its amount undisclosed. The earlier January 2024 Series G amount is not substituted for this later financing: https://www.premieralts.com/companies/sauce-labs/funding-history.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Walmart Case Study | Accelerating Test Automation & Open Source with Sauce Labs",
+       "url": "https://saucelabs.com/resources/case-studies/walmart-embraces-test-automation-and-open-source-to-increase-coverage-and-deploy-more-often",
+       "excerpts": [
+        "Walmart Embraces Test Automation and Open Source to Increase Coverage and Deploy More Often Walmart tests at scale running 50K tests a day on Sauce Labs using their proprietary open source test management platform. Case Study - Walmart"
+       ]
+      },
+      {
+       "title": "Aryaka Networks Accelerates End To End Platform Coverage Using Autonomiq Sauce Labs",
+       "url": "https://saucelabs.com/resources/case-studies/aryaka-networks-accelerates-end-to-end-platform-coverage-using-autonomiq-sauce-labs",
+       "excerpts": [
+        "Aryaka Networks Accelerates End-to-End Platform Coverage Using Sauce Labs"
+       ]
+      }
+     ],
+     "reasoning": "Official customer case studies identify Walmart and Aryaka Networks as users: https://saucelabs.com/resources/case-studies/walmart-embraces-test-automation-and-open-source-to-increase-coverage-and-deploy-more-often and https://saucelabs.com/resources/case-studies/aryaka-networks-accelerates-end-to-end-platform-coverage-using-autonomiq-sauce-labs.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Sauce Labs Valuation 2026: N/A | Private Company Worth",
+       "url": "https://www.premieralts.com/companies/sauce-labs/funding-history",
+       "excerpts": [
+        "Last Round Debt - General Amount undisclosed Last Funding Jun 2024"
+       ]
+      },
+      {
+       "title": "Sauce Labs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/55089-10",
+       "excerpts": [
+        "* Latest Deal Type Debt * Financing Rounds 14"
+       ]
+      }
+     ],
+     "reasoning": "Premier Alternatives dates the last debt financing to June 2024; PitchBook independently identifies the latest deal type as Debt. This is later than the January 2024 equity round reported elsewhere, but the date is supported only by a secondary profile: https://www.premieralts.com/companies/sauce-labs/funding-history and https://pitchbook.com/profiles/company/55089-10.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Inside Sales Representative at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8107367",
+       "excerpts": [
+        "Experience using Salesforce, Outreach, and similar platforms"
+       ]
+      },
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "The growth-leadership posting explicitly names the enterprise marketing infrastructure; the sales posting additionally requests Outreach experience. Outreach is therefore a hiring signal rather than an explicit statement of deployment. Sources: https://job-boards.greenhouse.io/saucelabs/jobs/8164409 and https://job-boards.greenhouse.io/saucelabs/jobs/8107367.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Sauce Labs Assembles \"New Sauce\" Leadership Team to Dominate $1 Trillion Software Quality Market",
+       "url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/sauce-labs-assembles-%22new-sauce%22-leadership-team-to-dominate-1157999",
+       "excerpts": [
+        "Sauce Labs Assembles \"New Sauce\" Leadership Team to Dominate $1 Trillion Software Quality Market Thursday, 16 April 2026 10:00 AM",
+        "_**Enterprise veterans Steven Fitz and Arun Lal join as Chief Revenue Officer and SVP of Global Marketing, signaling the company's aggressive push to redefine software quality for the AI era**_ **SAN FRANCISCO, CA / [ACCESS Newswire](https://www.accessnewswire.com/) / April 16, 2026 /** Sauce Labs, the full-lifecycle AI-quality platform for enterprises, today announced the appointments of Steven Fitz as Chief Revenue Officer and Arun Lal as Senior Vice President of Global Marketing."
+       ]
+      }
+     ],
+     "reasoning": "The April 16, 2026 announcement states that Steven Fitz joined as Chief Revenue Officer and Arun Lal as SVP of Global Marketing, within the requested twelve-month window: https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/sauce-labs-assembles-%22new-sauce%22-leadership-team-to-dominate-1157999.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for AI Architect at Sauce Labs Inc.",
+       "url": "http://job-boards.greenhouse.io/saucelabs/jobs/7096532",
+       "excerpts": [
+        "AI Architect Gurugram, India Apply **About Us:** Sauce Labs is the world's largest full-lifecycle, test automation platform, and the company behind Selenium. ... Learn more at [saucelabs.com](http://saucelabs.com/) . The Role: We are seeking an innovative and experienced AI Architect to join our engineering leadership team. This is a strategic role that will be instrumental in designing and building the next generation of AI-powered features for our continuous testing platform."
+       ]
+      },
+      {
+       "title": "Jobs at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs?error=true",
+       "excerpts": [
+        "3210:Development |Job | |[Account Executive London, UK](https://job-boards.greenhouse.io/saucelabs/jobs/8267329) | |[AI Architect Gurugram, India](https://job-boards.greenhouse.io/saucelabs/jobs/7096532) |"
+       ]
+      }
+     ],
+     "reasoning": "The live AI Architect posting in Gurugram describes designing AI-powered continuous-testing capabilities, and the current job board lists the role: https://job-boards.greenhouse.io/saucelabs/jobs/7096532.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Sauce Labs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/55089-10",
+       "excerpts": [
+        "* Latest Deal Type Debt * Financing Rounds 14"
+       ]
+      },
+      {
+       "title": "Sauce Labs Valuation 2026: N/A | Private Company Worth",
+       "url": "https://www.premieralts.com/companies/sauce-labs/funding-history",
+       "excerpts": [
+        "Last Round Debt - General Amount undisclosed Last Funding Jun 2024"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook labels the latest deal Debt, while Premier Alternatives specifies Debt - General. Both support reporting Debt rather than the earlier Series G equity stage: https://pitchbook.com/profiles/company/55089-10 and https://www.premieralts.com/companies/sauce-labs/funding-history.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Sauce AI | Sauce Labs Documentation",
+       "url": "https://docs.saucelabs.com/sauce-ai/index.html",
+       "excerpts": [
+        "[Sauce AI for Test Authoring](https://docs.saucelabs.com/sauce-ai/ai-authoring)",
+        "[Generate a test case](https://docs.saucelabs.com/sauce-ai/test-authoring/generate-your-test-case)",
+        "[Prompting guide](https://docs.saucelabs.com/sauce-ai/ai-authoring-prompting-guide)",
+        "[Tools](https://docs.saucelabs.com/sauce-ai/sauce-mcp-tools)"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation index links numerous product articles, including test authoring, generating tests, prompting and MCP tools: https://docs.saucelabs.com/sauce-ai/index.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Report on Sauce Labs Inc. Continuous Testing Cloud System",
+       "url": "https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf",
+       "excerpts": [
+        "(last verified: 2026-10-28) The Company is a cloud- hosted, web and mobile application testing platform provider headquartered in San Francisco, California. Sauce Labs software allows its customers to ensure their mobile apps, web apps, and websites work on every browser, operating system, and device. This is accomplished by providing software development and quality teams with instant access to both real and virtual devices in the cloud for running automated and manual tests. In addition to providing the infrastructure to execute the tests across a broad range of browsers, operating systems and devices, Sauce Labs also provides the software needed to debug issues once found, such as videos of each test, screen shots, logs and analytics."
+       ]
+      }
+     ],
+     "reasoning": "The company assurance report explicitly states that Sauce Labs is headquartered in San Francisco, California: https://assets.ctfassets.net/vrc8wif0t20g/YTclSunvGnFtxRuGi2E0r/4356091bb20bb1c94bf1ca3d07caf17f/Sauce_Labs_2023_SOC_3_Report-Final.pdf.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Industry's First ARM-Native Android Testing Cloud for the Enterprise at Scale | Sauce Labs",
+       "url": "https://saucelabs.com/company/news/sauce-labs-launches-the-industrys-first-arm-native-android-testing-cloud-for-the-enterprise-at-scale",
+       "excerpts": [
+        "September 29, 2026 Sauce Labs, the test automation leader created by the founders of Selenium and Appium, today announced ARM-native virtual devices for Android in Virtual Device Cloud, the industry's first enterprise-grade, ARM-native virtual Android testing environment, part of AURA, the company's AI-Unified Release Assurance platform."
+       ]
+      }
+     ],
+     "reasoning": "On September 29, 2026, Sauce Labs announced ARM-native Android virtual devices in its Virtual Device Cloud, a substantial new capability within the six-month window: https://saucelabs.com/company/news/sauce-labs-launches-the-industrys-first-arm-native-android-testing-cloud-for-the-enterprise-at-scale.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Account Executive at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8267329",
+       "excerpts": [
+        "Account Executive London, UK"
+       ]
+      },
+      {
+       "title": "Jobs at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs?error=true",
+       "excerpts": [
+        "3210:Development |Job | |[Account Executive London, UK](https://job-boards.greenhouse.io/saucelabs/jobs/8267329) | |[AI Architect Gurugram, India](https://job-boards.greenhouse.io/saucelabs/jobs/7096532) |"
+       ]
+      }
+     ],
+     "reasoning": "The live Account Executive posting is for London, and the current job board lists it: https://job-boards.greenhouse.io/saucelabs/jobs/8267329.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Sauce Labs Valuation 2026: N/A | Private Company Worth",
+       "url": "https://www.premieralts.com/companies/sauce-labs/funding-history",
+       "excerpts": [
+        "Last Round Debt - General Amount undisclosed Last Funding Jun 2024"
+       ]
+      },
+      {
+       "title": "Sauce Labs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/55089-10",
+       "excerpts": [
+        "* Latest Deal Type Debt * Financing Rounds 14"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified financing is debt dated June 2024, before the May 9, 2025 start of the eighteen-month window. No later financing was identified. This conclusion relies on secondary financing profiles rather than a dated company announcement: https://www.premieralts.com/companies/sauce-labs/funding-history and https://pitchbook.com/profiles/company/55089-10.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Sauce Labs",
+       "url": "https://www.saucelabs.com/security",
+       "excerpts": [
+        "Compliance SOC 2 Type II ISO 27001: 2022 ISO 27701: 2019 Digital Operational Resilience Act GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Sauce Labs",
+       "url": "https://www.saucelabs.com/security",
+       "excerpts": [
+        "Compliance SOC 2 Type II ISO 27001: 2022 ISO 27701: 2019 Digital Operational Resilience Act GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Sauce Labs",
+       "url": "https://www.saucelabs.com/security",
+       "excerpts": [
+        "Compliance SOC 2 Type II ISO 27001: 2022 ISO 27701: 2019 Digital Operational Resilience Act GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Walmart Case Study | Accelerating Test Automation & Open Source with Sauce Labs",
+       "url": "https://saucelabs.com/resources/case-studies/walmart-embraces-test-automation-and-open-source-to-increase-coverage-and-deploy-more-often",
+       "excerpts": [
+        "Walmart Embraces Test Automation and Open Source to Increase Coverage and Deploy More Often Walmart tests at scale running 50K tests a day on Sauce Labs using their proprietary open source test management platform. Case Study - Walmart"
+       ]
+      }
+     ],
+     "reasoning": "The official case study says Walmart runs 50,000 tests per day on Sauce Labs.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Aryaka Networks Accelerates End To End Platform Coverage Using Autonomiq Sauce Labs",
+       "url": "https://saucelabs.com/resources/case-studies/aryaka-networks-accelerates-end-to-end-platform-coverage-using-autonomiq-sauce-labs",
+       "excerpts": [
+        "Aryaka Networks Accelerates End-to-End Platform Coverage Using Sauce Labs"
+       ]
+      }
+     ],
+     "reasoning": "The official customer case study names Aryaka Networks as using Sauce Labs.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Salesforce is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Inside Sales Representative at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8107367",
+       "excerpts": [
+        "Experience using Salesforce, Outreach, and similar platforms"
+       ]
+      }
+     ],
+     "reasoning": "The sales posting requests Outreach experience, providing a hiring-based stack signal rather than explicit deployment confirmation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Marketo is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Inflection is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Segment is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.5",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Clay is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.6",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Clearbit is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.7",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "LeadIQ is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.8",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "LeanData is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.9",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Gong is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.10",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Nooks is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.11",
+     "citations": [
+      {
+       "title": "Job Application for Senior Director, Growth at Sauce Labs Inc.",
+       "url": "https://job-boards.greenhouse.io/saucelabs/jobs/8164409",
+       "excerpts": [
+        "Partner closely with Marketing Operations to ensure growth strategies leverage and align with our enterprise martech infrastructure (including Salesforce, Marketo, Inflection, Segment, Clay, Clearbit, LeadIQ, LeanData, Gong, Nooks, and Gong Engage) and data attribution models."
+       ]
+      }
+     ],
+     "reasoning": "Gong Engage is explicitly included in the company's enterprise marketing infrastructure.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2008.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Sauce Labs provides a cloud platform for development and QA teams to run automated and manual web and mobile application tests across browsers, operating systems, and real and virtual devices.",
+    "employee_band": "201-500",
+    "model_provider": "Google Gemini AI and Vertex API",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Walmart",
+     "Aryaka Networks"
+    ],
+    "funding_date": "2024-06",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Outreach",
+     "Marketo",
+     "Inflection",
+     "Segment",
+     "Clay",
+     "Clearbit",
+     "LeadIQ",
+     "LeanData",
+     "Gong",
+     "Nooks",
+     "Gong Engage"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Debt",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

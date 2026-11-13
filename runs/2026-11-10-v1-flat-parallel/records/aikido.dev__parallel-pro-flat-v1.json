@@ -1,0 +1,170 @@
+{
+ "schema_version": "v0",
+ "company": "Aikido",
+ "domain": "aikido.dev",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Aikido provides a developer-first security platform that helps developers and security teams detect, prioritize, and remediate risks across code, cloud, and runtime.",
+   "citations": [
+    "https://www.aikido.dev/company/press-kit"
+   ],
+   "notes": "Aikido's press kit describes its developer-first security products and says its platform secures code, cloud, and runtime to help teams reduce risk."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/pricing"
+   ],
+   "notes": "Aikido has a public pricing page showing a Developer plan and its pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Revolut",
+    "SoundCloud"
+   ],
+   "citations": [
+    "https://www.aikido.dev/company/press-kit"
+   ],
+   "notes": "named_customers: The company press kit names Revolut and SoundCloud among Aikido's global customers. | named_customers.0: Aikido's press kit names Revolut as a customer. | named_customers.1: Aikido's press kit names SoundCloud as a customer."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/aikido-security"
+   ],
+   "notes": "Aikido's LinkedIn company profile reports a company size of 201\u2013500 employees."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Ghent",
+    "country": "Belgium"
+   },
+   "citations": [
+    "https://www.aikido.dev/company/about"
+   ],
+   "notes": "hq_city: Aikido's About page lists its address in Ghent; the company profile also identifies Ghent as headquarters. | hq_country: Aikido's About page identifies Belgium; its Ghent headquarters is corroborated by the company's press kit."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2022.0,
+   "citations": [
+    "https://www.aikido.dev/llms.txt"
+   ],
+   "notes": "Aikido's company source states that it was founded in 2022."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security",
+    "https://www.aikido.dev/team-members/selim-decamps",
+    "https://www.aikido.dev/blog/opengrep-sast-one-year"
+   ],
+   "notes": "The Altar post is by Selim Decamps, identified on his profile as Aikido Machine Lead Engineer, and details model-compression implementation. The Opengrep post is by its maintainer Dimitris Mostrous and describes substantive architectural and implementation work, including an OCaml 5 migration and shared-memory parallelism. Together these support a technical blog with at least two build-focused posts; confidence is medium because the second author is identified as a maintainer rather than given an explicit engineering job title."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.aikido.dev/"
+   ],
+   "notes": "Aikido provides a public documentation site with multiple sections, including scanning capabilities and developer integrations."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://aikidosecurity.recruitee.com/o/ai-engineer-1",
+    "https://aikidosecurity.recruitee.com/o/software-engineer-ai-pentest"
+   ],
+   "notes": "Aikido's careers postings include an AI Engineer role and a Software Engineer role on its AI Pentest team."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "OpenAI; AWS Bedrock; and Aikido Altar, built from GLM-5.3.",
+   "citations": [
+    "https://trustcenter.aikido.dev/subprocessors",
+    "https://help.aikido.dev/autofix-and-remediation/overview-aikido-autofix",
+    "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security"
+   ],
+   "notes": "Aikido's subprocessors page names OpenAI for AI inference; its AutoFix documentation says models are hosted on AWS Bedrock; and its Altar post says the model was built from GLM-5.3."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "GDPR"
+   ],
+   "citations": [
+    "https://www.aikido.dev/security-overview"
+   ],
+   "notes": "compliance_certs: Aikido's trust page explicitly says it is ISO 27001:2022 and SOC 2 Type II compliant, and separately says it complies with GDPR. FedRAMP is excluded because the page describes it as actively being implemented, not completed. | compliance_certs.0: The trust page explicitly claims ISO 27001:2022 compliance. | compliance_certs.1: The same trust-page statement explicitly claims AICPA SOC 2 Type II compliance. | compliance_certs.2: The trust page explicitly states compliance with GDPR."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2026-01",
+    "amount_usd": 60000000.0
+   },
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-funding-series-b"
+   ],
+   "notes": "funding_stage: The January 2026 announcement identifies the round as Series B. | funding_date: The announcement date is January 14, 2026, so the requested YYYY-MM value is 2026-01. | funding_amount_usd: Aikido's funding announcement identifies a $60 million Series B, dated January 14, 2026."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-funding-series-b"
+   ],
+   "notes": "Aikido announced its $60 million Series B in January 2026, which falls within the 18 months before 2026-11-09."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://aikidosecurity.recruitee.com/o/account-executive-enterprise"
+   ],
+   "notes": "Aikido's careers pages list an Account Executive Enterprise opening with responsibilities described in the posting."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security"
+   ],
+   "notes": "Aikido announced its new open-weight Altar security model on September 21, 2026, inside the six-month window before 2026-11-09."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/jeff-poczatek"
+   ],
+   "notes": "The profile records Jeff Poczatek as VP Sales Commercial US at Aikido, with a start date of 2026-02-01, within the 12 months before 2026-11-09."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot"
+   ],
+   "citations": [
+    "https://aikidosecurity.recruitee.com/o/hubspot-crm-manager"
+   ],
+   "notes": "crm_stack_signal: Aikido's HubSpot CRM Manager job posting says the role will own and operate the company's HubSpot instance. | crm_stack_signal.0: The job posting explicitly says the company uses HubSpot."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 326.4
+}

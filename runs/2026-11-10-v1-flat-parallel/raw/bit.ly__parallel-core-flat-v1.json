@@ -1,0 +1,473 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9145402873b013ac",
+  "interaction_id": "trun_142119f6a1b4439e9145402873b013ac",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "bit.ly"
+  },
+  "created_at": "2026-11-10T18:47:31.810145Z",
+  "modified_at": "2026-11-10T18:49:12.897708Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9145402873b013ac",
+   "interaction_id": "trun_142119f6a1b4439e9145402873b013ac",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "bit.ly"
+   },
+   "created_at": "2026-11-10T18:47:31.810145Z",
+   "modified_at": "2026-11-10T18:49:12.897708Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Bitly Enters 2026 With Expanded Link and QR Code Solutions",
+       "url": "https://bitly.com/pages/press/bitly-connection-layer-links-qr-codes-2026",
+       "excerpts": [
+        "Founded in 2008, Bitly has evolved alongside the internet itself."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s press page explicitly says the company was founded in 2008.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Bitly Trust Center",
+       "url": "https://bitly.com/pages/trust?trk=organization_guest_main-feed-card-text",
+       "excerpts": [
+        "As part of that commitment, Bitly is SOC 2 compliant.",
+        "Bitly is GDPR compliant and Swiss-US Privacy Shield certified."
+       ]
+      }
+     ],
+     "reasoning": "Bitly publicly states it is SOC 2 compliant and GDPR compliant; those are the listed claims among the requested certification categories.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Contact Bitly",
+       "url": "https://bitly.com/pages/contact",
+       "excerpts": [
+        "Our offices New York Office 250 W. 34th St. Suite 310 (3rd Floor) New York, NY 10119 US Headquarters Mail only Bitly Inc DPT 5006 601 W. 26th St. Suite 357 (3rd Floor) New York, NY 10001-1101"
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s contact page labels the New York office as its US Headquarters and gives a New York, NY address.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "NSQ: realtime distributed message processing at scale",
+       "url": "https://word.bitly.com/post/33232969144/nsq",
+       "excerpts": [
+        "[Bitly Engineering Blog](https://word.bitly.com/) [NSQ: realtime distributed message processing at scale](https://word.bitly.com/post/33232969144/nsq) **NSQ** is a realtime message processing system designed to operate at bitly\u2019s scale, handling billions of messages per day. It promotes _distributed_ and _decentralized_ topologies without single points of failure , enabling fault tolerance and high availability coupled with a reliable message delivery guarantee . ... First, on the message _producer_ side we built `nsqd` to match `simplequeue` . Specifically, nsqd exposes an HTTP `/put` endpoint, just like simplequeue, to POST binary data (with the one caveat ... Notably, because it is both buffered _and_ push based with the ability to satisfy the need for independent copies of streams (channels), we\u2019ve produced a daemon that behaves like `simplequeue` and ... We made a strategic decision early on to build the **NSQ** core in [Go](http://golang.org/) ."
+       ]
+      },
+      {
+       "title": "Joining Bitly Engineering",
+       "url": "https://word.bitly.com/post/77292911854/joining-bitly-engineering",
+       "excerpts": [
+        "[Bitly Engineering Blog](https://word.bitly.com/) [Joining Bitly Engineering](https://word.bitly.com/post/77292911854/joining-bitly-engineering) First post! ( _aka_ Introduction) ... much of that time. Since its beginning, Bitly has had a reputation for technical excellence. The engineers here have demonstrated that excellence ... creation (referred to as _encodes_ internally) and link click data (internally, _decodes_ ). To that end, our infrastructure must handle accumulating and manipulating around 6 billion decodes per month. That\u2019s a lot of incoming HTTP requests. Not Google scale, but not pocket change by a long shot. To handle that volume, we use a _stream-based_ architecture, rather than batch processing. That is, instead of accumulating incoming data in a data ... written and said, both on this very blog ( [here](http://word.bitly.com/post/33232969144/nsq) , [here](http://word.bitly.com/post/38385370762/spray-some-nsq-on-it) , and"
+       ]
+      }
+     ],
+     "reasoning": "The Bitly Engineering Blog includes multiple technical posts about product infrastructure: NSQ\u2019s distributed message processing architecture and Bitly\u2019s stream-based link-data infrastructure.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Bitly | Short URLs, QR Codes, and More",
+       "url": "https://bitly.com/",
+       "excerpts": [
+        "Use our URL shortener and QR Code generator to create branded links and QR Codes in seconds, then track every click and scan in Bitly."
+       ]
+      },
+      {
+       "title": "Pricing | Bitly Core, Growth, Premium & Enterprise Pricing Plans",
+       "url": "https://bitly.com/pages/pricing",
+       "excerpts": [
+        "Pricing for brands and businesses of all sizes Connect to your audience with branded links, QR Codes, and landing pages that will get their attention. **New** : Bitly Assist is here\u2014create links and analyze performance with AI, included on Core plans and above."
+       ]
+      }
+     ],
+     "reasoning": "Bitly describes creating branded links and QR Codes and tracking clicks and scans; its pricing page identifies brands and businesses as its intended audience.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/bitly",
+       "excerpts": [
+        "employee count: 338 follower count: 49629 linkedin url: https://www.linkedin.com/company/bitly country iso: US country name: United States locality: New York, NY type: Privately Held size: 200"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile reports 338 employees, which falls in the 201\u2013500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Bitly Core, Growth, Premium & Enterprise Pricing Plans",
+       "url": "https://bitly.com/pages/pricing",
+       "excerpts": [
+        "Pricing for brands and businesses of all sizes Connect to your audience with branded links, QR Codes, and landing pages that will get their attention. **New** : Bitly Assist is here\u2014create links and analyze performance with AI, included on Core plans and above."
+       ]
+      }
+     ],
+     "reasoning": "Bitly has a public pricing page describing pricing for businesses and plan offerings.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Bitly Funding History: $95.0M | Indexed.vc",
+       "url": "https://indexed.vc/companies/bitly",
+       "excerpts": [
+        "[Growth Equity](https://indexed.vc/companies/bitly/funding/5dc2edf3-bd32-4fc3-af19-56d8bd7a0e91) Growth Investment Jul 2017",
+        "$63.0M"
+       ]
+      }
+     ],
+     "reasoning": "The indexed funding history identifies a July 2017 growth investment and reports $63.0M as the latest funding amount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Bitly Funding History: $95.0M | Indexed.vc",
+       "url": "https://indexed.vc/companies/bitly",
+       "excerpts": [
+        "[Growth Equity](https://indexed.vc/companies/bitly/funding/5dc2edf3-bd32-4fc3-af19-56d8bd7a0e91) Growth Investment Jul 2017"
+       ]
+      }
+     ],
+     "reasoning": "The funding history dates the growth investment to July 2017.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Bitly Funding History: $95.0M | Indexed.vc",
+       "url": "https://indexed.vc/companies/bitly",
+       "excerpts": [
+        "[Growth Equity](https://indexed.vc/companies/bitly/funding/5dc2edf3-bd32-4fc3-af19-56d8bd7a0e91) Growth Investment Jul 2017"
+       ]
+      },
+      {
+       "title": "Bitly - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/bitly/__DOnUxKFrdDxOovnQ5RtXDQOyze8wevOeGqnY7qnJ494/funding-and-investors",
+       "excerpts": [
+        "Bitly's largest funding round so far wasa Series D round for [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880:funding-and-investors) in Jul 2017."
+       ]
+      }
+     ],
+     "reasoning": "The funding sources classify the July 2017 investment as growth equity and Series D, respectively.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Bitly Funding History: $95.0M | Indexed.vc",
+       "url": "https://indexed.vc/companies/bitly",
+       "excerpts": [
+        "[Growth Equity](https://indexed.vc/companies/bitly/funding/5dc2edf3-bd32-4fc3-af19-56d8bd7a0e91) Growth Investment Jul 2017"
+       ]
+      },
+      {
+       "title": "Bitly - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/bitly/__DOnUxKFrdDxOovnQ5RtXDQOyze8wevOeGqnY7qnJ494/funding-and-investors",
+       "excerpts": [
+        "Bitly's largest funding round so far wasa Series D round for [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52d3b164e4b00c95d6275880:funding-and-investors) in Jul 2017."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified funding round was in July 2017, well before the 18-month window preceding November 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction | Bitly Developer",
+       "url": "https://dev.bitly.com/",
+       "excerpts": [
+        "The Bitly API",
+        "See the [API reference](https://dev.bitly.com/api-reference) for all endpoints. > >"
+       ]
+      }
+     ],
+     "reasoning": "Bitly provides a public developer portal with API documentation and an API reference.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Contact Bitly",
+       "url": "https://bitly.com/pages/contact",
+       "excerpts": [
+        "Our offices New York Office 250 W. 34th St. Suite 310 (3rd Floor) New York, NY 10119 US Headquarters"
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s contact page identifies its US headquarters in New York, NY.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "What's new at Bitly? \u2013 Bitly Support",
+       "url": "https://support.bitly.com/hc/en-us/articles/34262355353997-What-s-new-at-Bitly",
+       "excerpts": [
+        "September 2026 AI traffic for individual links See which of your links AI assistants like ChatGPT, Claude, and Perplexity are visiting. Each link's details page now has an AI traffic card that shows estimated AI visits for your selected date range, how that compares to the previous period, and which assistants visit most."
+       ]
+      }
+     ],
+     "reasoning": "The Bitly Support release history labels a September 2026 entry as AI traffic for individual links and describes the new analytics card, inside the six-month period.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Bitly Appoints Matt Young as CTO, Strengthening Leadership Team",
+       "url": "https://bitly.com/pages/resources/press/bitly-appoints-matt-young-as-cto",
+       "excerpts": [
+        "March 19, 2026 min read White bitly logo on an orange background. White bitly logo on an orange background. **NEW YORK** \u2013 Thursday, March 19 _\u2013_ [Bitly Inc](https://bitly.com/) ., a leading global platform for link and QR Code management, today announced the appointment of **Matt Young** as Chief Technology Officer. The hire marks the latest in a series of strategic leadership appointments under CEO **Peter Krivkovich** , who took the helm in 2025 and has been focused on strengthening Bitly\u2019s leadership team to accelerate platform innovation and scale the company\u2019s growth."
+       ]
+      }
+     ],
+     "reasoning": "Bitly announced Matt Young\u2019s appointment as Chief Technology Officer on March 19, 2026, within the 12-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at Bitly Inc.",
+       "url": "https://job-boards.eu.greenhouse.io/bitly",
+       "excerpts": [
+        "There are no current openings."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s careers job board states that there are no current openings.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at Bitly Inc.",
+       "url": "https://job-boards.eu.greenhouse.io/bitly",
+       "excerpts": [
+        "There are no current openings."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s careers job board states that there are no current openings.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer stories - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies",
+       "excerpts": [
+        "[4,000 Sign-Ups, One Source of Truth: How Hacking HR Tracks What Actually Works with Bitly](https://bitly.com/pages/resources/case-studies/how-hacking-hr-tracks-what-actually-works-with-bitly/)",
+        "[How ASUG Uses Bitly Assist to Turn Member Engagement into Actionable Insights](https://bitly.com/pages/resources/case-studies/how-asug-uses-bitly-assist-to-get-audience-insights/)"
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s customer stories include named case studies for Hacking HR and ASUG.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Salesforce - Bitly Integration Directory",
+       "url": "https://bitly.com/pages/marketplace/salesforce",
+       "excerpts": [
+        "Shorten URLs directly in Salesforce products like Marketing Cloud Engagement"
+       ]
+      },
+      {
+       "title": "Bitly and Salesforce Integration",
+       "url": "https://bitly.com/solutions/integrations/salesforce",
+       "excerpts": [
+        "Access Bitly link creation and management from within Salesforce records. Sync click and engagement data automatically to your CRM. Apply consistent branding to every link shared by your sales and marketing teams."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s integration pages explicitly identify its Salesforce integration and describe link and engagement workflows in Salesforce.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Bitly Trust Center",
+       "url": "https://bitly.com/pages/trust?trk=organization_guest_main-feed-card-text",
+       "excerpts": [
+        "As part of that commitment, Bitly is SOC 2 compliant."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s Trust Center states it is SOC 2 compliant.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Bitly Trust Center",
+       "url": "https://bitly.com/pages/trust?trk=organization_guest_main-feed-card-text",
+       "excerpts": [
+        "Bitly is GDPR compliant and Swiss-US Privacy Shield certified."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s Trust Center states it is GDPR compliant.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer stories - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies",
+       "excerpts": [
+        "[4,000 Sign-Ups, One Source of Truth: How Hacking HR Tracks What Actually Works with Bitly](https://bitly.com/pages/resources/case-studies/how-hacking-hr-tracks-what-actually-works-with-bitly/)"
+       ]
+      }
+     ],
+     "reasoning": "The customer stories page names Hacking HR in a customer case study.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customer stories - Bitly",
+       "url": "https://bitly.com/pages/resources/case-studies",
+       "excerpts": [
+        "[How ASUG Uses Bitly Assist to Turn Member Engagement into Actionable Insights](https://bitly.com/pages/resources/case-studies/how-asug-uses-bitly-assist-to-get-audience-insights/)"
+       ]
+      }
+     ],
+     "reasoning": "The customer stories page names ASUG in a customer case study.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Salesforce - Bitly Integration Directory",
+       "url": "https://bitly.com/pages/marketplace/salesforce",
+       "excerpts": [
+        "Shorten URLs directly in Salesforce products like Marketing Cloud Engagement"
+       ]
+      },
+      {
+       "title": "Bitly and Salesforce Integration",
+       "url": "https://bitly.com/solutions/integrations/salesforce",
+       "excerpts": [
+        "Access Bitly link creation and management from within Salesforce records. Sync click and engagement data automatically to your CRM. Apply consistent branding to every link shared by your sales and marketing teams."
+       ]
+      }
+     ],
+     "reasoning": "Bitly\u2019s integration directory and integration description name Salesforce.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2008.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Bitly helps businesses and marketers create, share, and track branded short links and QR Codes.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 63000000.0,
+    "named_customers": [
+     "Hacking HR",
+     "ASUG"
+    ],
+    "funding_date": "2017-07",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Growth equity (Series D)",
+    "public_docs": true,
+    "hq_city": "New York",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "schema_version": "v0",
+ "company": "voize",
+ "domain": "voize.de",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "voize is an AI voice-documentation app for caregivers in long-term care and skilled nursing facilities that converts spoken notes into structured EHR entries.",
+   "citations": [
+    "https://www.voize.ai/us"
+   ],
+   "notes": "The product FAQ describes the intended care settings and explains that caregivers' speech is converted into structured EHR entries: https://www.voize.ai/us."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.voize.de/preise"
+   ],
+   "notes": "The public pricing page explains licensing by the number of people receiving care rather than individual user accounts. Public numeric prices are not required by the question: https://www.voize.de/preise."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Caritas Stuttgart",
+    "AGAPLESION"
+   ],
+   "citations": [
+    "https://www.voize.de/preise"
+   ],
+   "notes": "named_customers: Both Caritas Stuttgart and AGAPLESION appear in the company's customer logo area on its pricing page: https://www.voize.de/preise. | named_customers.0: Caritas Stuttgart appears in the customer logo area: https://www.voize.de/preise. | named_customers.1: AGAPLESION appears in the customer logo area: https://www.voize.de/preise."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "101-200",
+   "citations": [
+    "https://www.ycombinator.com/companies/voize"
+   ],
+   "notes": "Y Combinator reports a team size of 140, placing voize in the 101\u2013200 band. This is a reported count rather than a real-time payroll total: https://www.ycombinator.com/companies/voize."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Berlin",
+    "country": "Germany"
+   },
+   "citations": [
+    "https://www.voize.de/presse",
+    "https://www.ycombinator.com/companies/voize"
+   ],
+   "notes": "hq_city: The company's press page explicitly identifies its headquarters as Berlin, corroborated by its Y Combinator location. A company database instead lists Potsdam, so the explicit company headquarters statement is preferred. Sources: https://www.voize.de/presse and https://www.ycombinator.com/companies/voize. | hq_country: Y Combinator identifies voize's location as Berlin, Germany: https://www.ycombinator.com/companies/voize."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2020.0,
+   "citations": [
+    "https://www.voize.de/presse"
+   ],
+   "notes": "The company's press page explicitly states that voize was founded in 2020: https://www.voize.de/presse."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://tech.voize.de/"
+   ],
+   "notes": "The engineering team's blog lists at least two qualifying technical posts: Reuben Morais on Prometheus/OpenTelemetry monitoring and Erik Ziegler on cross-platform PyTorch inference. Source: https://tech.voize.de/."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.voize.de/de/"
+   ],
+   "notes": "The public help center lists a hospital documentation collection containing 23 articles, satisfying the multi-article requirement: https://help.voize.de/de/."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241"
+   ],
+   "notes": "The live Senior ML Engineer \u2013 NLP posting includes an application link and qualifies under the requested role titles: https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Claude",
+   "citations": [
+    "https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241"
+   ],
+   "notes": "The company's ML engineering posting explicitly says, 'We use Claude through our inference service,' alongside open and on-device models: https://jobs.ashbyhq.com/voize/f4939c9a-041c-4383-80e0-1072c8f48241."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "HIPAA",
+    "GDPR"
+   ],
+   "citations": [
+    "https://trust.voize.ai/",
+    "https://trust.voize.ai/faq"
+   ],
+   "notes": "compliance_certs: The trust center lists HIPAA and GDPR. Its FAQ confirms HIPAA compliance and explicitly says voize is not yet ISO 27001 or SOC 2 certified, so those are excluded. These are public compliance claims, not an assertion that GDPR or HIPAA constitutes an independently issued certification. Sources: https://trust.voize.ai/ and https://trust.voize.ai/faq. | compliance_certs.0: The trust FAQ explicitly states that voize is HIPAA compliant: https://trust.voize.ai/faq. | compliance_certs.1: GDPR is explicitly listed in the trust center's compliance section: https://trust.voize.ai/."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series A",
+    "date": "2025-11",
+    "amount_usd": 50000000.0
+   },
+   "citations": [
+    "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care",
+    "https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about"
+   ],
+   "notes": "funding_stage: The investor announcement calls the round Series A, and the funding profile identifies Series A as the latest round. Sources: https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care and https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about. | funding_date: The latest funding profile dates the round to November 17, 2025, matching the investor announcement; the requested month is therefore 2025-11. Sources: https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about and https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care. | funding_amount_usd: The investor announcement states a $50 million Series A, and the funding profile identifies it as the latest round. Sources: https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care and https://tracxn.com/a/d/company/5904f0f6e4b0b66b2cf092f4/voize#a:about."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care"
+   ],
+   "notes": "The $50 million Series A announcement is dated November 17, 2025, within May 9, 2025\u2013November 9, 2026: https://www.balderton.com/news/voize-raises-50-million-to-power-the-ai-companion-transforming-nursing-care."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/voize/b8a80d0e-a245-4d90-89ba-317190aff23c"
+   ],
+   "notes": "The live Sales Development Representative posting includes an application link: https://jobs.ashbyhq.com/voize/b8a80d0e-a245-4d90-89ba-317190aff23c."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.voize.ai/de/presse/dedalus-voize-integration-orbis"
+   ],
+   "notes": "The September 22, 2026 announcement introduces voice-based AI documentation integrated into Dedalus ORBIS, a substantive clinical workflow integration within May 9\u2013November 9, 2026: https://www.voize.ai/de/presse/dedalus-voize-integration-orbis."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/semprunl"
+   ],
+   "notes": "Luis Semprun's profile records a September 2026 start as VP Engineering at voize, within November 9, 2025\u2013November 9, 2026. This is profile evidence rather than a company appointment announcement: https://linkedin.com/in/semprunl."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot"
+   ],
+   "citations": [
+    "https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00"
+   ],
+   "notes": "crm_stack_signal: The Growth Marketing Manager posting requires HubSpot workflows, lead scoring, lifecycle stages, nurture programs, segmentation and reporting, providing a direct marketing-stack signal: https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00. | crm_stack_signal.0: The growth marketing posting explicitly names HubSpot and its marketing automation functions: https://jobs.ashbyhq.com/voize/305a8dd2-1922-4e94-9dcd-ee5bc2b7af00."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 211.9
+}

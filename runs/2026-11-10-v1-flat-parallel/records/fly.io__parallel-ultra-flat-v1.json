@@ -1,0 +1,170 @@
+{
+ "schema_version": "v0",
+ "company": "Fly.io",
+ "domain": "fly.io",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Fly.io is a public cloud for developers to deploy and run applications, databases and AI agents on hardware-isolated Linux virtual machines.",
+   "citations": [
+    "https://fly.io/",
+    "https://www.ycombinator.com/companies/fly-io",
+    "https://docs.fly.io/sprites"
+   ],
+   "notes": "The homepage describes the public cloud and isolation model; the company profile explains developer deployment of apps and databases; Sprites documentation establishes AI-agent workloads. Sources: https://fly.io/, https://www.ycombinator.com/companies/fly-io and https://docs.fly.io/sprites."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fly.io/pricing"
+   ],
+   "notes": "Fly.io has a public pricing page: https://fly.io/pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Mocha",
+    "Steel.dev"
+   ],
+   "citations": [
+    "https://fly.io/"
+   ],
+   "notes": "named_customers: The homepage attributes customer testimonials to Mocha and Steel.dev and links their customer stories. Sources: https://fly.io/, https://fly.io/customer-stories/mocha/ and https://fly.io/customer-stories/steel-dev/. | named_customers.0: The homepage customer testimonial names Mocha and links its customer story: https://fly.io/customer-stories/mocha/. | named_customers.1: The homepage customer testimonial names Steel.dev and links its customer story: https://fly.io/customer-stories/steel-dev/."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "51-100",
+   "citations": [
+    "https://linkedin.com/company/flydotio"
+   ],
+   "notes": "The company profile reports 56 employees, which falls in the 51-100 band. This is a profile count rather than audited headcount. Source: https://linkedin.com/company/flydotio."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Chicago",
+    "country": "United States"
+   },
+   "citations": [
+    "https://linkedin.com/company/fly-io"
+   ],
+   "notes": "hq_city: The company profile explicitly lists Chicago as headquarters. Source: https://linkedin.com/company/fly-io. | hq_country: The company profile identifies Chicago, Illinois, US as headquarters: https://linkedin.com/company/fly-io."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2016.0,
+   "citations": [
+    "https://forgeglobal.com/flyio_ipo"
+   ],
+   "notes": "Forge explicitly reports 2016: https://forgeglobal.com/flyio_ipo. Other public profiles report 2017, so the founding year remains somewhat uncertain."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fly.io/blog/operationalizing-macaroons",
+    "https://changelog.com/news/docker-without-docker-yXJ5",
+    "https://fly.io/blog/docker-without-docker/",
+    "https://console.dev/podcast/s02e02-security-thomas-ptacek-fly.io"
+   ],
+   "notes": "Two qualifying infrastructure deep dives are https://fly.io/blog/operationalizing-macaroons and https://fly.io/blog/docker-without-docker/. Both are attributed to Thomas Ptacek; his software-engineering role at Fly.io is documented at https://console.dev/podcast/s02e02-security-thomas-ptacek-fly.io. The posts explain security-token implementation and conversion of container images into Firecracker VMs."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.fly.io/"
+   ],
+   "notes": "The public documentation portal provides guides and references for Machines, Sprites, Managed Postgres, networking and flyctl, rather than a single FAQ. Source: https://docs.fly.io/."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://fly.io/jobs"
+   ],
+   "notes": "The complete jobs index lists Platform Security Engineer, Fullstack Engineer, Infrastructure Operations Engineer, and Networking Engineer: Proxy and Corrosion. None has a qualifying AI, ML or data-science title. Source: https://fly.io/jobs."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic and OpenAI (internal inference tooling only)",
+   "citations": [
+    "https://fly.io/legal/security-questionnaire"
+   ],
+   "notes": "Fly.io names Anthropic and OpenAI for inference in internal tooling. The answer preserves that limitation rather than implying these providers power every customer workload. Source: https://fly.io/legal/security-questionnaire."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "HIPAA"
+   ],
+   "citations": [
+    "https://fly.io/legal/security-questionnaire"
+   ],
+   "notes": "compliance_certs: The security questionnaire claims SOC 2 Type 2 compliance and offers HIPAA support through a BAA for organizations with the paid Compliance Package. HIPAA is conditional BAA coverage, not a blanket application certification. Source: https://fly.io/legal/security-questionnaire. | compliance_certs.0: Fly.io explicitly claims SOC 2 compliance through a Type 2 audit by Aprio: https://fly.io/legal/security-questionnaire. | compliance_certs.1: HIPAA support is offered through a BAA with the paid Compliance Package; this is conditional coverage, not blanket certification of customers' applications. Source: https://fly.io/legal/security-questionnaire."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series D",
+    "date": "2026-07",
+    "amount_usd": 25000000.0
+   },
+   "citations": [
+    "https://fly.io/news/fly-io-launches-computers-for-agents"
+   ],
+   "notes": "funding_stage: The announcement explicitly calls the $25 million financing Series D. Source: https://fly.io/news/fly-io-launches-computers-for-agents. | funding_date: The funding announcement is dated July 24, 2026, giving the requested month 2026-07. Source: https://fly.io/news/fly-io-launches-computers-for-agents. | funding_amount_usd: The July 2026 announcement states that the Series D round raised $25 million, not cumulative funding. Source: https://fly.io/news/fly-io-launches-computers-for-agents."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fly.io/news/fly-io-launches-computers-for-agents"
+   ],
+   "notes": "The $25 million Series D announced July 24, 2026 falls within the eighteen months before November 9, 2026. Source: https://fly.io/news/fly-io-launches-computers-for-agents."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://fly.io/jobs"
+   ],
+   "notes": "The complete four-role careers index contains only engineering roles and no SDR, BDR, sales/business development representative or account executive title. Source: https://fly.io/jobs."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fly.io/changelog/"
+   ],
+   "notes": "The changelog announces Managed Postgres v2 beta, rebuilt on Fly Machines, on May 19, 2026, and New Fly MCP on October 23, 2026. Both fall within the requested six-month window and are substantive product capabilities. Source: https://fly.io/changelog/."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://fly.io/news/fly-io-launches-computers-for-agents"
+   ],
+   "notes": "On July 24, 2026, Fly.io announced that Scott Johnston had joined as CEO and a board member, within the requested twelve-month window. Source: https://fly.io/news/fly-io-launches-computers-for-agents."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot",
+    "Customer.io"
+   ],
+   "citations": [
+    "https://fly.io/legal/sub-processors"
+   ],
+   "notes": "crm_stack_signal: The subprocessor list explicitly identifies HubSpot for customer relationship management and Customer.io for newsletters and transactional email. Source: https://fly.io/legal/sub-processors. | crm_stack_signal.0: HubSpot is explicitly listed for customer relationship management: https://fly.io/legal/sub-processors. | crm_stack_signal.1: Customer.io is explicitly listed for newsletters and transactional email: https://fly.io/legal/sub-processors."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 456.9
+}

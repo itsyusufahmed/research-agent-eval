@@ -1,0 +1,24 @@
+{
+ "url": "https://help.aikido.dev/ai-and-dev-tools/aikido-mcp/openai-codex-cli-mcp",
+ "fetched_at": "2026-11-10T04:46:19.507010+00:00",
+ "hours_after_run": 28.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "876f78940520de8379271c3e72c14532da47fa00603bac309687a8861221e24c",
+ "chars": 2351,
+ "truncated": false,
+ "title": "OpenAI Codex CLI MCP | Aikido",
+ "markdown": "# OpenAI Codex CLI MCP\n\nThe Aikido MCP Plugin connects Aikido’s security engine to AI coding tools. It automatically scans AI generated code for vulnerabilities and hardcoded secrets as soon as it is created.\n\nAI assistants can review their own output, but that review is not perfect. Aikido adds a reliable and consistent security layer that checks every generated snippet with proven scanning rules.\n\n**Why use Aikido MCP**\n\n- Deterministic, independent security checks on every AI generated snippet before it is committed\n- Immediate detection and remediation of vulnerabilities and hardcoded secrets in AI assisted workflows\n- Real time feedback, making AI driven development safer by default\n\nFor the full list of tools the MCP server exposes, see [Available tools](https://help.aikido.dev/ai-and-dev-tools/aikido-mcp/using-aikido-mcp#available-tools).\n\n## [\\#](https://help.aikido.dev/ai-and-dev-tools/aikido-mcp/openai-codex-cli-mcp\\#installation) Installation\n\nAdd the Aikido MCP and rules via our [Aikido Plugin](https://chatgpt.com/plugins/plugins_6abf6f017e3481919e681ac223b8424e).\n\nOr install manually using the steps below:\n\n1. 1\n\n\n**Install the Aikido MCP server**\n\n\n\n\n\n```\ncodex mcp add aikido -- npx -y @aikidosec/mcp@latest\n```\n\n2. 2\n\n\n**Authenticate**\n\n\n\nOn first use, the MCP server will detect no authentication is set. Ask Codex to run `aikido_login`. It will return a browser link. Follow the link to log in to Aikido. Your token is stored securely once login is complete.\n\n3. 3\n\n\n**Add the Aikido rule to Global AGENTS file**\n\n\n\nCreate the codex directory if it doesn't exist yet.\n\n\n\n\n\n```\nmkdir -p ~/.codex/skills\n```\n\n\n\n\n\nDownload the Aikido rule and add it to `~/.codex/skills/aikido-rule.txt`.\n\n\n\n\n\n```\ncurl -fsSL \"https://gist.githubusercontent.com/kidk/aa48cad6db80ba4a38493016aae67712/raw/3644397b7df43423e3da06434491b40bbb79dd47/aikido-rule.txt\" \\\n     -o ~/.codex/skills/aikido-rule.txt\n```\n\n4. 4\n\n\n**Finished**\n\n\n\nAikido MCP is now available in Codex CLI.\n\n\n\n\n\n\n\nRestart Codex CLI if it was open.\n\n\nFor CI/CD or headless setups where browser login is not possible, see [Token Authentication](https://help.aikido.dev/ai-and-dev-tools/aikido-mcp/token-authentication).\n\nFor ways to ask your agent to use Aikido, see [Example prompts](https://help.aikido.dev/ai-and-dev-tools/aikido-mcp/using-aikido-mcp#example-prompts).",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T04:26:45.757456+00:00",
+ "hours_after_launch": 0.33
+}

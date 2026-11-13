@@ -1,0 +1,22 @@
+{
+ "url": "https://docs.alice.io/api/wondersuite-wonderfence",
+ "fetched_at": "2026-11-10T21:29:15.729259+00:00",
+ "hours_after_run": 45.5,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "edcfc00072daa2f9954aa5d97688c165d701e70ce3783ded1bd95eb23253668a",
+ "chars": 2010,
+ "truncated": false,
+ "title": "Wonderfence | Alice Documentation",
+ "markdown": "[Skip to main content](https://docs.alice.io/api/wondersuite-wonderfence#__docusaurus_skipToContent_fallback)\n\nWonderFence provides real-time guardrails for AI-generated content. APIs for evaluating and moderating AI-generated content and interactions to protect against harmful outputs and prompt attacks.\n\n[GETList policies\\\\\n\\\\\nLists the WonderFence enforcement policies available to the project, the same catalog the Policies page shows, including vector (custom-model) policies.](https://docs.alice.io/api/list-policies) [GETGet policy-to-application assignments\\\\\n\\\\\nMaps each policy id to the ids of the applications it is enabled for. A policy enabled for no application is absent or maps to an empty list. To get one application's policies, collect the policy ids whose list contains its appId.](https://docs.alice.io/api/get-application-policies) [PUTSet the policies an application has enabled\\\\\n\\\\\nReplaces the whole set of policies enabled for one application, as the Apply Policies page does. To enable or disable a single policy, read the application's current policies from \\`GET /wonderfence/application-policies\\`, add or remove the policy id, and send the full list. An empty \\`policyIds\\` disables every policy for the application. Other applications are never affected.](https://docs.alice.io/api/set-policies-for-app) [POSTWonderFence evaluate message\\\\\n\\\\\nEvaluate messages with application-specific policy enforcement. Every request must identify the application with \\`app\\_id\\`; only policies assigned to that application will be applied.](https://docs.alice.io/api/evaluate-wonderfence-message) [POSTEvaluate a Databricks Unity AI Gateway external-policy event\\\\\n\\\\\nExternal policy endpoint for the Databricks Unity AI Gateway. Configure it on a Unity Catalog HTTP connection and Databricks calls it around every governed model request, sending an \\`{event, config}\\` envelope and acting on the \\`ALLOW\\`/\\`DENY\\` verdict it gets back.](https://docs.alice.io/api/databricks-evaluate)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true
+}

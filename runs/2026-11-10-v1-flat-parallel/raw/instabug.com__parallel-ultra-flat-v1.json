@@ -1,0 +1,564 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea0b55ced26758d33",
+  "interaction_id": "trun_142119f6a1b4439ea0b55ced26758d33",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "instabug.com"
+  },
+  "created_at": "2026-11-10T18:47:36.516330Z",
+  "modified_at": "2026-11-10T18:54:32.101227Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea0b55ced26758d33",
+   "interaction_id": "trun_142119f6a1b4439ea0b55ced26758d33",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "instabug.com"
+   },
+   "created_at": "2026-11-10T18:47:36.516330Z",
+   "modified_at": "2026-11-10T18:54:32.101227Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Life at Luciq | Join Our Mobile Observability Team",
+       "url": "https://www.luciq.ai/life-at-luciq",
+       "excerpts": [
+        "In 2013, Omar Gabr and Moataz Soliman, two college friends with a simple idea, started what would become something extraordinary."
+       ]
+      }
+     ],
+     "reasoning": "Luciq's own history at https://www.luciq.ai/life-at-luciq dates the founders' start to 2013. This primary account is preferred over inconsistent secondary founding dates.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Luciq (formerly Instabug) FAQ | Mobile Observability",
+       "url": "https://www.luciq.ai/faq",
+       "excerpts": [
+        "Is Luciq secure and compliant? Yes. Luciq is SOC 2 Type II and ISO 27001:2022 certified, GDPR compliant with a DPA, and third-party penetration tested."
+       ]
+      }
+     ],
+     "reasoning": "The FAQ at https://www.luciq.ai/faq explicitly claims SOC 2 Type II and ISO 27001:2022 certification and GDPR compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Privacy Policy | Luciq Mobile Observability",
+       "url": "https://www.luciq.ai/privacy",
+       "excerpts": [
+        "Instabug, Inc. 230 California Street San Francisco, CA 94111 United States"
+       ]
+      },
+      {
+       "title": "Instabug Raises $46M Series B Led by Insight Partners to Build the First Mobile Observability and Performance Monitoring Platform",
+       "url": "https://www.businesswire.com/news/home/20220517005310/en/Instabug-Raises-46M-Series-B",
+       "excerpts": [
+        "Founded in Egypt and headquartered in San Francisco, Instabug was launched in 2016 to help developers better understand the performance of their mobile applications and its impact on user experience."
+       ]
+      }
+     ],
+     "reasoning": "The company announcement at https://www.businesswire.com/news/home/20220517005310/en/Instabug-Raises-46M-Series-B identifies San Francisco as headquarters; the legal address at https://www.luciq.ai/privacy explicitly places it in the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Born Expired: How We Cut ClickHouse&#x27;s S3 Write Bill by ~92% | Luciq",
+       "url": "https://www.luciq.ai/blog/clickhouse-s3-write-cost-reduction",
+       "excerpts": [
+        "We run a very large, write-heavy [ClickHouse](https://clickhouse.com/) deployment for [mobile observability telemetry](https://www.luciq.ai/blog/mobile-observability-proactive-detection), and we'd just finished tiering it across hot local disks and a cold tier on S3.",
+        "```json { \"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Born Expired: How We Cut ClickHouse&#39;s S3 Write Bill by ~92%\", \"description\": \"How we cut ClickHouse&#39;s S3 PUT bill by ~92% with two metadata-only ALTERs, by fixing Wide parts and an event-time TTL that made late data born expired.\", \"image\": { \"@type\": \"ImageObject\", \"url\": \"https://cdn.prod.website-files.com/68b54a08ea2fda54054648a4/6a79ab463c2b3f5282487213_luciq-clickhouse-s3-write-bill-mohamed-aziz.webp\", \"width\": 1200, \"height\": 630 }, \"url\": \"https://www.luciq.ai/blog/clickhouse-s3-write-cost-reduction\", \"datePublished\": \"2026-08-24T19:09:37.076Z\", \"dateModified\": \"2026-08-24T18:55:36.492Z\", \"author\": { \"@type\": \"Person\", \"name\": \"Mohamed Aziz"
+       ]
+      },
+      {
+       "title": "Mohamed Aziz",
+       "url": "https://linkedin.com/in/mo-azizz",
+       "excerpts": [
+        "LinkedIn profile: Mohamed Aziz. Role: Senior DevOps Engineer @ Luciq."
+       ]
+      },
+      {
+       "title": "We Pointed AI at Ten Years of Code and Asked It to Understand. It Couldn&#x27;t. | Luciq",
+       "url": "https://www.luciq.ai/blog/ai-native-engineering-legacy-rewrite",
+       "excerpts": [
+        "The client enriches events with debugging data and contexts, one DataHub aggregates the debugging data, one store aggregates the contexts, and one transport carries it all to the backend.",
+        "What worked: spec-first workflows and verifying, not generating.\", \"image\": { \"@type\": \"ImageObject\", \"url\": \"https://cdn.prod.website-files.com/68b54a08ea2fda54054648a4/6a8c306f04530aa4a071bd90_ai-native-engineering-legacy-rewrite-luciq.webp\", \"width\": 1200, \"height\": 630 }, \"url\": \"https://www.luciq.ai/blog/ai-native-engineering-legacy-rewrite\", \"datePublished\": \"2026-09-12T20:31:20.555Z\", \"dateModified\": \"2026-09-02T12:30:26.024Z\", \"author\": { \"@type\": \"Person\", \"name\": \"Khaled Elmorabea"
+       ]
+      },
+      {
+       "title": "Khaled El Morabea - Director Of Engineering at Luciq | The Org",
+       "url": "https://theorg.com/org/luciq/org-chart/khaled-el-morabea",
+       "excerpts": [
+        "Currently, Khaled holds the position of Group Engineering Manager at Instabug."
+       ]
+      }
+     ],
+     "reasoning": "Two qualifying posts explain Luciq's own implementation: Mohamed Aziz's ClickHouse infrastructure article at https://www.luciq.ai/blog/clickhouse-s3-write-cost-reduction and Khaled Elmorabea's SDK architecture article at https://www.luciq.ai/blog/ai-native-engineering-legacy-rewrite. Engineering roles are supported by https://linkedin.com/in/mo-azizz and https://theorg.com/org/luciq/org-chart/khaled-el-morabea.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Luciq (formerly Instabug) | Mobile Observability",
+       "url": "https://www.luciq.ai/",
+       "excerpts": [
+        "Intelligent agents detect, diagnose, and resolve issues before users notice, so your team ships confidently and your app just works.\", \"name\": \"Luciq\", \"provider\": { \"@type\": \"Organization\", \"name\": \"Luciq\", \"url\": \"https://www.luciq.ai\" }, \"serviceType\": \"Agentic mobile observability platform\" }, { \"@type\": \"Organization\", \"alternateName\": [ \"Instabug\", \"Luciq.ai\" ], \"areaServed\": \"Worldwide\", \"contactPoint\": { \"@type\": \"ContactPoint\", \"contactType\": \"customer support\", \"email\": \"support@luciq.ai\", \"url\": \"https://help.luciq.ai\" }, \"description\": \"Luciq (formerly Instabug) is an agentic mobile observability platform that helps mobile engineering teams"
+       ]
+      },
+      {
+       "title": "Luciq (formerly Instabug): Agentic Observability Platform for Mobile | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/luciq",
+       "excerpts": [
+        "Our intelligent AI agents detect, prioritize, and resolve issues across the app lifecycle, empowering teams to ship faster, deliver frustration-free sessions, and focus on building what matters."
+       ]
+      }
+     ],
+     "reasoning": "The descriptions at https://www.luciq.ai/ and https://www.ycombinator.com/companies/luciq identify mobile engineering teams as the audience and describe agents that detect, prioritize, and resolve app issues.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Luciq (formerly Instabug): Agentic Observability Platform for Mobile | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/luciq",
+       "excerpts": [
+        "Team Size: 250"
+       ]
+      }
+     ],
+     "reasoning": "The company profile at https://www.ycombinator.com/companies/luciq reports a team size of 250, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Sub-processors",
+       "url": "https://docs.luciq.ai/organization-settings/others/sub-processors",
+       "excerpts": [
+        "| OpenAI, LLC         | AI-powered product features            | United States  |"
+       ]
+      }
+     ],
+     "reasoning": "Luciq's subprocessor documentation at https://docs.luciq.ai/organization-settings/others/sub-processors explicitly lists OpenAI, LLC for AI-powered product features.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Luciq Pricing | Transparent Mobile Observability Plans",
+       "url": "https://www.luciq.ai/pricing",
+       "excerpts": [
+        "Pricing that scales with you"
+       ]
+      }
+     ],
+     "reasoning": "A public pricing page exists at https://www.luciq.ai/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Luciq Raises $46M Series B to Build the First Mobile Observability and Performance Monitoring Platform | Luciq",
+       "url": "https://blog.instabug.com/instabug-raises-46m-series-b",
+       "excerpts": [
+        "**Today, I\u2019m thrilled to announce that we have raised $46 million"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Luciq; website_url: https://www.luciq.ai/; latest_funding_round_name: Series B; latest_funding_round_date: 2022-05-17;",
+        "latest_funding_round_amount_usd: 46000647.821; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 46000647.821; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2022-05-17; all_funding_rounds[0].round_investor_names: ForgePoint Capital, Endeavor, Insight Partners, Accel; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 5000647.821; all_funding_rounds[1].round_valuation_usd: null; all"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement at https://blog.instabug.com/instabug-raises-46m-series-b reports $46 million. Funding history at https://tracxn.com identifies that May 2022 Series B as the latest round; the answer uses the company's announced dollar amount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Instabug Becomes Luciq.ai, Pioneers New Category: Agentic Mobile Observability | Luciq",
+       "url": "https://luciq.ai/blog/instabug-becomes-luciq",
+       "excerpts": [
+        "Its [platform powers top apps](https://luciq.ai/customers) like DoorDash, T-Mobile, Figma, Decathlon and Verizon, and has been recognized by G2 as a Momentum Leader and High Performer."
+       ]
+      }
+     ],
+     "reasoning": "The company announcement at https://luciq.ai/blog/instabug-becomes-luciq explicitly says its platform powers DoorDash and T-Mobile, among other customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Luciq Raises $46M Series B to Build the First Mobile Observability and Performance Monitoring Platform | Luciq",
+       "url": "https://blog.instabug.com/instabug-raises-46m-series-b",
+       "excerpts": [
+        "May 17, 2022"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Luciq; website_url: https://www.luciq.ai/; latest_funding_round_name: Series B; latest_funding_round_date: 2022-05-17;",
+        "latest_funding_round_amount_usd: 46000647.821; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 46000647.821; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2022-05-17; all_funding_rounds[0].round_investor_names: ForgePoint Capital, Endeavor, Insight Partners, Accel; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 5000647.821; all_funding_rounds[1].round_valuation_usd: null; all"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded round is dated May 17, 2022, consistent with the company announcement at https://blog.instabug.com/instabug-raises-46m-series-b; formatted as requested, this is 2022-05.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Sub-processors",
+       "url": "https://docs.luciq.ai/organization-settings/others/sub-processors",
+       "excerpts": [
+        "| Salesforce.com      | Customer relations management          | United States  |",
+        "| Hubspot             | Marketing Automation                   | United States  |",
+        "| Totango             | Customer relations management          | United States  |"
+       ]
+      }
+     ],
+     "reasoning": "The product documentation at https://docs.luciq.ai/organization-settings/others/sub-processors lists Salesforce.com and Totango for customer relations management and Hubspot for marketing automation.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Luciq Welcomes Greg Meyer as CFO | Luciq",
+       "url": "https://www.luciq.ai/blog/luciq-welcomes-greg-meyer-as-cfo",
+       "excerpts": [
+        "We are thrilled to announce that Greg Meyer has joined Luciq as our Chief Financial Officer (CFO).",
+        "```json { \"@context\": \"https://schema.org\", \"@type\": \"BlogPosting\", \"headline\": \"Luciq Welcomes Greg Meyer as CFO\", \"description\": \"Luciq is expanding its team with the addition of Greg Meyer as Chief Financial Officer to streamline the company&#39;s finances.\", \"image\": { \"@type\": \"ImageObject\", \"url\": \"https://cdn.prod.website-files.com/68b54a08ea2fda54054648a4/68b8528f708ac773922e361c_65ce104244e3c394e9d60cab_GregMeyer-blog_GregMeyer-Blog-02.png\", \"width\": 1200, \"height\": 630 }, \"url\": \"https://www.luciq.ai/blog/luciq-welcomes-greg-meyer-as-cfo\", \"datePublished\": \"2026-10-04T17:18:37.389Z"
+       ]
+      }
+     ],
+     "reasoning": "The announcement at https://www.luciq.ai/blog/luciq-welcomes-greg-meyer-as-cfo says Greg Meyer has joined as CFO and carries an October 4, 2026 publication date, within the requested window. It does not provide a separate exact joining date.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "\n\t\tBambooHR\n\t",
+       "url": "https://instabug.bamboohr.com/careers",
+       "excerpts": [
+        "[Enterprise Account Executive](https://instabug.bamboohr.com/careers/33) Enterprise Sales Hybrid San Francisco, California (Hybrid) Enterprise Sales Full-Time"
+       ]
+      }
+     ],
+     "reasoning": "The official current-openings board at https://instabug.bamboohr.com/careers lists only Enterprise Account Executive and Product Engineer (Backend), neither of which qualifies under the specified title rule. This official list is preferred over an undated third-party AI product-manager entry.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Luciq Raises $46M Series B to Build the First Mobile Observability and Performance Monitoring Platform | Luciq",
+       "url": "https://blog.instabug.com/instabug-raises-46m-series-b",
+       "excerpts": [
+        "Luciq Raises $46M Series B to Build the First Mobile Observability and Performance Monitoring Platform"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Luciq; website_url: https://www.luciq.ai/; latest_funding_round_name: Series B;",
+        "latest_funding_round_date: 2022-05-17; latest_funding_round_amount_usd: 46000647.821; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 46000647.821; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2022-05-17; all_funding_rounds[0].round_investor_names: ForgePoint Capital, Endeavor, Insight Partners, Accel; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 5000647.821; all_funding_rounds[1].round_valuation_usd: null; all"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement at https://blog.instabug.com/instabug-raises-46m-series-b identifies the round as Series B, and the funding history identifies it as the latest recorded round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Welcome to Luciq's Docs",
+       "url": "https://docs.luciq.ai/",
+       "excerpts": [
+        "Start here for the Luciq docs: how Luciq works, the Inbox, product guides, the MCP server and CLI, common tasks, and SDK setup for every platform.",
+        "<table data-view=\"cards\"><thead><tr><th></th><th></th><th data-hidden data-card-target data-type=\"content-ref\"></th></tr></thead><tbody><tr><td><strong>How Luciq works</strong></td><td>From SDK signal to the Inbox to action, in five minutes.</td><td><a href=\"/getting-started/introduction.md\">How Luciq works</a></td></tr><tr><td><strong>Product Guides</strong></td><td>Everything Luciq does, grouped by what you want to do.</td><td><a href=\"/product-guides-and-integrations/product-guides.md\">Product Guides</a></td></tr><tr><td><strong>Inbox</strong></td><td>Issues and Opportunities in one place, ranked so you know what to work on next.</td><td><a href=\"/product-guides-and-integrations/product-guides/inbox.md"
+       ]
+      }
+     ],
+     "reasoning": "The public portal at https://docs.luciq.ai/ links separate articles including How Luciq Works, Product Guides, and Inbox, alongside SDK and developer-tool documentation.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Instabug Raises $46M Series B Led by Insight Partners to Build the First Mobile Observability and Performance Monitoring Platform",
+       "url": "https://www.businesswire.com/news/home/20220517005310/en/Instabug-Raises-46M-Series-B",
+       "excerpts": [
+        "Founded in Egypt and headquartered in San Francisco, Instabug was launched in 2016 to help developers better understand the performance of their mobile applications and its impact on user experience."
+       ]
+      },
+      {
+       "title": "Data Processing Addendum | Luciq",
+       "url": "https://www.luciq.ai/dpa",
+       "excerpts": [
+        "This Data Processing Addendum (the \"Addendum\") is made by and between Instabug, Inc. d/b/a Luciq, a company having its principal place of business at 230 California Street, San Francisco, CA 94111"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement at https://www.businesswire.com/news/home/20220517005310/en/Instabug-Raises-46M-Series-B explicitly identifies San Francisco as headquarters. Luciq's DPA at https://www.luciq.ai/dpa also gives its principal place of business there.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "docs.luciq.ai",
+       "url": "https://docs.luciq.ai/changelog/rss.xml",
+       "excerpts": [
+        "Luciq Agent: your in-dashboard AI assistant is now in beta Published: Wed, 05 Aug 2026 00:00:00 GMT \u00b7 Link: https://docs.luciq.ai/changelog What's new? A conversational AI assistant now lives inside the Luciq dashboard. Click the sparkle icon in the header and ask anything about your app in plain English.Every Luciq product, one conversation."
+       ]
+      }
+     ],
+     "reasoning": "The dated changelog at https://docs.luciq.ai/changelog/rss.xml announces the Luciq Agent dashboard AI assistant beta on August 5, 2026, inside the six-month window. This is a new major feature rather than a bug fix or UI tweak.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "\n\t\tBambooHR\n\t",
+       "url": "https://instabug.bamboohr.com/careers",
+       "excerpts": [
+        "[Enterprise Account Executive](https://instabug.bamboohr.com/careers/33)"
+       ]
+      },
+      {
+       "title": "\n\t\tBambooHR\n\t",
+       "url": "https://instabug.bamboohr.com/careers/33",
+       "excerpts": [
+        "Enterprise Account Executive",
+        "Apply for This Job"
+       ]
+      }
+     ],
+     "reasoning": "The official hiring board lists Enterprise Account Executive, and its live posting at https://instabug.bamboohr.com/careers/33 includes an application action.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Luciq; website_url: https://www.luciq.ai/; latest_funding_round_name: Series B; latest_funding_round_date: 2022-05-17;",
+        "latest_funding_round_amount_usd: 46000647.821; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 46000647.821; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2022-05-17; all_funding_rounds[0].round_investor_names: ForgePoint Capital, Endeavor, Insight Partners, Accel; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 5000647.821; all_funding_rounds[1].round_valuation_usd: null; all"
+       ]
+      },
+      {
+       "title": "Luciq Raises $46M Series B to Build the First Mobile Observability and Performance Monitoring Platform | Luciq",
+       "url": "https://blog.instabug.com/instabug-raises-46m-series-b",
+       "excerpts": [
+        "May 17, 2022"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded funding round is the May 17, 2022 Series B, announced at https://blog.instabug.com/instabug-raises-46m-series-b. It predates the requested 18-month window beginning in May 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Luciq (formerly Instabug) FAQ | Mobile Observability",
+       "url": "https://www.luciq.ai/faq",
+       "excerpts": [
+        "Is Luciq secure and compliant? Yes. Luciq is SOC 2 Type II and ISO 27001:2022 certified, GDPR compliant with a DPA, and third-party penetration tested."
+       ]
+      }
+     ],
+     "reasoning": "https://www.luciq.ai/faq explicitly claims SOC 2 Type II certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Luciq (formerly Instabug) FAQ | Mobile Observability",
+       "url": "https://www.luciq.ai/faq",
+       "excerpts": [
+        "Is Luciq secure and compliant? Yes. Luciq is SOC 2 Type II and ISO 27001:2022 certified, GDPR compliant with a DPA, and third-party penetration tested."
+       ]
+      }
+     ],
+     "reasoning": "https://www.luciq.ai/faq explicitly claims ISO 27001:2022 certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Luciq (formerly Instabug) FAQ | Mobile Observability",
+       "url": "https://www.luciq.ai/faq",
+       "excerpts": [
+        "Is Luciq secure and compliant? Yes. Luciq is SOC 2 Type II and ISO 27001:2022 certified, GDPR compliant with a DPA, and third-party penetration tested."
+       ]
+      }
+     ],
+     "reasoning": "https://www.luciq.ai/faq explicitly claims GDPR compliance with a DPA.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Instabug Becomes Luciq.ai, Pioneers New Category: Agentic Mobile Observability | Luciq",
+       "url": "https://luciq.ai/blog/instabug-becomes-luciq",
+       "excerpts": [
+        "Its [platform powers top apps](https://luciq.ai/customers) like DoorDash, T-Mobile, Figma, Decathlon and Verizon, and has been recognized by G2 as a Momentum Leader and High Performer."
+       ]
+      }
+     ],
+     "reasoning": "https://luciq.ai/blog/instabug-becomes-luciq names DoorDash among apps powered by the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Instabug Becomes Luciq.ai, Pioneers New Category: Agentic Mobile Observability | Luciq",
+       "url": "https://luciq.ai/blog/instabug-becomes-luciq",
+       "excerpts": [
+        "Its [platform powers top apps](https://luciq.ai/customers) like DoorDash, T-Mobile, Figma, Decathlon and Verizon, and has been recognized by G2 as a Momentum Leader and High Performer."
+       ]
+      }
+     ],
+     "reasoning": "https://luciq.ai/blog/instabug-becomes-luciq names T-Mobile among apps powered by the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Sub-processors",
+       "url": "https://docs.luciq.ai/organization-settings/others/sub-processors",
+       "excerpts": [
+        "| Salesforce.com      | Customer relations management          | United States  |"
+       ]
+      }
+     ],
+     "reasoning": "https://docs.luciq.ai/organization-settings/others/sub-processors lists Salesforce.com for customer relations management.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Sub-processors",
+       "url": "https://docs.luciq.ai/organization-settings/others/sub-processors",
+       "excerpts": [
+        "| Hubspot             | Marketing Automation                   | United States  |"
+       ]
+      }
+     ],
+     "reasoning": "https://docs.luciq.ai/organization-settings/others/sub-processors lists Hubspot for marketing automation.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Sub-processors",
+       "url": "https://docs.luciq.ai/organization-settings/others/sub-processors",
+       "excerpts": [
+        "| Totango             | Customer relations management          | United States  |"
+       ]
+      }
+     ],
+     "reasoning": "https://docs.luciq.ai/organization-settings/others/sub-processors lists Totango for customer relations management.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2013.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Luciq is an agentic mobile observability platform that helps mobile engineering teams detect, prioritize, and resolve app issues.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI",
+    "pricing_page": true,
+    "funding_amount_usd": 46000000.0,
+    "named_customers": [
+     "DoorDash",
+     "T-Mobile"
+    ],
+    "funding_date": "2022-05",
+    "crm_stack_signal": [
+     "Salesforce.com",
+     "Hubspot",
+     "Totango"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

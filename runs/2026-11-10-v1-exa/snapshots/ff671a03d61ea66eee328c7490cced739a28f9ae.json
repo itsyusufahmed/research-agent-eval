@@ -1,0 +1,22 @@
+{
+ "url": "https://usenaive.ai/benchmarks/swe-bench-pro",
+ "fetched_at": "2026-11-10T19:48:33.782377+00:00",
+ "hours_after_run": 43.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "187693f0f647af2b37d09438f21f53c302aa91097fb50a405e015089bf07a945",
+ "chars": 3408,
+ "truncated": false,
+ "title": "SWE-Bench Pro | naïve",
+ "markdown": "[← Benchmarks](https://usenaive.ai/benchmarks)\n\n# SWE-Bench Pro\n\nReal repository issues resolved end-to-end, graded by hidden tests. Naive Managed Agents, Codex, Claude Code, Hermes, and Stock Pi each ran the same fifteen-task slice withGLM-5.3-Flash.\n\nLast run: September 2026 [Task suite: SWE-Bench Pro ↗](https://github.com/scaleapi/SWE-bench_Pro-os)\n\nCost per successful task · same model and task slice\n\n$0.0398 / success · 13% less than Codex\n\nNaive Managed Agents solved ten of fifteen tasks at $0.0398 per successful task. Codex solved eight at $0.0460 each. Hermes solved twelve at up to $0.2510 each. Claude Code solved all fifteen and Stock Pi solved nine. Their dollars are not shown, because their recorded charges are higher than their token counts allow on this rate card.\n\n## Efficiency leaderboard?Five matched harnesses on one model and task slice; click a column to re-sort.\n\nEvery row uses the same model, provider route, task slice, and one-attempt protocol. The harness determines how much context, time, and model spend each attempted task consumes.\n\nSorted by Cost / successful task↑\n\n| # | Harness | Model | Cost / successful task↑ | Tasks solved↓ | Success rate↓ | Time / task↓ | Input tokens / task↓ | Output tokens / task↓ | Turns / task↓ |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n| 1 | Naive Managed Agents | GLM-5.3-Flash ◆ | $0.0398 | 10 / 15 | 66.7% | 10.1 min | 811.7k | 8.6k | 38.9 |\n| 2 | Codex | GLM-5.3-Flash | $0.0460 | 8 / 15 | 53.3% | 6.6 min | 1.3M | 9.0k | — |\n| 3 | Hermes | GLM-5.3-Flash ◆ | $0.2510 | 12 / 15 | 80.0% | 32.6 min | 2.6M | 13.7k | — |\n| 4 | Claude Code | GLM-5.3-Flash | — | 15 / 15 | 100.0% | 15.9 min | 4.0M | 26.1k | — |\n| 5 | Pi | GLM-5.3-Flash | — | 9 / 15 | 60.0% | 19.7 min | 13.6M | 22.9k | — |\n\n◆ on the cost-efficiency frontier — no other configuration both solves more tasks and costs less per successful task. Every row uses GLM-5.3-Flash on the same task slice.\n\n## Why we run this benchmark\n\nIssue resolution is the workload most teams actually buy an agent for. Holding the model and tasks fixed isolates how much completion rate, latency, and spend come from the machinery around the model, with Naive Managed Agents benchmarked as another row against public alternatives.\n\n## Methodology\n\nTasks come from [SWE-Bench Pro](https://github.com/scaleapi/SWE-bench_Pro-os), pinned to a fixed dataset commit. Each attempt starts from a clean containerized checkout of the repository at the issue commit and runs unattended; grading is the suite's hidden tests — binary and automatic, no partial credit, no human judging.\n\nEvery harness ran the identical fifteen-task slice with GLM-5.3-Flash through OpenRouter. Invalid infrastructure attempts were repaired and rerun rather than scored as task failures. The published field contains 75 usable trials.\n\nFor Naive Managed Agents and Codex, cost is the model API charge recorded by each run. Hermes did not record dollars, so its tokens are priced on the shared GLM-5.3-Flash rate card with no cache discount. That makes its cost an upper bound. Claude Code and Stock Pi recorded charges above the most their tokens could cost on that card, so we do not show them.\n\nThese figures come from our internal benchmark database. The trial-level rows are not public yet.\n\nWant to try it? [Read the docs](https://usenaive.ai/docs) or see [pricing](https://usenaive.ai/pricing).",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider"
+ ],
+ "late": true
+}

@@ -1,0 +1,1276 @@
+{
+ "id": "agent_run_5a50106a278b4207b51564fbd5b34d25",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:02:49.296Z",
+ "completedAt": "2026-11-10T19:08:27.190Z",
+ "request": {
+  "query": "Research the company Trusaic (trusaic.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Trusaic provides pay-equity analysis, equitable pay-decision tools, and pay-transparency compliance software for global enterprises.\",\"citations\":[\"https://trusaic.com/\",\"https://trusaic.com/about/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://trusaic.com/\"],\"notes\":\"No pricing link was found in the public navigation or footer; no public pricing page was located.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Houghton Mifflin Harcourt\",\"Boston Beer\",\"Jackson Family Wines\",\"Shine Technologies\",\"ArtCenter College of Design\",\"Mother Jones\",\"Galderma\"],\"citations\":[\"https://lhra.io/wp-content/uploads/2023/11/Trusaic-2023-HR-Tech-Awards-Case-Study.pdf\",\"https://trusaic.com/affordable-care-act-compliance-essential/\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"101-200\",\"citations\":[\"https://linkedin.com/company/trusaic\"],\"notes\":\"The company profile reports 122 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Los Angeles\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/trusaic\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":1999,\"citations\":[\"https://trusaic.com/about/\",\"https://linkedin.com/company/trusaic\"],\"notes\":\"1999 is the founding year of predecessor First Capitol Consulting, which evolved into Trusaic.\"},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://trusaic.com/blog/\"],\"notes\":\"The index contains regulatory, product and marketing content; it does not establish two product-build posts authored by engineers.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://trusaic.com/\"],\"notes\":\"No public documentation or help-center link was found in the navigation or footer; the Trust Center lists security and integration documents rather than a public multi-article product help center.\"},\"ai_ml_roles_open\":{\"status\":\"unknown\",\"citations\":[\"https://trusaic.com/careers/\",\"https://www.r-users.com/jobs/data-scientist-20/\"],\"notes\":\"A careers page exists, but its readable content does not expose the current requisition list. Located data-scientist listings were expired, so neither a live opening nor a complete negative could be verified.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[\"https://trusaic.com/trusaic-ai/\",\"https://trusaic.com/responsible-ai/\",\"https://trusaic.com/data-processing-addendum/\",\"https://trusaic.com/trust-center/\",\"https://trusaic.com/privacy-policy/\",\"https://trusaic.com/blog/responsible-ai-starts-with-reliable-foundations-inside-the-making-of-trusaic-ai/\"],\"notes\":\"No underlying model or model provider was identified in the reviewed product/Responsible AI pages, AI blog, Trust Center, privacy policy or subprocessor disclosure. Azure is identified as hosting/storage, not as the AI model provider.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type II\",\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://trusaic.com/\",\"https://trusaic.com/trusaic-gdpr-compliance/\"],\"notes\":\"SOC 2 Type II assurance and ISO 27001 certification are claimed; GDPR is a compliance claim, not a standalone certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"none\"},\"citations\":[\"https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE\",\"https://pulse2.com/trusaic-robert-sheen-profile/?amp=\"],\"notes\":\"The funding profile reports no rounds, and the founder says the company is employee/founder-owned and has taken no outside funding.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE\",\"https://pulse2.com/trusaic-robert-sheen-profile/?amp=\"],\"notes\":\"No outside funding is reported; window assessed: 2025-05-09 through 2026-11-09.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a\"],\"notes\":\"A live syndicated Global Enterprise Account Executive, Workplace Equity posting is dated 2026-11-03 and offers an Apply now link; official-board availability was not independently exposed.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://trusaic.com/press-center/trusaic-introduces-enhanced-eu-pay-transparency-directive-monitor-with-interactive-map-as-member-states-diverge-ahead-of-june-transposition-deadline/\"],\"notes\":\"On 2026-05-20, Trusaic announced an enhanced EU Pay Transparency Directive Transposition Monitor with a real-time interactive map, within the 2026-05-09 to 2026-11-09 window.\"},\"leadership_change_12mo\":{\"status\":\"unknown\",\"citations\":[\"https://www.linkedin.com/in/lynnmkaiser\",\"https://www.linkedin.com/posts/nasar-khan-276165b9_euptd-paytransparency-eucompliance-activity-7416879199791222785-zoKq\",\"https://trusaic.com/about/\"],\"notes\":\"Lynn Kaiser\u2019s profile dates her Counsel & VP of Regulatory Affairs start to November 2025, and a January 2026 colleague post says she recently joined. The exact November start day is not given, so the 2025-11-09 cutoff cannot be resolved without guessing.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot CRM\",\"Avoma\",\"ZoomInfo\"],\"citations\":[\"https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a\"],\"notes\":\"The account-executive job description explicitly says the global pipeline is managed and forecast using these systems.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The index contains regulatory, product and marketing content; it does not establish two product-build posts authored by engineers.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/blog/"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Los Angeles",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/trusaic"
+    ]
+   },
+   "public_docs": {
+    "notes": "No public documentation or help-center link was found in the navigation or footer; the Trust Center lists security and integration documents rather than a public multi-article product help center.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "No outside funding is reported; window assessed: 2025-05-09 through 2026-11-09.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE",
+     "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+    ]
+   },
+   "founded_year": {
+    "notes": "1999 is the founding year of predecessor First Capitol Consulting, which evolved into Trusaic.",
+    "value": 1999,
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/about/",
+     "https://linkedin.com/company/trusaic"
+    ]
+   },
+   "last_funding": {
+    "notes": "The funding profile reports no rounds, and the founder says the company is employee/founder-owned and has taken no outside funding.",
+    "value": {
+     "stage": "none"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE",
+     "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+    ]
+   },
+   "launched_6mo": {
+    "notes": "On 2026-05-20, Trusaic announced an enhanced EU Pay Transparency Directive Transposition Monitor with a real-time interactive map, within the 2026-05-09 to 2026-11-09 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/press-center/trusaic-introduces-enhanced-eu-pay-transparency-directive-monitor-with-interactive-map-as-member-states-diverge-ahead-of-june-transposition-deadline/"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No pricing link was found in the public navigation or footer; no public pricing page was located.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 122 employees.",
+    "value": "101-200",
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/trusaic"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "A live syndicated Global Enterprise Account Executive, Workplace Equity posting is dated 2026-11-03 and offers an Apply now link; official-board availability was not independently exposed.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+    ]
+   },
+   "model_provider": {
+    "notes": "No underlying model or model provider was identified in the reviewed product/Responsible AI pages, AI blog, Trust Center, privacy policy or subprocessor disclosure. Azure is identified as hosting/storage, not as the AI model provider.",
+    "status": "unknown",
+    "citations": [
+     "https://trusaic.com/trusaic-ai/",
+     "https://trusaic.com/responsible-ai/",
+     "https://trusaic.com/data-processing-addendum/",
+     "https://trusaic.com/trust-center/",
+     "https://trusaic.com/privacy-policy/",
+     "https://trusaic.com/blog/responsible-ai-starts-with-reliable-foundations-inside-the-making-of-trusaic-ai/"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Houghton Mifflin Harcourt",
+     "Boston Beer",
+     "Jackson Family Wines",
+     "Shine Technologies",
+     "ArtCenter College of Design",
+     "Mother Jones",
+     "Galderma"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://lhra.io/wp-content/uploads/2023/11/Trusaic-2023-HR-Tech-Awards-Case-Study.pdf",
+     "https://trusaic.com/affordable-care-act-compliance-essential/"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "A careers page exists, but its readable content does not expose the current requisition list. Located data-scientist listings were expired, so neither a live opening nor a complete negative could be verified.",
+    "status": "unknown",
+    "citations": [
+     "https://trusaic.com/careers/",
+     "https://www.r-users.com/jobs/data-scientist-20/"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "SOC 2 Type II assurance and ISO 27001 certification are claimed; GDPR is a compliance claim, not a standalone certification.",
+    "value": [
+     "SOC 2 Type II",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/",
+     "https://trusaic.com/trusaic-gdpr-compliance/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The account-executive job description explicitly says the global pipeline is managed and forecast using these systems.",
+    "value": [
+     "HubSpot CRM",
+     "Avoma",
+     "ZoomInfo"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Trusaic provides pay-equity analysis, equitable pay-decision tools, and pay-transparency compliance software for global enterprises.",
+    "status": "asserted",
+    "citations": [
+     "https://trusaic.com/",
+     "https://trusaic.com/about/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Lynn Kaiser\u2019s profile dates her Counsel & VP of Regulatory Affairs start to November 2025, and a January 2026 colleague post says she recently joined. The exact November start day is not given, so the 2025-11-09 cutoff cannot be resolved without guessing.",
+    "status": "unknown",
+    "citations": [
+     "https://www.linkedin.com/in/lynnmkaiser",
+     "https://www.linkedin.com/posts/nasar-khan-276165b9_euptd-paytransparency-eucompliance-activity-7416879199791222785-zoKq",
+     "https://trusaic.com/about/"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     },
+     {
+      "url": "https://trusaic.com/about/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     },
+     {
+      "url": "https://trusaic.com/about/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.pricing_page.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://lhra.io/wp-content/uploads/2023/11/Trusaic-2023-HR-Tech-Awards-Case-Study.pdf"
+     },
+     {
+      "url": "https://trusaic.com/affordable-care-act-compliance-essential/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://lhra.io/wp-content/uploads/2023/11/Trusaic-2023-HR-Tech-Awards-Case-Study.pdf"
+     },
+     {
+      "url": "https://trusaic.com/affordable-care-act-compliance-essential/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/about/"
+     },
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/about/"
+     },
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/about/"
+     },
+     {
+      "url": "https://linkedin.com/company/trusaic"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/blog/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/blog/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/blog/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/careers/"
+     },
+     {
+      "url": "https://www.r-users.com/jobs/data-scientist-20/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/careers/"
+     },
+     {
+      "url": "https://www.r-users.com/jobs/data-scientist-20/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/trusaic-ai/"
+     },
+     {
+      "url": "https://trusaic.com/responsible-ai/"
+     },
+     {
+      "url": "https://trusaic.com/data-processing-addendum/"
+     },
+     {
+      "url": "https://trusaic.com/trust-center/"
+     },
+     {
+      "url": "https://trusaic.com/privacy-policy/"
+     },
+     {
+      "url": "https://trusaic.com/blog/responsible-ai-starts-with-reliable-foundations-inside-the-making-of-trusaic-ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/trusaic-ai/"
+     },
+     {
+      "url": "https://trusaic.com/responsible-ai/"
+     },
+     {
+      "url": "https://trusaic.com/data-processing-addendum/"
+     },
+     {
+      "url": "https://trusaic.com/trust-center/"
+     },
+     {
+      "url": "https://trusaic.com/privacy-policy/"
+     },
+     {
+      "url": "https://trusaic.com/blog/responsible-ai-starts-with-reliable-foundations-inside-the-making-of-trusaic-ai/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     },
+     {
+      "url": "https://trusaic.com/trusaic-gdpr-compliance/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     },
+     {
+      "url": "https://trusaic.com/trusaic-gdpr-compliance/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/"
+     },
+     {
+      "url": "https://trusaic.com/trusaic-gdpr-compliance/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE"
+     },
+     {
+      "url": "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE"
+     },
+     {
+      "url": "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE"
+     },
+     {
+      "url": "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE"
+     },
+     {
+      "url": "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE"
+     },
+     {
+      "url": "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://tracxn.com/d/companies/trusaic/__c7n0KUZkhSEsot3V2jVtKFxRnpyO9Gi3npGJNZf-KWE"
+     },
+     {
+      "url": "https://pulse2.com/trusaic-robert-sheen-profile/?amp="
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://trusaic.com/press-center/trusaic-introduces-enhanced-eu-pay-transparency-directive-monitor-with-interactive-map-as-member-states-diverge-ahead-of-june-transposition-deadline/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://trusaic.com/press-center/trusaic-introduces-enhanced-eu-pay-transparency-directive-monitor-with-interactive-map-as-member-states-diverge-ahead-of-june-transposition-deadline/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://trusaic.com/press-center/trusaic-introduces-enhanced-eu-pay-transparency-directive-monitor-with-interactive-map-as-member-states-diverge-ahead-of-june-transposition-deadline/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/in/lynnmkaiser"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/nasar-khan-276165b9_euptd-paytransparency-eucompliance-activity-7416879199791222785-zoKq"
+     },
+     {
+      "url": "https://trusaic.com/about/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/in/lynnmkaiser"
+     },
+     {
+      "url": "https://www.linkedin.com/posts/nasar-khan-276165b9_euptd-paytransparency-eucompliance-activity-7416879199791222785-zoKq"
+     },
+     {
+      "url": "https://trusaic.com/about/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://jobmesh.io/job/14fc139d-4eb7-49c2-822e-2e907449967a"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

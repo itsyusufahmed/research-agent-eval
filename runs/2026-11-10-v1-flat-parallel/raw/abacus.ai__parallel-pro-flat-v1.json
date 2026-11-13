@@ -1,0 +1,548 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ebe00c99f3d2b51f1",
+  "interaction_id": "trun_142119f6a1b4439ebe00c99f3d2b51f1",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "abacus.ai"
+  },
+  "created_at": "2026-11-10T18:48:40.542057Z",
+  "modified_at": "2026-11-10T18:58:09.370864Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ebe00c99f3d2b51f1",
+   "interaction_id": "trun_142119f6a1b4439ebe00c99f3d2b51f1",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "abacus.ai"
+   },
+   "created_at": "2026-11-10T18:48:40.542057Z",
+   "modified_at": "2026-11-10T18:58:09.370864Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Abacus.AI",
+       "url": "https://tracxn.com/a/d/company/59676c86e4b04cbde6045b76/abacus.ai#a:about",
+       "excerpts": [
+        "Name: Abacus.AI | Website Url: https://abacus.ai | Primary Sector: Enterprise Infrastructure | Primary Subsector: PaaS | Stage: Series C | Founded Year: 2019 | Employee Count Official: 287 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Estimated Revenue Usd: 132001615.0 | Latest Funding Round Amount Usd: 50000000.0 | Latest Funding Round Date: 2021-10-27 | Latest Funding Round Name: Series C | Latest Valuation Usd: 58000000.0 | Total Disclosed Funding Usd: 90250000.0 | Acquisitions As Acquirer Count: 0 | Funded: Yes | Other Taxonomy Tags:"
+       ]
+      }
+     ],
+     "reasoning": "The Tracxn profile for Abacus.AI states its founded year is 2019.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Abacus.AI Security Policy | AI Security & Compliance",
+       "url": "https://abacus.ai/security",
+       "excerpts": [
+        "SOC 2 Type II badge",
+        "ISO/IEC 27001 badge",
+        "HIPAA badge",
+        "GDPR badge"
+       ]
+      },
+      {
+       "title": "Information Security And Compliance Paper",
+       "url": "https://abacus.ai/static/security/AbacusSecurityPaper.pdf",
+       "excerpts": [
+        "**Standards & Regulatory Compliance**"
+       ]
+      }
+     ],
+     "reasoning": "Abacus.AI's security page names SOC 2 Type II, ISO/IEC 27001, HIPAA and GDPR; its security paper names PCI DSS. These are the certifications/standards publicly named on those pages.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Abacus.AI | The AI Super Assistant for Professionals and Enterprises",
+       "url": "https://abacus.ai/about",
+       "excerpts": [
+        "Headquartered in San Francisco, Abacus.AI is backed by world-class investors including [Mike Volpi](https://en.wikipedia.org/wiki/Mike_Volpi) (Index Ventures), [Eric Schmidt](https://en.wikipedia.org/wiki/Eric_Schmidt) (former CEO and Chairman of Google), [Ram Shriram](https://en.wikipedia.org/wiki/Ram_Shriram) (Google board member), Coatue, Khosla Ventures, and Tiger Global."
+       ]
+      }
+     ],
+     "reasoning": "The company About page says Abacus.AI is headquartered in San Francisco; the associated location information identifies the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Smaug-Nemotron-3.5-NVFP4: an agentic fine-tune that lives in 4 bits | The Abacus.AI Blog",
+       "url": "https://blog.abacus.ai/blog/2026/10/22/smaug-nemotron-3-5-nvfp4-an-agentic-fine-tune-that-lives-in-4-bits",
+       "excerpts": [
+        "By Arvind Sundararajan October 22, 2026 8 min read",
+        "The forward passes use the weight that will be released, rounded by _Q\\_fmt_ to the layer\u2019s own format (BF16, or FP8 with the per-tensor scale kept frozen):"
+       ]
+      },
+      {
+       "title": "Smaug-Decisions: State-of-the-Art Audio Decisions in a 4B Model That Also Sees and Reads | The Abacus.AI Blog",
+       "url": "https://blog.abacus.ai/blog/2026/11/02/smaug-decisions",
+       "excerpts": [
+        "By Balajee Sambasivam November 2, 2026 9 min read",
+        "Fitting a 4B multimodal model into 3.45 GB"
+       ]
+      }
+     ],
+     "reasoning": "The blog has at least two technical posts: one by CTO/co-founder Arvind Sundararajan describing model fine-tuning, and another coauthored by Sundararajan explaining multimodal model implementation and deployment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Abacus.AI | The AI Super Assistant for Professionals and Enterprises",
+       "url": "https://abacus.ai/about",
+       "excerpts": [
+        "Abacus.AI is the state-of-the-art SuperAssistant and agentic platform built to automate white-collar work. ..."
+       ]
+      },
+      {
+       "title": "Abacus.AI - ChatLLM AI Super Assistant Help Guide",
+       "url": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction",
+       "excerpts": [
+        "Abacus.AI **Super Assistant** , also known as **ChatLLM Teams** , is an all-in-one AI platform for professionals, students, and teams."
+       ]
+      }
+     ],
+     "reasoning": "The About page describes an agentic platform built to automate white-collar work; the product documentation says the Super Assistant is for professionals, students, and teams. The one-liner summarizes its stated product and audience.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Abacus.AI",
+       "url": "https://tracxn.com/a/d/company/59676c86e4b04cbde6045b76/abacus.ai#a:about",
+       "excerpts": [
+        "Name: Abacus.AI | Website Url: https://abacus.ai | Primary Sector: Enterprise Infrastructure | Primary Subsector: PaaS | Stage: Series C | Founded Year: 2019 | Employee Count Official: 287 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Estimated Revenue Usd: 132001615.0 | Latest Funding Round Amount Usd: 50000000.0 | Latest Funding Round Date: 2021-10-27 | Latest Funding Round Name: Series C | Latest Valuation Usd: 58000000.0 | Total Disclosed Funding Usd: 90250000.0 | Acquisitions As Acquirer Count: 0 | Funded: Yes | Other Taxonomy Tags:"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 287 employees, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Abacus.AI - ChatLLM AI Super Assistant Help Guide",
+       "url": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction",
+       "excerpts": [
+        "Super Assistant Main Page Access All the Top LLMs Instead of juggling multiple AI subscriptions, ChatLLM gives you every state-of-the-art model in one place \u2014 GPT-5.6 Sol, GPT-6 Astra, Claude Opus 5, Claude Fable 5.1, Grok 4.6, and many more."
+       ]
+      }
+     ],
+     "reasoning": "The product documentation names GPT, Claude, Gemini, and Grok models, supporting the corresponding publicly identified providers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "ChatLLM Pricing | Basic $10, Pro $20 per user a month | Abacus.AI",
+       "url": "https://abacus.ai/pricing",
+       "excerpts": [
+        "Pro $20 per month"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page lists a Pro plan at $20 per month.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Abacus.AI Announces $50 Million To Build First AI Control Center",
+       "url": "https://okmagazine.com/p/abacusai-announces-50-million-in-additional-funding-to-build-the-worlds-first-ai-control-center",
+       "excerpts": [
+        "Abacus.AI, the pioneering AI super assistant for professionals and enterprises, today announced it has secured $50 million in additional funding to develop and deploy the world's first AI Control Center\u2014a revolutionary platform that will enable organizations to orchestrate, monitor, and optimize all AI agents and operations from a single unified interface."
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement says Abacus.AI secured $50 million in additional funding. This is the amount announced for the round, not the total capital raised.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Abacus.AI Case Studies | Enterprise AI Success Stories",
+       "url": "https://abacus.ai/case-studies",
+       "excerpts": [
+        "Trusted by 1M+ customers, including several Fortune 500s NetApp DHL ExxonMobil Autodesk FactSet London Stock Exchange Mars PagerDuty The Home Depot Brown-Forman Joyson Safety Systems Ashley"
+       ]
+      }
+     ],
+     "reasoning": "The company's case-studies page names NetApp and DHL among customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Abacus.AI Announces $50 Million To Build First AI Control Center",
+       "url": "https://okmagazine.com/p/abacusai-announces-50-million-in-additional-funding-to-build-the-worlds-first-ai-control-center",
+       "excerpts": [
+        "SAN FRANCISCO, February 12, 2026 \u2014"
+       ]
+      }
+     ],
+     "reasoning": "The announcement is dated February 12, 2026, so the requested YYYY-MM date is 2026-02.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Salesforce",
+       "url": "https://abacus.ai/help/connectors/databaseConnectors/salesforce",
+       "excerpts": [
+        "Abacus.AI provides the capability to integrate with your Salesforce account, enabling you to train models using data directly from Salesforce."
+       ]
+      },
+      {
+       "title": "Abacus.AI - Careers & Jobs",
+       "url": "https://abacus.ai/jobs",
+       "excerpts": [
+        "No prior experience required, just bring: Willingness to learn high-volume outbound prospecting using tools like Outreach or Salesloft"
+       ]
+      }
+     ],
+     "reasoning": "The documentation describes a Salesforce integration. A job post names Outreach and Salesloft as outbound prospecting tools.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Abacus.ai Org Chart + Executive Team",
+       "url": "https://www.theofficialboard.com/org-chart/abacus-ai?showSubsidiary=open",
+       "excerpts": [
+        "has 10 executives"
+       ]
+      },
+      {
+       "title": "Abacus.ai News and Activities",
+       "url": "https://www.theofficialboard.com/news/abacus-ai",
+       "excerpts": [
+        "View the org chart displaying [its 10 main executives](https://www.theofficialboard.com/org-chart/abacus-ai)"
+       ]
+      }
+     ],
+     "reasoning": "The sources show a 10-person executive chart but do not establish a C-level or VP-level start or departure date within the 12-month window. The available evidence is insufficient to answer yes or no, so this remains unknown.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Abacus.AI - Careers & Jobs",
+       "url": "https://abacus.ai/jobs?gh_src=Coatue%20Management%20job%20board&job=17",
+       "excerpts": [
+        "Research Scientist Responsible for coming up with new techniques in Generative AI that push the boundaries on what is possible with LLMs."
+       ]
+      }
+     ],
+     "reasoning": "The careers posting lists an open Research Scientist role focused on generative AI and LLMs.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Abacus.AI Announces $50 Million To Build First AI Control Center",
+       "url": "https://okmagazine.com/p/abacusai-announces-50-million-in-additional-funding-to-build-the-worlds-first-ai-control-center",
+       "excerpts": [
+        "Abacus.AI, the pioneering AI super assistant for professionals and enterprises, today announced it has secured $50 million in additional funding to develop and deploy the world's first AI Control Center\u2014a revolutionary platform that will enable organizations to orchestrate, monitor, and optimize all AI agents and operations from a single unified interface."
+       ]
+      }
+     ],
+     "reasoning": "The February 2026 announcement gives the amount and date but does not name a funding stage. Older databases list prior rounds, which do not establish the stage of this newer announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Abacus.AI - ChatLLM AI Super Assistant Help Guide",
+       "url": "https://abacus.ai/help/chatllm-ai-super-assistant/introduction",
+       "excerpts": [
+        "[Prompting Tips and Tricks](https://abacus.ai/help/chatllm-ai-super-assistant/prompting-tips-and-tricks)",
+        "[Abacus AI Agent Apps How-To](https://abacus.ai/help/chatllm-ai-super-assistant/deepagent-apps)"
+       ]
+      }
+     ],
+     "reasoning": "The public help center links to multiple product guides and how-to articles, meeting the documentation criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Abacus.AI | The AI Super Assistant for Professionals and Enterprises",
+       "url": "https://abacus.ai/about",
+       "excerpts": [
+        "Headquartered in San Francisco, Abacus.AI is backed by world-class investors including [Mike Volpi](https://en.wikipedia.org/wiki/Mike_Volpi) (Index Ventures), [Eric Schmidt](https://en.wikipedia.org/wiki/Eric_Schmidt) (former CEO and Chairman of Google), [Ram Shriram](https://en.wikipedia.org/wiki/Ram_Shriram) (Google board member), Coatue, Khosla Ventures, and Tiger Global."
+       ]
+      }
+     ],
+     "reasoning": "The About page explicitly states the headquarters is in San Francisco.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Abacusai Launches The Smaug Line Of Open Weight Models Optimized For Enterprise Agentic Ai Use Cases 302875524",
+       "url": "https://www.prnewswire.com/news-releases/abacusai-launches-the-smaug-line-of-open-weight-models-optimized-for-enterprise-agentic-ai-use-cases-302875524.html",
+       "excerpts": [
+        "10, 2026 /PRNewswire/ -- Abacus.AI is introducing three new LLMs across its enterprise agentic AI platform and Super Assistant."
+       ]
+      }
+     ],
+     "reasoning": "A September 10, 2026 announcement says Abacus.AI is introducing three new LLMs, a product launch within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Abacus.AI - Careers & Jobs",
+       "url": "https://abacus.ai/jobs",
+       "excerpts": [
+        "## Junior Sales Development Representative (Jr SDR)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists a Junior Sales Development Representative opening, which qualifies as an SDR role.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Abacus.AI Announces $50 Million To Build First AI Control Center",
+       "url": "https://okmagazine.com/p/abacusai-announces-50-million-in-additional-funding-to-build-the-worlds-first-ai-control-center",
+       "excerpts": [
+        "SAN FRANCISCO, February 12, 2026 \u2014",
+        "Abacus.AI, the pioneering AI super assistant for professionals and enterprises, today announced it has secured $50 million in additional funding to develop and deploy the world's first AI Control Center\u2014a revolutionary platform that will enable organizations to orchestrate, monitor, and optimize all AI agents and operations from a single unified interface."
+       ]
+      }
+     ],
+     "reasoning": "The announcement dates the $50 million funding to February 12, 2026, which is inside the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Abacus.AI Security Policy | AI Security & Compliance",
+       "url": "https://abacus.ai/security",
+       "excerpts": [
+        "SOC 2 Type II badge"
+       ]
+      }
+     ],
+     "reasoning": "The security page names SOC 2 Type II.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Abacus.AI Security Policy | AI Security & Compliance",
+       "url": "https://abacus.ai/security",
+       "excerpts": [
+        "ISO/IEC 27001 badge"
+       ]
+      }
+     ],
+     "reasoning": "The security page names ISO/IEC 27001.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Abacus.AI Security Policy | AI Security & Compliance",
+       "url": "https://abacus.ai/security",
+       "excerpts": [
+        "HIPAA badge"
+       ]
+      }
+     ],
+     "reasoning": "The security page names HIPAA.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Abacus.AI Security Policy | AI Security & Compliance",
+       "url": "https://abacus.ai/security",
+       "excerpts": [
+        "GDPR badge"
+       ]
+      }
+     ],
+     "reasoning": "The security page names GDPR.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.4",
+     "citations": [
+      {
+       "title": "Information Security And Compliance Paper",
+       "url": "https://abacus.ai/static/security/AbacusSecurityPaper.pdf",
+       "excerpts": [
+        "**Standards & Regulatory Compliance**"
+       ]
+      }
+     ],
+     "reasoning": "The security paper explicitly names PCI DSS.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Abacus.AI Case Studies | Enterprise AI Success Stories",
+       "url": "https://abacus.ai/case-studies",
+       "excerpts": [
+        "Trusted by 1M+ customers, including several Fortune 500s NetApp DHL ExxonMobil Autodesk FactSet London Stock Exchange Mars PagerDuty The Home Depot Brown-Forman Joyson Safety Systems Ashley"
+       ]
+      }
+     ],
+     "reasoning": "The company case-studies page names NetApp as a customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Abacus.AI Case Studies | Enterprise AI Success Stories",
+       "url": "https://abacus.ai/case-studies",
+       "excerpts": [
+        "Trusted by 1M+ customers, including several Fortune 500s NetApp DHL ExxonMobil Autodesk FactSet London Stock Exchange Mars PagerDuty The Home Depot Brown-Forman Joyson Safety Systems Ashley"
+       ]
+      }
+     ],
+     "reasoning": "The company case-studies page names DHL as a customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Salesforce",
+       "url": "https://abacus.ai/help/connectors/databaseConnectors/salesforce",
+       "excerpts": [
+        "Abacus.AI provides the capability to integrate with your Salesforce account, enabling you to train models using data directly from Salesforce."
+       ]
+      }
+     ],
+     "reasoning": "The help documentation names the Salesforce integration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Abacus.AI - Careers & Jobs",
+       "url": "https://abacus.ai/jobs",
+       "excerpts": [
+        "No prior experience required, just bring: Willingness to learn high-volume outbound prospecting using tools like Outreach or Salesloft"
+       ]
+      }
+     ],
+     "reasoning": "The job post names Outreach and Salesloft as outbound sales prospecting tools.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Abacus.AI - Careers & Jobs",
+       "url": "https://abacus.ai/jobs",
+       "excerpts": [
+        "No prior experience required, just bring: Willingness to learn high-volume outbound prospecting using tools like Outreach or Salesloft"
+       ]
+      }
+     ],
+     "reasoning": "The job post names Outreach and Salesloft as outbound sales prospecting tools.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2019.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "ISO/IEC 27001",
+     "HIPAA",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Abacus.AI provides an AI super assistant and agentic platform that automates work for professionals and enterprises.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI (GPT), Anthropic (Claude), Google (Gemini), and xAI (Grok), among others.",
+    "pricing_page": true,
+    "funding_amount_usd": 50000000.0,
+    "named_customers": [
+     "NetApp",
+     "DHL"
+    ],
+    "funding_date": "2026-02",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Outreach",
+     "Salesloft"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": null,
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

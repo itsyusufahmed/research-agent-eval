@@ -1,0 +1,609 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9b3cc204e232a6f7",
+  "interaction_id": "trun_142119f6a1b4439e9b3cc204e232a6f7",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "heartlegacy.com"
+  },
+  "created_at": "2026-11-10T18:48:52.196678Z",
+  "modified_at": "2026-11-10T18:55:09.147646Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9b3cc204e232a6f7",
+   "interaction_id": "trun_142119f6a1b4439e9b3cc204e232a6f7",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "heartlegacy.com"
+   },
+   "created_at": "2026-11-10T18:48:52.196678Z",
+   "modified_at": "2026-11-10T18:55:09.147646Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Heartlegacy Llc",
+       "url": "https://linkedin.com/company/heartlegacy-llc",
+       "excerpts": [
+        "employee count: 16 founded year: 2014"
+       ]
+      },
+      {
+       "title": "HeartLegacy II",
+       "url": "https://content.pitchbook.com/profiles/company/294623-56",
+       "excerpts": [
+        "name: HeartLegacy II LLC Headquarters: Daphne, AL Website: www.salesmail.com Founded: 2014"
+       ]
+      }
+     ],
+     "reasoning": "The company profile states 2014, corroborated by the financing profile identifying HeartLegacy II and salesmail.com. Sources: https://linkedin.com/company/heartlegacy-llc and https://content.pitchbook.com/profiles/company/294623-56.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - SalesMail",
+       "url": "https://trust.salesmail.com/",
+       "excerpts": [
+        "SOC 2 In Progress"
+       ]
+      },
+      {
+       "title": "SalesMail CRM Integrations | Senior Living, Multifamily & Enterprise",
+       "url": "https://www.salesmail.com/integrations",
+       "excerpts": [
+        "We're also currently in the process of completing our SOC 2 certification, further formalizing the security practices our platform is built on."
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists SOC 2 only as in progress, and the integrations page confirms certification is still being completed. No completed claim among the five specified standards was found on the reviewed security pages; in-progress certification is excluded. Sources: https://trust.salesmail.com/ and https://www.salesmail.com/integrations.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Heartlegacy Llc",
+       "url": "https://linkedin.com/company/heartlegacy-llc",
+       "excerpts": [
+        "country iso: US country name: United States locality: Daphne, AL type: Privately Held"
+       ]
+      }
+     ],
+     "reasoning": "The HeartLegacy company profile identifies its country as United States. Source: https://linkedin.com/company/heartlegacy-llc.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "SalesMail Blog | Insights on Sales, Leasing, and Personalized Video",
+       "url": "https://www.salesmail.com/blog",
+       "excerpts": [
+        "[## 7 Reasons SalesMail is the Best Video Tool for Senior Living and Home Care Reid Gilbert Portrait | SalesMail Reid Gilbert Apr 3, 2025 / Clock 2 min read Category"
+       ]
+      }
+     ],
+     "reasoning": "The readable blog index shows a marketing article about why SalesMail is a suitable video tool, not two engineer-authored posts explaining product construction. This meets the specified false criterion. Source: https://www.salesmail.com/blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "HeartLegacy is now SalesMail",
+       "url": "https://heartlegacy.com/",
+       "excerpts": [
+        "HeartLegacy is now SalesMail!",
+        "Video outreach that builds trust, books more meetings, and accelerates your sales cycle"
+       ]
+      },
+      {
+       "title": "HeartLegacy is now SalesMail",
+       "url": "https://www.salesmail.com/heartlegacy",
+       "excerpts": [
+        "Personalized Video and Tour Intelligence solutions for senior living, home care, and beyond."
+       ]
+      },
+      {
+       "title": "SalesMail Launches Sidekick, a New AI Coaching and Tour",
+       "url": "https://www.globenewswire.com/news-release/2026/09/16/3363345/0/en/salesmail-launches-sidekick-a-new-ai-coaching-and-tour-intelligence-platform-for-senior-living.html",
+       "excerpts": [
+        "SalesMail Launches Sidekick, a New AI Coaching and Tour Intelligence Platform for Senior Living New AI Coaching and Tour Intelligence platform helps portfolio leaders benchmark performance, spot systemic issues, improve follow"
+       ]
+      }
+     ],
+     "reasoning": "The official rebrand page connects HeartLegacy to SalesMail, describes personalized video and tour intelligence for senior living and home care, and explains the sales purpose. The Sidekick announcement establishes the AI-powered component. Sources: https://www.salesmail.com/heartlegacy, https://heartlegacy.com/ and https://www.globenewswire.com/news-release/2026/09/16/3363345/0/en/salesmail-launches-sidekick-a-new-ai-coaching-and-tour-intelligence-platform-for-senior-living.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Heartlegacy Llc",
+       "url": "https://linkedin.com/company/heartlegacy-llc",
+       "excerpts": [
+        "employee count: 16 founded year: 2014"
+       ]
+      }
+     ],
+     "reasoning": "The HeartLegacy profile reports 16 employees, placing it in 11-20. This is a profile count rather than a confirmed payroll total and may undercount the consolidated SalesMail organization. Source: https://linkedin.com/company/heartlegacy-llc.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Mobile App Privacy Policy",
+       "url": "https://www.salesmail.com/mobile-app-policy",
+       "excerpts": [
+        "[Amazon Web Services](https://aws.amazon.com/transcribe/) (Amazon Transcribe) - Audio recordings - Converts speech to text and separates different speakers within a single recording",
+        "[Anthropic](https://www.anthropic.com/) (Claude API) - Transcript text and related tour details - Produces summaries, coaching feedback, scores, follow-up drafts, suggested next steps, and answers to your questions"
+       ]
+      }
+     ],
+     "reasoning": "The Sidekick privacy policy explicitly names Amazon Transcribe for transcription and speaker separation, and Anthropic's Claude API for summaries, coaching, scoring and follow-up drafts. Source: https://www.salesmail.com/mobile-app-policy.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "SalesMail Demo | See Personalized Video Outreach in Action",
+       "url": "https://www.salesmail.com/pricing",
+       "excerpts": [
+        "Request a demo",
+        "Book a demo"
+       ]
+      },
+      {
+       "title": "SalesMail | Personalized Video for Senior Living & Home Care",
+       "url": "https://www.salesmail.com/",
+       "excerpts": [
+        "[UI Icon Mail RG| SalesMail Book a demo](https://www.salesmail.com/demo) [See how it works](https://www.salesmail.com/how-it-works)"
+       ]
+      }
+     ],
+     "reasoning": "The pricing URL resolves to a demo-request form rather than plans or prices, and the reviewed homepage navigation/footer supplies demo calls to action rather than a pricing link. Sources: https://www.salesmail.com/pricing and https://www.salesmail.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "HeartLegacy II",
+       "url": "https://content.pitchbook.com/profiles/company/294623-56",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2020-05-01) Financing status: Private Debt Financed (as of 2020-05-01) Last financing date: 2020-05-01 Last financing size: USD 0.208 million Last financing deal types: Debt - PPP"
+       ]
+      }
+     ],
+     "reasoning": "The financing profile reports the last financing size as USD 0.208 million, converted to USD 208000. This explicit financing record is preferred over conflicting summaries that describe the company as unfunded or report a different PPP amount. Source: https://content.pitchbook.com/profiles/company/294623-56.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "SalesMail Testimonials by Senior Living, Multifamily & Sales Pros",
+       "url": "https://www.salesmail.com/testimonials",
+       "excerpts": [
+        "Nina Butler Regional Sales Specialist / Asbury Communities Quote | SalesMail \"SalesMail has helped us with our sales conversion ratios. I love seeing in real time what our prospects are thinking and it helps get them to the next stage.",
+        "Jackie Johnson Regional Director Sales & Marketing / Sinceri Senior Living Quote | SalesMail \"Being able to connect with people visually with a short little video, really puts a really personal touch to the contact that you make with people, and it's really helped us increase occupancy. If you want to be the enemy of average, put SalesMail in your toolbox."
+       ]
+      }
+     ],
+     "reasoning": "Testimonials from named employees at Asbury Communities and Sinceri Senior Living describe their organizations' use of SalesMail, establishing customer relationships rather than mere partnerships. Source: https://www.salesmail.com/testimonials.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "HeartLegacy II",
+       "url": "https://content.pitchbook.com/profiles/company/294623-56",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2020-05-01) Financing status: Private Debt Financed (as of 2020-05-01) Last financing date: 2020-05-01 Last financing size: USD 0.208 million Last financing deal types: Debt - PPP"
+       ]
+      }
+     ],
+     "reasoning": "The financing profile identifies the last financing date as 2020-05-01, normalized to the requested YYYY-MM format. Source: https://content.pitchbook.com/profiles/company/294623-56.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Learn and leverage Zoho CRM to support outbound tracking, attribution, and integration with broader revenue systems.",
+        "Use Clay as the central hub to source accounts, enrich data, score prospects, and orchestrate outbound campaigns.",
+        "Define, test, and refine ICPs; source high-fit accounts and uncover key decision-makers using tools like Sales Navigator, Ocean, and enrichment platforms.",
+        "Launch and manage email sequences (Smartlead) and LinkedIn connection campaigns (HeyReach), including personalization, testing, and iteration.",
+        "Set up and maintain cold email infrastructure (Zapmail), including inbox rotation, domain health, warmup, and inbox placement.",
+        "Hands-on experience with modern outbound tools: familiar with platforms like Smartlead, HeyReach, Sales Navigator, Ocean, RB2B, Vector, or similar."
+       ]
+      }
+     ],
+     "reasoning": "The Demand Generation Specialist posting explicitly names these systems in its responsibilities or experience requirements. RB2B and Vector are hiring-stack signals, not definitive proof of deployment. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "SalesMail Leadership | Meet the Team Behind Human-First Video Outreach",
+       "url": "https://www.salesmail.com/leadership",
+       "excerpts": [
+        "Walt Armentrout Portrait | SalesMail Walt Armentrout Founder and CEO [](https://www.linkedin.com/in/heartlegacy/)",
+        "Fran Smith Portrait | SalesMail Fran Smith Co-founder and CCO [](https://www.linkedin.com/in/fran-smith-66009938/)",
+        "Corey DeGeorge Portrait | SalesMail Corey DeGeorge COO [](https://www.linkedin.com/in/coreydegeorge/)",
+        "Bill McGovern Portrait | SalesMail Bill McGovern VP, sales [](https://www.linkedin.com/in/mcgovernbill/)",
+        "Reid Gilbert Portrait | SalesMail Reid Gilbert VP, marketing [](https://www.linkedin.com/in/reidgilbert/)",
+        "Jared Collins Portrait | SalesMail Jared Collins VP, technology [](https://www.linkedin.com/in/jaredcollins/)"
+       ]
+      },
+      {
+       "title": "Corey DeGeorge",
+       "url": "https://linkedin.com/in/coreydegeorge",
+       "excerpts": [
+        "Returned fields: {experience_text=\"SalesMail 2025-11-01 Chief Operating Officer SalesMail 2020-04-01 2025-12-01 VP of Product & Services"
+       ]
+      },
+      {
+       "title": "Bill McGovern",
+       "url": "https://linkedin.com/in/mcgovernbill",
+       "excerpts": [
+        "Returned fields: {experience_text='SalesMail 2024-08-01 Vice President of Sales Xyvid, Inc."
+       ]
+      },
+      {
+       "title": "Jared Collins",
+       "url": "https://linkedin.com/in/jaredcollins",
+       "excerpts": [
+        "Returned fields: {experience_text='SalesMail 2023-02-01 VP Engineering"
+       ]
+      }
+     ],
+     "reasoning": "The complete six-person leadership roster and available role histories were checked, with no qualifying company join or departure found in the window. Corey DeGeorge's COO promotion began November 1, 2025, before the cutoff; his overlapping VP end date is an internal role transition, not evidence of leaving the company. Sources: https://www.salesmail.com/leadership, https://linkedin.com/in/coreydegeorge, https://linkedin.com/in/mcgovernbill and https://linkedin.com/in/jaredcollins.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Careers at SalesMail | Build the Future of Human-First Communication",
+       "url": "https://www.salesmail.com/careers",
+       "excerpts": [
+        "[### Client Success Specialist (CSS) We\u2019re looking for a Client Success Specialist",
+        "[### Product Manager We\u2019re looking for a Product Manager",
+        "[### Demand Generation Specialist Create demand and drive pipeline."
+       ]
+      }
+     ],
+     "reasoning": "The readable careers page lists Client Success Specialist, Product Manager and Demand Generation Specialist. None is a qualifying AI, ML or data-science title. Source: https://www.salesmail.com/careers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "HeartLegacy II",
+       "url": "https://content.pitchbook.com/profiles/company/294623-56",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2020-05-01) Financing status: Private Debt Financed (as of 2020-05-01) Last financing date: 2020-05-01 Last financing size: USD 0.208 million Last financing deal types: Debt - PPP"
+       ]
+      }
+     ],
+     "reasoning": "The financing profile explicitly classifies the last financing as Debt - PPP. This is government-backed debt, not a venture-equity round. Source: https://content.pitchbook.com/profiles/company/294623-56.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "SalesMail | Knowledge Base",
+       "url": "https://support.salesmail.com/portal/en/kb/heartlegacy",
+       "excerpts": [
+        "SalesMail | Knowledge Base * [## SalesMail How To Videos](https://support.salesmail.com/portal/en/kb/heartlegacy/sample-videos) [## SalesMail Help & Ideas](https://support.salesmail.com/portal/en/kb/heartlegacy/salesmail-1) [## SalesMail Sidekick](https://support.salesmail.com/portal/en/kb/heartlegacy/salesmail-sidekick) [## SalesMail Contests, Fun, Etc.](https://support.salesmail.com/portal/en/kb/heartlegacy/salesmail-contests-fun-and-inspiration) [## SalesMail Video Examples](https://support.salesmail.com/portal/en/kb/heartlegacy/salesmail-video-ideas-and-tips) [## SalesMail Integrations"
+       ]
+      },
+      {
+       "title": "SalesMail | SalesMail Sidekick | Knowledge Base",
+       "url": "https://support.salesmail.com/portal/en/kb/heartlegacy/salesmail-sidekick",
+       "excerpts": [
+        "[## Sidekick FAQ](https://support.salesmail.com/portal/en/kb/articles/sidekick-faq)",
+        "[## Getting Started with Sidekick](https://support.salesmail.com/portal/en/kb/articles/getting-start)"
+       ]
+      }
+     ],
+     "reasoning": "A public knowledge base contains multiple categories and articles, including Sidekick FAQs, onboarding and getting-started instructions. Sources: https://support.salesmail.com/portal/en/kb/heartlegacy and https://support.salesmail.com/portal/en/kb/heartlegacy/salesmail-sidekick.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Heartlegacy Llc",
+       "url": "https://linkedin.com/company/heartlegacy-llc",
+       "excerpts": [
+        "country iso: US country name: United States locality: Daphne, AL type: Privately Held"
+       ]
+      },
+      {
+       "title": "HeartLegacy II",
+       "url": "https://content.pitchbook.com/profiles/company/294623-56",
+       "excerpts": [
+        "name: HeartLegacy II LLC Headquarters: Daphne, AL Website: www.salesmail.com Founded: 2014"
+       ]
+      }
+     ],
+     "reasoning": "The company profile lists Daphne, Alabama, and the financing profile explicitly identifies Daphne as headquarters. Sources: https://linkedin.com/company/heartlegacy-llc and https://content.pitchbook.com/profiles/company/294623-56.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "SalesMail Launches Sidekick, a New AI Coaching and Tour",
+       "url": "https://www.globenewswire.com/news-release/2026/09/16/3363345/0/en/salesmail-launches-sidekick-a-new-ai-coaching-and-tour-intelligence-platform-for-senior-living.html",
+       "excerpts": [
+        "SalesMail Launches Sidekick, a New AI Coaching and Tour Intelligence Platform for Senior Living New AI Coaching and Tour Intelligence platform helps portfolio leaders benchmark performance, spot systemic issues, improve follow"
+       ]
+      }
+     ],
+     "reasoning": "SalesMail announced the launch of Sidekick, an AI coaching and tour-intelligence platform, on September 16, 2026, within the six-month window. Source: https://www.globenewswire.com/news-release/2026/09/16/3363345/0/en/salesmail-launches-sidekick-a-new-ai-coaching-and-tour-intelligence-platform-for-senior-living.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Careers at SalesMail | Build the Future of Human-First Communication",
+       "url": "https://www.salesmail.com/careers",
+       "excerpts": [
+        "[### Client Success Specialist (CSS) We\u2019re looking for a Client Success Specialist",
+        "[### Product Manager We\u2019re looking for a Product Manager",
+        "[### Demand Generation Specialist Create demand and drive pipeline."
+       ]
+      }
+     ],
+     "reasoning": "The careers page's three listed openings do not include an SDR, BDR, sales/business development representative or account executive. Demand Generation Specialist is not one of the qualifying titles. Source: https://www.salesmail.com/careers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "HeartLegacy II",
+       "url": "https://content.pitchbook.com/profiles/company/294623-56",
+       "excerpts": [
+        "Ownership status: Privately Held (backing) (as of 2020-05-01) Financing status: Private Debt Financed (as of 2020-05-01) Last financing date: 2020-05-01 Last financing size: USD 0.208 million Last financing deal types: Debt - PPP"
+       ]
+      }
+     ],
+     "reasoning": "The most recent financing identified is May 2020, well before the 18-month window. No later funding announcement was found. Source: https://content.pitchbook.com/profiles/company/294623-56.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "SalesMail Testimonials by Senior Living, Multifamily & Sales Pros",
+       "url": "https://www.salesmail.com/testimonials",
+       "excerpts": [
+        "Nina Butler Regional Sales Specialist / Asbury Communities Quote | SalesMail \"SalesMail has helped us with our sales conversion ratios. I love seeing in real time what our prospects are thinking and it helps get them to the next stage."
+       ]
+      }
+     ],
+     "reasoning": "Asbury Communities' Regional Sales Specialist describes using SalesMail to improve sales conversions. Source: https://www.salesmail.com/testimonials.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "SalesMail Testimonials by Senior Living, Multifamily & Sales Pros",
+       "url": "https://www.salesmail.com/testimonials",
+       "excerpts": [
+        "Jackie Johnson Regional Director Sales & Marketing / Sinceri Senior Living Quote | SalesMail \"Being able to connect with people visually with a short little video, really puts a really personal touch to the contact that you make with people, and it's really helped us increase occupancy. If you want to be the enemy of average, put SalesMail in your toolbox."
+       ]
+      }
+     ],
+     "reasoning": "Sinceri Senior Living's Regional Director of Sales & Marketing describes using SalesMail and its occupancy benefits. Source: https://www.salesmail.com/testimonials.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Learn and leverage Zoho CRM to support outbound tracking, attribution, and integration with broader revenue systems."
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly instructs the hire to use Zoho CRM for outbound tracking and attribution. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Use Clay as the central hub to source accounts, enrich data, score prospects, and orchestrate outbound campaigns."
+       ]
+      }
+     ],
+     "reasoning": "Clay is identified as the central hub for sourcing, enrichment, scoring and outbound orchestration. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Define, test, and refine ICPs; source high-fit accounts and uncover key decision-makers using tools like Sales Navigator, Ocean, and enrichment platforms."
+       ]
+      }
+     ],
+     "reasoning": "Sales Navigator is explicitly named for finding accounts and decision-makers. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Define, test, and refine ICPs; source high-fit accounts and uncover key decision-makers using tools like Sales Navigator, Ocean, and enrichment platforms."
+       ]
+      }
+     ],
+     "reasoning": "Ocean is explicitly named among the prospecting tools in the role's responsibilities. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Launch and manage email sequences (Smartlead) and LinkedIn connection campaigns (HeyReach), including personalization, testing, and iteration."
+       ]
+      }
+     ],
+     "reasoning": "Smartlead is explicitly named for managing email sequences. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.5",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Launch and manage email sequences (Smartlead) and LinkedIn connection campaigns (HeyReach), including personalization, testing, and iteration."
+       ]
+      }
+     ],
+     "reasoning": "HeyReach is explicitly named for LinkedIn connection campaigns. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.6",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Set up and maintain cold email infrastructure (Zapmail), including inbox rotation, domain health, warmup, and inbox placement."
+       ]
+      }
+     ],
+     "reasoning": "Zapmail is explicitly named for cold-email infrastructure. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.7",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Hands-on experience with modern outbound tools: familiar with platforms like Smartlead, HeyReach, Sales Navigator, Ocean, RB2B, Vector, or similar."
+       ]
+      }
+     ],
+     "reasoning": "RB2B appears in the requested outbound-platform experience, providing a hiring-stack signal rather than confirmed deployment. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.8",
+     "citations": [
+      {
+       "title": "Demand Generation Specialist - SalesMail",
+       "url": "https://www.salesmail.com/job-openings/demand-generation-specialist",
+       "excerpts": [
+        "Hands-on experience with modern outbound tools: familiar with platforms like Smartlead, HeyReach, Sales Navigator, Ocean, RB2B, Vector, or similar."
+       ]
+      }
+     ],
+     "reasoning": "Vector appears in the requested outbound-platform experience, providing a hiring-stack signal rather than confirmed deployment. Source: https://www.salesmail.com/job-openings/demand-generation-specialist.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2014.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "HeartLegacy, now SalesMail, provides personalized video outreach and AI-powered tour intelligence to help senior-living and home-care teams build trust and convert prospects.",
+    "employee_band": "11-20",
+    "model_provider": "Anthropic Claude API; Amazon Web Services Amazon Transcribe",
+    "pricing_page": false,
+    "funding_amount_usd": 208000.0,
+    "named_customers": [
+     "Asbury Communities",
+     "Sinceri Senior Living"
+    ],
+    "funding_date": "2020-05",
+    "crm_stack_signal": [
+     "Zoho CRM",
+     "Clay",
+     "Sales Navigator",
+     "Ocean",
+     "Smartlead",
+     "HeyReach",
+     "Zapmail",
+     "RB2B",
+     "Vector"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Debt - PPP",
+    "public_docs": true,
+    "hq_city": "Daphne",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

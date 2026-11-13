@@ -1,0 +1,176 @@
+{
+ "schema_version": "v0",
+ "company": "Incorta",
+ "domain": "incorta.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Incorta provides enterprise data and AI teams with a governed platform that connects live operational data to analytics, AI agents, applications, and workflows.",
+   "citations": [
+    "https://www.incorta.com/",
+    "https://www.incorta.com/legal-pages/global-privacy-policy",
+    "https://www.incorta.com/demo"
+   ],
+   "notes": "Incorta describes its platform as connecting live operational data to analytics, agents, applications, and workflows; its privacy policy identifies enterprise users, and its demo page addresses data and AI teams. Sources: https://www.incorta.com/, https://www.incorta.com/legal-pages/global-privacy-policy and https://www.incorta.com/demo"
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://marketplace.microsoft.com/en-us/marketplace/apps/incorta.incorta_direct_data_platform?tab=PlansAndPrice",
+    "https://aws.amazon.com/marketplace/pp/prodview-4vnhp7q2eyppg"
+   ],
+   "notes": "Public Incorta marketplace listings publish named plans and prices. This positive answer refers to those product pricing pages, not a standalone pricing page on incorta.com. Sources: https://marketplace.microsoft.com/en-us/marketplace/apps/incorta.incorta_direct_data_platform?tab=PlansAndPrice and https://aws.amazon.com/marketplace/pp/prodview-4vnhp7q2eyppg"
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Starbucks",
+    "Comcast"
+   ],
+   "citations": [
+    "https://www.incorta.com/demo"
+   ],
+   "notes": "named_customers: Incorta's customer logo section explicitly names Starbucks and Comcast among the data and AI teams that trust it. Source: https://www.incorta.com/demo | named_customers.0: Starbucks appears in Incorta's customer logo section. | named_customers.1: Comcast appears in Incorta's customer logo section."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/incorta"
+   ],
+   "notes": "The company profile reports 334 employees, which falls within 201-500. Profile counts may differ from payroll headcount. Source: https://linkedin.com/company/incorta"
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Foster City",
+    "country": "United States"
+   },
+   "citations": [
+    "https://www.incorta.com/contact",
+    "https://linkedin.com/company/incorta"
+   ],
+   "notes": "hq_city: The contact page labels its Foster City address as Main Headquarters. This is preferred over older references to San Mateo. Source: https://www.incorta.com/contact | hq_country: The company profile explicitly identifies the country as United States. Source: https://linkedin.com/company/incorta"
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2013.0,
+   "citations": [
+    "https://linkedin.com/company/incorta",
+    "https://www.incorta.com/about-us"
+   ],
+   "notes": "The company profile explicitly lists 2013, consistent with the origins described on its About page. An older funding announcement instead references 2014, so confidence is reduced. Sources: https://linkedin.com/company/incorta and https://www.incorta.com/about-us"
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127",
+    "https://medium.com/engineering-incorta/comparing-opencopilot-to-langchains-plan-and-execute-agent-479cf8de88db"
+   ],
+   "notes": "Two Engineering@Incorta posts explain implementation: an in-memory join algorithm and OpenCopilot's agent architecture. The first author is identified as a senior software architect; the publication describes itself as a technical blog from Incorta engineers. Sources: https://medium.com/engineering-incorta/incorta-bringing-agility-to-the-star-schema-world-b0447f13a127 and https://medium.com/engineering-incorta/comparing-opencopilot-to-langchains-plan-and-execute-agent-479cf8de88db"
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.incorta.com/"
+   ],
+   "notes": "The public documentation portal provides current and previous release documentation plus separate release-support-policy and release-model resources. Source: https://docs.incorta.com/"
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://jobs.lever.co/incorta"
+   ],
+   "notes": "The careers index lists Solution Engineer, Principle Software Engineer, Senior Software Engineer, and Account Executive. None has a qualifying AI/ML/data-science term in its title; LLM responsibilities within a software-engineer description do not qualify under the requested rule. Source: https://jobs.lever.co/incorta"
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Claude, Gemini, and OpenAI",
+   "citations": [
+    "https://www.incorta.com/",
+    "https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6"
+   ],
+   "notes": "The homepage names Claude, Gemini, and OpenAI. A product engineering job posting additionally describes the Incorta AI Gateway routing calls to models such as Claude. Sources: https://www.incorta.com/ and https://jobs.lever.co/incorta/dc034adb-5dab-48cc-9c75-3433ddf5b2d6"
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "GDPR"
+   ],
+   "citations": [
+    "http://incorta.com/platform/security"
+   ],
+   "notes": "compliance_certs: The security page offers Incorta's SOC 2 Type II report and names GDPR compliance. GDPR is a compliance claim rather than a formal certification. Source: http://incorta.com/platform/security | compliance_certs.0: The security page explicitly offers Incorta's SOC 2 Type II report. | compliance_certs.1: The security page names GDPR compliance; this is not a formal certification."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series D",
+    "date": null,
+    "amount_usd": 120000000.0
+   },
+   "citations": [
+    "https://pitchbook.com:8443/profiles/company/62315-56",
+    "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics",
+    "https://www.cbinsights.com/company/incorta/financials"
+   ],
+   "notes": "funding_stage: The latest completed equity-round record and the company announcement both identify Series D, although their dates conflict. Sources: https://pitchbook.com/profiles/company/62315-56 and https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics | funding_date: The latest-round date could not be resolved reliably: PitchBook reports April 24, 2025, whereas Incorta's announcement and CB Insights identify June 23, 2021. The field is therefore unknown rather than selecting one conflicting date. Sources: https://pitchbook.com/profiles/company/62315-56, https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics and https://www.cbinsights.com/company/incorta/financials | funding_amount_usd: The latest completed Series D record lists $120 million, and Incorta's Series D announcement confirms that amount. The sources disagree on the round date, so confidence in the latest-round identification is reduced. Sources: https://pitchbook.com/profiles/company/62315-56 and https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics"
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://pitchbook.com:8443/profiles/company/62315-56",
+    "https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics"
+   ],
+   "notes": "Both reported latest-round dates\u2014April 2025 in PitchBook and June 2021 in the company announcement\u2014precede the May 2025 start of the requested 18-month window. No later round was established. Sources: https://pitchbook.com/profiles/company/62315-56 and https://www.incorta.com/press-releases/incorta-raises-120m-in-series-d-funding-amid-soaring-global-demand-for-unified-data-analytics"
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73",
+    "https://jobs.lever.co/incorta"
+   ],
+   "notes": "An Account Executive opening has an application link and is also listed on the careers index. Sources: https://jobs.lever.co/incorta/8a6bbe3c-187c-40bc-976c-a53caec34a73 and https://jobs.lever.co/incorta"
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.incorta.com/press-releases/incorta-adds-governed-data-transformation-for-agentic-workflows-with-incorta-intelligence"
+   ],
+   "notes": "The September 30, 2026 announcement introduces Analyst Studio's governed data-transformation capabilities within Incorta Intelligence, a major feature launch inside the six-month window. Source: https://www.incorta.com/press-releases/incorta-adds-governed-data-transformation-for-agentic-workflows-with-incorta-intelligence"
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/omar-hajsaleh"
+   ],
+   "notes": "Omar Hajsaleh's profile lists his Incorta Vice President of Sales EMEA employment beginning in December 2025, within the requested 12-month window. Source: https://linkedin.com/in/omar-hajsaleh"
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "Outreach"
+   ],
+   "citations": [
+    "https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31?lever-source%5B%5D=careers.sorensoncap.com"
+   ],
+   "notes": "crm_stack_signal: An Incorta SDR posting explicitly instructs employees to manage prospect interactions in Salesforce and Outreach, providing an operational-use signal rather than merely naming integrations. Source: https://jobs.lever.co/incorta/296a367c-e2b9-4d27-976b-805b5e8ecd31?lever-source%5B%5D=careers.sorensoncap.com | crm_stack_signal.0: The SDR posting explicitly requires managing prospect interactions in Salesforce. | crm_stack_signal.1: The same SDR posting explicitly requires managing prospect interactions in Outreach."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 440.9
+}

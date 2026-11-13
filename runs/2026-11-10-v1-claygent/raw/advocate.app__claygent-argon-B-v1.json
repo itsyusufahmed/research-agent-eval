@@ -1,0 +1,360 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob0jmspKkZuuYCNfp",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "advocate.app",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The blog index reports one post, a company/funding announcement, rather than an engineering blog with multiple technical build posts.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/blog"
+       ]
+      },
+      "reasoning": "The cited company profile and site establish Advocate Technologies’ identity, product, founding year, employee count, and headquarters. The security and trust materials identify its named certifications and model providers; its blog index has only one company-news post. The pricing and API documentation pages are publicly available, while the current careers board lists five roles and none has an AI/ML or SDR/AE title. Its product-release page dates AIR’s beta introduction to October 23, 2026, and its funding announcement dates the $18 million seed round to August 4, 2026. The CTO’s LinkedIn experience records an Advocate end date in September 2026 and a subsequent role beginning in October.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.linkedin.com/company/advocate-technologies",
+       "Visited https://www.advocate.app/security",
+       "Visited https://www.advocate.app/blog",
+       "Visited https://www.advocate.app/platform/coverage-benchmarks",
+       "Visited https://advocate.app/pricing",
+       "Visited https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+       "Visited https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "Visited https://www.advocate.app/product-releases",
+       "Visited https://www.linkedin.com/in/harby/",
+       "Visited https://docs.advocate.app/",
+       "Visited https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4",
+       "Visited https://www.advocate.app/about"
+      ],
+      "hq_location": {
+       "notes": "The company says it is headquartered in New York City; its profile identifies the United States.",
+       "value": {
+        "city": "New York City",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/about",
+        "https://www.linkedin.com/company/advocate-technologies"
+       ]
+      },
+      "public_docs": {
+       "notes": "The API reference has multiple articles and guides, including authentication, query parameters, rate limits, custom metadata, and case-creation flows.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.advocate.app/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The $18 million seed round was announced August 4, 2026, within the 18 months before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks"
+       ]
+      },
+      "founded_year": {
+       "notes": "The company profile reports it was founded in 2020.",
+       "value": 2020,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/advocate-technologies"
+       ]
+      },
+      "last_funding": {
+       "notes": "The company announcement says the $18 million seed funding was alongside its public launch on August 4, 2026.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Seed",
+        "amount_usd": 18000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The product-release page announces AIR (Beta Release), a new conversational agent for building insurance requirements, on October 23, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/product-releases"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The public page lists Free, Starter, Professional, Premium, and Enterprise plans.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://advocate.app/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The company profile lists 74 employees, which falls in the 51-100 band.",
+       "value": "51-100",
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/advocate-technologies"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The current five job titles include no SDR, BDR, sales/business-development representative, or account executive.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs"
+       ]
+      },
+      "model_provider": {
+       "notes": "The security page says inference runs with frontier model providers such as Anthropic and OpenAI.",
+       "value": "Anthropic and OpenAI (named as inference providers; specific model names are not disclosed).",
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/security"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both are named under “Trusted by leading financial institutions.”",
+       "value": [
+        "KeyBank",
+        "Greystone"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/platform/coverage-benchmarks"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The five open titles are Platform Engineer, Product Engineer (two postings), Client Solutions Manager, and Insurance Consultant; none is an AI/ML or data-science role title.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The security page identifies the ISO certificate and says the SOC 2 Type II report is available.",
+       "value": [
+        "ISO/IEC 27001:2022",
+        "SOC 2 Type II"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.advocate.app/security"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The readable job board and API documentation name no specific CRM or sales/marketing system; one job description refers only generically to “CRM platforms.”",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+        "https://docs.advocate.app/"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Advocate uses AI to turn complex commercial-insurance policies into standardized data and benchmark coverage and pricing for brokers, commercial lenders and loan servicers, carriers, and property owners.",
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/advocate-technologies"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "The CTO’s LinkedIn experience lists Advocate Technologies through September 2026 and a new role beginning October 2026; the profile headline still names Advocate, so the change is based on the dated experience history.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/in/harby/"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "advocate.app",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The blog index reports one post, a company/funding announcement, rather than an engineering blog with multiple technical build posts.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/blog"
+     ]
+    },
+    "reasoning": "The cited company profile and site establish Advocate Technologies’ identity, product, founding year, employee count, and headquarters. The security and trust materials identify its named certifications and model providers; its blog index has only one company-news post. The pricing and API documentation pages are publicly available, while the current careers board lists five roles and none has an AI/ML or SDR/AE title. Its product-release page dates AIR’s beta introduction to October 23, 2026, and its funding announcement dates the $18 million seed round to August 4, 2026. The CTO’s LinkedIn experience records an Advocate end date in September 2026 and a subsequent role beginning in October.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.linkedin.com/company/advocate-technologies",
+     "Visited https://www.advocate.app/security",
+     "Visited https://www.advocate.app/blog",
+     "Visited https://www.advocate.app/platform/coverage-benchmarks",
+     "Visited https://advocate.app/pricing",
+     "Visited https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+     "Visited https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+     "Visited https://www.advocate.app/product-releases",
+     "Visited https://www.linkedin.com/in/harby/",
+     "Visited https://docs.advocate.app/",
+     "Visited https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4",
+     "Visited https://www.advocate.app/about"
+    ],
+    "hq_location": {
+     "notes": "The company says it is headquartered in New York City; its profile identifies the United States.",
+     "value": {
+      "city": "New York City",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/about",
+      "https://www.linkedin.com/company/advocate-technologies"
+     ]
+    },
+    "public_docs": {
+     "notes": "The API reference has multiple articles and guides, including authentication, query parameters, rate limits, custom metadata, and case-creation flows.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.advocate.app/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The $18 million seed round was announced August 4, 2026, within the 18 months before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks"
+     ]
+    },
+    "founded_year": {
+     "notes": "The company profile reports it was founded in 2020.",
+     "value": 2020,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/advocate-technologies"
+     ]
+    },
+    "last_funding": {
+     "notes": "The company announcement says the $18 million seed funding was alongside its public launch on August 4, 2026.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Seed",
+      "amount_usd": 18000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The product-release page announces AIR (Beta Release), a new conversational agent for building insurance requirements, on October 23, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/product-releases"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The public page lists Free, Starter, Professional, Premium, and Enterprise plans.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://advocate.app/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The company profile lists 74 employees, which falls in the 51-100 band.",
+     "value": "51-100",
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/advocate-technologies"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The current five job titles include no SDR, BDR, sales/business-development representative, or account executive.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs"
+     ]
+    },
+    "model_provider": {
+     "notes": "The security page says inference runs with frontier model providers such as Anthropic and OpenAI.",
+     "value": "Anthropic and OpenAI (named as inference providers; specific model names are not disclosed).",
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/security"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both are named under “Trusted by leading financial institutions.”",
+     "value": [
+      "KeyBank",
+      "Greystone"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/platform/coverage-benchmarks"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The five open titles are Platform Engineer, Product Engineer (two postings), Client Solutions Manager, and Insurance Consultant; none is an AI/ML or data-science role title.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The security page identifies the ISO certificate and says the SOC 2 Type II report is available.",
+     "value": [
+      "ISO/IEC 27001:2022",
+      "SOC 2 Type II"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.advocate.app/security"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The readable job board and API documentation name no specific CRM or sales/marketing system; one job description refers only generically to “CRM platforms.”",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+      "https://docs.advocate.app/"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Advocate uses AI to turn complex commercial-insurance policies into standardized data and benchmark coverage and pricing for brokers, commercial lenders and loan servicers, carriers, and property owners.",
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/advocate-technologies"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "The CTO’s LinkedIn experience lists Advocate Technologies through September 2026 and a new role beginning October 2026; the profile headline still names Advocate, so the change is based on the dated experience history.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/in/harby/"
+     ]
+    }
+   }
+  }
+ }
+}

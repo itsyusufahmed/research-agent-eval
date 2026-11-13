@@ -1,0 +1,957 @@
+{
+ "id": "agent_run_eaa77dd05d7744cc91059be87dd1ccc5",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T18:53:51.847Z",
+ "completedAt": "2026-11-10T18:58:18.480Z",
+ "request": {
+  "query": "Research the company Smallest.ai (smallest.ai). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Smallest.ai provides real-time speech recognition, speech synthesis, and conversational voice agents for enterprises building and automating voice interactions.\",\"citations\":[\"https://smallest.ai\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://smallest.ai/pricing/models\",\"https://smallest.ai/pricing/agents\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Kogta Financial\",\"Pocket\"],\"citations\":[\"https://smallest.ai/customer-stories/kogta\",\"https://smallest.ai/pocket\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"101-200\",\"citations\":[\"https://www.linkedin.com/company/smallest\"],\"notes\":\"The company profile reports 104 employees; its broader company-size category is 51\u2013200.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"San Francisco\",\"country\":\"United States\"},\"citations\":[\"https://www.linkedin.com/company/smallest\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2023,\"citations\":[\"https://www.linkedin.com/company/smallest\",\"https://smallest.ai/author/sudarshan-kamath\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://smallest.ai/blog/rewriting-tts-inference-economics-lightning-v2-on-tenstorrent-achieves-4%C3%97-lower-cost-than-nvidia-l40s\",\"https://smallest.ai/blog/real-time-voice-ai-architecture-stt-llm-tts-telephony\",\"https://smallest.ai/author/ranjith-m-s\",\"https://smallest.ai/author/akshat-mandloi\"],\"notes\":\"Technical posts cover Lightning inference optimization on Tenstorrent, by Senior AI Inference Performance Engineer Ranjith M S, and real-time voice-stack architecture, by co-founder/CTO Akshat Mandloi.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.smallest.ai/voice-agents/resources/faq\",\"https://docs.smallest.ai/voice-agents/integrate/integrations.md\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://jobs.ashbyhq.com/smallest\"],\"notes\":\"The live board lists three roles: Manager - Finance and Accounts, Senior SDET, and Software Engineer - Systems and Reliablity; none has a qualifying AI/ML/data-science title.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"OpenAI GPT-4o and Smallest.ai Electron models; proprietary Pulse speech-to-text, Lightning text-to-speech, and Hydra speech-to-speech models.\",\"citations\":[\"https://docs.smallest.ai/voice-agents/resources/faq\",\"https://smallest.ai\"],\"notes\":\"The Atoms FAQ explicitly lists GPT-4o and Electron; the homepage describes the proprietary speech models.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type II\",\"ISO 27001:2022\",\"HIPAA\",\"GDPR\",\"PCI DSS\"],\"citations\":[\"https://security.smallest.ai/?tab=overview\",\"https://docs.smallest.ai/voice-agents/resources/faq\"],\"notes\":\"These are public compliance claims, not independent verification. The Trust Center labels its SOC 2 Type II report expired in August 2026, despite continuing to display the badge and the FAQ certification claim; HIPAA availability is qualified to enterprise accounts in the FAQ.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series A\",\"date\":\"2026-07\",\"amount_usd\":13000000},\"citations\":[\"https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html\",\"https://smallest.ai/blog/series-a-funding-13m-next-generation-voice-ai\"],\"notes\":\"The July 30, 2026 press release distinguishes the $13 million round from total funding exceeding $21 million.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html\"],\"notes\":\"The $13 million Series A announced July 30, 2026 falls within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://jobs.ashbyhq.com/smallest\"],\"notes\":\"None of the three currently listed positions is an SDR, BDR, sales/business development representative, or account executive role.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html\"],\"notes\":\"On July 30, 2026, the company introduced Voice 4.0 and Hydra, its asynchronous speech-to-speech architecture/model, within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.globenewswire.com/news-release/2026/10/27/3388667/0/en/smallest-ai-names-ex-cred-yes-bank-kotak-digital-banking-leader-siddharth-sharma-president-bfsi-india.html\",\"https://linkedin.com/in/sid6784\"],\"notes\":\"Siddharth Sharma joined as President \u2013 BFSI, India in October 2026; the appointment was announced October 26. This treats a business-unit President as VP-level or above; his profile categorizes the role as President/Vice President.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"Zendesk\",\"Zoho\"],\"citations\":[\"https://docs.smallest.ai/voice-agents/integrate/integrations.md\"],\"notes\":\"These are explicitly named product integrations, not evidence that Smallest.ai internally uses them as its own CRM stack.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Technical posts cover Lightning inference optimization on Tenstorrent, by Senior AI Inference Performance Engineer Ranjith M S, and real-time voice-stack architecture, by co-founder/CTO Akshat Mandloi.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://smallest.ai/blog/rewriting-tts-inference-economics-lightning-v2-on-tenstorrent-achieves-4%C3%97-lower-cost-than-nvidia-l40s",
+     "https://smallest.ai/blog/real-time-voice-ai-architecture-stt-llm-tts-telephony",
+     "https://smallest.ai/author/ranjith-m-s",
+     "https://smallest.ai/author/akshat-mandloi"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "San Francisco",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/smallest"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.smallest.ai/voice-agents/resources/faq",
+     "https://docs.smallest.ai/voice-agents/integrate/integrations.md"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The $13 million Series A announced July 30, 2026 falls within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html"
+    ]
+   },
+   "founded_year": {
+    "value": 2023,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/smallest",
+     "https://smallest.ai/author/sudarshan-kamath"
+    ]
+   },
+   "last_funding": {
+    "notes": "The July 30, 2026 press release distinguishes the $13 million round from total funding exceeding $21 million.",
+    "value": {
+     "date": "2026-07",
+     "stage": "Series A",
+     "amount_usd": 13000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html",
+     "https://smallest.ai/blog/series-a-funding-13m-next-generation-voice-ai"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "On July 30, 2026, the company introduced Voice 4.0 and Hydra, its asynchronous speech-to-speech architecture/model, within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://smallest.ai/pricing/models",
+     "https://smallest.ai/pricing/agents"
+    ]
+   },
+   "employee_band": {
+    "notes": "The company profile reports 104 employees; its broader company-size category is 51\u2013200.",
+    "value": "101-200",
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/smallest"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "None of the three currently listed positions is an SDR, BDR, sales/business development representative, or account executive role.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/smallest"
+    ]
+   },
+   "model_provider": {
+    "notes": "The Atoms FAQ explicitly lists GPT-4o and Electron; the homepage describes the proprietary speech models.",
+    "value": "OpenAI GPT-4o and Smallest.ai Electron models; proprietary Pulse speech-to-text, Lightning text-to-speech, and Hydra speech-to-speech models.",
+    "status": "asserted",
+    "citations": [
+     "https://docs.smallest.ai/voice-agents/resources/faq",
+     "https://smallest.ai"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Kogta Financial",
+     "Pocket"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://smallest.ai/customer-stories/kogta",
+     "https://smallest.ai/pocket"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The live board lists three roles: Manager - Finance and Accounts, Senior SDET, and Software Engineer - Systems and Reliablity; none has a qualifying AI/ML/data-science title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.ashbyhq.com/smallest"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "These are public compliance claims, not independent verification. The Trust Center labels its SOC 2 Type II report expired in August 2026, despite continuing to display the badge and the FAQ certification claim; HIPAA availability is qualified to enterprise accounts in the FAQ.",
+    "value": [
+     "SOC 2 Type II",
+     "ISO 27001:2022",
+     "HIPAA",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://security.smallest.ai/?tab=overview",
+     "https://docs.smallest.ai/voice-agents/resources/faq"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "These are explicitly named product integrations, not evidence that Smallest.ai internally uses them as its own CRM stack.",
+    "value": [
+     "Salesforce",
+     "Zendesk",
+     "Zoho"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://docs.smallest.ai/voice-agents/integrate/integrations.md"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Smallest.ai provides real-time speech recognition, speech synthesis, and conversational voice agents for enterprises building and automating voice interactions.",
+    "status": "asserted",
+    "citations": [
+     "https://smallest.ai"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Siddharth Sharma joined as President \u2013 BFSI, India in October 2026; the appointment was announced October 26. This treats a business-unit President as VP-level or above; his profile categorizes the role as President/Vice President.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.globenewswire.com/news-release/2026/10/27/3388667/0/en/smallest-ai-names-ex-cred-yes-bank-kotak-digital-banking-leader-siddharth-sharma-president-bfsi-india.html",
+     "https://linkedin.com/in/sid6784"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://smallest.ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://smallest.ai/pricing/models"
+     },
+     {
+      "url": "https://smallest.ai/pricing/agents"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://smallest.ai/customer-stories/kogta"
+     },
+     {
+      "url": "https://smallest.ai/pocket"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/smallest"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/smallest"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/smallest"
+     },
+     {
+      "url": "https://smallest.ai/author/sudarshan-kamath"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://smallest.ai/blog/rewriting-tts-inference-economics-lightning-v2-on-tenstorrent-achieves-4%C3%97-lower-cost-than-nvidia-l40s"
+     },
+     {
+      "url": "https://smallest.ai/blog/real-time-voice-ai-architecture-stt-llm-tts-telephony"
+     },
+     {
+      "url": "https://smallest.ai/author/ranjith-m-s"
+     },
+     {
+      "url": "https://smallest.ai/author/akshat-mandloi"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://docs.smallest.ai/voice-agents/resources/faq"
+     },
+     {
+      "url": "https://docs.smallest.ai/voice-agents/integrate/integrations.md"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/smallest"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://docs.smallest.ai/voice-agents/resources/faq"
+     },
+     {
+      "url": "https://smallest.ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://security.smallest.ai/?tab=overview"
+     },
+     {
+      "url": "https://docs.smallest.ai/voice-agents/resources/faq"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html"
+     },
+     {
+      "url": "https://smallest.ai/blog/series-a-funding-13m-next-generation-voice-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://jobs.ashbyhq.com/smallest"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.prnewswire.com/news-releases/smallestai-gets-21-million-in-funding-to-build-voice-4-0--the-next-generation-of-enterprise-voice-ai-302839266.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://www.globenewswire.com/news-release/2026/10/27/3388667/0/en/smallest-ai-names-ex-cred-yes-bank-kotak-digital-banking-leader-siddharth-sharma-president-bfsi-india.html"
+     },
+     {
+      "url": "https://linkedin.com/in/sid6784"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://docs.smallest.ai/voice-agents/integrate/integrations.md"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

@@ -1,0 +1,386 @@
+{
+ "run": {
+  "routine_run_id": "run_0toaz99WCGjgJibhbWn",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "usekojo.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The engineering publication shows one technical post, about rebranding and technical debt, and says its last publication was in October 2022; it does not meet the two-post threshold.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://medium.com/kojo-engineering"
+       ]
+      },
+      "reasoning": "The cited company materials identify Kojo’s construction-procurement product, customers, location, founding year, security claim, model technologies, public pricing, docs and hiring listings. The October 2025 Series C extension is within the specified 18-month funding window. The technical-blog evidence shows only one qualifying post; a feature announcement is available, but its publication date is not present in the available evidence, so the six-month launch window cannot be established.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Visited https://medium.com/kojo-engineering/rebranding-to-kojo-4ad8d8660e5d",
+       "Visited https://www.usekojo.com/security",
+       "Visited https://www.usekojo.com/customer-stories/cardinal-civil-contracting",
+       "Visited https://www.usekojo.com/customer-stories?49c5ac4f_page=1",
+       "Visited https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+       "Visited https://linkedin.com/company/kojotechnologies",
+       "Visited https://www.usekojo.com/blog/kojo-intelligence-layer",
+       "Visited https://www.usekojo.com/pricing",
+       "Visited https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986",
+       "Visited https://www.usekojo.com/blog/centralized-inventory-management-with-multi-warehouse-location",
+       "Visited https://linkedin.com/in/micah-rodman-589776160",
+       "Visited https://jobs.ashbyhq.com/Kojo",
+       "Visited https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7",
+       "Visited https://docs.kojo.tech/",
+       "Visited https://docs.kojo.tech/docs",
+       "Visited https://support.usekojo.com/hc/en-us/sections/34392819223187-2026-Release-Notes"
+      ],
+      "hq_location": {
+       "notes": "Kojo’s company profile lists its headquarters in San Francisco, California, United States.",
+       "value": {
+        "city": "San Francisco",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/kojotechnologies"
+       ]
+      },
+      "public_docs": {
+       "notes": "Kojo has a public API documentation site and a help center with multiple release-note articles.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.kojo.tech/",
+        "https://docs.kojo.tech/docs",
+        "https://support.usekojo.com/hc/en-us/sections/34392819223187-2026-Release-Notes"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The October 2025 Series C extension occurred within the 18-month period before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+        "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986"
+       ]
+      },
+      "founded_year": {
+       "notes": "Kojo Engineering states that Kojo was founded in 2018.",
+       "value": 2018,
+       "status": "asserted",
+       "citations": [
+        "https://medium.com/kojo-engineering/rebranding-to-kojo-4ad8d8660e5d"
+       ]
+      },
+      "last_funding": {
+       "notes": "Kojo announced a Series C extension in October 2025; the report identifies the amount as $10 million.",
+       "value": {
+        "date": "2025-10",
+        "stage": "Series C extension",
+        "amount_usd": 10000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+        "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The blog describes a new multi-warehouse feature, but the available evidence does not show the post date; therefore its launch cannot be placed inside or outside the six-month window.",
+       "value": false,
+       "status": "unknown",
+       "citations": [
+        "https://www.usekojo.com/blog/centralized-inventory-management-with-multi-warehouse-location",
+        "https://www.usekojo.com/blog"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Kojo has a public pricing page that offers custom quotes.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.usekojo.com/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The company profile lists 163 employees, which falls in this band.",
+       "value": "101-200",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/kojotechnologies"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The two open roles are Demand Gen Lead and Revenue Operations Support Analyst, not SDR, BDR, or account executive positions.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/Kojo",
+        "https://jobs.ashbyhq.com/Kojo/2a7151c0-1610-4126-81d0-6072894083fb",
+        "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7"
+       ]
+      },
+      "model_provider": {
+       "notes": "Kojo publicly names both in its description of the Kojo Intelligence Layer.",
+       "value": "OpenAI's GPT-4 and Hugging Face transformer models",
+       "status": "asserted",
+       "citations": [
+        "https://www.usekojo.com/blog/kojo-intelligence-layer"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both names appear in Kojo customer-story materials.",
+       "value": [
+        "Cardinal Civil Contracting",
+        "Lawson Mechanical Contractors"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.usekojo.com/customer-stories/cardinal-civil-contracting",
+        "https://www.usekojo.com/customer-stories?49c5ac4f_page=1"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The open listings are a Demand Gen Lead and a Revenue Operations Support Analyst; neither is an AI, ML, or data-science role.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/Kojo",
+        "https://jobs.ashbyhq.com/Kojo/2a7151c0-1610-4126-81d0-6072894083fb",
+        "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Kojo says it successfully completed a SOC 2 audit.",
+       "value": [
+        "SOC 2"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.usekojo.com/security"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "A Kojo job posting explicitly says the Sales and Customer Success teams run on Salesforce.",
+       "value": [
+        "Salesforce"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Kojo describes the platform and its contractor users directly.",
+       "value": "Kojo is a materials procurement and inventory-management platform that helps trade and self-performing general contractors manage purchasing and materials from takeoff through project closeout.",
+       "status": "asserted",
+       "citations": [
+        "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "A profile lists Micah Rodman as Kojo Co-Founder & CEO starting January 2026, within the 12 months before the cutoff.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/in/micah-rodman-589776160"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "usekojo.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The engineering publication shows one technical post, about rebranding and technical debt, and says its last publication was in October 2022; it does not meet the two-post threshold.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://medium.com/kojo-engineering"
+     ]
+    },
+    "reasoning": "The cited company materials identify Kojo’s construction-procurement product, customers, location, founding year, security claim, model technologies, public pricing, docs and hiring listings. The October 2025 Series C extension is within the specified 18-month funding window. The technical-blog evidence shows only one qualifying post; a feature announcement is available, but its publication date is not present in the available evidence, so the six-month launch window cannot be established.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Visited https://medium.com/kojo-engineering/rebranding-to-kojo-4ad8d8660e5d",
+     "Visited https://www.usekojo.com/security",
+     "Visited https://www.usekojo.com/customer-stories/cardinal-civil-contracting",
+     "Visited https://www.usekojo.com/customer-stories?49c5ac4f_page=1",
+     "Visited https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+     "Visited https://linkedin.com/company/kojotechnologies",
+     "Visited https://www.usekojo.com/blog/kojo-intelligence-layer",
+     "Visited https://www.usekojo.com/pricing",
+     "Visited https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986",
+     "Visited https://www.usekojo.com/blog/centralized-inventory-management-with-multi-warehouse-location",
+     "Visited https://linkedin.com/in/micah-rodman-589776160",
+     "Visited https://jobs.ashbyhq.com/Kojo",
+     "Visited https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7",
+     "Visited https://docs.kojo.tech/",
+     "Visited https://docs.kojo.tech/docs",
+     "Visited https://support.usekojo.com/hc/en-us/sections/34392819223187-2026-Release-Notes"
+    ],
+    "hq_location": {
+     "notes": "Kojo’s company profile lists its headquarters in San Francisco, California, United States.",
+     "value": {
+      "city": "San Francisco",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/kojotechnologies"
+     ]
+    },
+    "public_docs": {
+     "notes": "Kojo has a public API documentation site and a help center with multiple release-note articles.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.kojo.tech/",
+      "https://docs.kojo.tech/docs",
+      "https://support.usekojo.com/hc/en-us/sections/34392819223187-2026-Release-Notes"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The October 2025 Series C extension occurred within the 18-month period before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+      "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986"
+     ]
+    },
+    "founded_year": {
+     "notes": "Kojo Engineering states that Kojo was founded in 2018.",
+     "value": 2018,
+     "status": "asserted",
+     "citations": [
+      "https://medium.com/kojo-engineering/rebranding-to-kojo-4ad8d8660e5d"
+     ]
+    },
+    "last_funding": {
+     "notes": "Kojo announced a Series C extension in October 2025; the report identifies the amount as $10 million.",
+     "value": {
+      "date": "2025-10",
+      "stage": "Series C extension",
+      "amount_usd": 10000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management",
+      "https://www.constructiondive.com/news/construction-tech-funding-Q4-2025/808986"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The blog describes a new multi-warehouse feature, but the available evidence does not show the post date; therefore its launch cannot be placed inside or outside the six-month window.",
+     "value": false,
+     "status": "unknown",
+     "citations": [
+      "https://www.usekojo.com/blog/centralized-inventory-management-with-multi-warehouse-location",
+      "https://www.usekojo.com/blog"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Kojo has a public pricing page that offers custom quotes.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.usekojo.com/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The company profile lists 163 employees, which falls in this band.",
+     "value": "101-200",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/kojotechnologies"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The two open roles are Demand Gen Lead and Revenue Operations Support Analyst, not SDR, BDR, or account executive positions.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/Kojo",
+      "https://jobs.ashbyhq.com/Kojo/2a7151c0-1610-4126-81d0-6072894083fb",
+      "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7"
+     ]
+    },
+    "model_provider": {
+     "notes": "Kojo publicly names both in its description of the Kojo Intelligence Layer.",
+     "value": "OpenAI's GPT-4 and Hugging Face transformer models",
+     "status": "asserted",
+     "citations": [
+      "https://www.usekojo.com/blog/kojo-intelligence-layer"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both names appear in Kojo customer-story materials.",
+     "value": [
+      "Cardinal Civil Contracting",
+      "Lawson Mechanical Contractors"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.usekojo.com/customer-stories/cardinal-civil-contracting",
+      "https://www.usekojo.com/customer-stories?49c5ac4f_page=1"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The open listings are a Demand Gen Lead and a Revenue Operations Support Analyst; neither is an AI, ML, or data-science role.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/Kojo",
+      "https://jobs.ashbyhq.com/Kojo/2a7151c0-1610-4126-81d0-6072894083fb",
+      "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Kojo says it successfully completed a SOC 2 audit.",
+     "value": [
+      "SOC 2"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.usekojo.com/security"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "A Kojo job posting explicitly says the Sales and Customer Success teams run on Salesforce.",
+     "value": [
+      "Salesforce"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/Kojo/96c079f3-712b-4782-a20f-4118d53988c7"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Kojo describes the platform and its contractor users directly.",
+     "value": "Kojo is a materials procurement and inventory-management platform that helps trade and self-performing general contractors manage purchasing and materials from takeoff through project closeout.",
+     "status": "asserted",
+     "citations": [
+      "https://www.businesswire.com/news/home/20251016530530/en/Kojo-Poised-to-Revolutionize-Construction-Materials-Management"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "A profile lists Micah Rodman as Kojo Co-Founder & CEO starting January 2026, within the 12 months before the cutoff.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/in/micah-rodman-589776160"
+     ]
+    }
+   }
+  }
+ }
+}

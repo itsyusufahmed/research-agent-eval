@@ -1,0 +1,884 @@
+{
+ "id": "agent_run_2f64c33a17484c4086b51729a43c67ea",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:53:23.492Z",
+ "completedAt": "2026-11-10T18:57:38.578Z",
+ "request": {
+  "query": "Research the company Rivo (rivofi.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Rivo helps households automatically earn on idle cash by moving money from their existing bank accounts into short-term U.S. Treasury bills and returning it before bills are due.\",\"citations\":[\"https://www.rivofi.com/\",\"https://www.rivofi.com/faqs\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.rivofi.com/\",\"https://www.rivofi.com/faqs\"],\"notes\":\"No dedicated pricing page or pricing navigation link was found; fees are publicly disclosed in the FAQ.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Ritwik Tewari\",\"UltraGuy10\",\"MagicalReviewWriter\"],\"citations\":[\"https://www.linkedin.com/posts/ritwiktewari_congrats-to-ambrish-tyagi-and-the-entire-activity-7490796855098974208-adCb\",\"https://apps.apple.com/us/app/rivo-money-on-autopilot/id6761085441\"],\"notes\":\"Ritwik Tewari explicitly identifies himself as a customer; the other two names are App Store reviewer handles, not verified legal names.\"},\"employee_band\":{\"status\":\"unknown\",\"citations\":[\"https://linkedin.com/company/tryrivo\"],\"notes\":\"The published company size is 1\u201310 employees, with 8 employees reported; none of the permitted bands fits.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"San Francisco\",\"country\":\"United States\"},\"citations\":[\"https://linkedin.com/company/tryrivo\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2025,\"citations\":[\"https://linkedin.com/company/tryrivo\",\"https://www.southparkcommons.com/companies/rivo/\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.rivofi.com/blog\"],\"notes\":\"The blog index contains consumer-finance, product and marketing articles, not two qualifying engineer-authored posts about building the product.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.rivofi.com/\",\"https://www.rivofi.com/faqs\"],\"notes\":\"Only a standalone FAQ was found, not a public multi-article documentation site or developer portal; the docs and help subdomains yielded no readable pages.\"},\"ai_ml_roles_open\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No public careers page or job board was located. Historical founder recruiting posts and general engineer recruiting do not establish a live AI/ML requisition.\"},\"model_provider\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No model or provider disclosure was found in the product pages, FAQ, blog or privacy policy. The FAQ references a Trust Center subprocessor list, but that list could not be located publicly.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\"],\"citations\":[\"https://www.rivofi.com/faqs\"],\"notes\":\"The FAQ explicitly claims SOC 2 compliance; no audit type or report is specified.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"seed\",\"date\":\"2026-08\",\"amount_usd\":2700000},\"citations\":[\"https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax\"],\"notes\":\"The August 4, 2026 announcement states a $2.7 million seed round and $3.1 million total funding; the total is not the round amount.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax\"],\"notes\":\"The seed announcement is dated August 4, 2026, within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No public careers page or job board was located, and no live qualifying sales requisition was verified.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax\",\"https://www.rivofi.com/blog/funding-announcement\"],\"notes\":\"Rivo announced its public launch out of beta on August 4, 2026; its September 7 company blog also announces the public launch. Both fall within May 9\u2013November 9, 2026.\"},\"leadership_change_12mo\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No dated C-level or VP-level arrival or departure was verified for November 9, 2025\u2013November 9, 2026. Leadership biographies and the team announcement do not establish all relevant start dates.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[],\"citations\":[\"https://www.linkedin.com/posts/ambrishtyagi_hiring-content-tiktok-activity-7501126581797466113-iKgn\"],\"notes\":\"The readable content-creator recruiting post names social publishing channels but no CRM, sales-engagement or marketing-automation system.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog index contains consumer-finance, product and marketing articles, not two qualifying engineer-authored posts about building the product.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.rivofi.com/blog"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "San Francisco",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/tryrivo"
+    ]
+   },
+   "public_docs": {
+    "notes": "Only a standalone FAQ was found, not a public multi-article documentation site or developer portal; the docs and help subdomains yielded no readable pages.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.rivofi.com/",
+     "https://www.rivofi.com/faqs"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The seed announcement is dated August 4, 2026, within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax"
+    ]
+   },
+   "founded_year": {
+    "value": 2025,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/company/tryrivo",
+     "https://www.southparkcommons.com/companies/rivo/"
+    ]
+   },
+   "last_funding": {
+    "notes": "The August 4, 2026 announcement states a $2.7 million seed round and $3.1 million total funding; the total is not the round amount.",
+    "value": {
+     "date": "2026-08",
+     "stage": "seed",
+     "amount_usd": 2700000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Rivo announced its public launch out of beta on August 4, 2026; its September 7 company blog also announces the public launch. Both fall within May 9\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax",
+     "https://www.rivofi.com/blog/funding-announcement"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No dedicated pricing page or pricing navigation link was found; fees are publicly disclosed in the FAQ.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.rivofi.com/",
+     "https://www.rivofi.com/faqs"
+    ]
+   },
+   "employee_band": {
+    "notes": "The published company size is 1\u201310 employees, with 8 employees reported; none of the permitted bands fits.",
+    "status": "unknown",
+    "citations": [
+     "https://linkedin.com/company/tryrivo"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "No public careers page or job board was located, and no live qualifying sales requisition was verified.",
+    "status": "unknown",
+    "citations": []
+   },
+   "model_provider": {
+    "notes": "No model or provider disclosure was found in the product pages, FAQ, blog or privacy policy. The FAQ references a Trust Center subprocessor list, but that list could not be located publicly.",
+    "status": "unknown",
+    "citations": []
+   },
+   "named_customers": {
+    "notes": "Ritwik Tewari explicitly identifies himself as a customer; the other two names are App Store reviewer handles, not verified legal names.",
+    "value": [
+     "Ritwik Tewari",
+     "UltraGuy10",
+     "MagicalReviewWriter"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/ritwiktewari_congrats-to-ambrish-tyagi-and-the-entire-activity-7490796855098974208-adCb",
+     "https://apps.apple.com/us/app/rivo-money-on-autopilot/id6761085441"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "No public careers page or job board was located. Historical founder recruiting posts and general engineer recruiting do not establish a live AI/ML requisition.",
+    "status": "unknown",
+    "citations": []
+   },
+   "compliance_certs": {
+    "notes": "The FAQ explicitly claims SOC 2 compliance; no audit type or report is specified.",
+    "value": [
+     "SOC 2"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.rivofi.com/faqs"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The readable content-creator recruiting post names social publishing channels but no CRM, sales-engagement or marketing-automation system.",
+    "value": [],
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/posts/ambrishtyagi_hiring-content-tiktok-activity-7501126581797466113-iKgn"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Rivo helps households automatically earn on idle cash by moving money from their existing bank accounts into short-term U.S. Treasury bills and returning it before bills are due.",
+    "status": "asserted",
+    "citations": [
+     "https://www.rivofi.com/",
+     "https://www.rivofi.com/faqs"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "No dated C-level or VP-level arrival or departure was verified for November 9, 2025\u2013November 9, 2026. Leadership biographies and the team announcement do not establish all relevant start dates.",
+    "status": "unknown",
+    "citations": []
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://www.rivofi.com/"
+     },
+     {
+      "url": "https://www.rivofi.com/faqs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://www.rivofi.com/"
+     },
+     {
+      "url": "https://www.rivofi.com/faqs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/ritwiktewari_congrats-to-ambrish-tyagi-and-the-entire-activity-7490796855098974208-adCb"
+     },
+     {
+      "url": "https://apps.apple.com/us/app/rivo-money-on-autopilot/id6761085441"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/tryrivo"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/tryrivo"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://linkedin.com/company/tryrivo"
+     },
+     {
+      "url": "https://www.southparkcommons.com/companies/rivo/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://www.rivofi.com/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://www.rivofi.com/"
+     },
+     {
+      "url": "https://www.rivofi.com/faqs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://www.rivofi.com/faqs"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax"
+     },
+     {
+      "url": "https://www.rivofi.com/blog/funding-announcement"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/posts/ambrishtyagi_hiring-content-tiktok-activity-7501126581797466113-iKgn"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

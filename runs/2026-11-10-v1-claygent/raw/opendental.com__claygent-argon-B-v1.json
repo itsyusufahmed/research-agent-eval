@@ -1,0 +1,390 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob1zoxpTvTZm4weTm",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "opendental.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "opendental.blog is a product/marketing blog (feature highlights, software-update/release-notes posts, guest posts). The only engineering-authored item is a single lone 'Questions & Answers with a Software Engineer' post from April 2023, which is not enough for True.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://opendental.blog/"
+       ]
+      },
+      "reasoning": "Open Dental Software (opendental.com) is a Salem, Oregon dental practice management software company founded in 2003 by Dr. Jordan Sparks, with roughly 221-300+ employees (band 201-500) and no outside funding. The product is dental PMS software for practices of any size; pricing is public on the fees page; public documentation and an API developer portal exist. Its blog is product/marketing oriented with only one lone engineering post, so eng_blog is false. The careers page is open but lists no AI/ML or SDR/AE roles. HIPAA is the only compliance certification claimed; the company explicitly disclaims any GDPR certification and no SOC 2/ISO 27001/PCI DSS claim was found. No public statement names an AI model or model provider — its AI imaging features are third-party integrations (Pearl, BetterDiagnostics). Version 26.1 went stable on 08/06/2026 (with 26.2/26.3 since), a launch inside the six-month window. No C-level/VP change occurred in the twelve months before 2026-11-09 (CEO Nathan Sparks in seat since 2015). Named customers come from a customer-tracking database (Elevate Dental Partners, etc.) and a TrustRadius review (Aspen Hill Smiles Family Dentistry). CRM signals (GoHighLevel, HubSpot, Salesforce) come from Open Dental's own vendors/supplemental services page.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.opendental.com/",
+       "Visited https://www.opendental.com/site/fees.html",
+       "Visited https://www.appsruntheworld.com/customers-database/products/view/open-dental",
+       "Visited https://www.trustradius.com/products/open-dental-software",
+       "Visited https://linkedin.com/company/open-dental-software",
+       "Visited https://opendental.blog/open-dental-through-the-years",
+       "Visited https://www.opendental.com/site/contact.html",
+       "Visited https://www.opendental.com/site/employment.html",
+       "Visited https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "Visited https://opendental.blog/open-dental-software-blog",
+       "Visited https://opendental.blog/questions-answers-with-an-open-dental-expert-software-engineer",
+       "Visited https://www.opendental.com/site/documentation.html",
+       "Visited https://www.opendental.com/site/apideveloperportal.html",
+       "Visited https://www.opendental.com/site/hipaaopendental.html",
+       "Visited https://www.opendental.com/site/gdpr.html",
+       "Visited https://app.dealroom.co/companies/open_dental_software",
+       "Visited https://www.opendental.com/site/version26_1.html",
+       "Visited https://opendental.blog/software-update-stable-version-26-1-highlights",
+       "Visited https://theorg.com/org/open-dental-software",
+       "Visited https://contactout.com/Nathan-Sparks-80224418",
+       "Visited https://www.opendental.com/site/vendorssupplementalservices.html"
+      ],
+      "hq_location": {
+       "notes": "Contact page: Open Dental Software, 3275 Marietta St SE, Salem, OR 97317.",
+       "value": {
+        "city": "Salem, Oregon",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/contact.html"
+       ]
+      },
+      "public_docs": {
+       "notes": "Public documentation page with a Quick Manual plus an API developer portal and API specification.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/documentation.html",
+        "https://www.opendental.com/site/apideveloperportal.html"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "Funding databases (Tracxn, Dealroom) show no outside funding at all, so nothing was raised in the 18 months before 2026-11-09.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I"
+       ]
+      },
+      "founded_year": {
+       "notes": "Employment page: 'founded in 2003 and located in Salem, Oregon'; Tracxn concurs (founded 2003 by Jordan Sparks).",
+       "value": 2003,
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/employment.html",
+        "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I"
+       ]
+      },
+      "last_funding": {
+       "notes": "Tracxn: 'Open Dental has not raised any funding rounds yet'; Dealroom: 'No known external funding'. amount_usd 0 and empty date are placeholders because no round exists (stage 'none').",
+       "value": {
+        "date": "",
+        "stage": "none",
+        "amount_usd": 0
+       },
+       "status": "asserted",
+       "citations": [
+        "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+        "https://app.dealroom.co/companies/open_dental_software"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Version 26.1 was released as stable on 08/06/2026 (blogged 2026-08-13) with major features (ODTouch 25 app release, Ensora/DoseSpot eRx support, new Pharmacies feature); the homepage already advertises Versions 26.2 and 26.3 — all within the six months before 2026-11-09.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/version26_1.html",
+        "https://opendental.blog/software-update-stable-version-26-1-highlights"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public Fees for Support and Services page lists software license/support fees by plan size, including Enterprise with volume discounts.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/fees.html"
+       ]
+      },
+      "employee_band": {
+       "notes": "LinkedIn shows 221 employees; the company's own blog history post says over 300 employees.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/open-dental-software",
+        "https://opendental.blog/open-dental-through-the-years"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "Careers page is open and lists Dental Assistant/Software Support, Daycare Aide and Software Engineer II roles; no SDR, BDR, sales/business development representative or account executive openings.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/employment.html"
+       ]
+      },
+      "model_provider": {
+       "notes": "Checked product docs, the AI Image Analysis integrations page, the blog, and the HIPAA/privacy pages: Open Dental's AI imaging features are third-party integrations (Pearl, BetterDiagnostics) and no AI model or model provider (e.g., OpenAI, Anthropic) is publicly named anywhere.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "Apps Run The World's Open Dental customer list names Elevate Dental Partners (also Enamel Dentistry, Prestige Dental Centers, Christiansen Dental); a TrustRadius reviewer is at Aspen Hill Smiles Family Dentistry.",
+       "value": [
+        "Elevate Dental Partners",
+        "Aspen Hill Smiles Family Dentistry"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.appsruntheworld.com/customers-database/products/view/open-dental",
+        "https://www.trustradius.com/products/open-dental-software"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "Careers page is open and lists roles (Dental Assistant/Software Support, Daycare Aide, Software Engineer II UI/UX-Web Developer) but none has AI, ML, data science, NLP or computer vision in the title.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/employment.html"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "HIPAA page states 'Our HIPAA procedures and policies are up to date and available' and describes NIST SP800-30 risk assessments. No SOC 2, ISO 27001 or PCI DSS claim found; the GDPR page explicitly says the software needs no certification, so GDPR is not claimed.",
+       "value": [
+        "HIPAA"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/hipaaopendental.html"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "Open Dental's own Vendors – Supplemental Services page names SmartSync's CRM integrations with GoHighLevel, HubSpot and Salesforce; these are named on the cited page, though they are ecosystem integrations rather than confirmed internal tooling.",
+       "value": [
+        "GoHighLevel",
+        "HubSpot",
+        "Salesforce"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/site/vendorssupplementalservices.html"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Homepage tagline: 'Comprehensive, highly customizable dental practice management software at an affordable price for practices of any size.'",
+       "value": "Open Dental makes comprehensive, highly customizable dental practice management software sold at an affordable price to dental practices of any size.",
+       "status": "asserted",
+       "citations": [
+        "https://www.opendental.com/"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "Team page (The Org) shows a small leadership with Nathan Sparks as CEO; his profile shows CEO since January 2015 with no join/leave in the window. The only recent VP mention (VP of Development Mark Johnson) is from a Sep 2025 press release, before the 12-month window; no departure was announced.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://theorg.com/org/open-dental-software",
+        "https://contactout.com/Nathan-Sparks-80224418"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "opendental.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "opendental.blog is a product/marketing blog (feature highlights, software-update/release-notes posts, guest posts). The only engineering-authored item is a single lone 'Questions & Answers with a Software Engineer' post from April 2023, which is not enough for True.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://opendental.blog/"
+     ]
+    },
+    "reasoning": "Open Dental Software (opendental.com) is a Salem, Oregon dental practice management software company founded in 2003 by Dr. Jordan Sparks, with roughly 221-300+ employees (band 201-500) and no outside funding. The product is dental PMS software for practices of any size; pricing is public on the fees page; public documentation and an API developer portal exist. Its blog is product/marketing oriented with only one lone engineering post, so eng_blog is false. The careers page is open but lists no AI/ML or SDR/AE roles. HIPAA is the only compliance certification claimed; the company explicitly disclaims any GDPR certification and no SOC 2/ISO 27001/PCI DSS claim was found. No public statement names an AI model or model provider — its AI imaging features are third-party integrations (Pearl, BetterDiagnostics). Version 26.1 went stable on 08/06/2026 (with 26.2/26.3 since), a launch inside the six-month window. No C-level/VP change occurred in the twelve months before 2026-11-09 (CEO Nathan Sparks in seat since 2015). Named customers come from a customer-tracking database (Elevate Dental Partners, etc.) and a TrustRadius review (Aspen Hill Smiles Family Dentistry). CRM signals (GoHighLevel, HubSpot, Salesforce) come from Open Dental's own vendors/supplemental services page.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.opendental.com/",
+     "Visited https://www.opendental.com/site/fees.html",
+     "Visited https://www.appsruntheworld.com/customers-database/products/view/open-dental",
+     "Visited https://www.trustradius.com/products/open-dental-software",
+     "Visited https://linkedin.com/company/open-dental-software",
+     "Visited https://opendental.blog/open-dental-through-the-years",
+     "Visited https://www.opendental.com/site/contact.html",
+     "Visited https://www.opendental.com/site/employment.html",
+     "Visited https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+     "Visited https://opendental.blog/open-dental-software-blog",
+     "Visited https://opendental.blog/questions-answers-with-an-open-dental-expert-software-engineer",
+     "Visited https://www.opendental.com/site/documentation.html",
+     "Visited https://www.opendental.com/site/apideveloperportal.html",
+     "Visited https://www.opendental.com/site/hipaaopendental.html",
+     "Visited https://www.opendental.com/site/gdpr.html",
+     "Visited https://app.dealroom.co/companies/open_dental_software",
+     "Visited https://www.opendental.com/site/version26_1.html",
+     "Visited https://opendental.blog/software-update-stable-version-26-1-highlights",
+     "Visited https://theorg.com/org/open-dental-software",
+     "Visited https://contactout.com/Nathan-Sparks-80224418",
+     "Visited https://www.opendental.com/site/vendorssupplementalservices.html"
+    ],
+    "hq_location": {
+     "notes": "Contact page: Open Dental Software, 3275 Marietta St SE, Salem, OR 97317.",
+     "value": {
+      "city": "Salem, Oregon",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/contact.html"
+     ]
+    },
+    "public_docs": {
+     "notes": "Public documentation page with a Quick Manual plus an API developer portal and API specification.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/documentation.html",
+      "https://www.opendental.com/site/apideveloperportal.html"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "Funding databases (Tracxn, Dealroom) show no outside funding at all, so nothing was raised in the 18 months before 2026-11-09.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I"
+     ]
+    },
+    "founded_year": {
+     "notes": "Employment page: 'founded in 2003 and located in Salem, Oregon'; Tracxn concurs (founded 2003 by Jordan Sparks).",
+     "value": 2003,
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/employment.html",
+      "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I"
+     ]
+    },
+    "last_funding": {
+     "notes": "Tracxn: 'Open Dental has not raised any funding rounds yet'; Dealroom: 'No known external funding'. amount_usd 0 and empty date are placeholders because no round exists (stage 'none').",
+     "value": {
+      "date": "",
+      "stage": "none",
+      "amount_usd": 0
+     },
+     "status": "asserted",
+     "citations": [
+      "https://tracxn.com/d/companies/opendental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+      "https://app.dealroom.co/companies/open_dental_software"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Version 26.1 was released as stable on 08/06/2026 (blogged 2026-08-13) with major features (ODTouch 25 app release, Ensora/DoseSpot eRx support, new Pharmacies feature); the homepage already advertises Versions 26.2 and 26.3 — all within the six months before 2026-11-09.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/version26_1.html",
+      "https://opendental.blog/software-update-stable-version-26-1-highlights"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public Fees for Support and Services page lists software license/support fees by plan size, including Enterprise with volume discounts.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/fees.html"
+     ]
+    },
+    "employee_band": {
+     "notes": "LinkedIn shows 221 employees; the company's own blog history post says over 300 employees.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/open-dental-software",
+      "https://opendental.blog/open-dental-through-the-years"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "Careers page is open and lists Dental Assistant/Software Support, Daycare Aide and Software Engineer II roles; no SDR, BDR, sales/business development representative or account executive openings.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/employment.html"
+     ]
+    },
+    "model_provider": {
+     "notes": "Checked product docs, the AI Image Analysis integrations page, the blog, and the HIPAA/privacy pages: Open Dental's AI imaging features are third-party integrations (Pearl, BetterDiagnostics) and no AI model or model provider (e.g., OpenAI, Anthropic) is publicly named anywhere.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "Apps Run The World's Open Dental customer list names Elevate Dental Partners (also Enamel Dentistry, Prestige Dental Centers, Christiansen Dental); a TrustRadius reviewer is at Aspen Hill Smiles Family Dentistry.",
+     "value": [
+      "Elevate Dental Partners",
+      "Aspen Hill Smiles Family Dentistry"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.appsruntheworld.com/customers-database/products/view/open-dental",
+      "https://www.trustradius.com/products/open-dental-software"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "Careers page is open and lists roles (Dental Assistant/Software Support, Daycare Aide, Software Engineer II UI/UX-Web Developer) but none has AI, ML, data science, NLP or computer vision in the title.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/employment.html"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "HIPAA page states 'Our HIPAA procedures and policies are up to date and available' and describes NIST SP800-30 risk assessments. No SOC 2, ISO 27001 or PCI DSS claim found; the GDPR page explicitly says the software needs no certification, so GDPR is not claimed.",
+     "value": [
+      "HIPAA"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/hipaaopendental.html"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "Open Dental's own Vendors – Supplemental Services page names SmartSync's CRM integrations with GoHighLevel, HubSpot and Salesforce; these are named on the cited page, though they are ecosystem integrations rather than confirmed internal tooling.",
+     "value": [
+      "GoHighLevel",
+      "HubSpot",
+      "Salesforce"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/site/vendorssupplementalservices.html"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Homepage tagline: 'Comprehensive, highly customizable dental practice management software at an affordable price for practices of any size.'",
+     "value": "Open Dental makes comprehensive, highly customizable dental practice management software sold at an affordable price to dental practices of any size.",
+     "status": "asserted",
+     "citations": [
+      "https://www.opendental.com/"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "Team page (The Org) shows a small leadership with Nathan Sparks as CEO; his profile shows CEO since January 2015 with no join/leave in the window. The only recent VP mention (VP of Development Mark Johnson) is from a Sep 2025 press release, before the 12-month window; no departure was announced.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://theorg.com/org/open-dental-software",
+      "https://contactout.com/Nathan-Sparks-80224418"
+     ]
+    }
+   }
+  }
+ }
+}

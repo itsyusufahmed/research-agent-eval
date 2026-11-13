@@ -1,0 +1,1238 @@
+{
+ "id": "agent_run_2afbc0c7908d4e32ba023df6b15680a0",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:48:16.585Z",
+ "completedAt": "2026-11-10T18:52:53.865Z",
+ "request": {
+  "query": "Research the company SnapLogic (snaplogic.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"SnapLogic is an AI-powered, low-code integration platform that helps enterprise IT and business teams connect applications, data, APIs and AI agents and automate workflows.\",\"citations\":[\"https://www.snaplogic.com/company\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.snaplogic.com/pricing\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Adobe\",\"Schneider Electric\"],\"citations\":[\"https://www.snaplogic.com/customers\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"201-500\",\"citations\":[\"https://pitchbook.com/profiles/company/51376-87\"],\"notes\":\"PitchBook reports 336 employees.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"San Mateo\",\"country\":\"United States\"},\"citations\":[\"https://www.snaplogic.com/company\",\"https://pitchbook.com/profiles/company/51376-87\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2006,\"citations\":[\"https://pitchbook.com/profiles/company/51376-87\"]},\"eng_blog\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.snaplogic.com/blog/epods-production-clones-for-developers\",\"https://www.snaplogic.com/blog/llms-powering-automated-test-case-data-generation\"],\"notes\":\"Technical posts describe the engineering team\u2019s GitOps-based ephemeral development environments and its internal LLM-powered testing architecture; authors are Nilay Narlawar and Ashok Pallamala.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.snaplogic.com/\",\"https://docs.snaplogic.com/public-apis/public-apis-about.html\",\"https://docs.snaplogic.com/agentcreator/agentcreator-faq.html\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.lever.co/snaplogic/3d408fe5-5fbb-4402-9c36-54a2bf2b9b59\"],\"notes\":\"Applied AI Architect; fractional contract engagement, not a full-time position.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Anthropic Claude, OpenAI, Azure OpenAI, and Google Gemini; Amazon Bedrock is also a supported access platform.\",\"citations\":[\"https://www.snaplogic.com/privacy-subprocessors\",\"https://docs.snaplogic.com/agentcreator/agentcreator-faq.html\",\"https://docs.snaplogic.com/agentcreator/agentcreator-support-matrix.html\"]},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"HIPAA\",\"GDPR\",\"PCI DSS\"],\"citations\":[\"https://www.snaplogic.com/products/security-compliance\",\"https://www.snaplogic.com/resources/ebooks/modern-financial-institution-integration\"],\"notes\":\"Public claims, not independently verified certificates: the security page explicitly identifies SOC 2 Type 2 and HIPAA-HITECH certification and GDPR compliance. The financial-institution resource expressly claims ISO 27001 and PCI DSS as well; the general security page describes ISO 27001 in connection with AWS infrastructure.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Debt financing\",\"date\":\"2025-08\",\"amount_usd\":null},\"citations\":[\"https://pitchbook.com/profiles/company/51376-87\",\"https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-raises-165-million\",\"https://www.cbinsights.com/company/snaplogic/financials\"],\"notes\":\"Latest dated financing record found: completed general debt financing on 2025-08-13; amount undisclosed. PitchBook also lists an undated secondary transaction, which cannot be chronologically ranked and is not necessarily capital raised by the company. Latest publicly announced amount-bearing equity round was $165 million in December 2021, classified as Series H by PitchBook and CB Insights.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://pitchbook.com/profiles/company/51376-87\"],\"notes\":\"PitchBook records completed debt financing on 2025-08-13, within 2025-05-09\u20132026-11-09. This is a dated financing-database record, not a company announcement or regulatory filing; no corresponding primary announcement was located. No newer announced equity round was found.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d\"],\"notes\":\"Senior Enterprise Account Executive.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-expands-agentic-integration-platform-ai-agents\"],\"notes\":\"2026-10-20: major platform expansion including natural-language agent workflow creation, prebuilt agentic-tool patterns, expanded MCP capabilities and Amazon Bedrock RAG support.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.theofficialboard.com/news/snaplogic-2\"],\"notes\":\"A dated executive-movement notice posted 2026-09-22 reports that CFO Ahsan Malik left the company; this is the notice date rather than a separately established departure date.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"Marketo\"],\"citations\":[\"https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d\",\"https://builtin.com/job/director-marketing-operations/6846633\"],\"notes\":\"The account-executive posting requires Salesforce opportunity/activity management; the marketing-operations posting names Marketo and Salesforce as its marketing stack. These indicate internal usage rather than merely connector availability.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "Technical posts describe the engineering team\u2019s GitOps-based ephemeral development environments and its internal LLM-powered testing architecture; authors are Nilay Narlawar and Ashok Pallamala.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/blog/epods-production-clones-for-developers",
+     "https://www.snaplogic.com/blog/llms-powering-automated-test-case-data-generation"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "San Mateo",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/company",
+     "https://pitchbook.com/profiles/company/51376-87"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.snaplogic.com/",
+     "https://docs.snaplogic.com/public-apis/public-apis-about.html",
+     "https://docs.snaplogic.com/agentcreator/agentcreator-faq.html"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "PitchBook records completed debt financing on 2025-08-13, within 2025-05-09\u20132026-11-09. This is a dated financing-database record, not a company announcement or regulatory filing; no corresponding primary announcement was located. No newer announced equity round was found.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/51376-87"
+    ]
+   },
+   "founded_year": {
+    "value": 2006,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/51376-87"
+    ]
+   },
+   "last_funding": {
+    "notes": "Latest dated financing record found: completed general debt financing on 2025-08-13; amount undisclosed. PitchBook also lists an undated secondary transaction, which cannot be chronologically ranked and is not necessarily capital raised by the company. Latest publicly announced amount-bearing equity round was $165 million in December 2021, classified as Series H by PitchBook and CB Insights.",
+    "value": {
+     "date": "2025-08",
+     "stage": "Debt financing"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/51376-87",
+     "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-raises-165-million",
+     "https://www.cbinsights.com/company/snaplogic/financials"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "2026-10-20: major platform expansion including natural-language agent workflow creation, prebuilt agentic-tool patterns, expanded MCP capabilities and Amazon Bedrock RAG support.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-expands-agentic-integration-platform-ai-agents"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "PitchBook reports 336 employees.",
+    "value": "201-500",
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/51376-87"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "Senior Enterprise Account Executive.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+    ]
+   },
+   "model_provider": {
+    "value": "Anthropic Claude, OpenAI, Azure OpenAI, and Google Gemini; Amazon Bedrock is also a supported access platform.",
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/privacy-subprocessors",
+     "https://docs.snaplogic.com/agentcreator/agentcreator-faq.html",
+     "https://docs.snaplogic.com/agentcreator/agentcreator-support-matrix.html"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Adobe",
+     "Schneider Electric"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/customers"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "Applied AI Architect; fractional contract engagement, not a full-time position.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.lever.co/snaplogic/3d408fe5-5fbb-4402-9c36-54a2bf2b9b59"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Public claims, not independently verified certificates: the security page explicitly identifies SOC 2 Type 2 and HIPAA-HITECH certification and GDPR compliance. The financial-institution resource expressly claims ISO 27001 and PCI DSS as well; the general security page describes ISO 27001 in connection with AWS infrastructure.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/products/security-compliance",
+     "https://www.snaplogic.com/resources/ebooks/modern-financial-institution-integration"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The account-executive posting requires Salesforce opportunity/activity management; the marketing-operations posting names Marketo and Salesforce as its marketing stack. These indicate internal usage rather than merely connector availability.",
+    "value": [
+     "Salesforce",
+     "Marketo"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d",
+     "https://builtin.com/job/director-marketing-operations/6846633"
+    ]
+   },
+   "product_one_liner": {
+    "value": "SnapLogic is an AI-powered, low-code integration platform that helps enterprise IT and business teams connect applications, data, APIs and AI agents and automate workflows.",
+    "status": "asserted",
+    "citations": [
+     "https://www.snaplogic.com/company"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "A dated executive-movement notice posted 2026-09-22 reports that CFO Ahsan Malik left the company; this is the notice date rather than a separately established departure date.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.theofficialboard.com/news/snaplogic-2"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/customers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/customers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company"
+     },
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/blog/epods-production-clones-for-developers"
+     },
+     {
+      "url": "https://www.snaplogic.com/blog/llms-powering-automated-test-case-data-generation"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/blog/epods-production-clones-for-developers"
+     },
+     {
+      "url": "https://www.snaplogic.com/blog/llms-powering-automated-test-case-data-generation"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/blog/epods-production-clones-for-developers"
+     },
+     {
+      "url": "https://www.snaplogic.com/blog/llms-powering-automated-test-case-data-generation"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://docs.snaplogic.com/"
+     },
+     {
+      "url": "https://docs.snaplogic.com/public-apis/public-apis-about.html"
+     },
+     {
+      "url": "https://docs.snaplogic.com/agentcreator/agentcreator-faq.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://docs.snaplogic.com/"
+     },
+     {
+      "url": "https://docs.snaplogic.com/public-apis/public-apis-about.html"
+     },
+     {
+      "url": "https://docs.snaplogic.com/agentcreator/agentcreator-faq.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/3d408fe5-5fbb-4402-9c36-54a2bf2b9b59"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/3d408fe5-5fbb-4402-9c36-54a2bf2b9b59"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/3d408fe5-5fbb-4402-9c36-54a2bf2b9b59"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/privacy-subprocessors"
+     },
+     {
+      "url": "https://docs.snaplogic.com/agentcreator/agentcreator-faq.html"
+     },
+     {
+      "url": "https://docs.snaplogic.com/agentcreator/agentcreator-support-matrix.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/privacy-subprocessors"
+     },
+     {
+      "url": "https://docs.snaplogic.com/agentcreator/agentcreator-faq.html"
+     },
+     {
+      "url": "https://docs.snaplogic.com/agentcreator/agentcreator-support-matrix.html"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/products/security-compliance"
+     },
+     {
+      "url": "https://www.snaplogic.com/resources/ebooks/modern-financial-institution-integration"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/products/security-compliance"
+     },
+     {
+      "url": "https://www.snaplogic.com/resources/ebooks/modern-financial-institution-integration"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/products/security-compliance"
+     },
+     {
+      "url": "https://www.snaplogic.com/resources/ebooks/modern-financial-institution-integration"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     },
+     {
+      "url": "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-raises-165-million"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/snaplogic/financials"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     },
+     {
+      "url": "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-raises-165-million"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/snaplogic/financials"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     },
+     {
+      "url": "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-raises-165-million"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/snaplogic/financials"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/51376-87"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-expands-agentic-integration-platform-ai-agents"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-expands-agentic-integration-platform-ai-agents"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://www.snaplogic.com/company/newsroom/press-releases/snaplogic-expands-agentic-integration-platform-ai-agents"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://www.theofficialboard.com/news/snaplogic-2"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://www.theofficialboard.com/news/snaplogic-2"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://www.theofficialboard.com/news/snaplogic-2"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+     },
+     {
+      "url": "https://builtin.com/job/director-marketing-operations/6846633"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+     },
+     {
+      "url": "https://builtin.com/job/director-marketing-operations/6846633"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://jobs.lever.co/snaplogic/0ec269d5-347b-43ac-a6cd-9ca440e5815d"
+     },
+     {
+      "url": "https://builtin.com/job/director-marketing-operations/6846633"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

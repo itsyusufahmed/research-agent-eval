@@ -1,0 +1,578 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9f081e637fd6ebd9",
+  "interaction_id": "trun_142119f6a1b4439e9f081e637fd6ebd9",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "poly.ai"
+  },
+  "created_at": "2026-11-10T18:48:16.193986Z",
+  "modified_at": "2026-11-10T18:52:46.747209Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9f081e637fd6ebd9",
+   "interaction_id": "trun_142119f6a1b4439e9f081e637fd6ebd9",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "poly.ai"
+   },
+   "created_at": "2026-11-10T18:48:16.193986Z",
+   "modified_at": "2026-11-10T18:52:46.747209Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About PolyAI: Leadership, Mission, and Company Story",
+       "url": "https://poly.ai/about",
+       "excerpts": [
+        "2017 Founded in"
+       ]
+      }
+     ],
+     "reasoning": "PolyAI's About page explicitly gives 2017 as its founding year: https://poly.ai/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "PolyAI Security: Enterprise Compliance and Controls",
+       "url": "https://poly.ai/security",
+       "excerpts": [
+        "SOC2 Type 2 SOC2 Type 2",
+        "ISO 27001-certified",
+        "HIPAA HIPAA",
+        "GDPR GDPR",
+        "PCI DSS PCI DSS"
+       ]
+      }
+     ],
+     "reasoning": "The security page publicly names all five compliance claims, including SOC 2 Type 2 and ISO 27001 certification: https://poly.ai/security. These are reported as company claims, not independently verified certifications.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "PolyAI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/227011-60",
+       "excerpts": [
+        "London, United Kingdom"
+       ]
+      },
+      {
+       "title": "PolyAI Moves HQ to Paddington Central Offices",
+       "url": "https://paddingtoncentral.com/latest/news/polyai-3-sheldon-square",
+       "excerpts": [
+        "PolyAI moves HQ to Paddington Central"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook identifies London, United Kingdom, consistent with the explicit London headquarters-move announcement: https://pitchbook.com/profiles/company/227011-60 and https://paddingtoncentral.com/latest/news/polyai-3-sheldon-square. A conflicting San Francisco profile location lowers confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Speech Recognition Built for Customer Service Calls | PolyAI",
+       "url": "https://poly.ai/blog/owl-speech-recognition-model-polyai",
+       "excerpts": [
+        "Introducing Owl: A new speech recognition model from PolyAI Introducing Owl: A new speech recognition model from PolyAI How fine-tuning ASR models on in-house call data led PolyAI to create Owl, a speech recognition model optimized for customer service. Tomasz Cichy Machine Learning Engineer / Senior Machine Learning Engineer 3 Jun 2025 5 min"
+       ]
+      },
+      {
+       "title": "Dialog-RSN-1: PolyAI's Audio-Native Dialog Model",
+       "url": "https://poly.ai/blog/polyai-dialog-rsn-1",
+       "excerpts": [
+        "Written by Matt Henderson VP Research",
+        "We built Dialog-RSN-1 through further post-training of open weights multimodal models: supervised finetuning (SFT) and reinforcement finetuning (RFT)"
+       ]
+      }
+     ],
+     "reasoning": "Two technical posts explain how PolyAI builds its models: Owl fine-tuning by machine-learning engineer Tomasz Cichy (https://poly.ai/blog/owl-speech-recognition-model-polyai) and Dialog-RSN-1 architecture and training by VP Research Matt Henderson (https://poly.ai/blog/polyai-dialog-rsn-1). The latter author's title is research leadership rather than explicitly engineer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About PolyAI: Leadership, Mission, and Company Story",
+       "url": "https://poly.ai/about",
+       "excerpts": [
+        "PolyAI helps enterprises become the best version of themselves in every customer interaction. We work with them to build, run, govern, and improve dialog agents that handle their most complex customer conversations."
+       ]
+      },
+      {
+       "title": "PolyAI documentation",
+       "url": "http://docs.poly.ai/home",
+       "excerpts": [
+        "> PolyAI is a self-serve platform for building voice and chat agents \u2014 sign up free at studio.poly.ai and start building today. PolyAI Platform \u00b7 Documentation From first draft to production. PolyAI is the Agentic Dialog Platform for voice and chat agents that complete real customer tasks \u2014 bookings, payments, claims, escalations \u2014 across 24+ languages, at sub-300ms latency. Built for resolution, not deflection. [ Start the quickstart](https://docs.poly.ai/get-started/quickstart.md) [Platform overview \u2192](https://docs.poly.ai/platform/introduction.md) How a PolyAI agent works Every agent handles a conversation the same way: it listens, decides what to do from your configuration and knowledge, then responds \u2014 in under 300ms, in 24+ languages."
+       ]
+      }
+     ],
+     "reasoning": "The About page identifies enterprises and complex customer conversations, while the documentation describes building voice and chat agents: https://poly.ai/about and http://docs.poly.ai/home.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "About PolyAI: Leadership, Mission, and Company Story",
+       "url": "https://poly.ai/about",
+       "excerpts": [
+        "250 Employees"
+       ]
+      }
+     ],
+     "reasoning": "PolyAI reports 250 employees, which falls in the requested 201-500 band: https://poly.ai/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Job Application for Account Executive, Mid Market at PolyAI",
+       "url": "https://job-boards.eu.greenhouse.io/polyai/jobs/4932846101",
+       "excerpts": [
+        "Powered by Raven, a proprietary dialog model trained on more than a billion enterprise conversations, PolyAI agents are built for complexity, open at every layer, and sovereign by design."
+       ]
+      }
+     ],
+     "reasoning": "PolyAI explicitly says its agents are powered by Raven, its proprietary dialog model: https://job-boards.eu.greenhouse.io/polyai/jobs/4932846101. Although that vacancy has since closed, the published model disclosure remains evidence of the company's stated model.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing - PolyAI",
+       "url": "https://poly.ai/pricing",
+       "excerpts": [
+        "Ongoing use of the voice agent is priced on a per-minute basis, which includes proactive performance improvements, maintenance and 24/7 support."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page explains per-minute pricing and included services: https://poly.ai/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "PolyAI Raises $86M Series D to Scale Enterprise Dialog AI",
+       "url": "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers",
+       "excerpts": [
+        "PolyAI raises $86 million in Series D funding to transform how enterprises talk to their customers and power human-like conversations at scale."
+       ]
+      }
+     ],
+     "reasoning": "The most recent identified funding announcement states an $86 million Series D: https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customers - PolyAI",
+       "url": "http://poly.ai/customers",
+       "excerpts": [
+        "[How Carter's reduced seasonal hiring by 60% with PolyAI](http://poly.ai/customers/carter's)",
+        "[How SafeRide Health scaled to a million calls a month with PolyAI](http://poly.ai/customers/saferide)"
+       ]
+      }
+     ],
+     "reasoning": "The customers page links customer case studies for Carter's and SafeRide Health: http://poly.ai/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "PolyAI Raises $86M Series D to Scale Enterprise Dialog AI",
+       "url": "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers",
+       "excerpts": [
+        "15 Dec 2025",
+        "PolyAI raises $86 million in Series D funding to transform how enterprises talk to their customers and power human-like conversations at scale."
+       ]
+      }
+     ],
+     "reasoning": "The identified Series D announcement is dated December 15, 2025, giving 2025-12: https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Senior Manager, GTM Systems at PolyAI",
+       "url": "http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101",
+       "excerpts": [
+        "Salesforce is the center of our GTM systems. Around it sits a suite of tools (Outreach, Gong, HubSpot, Clay, and others) that need to work together cleanly and earn their place."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Systems job description explicitly identifies Salesforce as the center of its systems and names Outreach, Gong, HubSpot and Clay as surrounding tools: http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "PolyAI appoints Sunil Shah as CFO | PolyAI",
+       "url": "https://poly.ai/blog/polyai-appoints-sunil-shah-cfo",
+       "excerpts": [
+        "PolyAI appoints Sunil Shah as Chief Financial Officer",
+        "8 Oct 2026"
+       ]
+      }
+     ],
+     "reasoning": "PolyAI announced Sunil Shah's appointment as CFO on October 8, 2026, within the preceding 12 months: https://poly.ai/blog/polyai-appoints-sunil-shah-cfo.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at PolyAI",
+       "url": "https://job-boards.eu.greenhouse.io/polyai?error=true",
+       "excerpts": [
+        "3 jobs Engineering",
+        "Forward Deployed Engineer, Agentic AINew"
+       ]
+      }
+     ],
+     "reasoning": "The live current-openings page lists 'Forward Deployed Engineer, Agentic AI.' Its title contains AI and is an engineering\u2014not AI-sales\u2014role, meeting the specified title rule: https://job-boards.eu.greenhouse.io/polyai. Evidence is the live vacancy listing rather than a separately inspected detail page.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "PolyAI Raises $86M Series D to Scale Enterprise Dialog AI",
+       "url": "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers",
+       "excerpts": [
+        "PolyAI raises $86 million in Series D funding to transform how enterprises talk to their customers and power human-like conversations at scale."
+       ]
+      }
+     ],
+     "reasoning": "The most recent identified round is explicitly labeled Series D: https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "PolyAI documentation",
+       "url": "http://docs.poly.ai/home",
+       "excerpts": [
+        "> PolyAI is a self-serve platform for building voice and chat agents \u2014 sign up free at studio.poly.ai and start building today. PolyAI Platform \u00b7 Documentation From first draft to production. PolyAI is the Agentic Dialog Platform for voice and chat agents that complete real customer tasks \u2014 bookings, payments, claims, escalations \u2014 across 24+ languages, at sub-300ms latency. Built for resolution, not deflection. [ Start the quickstart](https://docs.poly.ai/get-started/quickstart.md) [Platform overview \u2192](https://docs.poly.ai/platform/introduction.md) How a PolyAI agent works Every agent handles a conversation the same way: it listens, decides what to do from your configuration and knowledge, then responds \u2014 in under 300ms, in 24+ languages."
+       ]
+      }
+     ],
+     "reasoning": "The public documentation portal contains product documentation and links to a quickstart and platform overview, rather than a single FAQ: http://docs.poly.ai/home.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "PolyAI Moves HQ to Paddington Central Offices",
+       "url": "https://paddingtoncentral.com/latest/news/polyai-3-sheldon-square",
+       "excerpts": [
+        "PolyAI moves HQ to Paddington Central"
+       ]
+      },
+      {
+       "title": "PolyAI 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/227011-60",
+       "excerpts": [
+        "London, United Kingdom"
+       ]
+      }
+     ],
+     "reasoning": "The explicit headquarters-move announcement places the HQ at London's Paddington Central, agreeing with PitchBook: https://paddingtoncentral.com/latest/news/polyai-3-sheldon-square and https://pitchbook.com/profiles/company/227011-60. Conflicting San Francisco profile information prevents high confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Dialog-RSN-1 is now on AWS SageMaker | PolyAI",
+       "url": "https://poly.ai/blog/dialog-rsn-1-aws-sagemaker",
+       "excerpts": [
+        "6 Oct 2026",
+        "The fastest reasoning model for real-time, complex dialog is available now on AWS SageMaker. Subscribe through AWS Marketplace and deploy it as a SageMaker endpoint inside your own AWS environment."
+       ]
+      }
+     ],
+     "reasoning": "On October 6, 2026, PolyAI announced Dialog-RSN-1 availability on AWS SageMaker, a model deployment offering launched within the preceding six months: https://poly.ai/blog/dialog-rsn-1-aws-sagemaker.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at PolyAI",
+       "url": "https://job-boards.eu.greenhouse.io/polyai?error=true",
+       "excerpts": [
+        "3 jobs Engineering",
+        "Forward Deployed Engineer, Agentic AINew",
+        "Staff Product Manager (Runtime Team) New",
+        "Senior Marketing Manager, EMEA"
+       ]
+      }
+     ],
+     "reasoning": "The live board lists three openings: Forward Deployed Engineer, Agentic AI; Staff Product Manager; and Senior Marketing Manager. None is an SDR, BDR or account executive: https://job-boards.eu.greenhouse.io/polyai. The previously indexed AE vacancy is no longer open.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "PolyAI Raises $86M Series D to Scale Enterprise Dialog AI",
+       "url": "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers",
+       "excerpts": [
+        "PolyAI raises $86 million in Series D funding to transform how enterprises talk to their customers and power human-like conversations at scale.",
+        "15 Dec 2025"
+       ]
+      }
+     ],
+     "reasoning": "The $86 million Series D announced December 15, 2025 falls within the preceding 18 months: https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "PolyAI Security: Enterprise Compliance and Controls",
+       "url": "https://poly.ai/security",
+       "excerpts": [
+        "SOC2 Type 2 SOC2 Type 2"
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly names SOC 2 Type 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "PolyAI Security: Enterprise Compliance and Controls",
+       "url": "https://poly.ai/security",
+       "excerpts": [
+        "ISO 27001-certified"
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly claims ISO 27001 certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "PolyAI Security: Enterprise Compliance and Controls",
+       "url": "https://poly.ai/security",
+       "excerpts": [
+        "HIPAA HIPAA"
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is named on the security page.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "PolyAI Security: Enterprise Compliance and Controls",
+       "url": "https://poly.ai/security",
+       "excerpts": [
+        "GDPR GDPR"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is named on the security page.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.4",
+     "citations": [
+      {
+       "title": "PolyAI Security: Enterprise Compliance and Controls",
+       "url": "https://poly.ai/security",
+       "excerpts": [
+        "PCI DSS PCI DSS"
+       ]
+      }
+     ],
+     "reasoning": "PCI DSS is named on the security page.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customers - PolyAI",
+       "url": "http://poly.ai/customers",
+       "excerpts": [
+        "[How Carter's reduced seasonal hiring by 60% with PolyAI](http://poly.ai/customers/carter's)"
+       ]
+      }
+     ],
+     "reasoning": "The customer case study describes Carter's reducing seasonal hiring with PolyAI.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customers - PolyAI",
+       "url": "http://poly.ai/customers",
+       "excerpts": [
+        "[How SafeRide Health scaled to a million calls a month with PolyAI](http://poly.ai/customers/saferide)"
+       ]
+      }
+     ],
+     "reasoning": "The customer case study describes SafeRide Health scaling calls with PolyAI.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Senior Manager, GTM Systems at PolyAI",
+       "url": "http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101",
+       "excerpts": [
+        "Salesforce is the center of our GTM systems. Around it sits a suite of tools (Outreach, Gong, HubSpot, Clay, and others) that need to work together cleanly and earn their place."
+       ]
+      }
+     ],
+     "reasoning": "The job description says Salesforce is the center of PolyAI's GTM systems.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Senior Manager, GTM Systems at PolyAI",
+       "url": "http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101",
+       "excerpts": [
+        "Salesforce is the center of our GTM systems. Around it sits a suite of tools (Outreach, Gong, HubSpot, Clay, and others) that need to work together cleanly and earn their place."
+       ]
+      }
+     ],
+     "reasoning": "Outreach is explicitly named in the surrounding GTM tool suite.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Application for Senior Manager, GTM Systems at PolyAI",
+       "url": "http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101",
+       "excerpts": [
+        "Salesforce is the center of our GTM systems. Around it sits a suite of tools (Outreach, Gong, HubSpot, Clay, and others) that need to work together cleanly and earn their place."
+       ]
+      }
+     ],
+     "reasoning": "Gong is explicitly named in the surrounding GTM tool suite.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Application for Senior Manager, GTM Systems at PolyAI",
+       "url": "http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101",
+       "excerpts": [
+        "Salesforce is the center of our GTM systems. Around it sits a suite of tools (Outreach, Gong, HubSpot, Clay, and others) that need to work together cleanly and earn their place."
+       ]
+      }
+     ],
+     "reasoning": "HubSpot is explicitly named in the surrounding GTM tool suite.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "Job Application for Senior Manager, GTM Systems at PolyAI",
+       "url": "http://job-boards.eu.greenhouse.io/polyai/jobs/4828275101",
+       "excerpts": [
+        "Salesforce is the center of our GTM systems. Around it sits a suite of tools (Outreach, Gong, HubSpot, Clay, and others) that need to work together cleanly and earn their place."
+       ]
+      }
+     ],
+     "reasoning": "Clay is explicitly named in the surrounding GTM tool suite.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": true,
+    "product_one_liner": "PolyAI provides an enterprise conversational AI platform for building and operating voice and chat agents that handle complex customer-service interactions.",
+    "employee_band": "201-500",
+    "model_provider": "PolyAI's proprietary Raven model",
+    "pricing_page": true,
+    "funding_amount_usd": 86000000.0,
+    "named_customers": [
+     "Carter's",
+     "SafeRide Health"
+    ],
+    "funding_date": "2025-12",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Outreach",
+     "Gong",
+     "HubSpot",
+     "Clay"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series D",
+    "public_docs": true,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

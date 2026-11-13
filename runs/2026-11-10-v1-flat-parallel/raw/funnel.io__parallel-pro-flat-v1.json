@@ -1,0 +1,516 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e881c31cf6a82507a",
+  "interaction_id": "trun_142119f6a1b4439e881c31cf6a82507a",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "funnel.io"
+  },
+  "created_at": "2026-11-10T18:47:34.473025Z",
+  "modified_at": "2026-11-10T18:51:14.244937Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e881c31cf6a82507a",
+   "interaction_id": "trun_142119f6a1b4439e881c31cf6a82507a",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "funnel.io"
+   },
+   "created_at": "2026-11-10T18:47:34.473025Z",
+   "modified_at": "2026-11-10T18:51:14.244937Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Funnel | The leading marketing intelligence platform",
+       "url": "https://funnel.io/about",
+       "excerpts": [
+        "We are Funnel Funnel is the leading marketing intelligence platform for marketing and data teams. Since its founding in 2014, Funnel has grown to more than 300 employees across offices in Stockholm, Boston, Hamburg and Sydney. Today it serves more than 3,000 mid-market and enterprise businesses around the globe."
+       ]
+      }
+     ],
+     "reasoning": "Funnel's about page explicitly states that it was founded in 2014.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Funnel data privacy and security",
+       "url": "https://funnel.io/funnel-data-privacy-and-security",
+       "excerpts": [
+        "Funnel has undergone a SOC 2 Type 2 attestation.",
+        "We are ISO 27001 certified and compliant with the data protection and privacy frameworks outlined in the General Data Protection Regulation (GDPR)",
+        "Funnel is fully compliant with applicable data privacy legislation, such as GDPR in the EU and CCPA in California, USA."
+       ]
+      }
+     ],
+     "reasoning": "Funnel claims SOC 2 Type 2 attestation, ISO 27001 certification and GDPR compliance. GDPR is included as one of the requested compliance categories, rather than represented as an independently awarded certification.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Stockholm, Sweden - Funnel",
+       "url": "https://jobs.funnel.io/locations/stockholm-sweden",
+       "excerpts": [
+        "Our HQ",
+        "Stockholm, Sweden"
+       ]
+      }
+     ],
+     "reasoning": "Funnel's Stockholm, Sweden location page identifies the office as its headquarters.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Building Funnel\u2019s Declarative Connector Platform",
+       "url": "https://funnel.io/devblog/building-funnels-declarative-connector-platform",
+       "excerpts": [
+        "By: [Filips Nastins](https://www.linkedin.com/in/filipsnastins/) , Developer at Funnel",
+        "Instead of repetitive Python code, developers and domain experts now define what data a connector outputs in a YAML file, and the framework handles how to fetch and transform it."
+       ]
+      },
+      {
+       "title": "The Data That Won't Sit Still, Part 2: Teaching the Platform What the Data Means",
+       "url": "https://funnel.io/devblog/the-data-that-wont-sit-still-part-2-teaching-the-platform-what-the-data-means",
+       "excerpts": [
+        "Written By: [Anirudh Mehta,](https://www.linkedin.com/in/mehtanirudh/) Engineering Manager",
+        "That semantic query is compiled into a Substrait plan using **Semstrait** , our open-source library for building semantic queries on top of Substrait."
+       ]
+      }
+     ],
+     "reasoning": "Two qualifying posts describe how Funnel is built: developer Filips Nastins explains its declarative connector framework, and Engineering Manager Anirudh Mehta explains the semantic-query and data-platform architecture.",
+     "confidence": "high"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Funnel | The leading marketing intelligence platform",
+       "url": "https://funnel.io/about",
+       "excerpts": [
+        "Funnel brings all your marketing data together and puts it to work, from reporting and AI agents to marketing mix modeling (MMM). Data Hub collects and prepares dependable data from 600+ sources. Measure builds on it with MMM, incrementality testing and budget optimization. Marketing data you can depend on, available wherever your business needs it.",
+        "We are Funnel Funnel is the leading marketing intelligence platform for marketing and data teams. Since its founding in 2014, Funnel has grown to more than 300 employees across offices in Stockholm, Boston, Hamburg and Sydney. Today it serves more than 3,000 mid-market and enterprise businesses around the globe."
+       ]
+      }
+     ],
+     "reasoning": "The about page identifies marketing and data teams as the audience and describes data collection, preparation, reporting, marketing mix modeling and budget optimization.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "About Funnel | The leading marketing intelligence platform",
+       "url": "https://funnel.io/about",
+       "excerpts": [
+        "We are Funnel Funnel is the leading marketing intelligence platform for marketing and data teams. Since its founding in 2014, Funnel has grown to more than 300 employees across offices in Stockholm, Boston, Hamburg and Sydney. Today it serves more than 3,000 mid-market and enterprise businesses around the globe."
+       ]
+      }
+     ],
+     "reasoning": "Funnel reports more than 300 employees, supporting the 201-500 band. The published figure is approximate rather than an exact headcount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Introduction to Funnel AI | Funnel Knowledge Base",
+       "url": "https://help.funnel.io/en/articles/12920015-introduction-to-funnel-ai",
+       "excerpts": [
+        "Funnel AI uses inference-only configuration.",
+        "AI inference runs in Funnel's secure cloud infrastructure (AWS) with GDPR-aligned handling."
+       ]
+      },
+      {
+       "title": "Funnel GDPR Data Processing Agreement",
+       "url": "https://funnel.io/funnel-gdpr-data-processing-agreement",
+       "excerpts": [
+        "|Subcontractors per the Effective Date |Funnel uses data center services from Amazon Web Services (AWS)"
+       ]
+      },
+      {
+       "title": "Funnel Privacy and Cookie Notice",
+       "url": "https://funnel.io/privacy",
+       "excerpts": [
+        "This includes using AI models for tasks such as enhancing product features, automating internal processes, and supporting customer interactions."
+       ]
+      }
+     ],
+     "reasoning": "The reviewed product documentation, security and privacy material, subprocessor provisions and technical blog did not establish a model provider for Funnel's own AI product. AWS is identified as infrastructure, while named external MCP clients and internal coding tools do not establish the product's underlying model provider.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Plans & prices for marketers, analysts or agencies | Funnel",
+       "url": "https://funnel.io/pricing",
+       "excerpts": [
+        "Funnel plans and pricing We have a plan for companies of all sorts and sizes"
+       ]
+      }
+     ],
+     "reasoning": "Funnel has a public plans-and-pricing page at https://funnel.io/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Funnel secures $80M debt facility",
+       "url": "https://funnel.io/press-releases/funnel-secures-80m-debt-facility",
+       "excerpts": [
+        "STOCKHOLM, SWEDEN, Wednesday 28th January: Funnel ( [www.funnel.io](https://www.funnel.io/) ), the marketing intelligence platform trusted by global brands including Uber, Adidas and Sony, has secured an $80 million (approximately \u20ac68.7 million) debt facility from HSBC Innovation Banking and Hercules Capital, Inc."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified financing announcement states an $80 million debt facility. This is the full facility size, not solely incremental capital.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Funnel Case Studies | Success stories from Funnel customers | Funnel",
+       "url": "https://funnel.io/all-case-studies",
+       "excerpts": [
+        "Adidas logo",
+        "Uber logo"
+       ]
+      }
+     ],
+     "reasoning": "Adidas and Uber appear on Funnel's customer case-study page.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Funnel secures $80M debt facility",
+       "url": "https://funnel.io/press-releases/funnel-secures-80m-debt-facility",
+       "excerpts": [
+        "January 28, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The financing announcement is dated January 28, 2026, yielding 2026-01.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Automating Growth: How Huanling and RevOps Power Funnel's Efficiency - Career Blog - Funnel",
+       "url": "https://jobs.funnel.io/posts/automating-growth-how-huanling-and-revops-power-funnel-s-efficiency",
+       "excerpts": [
+        "I focus on designing automations, streamlining workflows, and improving operational efficiency in HubSpot, our CRM.",
+        "AI presents a huge opportunity, especially in commercial teams where almost every tool we use, whether Gong, HubSpot, or Slack, incorporates some form of AI."
+       ]
+      }
+     ],
+     "reasoning": "A Funnel RevOps employee explicitly identifies HubSpot as the company's CRM and names Gong among tools used by its commercial teams.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "People - Funnel",
+       "url": "https://jobs.funnel.io/people",
+       "excerpts": [
+        "[Fredrik Malm Chief Financial Officer](https://jobs.funnel.io/people/1483924-fredrik-malm) [Fredrik Skantze Chief Executive Officer & Co-founder](https://jobs.funnel.io/people/288970-fredrik-skantze) [Mia Nordborg Chief Customer Officer](https://jobs.funnel.io/people/937193-mia-nordborg) [Per Made Chief Marketing Officer & Co-founder](https://jobs.funnel.io/people/286863-per-made) [Sabina Klint Chief People Officer](https://jobs.funnel. io/people/983296-sabina-klint) [Sven Hamberg Chief Strategy Officer](https://jobs.funnel.io/people/284531-sven-hamberg) [Victoria S\u00f6rving Chief Legal Officer](https://jobs.funnel.io/people/416565-victoria-sorving)"
+       ]
+      }
+     ],
+     "reasoning": "Unknown: the large people directory supplies leadership titles but not appointment dates. The available profile information was inconsistent, so an in-window arrival or departure could not be established reliably.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Product Engineer - AI Product Experience - Funnel",
+       "url": "https://jobs.funnel.io/jobs/8656845-product-engineer-ai-product-experience",
+       "excerpts": [
+        "Product Engineer - AI Product Experience"
+       ]
+      },
+      {
+       "title": "Jobs list - Funnel",
+       "url": "https://jobs.funnel.io/jobs",
+       "excerpts": [
+        "Search Job filters Departments All Account Management EMEA Account Management US Business Operations Customer Experience Customer Success EMEA Customer Success US Design Development, Product & Design Finance Growth Integration Engineering EMEA Integration Engineering US IT Legal Management team Marketing Measurement Partnerships People Product Product Marketing Revenue Revenue Enablement Revenue Operations Sales EMEA Sales US Scaled Revenue EMEA Scaled Revenue US Security Solutions Consulting EMEA Solutions Consulting US Support Support EMEA Support US Departments Locations All Boston, Massachusetts, United States Dublin, Ireland Hamburg, Germany London, England Stockholm, Sweden Sydney, Australia Locations 2 jobs [Product Engineer - AI Product Experience Stockholm, Sweden](https://jobs.funnel.io/jobs/8656845-product-engineer-ai-product-experience) [Measurement Consultant - Boston Measurement \u00b7 Boston, Massachusetts, United States](https://jobs.funnel.io/jobs/8252224-measurement-consultant-boston)"
+       ]
+      }
+     ],
+     "reasoning": "The current jobs index lists Product Engineer - AI Product Experience and links to its posting; AI appears in the qualifying role title.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Funnel secures $80M debt facility",
+       "url": "https://funnel.io/press-releases/funnel-secures-80m-debt-facility",
+       "excerpts": [
+        "The new facility combines a revolving credit facility from HSBC Innovation Banking with a junior term loan from Hercules Capital",
+        "STOCKHOLM, SWEDEN, Wednesday 28th January: Funnel ( [www.funnel.io](https://www.funnel.io/) ), the marketing intelligence platform trusted by global brands including Uber, Adidas and Sony, has secured an $80 million (approximately \u20ac68.7 million) debt facility from HSBC Innovation Banking and Hercules Capital, Inc."
+       ]
+      }
+     ],
+     "reasoning": "The announcement describes a debt facility combining a revolving credit facility and a junior term loan, rather than an equity funding round.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction to Funnel | Funnel Knowledge Base",
+       "url": "https://help.funnel.io/en/articles/8020917-introduction-to-funnel",
+       "excerpts": [
+        "Learn what Funnel is and how you can use it."
+       ]
+      },
+      {
+       "title": "Introduction to Funnel AI | Funnel Knowledge Base",
+       "url": "https://help.funnel.io/en/articles/12920015-introduction-to-funnel-ai",
+       "excerpts": [
+        "**Funnel help center** : For product help, Funnel AI searches [help.funnel.io](https://help.funnel.io/en/) and cites articles in sources."
+       ]
+      },
+      {
+       "title": "July 2026 release notes | Funnel Knowledge Base",
+       "url": "https://help.funnel.io/en/articles/8820257-july-2026-release-notes",
+       "excerpts": [
+        "Read [Connect Funnel MCP from Funnel AI](https://help.funnel. io/en/articles/15502539) and [Quick start guide: Using Funnel MCP"
+       ]
+      }
+     ],
+     "reasoning": "The public knowledge base contains introductory product documentation, AI documentation, release notes and multiple MCP setup guides.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Stockholm, Sweden - Funnel",
+       "url": "https://jobs.funnel.io/locations/stockholm-sweden",
+       "excerpts": [
+        "Our HQ",
+        "Stockholm, Sweden"
+       ]
+      }
+     ],
+     "reasoning": "The Stockholm location page identifies the office as Funnel's headquarters.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Funnel launches Digital Measurement, a new category of MMM",
+       "url": "https://www.globenewswire.com/news-release/2026/05/26/3301222/0/en/Funnel-launches-Digital-Measurement-a-new-category-of-MMM-software-to-reconcile-competing-measurement-methodologies.html",
+       "excerpts": [
+        "Stockholm, May 26, 2026 (GLOBE NEWSWIRE) -- Funnel, the marketing intelligence platform trusted by leading global brands, such as Adidas, Uber and Sony, has today launched **Funnel Digital Measurement** . Based on the premise that no single measurement methodology is reliable enough to govern modern marketing investment alone, the new software combines marketing mix modeling (MMM), Multi-Touch Attribution (MTA), and ad platform signals into calibrated insights for marketing leaders."
+       ]
+      }
+     ],
+     "reasoning": "Funnel launched Digital Measurement on May 26, 2026, within the six-month window. The product combines MMM, multi-touch attribution and ad-platform signals.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs list - Funnel",
+       "url": "https://jobs.funnel.io/jobs",
+       "excerpts": [
+        "Search Job filters Departments All Account Management EMEA Account Management US Business Operations Customer Experience Customer Success EMEA Customer Success US Design Development, Product & Design Finance Growth Integration Engineering EMEA Integration Engineering US IT Legal Management team Marketing Measurement Partnerships People Product Product Marketing Revenue Revenue Enablement Revenue Operations Sales EMEA Sales US Scaled Revenue EMEA Scaled Revenue US Security Solutions Consulting EMEA Solutions Consulting US Support Support EMEA Support US Departments Locations All Boston, Massachusetts, United States Dublin, Ireland Hamburg, Germany London, England Stockholm, Sweden Sydney, Australia Locations 2 jobs [Product Engineer - AI Product Experience Stockholm, Sweden](https://jobs.funnel.io/jobs/8656845-product-engineer-ai-product-experience) [Measurement Consultant - Boston Measurement \u00b7 Boston, Massachusetts, United States](https://jobs.funnel.io/jobs/8252224-measurement-consultant-boston)"
+       ]
+      }
+     ],
+     "reasoning": "The current jobs index lists only Product Engineer - AI Product Experience and Measurement Consultant - Boston, neither a qualifying SDR, BDR or account-executive role. A separately accessible older SDR posting was not listed among current openings.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Funnel secures $80M debt facility",
+       "url": "https://funnel.io/press-releases/funnel-secures-80m-debt-facility",
+       "excerpts": [
+        "January 28, 2026",
+        "STOCKHOLM, SWEDEN, Wednesday 28th January: Funnel ( [www.funnel.io](https://www.funnel.io/) ), the marketing intelligence platform trusted by global brands including Uber, Adidas and Sony, has secured an $80 million (approximately \u20ac68.7 million) debt facility from HSBC Innovation Banking and Hercules Capital, Inc.",
+        "The facility replaces a prior $58 million (\u20ac50 million) debt arrangement and provides additional capital"
+       ]
+      }
+     ],
+     "reasoning": "The January 2026 debt financing falls within the preceding 18 months and provides additional capital while replacing a previous facility.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Funnel data privacy and security",
+       "url": "https://funnel.io/funnel-data-privacy-and-security",
+       "excerpts": [
+        "Funnel has undergone a SOC 2 Type 2 attestation."
+       ]
+      }
+     ],
+     "reasoning": "Funnel explicitly claims SOC 2 Type 2 attestation.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Funnel data privacy and security",
+       "url": "https://funnel.io/funnel-data-privacy-and-security",
+       "excerpts": [
+        "Funnel's security program is certified according to the ISO 27001 standard"
+       ]
+      }
+     ],
+     "reasoning": "Funnel explicitly states that its security program is ISO 27001 certified.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Funnel data privacy and security",
+       "url": "https://funnel.io/funnel-data-privacy-and-security",
+       "excerpts": [
+        "Funnel is fully compliant with applicable data privacy legislation, such as GDPR in the EU and CCPA in California, USA."
+       ]
+      }
+     ],
+     "reasoning": "Funnel explicitly claims GDPR compliance; this is a compliance claim rather than an independently awarded certification.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Funnel Case Studies | Success stories from Funnel customers | Funnel",
+       "url": "https://funnel.io/all-case-studies",
+       "excerpts": [
+        "Adidas logo"
+       ]
+      }
+     ],
+     "reasoning": "Adidas appears on the customer case-study page.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Funnel Case Studies | Success stories from Funnel customers | Funnel",
+       "url": "https://funnel.io/all-case-studies",
+       "excerpts": [
+        "Uber logo"
+       ]
+      }
+     ],
+     "reasoning": "Uber appears on the customer case-study page.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Automating Growth: How Huanling and RevOps Power Funnel's Efficiency - Career Blog - Funnel",
+       "url": "https://jobs.funnel.io/posts/automating-growth-how-huanling-and-revops-power-funnel-s-efficiency",
+       "excerpts": [
+        "I focus on designing automations, streamlining workflows, and improving operational efficiency in HubSpot, our CRM."
+       ]
+      }
+     ],
+     "reasoning": "A Funnel RevOps employee identifies HubSpot as its CRM.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Automating Growth: How Huanling and RevOps Power Funnel's Efficiency - Career Blog - Funnel",
+       "url": "https://jobs.funnel.io/posts/automating-growth-how-huanling-and-revops-power-funnel-s-efficiency",
+       "excerpts": [
+        "AI presents a huge opportunity, especially in commercial teams where almost every tool we use, whether Gong, HubSpot, or Slack, incorporates some form of AI."
+       ]
+      }
+     ],
+     "reasoning": "Funnel's commercial-team discussion explicitly names Gong among the tools it uses.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2014.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "Sweden",
+    "eng_blog": true,
+    "product_one_liner": "Funnel helps marketing and data teams collect, prepare and analyze marketing data for reporting, marketing mix modeling and budget optimization.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 80000000.0,
+    "named_customers": [
+     "Adidas",
+     "Uber"
+    ],
+    "funding_date": "2026-01",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Gong"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Debt financing",
+    "public_docs": true,
+    "hq_city": "Stockholm",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

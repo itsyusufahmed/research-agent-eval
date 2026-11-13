@@ -1,0 +1,596 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea8a18a8b086b61d8",
+  "interaction_id": "trun_142119f6a1b4439ea8a18a8b086b61d8",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "usenaive.ai"
+  },
+  "created_at": "2026-11-10T18:47:58.619601Z",
+  "modified_at": "2026-11-10T18:56:12.604209Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea8a18a8b086b61d8",
+   "interaction_id": "trun_142119f6a1b4439ea8a18a8b086b61d8",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "usenaive.ai"
+   },
+   "created_at": "2026-11-10T18:47:58.619601Z",
+   "modified_at": "2026-11-10T18:56:12.604209Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Na\u00efve: Autonomous Company Infrastructure | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive",
+       "excerpts": [
+        "Founded: 2025"
+       ]
+      }
+     ],
+     "reasoning": "YC lists Na\u00efve as founded in 2025.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security \u2014 Every Action Passes Through Policy First | Na\u00efve",
+       "url": "https://usenaive.ai/security",
+       "excerpts": [
+        "# Secure by design. Built for trust.",
+        "Your data is stored with established third-party infrastructure providers that maintain industry security and privacy standards. A list of subprocessors and provider attestations is available upon request at [support@usenaive.ai](mailto:support@usenaive.ai) .",
+        "## Control your agent's autonomy, protect your business data, and scale with the same rigor as your enterprise stack.",
+        "### Your data is not used to train models",
+        "We do not use your proprietary business data, prompts, or agent memory to train our foundational models. Your company's intellectual property stays yours.",
+        "### Agent Guardrails & Approvals",
+        "You decide the level of autonomy. Set strict guardrails, require explicit human approval for sensitive actions (like spending money or publishing), and review agent drafts before they go live.",
+        "### Secure Secrets Management",
+        "When you connect third-party apps (Stripe, Meta, LinkedIn), your API keys and OAuth tokens are encrypted at rest and scoped to specific agent workflows. They are never exposed in plaintext.",
+        "### Isolation by Design",
+        "Your company workspace, agent context, and customer data are logically separated. Strict tenant boundaries ensure your data is never accessible to other organizations.",
+        "### Protected Infrastructure",
+        "Hosted on established cloud and data providers that maintain industry security and privacy standards, with encryption in transit and at rest. Subprocessor details available upon request at support@usenaive.ai.",
+        "### Access & Control",
+        "Role-based access controls (RBAC) allow you to dictate who in your organization can view, edit, or approve agent workflows, enforcing least-privilege access.",
+        "## Frequently Asked Questions",
+        "### Is my data used to train AI models?",
+        "No. We do not use your proprietary business data, prompts, or agent memory to train our foundational models. Your work stays your work.",
+        "### How are my connected accounts and API keys secured?",
+        "Secrets and API credentials are encrypted at rest and scoped to specific agent workflows. They are not exposed in plaintext in logs or interfaces, and access is limited to authorized actions.",
+        "### Can agents take actions without my permission?",
+        "You are in full control. You can set agents to run fully autonomously, or require human approval for specific actions like publishing a post, sending an email campaign, or spending budget.",
+        "### Is Na\u00efve multi-tenant, and how is customer data isolated?",
+        "Na\u00efve is a multi-tenant platform with strict logical isolation between workspaces. Your company's data, agent memory, and workflows are not accessible across accounts.",
+        "na\u00efve",
+        "### Product",
+        "* CLI",
+        "* Primitives",
+        "* Templates",
+        "* Lab",
+        "* Marketplace",
+        "* Pricing",
+        "### Company",
+        "* Blog",
+        "* Affiliates",
+        "* Security",
+        "* Cybersecurity Policy",
+        "* Terms",
+        "* Privacy",
+        "* Licenses",
+        "### Developer",
+        "* Documentation",
+        "* API Reference",
+        "* SDK"
+       ]
+      }
+     ],
+     "reasoning": "The full first-party security page discusses security practices and says provider attestations are available upon request, but names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS as a claimed certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Na\u00efve \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/na-ve",
+       "excerpts": [
+        "San Francisco, United States Founded 2025 AI"
+       ]
+      }
+     ],
+     "reasoning": "Dealroom identifies the company headquarters as San Francisco, United States; this supplies the country.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog | na\u00efve",
+       "url": "https://usenaive.ai/blog",
+       "excerpts": [
+        "All 26 Launch 12 Guide 12 Engineering 01 Comparison 01",
+        "## Engineering (01)",
+        "How the runtime underneath Managed Agents is built.",
+        "* ### [Na\u00efve and Paperclip: Attribution, MIT, and What We Actually Build](https://usenaive.ai/blogs/on-paperclip-and-open-source)",
+        "  How Na\u00efve attributes the open-source software it builds on, why MIT-licensed code in a commercial product is the point of the license, and where the line sits between upstream code and the stack we built ourselves.",
+        "  \\#Engineering April 8, 2026 \u00b7 7 min",
+        "  Engineering na\u00efve"
+       ]
+      }
+     ],
+     "reasoning": "The blog index reports one Engineering post; its Engineering section contains a single post dated April 8, 2026. Under the requested threshold, one engineering post is not enough.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Na\u00efve: Autonomous Company Infrastructure | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive",
+       "excerpts": [
+        "Na\u00efve is an autonomous company runtime.  ",
+        "You describe your business \u2014 or connect your existing one \u2014 and Na\u00efve deploys AI employees that actually execute.",
+        "1. Our employees have their own identity. Own bank account, own email, own credentials, own compute.",
+        "2. They sign up for tools, pay for services, deploy apps, and file documents as themselves. No human in the loop.",
+        "3. They learn recursively. Every output, every result gets stored. They extract patterns about YOUR business and compound performance week over week.",
+        "**New companies** \u2014 describe what you want, Na\u00efve builds and runs it.  ",
+        "**Existing companies** \u2014 one-click connect your stack (CRM, codebase, Shopify, Notion, whatever), Na\u00efve employees plug in day one.  "
+       ]
+      }
+     ],
+     "reasoning": "Na\u00efve describes itself as an autonomous company runtime, says it deploys AI employees to execute work, and distinguishes new companies from existing companies that connect their stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Na\u00efve: Autonomous Company Infrastructure | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive",
+       "excerpts": [
+        "Team Size: 12"
+       ]
+      }
+     ],
+     "reasoning": "YC reports a team size of 12, which falls within the 11\u201320 band.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "LLM - Na\u00efve",
+       "url": "https://usenaive.ai/docs/getting-started/llm",
+       "excerpts": [
+        "# LLM",
+        "OpenRouter-backed LLM routing \u2014 chat completions across 300+ models through one Naive endpoint, billed in credits. Use Naive as a full wrapper over OpenRouter.",
+        "The `llm` primitive is a full wrapper over [OpenRouter](https://openrouter.ai/) . It gives your agent a single, OpenAI-compatible chat-completions endpoint that routes to **300+ models** across Anthropic, OpenAI, Google, Meta, Mistral, and more \u2014 with provider routing, fallbacks, and streaming. You don\u2019t manage an OpenRouter account or key: Naive holds the key and bills each call in **Naive credits** based on the exact cost OpenRouter returns. There are two ways to use it:"
+       ]
+      }
+     ],
+     "reasoning": "The product documentation explicitly calls Na\u00efve\u2019s LLM routing OpenRouter-backed and lists the model providers it routes across.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | na\u00efve",
+       "url": "https://usenaive.ai/pricing",
+       "excerpts": [
+        "# Start free for 7 days. Then pay for what the agents use.",
+        "$20/mo or $200/mo, credit included. Then metered per call, with no seat fee."
+       ]
+      }
+     ],
+     "reasoning": "Na\u00efve has a first-party pricing page that states plan pricing and metered usage.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Na\u00efve Raises $28.5M Series A to Build Autonomous Company Infrastructure  |  WebWire",
+       "url": "https://www.webwire.com/ViewPressRel.asp?aId=358555",
+       "excerpts": [
+        "PALO ALTO, CA \u2013 [WEBWIRE](https://www.webwire.com/) \u2013 Thursday, August 6, 2026 [Na\u00efve\u2019s Product](https://photos.webwire.com/prmedia/81468/358555/358555-1.jpg?20261028171146) Na\u00efve\u2019s Product [Na\u00efve](https://usenaive.ai/) , a Palo Alto-based AI lab building the infrastructure AI agents need to run entire businesses, today announced a $28.5 million Series A led by Nexus Venture Partners, with participation from Y Combinator, Zetta, Liquid 2, and angel investors including Gokul Rajaram, Tim Zheng (Apollo), JD Sherman (former HubSpot), Gert Lanckriet (Amazon), Robert Chatwani"
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement dated August 6, 2026 states that Na\u00efve announced a $28.5 million Series A.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Founding Member of Technical Staff \u2014 RL at Na\u00efve | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive/jobs/OTnFKjw-founding-member-of-technical-staff-rl",
+       "excerpts": [
+        "Deployed @ 500+ companies like Airwallex, Hackerrank, and more."
+       ]
+      }
+     ],
+     "reasoning": "The Na\u00efve company/job page names Airwallex and HackerRank among companies where it is deployed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Na\u00efve Raises $28.5M Series A to Build Autonomous Company Infrastructure  |  WebWire",
+       "url": "https://www.webwire.com/ViewPressRel.asp?aId=358555",
+       "excerpts": [
+        "PALO ALTO, CA \u2013 [WEBWIRE](https://www.webwire.com/) \u2013 Thursday, August 6, 2026 [Na\u00efve\u2019s Product](https://photos.webwire.com/prmedia/81468/358555/358555-1.jpg?20261028171146) Na\u00efve\u2019s Product [Na\u00efve](https://usenaive.ai/) , a Palo Alto-based AI lab building the infrastructure AI agents need to run entire businesses, today announced a $28.5 million Series A led by Nexus Venture Partners, with participation from Y Combinator, Zetta, Liquid 2, and angel investors including Gokul Rajaram, Tim Zheng (Apollo), JD Sherman (former HubSpot), Gert Lanckriet (Amazon), Robert Chatwani"
+       ]
+      }
+     ],
+     "reasoning": "The announced latest round is dated August 6, 2026, so its month is 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "For Sales | Na\u00efve",
+       "url": "https://usenaive.ai/solutions/sales",
+       "excerpts": [
+        "CRM sync Leads, replies, and meeting bookings pushed directly to HubSpot, Notion, or Airtable."
+       ]
+      }
+     ],
+     "reasoning": "Na\u00efve\u2019s sales page says leads, replies, and bookings can be pushed directly to HubSpot, Notion, or Airtable.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Jobs at Na\u00efve | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive/jobs",
+       "excerpts": [
+        "Founders",
+        "[Sean Dorje](https://www.ycombinator.com/founders/1529804-sean-dorje)",
+        "CEO",
+        "[Dennis Zax](https://www.ycombinator.com/founders/994977-dennis-zax)",
+        "CTO"
+       ]
+      },
+      {
+       "title": "Sean Dorje",
+       "url": "https://superbay.ai/p/seandorje",
+       "excerpts": [
+        "**Role**: Co-Founder & CEO, Na\u00efve (Apr 2025 \u2013 now). Source: [LinkedIn profile](https://linkedin.com/in/seandorje), 21 Oct 2026"
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/denniszax",
+       "excerpts": [
+        "company name: Naive title: Co-Founder & CTO start date year: 2025 start date month: 1 start date: 2025-01-01"
+       ]
+      }
+     ],
+     "reasoning": "The current YC founders listing names Sean Dorje (CEO) and Dennis Zax (CTO); their profiles show Na\u00efve roles beginning in April 2025 and January 2025, both before the 12-month window. No C-level or VP-level join/departure announcement was located; this negative is based on the available team and profile evidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at Na\u00efve | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive/jobs",
+       "excerpts": [
+        "### Jobs at Na\u00efve",
+        "[In-House Video Editor](https://www.ycombinator.com/companies/naive/jobs/MZLbwFK-in-house-video-editor)",
+        "Remote (US)",
+        "$5K - $10K / monthly",
+        "0\\.50%",
+        "3+ years",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D115481&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Growth Engineer Intern](https://www.ycombinator.com/companies/naive/jobs/cDWbl15-growth-engineer-intern)",
+        "Mountain View, CA, US / Remote (US)",
+        "$6K - $10K / monthly",
+        "Any",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D112022&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Member of Techincal Staff - Agents](https://www.ycombinator.com/companies/naive/jobs/qOwzkq2-founding-member-of-techincal-staff-agents)",
+        "Mountain View, CA, US",
+        "$190K - $225K",
+        "2\\.00% - 4.00%",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110963&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Member of Technical Staff \u2014 RL](https://www.ycombinator.com/companies/naive/jobs/OTnFKjw-founding-member-of-technical-staff-rl)",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110962&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Product Engineer](https://www.ycombinator.com/companies/naive/jobs/CGCujyp-founding-product-engineer)",
+        "$150K - $200K",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110961&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Growth Engineer](https://www.ycombinator.com/companies/naive/jobs/rpnVz7a-founding-growth-engineer)",
+        "$130K - $180K",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110960&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)"
+       ]
+      }
+     ],
+     "reasoning": "The current YC jobs index lists six roles, and none of the titles is an AI, ML, data-science, NLP, LLM, or other qualifying AI/ML title under the stated criteria.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Na\u00efve Raises $28.5M Series A to Build Autonomous Company Infrastructure  |  WebWire",
+       "url": "https://www.webwire.com/ViewPressRel.asp?aId=358555",
+       "excerpts": [
+        "PALO ALTO, CA \u2013 [WEBWIRE](https://www.webwire.com/) \u2013 Thursday, August 6, 2026 [Na\u00efve\u2019s Product](https://photos.webwire.com/prmedia/81468/358555/358555-1.jpg?20261028171146) Na\u00efve\u2019s Product [Na\u00efve](https://usenaive.ai/) , a Palo Alto-based AI lab building the infrastructure AI agents need to run entire businesses, today announced a $28.5 million Series A led by Nexus Venture Partners, with participation from Y Combinator, Zetta, Liquid 2, and angel investors including Gokul Rajaram, Tim Zheng (Apollo), JD Sherman (former HubSpot), Gert Lanckriet (Amazon), Robert Chatwani"
+       ]
+      }
+     ],
+     "reasoning": "The August 2026 funding announcement identifies the round as Series A.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Naive docs",
+       "url": "https://usenaive.ai/docs",
+       "excerpts": [
+        "# Naive docs",
+        "> The most efficient managed agent for long-horizon work. The highest intelligence per dollar, by design.",
+        "**Naive Managed Agents is a managed agent platform**: you define an [agent](https://vetta.sh/docs/capabilities/agent.md) \u2014 model, prompt, tools, skills, budget \u2014 and run it as [sessions](https://vetta.sh/docs/concepts/sessions.md) that work for hours, pause at storage cost, and finish without a person in the loop. You pay per finished task, in real dollars, priced before each call runs.",
+        "> [!NOTE]",
+        ">",
+        "> **Two layers, one stack.** Naive Managed Agents is the autonomous-company infrastructure \u2014 the harness, the managed runtime, sessions, budgets, tools. Naive **blueprints** are the layer on top: the templates a whole company is installed from, and the [studio](https://app.usenaive.ai) you run it in. These pages are the Managed Agents reference; the API, SDK and CLI still identify it as `vetta` (`api.vetta.sh`, `@usenaive-sdk/vetta`, the `vetta` binary).",
+        "Everything is built around one number: **the most intelligence per dollar spent** \u2014 the same model on different stacks varies several-fold in cost per completed task ([benchmarks](https://usenaive.ai/blogs/introducing-naive-managed-agents)).",
+        "![Naive Managed Agents \u2014 managed agents infrastructure: any model and provider, skills, and tools in; harness, runtime, orchestration, and self-improvement inside; run and interact through the Web Studio, API, CLI, and SDK](https://mintcdn.com/vetta/Lby8hzUEjDwI2o6a/images/architecture-overview.png?fit=max\\&auto=format\\&n=Lby8hzUEjDwI2o6a\\&q=85\\&s=9698e189bb8189f7fdcbdda775751c1f)",
+        "Any model, your skills, and your tools go in; Managed Agents' runtime does the work; and you run and interact through the [Web Studio](https://app.usenaive.ai), the [API](https://vetta.sh/docs/api/overview.md), the [CLI](https://vetta.sh/docs/cli/overview.md), or the [SDK](https://vetta.sh/docs/sdk/typescript.md).",
+        "## Create an agent, run a session",
+        "## The pillars, as objects",
+        "Everything you touch maps to primitives you create and version \u2014 familiar on day one.",
+        "> [card] [Agent](https://vetta.sh/docs/capabilities/agent.md)",
+        "> A reusable, versioned config: model, harness, prompt, tools, skills, budget.",
+        "> [card] [Session](https://vetta.sh/docs/concepts/sessions.md)",
+        "> One directly-controlled run of an agent \u2014 send input, stream output, interrupt, resume.",
+        "> [card] [Events](https://vetta.sh/docs/concepts/events-and-streaming.md)",
+        "> A resumable stream of everything the agent does, keyed by sequence number.",
+        "> [card] [Computer](https://vetta.sh/docs/capabilities/computer.md)",
+        "> A disposable sandbox with a filesystem, shell, and optional browser \u2014 paused when idle.",
+        "> [card] [Skills](https://vetta.sh/docs/capabilities/skills.md)",
+        "> Persisted, versioned expertise loaded with progressive disclosure.",
+        "> [card] [Files](https://vetta.sh/docs/capabilities/files.md)",
+        "> Durable, organization-scoped storage for the artifacts a session produces."
+       ]
+      }
+     ],
+     "reasoning": "The public Na\u00efve docs portal includes an agent/session reference and multiple linked API, SDK, CLI, capability, and concepts documentation pages.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Na\u00efve \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/na-ve",
+       "excerpts": [
+        "San Francisco, United States Founded 2025 AI"
+       ]
+      },
+      {
+       "title": "Na\u00efve: Autonomous Company Infrastructure | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive",
+       "excerpts": [
+        "Location: San Francisco"
+       ]
+      }
+     ],
+     "reasoning": "Dealroom explicitly gives the headquarters as San Francisco, and YC also lists San Francisco as the company location. A funding-release description calls the lab Palo Alto-based, so the city is supported by the company profile but has a minor source-location discrepancy.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Blog | na\u00efve",
+       "url": "https://usenaive.ai/blog",
+       "excerpts": [
+        "* ### [Music: your agent writes an original song from a prompt](https://usenaive.ai/blogs/introducing-music)",
+        "  A new agent primitive. generate\\_music turns a description into an original song, with an optional length and an instrumental switch, and saves it to Files in one call.",
+        "  \\#Launch November 2, 2026 \u00b7 4 min"
+       ]
+      }
+     ],
+     "reasoning": "The company blog lists a new agent music primitive as a launch dated November 2, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at Na\u00efve | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive/jobs",
+       "excerpts": [
+        "### Jobs at Na\u00efve",
+        "[In-House Video Editor](https://www.ycombinator.com/companies/naive/jobs/MZLbwFK-in-house-video-editor)",
+        "Remote (US)",
+        "$5K - $10K / monthly",
+        "0\\.50%",
+        "3+ years",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D115481&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Growth Engineer Intern](https://www.ycombinator.com/companies/naive/jobs/cDWbl15-growth-engineer-intern)",
+        "Mountain View, CA, US / Remote (US)",
+        "$6K - $10K / monthly",
+        "Any",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D112022&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Member of Techincal Staff - Agents](https://www.ycombinator.com/companies/naive/jobs/qOwzkq2-founding-member-of-techincal-staff-agents)",
+        "Mountain View, CA, US",
+        "$190K - $225K",
+        "2\\.00% - 4.00%",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110963&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Member of Technical Staff \u2014 RL](https://www.ycombinator.com/companies/naive/jobs/OTnFKjw-founding-member-of-technical-staff-rl)",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110962&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Product Engineer](https://www.ycombinator.com/companies/naive/jobs/CGCujyp-founding-product-engineer)",
+        "$150K - $200K",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110961&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)",
+        "[Founding Growth Engineer](https://www.ycombinator.com/companies/naive/jobs/rpnVz7a-founding-growth-engineer)",
+        "$130K - $180K",
+        "[Apply Now \u203a](https://account.ycombinator.com/authenticate?continue=https%3A%2F%2Fwww.workatastartup.com%2Fapplication%3Fsignup_job_id%3D110960&defaults%5BsignUpActive%5D=true&defaults%5Bwaas_company%5D=30522)"
+       ]
+      }
+     ],
+     "reasoning": "The current YC jobs list shows six open roles, none titled SDR, BDR, sales/business development representative, or account executive.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Na\u00efve Raises $28.5M Series A to Build Autonomous Company Infrastructure  |  WebWire",
+       "url": "https://www.webwire.com/ViewPressRel.asp?aId=358555",
+       "excerpts": [
+        "PALO ALTO, CA \u2013 [WEBWIRE](https://www.webwire.com/) \u2013 Thursday, August 6, 2026 [Na\u00efve\u2019s Product](https://photos.webwire.com/prmedia/81468/358555/358555-1.jpg?20261028171146) Na\u00efve\u2019s Product [Na\u00efve](https://usenaive.ai/) , a Palo Alto-based AI lab building the infrastructure AI agents need to run entire businesses, today announced a $28.5 million Series A led by Nexus Venture Partners, with participation from Y Combinator, Zetta, Liquid 2, and angel investors including Gokul Rajaram, Tim Zheng (Apollo), JD Sherman (former HubSpot), Gert Lanckriet (Amazon), Robert Chatwani"
+       ]
+      }
+     ],
+     "reasoning": "Na\u00efve announced a $28.5 million Series A on August 6, 2026, within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Founding Member of Technical Staff \u2014 RL at Na\u00efve | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive/jobs/OTnFKjw-founding-member-of-technical-staff-rl",
+       "excerpts": [
+        "Deployed @ 500+ companies like Airwallex, Hackerrank, and more."
+       ]
+      }
+     ],
+     "reasoning": "Airwallex is named among companies where Na\u00efve is deployed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Founding Member of Technical Staff \u2014 RL at Na\u00efve | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/naive/jobs/OTnFKjw-founding-member-of-technical-staff-rl",
+       "excerpts": [
+        "Deployed @ 500+ companies like Airwallex, Hackerrank, and more."
+       ]
+      }
+     ],
+     "reasoning": "HackerRank is named among companies where Na\u00efve is deployed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "For Sales | Na\u00efve",
+       "url": "https://usenaive.ai/solutions/sales",
+       "excerpts": [
+        "Leads, replies, and meeting bookings pushed directly to HubSpot, Notion, or Airtable."
+       ]
+      }
+     ],
+     "reasoning": "The sales page explicitly names HubSpot as a direct CRM-sync destination.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "For Sales | Na\u00efve",
+       "url": "https://usenaive.ai/solutions/sales",
+       "excerpts": [
+        "Leads, replies, and meeting bookings pushed directly to HubSpot, Notion, or Airtable."
+       ]
+      }
+     ],
+     "reasoning": "The sales page explicitly names Notion as a direct CRM-sync destination.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "For Sales | Na\u00efve",
+       "url": "https://usenaive.ai/solutions/sales",
+       "excerpts": [
+        "Leads, replies, and meeting bookings pushed directly to HubSpot, Notion, or Airtable."
+       ]
+      }
+     ],
+     "reasoning": "The sales page explicitly names Airtable as a direct CRM-sync destination.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2025.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Na\u00efve provides an autonomous-company runtime that deploys AI employees to build and operate new businesses or automate functions for existing businesses connected to their stack.",
+    "employee_band": "11-20",
+    "model_provider": "OpenRouter-backed routing to 300+ models, including models from Anthropic, OpenAI, Google, Meta, and Mistral.",
+    "pricing_page": true,
+    "funding_amount_usd": 28500000.0,
+    "named_customers": [
+     "Airwallex",
+     "HackerRank"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Notion",
+     "Airtable"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

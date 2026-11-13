@@ -1,0 +1,501 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e880b809688a21283",
+  "interaction_id": "trun_142119f6a1b4439e880b809688a21283",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "revealdata.com"
+  },
+  "created_at": "2026-11-10T18:47:30.069680Z",
+  "modified_at": "2026-11-10T18:51:08.476086Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e880b809688a21283",
+   "interaction_id": "trun_142119f6a1b4439e880b809688a21283",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "revealdata.com"
+   },
+   "created_at": "2026-11-10T18:47:30.069680Z",
+   "modified_at": "2026-11-10T18:51:08.476086Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Reveal Data Launches 19th Worldwide Data Center | Reveal",
+       "url": "https://www.revealdata.com/news/reveal-data-launches-19th-worldwide-data-center",
+       "excerpts": [
+        "**About Reveal Data Corporation** Reveal Data, founded in 2008, gives law firms, corporate legal departments, and service providers eDiscovery and investigation software and services tailored for global use."
+       ]
+      }
+     ],
+     "reasoning": "Reveal's announcement explicitly states that the company was founded in 2008.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Reveal Data Trust Center | Powered by SafeBase",
+       "url": "https://security.revealdata.com/",
+       "excerpts": [
+        "[SOC 2 Type 2](https://security.revealdata.com/?itemName=reports&itemUid=fa950d02-cbb3-4010-b917-7137a7c2a982&source=click)",
+        "[ISO/IEC 27001](https://security.revealdata.com/?itemName=reports&itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click)",
+        "[GDPR](https://security.revealdata.com/?itemName=reports&itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click)"
+       ]
+      }
+     ],
+     "reasoning": "The official Trust Center names SOC 2 Type 2, ISO/IEC 27001, and GDPR. Its HIPAA Report listing does not itself explicitly establish a HIPAA compliance claim, so HIPAA is excluded.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Reveal",
+       "url": "https://www.revealdata.com/about-us",
+       "excerpts": [
+        "Company information North American Headquarters 145 S Wells St, Ste 600 Chicago, IL 60606, USA [\\+1 312 248 4430](tel:8443199909) [](tel:+18723100001)"
+       ]
+      }
+     ],
+     "reasoning": "Reveal's company-information page gives its Chicago headquarters address in the USA.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "The Reveal Blog: eDiscovery Insights & Legal AI Trends",
+       "url": "https://www.revealdata.com/blog",
+       "excerpts": [
+        "[#### Reveal Adds Claude Connector to Onna, Giving Legal Teams a Way to Collect and Search Employees\u2019 AI Conversations October 20, 2026](https://www.revealdata.com/news/reveal-adds-claude-connector-to-onna-giving-legal-teams-a-way-to-collect-and-search-employees-ai-conversations)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index and its article listings present product announcements, customer workflows, and legal-industry content. The reviewed index did not establish two engineer-authored posts explaining how Reveal is built, so it does not meet the requested engineering-blog definition.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Reveal Data Launches 19th Worldwide Data Center | Reveal",
+       "url": "https://www.revealdata.com/news/reveal-data-launches-19th-worldwide-data-center",
+       "excerpts": [
+        "**About Reveal Data Corporation** Reveal Data, founded in 2008, gives law firms, corporate legal departments, and service providers eDiscovery and investigation software and services tailored for global use."
+       ]
+      },
+      {
+       "title": "About Reveal",
+       "url": "https://www.revealdata.com/about-us",
+       "excerpts": [
+        "Reveal builds and supports a leading AI-powered platform for [eDiscovery](https://www.revealdata.com/use-case/ediscovery) , [investigations](https://www.revealdata.com/use-case/investigations) , and related activities."
+       ]
+      }
+     ],
+     "reasoning": "The company describes its AI-powered eDiscovery and investigations platform and explicitly identifies law firms, corporate legal departments, and service providers as its audience.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Reveal Data 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/91843-93",
+       "excerpts": [
+        "Reveal Data has 500 total employees. ### What industry is Reveal Data in?"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 500 employees, which falls within the requested 201-500 band. This is a third-party headcount rather than a company-confirmed live total.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI-Assisted Document Review: Security & Data Privacy | Reveal",
+       "url": "https://www.revealdata.com/guides/ai-assisted-document-review-security-data-privacy",
+       "excerpts": [
+        "LLM providers supported by region (Amazon Bedrock and Google Vertex AI), each governed by the same data protections",
+        "Supports both Amazon Bedrock and Google Vertex AI by region, so security posture stays consistent everywhere Reveal operates"
+       ]
+      }
+     ],
+     "reasoning": "Reveal's AI-assisted document-review security guide explicitly identifies Amazon Bedrock and Google Vertex AI as its region-dependent LLM providers.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Book a Reveal Demo - The #1 eDiscovery Platform for Legal Teams",
+       "url": "https://revealdata.com/pricing",
+       "excerpts": [
+        "Request your demo",
+        "Fill out the form, and we'll be in touch.",
+        "Flexible pay-as-you-go or subscription pricing"
+       ]
+      },
+      {
+       "title": "Request Pricing for eDiscovery",
+       "url": "https://www.revealdata.com/request-pricing",
+       "excerpts": [
+        "Let's chat."
+       ]
+      }
+     ],
+     "reasoning": "The pricing URLs resolve to demo/contact forms. They contain generic pricing language but no named plans or public prices, and the reviewed homepage navigation/footer does not offer a pricing link.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Reveal Data 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/91843-93",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Valuation/ EBITDA |Post-Val |Status |Debt | This information is available in the PitchBook Platform. To explore Reveal Data"
+       ]
+      }
+     ],
+     "reasoning": "The profile identifies the latest deal type but does not publicly expose its amount. The January 2021 investment figures cannot safely be assigned to that undated latest deal.",
+     "confidence": "low"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "How Brown Rudnick Controls Review Costs With Reveal",
+       "url": "https://www.revealdata.com/success-stories/how-brown-rudnicks-fantastic-four-makes-review-cost-disappear",
+       "excerpts": [
+        "How Brown Rudnick's \"Fantastic Four\" Makes Review Cost Disappear"
+       ]
+      },
+      {
+       "title": "Premier Legal Technologies Uses Reveal AI to Find Thousands of Docs Hidden from Human Review",
+       "url": "https://www.revealdata.com/success-stories/premier-legal-technologies-uses-reveal-ai-to-find-thousands-of-docs-hidden-from-human-review",
+       "excerpts": [
+        "[Download case study](https://5796933.fs1.hubspotusercontent-na1.net/hubfs/5796933/Reveal%20Guides/Reveal%20Success%20Stories/CS%20-%20REVEAL%20-%20Premier%20Legal%20Technologies.pdf.pdf) Premier Legal Technologies Uses Reveal AI to Find Thousands of Docs Hidden from Human Review"
+       ]
+      }
+     ],
+     "reasoning": "Reveal publishes customer success stories naming Brown Rudnick and Premier Legal Technologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Reveal Data 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/91843-93",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Valuation/ EBITDA |Post-Val |Status |Debt | This information is available in the PitchBook Platform. To explore Reveal Data"
+       ]
+      }
+     ],
+     "reasoning": "The public financing table withholds the date of the latest deal. January 2021 is a documented earlier investment date, but cannot be established as the date of the latest debt-acquisition financing.",
+     "confidence": "low"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Reveal Careers - Account Executive, II",
+       "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ",
+       "excerpts": [
+        "Build and maintain a prospecting database with clear actions and revenue expectations in Salesforce CRM"
+       ]
+      }
+     ],
+     "reasoning": "The Account Executive II posting explicitly requires maintaining a prospecting database and revenue expectations in Salesforce CRM.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Wendell Jisa Becomes Chairman of Reveal\u2019s Board, Names Eric Harmon as New CEO to Lead Next Phase of Growth",
+       "url": "https://revealdata.com/news/wendell-jisa-transitions-to-chairman-of-reveals-board-of-directors-and-announces-new-ceo",
+       "excerpts": [
+        "October 14, 2025",
+        "Founder and Chief Executive Officer Wendell Jisa will move into a new role as Chairman of Reveal\u2019s Board of Directors, and Eric Harmon has been appointed by Jisa as the company\u2019s new Chief Executive Officer."
+       ]
+      }
+     ],
+     "reasoning": "The verified CEO transition was announced October 14, 2025, outside the requested 12-month window. No qualifying in-window change was verified, and the company page lacks a complete dated executive roster; therefore neither true nor false is established.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Reveal Careers",
+       "url": "https://jobs.jobvite.com/reveal",
+       "excerpts": [
+        "|[Support Analyst](https://jobs.jobvite.com/reveal/job/oSQRAfwT) |Chicago, Illinois |"
+       ]
+      }
+     ],
+     "reasoning": "The readable careers board lists support, strategy, collections, full-stack engineering, account-executive, and sales-engineering positions. None has a qualifying AI, ML, or data-science title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Reveal Data 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/91843-93",
+       "excerpts": [
+        "* Latest Deal Type Debt - Acquisition * Financing Rounds 8"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly labels its latest deal type Debt - Acquisition. Other sources identify a January 2021 growth-equity investment, but do not resolve the date or amount of this latest listed debt deal.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Product help & support.",
+       "url": "https://www.revealdata.com/support",
+       "excerpts": [
+        "Explore Reveal Academy for courses and check our documentation for FAQs and more information."
+       ]
+      },
+      {
+       "title": "AI Model Library",
+       "url": "https://docs.revealdata.com/docs/ai-model-library",
+       "excerpts": [
+        "Reveal comes with a growing number of pre-built AI models that can be applied out of the box to jumpstart the AI Model (Classifier) training process. These AI models can be applied in many common litigation and investigation scenarios. AI models may be exported from and imported to the library."
+       ]
+      },
+      {
+       "title": "About Ask",
+       "url": "https://docs.revealdata.com/docs/about-ask",
+       "excerpts": [
+        "Reveal\u2019s AI pipeline prepares your data for semantic search, integrating it into a vector database akin to a next-generation concept search index, all housed within a fast Elastic search database."
+       ]
+      }
+     ],
+     "reasoning": "Reveal links to public product documentation, and multiple substantive articles are readable, including AI Model Library and About Ask.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Reveal",
+       "url": "https://www.revealdata.com/about-us",
+       "excerpts": [
+        "Company information North American Headquarters 145 S Wells St, Ste 600 Chicago, IL 60606, USA [\\+1 312 248 4430](tel:8443199909) [](tel:+18723100001)"
+       ]
+      }
+     ],
+     "reasoning": "The official company-information page lists the headquarters address in Chicago.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Reveal AI: Agentic AI for eDiscovery Case Building",
+       "url": "https://www.revealdata.com/blog/reveal-introduces-reveal-ai-agentic-ediscovery-from-preservation-to-case-development",
+       "excerpts": [
+        "Reveal introduces Reveal AI: agentic eDiscovery from preservation to case development August 24, 2026 3 min read Heading 2 ... Reveal is introducing Reveal AI, an agentic AI suite that spans the dispute resolution lifecycle, from preservation and collection through search, review, case development, and production, and runs on the models and infrastructure each team already trusts."
+       ]
+      }
+     ],
+     "reasoning": "Reveal announced its agentic Reveal AI suite on August 24, 2026, within the six-month window. This is a major product launch rather than a minor update.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Reveal Careers - Accounts Executive I",
+       "url": "https://jobs.jobvite.com/reveal/job/opJxAfwZ",
+       "excerpts": [
+        "**Position** : Account Executive, I"
+       ]
+      },
+      {
+       "title": "Reveal Careers",
+       "url": "https://jobs.jobvite.com/reveal",
+       "excerpts": [
+        "|[Account Executive, II](https://jobs.jobvite.com/reveal/job/oAdJAfwQ) |Chicago, Illinois |"
+       ]
+      }
+     ],
+     "reasoning": "The careers board and a readable job posting list Account Executive I and Account Executive II openings.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Reveal Data Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/reveal-data/financials",
+       "excerpts": [
+        "Reveal Data's **latest funding round** was a **Growth Equity for $200M** on **January 26, 2021** ."
+       ]
+      },
+      {
+       "title": "Reveal Data 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/91843-93",
+       "excerpts": [
+        "* Latest Deal Type Debt - Acquisition * Financing Rounds 8"
+       ]
+      }
+     ],
+     "reasoning": "One funding source identifies January 2021 as the latest round, outside the window, while another lists an undated latest debt-acquisition deal. Because that discrepancy prevents dating the most recent financing, an in-window raise or a definitive negative is not publicly confirmed.",
+     "confidence": "low"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Reveal Data Trust Center | Powered by SafeBase",
+       "url": "https://security.revealdata.com/",
+       "excerpts": [
+        "[SOC 2 Type 2](https://security.revealdata.com/?itemName=reports&itemUid=fa950d02-cbb3-4010-b917-7137a7c2a982&source=click)"
+       ]
+      }
+     ],
+     "reasoning": "The official Trust Center names SOC 2 Type 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Reveal Data Trust Center | Powered by SafeBase",
+       "url": "https://security.revealdata.com/",
+       "excerpts": [
+        "[ISO/IEC 27001](https://security.revealdata.com/?itemName=reports&itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click)"
+       ]
+      }
+     ],
+     "reasoning": "The official Trust Center names ISO/IEC 27001.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Reveal Data Trust Center | Powered by SafeBase",
+       "url": "https://security.revealdata.com/",
+       "excerpts": [
+        "[GDPR](https://security.revealdata.com/?itemName=reports&itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click)"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly named in the official Trust Center's compliance section.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "How Brown Rudnick Controls Review Costs With Reveal",
+       "url": "https://www.revealdata.com/success-stories/how-brown-rudnicks-fantastic-four-makes-review-cost-disappear",
+       "excerpts": [
+        "How Brown Rudnick's \"Fantastic Four\" Makes Review Cost Disappear"
+       ]
+      }
+     ],
+     "reasoning": "Reveal's customer success story explicitly names Brown Rudnick.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Premier Legal Technologies Uses Reveal AI to Find Thousands of Docs Hidden from Human Review",
+       "url": "https://www.revealdata.com/success-stories/premier-legal-technologies-uses-reveal-ai-to-find-thousands-of-docs-hidden-from-human-review",
+       "excerpts": [
+        "[Download case study](https://5796933.fs1.hubspotusercontent-na1.net/hubfs/5796933/Reveal%20Guides/Reveal%20Success%20Stories/CS%20-%20REVEAL%20-%20Premier%20Legal%20Technologies.pdf.pdf) Premier Legal Technologies Uses Reveal AI to Find Thousands of Docs Hidden from Human Review"
+       ]
+      }
+     ],
+     "reasoning": "Reveal's customer case study explicitly names Premier Legal Technologies.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Reveal Careers - Account Executive, II",
+       "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ",
+       "excerpts": [
+        "Build and maintain a prospecting database with clear actions and revenue expectations in Salesforce CRM"
+       ]
+      }
+     ],
+     "reasoning": "The sales job posting explicitly identifies Salesforce CRM as the system for prospecting and revenue expectations.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2008.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Reveal provides AI-powered eDiscovery and investigation software for law firms, corporate legal departments, and legal service providers.",
+    "employee_band": "201-500",
+    "model_provider": "Amazon Bedrock and Google Vertex AI, depending on region.",
+    "pricing_page": false,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Brown Rudnick",
+     "Premier Legal Technologies"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Debt - Acquisition",
+    "public_docs": true,
+    "hq_city": "Chicago",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": null
+   }
+  }
+ }
+}

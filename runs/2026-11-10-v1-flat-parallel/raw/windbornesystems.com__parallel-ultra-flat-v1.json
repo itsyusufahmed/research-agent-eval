@@ -1,0 +1,489 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb485a5bda9c7435b",
+  "interaction_id": "trun_142119f6a1b4439eb485a5bda9c7435b",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "windbornesystems.com"
+  },
+  "created_at": "2026-11-10T18:48:00.539983Z",
+  "modified_at": "2026-11-10T18:54:04.002469Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb485a5bda9c7435b",
+   "interaction_id": "trun_142119f6a1b4439eb485a5bda9c7435b",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "windbornesystems.com"
+   },
+   "created_at": "2026-11-10T18:48:00.539983Z",
+   "modified_at": "2026-11-10T18:54:04.002469Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: WindBorne Systems; website_url: https://windbornesystems.com; founded_year: 2019;"
+       ]
+      }
+     ],
+     "reasoning": "The company profile at https://tracxn.com reports a founding year of 2019.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Terms of Service, Privacy & Cookie Policies | WindBorne Systems",
+       "url": "https://windbornesystems.com/ext/legal",
+       "excerpts": [
+        "Social",
+        "22, 2026 Cookie Policy Effective Oct.",
+        "You agree that WindBorne has the right, but not the obligation, to use such Feedback without any obligation to provide you credit, royalty payment, or ownership interest in the changes to the Services."
+       ]
+      }
+     ],
+     "reasoning": "The legal page at https://windbornesystems.com/ext/legal contains terms, privacy, and cookie policies but names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS. The empty list describes that page, not an assertion that the company has no certifications anywhere.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "AI Weather Forecasts & Atmospheric Data | WindBorne Systems",
+       "url": "https://windbornesystems.com/",
+       "excerpts": [
+        "WindBorne Systems is based in Redwood Shores, California. Our technology is invented, designed, and manufactured in the USA."
+       ]
+      }
+     ],
+     "reasoning": "https://windbornesystems.com/ identifies the company's base as Redwood Shores, California; the country is normalized to United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "WeatherMesh-4: AI Architecture & Benchmarks | WindBorne Systems",
+       "url": "https://www.windbornesystems.com/blog/weathermesh-4-technical-blog",
+       "excerpts": [
+        "Authors Haoxing Du, Machine Learning Engineer",
+        "In WeatherMesh-4, we opted for the HEALPix mesh"
+       ]
+      },
+      {
+       "title": "AI Data Assimilation for Weather Forecasts | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-ai-da",
+       "excerpts": [
+        "Authors Jack Michaels, Machine Learning Engineer",
+        "We approach AI DA by leveraging two distinct model phases: an encoding phase and an assimilation phase."
+       ]
+      }
+     ],
+     "reasoning": "Two qualifying engineer-authored posts explain product construction: Haoxing Du's WeatherMesh architecture article at https://www.windbornesystems.com/blog/weathermesh-4-technical-blog and Jack Michaels's encoding-and-assimilation article at https://windbornesystems.com/blog/windborne-ai-da.",
+     "confidence": "high"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive \u2014 Utilities",
+       "url": "https://windbornesystems.com/careers/enterprise-account-executive----utilities",
+       "excerpts": [
+        "WindBorne Systems is supercharging weather forecasts with a unique proprietary data source: a global constellation of next-generation smart weather balloons targeting the most critical atmospheric data."
+       ]
+      },
+      {
+       "title": "AI Weather Forecasts: WeatherMesh & MetaMesh | WindBorne Systems",
+       "url": "https://windbornesystems.com/products/forecasts",
+       "excerpts": [
+        "WeatherMesh is our record-breaking AI model. MetaMesh blends WeatherMesh with public AI and NWP models."
+       ]
+      },
+      {
+       "title": "AI Weather Forecasts & Atmospheric Data | WindBorne Systems",
+       "url": "https://windbornesystems.com/",
+       "excerpts": [
+        "Explore [Individuals](https://windbornesystems.com/weather-by-windborne) [Enterprise](https://windbornesystems.com/solutions/enterprise)",
+        "Make the weather work for you. Transform forecast data into actionable insights and automations tailored to your needs."
+       ]
+      },
+      {
+       "title": "$37M Series B to Scale Weather Intelligence | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure",
+       "excerpts": [
+        "WindBorne's data is assimilated into government forecasting systems and used by government agencies alongside a growing base of commercial customers."
+       ]
+      }
+     ],
+     "reasoning": "The balloon-based observations and AI forecasts are described at https://windbornesystems.com/careers/enterprise-account-executive----utilities and https://windbornesystems.com/products/forecasts. The homepage identifies individual and enterprise audiences and decision tools; https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure establishes government use.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: WindBorne Systems; website_url: https://windbornesystems.com; founded_year: 2019; employee_count_official: 101;"
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/windborne",
+       "excerpts": [
+        "employee count: 103"
+       ]
+      },
+      {
+       "title": "WindBorne Systems Employee Directory, Headcount & Staff | LeadIQ",
+       "url": "https://leadiq.com/c/windborne-systems/5e4c10e1626d3b6fe04c22f7/employee-directory",
+       "excerpts": [
+        "Minus sign icon Plus sign icon WindBorne Systems has approximately 98 employees as of October 2026 ."
+       ]
+      }
+     ],
+     "reasoning": "The profile at https://tracxn.com reports 101 employees, and https://linkedin.com/company/windborne reports 103, both supporting 101-200. Confidence is reduced because https://leadiq.com/c/windborne-systems/5e4c10e1626d3b6fe04c22f7/employee-directory gives an approximate October 2026 count of 98, just across the band boundary.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI Weather Forecasts: WeatherMesh & MetaMesh | WindBorne Systems",
+       "url": "https://windbornesystems.com/products/forecasts",
+       "excerpts": [
+        "WindBorne's model portfolio includes WeatherMesh-6 Global and WM-6 3km, our next-generation AI models, and MetaMesh, our blended point-forecast model.",
+        "WeatherMesh is our record-breaking AI model. MetaMesh blends WeatherMesh with public AI and NWP models."
+       ]
+      }
+     ],
+     "reasoning": "https://windbornesystems.com/products/forecasts explicitly names WeatherMesh-6 Global, WM-6 3km, and MetaMesh, and explains that MetaMesh blends WeatherMesh with public AI and numerical weather-prediction models.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "AI Weather Forecasts & Atmospheric Data | WindBorne Systems",
+       "url": "https://windbornesystems.com/",
+       "excerpts": [
+        "Platform Our platform Closing the atmospheric data gap Proprietary global observations and AI forecasting models work together as one weather system. Technology [Observations](https://windbornesystems.com/platform/observations) [Forecasts](https://windbornesystems.com/platform/forecasts) Resources [API Documentation](https://api.windbornesystems.com/) [Benchmarks](https://benchmarks.windbornesystems.com/) [FAQ](https://windbornesystems.com/faq) Solutions Our solutions Make the weather work for you Turn global forecasts into decisions, workflows, and automations built around your operating environment. Explore [Individuals](https://windbornesystems.com/weather-by-windborne) [Enterprise](https://windbornesystems.com/solutions/enterprise)"
+       ]
+      },
+      {
+       "title": "Getting Started",
+       "url": "https://api.windbornesystems.com/getting-started",
+       "excerpts": [
+        "[Create an account](<https://app.windbornesystems.com/api_tokens>) and request a free trial API key. For full commercial access"
+       ]
+      }
+     ],
+     "reasoning": "No pricing link or public plan page appears in the navigation or footer of https://windbornesystems.com/, and the /pricing URL did not yield a page. https://api.windbornesystems.com/getting-started directs users to contact the company for full commercial access.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "$37M Series B to Scale Weather Intelligence | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure",
+       "excerpts": [
+        "REDWOOD CITY, CA--( [**BUSINESS WIRE**](https://www.businesswire.com/) )--WindBorne Systems, the weather intelligence company building the world's largest atmospheric sensing network and the AI models it powers, today announced $37 million in Series B funding"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round announcement, https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure, reports a $37 million round, equivalent to USD 37000000; this is the round amount, not cumulative funding.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "U.S. Navy & Air Force Weather Forecasting Awards | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-wins-u-s-navy-air-force-awards-to-accelerate-its-groundbreaking-ai-weather-forecasting-models-and-enable-operational-govt-models",
+       "excerpts": [
+        "NOAA has also been an operational customer of WindBorne since early 2023.",
+        "In July, WindBorne began a six-month contract with the U.S."
+       ]
+      }
+     ],
+     "reasoning": "https://windbornesystems.com/blog/windborne-wins-u-s-navy-air-force-awards-to-accelerate-its-groundbreaking-ai-weather-forecasting-models-and-enable-operational-govt-models explicitly calls NOAA an operational customer and describes a six-month forecasting-development contract with the U.S. Navy. The Navy is included as a contracting customer, not merely because it is called a partner.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "$37M Series B to Scale Weather Intelligence | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure",
+       "excerpts": [
+        "Published August 5, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The round announcement at https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure is dated August 5, 2026, yielding 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "GTM Lead | WindBorne Systems",
+       "url": "https://www.windbornesystems.com/careers/growth-lead",
+       "excerpts": [
+        "Hands-on with product analytics \u2013 you're familiar with tools like HotJar/PostHog/Mixpanel"
+       ]
+      }
+     ],
+     "reasoning": "The GTM Lead posting at https://www.windbornesystems.com/careers/growth-lead names HotJar, PostHog, and Mixpanel as product-analytics tools candidates should know. These are sales/marketing-adjacent hiring signals, not confirmation that all three are deployed internally; no specific CRM platform was named.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [],
+     "reasoning": "Unknown. The selected leaders shown at https://windbornesystems.com/careers and the available executive profiles did not establish a qualifying appointment or departure in the window, nor provide an exhaustive dated roster sufficient to conclude false.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Machine Learning Research Engineer, Model Evaluation @ WindBorne Systems",
+       "url": "https://jobs.ashbyhq.com/windborne-systems/17c1e7b1-1a8d-4bfd-bd25-3ae48641b642",
+       "excerpts": [
+        "Machine Learning Research Engineer, Model Evaluation",
+        "[Apply for this Job](https://jobs.ashbyhq.com/windborne-systems/17c1e7b1-1a8d-4bfd-bd25-3ae48641b642/application)"
+       ]
+      }
+     ],
+     "reasoning": "https://jobs.ashbyhq.com/windborne-systems/17c1e7b1-1a8d-4bfd-bd25-3ae48641b642 is a live Machine Learning Research Engineer, Model Evaluation posting with an application link.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "$37M Series B to Scale Weather Intelligence | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure",
+       "excerpts": [
+        "REDWOOD CITY, CA--( [**BUSINESS WIRE**](https://www.businesswire.com/) )--WindBorne Systems, the weather intelligence company building the world's largest atmospheric sensing network and the AI models it powers, today announced $37 million in Series B funding"
+       ]
+      }
+     ],
+     "reasoning": "https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure explicitly identifies the round as Series B.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Getting Started",
+       "url": "https://api.windbornesystems.com/getting-started",
+       "excerpts": [
+        "Get Interpolated Forecast",
+        "Get Gridded Forecast"
+       ]
+      }
+     ],
+     "reasoning": "https://api.windbornesystems.com/ is a public documentation portal with model information and Getting Started material. https://api.windbornesystems.com/getting-started also provides authentication, library, interpolated-forecast, and gridded-forecast guides and links to further documentation.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "GTM Lead | WindBorne Systems",
+       "url": "https://www.windbornesystems.com/careers/growth-lead",
+       "excerpts": [
+        "1600 Bridge Parkway, Redwood City, CA."
+       ]
+      },
+      {
+       "title": "AI Weather Forecasts & Atmospheric Data | WindBorne Systems",
+       "url": "https://windbornesystems.com/",
+       "excerpts": [
+        "WindBorne Systems is based in Redwood Shores, California. Our technology is invented, designed, and manufactured in the USA."
+       ]
+      }
+     ],
+     "reasoning": "https://www.windbornesystems.com/careers/growth-lead gives the office address as 1600 Bridge Parkway, Redwood City, CA. The homepage, https://windbornesystems.com/, describes the base more specifically as Redwood Shores.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Weather Forecasting Research & Engineering | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog",
+       "excerpts": [
+        "[## Introducing: WindBorne Weather Events WindBorne Weather Events started as an internal tracker our own meteorologists used. It's now available through the WindBorne API. Most weather models produce their\u2026 Oct 29, 2026 \u2192](https://windbornesystems.com/blog/introducing-windborne-weather-events)"
+       ]
+      }
+     ],
+     "reasoning": "https://windbornesystems.com/blog lists the October 29, 2026 announcement at https://windbornesystems.com/blog/introducing-windborne-weather-events, stating that the previously internal Weather Events tracker is now available through the API. This falls within the six-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive \u2014 Utilities @ WindBorne Systems",
+       "url": "https://jobs.ashbyhq.com/windborne-systems/7c7c60c2-d068-4808-8288-c65e3f98a2f0",
+       "excerpts": [
+        "Enterprise Account Executive \u2014 Utilities",
+        "[Apply for this Job](https://jobs.ashbyhq.com/windborne-systems/7c7c60c2-d068-4808-8288-c65e3f98a2f0/application)"
+       ]
+      }
+     ],
+     "reasoning": "https://jobs.ashbyhq.com/windborne-systems/7c7c60c2-d068-4808-8288-c65e3f98a2f0 is a live Enterprise Account Executive \u2014 Utilities posting with an application link.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "$37M Series B to Scale Weather Intelligence | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure",
+       "excerpts": [
+        "Published August 5, 2026",
+        "REDWOOD CITY, CA--( [**BUSINESS WIRE**](https://www.businesswire.com/) )--WindBorne Systems, the weather intelligence company building the world's largest atmospheric sensing network and the AI models it powers, today announced $37 million in Series B funding"
+       ]
+      }
+     ],
+     "reasoning": "The August 5, 2026 Series B announcement at https://windbornesystems.com/blog/windborne-systems-raises-37-million-to-build-the-worlds-weather-intelligence-infrastructure falls within the preceding 18 months.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "U.S. Navy & Air Force Weather Forecasting Awards | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-wins-u-s-navy-air-force-awards-to-accelerate-its-groundbreaking-ai-weather-forecasting-models-and-enable-operational-govt-models",
+       "excerpts": [
+        "NOAA has also been an operational customer of WindBorne since early 2023."
+       ]
+      }
+     ],
+     "reasoning": "The company's Navy/Air Force awards article explicitly identifies NOAA as an operational customer since early 2023.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "U.S. Navy & Air Force Weather Forecasting Awards | WindBorne Systems",
+       "url": "https://windbornesystems.com/blog/windborne-wins-u-s-navy-air-force-awards-to-accelerate-its-groundbreaking-ai-weather-forecasting-models-and-enable-operational-govt-models",
+       "excerpts": [
+        "In July, WindBorne began a six-month contract with the U.S."
+       ]
+      }
+     ],
+     "reasoning": "The article describes a six-month contract with the U.S. Navy to expand WeatherMesh forecasting capabilities, supporting its classification as a government contracting customer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "GTM Lead | WindBorne Systems",
+       "url": "https://www.windbornesystems.com/careers/growth-lead",
+       "excerpts": [
+        "Hands-on with product analytics \u2013 you're familiar with tools like HotJar/PostHog/Mixpanel"
+       ]
+      }
+     ],
+     "reasoning": "HotJar is explicitly named in the GTM Lead posting as a product-analytics familiarity requirement; deployment is not confirmed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "GTM Lead | WindBorne Systems",
+       "url": "https://www.windbornesystems.com/careers/growth-lead",
+       "excerpts": [
+        "Hands-on with product analytics \u2013 you're familiar with tools like HotJar/PostHog/Mixpanel"
+       ]
+      }
+     ],
+     "reasoning": "PostHog is explicitly named in the GTM Lead posting as a product-analytics familiarity requirement; deployment is not confirmed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "GTM Lead | WindBorne Systems",
+       "url": "https://www.windbornesystems.com/careers/growth-lead",
+       "excerpts": [
+        "Hands-on with product analytics \u2013 you're familiar with tools like HotJar/PostHog/Mixpanel"
+       ]
+      }
+     ],
+     "reasoning": "Mixpanel is explicitly named in the GTM Lead posting as a product-analytics familiarity requirement; deployment is not confirmed.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2019.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "WindBorne combines atmospheric observations from autonomous weather balloons with AI models to provide weather forecasts and decision tools for individuals, enterprises, and government agencies.",
+    "employee_band": "101-200",
+    "model_provider": "WindBorne's proprietary WeatherMesh models, including WeatherMesh-6 Global and WM-6 3km, and its MetaMesh blended forecasting model.",
+    "pricing_page": false,
+    "funding_amount_usd": 37000000.0,
+    "named_customers": [
+     "NOAA",
+     "U.S. Navy"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [
+     "HotJar",
+     "PostHog",
+     "Mixpanel"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Redwood City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

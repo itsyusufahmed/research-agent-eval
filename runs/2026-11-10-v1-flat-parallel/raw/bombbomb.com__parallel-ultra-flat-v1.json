@@ -1,0 +1,487 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea5435d1b5aa5b46e",
+  "interaction_id": "trun_142119f6a1b4439ea5435d1b5aa5b46e",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "bombbomb.com"
+  },
+  "created_at": "2026-11-10T18:48:46.457383Z",
+  "modified_at": "2026-11-10T18:53:32.070174Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea5435d1b5aa5b46e",
+   "interaction_id": "trun_142119f6a1b4439ea5435d1b5aa5b46e",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "bombbomb.com"
+   },
+   "created_at": "2026-11-10T18:48:46.457383Z",
+   "modified_at": "2026-11-10T18:53:32.070174Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://www.bombbomb.com/company",
+       "excerpts": [
+        "founded 2006"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb's company page explicitly states that it was founded in 2006. Source: https://www.bombbomb.com/company",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security and Compliance | BombBomb",
+       "url": "https://www.bombbomb.com/bombbomb-features/security-and-compliance",
+       "excerpts": [
+        "BombBomb's SOC 2 Type 2 certification focuses on controls to protect customer data\u2014including security, availability, processing integrity, confidentiality, and privacy.",
+        "BombBomb is compliant with data protection regulations like GDPR and CPRA, as well as the ADA (Americans with Disabilities Act)."
+       ]
+      }
+     ],
+     "reasoning": "The security page claims SOC 2 Type 2 certification and GDPR compliance. Both are among the requested categories; neither is described as merely in progress. Source: https://www.bombbomb.com/bombbomb-features/security-and-compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "BombBomb | LinkedIn",
+       "url": "https://linkedin.com/company/1810547",
+       "excerpts": [
+        "Headquarters Denver, Colorado Type Privately Held Founded 2006",
+        "Primary 600 17th Street Suite 2800 South Denver, Colorado 80202, US"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb's LinkedIn company profile identifies Denver, Colorado as headquarters and gives its primary address in the US. Source: https://linkedin.com/company/1810547",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Featured Posts | BombBomb",
+       "url": "https://bombbomb.com/blog/",
+       "excerpts": [
+        "Featured Posts Stay up to date on the latest trends and best practices for using video messaging in business",
+        "[Video Prospecting in 2025: How to Stand Out with Promising Leads and Prospects](https://bombbomb.com/video-prospecting/)",
+        "[How to Ask for Referrals: 7 Steps to Transform Your Business](https://bombbomb.com/how-to-ask-for-referrals/)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index presents video-marketing, prospecting, customer-relationship, and product-use content. It does not establish two engineer-authored posts explaining how BombBomb itself is built, so it fails the specified engineering-blog threshold. Source: https://bombbomb.com/blog/",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Director of Marketing - BombBomb - Career Page",
+       "url": "http://bombbomb.applytojob.com/apply/P94nf0nbFB/Director-Of-Marketing",
+       "excerpts": [
+        "BombBomb is on a mission to help relationship-driven sales teams create authentic connections with their customers."
+       ]
+      },
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/company",
+       "excerpts": [
+        "BombBomb Engage is our newest video messaging platform, designed to help teams quickly create, send and track personalized videos that strengthen relationships, improve engagement and accelerate business outcomes."
+       ]
+      }
+     ],
+     "reasoning": "The company describes creating, sending, and tracking personalized videos, while its job posting identifies relationship-driven sales teams as the intended audience. Sources: https://bombbomb.com/company and http://bombbomb.applytojob.com/apply/P94nf0nbFB/Director-Of-Marketing",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "BombBomb Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/bombbomb/5a1d8a6a240000240063c880",
+       "excerpts": [
+        "As of October 2026 , BombBomb has approximately 71 employees"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports approximately 71 employees as of October 2026, which falls in the 51-100 band. This is a third-party estimate. Source: https://leadiq.com/c/bombbomb/5a1d8a6a240000240063c880",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Feature Highlight: Video Captions for a More Inclusive Messaging Experience | BombBomb",
+       "url": "https://bombbomb.com/video-captions",
+       "excerpts": [
+        "Writing an artificial intelligence program capable of generating captions and transcriptions can be time-consuming and costly.",
+        "Leveraging an existing API ( [Amazon Web Services](https://aws.amazon.com/free/?trk=ps_a131L0000085EJuQAM&trkCampaign=acq_paid_search_brand&sc_channel=ps&sc_campaign=acquisition_US&sc_publisher=google&sc_category=core-main&sc_country=US&sc_geo=NAMER&sc_outcome=acq&sc_detail=amazon%20web%20services&sc_content=Brand_amazon_web_services_e&sc_segment=423740514695&sc_medium=ACQ-P%7CPS-GO%7CBrand%7CDesktop%7CSU%7CCore-Main%7CCore%7CUS%7CEN%7CText&s_kwcid=AL!4422!3!423740514695!e!!g!!amazon%20web%20services&ef_id=CjwKCAiAzrWOBhBjEiwAq85QZyUkcCfnSJHep4yeaD_-rr5SplhZWtm4iLr-z62gypP6lPowW_42URoCVeAQAvD_BwE:G:s&s_kwcid=AL!4422!3!423740514695!e!!g!!amazon%20web%20services&all-free-tier.sort-by=item.additionalFields.SortRank&all-free-tier.sort-order=asc&awsf.Free%20Tier%20Types=*all&awsf.Free%20Tier%20Categories=*all) ) was the most cost-effective option.",
+        "And it was the one that would get captions into the hands of BombBomb users faster."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb's captions implementation article explicitly identifies an Amazon Web Services API as its chosen approach for automated captions and transcription. This supports AWS for that capability, but does not establish the provider of every newer AI feature. Source: https://bombbomb.com/video-captions",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | BombBomb",
+       "url": "https://bombbomb.com/pricing",
+       "excerpts": [
+        "$56 /user/month"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page lists a per-user monthly price, directly establishing that a pricing page exists. Source: https://bombbomb.com/pricing",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "Total Amount Sold $ 2,432,406 USD"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: BombBomb; website_url: https://bombbomb.com; latest_funding_round_name: Series A; latest_funding_round_date: 2025-02-24; latest_funding_round_amount_usd: 2432406.0; all_funding_rounds[0].round_name: Series A; all_funding_rounds[0].amount_usd: 2432406.0; all_funding_rounds[0].round_valuation_usd: null",
+        "all_funding_rounds[0].round_date: 2025-02-24; all_funding_rounds[0].round_investor_names: null; all_funding_rounds[1].round_name: Seed; all_funding_rounds[1].amount_usd: 500004.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2013-05-30; all_funding_rounds"
+       ]
+      }
+     ],
+     "reasoning": "The SEC Form D reports $2,432,406 sold, matching the amount associated with the latest Series A funding record. Sources: https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml and https://tracxn.com/d/companies/bombbomb/__STBuK4nCr_u1b2KzDNgaw523cmxkROX00BqoJfOwTUo",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/company",
+       "excerpts": [
+        "Companies that love customers use BombBomb"
+       ]
+      },
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "Farmers Insurance and Affinitiv appear in the company page's customer-logo area, introduced as companies that use BombBomb. Source: https://bombbomb.com/company",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "|X |New Notice | | |Date of First Sale |2025-02-24 | | | |First Sale Yet to Occur |"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: BombBomb; website_url: https://bombbomb.com; latest_funding_round_name: Series A; latest_funding_round_date: 2025-02-24; latest_funding_round_amount_usd: 2432406.0; all_funding_rounds[0].round_name: Series A; all_funding_rounds[0].amount_usd: 2432406.0; all_funding_rounds[0].round_valuation_usd: null",
+        "all_funding_rounds[0].round_date: 2025-02-24; all_funding_rounds[0].round_investor_names: null; all_funding_rounds[1].round_name: Seed; all_funding_rounds[1].amount_usd: 500004.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2013-05-30; all_funding_rounds"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding record uses February 24, 2025, matching the SEC filing's first-sale date. The answer therefore uses 2025-02 rather than the March 12 filing-signature date reported by another funding profile. Source: https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Director, Revenue Operations & Strategic Finance - BombBomb - Career Page",
+       "url": "https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance",
+       "excerpts": [
+        "Ensure accurate and consistent synchronization of customer and revenue data between Salesforce and Chargebee, including reconciliation processes and clear system-of-record ownership"
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations and Strategic Finance job posting explicitly requires synchronization of customer and revenue data between Salesforce and Chargebee, establishing Salesforce as an internal CRM signal. Source: https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/kathrynadamson",
+       "excerpts": [
+        "company name: BombBomb title: Vice President of Growth ... title: Vice President of Growth f summary I lead Growth - owning Sales, Marketing, Customer Success, and Support\u2014focused on one core idea: in a world flooded with automation and AI, transparency and authenticity are the only real differentiators. ... start date year: 2026 start date month: 3 start date: 2026-03-01"
+       ]
+      }
+     ],
+     "reasoning": "Kathryn Adamson's profile dates her BombBomb Vice President of Growth role to March 2026, within the requested twelve-month window. The evidence establishes the role's start date rather than providing a separate appointment announcement. Source: https://linkedin.com/in/kathrynadamson",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "BombBomb - Career Page",
+       "url": "https://bombbomb.applytojob.com/",
+       "excerpts": [
+        "Thanks for visiting our Job Board. Please review our open positions and apply to the positions that match your qualifications. There are no open positions at this time."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb's public job board states that there are no open positions, which includes no qualifying AI, ML, or data-science roles. Source: https://bombbomb.applytojob.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: BombBomb; website_url: https://bombbomb.com; latest_funding_round_name: Series A; latest_funding_round_date: 2025-02-24; latest_funding_round_amount_usd: 2432406.0; all_funding_rounds[0].round_name: Series A; all_funding_rounds[0].amount_usd: 2432406.0; all_funding_rounds[0].round_valuation_usd: null",
+        "all_funding_rounds[0].round_date: 2025-02-24; all_funding_rounds[0].round_investor_names: null; all_funding_rounds[1].round_name: Seed; all_funding_rounds[1].amount_usd: 500004.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2013-05-30; all_funding_rounds"
+       ]
+      },
+      {
+       "title": "BombBomb 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/57973-78",
+       "excerpts": [
+        "Later Stage VC (Series A) |12-Mar-2025 |$2.43M | | |Completed"
+       ]
+      }
+     ],
+     "reasoning": "The funding profiles both classify the latest financing as Series A, despite using different transaction-date conventions. Sources: https://tracxn.com/d/companies/bombbomb/__STBuK4nCr_u1b2KzDNgaw523cmxkROX00BqoJfOwTUo and https://pitchbook.com/profiles/company/57973-78",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Developer",
+       "url": "https://developer.bombbomb.com/",
+       "excerpts": [
+        "Home Getting Started 1\\. Create an Account 2\\. OAuth Guide 3\\. EZ Integrate 4\\. Webhooks API [Developers](https://developer.bombbomb.com/) Growing relationships on your platform Get Started Why build with BombBomb? All kinds of people in all kinds of industries all around the world are using BombBomb every day. ... [Check out our open API](https://developer.bombbomb.com/api) and start a free developer account to explore what's possible. VIEW V2 API Features Manage Videos Bring BombBomb videos into your workflow with our video endpoints. ... [API](https://developer.bombbomb.com/api) [Getting Started](https://developer.bombbomb.com/getting-started-1)"
+       ]
+      }
+     ],
+     "reasoning": "The public developer portal provides account setup, OAuth, integration, webhooks, and API documentation rather than a single FAQ. Source: https://developer.bombbomb.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "BombBomb | LinkedIn",
+       "url": "https://linkedin.com/company/1810547",
+       "excerpts": [
+        "Headquarters Denver, Colorado Type Privately Held Founded 2006"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb's LinkedIn company profile explicitly lists Denver, Colorado as its headquarters. Source: https://linkedin.com/company/1810547",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "New BombBomb Experience \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/49827659565965-New-BombBomb-Experience",
+       "excerpts": [
+        "Your BombBomb is moving to the new BombBomb experience on **November 9** . You can try it today with the toggle in your account, and switch back any time before **November 9** . Take a few minutes to look around and see what's new.",
+        "**Record your screen in Chrome or Edge.** Start a screen recording right in your browser. There's nothing to install.",
+        "If you use transcripts, viewers can search for a word and jump to that moment."
+       ]
+      }
+     ],
+     "reasoning": "The new-platform announcement specifies a November 9 migration and immediate early access. Its page metadata is dated October 22, 2026, placing this rollout within the requested window. New capabilities include browser-native screen recording and searchable transcripts, not merely cosmetic changes. The year requires combining the announcement with its timestamp. Source: https://support.bombbomb.com/hc/en-us/articles/49827659565965-New-BombBomb-Experience",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "BombBomb - Career Page",
+       "url": "https://bombbomb.applytojob.com/",
+       "excerpts": [
+        "Thanks for visiting our Job Board. Please review our open positions and apply to the positions that match your qualifications. There are no open positions at this time."
+       ]
+      }
+     ],
+     "reasoning": "The public job board states that there are no open positions, so it lists no qualifying SDR, BDR, or account-executive openings. Source: https://bombbomb.applytojob.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: BombBomb; website_url: https://bombbomb.com; latest_funding_round_name: Series A; latest_funding_round_date: 2025-02-24; latest_funding_round_amount_usd: 2432406.0; all_funding_rounds[0].round_name: Series A; all_funding_rounds[0].amount_usd: 2432406.0; all_funding_rounds[0].round_valuation_usd: null",
+        "all_funding_rounds[0].round_date: 2025-02-24; all_funding_rounds[0].round_investor_names: null; all_funding_rounds[1].round_name: Seed; all_funding_rounds[1].amount_usd: 500004.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2013-05-30; all_funding_rounds"
+       ]
+      },
+      {
+       "title": "SEC FORM D",
+       "url": "https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml",
+       "excerpts": [
+        "|X |New Notice | | |Date of First Sale |2025-02-24 | | | |First Sale Yet to Occur |"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified funding is the February 24, 2025 financing documented in the SEC filing. It predates the eighteen-month window beginning May 9, 2025; no newer round appears in the funding history. Sources: https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml and https://tracxn.com/d/companies/bombbomb/__STBuK4nCr_u1b2KzDNgaw523cmxkROX00BqoJfOwTUo",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security and Compliance | BombBomb",
+       "url": "https://www.bombbomb.com/bombbomb-features/security-and-compliance",
+       "excerpts": [
+        "BombBomb's SOC 2 Type 2 certification focuses on controls to protect customer data\u2014including security, availability, processing integrity, confidentiality, and privacy."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly claims SOC 2 Type 2 certification. Source: https://www.bombbomb.com/bombbomb-features/security-and-compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security and Compliance | BombBomb",
+       "url": "https://www.bombbomb.com/bombbomb-features/security-and-compliance",
+       "excerpts": [
+        "BombBomb is compliant with data protection regulations like GDPR and CPRA, as well as the ADA (Americans with Disabilities Act)."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly claims GDPR compliance. Source: https://www.bombbomb.com/bombbomb-features/security-and-compliance",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Director, Revenue Operations & Strategic Finance - BombBomb - Career Page",
+       "url": "https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance",
+       "excerpts": [
+        "Ensure accurate and consistent synchronization of customer and revenue data between Salesforce and Chargebee, including reconciliation processes and clear system-of-record ownership"
+       ]
+      }
+     ],
+     "reasoning": "The job posting names Salesforce as a system holding BombBomb's customer and revenue data. Source: https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/company",
+       "excerpts": [
+        "Farmers Insurance",
+        "Companies that love customers use BombBomb"
+       ]
+      }
+     ],
+     "reasoning": "Farmers Insurance appears in the company page's customer-logo area. Source: https://bombbomb.com/company",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/company",
+       "excerpts": [
+        "Affinitiv",
+        "Companies that love customers use BombBomb"
+       ]
+      }
+     ],
+     "reasoning": "Affinitiv appears in the company page's customer-logo area. Source: https://bombbomb.com/company",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2006.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "BombBomb helps relationship-driven sales teams record, send, and track personalized video messages to build customer relationships.",
+    "employee_band": "51-100",
+    "model_provider": "Amazon Web Services (AWS), for automated video captions and transcription.",
+    "pricing_page": true,
+    "funding_amount_usd": 2432406.0,
+    "named_customers": [
+     "Farmers Insurance",
+     "Affinitiv"
+    ],
+    "funding_date": "2025-02",
+    "crm_stack_signal": [
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A",
+    "public_docs": true,
+    "hq_city": "Denver",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

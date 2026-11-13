@@ -1,0 +1,24 @@
+{
+ "url": "https://insights.cybcube.com/en/post_typeblogpostp1384",
+ "fetched_at": "2026-11-10T19:15:55.532942+00:00",
+ "hours_after_run": 43.3,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "e5964320334c2d06e73751f67f6908a82cfe1c91317cc74d247a2d4e3050391e",
+ "chars": 3843,
+ "truncated": false,
+ "title": "Technology Series: Deploying Lambda Functions and Layers on AWS",
+ "markdown": "- [Insights Home](https://www.cybcube.com/news-insights)\n- [Blog](https://insights.cybcube.com/en)\n- [Research & Reports](https://www.cybcube.com/research-and-reports/)\n- [Videos](https://www.cybcube.com/videos)\n- [Podcasts](https://www.cybcube.com/podcasts)\n- [Events](https://www.cybcube.com/events)\n\n[Software Development](https://insights.cybcube.com/en/tag/software-development)\n\n# TechnologySeries:DeployingLambdaFunctionsandLayersonAWS\n\nTechnology Series: Deploying Lambda Functions and Layers on AWS\n\n![](https://insights.cybcube.com/hubfs/2019-11-26-20-14-16-655-5ddd8798989b6e085c960d35-1.png)\n\n- Mar 22 2020\n\n- 1 Minute Read\n\nIn our last article, we talked about AWS SAM (Serverless Application Model) and how to run an end-to-end application locally.\n\nWe'll be using the same code that we used to create a lambda and a small layer and deploy it to AWS.\n\n## Template File\n\nJust like with SAM, we need a template file to deploy our Lambda function and its associated layer.\n\nIf we look at the layer definition, we can spot a couple of differences:\n\n- RetentionPolicy: This is now set to Delete instead of Retain\n- ContentUri: Instead of specifying the location of the code, we refer to a S3 bucket\n\n![](https://insights.cybcube.com/hubfs/Imported_Blog_Media/2019-11-26-20-14-30-460-5ddd87a68cb6230e38166f8b-1.jpg)\n\nWe had to change the retention policy because otherwise, the layer would not get updated on AWS and the Lambda would end up re-using the existing version, which is not what we want if we made changes to the layer.\n\nAlso, we don't want to specify a particular layer version, because we just don't know what i will be. Instead we indicate that the layer's code is in a ZIP file that's stored on S3.\n\n## Swagger Spec\n\nAnother difference is that while we had a smallish swagger spec in our original template, we now need a swagger spec that's in a separate file (because it's easier to read and because we can export it from AWS to begin with).\n\nYou can find our swagger.yaml [here](https://github.com/manu-ccube/Code/blob/dev/aws-deployment/swagger.yaml)\n\n## RelatedArticles\n\n[![](https://insights.cybcube.com/hubfs/Capitalizing%20on%20the%20Cyber%20Growth%20Opportunity%20Thumbnail.png)\\\\\n\\\\\n- Nov 6 2026\\\\\n- Will Hatcher\\\\\n\\\\\n**Capitalize on the Cyber Growth Opportunity: Brokers & the Elusive SME** \\\\\n\\\\\nCyber brokers often miss out on the growth opportunity that SMEs present. This blog details how brokers can effectively capitalize on SME placements using analytics. \\\\\n\\\\\nRead Article \\\\\n![](https://insights.cybcube.com/hubfs/raw_assets/public/cybercube-2024/images/arrow.svg)](https://insights.cybcube.com/en/cyber-growth-brokers-the-elusive-sme) [![](https://insights.cybcube.com/hubfs/BLOG/Blog%20Images/cybercube_ai-incident-october-2026_thumbnail_2400x1600_v01.jpg)\\\\\n\\\\\n- Nov 2 2026\\\\\n- Alex Tenenbaum\\\\\n\\\\\n**AI Incident Roundup \\| October 2026** \\\\\n\\\\\nOctober’s AI Incident Roundup: AI agents escaping test environments and open-weight AI attacks on retailers, and what they mean for cyber insurers.\\\\\n\\\\\nRead Article \\\\\n![](https://insights.cybcube.com/hubfs/raw_assets/public/cybercube-2024/images/arrow.svg)](https://insights.cybcube.com/en/ai-incident-roundup-october-2026) [![php2shell](https://insights.cybcube.com/hubfs/BLOG/Blog%20Images/cybercube_php2shell-blog_thumbnail_2400x1600_v01%20(1).jpg)\\\\\n\\\\\n- Oct 23 2026\\\\\n- William Altman\\\\\n\\\\\n**PHP2Shell and the AI Vulnerability Race: What Cyber (Re)insurers Should Expect Next** \\\\\n\\\\\nPHP2Shell hasn’t caused a cyber catastrophe yet, but risk remains elevated, and AI-driven vulnerability discovery means more events like it are coming.\\\\\n\\\\\nRead Article \\\\\n![](https://insights.cybcube.com/hubfs/raw_assets/public/cybercube-2024/images/arrow.svg)](https://insights.cybcube.com/en/php2shell-cyber-insurance-ai-vulnerability)\n\nTwitter Widget Iframe",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "eng_blog"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T18:47:24.550279+00:00",
+ "hours_after_launch": 0.48
+}

@@ -1,0 +1,167 @@
+{
+ "schema_version": "v0",
+ "company": "Owl.co",
+ "domain": "owl.co",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Owl.co helps insurance claims teams turn claim documents, records, and external signals into structured, source-cited evidence for reviewing claims.",
+   "citations": [
+    "https://owl.co/products"
+   ],
+   "notes": "https://owl.co/products describes an insurance platform that turns documents, signals, and records into structured, cited evidence for teams to act on."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://owl.co/"
+   ],
+   "notes": "The navigation and footer at https://owl.co/ provide product, company, resource, and briefing links but no pricing link. The /pricing URL returned no readable pricing page."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://owl.co/success-stories"
+   ],
+   "notes": "https://owl.co/success-stories contains case studies, but the customers are described anonymously as a leading insurer and a multiline U.S. property-and-casualty insurer. Fewer than two customer companies are named, so the requested negative value is an empty list."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "51-100",
+   "citations": [
+    "https://fundediq.co/owl-co-owl-co-funding"
+   ],
+   "notes": "https://fundediq.co/owl-co-owl-co-funding explicitly reports the 51-100 employee band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Vancouver",
+    "country": "Canada"
+   },
+   "citations": [
+    "https://www.forbes.com/companies/owlco"
+   ],
+   "notes": "hq_city: https://www.forbes.com/companies/owlco identifies Vancouver as the headquarters city, consistent with the company's LinkedIn headquarters entry. | hq_country: https://www.forbes.com/companies/owlco identifies the headquarters country as Canada."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2018.0,
+   "citations": [
+    "https://www.forbes.com/companies/owlco",
+    "https://tracxn.com"
+   ],
+   "notes": "https://www.forbes.com/companies/owlco lists Founded 2018, consistent with the company funding profile. A conflicting LinkedIn entry gives 2019, so 2018 is selected with limited confidence."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://owl.co/resources"
+   ],
+   "notes": "The index at https://owl.co/resources contains insurance-industry education, product-use cases, and marketing content. It did not establish two engineer-authored posts explaining how Owl's product is built, so it does not meet the requested engineering-blog definition."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://owl.co/",
+    "https://owl.co/documentation"
+   ],
+   "notes": "https://owl.co/ has no documentation or help link in its reviewed navigation/footer. Although https://owl.co/documentation exists, its category and guide cards link only to placeholder anchors, not readable articles. The docs and help subdomains also returned no readable pages, so the multiple-public-articles requirement is not met."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://owl.co/careers"
+   ],
+   "notes": "https://owl.co/careers lists product, software engineering, solutions engineering, data-quality analysis, and account-executive roles, but none has a qualifying AI, ML, or data-science title. AI-related responsibilities and the Data Quality Analyst title do not qualify under the question's rules."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Owl-1.5",
+   "citations": [
+    "https://owl.co/documentation"
+   ],
+   "notes": "https://owl.co/documentation publicly names Owl-1.5 in its model-card description. No third-party model provider was identified in the reviewed documentation, security, privacy, or blog materials; Owl-Bench is not included because its role as a model was not established."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2 Type II",
+    "HIPAA",
+    "GDPR"
+   ],
+   "citations": [
+    "https://owl.co/security"
+   ],
+   "notes": "compliance_certs: https://owl.co/security explicitly lists SOC 2 Type II, HIPAA, and GDPR. CCPA is excluded because it is outside the five requested categories. | compliance_certs.0: https://owl.co/security explicitly names SOC 2 Type II. | compliance_certs.1: https://owl.co/security explicitly names HIPAA. | compliance_certs.2: https://owl.co/security explicitly names GDPR."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2021-11",
+    "amount_usd": 30000000.0
+   },
+   "citations": [
+    "https://pitchbook.com/profiles/company/233015-50"
+   ],
+   "notes": "funding_stage: https://pitchbook.com/profiles/company/233015-50 identifies the latest disclosed round as Series B, consistent with the current company funding profile. | funding_date: https://pitchbook.com/profiles/company/233015-50 dates the round to November 3, 2021, which is formatted as 2021-11. | funding_amount_usd: https://pitchbook.com/profiles/company/233015-50 lists the latest disclosed Series B round as $30 million; the current company funding profile agrees."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://pitchbook.com/profiles/company/233015-50",
+    "https://tracxn.com"
+   ],
+   "notes": "https://pitchbook.com/profiles/company/233015-50 and the current company funding profile identify November 2021 as the latest disclosed round. That predates the requested May 9, 2025\u2013November 9, 2026 window."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://owl.co/careers/enterprise-account-executive-559258"
+   ],
+   "notes": "https://owl.co/careers/enterprise-account-executive-559258 is a live Enterprise Account Executive posting with an application link, and the role also appears on the careers index."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows"
+   ],
+   "notes": "https://owl.co/resources/template-assistant-ai-improving-insurance-document-workflows explicitly introduces Template Assistant as a new feature and is dated May 9, 2026. This falls on the inclusive opening boundary of the user's explicitly requested May 9\u2013November 9, 2026 window."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://owl.co/about",
+    "https://linkedin.com/in/salbayati",
+    "https://linkedin.com/in/sammerat"
+   ],
+   "notes": "The small leadership roster at https://owl.co/about was reviewed in full, and no in-window join or departure announcement was identified. Available dated profiles place several executives' starts before the requested window. Because the team page does not date every role and some profile titles differ, this is a qualified negative rather than a definitive personnel history."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce"
+   ],
+   "citations": [
+    "https://owl.co/careers/enterprise-account-executive-559258"
+   ],
+   "notes": "crm_stack_signal: The live Enterprise Account Executive posting at https://owl.co/careers/enterprise-account-executive-559258 explicitly requires forecasting in Salesforce. | crm_stack_signal.0: https://owl.co/careers/enterprise-account-executive-559258 explicitly names Salesforce as the system used for forecasting."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 323.0
+}

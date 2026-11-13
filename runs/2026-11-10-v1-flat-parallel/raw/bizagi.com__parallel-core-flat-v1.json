@@ -1,0 +1,501 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e89810482922a633c",
+  "interaction_id": "trun_142119f6a1b4439e89810482922a633c",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "bizagi.com"
+  },
+  "created_at": "2026-11-10T18:48:03.463910Z",
+  "modified_at": "2026-11-10T18:49:57.373303Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e89810482922a633c",
+   "interaction_id": "trun_142119f6a1b4439e89810482922a633c",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "bizagi.com"
+   },
+   "created_at": "2026-11-10T18:48:03.463910Z",
+   "modified_at": "2026-11-10T18:49:57.373303Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About | Bizagi",
+       "url": "https://www.bizagi.com/en/about",
+       "excerpts": [
+        "1989 Founded in Bogot\u00e1 by Gustavo G\u00f3mez and co-founders, initially delivering consulting and custom software."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s About page says it was founded in Bogot\u00e1 in 1989.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Bizagi is ISO/IEC 27001:2022 certified. Bizagi's information security Management System (ISMS) is based on ISO/IEC 27001:2022 standard.",
+        "Bizagi is committed to providing the features to achieve GDPR compliance and enforce privacy and protection of personal data. **GDPR** Bizagi is committed to providing the features to achieve GDPR compliance and enforce privacy and protection of personal data."
+       ]
+      }
+     ],
+     "reasoning": "The compliance page expressly says Bizagi is ISO/IEC 27001:2022 certified and its GDPR page names GDPR compliance; these are the requested listed items.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Bizagi",
+       "url": "https://linkedin.com/company/bizagi",
+       "excerpts": [
+        "Industry: Software Development \u00b7 Company size: 201-500 employees \u00b7 Headquarters: Washington DC",
+        "Locations address: 1775 Tysons Blvd, 5th Floor, Tysons, Washington DC, 22102, US ... name: Nymphenburgerstra\u00dfe 4, 80335 Munich, Germany"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s LinkedIn company profile identifies Washington DC as headquarters, and its address listing identifies the U.S.; together these support United States as the headquarters country.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog - Low-Code, Process Automation, AI & More | Bizagi",
+       "url": "https://www.bizagi.com/en/blog?page=2",
+       "excerpts": [
+        "{\"pageSize\":15,\"currentPage\":2,\"categoryTitle\":\"\",\"pages\":0,\"navType\":\"\",\"pageLabel\":\"Page\",\"ofLabel\":\"of\",\"items\":[{\"title\":\"The TCO Iceberg: The Real Cost of Enterprise Automation Software\",\"description\":\"Key takeaways\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tDon\u2019t let the first quote decide your shortlist. The real cost shows up in years two and three.\\\\n\\\\t\\\\n\\\\t\\\\n\\\\tAsk every vendor about usage multipliers, support-tier gates and the add-ons...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/the-tco-iceberg\\_blog-image.png\",\"url\":\"/en/blog/enterprise-automation-tco\",\"publishDate\":\"10/12/26\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"Answered: 8 Important Questions About AI Agents in the Enterprise \",\"description\":\"1.    What are AI Agents and how do they work in an enterprise setting?\\\\n\\\\nIn an enterprise context, an AI agent is a specialized, generative-AI-powered resource built to take on one well-defined...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/8-questions-about-ai-agents\\_blog-image-1.png\",\"url\":\"/en/blog/questions-ai-agents-enterprise\",\"publishDate\":\"09/14/26\",\"categories\":[{\"title\":\"AI & Intelligent Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/ai-intelligent-automation\"}]},{\"title\":\"BPO Automation: How to Modernize Business Process Outsourcing\",\"description\":\"The BPO reality: client requirements shift by the week, audits eat up months of manual retrieval, and margins get thinner every time a competitor undercuts you on price. Labour arbitrage is no longer enough...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/bpo-blog.png\",\"url\":\"/en/blog/bpo-automation-business-process-outsourcing\",\"publishDate\":\"09/07/26\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"AI for BPO: Turning Document-Intensive Processes into a Competitive Advantage\",\"description\":\"Every BPO leader we talk to is being asked the same question by their board right now: what's your AI strategy? Most of the time, the strategy is there, but they can\u2019t get started because their...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/ai\\_for\\_bpo.png\",\"url\":\"/en/blog/ai-for-bpo\",\"publishDate\":\"09/02/26\",\"categories\":[{\"title\":\"AI & Intelligent Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/ai-intelligent-automation\"}]},{\"title\":\"Orchestration vs. Automation - What's the Difference and Which Would Benefit Your Organization?\",\"description\":\"Key takeaways\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tAutomation uses technology to complete a single, well-defined task with minimal human input, e.g. extracting data from an invoice.\\\\n\\\\t\\\\n\\\\t\\\\n\\\\tOrchestration coordinates many automated...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/Automation\\_vs\\_orchestration.jpg\",\"url\":\"/en/blog/orchestration-vs-automation\",\"publishDate\":\"08/11/26\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"Case Management Explained: Adaptability for Unstructured Processes \",\"description\":\"Every business runs on processes. But not every situation fits neatly into a predefined workflow. The gap between what your process says should happen and what actually needs to happen can cost you time,...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/case-management-explained\\_blog-image.png\",\"url\":\"/en/blog/case-management-explained\",\"publishDate\":\"07/28/26\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"Vibe Coding: The Trend Every Business Leader Should Approach With Caution\",\"description\":\"\"Building a desk from IKEA does not make you a carpenter. And vibe coding does not make you an enterprise app developer.\"\\\\n\\\\nThat's how Rachel Brennan, VP of Product Marketing at Bizagi, frames...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/vibe-coding\\_blog-image-1.png\",\"url\":\"/en/blog/vibe-coding-caution\",\"publishDate\":\"07/06/26\",\"categories\":[{\"title\":\"AI & Intelligent Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/ai-intelligent-automation\"}]},{\"title\":\"Why Enterprise Leaders Choose Bizagi\",\"description\":\"Key takeaways\\\\n\\\\nBizagi delivers:\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tNative, governed AI capabilities including AI Agents, Workers, and AI assistant Ask Ada.\\\\n\\\\t\\\\n\\\\t\\\\n\\\\tTrue IT\u2013business collaboration with intuitive low-code tools...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/why-enterprise-leaders\\_choose\\_bizagi.png\",\"url\":\"/en/blog/why-enterprise-leaders-choose-bizagi\",\"publishDate\":\"07/02/26\",\"categories\":[{\"title\":\"Digital Transformation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/digital-transformation\"}]},{\"title\":\"AI Adoption Challenges and How to Navigate Them\",\"description\":\"Key takeaways\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tAI adoption challenges include skills gaps, unclear use cases, high implementation costs, integration challenges, poor data quality, security concerns, and employee resistance.\\\\n\\\\t\\\\n\\\\t\\\\n\\\\tOvercoming...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/Challenges%20of%20AI%20in%20Business.jpg\",\"url\":\"/en/blog/ai-adoption-challenges\",\"publishDate\":\"03/24/26\",\"categories\":[{\"title\":\"AI & Intelligent Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/ai-intelligent-automation\"}]},{\"title\":\"How to Prioritize Processes for Automation\",\"description\":\"Key takeaways\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tStart with the right process, not the biggest, targeting high-volume, manual, error\u2011prone work where automation can show clear impact fast. \\\\n\\\\t\\\\n\\\\t\\\\n\\\\tTake a structured, ROI\u2011driven approach,...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/Process%20Prioritization\\_1.jpg\",\"url\":\"/en/blog/how-to-prioritize-processes-for-automation\",\"publishDate\":\"12/09/25\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"Bizagi Fall 2025\",\"description\":\"Bizagi expands its Artificial Intelligence capabilities with the latest version, Bizagi Fall 2025. In this version, Bizagi has a great purpose: to unlock the Value of Institutional Knowledge. To do...\",\"image\":\"/files/live/sites/bizagi/files/Fall%202025%20Launch\\_Blog.jpg\",\"url\":\"/en/blog/bizagi-fall-2025-release\",\"publishDate\":\"11/19/25\",\"categories\":[{\"title\":\"Company & Product News\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/company-news\"}]},{\"title\":\"Case Management: The Strategic Advantage Organizations Can\u2019t Afford to Ignore\",\"description\":\"Key takeaways\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tCase management brings together people, data, and actions to guide each case from submission to resolution with full visibility.\\\\n\\\\t\\\\n\\\\t\\\\n\\\\tCase work is inherently complex, human-driven, data-dependent,...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/What%20is%20case%20management.jpg\",\"url\":\"/en/blog/case-management\",\"publishDate\":\"10/09/25\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"How to Build a Center of Excellence in 6 Steps\",\"description\":\"Key takeaways\\\\n\\\\nTo build a Center of Excellence that delivers, define clear design principles, assemble a team that embraces innovation and calculated risk, and invest in reusable components that scale...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/desk%20center%20of%20excellence.jpeg\",\"url\":\"/en/blog/how-to-build-a-center-of-excellence\",\"publishDate\":\"08/25/25\",\"categories\":[{\"title\":\"Digital Transformation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/digital-transformation\"}]},{\"title\":\"Navigating Success with BOAT: Business Orchestration and Automation Technologies Explained\",\"description\":\"Key takeways\\\\n\\\\n\\\\n\\\\t\\\\n\\\\tBOAT brings together RPA, BPA, low-code, and iPaaS to eliminate fragmented automation and reduce technical debt from overlapping tools.\\\\n\\\\t\\\\n\\\\t\\\\n\\\\tThe real value comes from orchestrating end-to-end...\",\"image\":\"/files/live/sites/bizagi/files/Blogs/BOAT%20Business%20Orchestration%20and%20Automation%20Technologies.jpg\",\"url\":\"/en/blog/business-orchestration-and-automation-technologies\",\"publishDate\":\"08/15/25\",\"categories\":[{\"title\":\"Process Automation\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/process-automation\"}]},{\"title\":\"Enterprise Application Development Explained: What It Is and Why It Matters\",\"description\":\"Every company has its own way of doing things and this calls for an alternative to one-size-fits-all software. Enterprises need custom applications built to match their unique processes, systems, and goals....\",\"image\":\"/files/live/sites/bizagi/files/Blogs/Enterprise%20application.jpg\",\"url\":\"/en/blog/enterprise-application-development\",\"publishDate\":\"06/13/25\",\"categories\":[{\"title\":\"Low-Code\",\"url\":\"/home/about/news-and-events/blog/category.html?category=topics/low-code\"}]}],\"totalItems\":0}"
+       ]
+      }
+     ],
+     "reasoning": "The company blog index lists editorial posts about enterprise automation, AI agents, BPO automation, and business processes, rather than multiple engineering-written articles explaining how the product is built; this supports a negative under the stated threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About | Bizagi",
+       "url": "https://www.bizagi.com/company",
+       "excerpts": [
+        "Bizagi is a low-code automation platform used to automate and orchestrate business processes, connecting people, systems, data, AI and bots."
+       ]
+      },
+      {
+       "title": "Low-Code Platform for Process Automation and Enterprise Apps | Bizagi",
+       "url": "https://www.bizagi.com/",
+       "excerpts": [
+        "Create enterprise apps to power processes with advanced AI and governance built in."
+       ]
+      }
+     ],
+     "reasoning": "The company About page describes a low-code platform for automating and orchestrating business processes and connecting people, systems, data, AI and bots; the homepage identifies its focus as enterprise apps.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Bizagi",
+       "url": "https://linkedin.com/company/bizagi",
+       "excerpts": [
+        "Industry: Software Development \u00b7 Company size: 201-500 employees \u00b7 Headquarters: Washington DC"
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn lists Bizagi\u2019s company size as 201\u2013500 employees, which matches the required band.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Bizagi Cloud Platform > Bizagi's AI approach",
+       "url": "https://help.bizagi.com/platform/en/bizagi-ai-approach.htm",
+       "excerpts": [
+        "As a cloud-native platform running on Microsoft Azure, Bizagi leverages Microsoft's leadership in generative AI by embedding Azure's Private OpenAI GPT service directly into its automation suite.",
+        "Bizagi's AI capabilities leverage AI models provided through Microsoft Azure services."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s AI approach documentation states that the platform embeds Azure Private OpenAI GPT, and says its AI capabilities use models provided through Microsoft Azure services.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Bizagi Pricing - Consumption-Based Pricing For Full Flexibility | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/pricing",
+       "excerpts": [
+        "Bizagi's PaaS offers consumption-based pricing for full flexibility.",
+        "[View pricing brochure](https://go.bizagi.com/Brochure-BizagiPricing_LP1Registration.html) [Request a quote](https://www.bizagi.com/en/contact-us)"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi has a public pricing page describing consumption-based pricing and linking to a pricing brochure and quote request.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Website [www.bizagi.com/en](https://www.bizagi.com/en) Social [X](http://twitter.com/bizagi) Key Metrics Founded Year 1989 Location Chalfont Saint Peter, [United Kingdom](https://tracxn.com/d/geographies/united-kingdom/__BFrCTEA8idVqv695D5RNyVuEJ3b_q8H7jGByutRg8gc) Stage Late Stage Total Funding [$48M](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) in 1 round Latest Funding Round [PE, Sep 13, 2017, $\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) Investors [Invus](https://tracxn.com/d/private-equity/in"
+       ]
+      },
+      {
+       "title": "Bizagi Receives $48 Million Investment to Fuel Global Growth Plans",
+       "url": "https://www.bizagi.com/en/resources/newsroom/1208-bizagi-receives-48-million-usd-investment-to-fuel-global-growth-plans",
+       "excerpts": [
+        "\\- Capital from Invus will accelerate growth across key markets of the US and Europe"
+       ]
+      }
+     ],
+     "reasoning": "Tracxn reports total funding of $48 million in one round, and Bizagi\u2019s funding announcement headline identifies a $48 million investment; this is the reported amount for the latest round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Process Automation Case Studies | Bizagi",
+       "url": "https://www.bizagi.com/en/customers",
+       "excerpts": [
+        "DHL Group",
+        "Unilever International"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s customer pages identify DHL Group and Unilever International as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Website [www.bizagi.com/en](https://www.bizagi.com/en) Social [X](http://twitter.com/bizagi) Key Metrics Founded Year 1989 Location Chalfont Saint Peter, [United Kingdom](https://tracxn.com/d/geographies/united-kingdom/__BFrCTEA8idVqv695D5RNyVuEJ3b_q8H7jGByutRg8gc) Stage Late Stage Total Funding [$48M](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) in 1 round Latest Funding Round [PE, Sep 13, 2017, $\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) Investors [Invus](https://tracxn.com/d/private-equity/in"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile dates Bizagi\u2019s latest private-equity round to September 13, 2017; expressed as YYYY-MM, this is 2017-09.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Development Representative - BDR - Bizagi | Built In",
+       "url": "https://builtin.com/job/business-development-representative-bdr/8826498",
+       "excerpts": [
+        "**Maintain accurate activity and pipeline data** using tools such as LinkedIn Sales Navigator, Outreach, and CRM systems."
+       ]
+      }
+     ],
+     "reasoning": "A Bizagi BDR job listing says the role uses tools such as LinkedIn Sales Navigator and Outreach to maintain activity and pipeline data.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/samirgulati",
+       "excerpts": [
+        "company name: Bizagi Locality: McLean, Virginia, United States start date: 2022-01-01 start date year: 2022 start date month: 1 end date: 2026-04-01 end date year: 2026 end date month: 4 Summary Bizagi stands for business agility: empowering everyone to turn process models into workflows with our lowest-code platform. Title: Chief Marketing Officer"
+       ]
+      }
+     ],
+     "reasoning": "Samir Gulati\u2019s profile shows a Bizagi employment end date in April 2026 and identifies his title as Chief Marketing Officer, indicating a C-level departure within the 12-month window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Search for Jobs",
+       "url": "https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site",
+       "excerpts": [
+        "[AI\u2011First Full Stack Developer (.NET / Angular / Azure)](https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Bogota/Fullstack-Developer_JR676-1)"
+       ]
+      },
+      {
+       "title": "Fullstack Developer Jr676 1",
+       "url": "https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Bogota/Fullstack-Developer_JR676-1",
+       "excerpts": [
+        "Bizagi is at the forefront of the rapidly growing enterprise automation and AI market."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s live career site lists an AI-First Full Stack Developer role, which is an open role with AI in its title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Bizagi's latest funding was a [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) PE round on Sep 13, 2017, with participation from 1 [investor](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) .",
+        "Website [www.bizagi.com/en](https://www.bizagi.com/en) Social [X](http://twitter.com/bizagi) Key Metrics Founded Year 1989 Location Chalfont Saint Peter, [United Kingdom](https://tracxn.com/d/geographies/united-kingdom/__BFrCTEA8idVqv695D5RNyVuEJ3b_q8H7jGByutRg8gc) Stage Late Stage Total Funding [$48M](https://plat"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s funding profile identifies its latest round as private equity (PE).",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Bizagi API documentation",
+       "url": "https://help.bizagi.com/platform/en/rulesapi/rules_api/api/index.html",
+       "excerpts": [
+        "**Bizagi API documentation**"
+       ]
+      },
+      {
+       "title": "Bizagi Cloud Platform > Bizagi's AI approach",
+       "url": "https://help.bizagi.com/platform/en/bizagi-ai-approach.htm",
+       "excerpts": [
+        "Bizagi's AI capabilities leverage AI models provided through Microsoft Azure services.",
+        "As a cloud-native platform running on Microsoft Azure, Bizagi leverages Microsoft's leadership in generative AI by embedding Azure's Private OpenAI GPT service directly into its automation suite."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi provides public API documentation and a help portal containing product documentation, including multiple AI-approach articles.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About | Bizagi",
+       "url": "https://www.bizagi.com/company",
+       "excerpts": [
+        "Bizagi's headquarters are in Washington DC."
+       ]
+      },
+      {
+       "title": "Discover Our Offices Around the Globe | Bizagi",
+       "url": "https://www.bizagi.com/en/about/offices",
+       "excerpts": [
+        "Washington DC - Corporate Headquarters 1775 Tysons Blvd, 5th Floor, Tysons, VA, 22102 (202) 599-1156"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi identifies Washington DC as its headquarters and its offices page labels the Washington DC location as the corporate headquarters.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Bizagi's Summer 2026 Release Expands AI Insight, Automation and Control",
+       "url": "https://www.bizagi.com/resources/newsroom/summer-2026-release",
+       "excerpts": [
+        "**July 21, WASHINGTON D.C.** \u2013 Bizagi, a leader in enterprise process automation and business orchestration, today announced its Summer 2026 platform release.",
+        "Embeddable charts and insights: Bizagi's AI Assistant, Ask Ada, can now be embedded into business apps to present real-time and contextual views into business data, enabling users to have immediate access to reports and take action on the insights."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi announced its Summer 2026 platform release on July 21, 2026, including significant new AI insight and automation features, which falls within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative Bdr Jr693 1",
+       "url": "https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Business-Development-Representative---BDR_JR693-1",
+       "excerpts": [
+        "**Create qualified sales opportunities** by articulating the value of Bizagi's AI-powered process automation platform.",
+        "[Apply](https://bizagi.wd3.myworkdayjobs.com/en-US/Bizagi_Career_Site/job/Business-Development-Representative---BDR_JR693-1/apply)"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s career site has a live Business Development Representative (BDR) posting, meeting the stated hiring criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Bizagi - 2026 Company Profile, Team, Funding, Competitors & Financials - Tracxn",
+       "url": "https://tracxn.com/d/companies/bizagi/__gLrssBoIYRKDIbzRKSDwVcFuvVdYGxKGoreuKlClNCw",
+       "excerpts": [
+        "Bizagi's latest funding was a [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) PE round on Sep 13, 2017, with participation from 1 [investor](https://platform.tracxn.com/a/d/company/52dcc8bae4b07c90e4b08a0d:funding-and-investors) .",
+        "Website [www.bizagi.com/en](https://www.bizagi.com/en) Social [X](http://twitter.com/bizagi) Key Metrics Founded Year 1989 Location Chalfont Saint Peter, [United Kingdom](https://tracxn.com/d/geographies/united-kingdom/__BFrCTEA8idVqv695D5RNyVuEJ3b_q8H7jGByutRg8gc) Stage Late Stage Total Funding [$48M](https://plat"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding round shown is dated September 2017, well before the 18-month window preceding November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Bizagi is ISO/IEC 27001:2022 certified."
+       ]
+      }
+     ],
+     "reasoning": "The compliance page states that Bizagi is ISO/IEC 27001:2022 certified.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Compliance | Bizagi",
+       "url": "https://www.bizagi.com/en/platform/compliance",
+       "excerpts": [
+        "Bizagi is committed to providing the features to achieve GDPR compliance and enforce privacy and protection of personal data. **GDPR** Bizagi is committed to providing the features to achieve GDPR compliance and enforce privacy and protection of personal data."
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s compliance page names GDPR and describes its GDPR compliance commitment.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Process Automation Case Studies | Bizagi",
+       "url": "https://www.bizagi.com/en/customers",
+       "excerpts": [
+        "DHL Group"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s customer page names DHL Group.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Process Automation Case Studies | Bizagi",
+       "url": "https://www.bizagi.com/en/customers",
+       "excerpts": [
+        "Unilever International"
+       ]
+      }
+     ],
+     "reasoning": "Bizagi\u2019s customer page names Unilever International.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Development Representative - BDR - Bizagi | Built In",
+       "url": "https://builtin.com/job/business-development-representative-bdr/8826498",
+       "excerpts": [
+        "**Maintain accurate activity and pipeline data** using tools such as LinkedIn Sales Navigator, Outreach, and CRM systems."
+       ]
+      }
+     ],
+     "reasoning": "The BDR job listing names LinkedIn Sales Navigator as a work tool.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Business Development Representative - BDR - Bizagi | Built In",
+       "url": "https://builtin.com/job/business-development-representative-bdr/8826498",
+       "excerpts": [
+        "**Maintain accurate activity and pipeline data** using tools such as LinkedIn Sales Navigator, Outreach, and CRM systems."
+       ]
+      }
+     ],
+     "reasoning": "The BDR job listing names Outreach as a work tool.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1989.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Bizagi is a low-code process-automation and orchestration platform for enterprises that connects people, systems, data, AI and bots to automate business processes.",
+    "employee_band": "201-500",
+    "model_provider": "Microsoft Azure OpenAI (GPT)",
+    "pricing_page": true,
+    "funding_amount_usd": 48000000.0,
+    "named_customers": [
+     "DHL Group",
+     "Unilever International"
+    ],
+    "funding_date": "2017-09",
+    "crm_stack_signal": [
+     "LinkedIn Sales Navigator",
+     "Outreach"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "PE",
+    "public_docs": true,
+    "hq_city": "Washington, D.C.",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

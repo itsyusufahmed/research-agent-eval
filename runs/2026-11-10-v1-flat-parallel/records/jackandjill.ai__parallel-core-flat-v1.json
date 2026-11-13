@@ -1,0 +1,162 @@
+{
+ "schema_version": "v0",
+ "company": "Jack & Jill",
+ "domain": "jackandjill.ai",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Jack & Jill pairs an AI career agent that helps candidates find jobs with an AI recruiting agent that helps companies source and hire candidates through direct introductions.",
+   "citations": [
+    "https://www.jackandjill.ai/blog/series-a"
+   ],
+   "notes": "The company describes Jack as an AI agent for a candidate\u2019s career and Jill as an AI agent for hiring, which introduce a candidate and company directly when they match. This supports the one-sentence product description."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.jackandjill.ai/pricing/us"
+   ],
+   "notes": "The public pricing page lists free candidate and \u201cMeet Jill\u201d offerings and a paid \u201cHire Jill\u201d plan priced from $199 per active role per month."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Attio",
+    "Anima"
+   ],
+   "citations": [
+    "https://www.jackandjill.ai/customers"
+   ],
+   "notes": "named_customers: The company\u2019s customer-story index directly names Attio and Anima as featured stories about hiring with Jill. | named_customers.0: The customer-story index names Attio as a featured Jill customer story. | named_customers.1: The customer-story index names Anima as a featured Jill customer story."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "21-50",
+   "citations": [
+    "https://www.jackandjill.ai/about-us"
+   ],
+   "notes": "The company\u2019s team page says it has 28 people; 28 falls in the 21-50 band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "London",
+    "country": "United Kingdom"
+   },
+   "citations": [
+    "https://www.jackandjill.ai/terms?section=platform",
+    "https://www.jackandjill.ai/about-us"
+   ],
+   "notes": "hq_city: The company\u2019s registered address is in London, England, and its team page describes the operation as based in London and San Francisco. London is the best-supported city for its headquarters, though the company also has a San Francisco presence. | hq_country: The legal terms give the registered address as London, England, and the team page places the company\u2019s 28-person operation in London and San Francisco. This supports the UK as its principal country, while the page does not label a single formal headquarters, so confidence is medium."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2024.0,
+   "citations": [
+    "https://www.jackandjill.ai/llms.txt"
+   ],
+   "notes": "Jack & Jill\u2019s own llms.txt quick facts directly state \u201cFounded: 2024.\u201d A LinkedIn-derived snippet elsewhere says 2025, so I prefer the company\u2019s directly maintained canonical facts; the discrepancy lowers confidence."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.jackandjill.ai/blog"
+   ],
+   "notes": "The blog index shows company announcements, product and hiring advice, an AI-sourcing commentary by the CEO, and panel notes; it does not show two posts about product construction by engineers. Under the requested definition this is not an engineering blog."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.jackandjill.ai/docs"
+   ],
+   "notes": "The public documentation index links to multiple guides covering Jill, setup, candidate discovery, hiring briefs, introductions, pipeline management, team permissions, and integrations, meeting the requirement for several public product-documentation articles."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.jackandjill.ai/about-us"
+   ],
+   "notes": "The careers page lists open roles including Founding Engineer, but none of the listed job titles contains AI, ML, data science, or another qualifying term. Per the title-based rule, the answer is false."
+  },
+  "model_provider": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "The terms mention AI and large language models only generically; the privacy policy refers generically to third-party AI and hosting providers; and the public docs index lists product guides and integrations without naming a model vendor. I found no public statement in these first-party sources identifying the model provider, so it remains unknown."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR"
+   ],
+   "citations": [
+    "https://www.jackandjill.ai/privacy"
+   ],
+   "notes": "compliance_certs: The company privacy policy explicitly names UK GDPR in describing users\u2019 rights. GDPR is the only item from the requested list named there; it does not name SOC 2, ISO 27001, HIPAA, or PCI DSS in the cited passage. The policy refers to GDPR rights rather than describing a formal certification, so confidence is medium. | compliance_certs.0: The cited privacy-policy passage names UK GDPR; this is the sole listed compliance item present in the cited passage."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series A",
+    "date": "2026-09",
+    "amount_usd": 40000000.0
+   },
+   "citations": [
+    "https://www.jackandjill.ai/llms.txt"
+   ],
+   "notes": "funding_stage: The company\u2019s own canonical facts explicitly identify the most recent round as a Series A dated 15 September 2026. | funding_date: The company\u2019s own canonical facts date its $40M Series A to 15 September 2026, which converts to YYYY-MM as 2026-09. | funding_amount_usd: The company\u2019s own canonical facts say it raised a $40M Series A on 15 September 2026; $40M equals USD 40,000,000."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.jackandjill.ai/llms.txt"
+   ],
+   "notes": "The company announced a $40M Series A on 15 September 2026, within the 18 months before 9 November 2026."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.jackandjill.ai/about-us"
+   ],
+   "notes": "The live careers page lists Account Executive openings in both San Francisco and London, so the company is hiring for a qualifying role."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.jackandjill.ai/blog/company-insights"
+   ],
+   "notes": "The company\u2019s blog dated 4 November 2026 states \u201cToday we\u2019re launching Company Insights in Jill.\u201d This is within the six months before 9 November 2026 and is an explicit product-feature launch."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.jackandjill.ai/about-us",
+    "https://www.jackandjill.ai/llms.txt"
+   ],
+   "notes": "The complete small team roster identifies Matthew Wilson and Saaras Mehan as co-founder CEO and co-founder CTO, respectively, and identifies no other C-level or VP-level member; the company states it was founded in 2024. I found no dated announcement of an executive departure or new C/VP appointment in the period. The roster has no individual start dates, so the negative is an inference and confidence is medium."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://www.jackandjill.ai/docs",
+    "https://jobs.ashbyhq.com/jack-jill-external-ats/b7e19764-25b8-465e-8a41-206ea821ef28"
+   ],
+   "notes": "The docs/integrations page and Jack & Jill\u2019s own GTM Engineer posting were readable. The integrations listed are ATS products and Slack, and the posting refers to GTM systems without naming a CRM or sales/marketing system. Therefore the list is empty."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 300.0
+}

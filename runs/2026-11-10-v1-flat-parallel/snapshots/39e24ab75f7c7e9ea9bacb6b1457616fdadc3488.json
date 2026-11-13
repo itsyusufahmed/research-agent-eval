@@ -1,0 +1,24 @@
+{
+ "url": "https://docs.kojo.tech/docs/standards/intro-to-graphql",
+ "fetched_at": "2026-11-10T19:14:18.904401+00:00",
+ "hours_after_run": 43.2,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "8647650c18df21f0b01895359e0cbf90d9d003f45d0ef77d2383e1ee2c7f6da9",
+ "chars": 2305,
+ "truncated": false,
+ "title": "Intro to GraphQL | Kojo API",
+ "markdown": "[Skip to main content](https://docs.kojo.tech/docs/standards/intro-to-graphql/#)\n\nOn this page\n\nGraphQL is a query language for APIs. Unlike REST, GraphQL allows you to define the structure of the data you receive.\n\n### How do I use Kojo's GraphQL API? [​](https://docs.kojo.tech/docs/standards/intro-to-graphql/\\#how-do-i-use-kojos-graphql-api \"Direct link to heading\")\n\nFirst, you'll need to sign up for Kojo's developer program and [get your API key](https://docs.kojo.tech/docs/).\n\nOnce you've done this, you can begin querying the API. Let's get some information on an order:\n\n```shell\n$ curl \\\n  -X POST \\\n  -H \"Authorization: Bearer <KOJO_API_KEY>\" \\\n  -H \"Content-Type: application/json\" https://api.kojo.tech/graphql \\\n  --data '{ \"query\": \"{ order(id: \\\"cknoqhaud00eb0829dvwajdxd\\\") { id job { code name } } }\" }'\n```\n\nCopy\n\nThis will return a response like:\n\n```json\n{\n  \"data\": {\n    \"order\": {\n      \"id\": \"cknoqhaud00eb0829dvwajdxd\",\n      \"job\": {\n        \"code\": \"JC100\",\n        \"name\": \"Spaceship Launch Site\"\n      },\n    }\n  }\n}\n```\n\nCopy\n\nThe response will use the exact format that you passed in, and include the related data that you requested!\n\n### Basic Concepts [​](https://docs.kojo.tech/docs/standards/intro-to-graphql/\\#basic-concepts \"Direct link to heading\")\n\nGraphQL requests come in two forms: queries and mutations. Queries retrieve data from the Kojo API (like a REST \"GET\"). Mutations are used to modify data (like a REST \"PUT\" or \"POST\").\n\nGraphQL also allows you to [introspect](https://graphql.org/learn/introspection/) the Kojo API schema itself by executing the following query:\n\n```graphql\n{\n  __schema {\n    types {\n      name\n      description\n    }\n  }\n}\n```\n\nCopy\n\nThis will return a live enumeration of every type in the schema.\n\n### Learn More [​](https://docs.kojo.tech/docs/standards/intro-to-graphql/\\#learn-more \"Direct link to heading\")\n\nFor a more in-depth look at GraphQL, check out the official [Introduction to GraphQL](https://graphql.org/learn/).\n\n- [How do I use Kojo's GraphQL API?](https://docs.kojo.tech/docs/standards/intro-to-graphql/#how-do-i-use-kojos-graphql-api)\n- [Basic Concepts](https://docs.kojo.tech/docs/standards/intro-to-graphql/#basic-concepts)\n- [Learn More](https://docs.kojo.tech/docs/standards/intro-to-graphql/#learn-more)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T18:47:24.550279+00:00",
+ "hours_after_launch": 0.45
+}

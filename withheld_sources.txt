@@ -1,0 +1,61 @@
+# Page copies whose text is not redistributed in this repository.
+#
+# A saved page is withheld when its url, its final_url after redirects, or its archived_url
+# matches a line below. A web.archive.org copy is matched on the original URL inside its path.
+#
+#   host:<h>   the host is <h> or ends in .<h>
+#   keep:<h>   never withheld when the host is exactly <h>
+#   <text>     the lowercase host + path contains <text>
+#
+# A withheld record keeps its metadata (url, fetched_at, fetched_via, status, chars,
+# content_sha256 and the rest), drops markdown and title, and gains three fields:
+#   withheld              the entry below that matched, without its host: prefix
+#   stored_text_sha256    SHA-256 of the UTF-8 text that was stored and graded (null if none)
+#   stored_text_chars     its length in characters
+# content_sha256 covers the full fetched text, which was cut to 200,000 characters
+# before storing on a few long pages, so stored_text_sha256 is the hash to check.
+#
+# Review sites, job boards and directories are not on the list.
+
+host:linkedin.com
+keep:news.crunchbase.com
+crunchbase.com
+zoominfo.com
+pitchbook
+rocketreach.co
+apollo.io
+growjo.com
+tracxn
+cbinsights.com
+owler.com
+dnb.com
+getlatka.com
+leadiq.com
+signalhire.com
+craft.co
+datanyze.com
+6sense.com
+similarweb.com
+clay.com/dossier
+lusha.com
+contactout.com
+seamless.ai
+cience.com
+extruct.ai
+parsers.vc
+golden.com
+dealroom.co
+preqin.com
+salesintel
+demandbase.com
+uplead.com
+compworth
+builtwith.com
+enlyft.com
+hgdata
+theirstack.com
+appsruntheworld
+wappalyzer.com
+prospeo.io
+rb2b
+bloomberg.com/profile

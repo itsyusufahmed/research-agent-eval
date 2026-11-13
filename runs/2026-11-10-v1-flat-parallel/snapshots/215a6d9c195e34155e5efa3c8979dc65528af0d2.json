@@ -1,0 +1,24 @@
+{
+ "url": "https://www.opendental.com/site/programmingresources.html",
+ "fetched_at": "2026-11-10T19:25:05.446080+00:00",
+ "hours_after_run": 43.4,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "ca8378149b4ca0fcffab76d8bd106321e5968e515d11ba5ee43c622cf431c5ce",
+ "chars": 1898,
+ "truncated": false,
+ "title": "Open Dental Software - Programming Resources",
+ "markdown": "[![Home](https://www.opendental.com/site/resources/logoWhite160.png)](http://www.opendental.com/index.html)\n\n[![](https://www.opendental.com/site/resources/search.gif)\\\\\n\\\\\nSearch](https://www.opendental.com/site/searchsite.html)\n\nProgramming Resources\n\nSee [Advanced Topics](https://www.opendental.com/site/advancedtopics.html)\n\n### Database Documentation\n\nThis has been moved up a few levels in the tree. See [Database Schema](https://www.opendental.com/site/databaseschema.html)\n\n### Unit Testing\n\nSee [Unit Testing](https://www.opendental.com/resources/UnitTestsDocumentation.xml).\n\n### SQLyog\n\nMySQL does not include a way to view and edit the data in your database. We recommend [SQLyog](https://webyog.com/product/sqlyog). It has a variety of useful tools for working with your raw database. You should never use it to change the data in your database since that will cause corruption.\n\n## Interacting with Open Dental\n\n**Queries**\n\nSimple read-only operations can be performed with queries. This is useful for reports. Any third party is welcome to query the database as long as no writes are involved. We have [security measures](https://www.opendental.com/site/integrity.html) in place to prevent writing to the database, so don't even think about it. Make sure your queries are optimized. One frequent problem is that an unoptimized query can take 20 seconds to run, and all the workstations in office lock up during that time. If you need to run long queries, maybe try doing that in the middle of the night or on a slave database.\n\n**API**\n\nThis is the only way of interacting with Open Dental for any action that requires a write to the database. Direct writes to the database are never allowed other than by going through the API. See [API Specification](https://www.opendental.com/site/apispecification.html).\n\n## License\n\nSee [License](https://www.opendental.com/site/license.html)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T18:47:24.550279+00:00",
+ "hours_after_launch": 0.63
+}

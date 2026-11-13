@@ -1,0 +1,553 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e880a6f7735a8c13e",
+  "interaction_id": "trun_142119f6a1b4439e880a6f7735a8c13e",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "sergroup.com"
+  },
+  "created_at": "2026-11-10T18:48:19.984574Z",
+  "modified_at": "2026-11-10T18:51:54.848318Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e880a6f7735a8c13e",
+   "interaction_id": "trun_142119f6a1b4439e880a6f7735a8c13e",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "sergroup.com"
+   },
+   "created_at": "2026-11-10T18:48:19.984574Z",
+   "modified_at": "2026-11-10T18:51:54.848318Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "The Carlyle Group acquires majority stake in SER Group, a European ECM software provider | Carlyle",
+       "url": "https://www.carlyle.com/media-room/news-release-archive/carlyle-group-acquires-majority-stake-ser-group-european-ecm",
+       "excerpts": [
+        "Founded in 1984 and headquartered in Bonn, Germany, SER is committed to innovation, highly customizable and scalable solutions, and excellent client service."
+       ]
+      }
+     ],
+     "reasoning": "Carlyle explicitly states that SER was founded in 1984: https://www.carlyle.com/media-room/news-release-archive/carlyle-group-acquires-majority-stake-ser-group-european-ecm",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "SER Group is SOC 2 Type 1 & 2 certified - Doxis",
+       "url": "https://www.sergroup.com/en/business-platform/certification/soc2.html",
+       "excerpts": [
+        "Doxis Cloud Services have been successfully certified according to the international SOC 1 Type 2, SOC 2 Type 1 & 2 and SOC 3 standards, confirms the independent auditing firm CyberGuard Compliance LLP in its audit report."
+       ]
+      },
+      {
+       "title": "SER is ISO/IEC 27001:2022 certified - Doxis",
+       "url": "https://www.sergroup.com/en/business-platform/certification/iso-27001.html",
+       "excerpts": [
+        "SER (now Doxis) has successfully achieved [ISO 27001](https://www.doxis.com/en/blog/iso-27001-ecm) certification and received the ISO certificate from the international certification body ABS Quality Evaluations, Inc. for its information security management system (ISMS)."
+       ]
+      },
+      {
+       "title": "Doxis-Certified - SER Group",
+       "url": "https://www.sergroup.com/en/business-platform/certification.html",
+       "excerpts": [
+        "[Doxis is EU GDPR-certified \u00bb](https://www.doxis.com/en/business-platform/certification/eu-gdpr)"
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly claims SOC 2 certification, ISO 27001 certification and EU GDPR certification. Sources: https://www.sergroup.com/en/business-platform/certification/soc2.html ; https://www.sergroup.com/en/business-platform/certification/iso-27001.html ; https://www.sergroup.com/en/business-platform/certification.html",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "SER welcomes new investment from TA to accelerate growth - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+       "excerpts": [
+        "Headquartered in Bonn, Germany, SER has a well-established market leadership position in DACH and a fast-growing international business with blue-chip customers around the world."
+       ]
+      }
+     ],
+     "reasoning": "The company announcement explicitly identifies Bonn, Germany as its headquarters: https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog - Doxis",
+       "url": "https://www.doxis.com/en/blog",
+       "excerpts": [
+        "Archiving invoices in the UK: what HMRC requires, how long to keep e-invoices, which format to store and how to prepare for the 2029 mandate.",
+        "Learn how a structured file plan can help you to organize your documents efficiently and how the right software can support you in these activities.",
+        "Learn what the SAP autonomous enterprise is, how Joule agents work across finance, HR and supply chain, and how to get your documents ready for them."
+       ]
+      }
+     ],
+     "reasoning": "The readable blog index presents business-process, product and educational content, not two identifiable engineer-authored accounts of how Doxis is built internally. This is an index-based negative, not proof that no technical writing exists elsewhere: https://www.doxis.com/en/blog",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "SER Group Rebrands To 'Doxis' and Enhances Leadership to Reflect AI-First Focus as 'The Document Intelligence Company' - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis",
+       "excerpts": [
+        "Doxis, The Document Intelligence Company, is a leading provider of AI-powered document management and intelligent content automation solutions.",
+        "Doxis powers organizations' entire Document Intelligence lifecycle on a single, trusted platform \u2014 enabling leading brands to gather, analyze, manage, automate, act on, generate and secure billions of documents across business processes."
+       ]
+      }
+     ],
+     "reasoning": "The rebranding announcement describes AI-powered document management and intelligent content automation across organizations' document lifecycles: https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "About Doxis - Doxis",
+       "url": "https://www.doxis.com/en/about-us",
+       "excerpts": [
+        "We're a global leader in intelligent content automation with more than **3,000 customers,** over **5 million users** **,** more than 900 employees and a shiny **Gartner\u00ae Leader** badge."
+       ]
+      }
+     ],
+     "reasoning": "The company reports more than 900 employees, exceeding every permitted band. Null avoids assigning an incorrect band; the headcount itself is not unknown. Source: https://www.doxis.com/en/about-us",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "The 7 AI trends shaping the future of content management - Doxis",
+       "url": "https://www.sergroup.com/en/knowledge-center/blog/7-ai-trends-of-content-management.html",
+       "excerpts": [
+        "**How does this relate to Doxis?** At SER we integrate with Azure Form Recognizer, a typical multimodal, pre-trained model for layout and text."
+       ]
+      }
+     ],
+     "reasoning": "SER explicitly says it integrates Azure Form Recognizer for layout and text recognition: https://www.sergroup.com/en/knowledge-center/blog/7-ai-trends-of-content-management.html",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Doxis deployment: Cloud, on-premises & hybrid - Doxis",
+       "url": "https://sergroup.com/pricing",
+       "excerpts": [
+        "Custom-fit licensing models The choice is yours: Unlimited licenses or subscription-based \u2014 deploy Doxis independently or use the managed services from SER"
+       ]
+      }
+     ],
+     "reasoning": "The public /pricing URL describes unlimited-license and subscription-based licensing choices. It qualifies under the rule allowing plans without numeric prices, although the page emphasizes deployment and licensing rather than a conventional price table: https://sergroup.com/pricing",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [],
+     "reasoning": "No investment amount was found in the March 2024 announcement or the matching funding record. The amount is unknown, not zero. Announcement checked: https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+     "confidence": "low"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer References / Best Practices - SER Group",
+       "url": "https://www.sergroup.com/en/references.html",
+       "excerpts": [
+        "Eissmann Group Automotive"
+       ]
+      },
+      {
+       "title": "Northmarq selects SER to enhance CX with modern workflows and content management - SER Group",
+       "url": "https://www.sergroup.com/en/about-us/news-press/northmarq-selects-ser-to-enhance-cx.html",
+       "excerpts": [
+        "leading provider of Intelligent Content Automation solutions, is pleased to partner with Minneapolis-based Northmarq as a new customer."
+       ]
+      }
+     ],
+     "reasoning": "Eissmann appears on the customer references page, and the Northmarq announcement explicitly calls Northmarq a new customer. Sources: https://www.sergroup.com/en/references.html ; https://www.sergroup.com/en/about-us/news-press/northmarq-selects-ser-to-enhance-cx.html",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "SER welcomes new investment from TA to accelerate growth - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+       "excerpts": [
+        "(March 21, 2024 - Bonn) SER (the \"Company\"), a leading global Intelligent Content Automation (\"ICA\") software vendor in the Enterprise Content Management (\"ECM\") market, today announced that TA Associates (\"TA\"), a leading global private equity firm, has agreed to make a strategic growth investment in the Company."
+       ]
+      },
+      {
+       "title": "Doxis \u2014 Founded 1984 | Indexed.vc",
+       "url": "https://indexed.vc/companies/doxis",
+       "excerpts": [
+        "Its most recent funding was a Private Equity round in Mar 2024."
+       ]
+      }
+     ],
+     "reasoning": "The TA growth-investment announcement is dated March 21, 2024; the company profile identifies March 2024 as its most recent funding. Sources: https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment ; https://indexed.vc/companies/doxis",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "GTM Automation Analyst - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+       "excerpts": [
+        "Salesforce Account Engagement, Salesloft, and data enrichment tools like Clay & Cognism."
+       ]
+      },
+      {
+       "title": "GTM Automation Analyst @ Ser Group | TA Associates Job Board",
+       "url": "https://careers.ta.com/companies/ser-group-2/jobs/74002750-gtm-automation-analyst",
+       "excerpts": [
+        "Build and improve workflows, AI email agents, and campaign automations in marketing platforms like 6sense and others."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Automation Analyst posting names Salesforce Account Engagement, Salesloft, Clay, Cognism and 6sense as platforms involved in its workflows. Sources: https://www.doxis.com/en/about-us/careers/gtm-automation-analyst ; https://careers.ta.com/companies/ser-group-2/jobs/74002750-gtm-automation-analyst",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "SER Group Rebrands To 'Doxis' and Enhances Leadership to Reflect AI-First Focus as 'The Document Intelligence Company' - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis",
+       "excerpts": [
+        "(January 19, 2026 - Bonn) SER Group today announced it has changed its brand name to \"Doxis\", uniting the company under the same brand as its flagship Intelligent Content Automation platform and solutions. The rebrand coincides with the appointment of new senior leaders in sales and AI to accelerate the company's commercial success and innovation as \"The Document Intelligence Company\".",
+        "Andy Spence joins Doxis as Chief Revenue Officer."
+       ]
+      }
+     ],
+     "reasoning": "The January 19, 2026 announcement states that Andy Spence joins as Chief Revenue Officer, within the preceding 12 months: https://www.doxis.com/en/about-us/news-press/ser-group-rebrands-to-doxis",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Full Stack AI Engineer - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/AIKlippa",
+       "excerpts": [
+        "Full Stack AI Engineer full-time",
+        "To accelerate our product development, we are hiring 3 Full Stack AI Engineers who want to build production-grade AI applications from idea to deployment."
+       ]
+      }
+     ],
+     "reasoning": "The live Full Stack AI Engineer posting explicitly says the company is hiring three engineers for its Klippa business: https://www.doxis.com/en/about-us/careers/AIKlippa",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "SER welcomes new investment from TA to accelerate growth - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+       "excerpts": [
+        "(March 21, 2024 - Bonn) SER (the \"Company\"), a leading global Intelligent Content Automation (\"ICA\") software vendor in the Enterprise Content Management (\"ECM\") market, today announced that TA Associates (\"TA\"), a leading global private equity firm, has agreed to make a strategic growth investment in the Company."
+       ]
+      },
+      {
+       "title": "Doxis \u2014 Founded 1984 | Indexed.vc",
+       "url": "https://indexed.vc/companies/doxis",
+       "excerpts": [
+        "Its most recent funding was a Private Equity round in Mar 2024."
+       ]
+      }
+     ],
+     "reasoning": "SER describes TA's investment as a strategic growth investment by a private-equity firm; the company profile classifies the latest round as Private Equity. Sources: https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment ; https://indexed.vc/companies/doxis",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Doxis AI.dp Docs",
+       "url": "https://dochorizon.klippa.com/docs",
+       "excerpts": [
+        "Doxis AI.dp Docs Simplify your document processing with Doxis AI.dp. Access comprehensive API documentation, SDK implementation guides, and platform documentation all in one place.",
+        "[Documentation](https://dochorizon.klippa.com/docs) [API Reference](https://dochorizon.klippa.com/docs/api/reference) [Releases](https://dochorizon.klippa.com/docs/release-notes) [Status](https://dochorizon.klippa.com/docs/status) [Support](https://dochorizon.klippa.com/docs/contact) [Open Platform external-link](https://dochorizon.klippa.com/)"
+       ]
+      }
+     ],
+     "reasoning": "The public Doxis AI.dp documentation portal provides API documentation, SDK implementation guides and multiple platform-documentation sections: https://dochorizon.klippa.com/docs",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "SER welcomes new investment from TA to accelerate growth - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+       "excerpts": [
+        "Headquartered in Bonn, Germany, SER has a well-established market leadership position in DACH and a fast-growing international business with blue-chip customers around the world."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly identifies Bonn as its headquarters city: https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Doxis Summit 2026: Doxis Unveils Latest Document Intelligence Innovations - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/doxis-summit-2026-document-intelligence-innovations",
+       "excerpts": [
+        "Doxis, The Document Intelligence Company, unveiled a new generation of AI-powered Document Intelligence innovations at the Doxis Summit 2026, helping organizations unlock greater value from enterprise content while maintaining the trust, governance and control required for AI success. More than 600 customers, partners and industry experts from around the world attended the company's largest-ever Summit in Munich on May 20 and 21."
+       ]
+      }
+     ],
+     "reasoning": "Doxis announced a new generation of AI-powered Document Intelligence innovations at its May 20\u201321, 2026 Summit, within the six-month window. The excerpt establishes an innovation launch but does not enumerate individual features: https://www.doxis.com/en/about-us/news-press/doxis-summit-2026-document-intelligence-innovations",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative (m/f/d) - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/business-development-representative-m-f-d",
+       "excerpts": [
+        "We give you space to take initiative, use AI tools to work smarter, and grow into a skilled sales professional \u2014 with a clear path toward an Account Executive role."
+       ]
+      }
+     ],
+     "reasoning": "The live company careers page is titled Business Development Representative (m/f/d), a qualifying role; its description also discusses progression into an Account Executive role: https://www.doxis.com/en/about-us/careers/business-development-representative-m-f-d",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Doxis \u2014 Founded 1984 | Indexed.vc",
+       "url": "https://indexed.vc/companies/doxis",
+       "excerpts": [
+        "Its most recent funding was a Private Equity round in Mar 2024."
+       ]
+      },
+      {
+       "title": "SER welcomes new investment from TA to accelerate growth - Doxis",
+       "url": "https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+       "excerpts": [
+        "(March 21, 2024 - Bonn) SER (the \"Company\"), a leading global Intelligent Content Automation (\"ICA\") software vendor in the Enterprise Content Management (\"ECM\") market, today announced that TA Associates (\"TA\"), a leading global private equity firm, has agreed to make a strategic growth investment in the Company."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified funding is the March 2024 TA investment, which predates the 18-month window. Sources: https://indexed.vc/companies/doxis ; https://www.doxis.com/en/about-us/news-press/ser-welcomes-new-investment",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "SER Group is SOC 2 Type 1 & 2 certified - Doxis",
+       "url": "https://www.sergroup.com/en/business-platform/certification/soc2.html",
+       "excerpts": [
+        "Doxis Cloud Services have been successfully certified according to the international SOC 1 Type 2, SOC 2 Type 1 & 2 and SOC 3 standards, confirms the independent auditing firm CyberGuard Compliance LLP in its audit report."
+       ]
+      }
+     ],
+     "reasoning": "Explicitly claims successful SOC 2 Type 1 and Type 2 certification: https://www.sergroup.com/en/business-platform/certification/soc2.html",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "SER is ISO/IEC 27001:2022 certified - Doxis",
+       "url": "https://www.sergroup.com/en/business-platform/certification/iso-27001.html",
+       "excerpts": [
+        "SER (now Doxis) has successfully achieved [ISO 27001](https://www.doxis.com/en/blog/iso-27001-ecm) certification and received the ISO certificate from the international certification body ABS Quality Evaluations, Inc. for its information security management system (ISMS)."
+       ]
+      }
+     ],
+     "reasoning": "Explicitly states that SER achieved ISO 27001 certification: https://www.sergroup.com/en/business-platform/certification/iso-27001.html",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Doxis-Certified - SER Group",
+       "url": "https://www.sergroup.com/en/business-platform/certification.html",
+       "excerpts": [
+        "[Doxis is EU GDPR-certified \u00bb](https://www.doxis.com/en/business-platform/certification/eu-gdpr)"
+       ]
+      }
+     ],
+     "reasoning": "The certification index explicitly labels Doxis EU GDPR-certified: https://www.sergroup.com/en/business-platform/certification.html",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer References / Best Practices - SER Group",
+       "url": "https://www.sergroup.com/en/references.html",
+       "excerpts": [
+        "Eissmann Group Automotive"
+       ]
+      }
+     ],
+     "reasoning": "Named on the customer references page: https://www.sergroup.com/en/references.html",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Northmarq selects SER to enhance CX with modern workflows and content management - SER Group",
+       "url": "https://www.sergroup.com/en/about-us/news-press/northmarq-selects-ser-to-enhance-cx.html",
+       "excerpts": [
+        "leading provider of Intelligent Content Automation solutions, is pleased to partner with Minneapolis-based Northmarq as a new customer."
+       ]
+      }
+     ],
+     "reasoning": "Explicitly described as a new customer: https://www.sergroup.com/en/about-us/news-press/northmarq-selects-ser-to-enhance-cx.html",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "GTM Automation Analyst - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+       "excerpts": [
+        "Salesforce Account Engagement, Salesloft, and data enrichment tools like Clay & Cognism."
+       ]
+      }
+     ],
+     "reasoning": "Named in the company's GTM Automation Analyst posting: https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "GTM Automation Analyst - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+       "excerpts": [
+        "Salesforce Account Engagement, Salesloft, and data enrichment tools like Clay & Cognism."
+       ]
+      }
+     ],
+     "reasoning": "Salesloft is named in the company's GTM Automation Analyst posting: https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "GTM Automation Analyst - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+       "excerpts": [
+        "Salesforce Account Engagement, Salesloft, and data enrichment tools like Clay & Cognism."
+       ]
+      }
+     ],
+     "reasoning": "Clay is named as a data-enrichment tool in the posting: https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "GTM Automation Analyst - Doxis",
+       "url": "https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+       "excerpts": [
+        "Salesforce Account Engagement, Salesloft, and data enrichment tools like Clay & Cognism."
+       ]
+      }
+     ],
+     "reasoning": "Cognism is named as a data-enrichment tool in the posting: https://www.doxis.com/en/about-us/careers/gtm-automation-analyst",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "GTM Automation Analyst @ Ser Group | TA Associates Job Board",
+       "url": "https://careers.ta.com/companies/ser-group-2/jobs/74002750-gtm-automation-analyst",
+       "excerpts": [
+        "Build and improve workflows, AI email agents, and campaign automations in marketing platforms like 6sense and others."
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly discusses campaign automations in marketing platforms such as 6sense: https://careers.ta.com/companies/ser-group-2/jobs/74002750-gtm-automation-analyst",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1984.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "Germany",
+    "eng_blog": false,
+    "product_one_liner": "SER Group, now Doxis, provides AI-powered document management and content automation for enterprises to capture, analyze, manage and automate documents across business processes.",
+    "employee_band": null,
+    "model_provider": "Microsoft Azure Form Recognizer",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Eissmann Group Automotive",
+     "Northmarq"
+    ],
+    "funding_date": "2024-03",
+    "crm_stack_signal": [
+     "Salesforce Account Engagement",
+     "Salesloft",
+     "Clay",
+     "Cognism",
+     "6sense"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Private equity / growth investment",
+    "public_docs": true,
+    "hq_city": "Bonn",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

@@ -1,0 +1,438 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8470016a7b48d460",
+  "interaction_id": "trun_142119f6a1b4439e8470016a7b48d460",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "mimica.ai"
+  },
+  "created_at": "2026-11-10T18:47:50.900959Z",
+  "modified_at": "2026-11-10T18:50:26.667133Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8470016a7b48d460",
+   "interaction_id": "trun_142119f6a1b4439e8470016a7b48d460",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "mimica.ai"
+   },
+   "created_at": "2026-11-10T18:47:50.900959Z",
+   "modified_at": "2026-11-10T18:50:26.667133Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Us",
+       "url": "https://www.mimica.ai/about-us",
+       "excerpts": [
+        "2018 Mimica is founded on the idea of handing monotonous tasks over to AI, freeing people to focus on their most engaging, valuable work."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s About Us journey identifies 2018 as the year the company was founded.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Capture, Map & Automate Your Processes with AI | Mimica",
+       "url": "https://www.mimica.ai/",
+       "excerpts": [
+        "Mimica is compliant with ISO 27001, GDPR, and other industry-standard security measures."
+       ]
+      },
+      {
+       "title": "Trust Center - mimica.ai",
+       "url": "https://trust.mimica.ai/overview",
+       "excerpts": [
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s homepage expressly says it is compliant with ISO 27001 and GDPR, and its trust center names ISO 27001:2022. Those are the listed qualifying compliance claims.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Mimica | LinkedIn",
+       "url": "https://linkedin.com/company/mimicaautomation",
+       "excerpts": [
+        "Headquarters London, England"
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s LinkedIn company profile identifies its headquarters as London, England, which is in the United Kingdom.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Articles",
+       "url": "https://www.mimica.ai/articles",
+       "excerpts": [
+        "[Resources >](https://www.mimica.ai/resources) [Articles](https://www.mimica.ai/articles) Articles All Task Mining AI & Automation Business Impact Company News Thank you! ... All All Company News Company News Mimica Launches Partner Program to Help Accelerate Client AI Transformation Read Now Listen Now [](https://www.mimica.ai/articles/mimica-maker-ai-agents-watch-learn) All All AI & Automation AI & Automation Company News Company News Introducing Maker: AI Agents That Watch and Learn ... Mimica Named a 2025 Leader and Star Performer in Task Mining and DII by Everest Group Read Now Listen Now ... [](https://www.mimica.ai/articles/you-cant-transform-what-you-cant-see-the-case-for-ai-powered-process-intelligence) All All Task Mining Task Mining You Can't Transform What You Can't See: The Case for AI-Powered Process Intelligence Read Now"
+       ]
+      },
+      {
+       "title": "Mimica Launches Partner Program to Help Accelerate Client AI Transformation | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-launches-partner-program-to-help-accelerate-client-ai-transformation",
+       "excerpts": [
+        "October 8, 2026 Mimica Launches Partner Program to Help Accelerate Client AI Transformation [Resources >](https://www.mimica.ai/resources) Article October 8, 2026 Mimica Launches Partner Program to Help Accelerate Client AI Transformation"
+       ]
+      }
+     ],
+     "reasoning": "The Articles index is organized around topical and company-news content and includes product/partner announcements; it does not present an engineering or technical blog with posts about how the product is built. Under the requested rule this is false.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Capture, Map & Automate Your Processes with AI | Mimica",
+       "url": "https://www.mimica.ai/",
+       "excerpts": [
+        "Any organization can benefit from Mimica's process intelligence, but we particularly excel with large enterprises that have ambitious transformation goals. If your organization has complex processes across departments including Finance, Customer Support, Operations, IT, and Shared Services, Mimica will enable your transformation team to make data-driven decisions and optimize your processes.",
+        "Capture Record clicks, keystrokes, and actions to discover how teams spend their time and reveal the best opportunities to gain productivity. Map Generate end-to-end process maps to identify inefficiencies, ensure compliance, and fast-track automation Automate Build and deploy production-ready agents in as little as 24 hours."
+       ]
+      }
+     ],
+     "reasoning": "Mimica says it is especially useful to large enterprises with complex departmental processes; its homepage describes capturing work, mapping end-to-end processes, and deploying agents to automate them.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Mimica | LinkedIn",
+       "url": "https://linkedin.com/company/mimicaautomation",
+       "excerpts": [
+        "Industry Software Development Company size 201-500 employees Headquarters London, England Type Privately Held Founded 2018"
+       ]
+      }
+     ],
+     "reasoning": "The Mimica LinkedIn profile gives its company size as 201\u2013500 employees.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Forward Deployed Engineer, Intelligent Automation @ Mimica",
+       "url": "https://jobs.ashbyhq.com/mimica/c69566a5-bcdf-4380-b40e-a7844acecfd8",
+       "excerpts": [
+        "Design and build agentic AI solutions \u2013 create AI agents that reason, call tools and act across enterprise systems, using models such as Claude (Anthropic), Gemini (Google) and GPT (OpenAI).",
+        "Hands-on experience building and deploying agentic AI solutions with frontier models (e.g. Claude, Gemini, GPT) \u2013 prompt and context design, tool calling, retrieval (RAG), multi-step agents and evaluation \u2013 and a clear view of where they are and aren't reliable."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s live engineering role describes building agents with Claude (Anthropic), Gemini (Google), and GPT (OpenAI), and discusses building and deploying those agents. The job posting is the public statement supporting the named providers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Mimica Pricing",
+       "url": "https://www.g2.com/products/mimica/pricing",
+       "excerpts": [
+        "Mimica Platform Contact Vendor for Pricing",
+        "Contact Vendor for Pricing"
+       ]
+      }
+     ],
+     "reasoning": "The public Mimica pricing listing presents the Mimica Platform and says to contact the vendor for pricing. A public pricing page qualifies even though no amounts are listed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+       "excerpts": [
+        "September 24, 2025 Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World Author Mimica Share **BROOKLYN, NY & LONDON, UK \u2013 September 24, 2025 _\u2013_** Mimica, the process intelligence company, today announced a $26.2 million Series B funding round led by Paladin Capital Group, with continued backing from Khosla Ventures, LGVP, and Entrepreneurs First. [\u200d](https://www.mimica.ai/) \u200d"
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s dated announcement reports a $26.2 million Series B round, the latest company funding round located in the sources reviewed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Mimica Named a 2025 Leader and Star Performer in Task Mining and DII by Everest Group | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-named-a-2025-leader-and-star-performer-in-task-mining-and-dii-by-everest-group",
+       "excerpts": [
+        "Mimica\u2019s portfolio of customers includes Fortune 100 enterprises such as DHL, Liberty Mutual, Merck, and Goodyear."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s company article explicitly names DHL, Liberty Mutual, Merck, and Goodyear as Fortune 100 enterprise customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+       "excerpts": [
+        "September 24, 2025 Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World Author Mimica Share **BROOKLYN, NY & LONDON, UK \u2013 September 24, 2025 _\u2013_** Mimica, the process intelligence company, today announced a $26.2 million Series B funding round led by Paladin Capital Group, with continued backing from Khosla Ventures, LGVP, and Entrepreneurs First. [\u200d](https://www.mimica.ai/) \u200d"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement dates its Series B funding announcement to September 24, 2025; the requested YYYY-MM value is 2025-09.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Forward Deployed Engineer, Intelligent Automation @ Mimica",
+       "url": "https://jobs.ashbyhq.com/mimica/c69566a5-bcdf-4380-b40e-a7844acecfd8",
+       "excerpts": [
+        "Build hybrid automation solutions \u2013 orchestrate AI agents, RPA bots, document AI and custom Python services into end-to-end workflows. Integrate with enterprise systems \u2013 connect ERPs, CRMs, ticketing tools and legacy apps through APIs, MCP servers, connectors and UI automation. Build and run on Google Cloud \u2013 deploy agents, services and pipelines on GCP using Vertex AI, Cloud Run, Cloud Functions, BigQuery and Pub/Sub, following our GCP architecture and security standards."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s readable job posting refers generically to connecting ERPs, CRMs, ticketing tools, and legacy apps but names no CRM or sales/marketing system. No specific system can be listed from this evidence.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Mimica Jobs",
+       "url": "https://jobs.ashbyhq.com/mimica?gh_src=Entrepreneurs%20First%20job%20board",
+       "excerpts": [
+        "[Mimica](https://www.mimica.ai/) Be part of a global team shaping how businesses adopt AI! Open Positions (17) Filters: Reset filters All Departments Business Development (2) Customer Engineering (3) Engineering (6) Marketing (1) People & Talent (1) Product (1) Sales (2) Security (1) All Employment Types Full time (17) ... [### Head of Platform (Infrastructure & DevOps) Engineering \u2022 Europe; Amsterdam; Cambridge; Dublin; Edinburgh; Ireland; Lisbon; London; Toronto; United Kingdom; Waterloo \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/mimica/bb287245-a114-49be-820e-b602fc220aea?gh_src=Entrepreneurs%20First%20job%20board) [### Senior/Lead Machine Learning Engineer Engineering \u2022 London; Amsterdam; Cambridge; Denmark; Dublin; Edinburgh; Ireland; Italy; Montreal; Sweden; Toronto; United Kingdom \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/mimica/157112c3-9fbf-440b-a5e4-5c40f0cd2fa0?gh_src=Entrepreneurs%"
+       ]
+      },
+      {
+       "title": "Senior/Lead Machine Learning Engineer @ Mimica",
+       "url": "https://jobs.ashbyhq.com/Mimica/157112c3-9fbf-440b-a5e4-5c40f0cd2fa0",
+       "excerpts": [
+        "You'll own key parts of our ML pipelines end to end, making them more accurate, cost-efficient, and trustworthy."
+       ]
+      }
+     ],
+     "reasoning": "The open Mimica jobs board includes a Senior/Lead Machine Learning Engineer posting, and its job description describes ownership of ML pipelines; this satisfies the specified role criteria.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+       "excerpts": [
+        "September 24, 2025 Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World Author Mimica Share **BROOKLYN, NY & LONDON, UK \u2013 September 24, 2025 _\u2013_** Mimica, the process intelligence company, today announced a $26.2 million Series B funding round led by Paladin Capital Group, with continued backing from Khosla Ventures, LGVP, and Entrepreneurs First. [\u200d](https://www.mimica.ai/) \u200d"
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s announcement explicitly identifies the $26.2 million round as Series B.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Capture, Map & Automate Your Processes with AI | Mimica",
+       "url": "https://www.mimica.ai/",
+       "excerpts": [
+        "Frequently Asked Questions"
+       ]
+      }
+     ],
+     "reasoning": "The available homepage/help-related evidence exposes a Frequently Asked Questions section but does not identify a public product documentation site, developer portal, or multi-article help center; the observed material does not meet the requested threshold for public docs.",
+     "confidence": "low"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Mimica | LinkedIn",
+       "url": "https://linkedin.com/company/mimicaautomation",
+       "excerpts": [
+        "Headquarters London, England"
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s LinkedIn company profile gives its headquarters as London, England.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Introducing Maker: AI Agents That Watch and Learn | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-maker-ai-agents-watch-learn",
+       "excerpts": [
+        "September 30, 2026",
+        "Introducing Maker, an agentic automation platform that turns the work your team already does into production-ready AI agents."
+       ]
+      }
+     ],
+     "reasoning": "Mimica published \u201cIntroducing Maker\u201d on September 30, 2026, within the six months preceding November 9, 2026; it announced a new agentic automation product, so the launch condition is met.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Associate Business Development Representative, NAMER @ Mimica",
+       "url": "https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095",
+       "excerpts": [
+        "[Mimica](https://www.mimica.ai/careers) is an AI-powered process intelligence platform enabling enterprises and individuals to reclaim their most precious resource: time."
+       ]
+      }
+     ],
+     "reasoning": "The Mimica job listing is for an Associate Business Development Representative, a qualifying business-development-representative role.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+       "excerpts": [
+        "September 24, 2025 Mimica Raises $26.2m to Make AI Agents Actually Work in the Real World Author Mimica Share **BROOKLYN, NY & LONDON, UK \u2013 September 24, 2025 _\u2013_** Mimica, the process intelligence company, today announced a $26.2 million Series B funding round led by Paladin Capital Group, with continued backing from Khosla Ventures, LGVP, and Entrepreneurs First. [\u200d](https://www.mimica.ai/) \u200d"
+       ]
+      }
+     ],
+     "reasoning": "The $26.2 million Series B was announced September 24, 2025, which falls within the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Mimica Named a 2025 Leader and Star Performer in Task Mining and DII by Everest Group | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-named-a-2025-leader-and-star-performer-in-task-mining-and-dii-by-everest-group",
+       "excerpts": [
+        "Mimica\u2019s portfolio of customers includes Fortune 100 enterprises such as DHL, Liberty Mutual, Merck, and Goodyear."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s article names DHL among its Fortune 100 enterprise customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Mimica Named a 2025 Leader and Star Performer in Task Mining and DII by Everest Group | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-named-a-2025-leader-and-star-performer-in-task-mining-and-dii-by-everest-group",
+       "excerpts": [
+        "Mimica\u2019s portfolio of customers includes Fortune 100 enterprises such as DHL, Liberty Mutual, Merck, and Goodyear."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s article names Liberty Mutual among its Fortune 100 enterprise customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Mimica Named a 2025 Leader and Star Performer in Task Mining and DII by Everest Group | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-named-a-2025-leader-and-star-performer-in-task-mining-and-dii-by-everest-group",
+       "excerpts": [
+        "Mimica\u2019s portfolio of customers includes Fortune 100 enterprises such as DHL, Liberty Mutual, Merck, and Goodyear."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s article names Merck among its Fortune 100 enterprise customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.3",
+     "citations": [
+      {
+       "title": "Mimica Named a 2025 Leader and Star Performer in Task Mining and DII by Everest Group | Mimica",
+       "url": "https://www.mimica.ai/articles/mimica-named-a-2025-leader-and-star-performer-in-task-mining-and-dii-by-everest-group",
+       "excerpts": [
+        "Mimica\u2019s portfolio of customers includes Fortune 100 enterprises such as DHL, Liberty Mutual, Merck, and Goodyear."
+       ]
+      }
+     ],
+     "reasoning": "Mimica\u2019s article names Goodyear among its Fortune 100 enterprise customers.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2018.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": false,
+    "product_one_liner": "Mimica records and analyzes how employees work, maps enterprise processes, and identifies opportunities for process improvement and automation.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic (Claude), Google (Gemini), and OpenAI (GPT)",
+    "pricing_page": true,
+    "funding_amount_usd": 26200000.0,
+    "named_customers": [
+     "DHL",
+     "Liberty Mutual",
+     "Merck",
+     "Goodyear"
+    ],
+    "funding_date": "2025-09",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": false,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

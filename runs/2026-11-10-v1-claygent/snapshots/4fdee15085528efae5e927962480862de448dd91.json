@@ -1,0 +1,22 @@
+{
+ "url": "https://docs.nanonets.com/docs/salesforce-export",
+ "fetched_at": "2026-11-10T20:40:21.874655+00:00",
+ "hours_after_run": 44.7,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "d3864f4b315f96b5f3d8382f02341323602fd38b31f5fe8a442daa033db9220a",
+ "chars": 2198,
+ "truncated": false,
+ "title": "Salesforce Export",
+ "markdown": "For AI agents: the docs index is at https://docs.nanonets.com/llms.txt. Append .md to any documentation page URL to get its markdown version.\n\nNanonets integrates directly with Salesforce so you can sync transactions directly to your accounting system.\n\n### **How to setup the Salesforce integration**   [Skip link to [object Object]](https://docs.nanonets.com/docs/salesforce-export\\#how-to-setup-the-salesforce-integration)\n\n1. Click on the Salesforce card in your Workflow\n2. Click on Sign in to Salesforce\n3. Enter your Salesforce credentials\n4. Back on the Nanonets Salesforce card, map the Nanonets fields to the corresponding columns in Salesforce.\n\n\nEg: The Invoice\\_number captured in Nanonets should be populated under 'Invoice ID' in Salesforce. To link these two entities, they need to be mapped in the Nanonets export modal.\n5. Select an Export Trigger:\n1. The file can be exported as soon as it is processed OR\n2. The file can be exported only if marked Approved\n6. Click on Done.\n\n### **Exporting the Original File to Salesforce**   [Skip link to [object Object]](https://docs.nanonets.com/docs/salesforce-export\\#exporting-the-original-file-to-salesforce)\n\nIf you enable \"Export original file\", the file will be sent to Salesforce as either a File or an Attachment, depending on your Salesforce UI and org settings:\n\n1. In Lightning Experience, files appear in the Files section.\n2. In Classic UI, or if your org uses legacy behavior, files might show under Attachments.\n\n**Note:**\n\nTo ensure files appear under Files instead of Attachments, enable the following setting in Salesforce:\n\n“ _Files uploaded to the Attachments related list on records are uploaded as Salesforce Files, not as attachments._”\n\n### **How Upsert Works**   [Skip link to [object Object]](https://docs.nanonets.com/docs/salesforce-export\\#how-upsert-works)\n\nNanonets uses Salesforce's upsert functionality to avoid creating duplicate records.\n\nBy default, upsert checks for a primary key in the Salesforce table being exported to and uses it to perform the upsert.\n\nNow, you should be ready to review and automatically export files!\n\nUpdatedover 1 year ago\n\n* * *\n\nDid this page help you?\n\nYes\n\nNo\n\nCopy Page",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true
+}

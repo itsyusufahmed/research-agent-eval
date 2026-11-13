@@ -1,0 +1,174 @@
+{
+ "schema_version": "v0",
+ "company": "CloudTalk",
+ "domain": "cloudtalk.io",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "CloudTalk is an AI-powered business phone and voice-agent platform that combines calling and call intelligence for small and mid-sized sales and support teams.",
+   "citations": [
+    "https://www.cloudtalk.io/our-story"
+   ],
+   "notes": "CloudTalk describes its product as an AI-powered business phone system and AI voice-agent platform for small and mid-sized sales and support teams."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.cloudtalk.io/pricing"
+   ],
+   "notes": "CloudTalk has a public pricing page that presents flexible plans and plan comparisons, so a public pricing page exists regardless of whether every price is displayed."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Pipedrive",
+    "Circle Gym"
+   ],
+   "citations": [
+    "https://www.cloudtalk.io/customer-stories"
+   ],
+   "notes": "named_customers: CloudTalk's customer-stories index includes customer-story links naming Pipedrive and Circle Gym. | named_customers.0: CloudTalk's customer-stories page includes a Pipedrive customer story. | named_customers.1: CloudTalk's customer-stories page includes a Circle Gym customer story."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/17944841"
+   ],
+   "notes": "The company's LinkedIn profile reports a company-size band of 201\u2013500 employees, matching the allowed band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Toronto",
+    "country": "Canada"
+   },
+   "citations": [
+    "https://www.cloudtalk.io/contact"
+   ],
+   "notes": "hq_city: CloudTalk's contact page labels its Toronto address as Canada HQ, establishing Toronto as the headquarters city. | hq_country: CloudTalk's contact page explicitly labels its Toronto address as Canada HQ, establishing Canada as the headquarters country."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2016.0,
+   "citations": [
+    "https://www.cloudtalk.io/our-story"
+   ],
+   "notes": "CloudTalk's own company story explicitly says it was founded in 2016."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.cloudtalk.io/blog/rnd",
+    "https://www.cloudtalk.io/blog/rnd/building-smarter-integrations-with-cursorai-lessons-from-the-bullhorn-project",
+    "https://www.cloudtalk.io/blog/rnd/how-do-we-work-with-technical-backlog"
+   ],
+   "notes": "The developer-blog index shows technical-backlog and integration/AI-tool posts, but the cited bylines identify their authors as Senior Copywriters. The evidence does not establish two technical posts by engineers, which is required for a true value; therefore this is false under the field rule."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.cloudtalk.io/llms.txt",
+    "https://developers.cloudtalk.io/"
+   ],
+   "notes": "CloudTalk has public developer documentation and an index linking multiple webhook, API, and MCP guides, meeting the requirement for several documentation articles."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.workable.com/view/v7QQbHxayDX8bmtzTH74BH"
+   ],
+   "notes": "A live CloudTalk posting dated November 6, 2026 is titled Product Education Manager (AI-Enabled). The posting's work is product education and AI-assisted documentation rather than model research, so the title-based criterion creates some ambiguity; it nevertheless explicitly includes AI and is not an AI-sales title."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "OpenAI models (GPT-4o Mini, GPT-4o, GPT-4.1, GPT-4.1 Mini/Nano, and GPT-5) are supported; the voice-agent documentation also lists ElevenLabs and Deepgram as speech-provider options.",
+   "citations": [
+    "https://help.cloudtalk.io/en/articles/15933044-voiceagent-expert-mode"
+   ],
+   "notes": "CloudTalk's public VoiceAgent documentation lists OpenAI GPT models as supported LLMs and names ElevenLabs and Deepgram as speech-provider options. The documentation establishes available providers/models, not which configuration every customer uses."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2 Type II",
+    "ISO 27001:2022",
+    "HIPAA",
+    "GDPR",
+    "PCI DSS SAQ A 4.0"
+   ],
+   "citations": [
+    "https://www.cloudtalk.io/security",
+    "https://trust.cloudtalk.io/"
+   ],
+   "notes": "compliance_certs: CloudTalk's security page names SOC 2 Type II and ISO 27001; its trust-center listings name ISO 27001:2022, HIPAA, GDPR, and PCI DSS SAQ A 4.0. The answer includes only the requested categories named in these sources. | compliance_certs.0: The security page and trust center name SOC 2 Type II. | compliance_certs.1: CloudTalk's security and trust sources name ISO 27001, including ISO 27001:2022. | compliance_certs.2: The CloudTalk trust-center badge/listing names HIPAA. | compliance_certs.3: The CloudTalk trust-center listing names GDPR. | compliance_certs.4: The trust center names PCI DSS SAQ A 4.0."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2024-01",
+    "amount_usd": 28000000.0
+   },
+   "citations": [
+    "https://www.prnewswire.com/news-releases/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication-302037384.html",
+    "https://millionrounds.com/company/cloudtalk"
+   ],
+   "notes": "funding_stage: The company-announced $28 million round closed its Series B, and the updated funding profile identifies that Series B as the latest round. | funding_date: The funding announcement is dated January 17, 2024, and the funding profile confirms January 2024 as the latest round; the requested YYYY-MM value is 2024-01. | funding_amount_usd: The dated funding announcement reports a $28 million Series B, and a funding profile updated in November 2026 identifies it as the latest round. The USD amount is $28,000,000."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.prnewswire.com/news-releases/cloudtalk-raised-28-million-funding-to-lead-the-new-era-of-ai-powered-voice-communication-302037384.html",
+    "https://millionrounds.com/company/cloudtalk"
+   ],
+   "notes": "CloudTalk's identified most recent round was January 2024, before the 18-month window beginning May 2025; the funding profile updated in November 2026 still identifies it as the latest round, so it did not raise in that window."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://apply.workable.com/cloudtalk/j/567254B9D5",
+    "https://apply.workable.com/cloudtalk/j/A61C0440BF"
+   ],
+   "notes": "CloudTalk's current Workable openings include Account Executive roles, so it is hiring for a title covered by the SDR/BDR/AE criterion."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.globenewswire.com/news-release/2026/11/09/3398598/0/en/cloudtalk-launches-a-new-ai-sales-dialer-for-even-more-live-conversations-customers-report-going-from-15-to-100-calls-per-agent-per-day.html"
+   ],
+   "notes": "CloudTalk announced the launch of its AI Sales Dialer on November 9, 2026, within the six months before the specified run date."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": []
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot",
+    "Pipedrive",
+    "Salesforce",
+    "Zoho CRM"
+   ],
+   "citations": [
+    "https://www.cloudtalk.io/careers"
+   ],
+   "notes": "crm_stack_signal: CloudTalk's integrations listing on its careers page visibly names HubSpot, Pipedrive, Salesforce, and Zoho CRM. | crm_stack_signal.0: The cited CloudTalk integrations excerpt names HubSpot. | crm_stack_signal.1: The cited CloudTalk integrations excerpt names Pipedrive. | crm_stack_signal.2: The cited CloudTalk integrations excerpt names Salesforce. | crm_stack_signal.3: The cited CloudTalk integrations excerpt names Zoho CRM."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 370.6
+}

@@ -1,0 +1,21 @@
+{
+ "url": "https://docs.kojo.tech/docs",
+ "fetched_at": "2026-11-09T21:09:52.273665+00:00",
+ "hours_after_run": 21.2,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "438f168ab92518940f87b953be075c738cfed2e7240579ac9bfaa10b496e24fb",
+ "chars": 2913,
+ "truncated": false,
+ "title": "Authentication | Kojo API",
+ "markdown": "[Skip to main content](https://docs.kojo.tech/docs/#)\n\nOn this page\n\nTo use the Kojo API every API request will require passing an `Authorization` header with a token.\n\n```http\nAuthorization: Bearer <OAUTH 2.0 ACCESS TOKEN OR LEGACY API KEY>\n```\n\nCopy\n\n## OAuth 2.0 [​](https://docs.kojo.tech/docs/\\#oauth-20 \"Direct link to heading\")\n\nOAuth 2.0 is the preferred method of authentication.\n\nCreate a [new OAuth Client](https://kojo.app/admin/setup/integration) in the Kojo app. You will be given a client id and client secret. Store these somewhere safe as the secret is not recoverable once lost.\n\nIn your client code, request an access token by making a POST request to [https://api.kojo.tech/oauth2/token](https://api.kojo.tech/oauth2/token). In your request, include `grant_type=client_credentials` along with your `client_id` and `client_secret` using the `application/x-www-form-urlencoded` format.\n\nThis token is valid for 1 hour. After it expires you will need to request a new access token.\n\nIf you believe an access token has been leaked or compromised you can [delete its OAuth client](https://kojo.app/admin/setup/integration). All access tokens signed by that client will no longer work.\n\n### Example [​](https://docs.kojo.tech/docs/\\#example \"Direct link to heading\")\n\nHere's an example using the curl command, though your application will need to make the request using whatever library is appropriate for your setup:\n\n```shell\n$ curl --location --request POST 'https://api.kojo.tech/oauth2/token' \\\n    --header 'Content-Type: application/x-www-form-urlencoded' \\\n    --data-urlencode 'client_id=[CLIENT_ID]' \\\n    --data-urlencode 'client_secret=[CLIENT_SECRET]' \\\n    --data-urlencode 'grant_type=client_credentials'\n```\n\nCopy\n\n#### Example Response [​](https://docs.kojo.tech/docs/\\#example-response \"Direct link to heading\")\n\n```http\nHTTP/1.1 200 OK\nContent-Type: application/json\nCache-Control: no-store\n\n{\n  \"access_token\": \"eyJhbGciOiJIUzI1NiIoxN...\",\n  \"token_type\": \"bearer\",\n  \"expires_in\": 3600\n}\n```\n\nCopy\n\nThe `POST /oauth2/token` endpoint described above implements the OAuth 2.0 client credentials flow described in [RFC 6749 Section 4.4](https://datatracker.ietf.org/doc/html/rfc6749#section-4.4).\n\n## API Keys (Legacy) [​](https://docs.kojo.tech/docs/\\#api-keys-legacy \"Direct link to heading\")\n\nA legacy API key may have been provided to you by Kojo when you signed up to start using the API. Legacy API keys have no expiration. If you request a new API key the previous one will immediately become invalid upon issuance of the new API key.\n\nPlease contact Kojo immediately if you believe your key has been leaked or compromised in any way and we will promptly invalidate it and provide you with a new one.\n\n- [OAuth 2.0](https://docs.kojo.tech/docs/#oauth-20)\n  - [Example](https://docs.kojo.tech/docs/#example)\n- [API Keys (Legacy)](https://docs.kojo.tech/docs/#api-keys-legacy)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ]
+}

@@ -1,0 +1,437 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e99bda25522aabd18",
+  "interaction_id": "trun_142119f6a1b4439e99bda25522aabd18",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "fluxco.com"
+  },
+  "created_at": "2026-11-10T18:48:31.299244Z",
+  "modified_at": "2026-11-10T18:53:11.225207Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e99bda25522aabd18",
+   "interaction_id": "trun_142119f6a1b4439e99bda25522aabd18",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "fluxco.com"
+   },
+   "created_at": "2026-11-10T18:48:31.299244Z",
+   "modified_at": "2026-11-10T18:53:11.225207Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about",
+       "excerpts": [
+        "Name: Fluxco | Website Url: https://fluxco.com | Primary Sector: Retail | Primary Subsector: B2B E-Commerce | Stage: Seed | Founded Year: 2025"
+       ]
+      }
+     ],
+     "reasoning": "The company profile matching fluxco.com explicitly gives 2025 as its founding year. Source: https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about. This is a third-party company record.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Policy | Fluxco",
+       "url": "https://fluxco.com/privacy",
+       "excerpts": [
+        "4\\. Cookies, retention, and security We keep personal information only as long as needed for the purposes above, including active projects, warranty periods, and legal, tax, and recordkeeping requirements. We use reasonable administrative, technical, and physical safeguards, but no system is completely secure."
+       ]
+      }
+     ],
+     "reasoning": "The complete privacy policy was reviewed and names none of SOC 2, ISO 27001, HIPAA, GDPR or PCI DSS. Its security section describes general safeguards rather than certifications. The empty list means no qualifying claim was found on the reviewed legal page, not that Fluxco lacks such certifications. Source: https://fluxco.com/privacy.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about",
+       "excerpts": [
+        "Name: Fluxco | Website Url: https://fluxco.com | Primary Sector: Retail | Primary Subsector: B2B E-Commerce | Stage: Seed | Founded Year: 2025 | Employee Count Official: 13 | Location Country: United States"
+       ]
+      },
+      {
+       "title": "Privacy Policy | Fluxco",
+       "url": "https://fluxco.com/privacy",
+       "excerpts": [
+        "Fluxco (\"Fluxco,\" \"we,\" \"us\") is a transformer procurement company based in Austin, Texas."
+       ]
+      }
+     ],
+     "reasoning": "Fluxco's privacy policy says it is based in Austin, Texas, and its matching company profile explicitly identifies the United States. Sources: https://fluxco.com/privacy and https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Transformer Resources & Guides | Fluxco",
+       "url": "https://fluxco.com/resources",
+       "excerpts": [
+        "Buyer's Guides Step-by-step guides for selecting and specifying transformers ### Technical Resources Deep dives into transformer specifications and standards ### Industry Insights",
+        "[Technical Resources 7 min read ### Your Space Saving Solution: Integrated Fault Interrupting (IFI) Transformers"
+       ]
+      }
+     ],
+     "reasoning": "The resource index contains transformer buyer guides, equipment specifications and industry commentary, not two engineer-authored posts about building Fluxco's software or infrastructure. The technical equipment articles do not meet the requested engineering-blog definition. Source: https://fluxco.com/resources.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive | Fluxco",
+       "url": "https://fluxco.com/careers/enterprise-account-executive-energy-infrastructure",
+       "excerpts": [
+        "Fluxco turns a developer's spec into competitive bids from 150+ global OEMs in days, then manages the project end to end."
+       ]
+      },
+      {
+       "title": "Transformer Procurement & Sourcing | 150+ OEMs | Fluxco",
+       "url": "https://fluxco.com/",
+       "excerpts": [
+        "We route RFQs from utilities, developers and EPCs to the OEMs qualified to build them, wherever the factory is.",
+        "Engineering, procurement, delivery, service and warranty stay with us from award onward."
+       ]
+      },
+      {
+       "title": "Fluxco: business model, traction, and outlook \u2014 Teardown",
+       "url": "https://www.teardown.ai/companies/fluxco",
+       "excerpts": [
+        "The target buyer is anyone with a transformer on the critical path: hyperscalers building data centres, EPCs building substations, utilities backfilling capacity, industrial developers electrifying, and increasingly renewable IPPs waiting on interconnect."
+       ]
+      }
+     ],
+     "reasoning": "The official site and job description describe specification-to-bid procurement, manufacturer matching, delivery, service and warranty. The company overview identifies utilities, data centers, EPCs, industrial developers and renewable-energy buyers. Sources: https://fluxco.com/, https://fluxco.com/careers/enterprise-account-executive-energy-infrastructure and https://www.teardown.ai/companies/fluxco.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about",
+       "excerpts": [
+        "Name: Fluxco | Website Url: https://fluxco.com | Primary Sector: Retail | Primary Subsector: B2B E-Commerce | Stage: Seed | Founded Year: 2025 | Employee Count Official: 13"
+       ]
+      }
+     ],
+     "reasoning": "The matching company profile reports 13 employees, which falls within 11-20. Headcount is time-sensitive and comes from a third-party profile. Source: https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Privacy Policy | Fluxco",
+       "url": "https://fluxco.com/privacy",
+       "excerpts": [
+        "**Service providers:** companies that provide hosting, communications, analytics, security, AI, and business software for us"
+       ]
+      },
+      {
+       "title": "Terms of Service | Fluxco",
+       "url": "https://fluxco.com/terms",
+       "excerpts": [
+        "Specifications, estimates, and AI-assisted outputs on the Platform are provided for planning and are not engineering approval; you are responsible for confirming that equipment meets your requirements and applicable codes."
+       ]
+      },
+      {
+       "title": "Full-Stack Software Engineer | Fluxco",
+       "url": "https://fluxco.com/careers/ai-native-full-stack-engineer",
+       "excerpts": [
+        "Use AI coding tools (Claude Code, Cursor, Codex, etc.) as a force multiplier\u2014plan with them, draft with them, review with them, ship faster because of them."
+       ]
+      }
+     ],
+     "reasoning": "No product model or provider was identified after reviewing the homepage, FAQ, resources and legal disclosures. The privacy policy mentions AI service providers without naming them. Claude Code, Cursor and Codex are named as developer coding tools, not as models powering the product, so they are excluded. Sources: https://fluxco.com/privacy, https://fluxco.com/terms and https://fluxco.com/careers/ai-native-full-stack-engineer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Transformer Procurement & Sourcing | 150+ OEMs | Fluxco",
+       "url": "https://fluxco.com/",
+       "excerpts": [
+        "[How it works](https://fluxco.com/) [Start your project](https://fluxco.com/projects/new?productType=00000000-0000-4000-8000-000000000100) [Spec Designer](https://fluxco.com/projects/new) [Buyer portal",
+        "[Careers](https://fluxco.com/careers) [FAQ](https://fluxco.com/faq) [Contact](https://fluxco.com/)"
+       ]
+      },
+      {
+       "title": "Transformer FAQ | Fluxco",
+       "url": "https://fluxco.com/faq",
+       "excerpts": [
+        "You can request a quote through our contact form, [the Spec Designer](https://fluxco.com/projects/new/requirements) , or by calling our sales team."
+       ]
+      }
+     ],
+     "reasoning": "No pricing-page link appears in the homepage navigation or footer, the pricing URL returned no page, and the FAQ directs buyers to request a quote. An illustrative transformer estimate is not a public pricing-plan page. Sources: https://fluxco.com/ and https://fluxco.com/faq.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Fluxco 7/27/2026 Capital Raise - Gaebler.com Venture Capital Database",
+       "url": "https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026",
+       "excerpts": [
+        "$26,000,000"
+       ]
+      },
+      {
+       "title": "Exclusive | Fluxco Raises $26 Million for AI Platform to Find the Right Transformer - WSJ",
+       "url": "https://www.wsj.com/pro/venture-capital/fluxco-raises-26-million-for-ai-platform-to-find-the-right-transformer-d2b363fd",
+       "excerpts": [
+        "Congruent Ventures and 8VC led a roughly $26 million"
+       ]
+      }
+     ],
+     "reasoning": "The funding-round record explicitly lists $26,000,000, consistent with the approximately $26 million seed investment reported by the Wall Street Journal. Sources: https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026 and https://www.wsj.com/pro/venture-capital/fluxco-raises-26-million-for-ai-platform-to-find-the-right-transformer-d2b363fd.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Fluxco: Why AI Data Centers First Need Transformer Procurement | AI Product Scout",
+       "url": "https://product.ferryman.app/en/articles/2026-07-26-fluxco-transformer-procurement",
+       "excerpts": [
+        "Customer Antora Energy said Fluxco helped it receive 34 transformer quotes instead of 5 and reduced price and timeline by about 40%. Those order and customer-impact figures are company and customer disclosures to media, not independently audited metrics."
+       ]
+      }
+     ],
+     "reasoning": "The closest case-study material names only Antora Energy and describes its procurement results; no second customer name was found. Under the requested fewer-than-two rule, the result is an empty list rather than a one-name list. Investors Congruent Ventures and 8VC were excluded. Source: https://product.ferryman.app/en/articles/2026-07-26-fluxco-transformer-procurement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Fluxco 7/27/2026 Capital Raise - Gaebler.com Venture Capital Database",
+       "url": "https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026",
+       "excerpts": [
+        "7/27/2026"
+       ]
+      },
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about",
+       "excerpts": [
+        "Name: Fluxco | Website Url: https://fluxco.com | Primary Sector: Retail | Primary Subsector: B2B E-Commerce | Stage: Seed | Founded Year: 2025 | Employee Count Official: 13 | Location Country: United States | Location State: Texas | Location City: Austin | Latest Funding Round Amount Usd: 26000647.821 | Latest Funding Round Date: 2026-07-27"
+       ]
+      }
+     ],
+     "reasoning": "The round record and company profile identify July 27, 2026 as the latest funding date, normalized to 2026-07. Sources: https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026 and https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Account Executive | Fluxco",
+       "url": "https://fluxco.com/careers/account-executive-data-centers",
+       "excerpts": [
+        "Keep the CRM clean: accurate records, activity, and next steps so forecasting is honest and nothing drops.",
+        "Generate your own pipeline through disciplined outbound across email, phone, LinkedIn, and events\u2014you're not waiting on marketing to fill your calendar."
+       ]
+      }
+     ],
+     "reasoning": "The readable account-executive posting refers to 'the CRM' without naming a vendor and lists outbound channels rather than a named sales or marketing platform. No qualifying system was named in the other reviewed job material. Source: https://fluxco.com/careers/account-executive-data-centers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/briantochman",
+       "excerpts": [
+        "Role: Founder and CEO @ FluxCo. Returned fields: {experience_text='FluxCo Austin, Texas Metropolitan Area 2026-01-01 Founder and CEO Trust Ventures Austin, Texas, United States 2026-01-01 General Partner Emeritus Trust Ventures Austin, TX 2018-01-01 2026-12-01 The next crop of billion-dollar companies face significant barriers."
+       ]
+      }
+     ],
+     "reasoning": "Brian Tochman's dated profile records his Founder and CEO role at Fluxco as starting in January 2026, inside the 12-month window. Source: https://linkedin.com/in/briantochman.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Full-Stack Software Engineer | Fluxco",
+       "url": "https://fluxco.com/careers/ai-native-full-stack-engineer",
+       "excerpts": [
+        "Full-Stack Software Engineer (AI-Native Generalist) Engineering Austin, TX Full-time"
+       ]
+      }
+     ],
+     "reasoning": "A live posting is titled Full-Stack Software Engineer (AI-Native Generalist). It qualifies under the specified rule that an engineering role with AI in its title counts, although it is not an ML-research position. Source: https://fluxco.com/careers/ai-native-full-stack-engineer.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Fluxco 7/27/2026 Capital Raise - Gaebler.com Venture Capital Database",
+       "url": "https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026",
+       "excerpts": [
+        "Seed"
+       ]
+      },
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about",
+       "excerpts": [
+        "Name: Fluxco | Website Url: https://fluxco.com | Primary Sector: Retail | Primary Subsector: B2B E-Commerce | Stage: Seed | Founded Year: 2025 | Employee Count Official: 13 | Location Country: United States | Location State: Texas | Location City: Austin | Latest Funding Round Amount Usd: 26000647.821 | Latest Funding Round Date: 2026-07-27 | Latest Funding Round Name: Seed"
+       ]
+      }
+     ],
+     "reasoning": "Both funding records identify the latest round as Seed. Sources: https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026 and https://tracxn.com/a/d/company/5903dd7be4b0a9f300ed30a3/fluxco#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Transformer Procurement & Sourcing | 150+ OEMs | Fluxco",
+       "url": "https://fluxco.com/",
+       "excerpts": [
+        "[How it works](https://fluxco.com/) [Start your project](https://fluxco.com/projects/new?productType=00000000-0000-4000-8000-000000000100) [Spec Designer](https://fluxco.com/projects/new) [Buyer portal",
+        "[Careers](https://fluxco.com/careers) [FAQ](https://fluxco.com/faq) [Contact](https://fluxco.com/)"
+       ]
+      },
+      {
+       "title": "Transformer FAQ | Fluxco",
+       "url": "https://fluxco.com/faq",
+       "excerpts": [
+        "Frequently Asked Questions Common questions about buying, specifying, and installing transformers."
+       ]
+      }
+     ],
+     "reasoning": "The homepage links to buyer tools and a single transformer FAQ, but no public product-documentation site, help center or developer portal. The resource articles are transformer guides rather than product documentation. Sources: https://fluxco.com/ and https://fluxco.com/faq.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Privacy Policy | Fluxco",
+       "url": "https://fluxco.com/privacy",
+       "excerpts": [
+        "Fluxco (\"Fluxco,\" \"we,\" \"us\") is a transformer procurement company based in Austin, Texas."
+       ]
+      }
+     ],
+     "reasoning": "Fluxco's own privacy policy explicitly says the company is based in Austin, Texas. Source: https://fluxco.com/privacy.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Fluxco: business model, traction, and outlook \u2014 Teardown",
+       "url": "https://www.teardown.ai/companies/fluxco",
+       "excerpts": [
+        "**August 2026** \u2014 Fluxco publicly launches \"Global Transformer Network\" positioning, full EPC service and DOE 2027 compliance verification.",
+        "Published 2026-08-27 Web [fluxco"
+       ]
+      }
+     ],
+     "reasoning": "A dated company analysis reports an August 2026 launch of the Global Transformer Network, including full EPC service and compliance verification, within the six-month window. This relies on a secondary report; the specific primary launch post could not be located in the readable company feed. Source: https://www.teardown.ai/companies/fluxco.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive | Fluxco",
+       "url": "https://fluxco.com/careers/account-executive-data-centers",
+       "excerpts": [
+        "Account Executive (Data Centers) Sales Austin, TX Full-time"
+       ]
+      },
+      {
+       "title": "Careers at Fluxco",
+       "url": "https://fluxco.com/careers",
+       "excerpts": [
+        "View role & apply](https://fluxco.com/careers/enterprise-account-executive-commercial-industrial) [### Account Executive (Data Centers) Sales"
+       ]
+      }
+     ],
+     "reasoning": "The live Account Executive (Data Centers) posting is also listed on Fluxco's careers page. Sources: https://fluxco.com/careers/account-executive-data-centers and https://fluxco.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Fluxco 7/27/2026 Capital Raise - Gaebler.com Venture Capital Database",
+       "url": "https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026",
+       "excerpts": [
+        "7/27/2026",
+        "$26,000,000"
+       ]
+      }
+     ],
+     "reasoning": "The documented $26 million round dated July 27, 2026 falls within the preceding 18 months. Source: https://www.gaebler.com/VC-Funding-DE10A853-15ED-440C-8C0D-F10CE3B3E6A8-Fluxco-07-27-2026.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2025.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Fluxco helps utilities, data centers, renewable-energy developers, EPCs and industrial buyers specify transformers, obtain competitive bids from global manufacturers, and manage procurement through delivery and support.",
+    "employee_band": "11-20",
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": 26000000.0,
+    "named_customers": [],
+    "funding_date": "2026-07",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Seed",
+    "public_docs": false,
+    "hq_city": "Austin",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

@@ -1,0 +1,513 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e867c96cdc7aef549",
+  "interaction_id": "trun_142119f6a1b4439e867c96cdc7aef549",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "companycam.com"
+  },
+  "created_at": "2026-11-10T18:47:42.425491Z",
+  "modified_at": "2026-11-10T18:52:04.761456Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e867c96cdc7aef549",
+   "interaction_id": "trun_142119f6a1b4439e867c96cdc7aef549",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "companycam.com"
+   },
+   "created_at": "2026-11-10T18:47:42.425491Z",
+   "modified_at": "2026-11-10T18:52:04.761456Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Press | CompanyCam",
+       "url": "https://companycam.com/press",
+       "excerpts": [
+        "CompanyCam is the leading jobsite productivity platform for contractors, helping them document jobs, communicate with crews, and share progress with clients in real time. Founded in 2015 in Lincoln, Nebraska, CompanyCam's jobsite management tools and AI shortcuts are trusted by contractors at every phase of any project."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam\u2019s press page explicitly states that it was founded in 2015: https://companycam.com/press.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "CompanyCam Trust Center | Security & Compliance | CompanyCam",
+       "url": "https://companycam.com/trust-center",
+       "excerpts": [
+        "CompanyCam is SOC 2 Type II certified, GDPR and CCPA compliant, and undergoes annual third-party penetration testing."
+       ]
+      }
+     ],
+     "reasoning": "The company publicly claims SOC 2 Type II certification and GDPR compliance. Only the requested frameworks explicitly named on this page are included: https://companycam.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "CompanyCam - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/companycam/__eWj-jyb42WvkkkABaxK1QD9XJKLGEpe6viHxjDlklho",
+       "excerpts": [
+        "CompanyCam is headquartered in Lincoln, [United States]"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies CompanyCam\u2019s headquarters as Lincoln, United States: https://tracxn.com/d/companies/companycam/__eWj-jyb42WvkkkABaxK1QD9XJKLGEpe6viHxjDlklho. This is a secondary-source headquarters attribution.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Building a Workflow for Async Searchkick Reindexing - DEV Community",
+       "url": "https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8",
+       "excerpts": [
+        "[CompanyCam profile image](https://dev.to/companycam) [Chad Wilken](https://dev.to/chadwilken) [Chad Wilken](https://dev.to/chadwilken) for [CompanyCam](https://dev.to/companycam) Posted on Jun 29, 2022 \u2022 Edited on Oct 12, 2022 Building a Workflow for Async Searchkick Reindexing"
+       ]
+      },
+      {
+       "title": "Sidekiq Request ID Tracking - DEV Community",
+       "url": "https://dev.to/companycam/sidekiq-request-id-tracking-2cdm",
+       "excerpts": [
+        "[CompanyCam profile image](https://dev.to/companycam) [Chad Wilken](https://dev.to/chadwilken) [Chad Wilken](https://dev.to/chadwilken) for [CompanyCam](https://dev.to/companycam) Posted on Jul 8, 2022 \u2022 Edited on Oct 12, 2022 Sidekiq Request ID Tracking"
+       ]
+      },
+      {
+       "title": "Chad Wilken - Founding Engineer, CompanyCam | YesPress",
+       "url": "https://yespress.io/chad-wilken",
+       "excerpts": [
+        "**Former Founding Engineer at CompanyCam"
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam publishes Chad Wilken\u2019s posts on asynchronous Searchkick reindexing and Sidekiq request-ID tracking, both about building its software. Wilken is independently identified as CompanyCam\u2019s founding engineer. Sources: https://dev.to/companycam/building-a-workflow-for-async-searchkick-reindexing-4mk8, https://dev.to/companycam/sidekiq-request-id-tracking-2cdm, and https://yespress.io/chad-wilken.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Press | CompanyCam",
+       "url": "https://companycam.com/press",
+       "excerpts": [
+        "CompanyCam is the leading jobsite productivity platform for contractors, helping them document jobs, communicate with crews, and share progress with clients in real time. Founded in 2015 in Lincoln, Nebraska, CompanyCam's jobsite management tools and AI shortcuts are trusted by contractors at every phase of any project."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam describes a contractor-focused jobsite productivity platform for documenting jobs, communicating with crews, and sharing progress with clients: https://companycam.com/press.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "CompanyCam",
+       "url": "https://linkedin.com/company/companycam",
+       "excerpts": [
+        "CompanyCam View all 365 employees \u2026 size 201-500 employees Headquarters Lincoln, Nebraska Type."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam\u2019s company profile lists a 201\u2013500 employee size band and 365 associated employees: https://linkedin.com/company/companycam.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "CompanyCam \u00b7 Austin French",
+       "url": "https://austn.net/work/companycam",
+       "excerpts": [
+        "RubyLLM doesn't care which provider you use, and we shipped on Anthropic, OpenAI and Groq."
+       ]
+      }
+     ],
+     "reasoning": "A CompanyCam engineer\u2019s project portfolio explicitly says the team shipped using Anthropic, OpenAI, and Groq. This is a public implementation account rather than an official company provider disclosure: https://austn.net/work/companycam.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "CompanyCam Pricing",
+       "url": "https://companycam.com/pricing",
+       "excerpts": [
+        "Core For Solo & Small Teams / month **Includes 1 User (2 User Limit)** Additional Users: $ 29 each USD / Billed Annually"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page lists plans, user allowances, and additional-user pricing: https://companycam.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "CompanyCam 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/223056-55",
+       "excerpts": [
+        "|6\\. Later Stage VC (Series C) |21-Aug-2025 |$415M | | |Completed |Generating Revenue |"
+       ]
+      },
+      {
+       "title": "CompanyCam Funding History: $455.3M | Indexed.vc",
+       "url": "https://indexed.vc/companies/companycam",
+       "excerpts": [
+        "It has raised $455.3M across 6 rounds, most recently a $415.0M Series C in August 2025."
+       ]
+      }
+     ],
+     "reasoning": "PitchBook lists $415 million for the August 2025 Series C, and Indexed.vc also identifies a $415 million Series C as the latest round. This is round size, not total funding or valuation. The company announcement does not disclose the amount. Sources: https://pitchbook.com/profiles/company/223056-55 and https://indexed.vc/companies/companycam.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Case Study: Best Roofing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/best-roofing",
+       "excerpts": [
+        "Best Roofing rolled out CompanyCam in 2022 to solve their job site photo capture need."
+       ]
+      },
+      {
+       "title": "Case Study: Apple Roofing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/apple-roofing",
+       "excerpts": [
+        "Since implementation, Apple Roofing has benefited from the **streamlined communication and job site transparency** that CompanyCam provides."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam\u2019s case studies describe Best Roofing\u2019s rollout and Apple Roofing\u2019s benefits after implementation, establishing both as customers: https://companycam.com/resources/case-studies/best-roofing and https://companycam.com/resources/case-studies/apple-roofing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "CompanyCam Secures Strategic Growth Investment from B Capital",
+       "url": "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html",
+       "excerpts": [
+        "Aug 21, 2025, 09:00 ET"
+       ]
+      },
+      {
+       "title": "CompanyCam 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/223056-55",
+       "excerpts": [
+        "|6\\. Later Stage VC (Series C) |21-Aug-2025 |$415M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s announcement and the latest-round profile place the Series C in August 2025, giving 2025-08 at the requested month precision. Sources: https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html and https://pitchbook.com/profiles/company/223056-55.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Sr. Salesforce Administrator @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277",
+       "excerpts": [
+        "Administer and maintain core GTM systems (Salesforce, marketing automation, sales engagement tools) to ensure high availability, performance, and scalability"
+       ]
+      },
+      {
+       "title": "Sr. Marketing Analyst @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1",
+       "excerpts": [
+        "Experience building dashboards and reports in BI tools, specifically Omni, Amplitude, and Marketo"
+       ]
+      }
+     ],
+     "reasoning": "A Salesforce administrator posting explicitly identifies Salesforce among core GTM systems. A marketing analyst posting specifically names Marketo, although that wording is an experience requirement rather than a direct deployment statement. Sources: https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277 and https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Saliq Hussaini",
+       "url": "https://linkedin.com/in/saliqhussaini",
+       "excerpts": [
+        "Returned fields: {experience_text=\"CompanyCam 2026-07-01 VP, Embedded Finance & Payments Beam San Francisco Bay Area 2023-08-01 First business hire."
+       ]
+      }
+     ],
+     "reasoning": "Saliq Hussaini\u2019s profile lists a July 2026 start as CompanyCam\u2019s VP, Embedded Finance & Payments, following his role at Beam. That falls within the requested 12-month window: https://linkedin.com/in/saliqhussaini.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "CompanyCam Jobs",
+       "url": "https://jobs.ashbyhq.com/companycam",
+       "excerpts": [
+        "Engineering Product Engineering [### Senior Software Engineer (Ruby on Rails) Product Engineering \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/76838979-40c4-4d4c-81e6-976ed7b6ee78) Finance Enterprise Analytics [### Sr. Marketing Analyst Enterprise Analytics \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1) Marketing Digital & Marketing Operations [### Digital Marketing Specialist Digital & Marketing Operations \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/32dd4d15-3ac6-4955-ac18-38892a5e3fd4) Product Product Design [### Senior Product Designer Product Design \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/a6b467d7-22bf-40f8-bad4-54e26c0f18e8) Product Product Management [### Senior Product Manager Product Management \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b563123e-053e-4a33-9585-94861da86d3f) Sales Account Management [### Account Manager, SMB Account Management \u2022 Headquarters \u2022 Full time](https://jobs.ashbyhq.com/companycam/9c8921a4-88a3-4240-a6ff-12d1cafac919) Sales Revenue Operations [### GTM Systems Developer Revenue Operations \u2022 Remote; Headquarters \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b6335f3d-853d-4e66-823f-2e09489738a1) [### Sr. Salesforce Administrator Revenue Operations \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277) Sales SMB Sales [### Inside Sales Represenative SMB Sales \u2022 Remote UK \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703) Support & Success Mid-Market Customer Success [### Customer Success Manager, Mid-Market Mid-Market Customer Success \u2022 Headquarters \u2022 Full time \u2022 On-site](https://jobs.ashbyhq.com/companycam/4071100a-079c-4c3d-9c76-1e3e5919e069)"
+       ]
+      }
+     ],
+     "reasoning": "The readable current job board lists engineering, analytics, marketing, product, sales, and support roles, but none has a qualifying AI, ML, or data-science title. The marketing analyst role does not qualify under the stated exclusions: https://jobs.ashbyhq.com/companycam.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "CompanyCam Secures Strategic Growth Investment from B Capital",
+       "url": "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html",
+       "excerpts": [
+        "21, 2025 /PRNewswire/ -- CompanyCam, the leading job site productivity platform with field-ready AI, today announced a new strategic growth investment from B Capital through its Series C transaction."
+       ]
+      },
+      {
+       "title": "CompanyCam 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/223056-55",
+       "excerpts": [
+        "|6\\. Later Stage VC (Series C) |21-Aug-2025 |$415M | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The company announcement calls the investment a Series C transaction, and the funding profile identifies it as the latest Series C round. Sources: https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html and https://pitchbook.com/profiles/company/223056-55.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "developers.companycam.com",
+       "url": "https://developers.companycam.com/llms.txt",
+       "excerpts": [
+        "[API Reference](https://developers.companycam.com/api-reference): Endpoints, request parameters, and response schemas for the CompanyCam Public API, generated from its OpenAPI spec.",
+        "[OAuth 2.0](https://developers.companycam.com/oauth): Authenticate CompanyCam users and obtain access tokens with the OAuth 2.0 authorization code grant and granular scopes.",
+        "[Webhooks](https://developers.companycam.com/webhooks): Subscribe to CompanyCam events and receive real-time POST requests when projects, photos, and other records change."
+       ]
+      }
+     ],
+     "reasoning": "The public developer documentation index links multiple substantive articles, including the API reference, OAuth authentication, and webhooks: https://developers.companycam.com/llms.txt. The portal is https://developers.companycam.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "CompanyCam",
+       "url": "https://linkedin.com/company/companycam",
+       "excerpts": [
+        "CompanyCam View all 365 employees \u2026 size 201-500 employees Headquarters Lincoln, Nebraska Type."
+       ]
+      },
+      {
+       "title": "CompanyCam - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/companycam/__eWj-jyb42WvkkkABaxK1QD9XJKLGEpe6viHxjDlklho",
+       "excerpts": [
+        "CompanyCam is headquartered in Lincoln, [United States]"
+       ]
+      }
+     ],
+     "reasoning": "Both company profiles identify Lincoln as CompanyCam\u2019s headquarters: https://linkedin.com/company/companycam and https://tracxn.com/d/companies/companycam/__eWj-jyb42WvkkkABaxK1QD9XJKLGEpe6viHxjDlklho.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "More of Your CompanyCam Data Is Now Open to the Tools You Already Use | CompanyCam News Center",
+       "url": "https://intercom.news/companycam/156729-more-of-your-companycam-data-is-now-open-to-the-tools-you-already-use",
+       "excerpts": [
+        "Shared by Austyn \u2022 September 08, 2026",
+        "**Documents Can Now Be Created and Edited Through the API, Not Just Read** Until now, the API and MCP integration could only pull existing Documents (formerly called Pages) out of CompanyCam. You could read them, but you couldn't build new ones or make changes through that connection. That's changed: you can now draft and edit Documents and reports directly through the API and MCP. If you run an integration or an AI tool that generates project reports, it can write a finished document straight into CompanyCam the moment a job wraps, using your latest photos, without anyone opening the app to build it by hand."
+       ]
+      }
+     ],
+     "reasoning": "On September 8, 2026, CompanyCam announced document creation and editing through its API and MCP, expanding beyond read-only access. This substantive integration capability falls within the requested six-month window: https://intercom.news/companycam/156729-more-of-your-companycam-data-is-now-open-to-the-tools-you-already-use.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "CompanyCam Jobs",
+       "url": "https://jobs.ashbyhq.com/companycam",
+       "excerpts": [
+        "Engineering Product Engineering [### Senior Software Engineer (Ruby on Rails) Product Engineering \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/76838979-40c4-4d4c-81e6-976ed7b6ee78) Finance Enterprise Analytics [### Sr. Marketing Analyst Enterprise Analytics \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1) Marketing Digital & Marketing Operations [### Digital Marketing Specialist Digital & Marketing Operations \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/32dd4d15-3ac6-4955-ac18-38892a5e3fd4) Product Product Design [### Senior Product Designer Product Design \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/a6b467d7-22bf-40f8-bad4-54e26c0f18e8) Product Product Management [### Senior Product Manager Product Management \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b563123e-053e-4a33-9585-94861da86d3f) Sales Account Management [### Account Manager, SMB Account Management \u2022 Headquarters \u2022 Full time](https://jobs.ashbyhq.com/companycam/9c8921a4-88a3-4240-a6ff-12d1cafac919) Sales Revenue Operations [### GTM Systems Developer Revenue Operations \u2022 Remote; Headquarters \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b6335f3d-853d-4e66-823f-2e09489738a1) [### Sr. Salesforce Administrator Revenue Operations \u2022 Remote \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277) Sales SMB Sales [### Inside Sales Represenative SMB Sales \u2022 Remote UK \u2022 Full time \u2022 Remote](https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703) Support & Success Mid-Market Customer Success [### Customer Success Manager, Mid-Market Mid-Market Customer Success \u2022 Headquarters \u2022 Full time \u2022 On-site](https://jobs.ashbyhq.com/companycam/4071100a-079c-4c3d-9c76-1e3e5919e069)"
+       ]
+      },
+      {
+       "title": "Inside Sales Represenative @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703",
+       "excerpts": [
+        "Inside Sales Represenative"
+       ]
+      }
+     ],
+     "reasoning": "The current board has no role explicitly titled SDR, BDR, Sales Development Representative, Business Development Representative, or Account Executive. Its Inside Sales Representative opening is not counted under that restricted title definition. Sources: https://jobs.ashbyhq.com/companycam and https://jobs.ashbyhq.com/companycam/f06dd43d-f2d7-41e9-b064-3c004f29f703.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "CompanyCam Secures Strategic Growth Investment from B Capital",
+       "url": "https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html",
+       "excerpts": [
+        "Aug 21, 2025, 09:00 ET",
+        "21, 2025 /PRNewswire/ -- CompanyCam, the leading job site productivity platform with field-ready AI, today announced a new strategic growth investment from B Capital through its Series C transaction."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam announced its Series C investment on August 21, 2025, within the 18 months preceding November 9, 2026: https://www.prnewswire.com/news-releases/companycam-secures-strategic-growth-investment-from-b-capital-302535365.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "CompanyCam Trust Center | Security & Compliance | CompanyCam",
+       "url": "https://companycam.com/trust-center",
+       "excerpts": [
+        "CompanyCam is SOC 2 Type II certified, GDPR and CCPA compliant, and undergoes annual third-party penetration testing."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam explicitly claims SOC 2 Type II certification: https://companycam.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "CompanyCam Trust Center | Security & Compliance | CompanyCam",
+       "url": "https://companycam.com/trust-center",
+       "excerpts": [
+        "CompanyCam is SOC 2 Type II certified, GDPR and CCPA compliant, and undergoes annual third-party penetration testing."
+       ]
+      }
+     ],
+     "reasoning": "CompanyCam explicitly claims GDPR compliance: https://companycam.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Case Study: Best Roofing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/best-roofing",
+       "excerpts": [
+        "> \u201cIt\u2019s seamless. It\u2019s just been unbelievable.\u201d Christine Blackman \u2014 Executive Assistant, Best Roofing"
+       ]
+      }
+     ],
+     "reasoning": "The CompanyCam customer case study includes a testimonial attributed to Best Roofing\u2019s executive assistant: https://companycam.com/resources/case-studies/best-roofing.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Case Study: Apple Roofing | CompanyCam",
+       "url": "https://companycam.com/resources/case-studies/apple-roofing",
+       "excerpts": [
+        "Since implementation, Apple Roofing has benefited from the **streamlined communication and job site transparency** that CompanyCam provides."
+       ]
+      }
+     ],
+     "reasoning": "The case study explicitly describes Apple Roofing\u2019s benefits after implementing CompanyCam: https://companycam.com/resources/case-studies/apple-roofing.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Sr. Salesforce Administrator @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277",
+       "excerpts": [
+        "Administer and maintain core GTM systems (Salesforce, marketing automation, sales engagement tools) to ensure high availability, performance, and scalability"
+       ]
+      }
+     ],
+     "reasoning": "The administrator posting names Salesforce among CompanyCam\u2019s core GTM systems: https://jobs.ashbyhq.com/companycam/b2e4c9a0-84fa-45f7-8a18-e88c81a38277.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Sr. Marketing Analyst @ CompanyCam",
+       "url": "https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1",
+       "excerpts": [
+        "Experience building dashboards and reports in BI tools, specifically Omni, Amplitude, and Marketo"
+       ]
+      }
+     ],
+     "reasoning": "The marketing analyst posting specifically requests Marketo experience, providing a stack signal rather than an unequivocal deployment declaration: https://jobs.ashbyhq.com/companycam/9d1b9f03-d898-4fcc-9521-f131cf37cde1.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "CompanyCam is a jobsite documentation and productivity platform that helps contractors capture project photos, coordinate crews, and share progress with clients.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic, OpenAI, and Groq",
+    "pricing_page": true,
+    "funding_amount_usd": 415000000.0,
+    "named_customers": [
+     "Best Roofing",
+     "Apple Roofing"
+    ],
+    "funding_date": "2025-08",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Marketo"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "Lincoln",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

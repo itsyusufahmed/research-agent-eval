@@ -1,0 +1,538 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8bebb0a9eef0d448",
+  "interaction_id": "trun_142119f6a1b4439e8bebb0a9eef0d448",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "complyadvantage.com"
+  },
+  "created_at": "2026-11-10T18:48:04.480428Z",
+  "modified_at": "2026-11-10T18:55:26.581770Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8bebb0a9eef0d448",
+   "interaction_id": "trun_142119f6a1b4439e8bebb0a9eef0d448",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "complyadvantage.com"
+   },
+   "created_at": "2026-11-10T18:48:04.480428Z",
+   "modified_at": "2026-11-10T18:55:26.581770Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: ComplyAdvantage; website_url: https://complyadvantage.com; founded_year: 2014; employee_count_official: 505; employee_count_history[0].employee_count: 443; employee_count_history[0].year: 2024; employee_count_history[0].month: 3; employee_count_history[1].employee_count: 410; employee_count_history[1].year: 2023; employee_count_history[1].month: 3; employee_count_history[2].employee_count: 313; employee_count_history[2].year: 2022; employee_count_history[2].month: 3; employee_count_history[3].employee_count: 235; employee_count_history[3].year: 2021; employee_count_history[3].month: 3; e"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies ComplyAdvantage and gives its founded_year as 2014.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Data privacy and security essentials in ComplyAdvantage Mesh",
+       "url": "https://complyadvantage.com/insights/data-privacy-and-security-essentials-in-complyadvantage-mesh/",
+       "excerpts": [
+        "GDPR-compliant solutions and data handling practices."
+       ]
+      }
+     ],
+     "reasoning": "The company security page names ISO 27001, SOC II, and GDPR compliance. It does not name HIPAA or PCI DSS in the cited claims.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "url": "http://complyadvantage.com/press-media/sumsub-and-complyadvantage-announce-strategic-partnership",
+       "excerpts": [
+        "ComplyAdvantage is headquartered in London with global hubs in New York, Lisbon, Singapore, and Cluj-Napoca."
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: ComplyAdvantage; website_url: https://complyadvantage.com; founded_year: 2014; employee_count_official: 505; employee_count_history[0].employee_count: 443; employee_count_history[0].year: 2024; employee_count_history[0].month: 3; employee_count_history[1].employee_count: 410; employee_count_history[1].year: 2023; employee_count_history[1].month: 3; employee_count_history[2].employee_count: 313; employee_count_history[2].year: 2022; employee_count_history[2].month: 3; employee_count_history[3].employee_count: 235; employee_count_history[3].year: 2021; employee_count_history[3].month: 3; e"
+       ]
+      }
+     ],
+     "reasoning": "The company says its headquarters are in London; the company profile identifies its location country as the United Kingdom.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Spring's Cache Framework: Showcasing Multi-Tier Caching",
+       "url": "https://technology.complyadvantage.com/springs-cache-framework-showcasing-multi-tier-caching/",
+       "excerpts": [
+        "Multi-tier Caching Architecture\n\nSticking with the first example provider, Redis is great,",
+        "So why not combine them to have the best of both worlds?\n\n## The Two-Tier Architecture\n\nLet's create an example where we use _Caffeine_ as the in-memory caching implementation integrated with"
+       ]
+      }
+     ],
+     "reasoning": "The company's technology blog includes a post about fine-tuning an LLM for entity resolution and a separate technical post about implementing multi-tier caching with Kotlin and Spring. These meet the technical-content threshold, though the cited excerpts do not state the authors' engineering job titles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "ComplyAdvantage | AI-driven fraud & AML risk detection",
+       "url": "https://complyadvantage.com/",
+       "excerpts": [
+        "The AI-native financial crime platform with embedded agents that automate compliance and accelerate risk decisions."
+       ]
+      },
+      {
+       "title": "ComplyAdvantage Tackles Fraud & Financial Crime Using AWS",
+       "url": "https://aws.amazon.com/solutions/case-studies/comply-advantage-data-protection",
+       "excerpts": [
+        "As a software provider for fraud and money laundering monitoring, ComplyAdvantage helps regulated organizations manage risk and combat financial crime."
+       ]
+      }
+     ],
+     "reasoning": "The company describes an AI-native financial-crime platform that automates compliance and risk decisions, and says it serves regulated organizations with fraud and money-laundering monitoring.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: ComplyAdvantage; website_url: https://complyadvantage.com; founded_year: 2014; employee_count_official: 505; employee_count_history[0].employee_count: 443; employee_count_history[0].year: 2024; employee_count_history[0].month: 3; employee_count_history[1].employee_count: 410; employee_count_history[1].year: 2023; employee_count_history[1].month: 3; employee_count_history[2].employee_count: 313; employee_count_history[2].year: 2022; employee_count_history[2].month: 3; employee_count_history[3].employee_count: 235; employee_count_history[3].year: 2021; employee_count_history[3].month: 3; e"
+       ]
+      }
+     ],
+     "reasoning": "The cited company profile reports 505 employees, which is outside every employee band permitted by the schema; therefore no listed band can be selected.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Fine-Tuning vs. Prompt Engineering: A Practical LLM Use Case at ComplyAdvantage",
+       "url": "https://technology.complyadvantage.com/fine-tuning-vs-prompt-engineering-a-practical-llm-use-case-at-complyadvantage/",
+       "excerpts": [
+        "Upload to the LLM API: We used the [Gemini API](https://ai.google.dev/gemini-api/docs/model-tuning?ref=technology.complyadvantage.com) fine-tuning endpoint. Monitor Training: After just half an hour of compute time, we obtained a specialised model."
+       ]
+      }
+     ],
+     "reasoning": "The technical post says ComplyAdvantage used the Gemini API fine-tuning endpoint in its entity-resolution example and obtained a specialized model; it does not identify the exact model.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [],
+     "reasoning": "The public pricing page lists Starter, Essentials, and Agentic plans and a starting price, establishing that a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "ComplyAdvantage secures \u00a323.1k in new funding round | Funding Spotter",
+       "url": "https://www.fundingspotter.com/news/ivxs-uk-2025",
+       "excerpts": [
+        "Cloud-based Anti-Money Laundering (AML) specialist ComplyAdvantage has secured \u00a323.1k in its latest funding round.",
+        "This latest investment (allotted in December 2025) is part of a long history of funding activity for the firm."
+       ]
+      }
+     ],
+     "reasoning": "The most recent funding report describes a \u00a323.1k investment allotted in December 2025, but does not provide an amount in USD. No currency conversion is supplied, so the USD amount is unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Tala drives global expansion with fast, flexible customer screening | ComplyAdvantage",
+       "url": "https://complyadvantage.com/customer-stories/tala-drives-global-expansion-with-fast-flexible-customer-screening",
+       "excerpts": [
+        "This solution has built operational efficiency, it has built seamless customer interactions, and compliance within all of our markets.\" > > **Shellie Schumaker, VP, Global Compliance, Tala"
+       ]
+      },
+      {
+       "title": "Monex achieves global growth with enhanced customer screening and transaction monitoring | ComplyAdvantage",
+       "url": "https://complyadvantage.com/customer-stories/monex-achieves-global-growth-with-enhanced-customer-screening-and-transaction-monitoring",
+       "excerpts": [
+        "Monex achieves global growth with enhanced customer screening and transaction monitoring"
+       ]
+      }
+     ],
+     "reasoning": "The Tala case-study excerpt includes a testimonial from Tala's VP of Global Compliance, and the second cited case study is explicitly about Monex.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "ComplyAdvantage secures \u00a323.1k in new funding round | Funding Spotter",
+       "url": "https://www.fundingspotter.com/news/ivxs-uk-2025",
+       "excerpts": [
+        "This latest investment (allotted in December 2025) is part of a long history of funding activity for the firm."
+       ]
+      }
+     ],
+     "reasoning": "The funding report states that the latest investment was allotted in December 2025, which supplies the YYYY-MM date.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Marketing Operations Specialist at ComplyAdvantage",
+       "url": "https://startup.jobs/marketing-operations-specialist-complyadvantage-2-7951250",
+       "excerpts": [
+        "**HubSpot <> SFDC Sync:** Own the day-to-day health of the HubSpot-Salesforce integration. You will monitor sync errors, map new fields, and ensure that data integrity is maintained across both platforms.",
+        "This includes cleaning lead lists, enriching data via **Clay** , uploading to HubSpot, and triggering the correct follow-up processes.",
+        "**Dashboard Construction:** Build and maintain reports in HubSpot, Salesforce and Looker to track MQLs, SQLs, and conversion rates."
+       ]
+      },
+      {
+       "title": "ComplyAdvantage: Manager, GTM Technology",
+       "url": "https://www.indexventures.com/startup-jobs/complyadvantage/manager-gtm-technology",
+       "excerpts": [
+        "Lead strategy and governance for our GTM systems (Salesforce, HubSpot, Outreach, ChurnZero, etc.)"
+       ]
+      }
+     ],
+     "reasoning": "The job descriptions explicitly name HubSpot and Salesforce integration, Clay for lead enrichment, Looker reporting, and GTM systems including Outreach and ChurnZero.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Comply Advantage News and Activities",
+       "url": "https://www.theofficialboard.com/news/comply-advantage",
+       "excerpts": [
+        "[Damilola Payne](https://www.theofficialboard.com/org-chart/comply-advantage) has joined the company as Vice President of Product \u00a0(posted on September 21 2026)."
+       ]
+      }
+     ],
+     "reasoning": "The dated profile reports that Damilola Payne joined as Vice President of Product in September 2026, inside the 12 months before the run date.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "\n\tPrincipal Machine Learning Engineer, London - Diversity Dashboard\n",
+       "url": "https://diversitydashboard.co.uk/jobs/principal-machine-learning-engineer-london/2953258763-2",
+       "excerpts": [
+        "Principal Machine Learning Engineer Job Reference: 2953258763-2 Date Posted: 3 September 2026",
+        "[Apply for this job now](https://diversitydashboard.co.uk/jobs/apply/ats-redirect/?id=2953258763-2) Job Description What you will be doingWe are looking for an exceptional Principal Machine Learning Engineer to lead the engineering build-out of ML and agentic AI"
+       ]
+      }
+     ],
+     "reasoning": "A September 2026 listing is titled Principal Machine Learning Engineer and provides an application link, supporting an open AI/ML role.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "ComplyAdvantage secures \u00a323.1k in new funding round | Funding Spotter",
+       "url": "https://www.fundingspotter.com/news/ivxs-uk-2025",
+       "excerpts": [
+        "Cloud-based Anti-Money Laundering (AML) specialist ComplyAdvantage has secured \u00a323.1k in its latest funding round.",
+        "This latest investment (allotted in December 2025) is part of a long history of funding activity for the firm."
+       ]
+      }
+     ],
+     "reasoning": "The latest report calls the December 2025 allotment an investment/funding round but does not specify its financing stage; the stage is therefore unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [],
+     "reasoning": "The public Mesh documentation includes a Getting Started guide and API documentation with multiple sections, including authentication and error handling.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "url": "http://complyadvantage.com/press-media/sumsub-and-complyadvantage-announce-strategic-partnership",
+       "excerpts": [
+        "ComplyAdvantage is headquartered in London with global hubs in New York, Lisbon, Singapore, and Cluj-Napoca."
+       ]
+      }
+     ],
+     "reasoning": "The company states that its headquarters are in London.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "ComplyAdvantage integrates real-time payment screening into its AI-native Mesh platform to combat global sanctions risk",
+       "url": "https://complyadvantage.com/press-media/complyadvantage-integrates-real-time-payment-screening-into-mesh-platform",
+       "excerpts": [
+        "**LONDON / NEW YORK, 19 May 2026 \u2013** ComplyAdvantage, the leader in AI-driven financial crime risk data and detection, today announced the launch of [Payment Screening on Mesh](https://complyadvantage.com/mesh/payment-screening/) ."
+       ]
+      }
+     ],
+     "reasoning": "The company announced the launch of Payment Screening on Mesh on May 19, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at ComplyAdvantage",
+       "url": "https://job-boards.greenhouse.io/embed/job_board?for=complyadvantage",
+       "excerpts": [
+        "|[Account Executive London, England, United Kingdom](https://complyadvantage.com/careers/jobs/8642475002?gh_jid=8642475002) | |[Account Executive, Commercial New York, New York, United States; North Carolina, United States](https://complyadvantage.com/careers/jobs/8471671002?gh_jid=8471671002) | |[Business Development Representative Austin, Texas, United States; Dallas, Texas, United States; Denver, Colorado, United States; New York, New York, United States; North Carolina, United States](https://complyadvantage.com/careers/jobs/8816329002?gh_jid=8816329002)"
+       ]
+      }
+     ],
+     "reasoning": "The current openings page includes Account Executive and Business Development Representative positions.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "ComplyAdvantage secures \u00a323.1k in new funding round | Funding Spotter",
+       "url": "https://www.fundingspotter.com/news/ivxs-uk-2025",
+       "excerpts": [
+        "Cloud-based Anti-Money Laundering (AML) specialist ComplyAdvantage has secured \u00a323.1k in its latest funding round.",
+        "This latest investment (allotted in December 2025) is part of a long history of funding activity for the firm."
+       ]
+      }
+     ],
+     "reasoning": "The reported December 2025 funding allotment falls within the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Data privacy and security essentials in ComplyAdvantage Mesh",
+       "url": "https://complyadvantage.com/insights/data-privacy-and-security-essentials-in-complyadvantage-mesh/",
+       "excerpts": [
+        "ISO27001 compliance."
+       ]
+      }
+     ],
+     "reasoning": "The cited security page names ISO 27001.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Data privacy and security essentials in ComplyAdvantage Mesh",
+       "url": "https://complyadvantage.com/insights/data-privacy-and-security-essentials-in-complyadvantage-mesh/",
+       "excerpts": [
+        "SOCII compliance."
+       ]
+      }
+     ],
+     "reasoning": "The cited security page names SOC II compliance.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Data privacy and security essentials in ComplyAdvantage Mesh",
+       "url": "https://complyadvantage.com/insights/data-privacy-and-security-essentials-in-complyadvantage-mesh/",
+       "excerpts": [
+        "GDPR-compliant solutions and data handling practices."
+       ]
+      }
+     ],
+     "reasoning": "The cited security page names GDPR-compliant solutions and data handling practices.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Tala drives global expansion with fast, flexible customer screening | ComplyAdvantage",
+       "url": "https://complyadvantage.com/customer-stories/tala-drives-global-expansion-with-fast-flexible-customer-screening",
+       "excerpts": [
+        "This solution has built operational efficiency, it has built seamless customer interactions, and compliance within all of our markets.\" > > **Shellie Schumaker, VP, Global Compliance, Tala"
+       ]
+      }
+     ],
+     "reasoning": "The testimonial on the customer story page is attributed to Tala's VP of Global Compliance.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Monex achieves global growth with enhanced customer screening and transaction monitoring | ComplyAdvantage",
+       "url": "https://complyadvantage.com/customer-stories/monex-achieves-global-growth-with-enhanced-customer-screening-and-transaction-monitoring",
+       "excerpts": [
+        "Monex achieves global growth with enhanced customer screening and transaction monitoring"
+       ]
+      }
+     ],
+     "reasoning": "The cited customer story names Monex.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Marketing Operations Specialist at ComplyAdvantage",
+       "url": "https://startup.jobs/marketing-operations-specialist-complyadvantage-2-7951250",
+       "excerpts": [
+        "**HubSpot <> SFDC Sync:** Own the day-to-day health of the HubSpot-Salesforce integration. You will monitor sync errors, map new fields, and ensure that data integrity is maintained across both platforms."
+       ]
+      }
+     ],
+     "reasoning": "This job description names HubSpot and Salesforce.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Marketing Operations Specialist at ComplyAdvantage",
+       "url": "https://startup.jobs/marketing-operations-specialist-complyadvantage-2-7951250",
+       "excerpts": [
+        "This includes cleaning lead lists, enriching data via **Clay** , uploading to HubSpot, and triggering the correct follow-up processes."
+       ]
+      }
+     ],
+     "reasoning": "The job description names Clay as a lead-enrichment tool.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Marketing Operations Specialist at ComplyAdvantage",
+       "url": "https://startup.jobs/marketing-operations-specialist-complyadvantage-2-7951250",
+       "excerpts": [
+        "**Dashboard Construction:** Build and maintain reports in HubSpot, Salesforce and Looker to track MQLs, SQLs, and conversion rates."
+       ]
+      }
+     ],
+     "reasoning": "The job description names Looker for reporting.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "ComplyAdvantage: Manager, GTM Technology",
+       "url": "https://www.indexventures.com/startup-jobs/complyadvantage/manager-gtm-technology",
+       "excerpts": [
+        "Lead strategy and governance for our GTM systems (Salesforce, HubSpot, Outreach, ChurnZero, etc.)"
+       ]
+      }
+     ],
+     "reasoning": "The GTM technology job description names Outreach.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "ComplyAdvantage: Manager, GTM Technology",
+       "url": "https://www.indexventures.com/startup-jobs/complyadvantage/manager-gtm-technology",
+       "excerpts": [
+        "Lead strategy and governance for our GTM systems (Salesforce, HubSpot, Outreach, ChurnZero, etc.)"
+       ]
+      }
+     ],
+     "reasoning": "The GTM technology job description names ChurnZero.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.5",
+     "citations": [
+      {
+       "title": "Marketing Operations Specialist at ComplyAdvantage",
+       "url": "https://startup.jobs/marketing-operations-specialist-complyadvantage-2-7951250",
+       "excerpts": [
+        "**HubSpot <> SFDC Sync:** Own the day-to-day health of the HubSpot-Salesforce integration. You will monitor sync errors, map new fields, and ensure that data integrity is maintained across both platforms."
+       ]
+      }
+     ],
+     "reasoning": "The job description names HubSpot.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2014.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "SOC 2",
+     "GDPR"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": true,
+    "product_one_liner": "ComplyAdvantage provides an AI-driven financial-crime risk platform for regulated organizations to screen customers, detect fraud and money laundering, and automate compliance decisions.",
+    "employee_band": null,
+    "model_provider": "Google Gemini API (used for fine-tuning in an entity-resolution example; the exact model is not named).",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Tala",
+     "Monex"
+    ],
+    "funding_date": "2025-12",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Salesforce",
+     "Clay",
+     "Looker",
+     "Outreach",
+     "ChurnZero"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": null,
+    "public_docs": true,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

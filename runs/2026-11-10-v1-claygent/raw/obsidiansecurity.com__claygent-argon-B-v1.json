@@ -1,0 +1,442 @@
+{
+ "run": {
+  "routine_run_id": "run_0toavs5ot4Ngt5NUBtb",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "obsidiansecurity.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The single marketing blog covers product spotlights, AI-security thought leadership and announcements mostly authored by 'Obsidian Security Team' or marketing staff. Only one post about how the product is built by engineers was found ('Modern Threat Detection: Making Impossible Travel Possible', co-authored by a Senior Security Researcher and a Machine Learning Engineer); with only that lone engineering post, the bar of two engineer-authored build posts is not met.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/blog",
+        "https://www.obsidiansecurity.com/blog/modern-threat-detection-impossible-travel"
+       ]
+      },
+      "reasoning": "Researched obsidiansecurity.com (the security vendor, not the note-taking app). Homepage, news release, careers, customers, trust center, blog, job board and pricing pages were read directly; funding and headcount were corroborated with independent databases (CB Insights, Crustdata, TipRanks, Revelio). Key findings: Series D $85M on 2026-08-04; ~260-272 employees (201-500 band); Palo Alto HQ; founded 2017; trust center lists SOC 2/ISO 27001 (plus ISO 27701/42001 outside the requested five); docs site is login-gated so no public documentation; multiple named enterprise customers with case studies; active AI-security engineering roles and four Enterprise Account Executive openings; several product launches inside the 6-month window (200+ connector coverage May 2026, Claude Compliance API integration July 2026, Databricks Silver partner Sept 2026); a VP of Engineering joined June 2026. The only field left unknown is the model provider for Obsidian's own AI Assistant: its public pages name a governed multi-agent architecture and MCP but never the underlying LLM vendor, and the subprocessor list contains no model provider.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.obsidiansecurity.com/",
+       "Visited https://www.businesswire.com/news/home/20261110483907/en/Obsidian-Security-Announces-Industrys-First-Context-Aware-Runtime-Decision-Engine-to-Enforce-AI-Agent-Actions-Across-Coding-Tools-Gateways-and-Third-Party-Applications",
+       "Visited https://www.obsidiansecurity.com/pricing",
+       "Visited https://www.obsidiansecurity.com/customers",
+       "Visited https://www.obsidiansecurity.com/careers",
+       "Visited https://www.obsidiansecurity.com/customer-stories/snowflake",
+       "Visited https://www.obsidiansecurity.com/customer-stories/enterprise-saas-security-at-5g-speed-inside-the-t-mobile-obsidian-partnership",
+       "Visited https://www.obsidiansecurity.com/customer-stories/wyndham",
+       "Visited https://research.crustdata.com/company/obsidian-security",
+       "Visited https://www.tipranks.com/private-companies/obsidian-security",
+       "Visited https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+       "Visited https://linkedin.com/company/11110209",
+       "Visited https://www.obsidiansecurity.com/blog",
+       "Visited https://www.obsidiansecurity.com/blog/modern-threat-detection-impossible-travel",
+       "Visited https://docs.obsidiansecurity.com/obsidian/api/graphql",
+       "Visited https://job-boards.greenhouse.io/obsidiansecurity",
+       "Visited https://job-boards.greenhouse.io/obsidiansecurity/jobs/5406173008",
+       "Visited https://trust.obsidiansecurity.com/",
+       "Visited https://www.cbinsights.com/company/obsidian-security/financials",
+       "Visited https://job-boards.greenhouse.io/obsidiansecurity/jobs/4864479008",
+       "Visited https://www.obsidiansecurity.com/blog/obsidian-expands-connector-coverage",
+       "Visited https://www.obsidiansecurity.com/blog/anthropic-compliance-api-integration",
+       "Visited https://linkedin.com/in/yanxin-zhang-05a60115",
+       "Visited https://www.repvue.com/companies/ObsidianSecurity/tech-stack",
+       "Visited https://start.obsidiansecurity.com/rs/124-DIV-269/images/T-Mobile_Customer_Story.pdf?version=0",
+       "Visited https://www.obsidiansecurity.com/resource/wyndham-case-study",
+       "Visited https://www.obsidiansecurity.com/customer-stories/telus",
+       "Visited https://obsidiansecurity.com/customer-stories/upwork",
+       "Visited https://obsidiansecurity.com/customer-stories/bigcommerce",
+       "Visited https://www.obsidiansecurity.com/customer-stories/algolia"
+      ],
+      "hq_location": {
+       "notes": "Company press release: 'Headquartered in Palo Alto, California'; LinkedIn company page: Headquarters Palo Alto, California, US.",
+       "value": {
+        "city": "Palo Alto, California",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+        "https://linkedin.com/company/obsidiansecurity"
+       ]
+      },
+      "public_docs": {
+       "notes": "docs.obsidiansecurity.com exists but is gated to customers: it renders 'Session Expired - To access Obsidian's product documentation, please click the book icon in your Obsidian portal', so there is no public docs site or developer portal with several articles.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://docs.obsidiansecurity.com/obsidian/api/graphql"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "$85M Series D announced August 4, 2026 - about 3 months before the 2026-11-09 run date, well inside the 18-month window (since 2025-05-09).",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely"
+       ]
+      },
+      "founded_year": {
+       "notes": "Careers page: 'Founded in 2017'; LinkedIn company page: Founded 2017.",
+       "value": 2017,
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/careers",
+        "https://linkedin.com/company/obsidiansecurity"
+       ]
+      },
+      "last_funding": {
+       "notes": "Company announcement dated August 4, 2026: '$85 million in Series D financing led by Crescent Cove Advisors, with participation from all existing investors including Greylock Partners and Menlo Ventures' at a $1.1B valuation; CB Insights confirms latest round was Series D for $85M on August 4, 2026.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Series D",
+        "amount_usd": 85000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+        "https://www.cbinsights.com/company/obsidian-security/financials"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Within the 6 months before 2026-11-09: connector coverage expansion to 200+ enterprise applications announced May 14, 2026; Claude Compliance API integration announced July 21, 2026; Databricks Silver partner status and Unity AI Gateway launch-partner role announced September 15, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/blog/obsidian-expands-connector-coverage",
+        "https://www.obsidiansecurity.com/blog/we-are-a-databricks-silver-partner",
+        "https://www.obsidiansecurity.com/blog/anthropic-compliance-api-integration"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public pricing page ('Flexible SaaS Security Pricing') exists: 'Start free. Expand into the modules your team needs, across AI and third-party application security. No bloated bundles.' It lists a free start and modular plans without dollar figures, which still counts as a pricing page.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "Crustdata: 260 employees as of September 2026; TipRanks: 272 employees as of November 9, 2026; Revelio Labs: ~249-250 in 2026. All fall in the 201-500 band.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://research.crustdata.com/company/obsidian-security",
+        "https://www.tipranks.com/private-companies/obsidian-security"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "Live Greenhouse board lists four Enterprise Account Executive roles: San Francisco Bay Area, Central US, EMEA (UK), and ANZ (Melbourne).",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://job-boards.greenhouse.io/obsidiansecurity",
+        "https://job-boards.greenhouse.io/obsidiansecurity/jobs/4864479008"
+       ]
+      },
+      "model_provider": {
+       "notes": "Obsidian's own AI Assistant pages describe a governed multi-agent system built on its platform and MCP orchestration but never name an underlying LLM vendor; the trust-center subprocessor list names Zendesk, Twilio, Google Cloud, Databricks and AWS only; product docs are login-gated. References to OpenAI, Anthropic, Copilot etc. concern the customer AI platforms Obsidian secures, not its own model provider.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "Customers page shows logos/quotes (Seagate CIO quote, TELUS quote); careers page: 'trusted by global enterprises like Snowflake, T-Mobile, and Wyndham Hotels and Resorts'; dedicated case-study pages exist for Snowflake, T-Mobile, Wyndham, TELUS, Upwork, BigCommerce, and Algolia.",
+       "value": [
+        "Snowflake",
+        "T-Mobile",
+        "Wyndham Hotels & Resorts",
+        "TELUS",
+        "Upwork",
+        "BigCommerce",
+        "Algolia",
+        "Seagate"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/customers",
+        "https://www.obsidiansecurity.com/careers",
+        "https://www.obsidiansecurity.com/customer-stories/snowflake",
+        "https://www.obsidiansecurity.com/customer-stories/enterprise-saas-security-at-5g-speed-inside-the-t-mobile-obsidian-partnership",
+        "https://www.obsidiansecurity.com/customer-stories/wyndham",
+        "https://www.obsidiansecurity.com/customer-stories/telus"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "Live job board lists 'AI Security Engineer - Taiwan' (job 5406173008), plus 'Agent Security Research Engineer - Taiwan' and 'Software Engineer - AI Security Product'.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://job-boards.greenhouse.io/obsidiansecurity/jobs/5406173008",
+        "https://job-boards.greenhouse.io/obsidiansecurity"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Trust Center compliance section lists IRAP, ISO/IEC 27001, ISO/IEC 27701, SOC 2 and ISO/IEC 42001:2023 with downloadable certificates and a SOC 2 report. Of the five certifications in scope, SOC 2 and ISO 27001 are named (ISO 27701 and ISO 42001 fall outside the requested five).",
+       "value": [
+        "SOC 2",
+        "ISO 27001"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://trust.obsidiansecurity.com/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "RepVue's Obsidian Security tech-stack page (employee-reported) lists Salesforce (CRM), Outreach, Gong, LinkedIn Sales Navigator and ZoomInfo in the sales/marketing stack.",
+       "value": [
+        "Salesforce",
+        "Outreach",
+        "Gong",
+        "LinkedIn Sales Navigator",
+        "ZoomInfo"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.repvue.com/companies/ObsidianSecurity/tech-stack"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Homepage: 'delivers complete SaaS security - gain control, stop threats, and ensure compliance across all your business apps'; press release: 'secures the AI-first enterprise, governing data, AI and agents inside third-party applications', trusted by Fortune 1000 and Global 2000 enterprises.",
+       "value": "Obsidian Security provides a SaaS and AI security platform that gives enterprise security teams visibility, threat detection, and governance controls over third-party apps, human and non-human identities, and AI agents across their SaaS estate.",
+       "status": "asserted",
+       "citations": [
+        "https://www.obsidiansecurity.com/",
+        "https://www.businesswire.com/news/home/20261110483907/en/Obsidian-Security-Announces-Industrys-First-Context-Aware-Runtime-Decision-Engine-to-Enforce-AI-Agent-Actions-Across-Coding-Tools-Gateways-and-Third-Party-Applications"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "Yanxin Zhang's LinkedIn profile shows he joined Obsidian Security as VP of Engineering, Platform and Infrastructure starting 2026-06-01 - a VP-level hire inside the 12-month window ending 2026-11-09. The company is also currently recruiting a Chief Information Security Officer.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/in/yanxin-zhang-05a60115"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "obsidiansecurity.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The single marketing blog covers product spotlights, AI-security thought leadership and announcements mostly authored by 'Obsidian Security Team' or marketing staff. Only one post about how the product is built by engineers was found ('Modern Threat Detection: Making Impossible Travel Possible', co-authored by a Senior Security Researcher and a Machine Learning Engineer); with only that lone engineering post, the bar of two engineer-authored build posts is not met.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/blog",
+      "https://www.obsidiansecurity.com/blog/modern-threat-detection-impossible-travel"
+     ]
+    },
+    "reasoning": "Researched obsidiansecurity.com (the security vendor, not the note-taking app). Homepage, news release, careers, customers, trust center, blog, job board and pricing pages were read directly; funding and headcount were corroborated with independent databases (CB Insights, Crustdata, TipRanks, Revelio). Key findings: Series D $85M on 2026-08-04; ~260-272 employees (201-500 band); Palo Alto HQ; founded 2017; trust center lists SOC 2/ISO 27001 (plus ISO 27701/42001 outside the requested five); docs site is login-gated so no public documentation; multiple named enterprise customers with case studies; active AI-security engineering roles and four Enterprise Account Executive openings; several product launches inside the 6-month window (200+ connector coverage May 2026, Claude Compliance API integration July 2026, Databricks Silver partner Sept 2026); a VP of Engineering joined June 2026. The only field left unknown is the model provider for Obsidian's own AI Assistant: its public pages name a governed multi-agent architecture and MCP but never the underlying LLM vendor, and the subprocessor list contains no model provider.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.obsidiansecurity.com/",
+     "Visited https://www.businesswire.com/news/home/20261110483907/en/Obsidian-Security-Announces-Industrys-First-Context-Aware-Runtime-Decision-Engine-to-Enforce-AI-Agent-Actions-Across-Coding-Tools-Gateways-and-Third-Party-Applications",
+     "Visited https://www.obsidiansecurity.com/pricing",
+     "Visited https://www.obsidiansecurity.com/customers",
+     "Visited https://www.obsidiansecurity.com/careers",
+     "Visited https://www.obsidiansecurity.com/customer-stories/snowflake",
+     "Visited https://www.obsidiansecurity.com/customer-stories/enterprise-saas-security-at-5g-speed-inside-the-t-mobile-obsidian-partnership",
+     "Visited https://www.obsidiansecurity.com/customer-stories/wyndham",
+     "Visited https://research.crustdata.com/company/obsidian-security",
+     "Visited https://www.tipranks.com/private-companies/obsidian-security",
+     "Visited https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+     "Visited https://linkedin.com/company/11110209",
+     "Visited https://www.obsidiansecurity.com/blog",
+     "Visited https://www.obsidiansecurity.com/blog/modern-threat-detection-impossible-travel",
+     "Visited https://docs.obsidiansecurity.com/obsidian/api/graphql",
+     "Visited https://job-boards.greenhouse.io/obsidiansecurity",
+     "Visited https://job-boards.greenhouse.io/obsidiansecurity/jobs/5406173008",
+     "Visited https://trust.obsidiansecurity.com/",
+     "Visited https://www.cbinsights.com/company/obsidian-security/financials",
+     "Visited https://job-boards.greenhouse.io/obsidiansecurity/jobs/4864479008",
+     "Visited https://www.obsidiansecurity.com/blog/obsidian-expands-connector-coverage",
+     "Visited https://www.obsidiansecurity.com/blog/anthropic-compliance-api-integration",
+     "Visited https://linkedin.com/in/yanxin-zhang-05a60115",
+     "Visited https://www.repvue.com/companies/ObsidianSecurity/tech-stack",
+     "Visited https://start.obsidiansecurity.com/rs/124-DIV-269/images/T-Mobile_Customer_Story.pdf?version=0",
+     "Visited https://www.obsidiansecurity.com/resource/wyndham-case-study",
+     "Visited https://www.obsidiansecurity.com/customer-stories/telus",
+     "Visited https://obsidiansecurity.com/customer-stories/upwork",
+     "Visited https://obsidiansecurity.com/customer-stories/bigcommerce",
+     "Visited https://www.obsidiansecurity.com/customer-stories/algolia"
+    ],
+    "hq_location": {
+     "notes": "Company press release: 'Headquartered in Palo Alto, California'; LinkedIn company page: Headquarters Palo Alto, California, US.",
+     "value": {
+      "city": "Palo Alto, California",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+      "https://linkedin.com/company/obsidiansecurity"
+     ]
+    },
+    "public_docs": {
+     "notes": "docs.obsidiansecurity.com exists but is gated to customers: it renders 'Session Expired - To access Obsidian's product documentation, please click the book icon in your Obsidian portal', so there is no public docs site or developer portal with several articles.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://docs.obsidiansecurity.com/obsidian/api/graphql"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "$85M Series D announced August 4, 2026 - about 3 months before the 2026-11-09 run date, well inside the 18-month window (since 2025-05-09).",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely"
+     ]
+    },
+    "founded_year": {
+     "notes": "Careers page: 'Founded in 2017'; LinkedIn company page: Founded 2017.",
+     "value": 2017,
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/careers",
+      "https://linkedin.com/company/obsidiansecurity"
+     ]
+    },
+    "last_funding": {
+     "notes": "Company announcement dated August 4, 2026: '$85 million in Series D financing led by Crescent Cove Advisors, with participation from all existing investors including Greylock Partners and Menlo Ventures' at a $1.1B valuation; CB Insights confirms latest round was Series D for $85M on August 4, 2026.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Series D",
+      "amount_usd": 85000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/news/unlocking-ai-potential-securely",
+      "https://www.cbinsights.com/company/obsidian-security/financials"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Within the 6 months before 2026-11-09: connector coverage expansion to 200+ enterprise applications announced May 14, 2026; Claude Compliance API integration announced July 21, 2026; Databricks Silver partner status and Unity AI Gateway launch-partner role announced September 15, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/blog/obsidian-expands-connector-coverage",
+      "https://www.obsidiansecurity.com/blog/we-are-a-databricks-silver-partner",
+      "https://www.obsidiansecurity.com/blog/anthropic-compliance-api-integration"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public pricing page ('Flexible SaaS Security Pricing') exists: 'Start free. Expand into the modules your team needs, across AI and third-party application security. No bloated bundles.' It lists a free start and modular plans without dollar figures, which still counts as a pricing page.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "Crustdata: 260 employees as of September 2026; TipRanks: 272 employees as of November 9, 2026; Revelio Labs: ~249-250 in 2026. All fall in the 201-500 band.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://research.crustdata.com/company/obsidian-security",
+      "https://www.tipranks.com/private-companies/obsidian-security"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "Live Greenhouse board lists four Enterprise Account Executive roles: San Francisco Bay Area, Central US, EMEA (UK), and ANZ (Melbourne).",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://job-boards.greenhouse.io/obsidiansecurity",
+      "https://job-boards.greenhouse.io/obsidiansecurity/jobs/4864479008"
+     ]
+    },
+    "model_provider": {
+     "notes": "Obsidian's own AI Assistant pages describe a governed multi-agent system built on its platform and MCP orchestration but never name an underlying LLM vendor; the trust-center subprocessor list names Zendesk, Twilio, Google Cloud, Databricks and AWS only; product docs are login-gated. References to OpenAI, Anthropic, Copilot etc. concern the customer AI platforms Obsidian secures, not its own model provider.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "Customers page shows logos/quotes (Seagate CIO quote, TELUS quote); careers page: 'trusted by global enterprises like Snowflake, T-Mobile, and Wyndham Hotels and Resorts'; dedicated case-study pages exist for Snowflake, T-Mobile, Wyndham, TELUS, Upwork, BigCommerce, and Algolia.",
+     "value": [
+      "Snowflake",
+      "T-Mobile",
+      "Wyndham Hotels & Resorts",
+      "TELUS",
+      "Upwork",
+      "BigCommerce",
+      "Algolia",
+      "Seagate"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/customers",
+      "https://www.obsidiansecurity.com/careers",
+      "https://www.obsidiansecurity.com/customer-stories/snowflake",
+      "https://www.obsidiansecurity.com/customer-stories/enterprise-saas-security-at-5g-speed-inside-the-t-mobile-obsidian-partnership",
+      "https://www.obsidiansecurity.com/customer-stories/wyndham",
+      "https://www.obsidiansecurity.com/customer-stories/telus"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "Live job board lists 'AI Security Engineer - Taiwan' (job 5406173008), plus 'Agent Security Research Engineer - Taiwan' and 'Software Engineer - AI Security Product'.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://job-boards.greenhouse.io/obsidiansecurity/jobs/5406173008",
+      "https://job-boards.greenhouse.io/obsidiansecurity"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Trust Center compliance section lists IRAP, ISO/IEC 27001, ISO/IEC 27701, SOC 2 and ISO/IEC 42001:2023 with downloadable certificates and a SOC 2 report. Of the five certifications in scope, SOC 2 and ISO 27001 are named (ISO 27701 and ISO 42001 fall outside the requested five).",
+     "value": [
+      "SOC 2",
+      "ISO 27001"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://trust.obsidiansecurity.com/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "RepVue's Obsidian Security tech-stack page (employee-reported) lists Salesforce (CRM), Outreach, Gong, LinkedIn Sales Navigator and ZoomInfo in the sales/marketing stack.",
+     "value": [
+      "Salesforce",
+      "Outreach",
+      "Gong",
+      "LinkedIn Sales Navigator",
+      "ZoomInfo"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.repvue.com/companies/ObsidianSecurity/tech-stack"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Homepage: 'delivers complete SaaS security - gain control, stop threats, and ensure compliance across all your business apps'; press release: 'secures the AI-first enterprise, governing data, AI and agents inside third-party applications', trusted by Fortune 1000 and Global 2000 enterprises.",
+     "value": "Obsidian Security provides a SaaS and AI security platform that gives enterprise security teams visibility, threat detection, and governance controls over third-party apps, human and non-human identities, and AI agents across their SaaS estate.",
+     "status": "asserted",
+     "citations": [
+      "https://www.obsidiansecurity.com/",
+      "https://www.businesswire.com/news/home/20261110483907/en/Obsidian-Security-Announces-Industrys-First-Context-Aware-Runtime-Decision-Engine-to-Enforce-AI-Agent-Actions-Across-Coding-Tools-Gateways-and-Third-Party-Applications"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "Yanxin Zhang's LinkedIn profile shows he joined Obsidian Security as VP of Engineering, Platform and Infrastructure starting 2026-06-01 - a VP-level hire inside the 12-month window ending 2026-11-09. The company is also currently recruiting a Chief Information Security Officer.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/in/yanxin-zhang-05a60115"
+     ]
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,172 @@
+{
+ "schema_version": "v0",
+ "company": "Lob",
+ "domain": "lob.com",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Lob provides businesses\u2019 marketing and operations teams with a platform and APIs to automate, personalize, route, print, deliver, and track direct-mail campaigns at scale.",
+   "citations": [
+    "https://www.lob.com/"
+   ],
+   "notes": "Lob\u2019s homepage describes automated direct mail, data-driven personalization, and printing, routing, and delivery; it identifies the offering as serving teams managing complex direct mail at scale."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.lob.com/pricing"
+   ],
+   "notes": "The public Lob pricing page lists Developer, Startup, Growth, and Enterprise tiers, including prices and a comparison section."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "120Water",
+    "Housecall Pro"
+   ],
+   "citations": [
+    "https://lob.com/customers"
+   ],
+   "notes": "named_customers: Lob\u2019s customer stories page names 120Water and Housecall Pro as customer case studies. | named_customers.0: The Lob customer stories page has a named 120Water case study. | named_customers.1: The Lob customer stories page has a named Housecall Pro case study."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/3231576"
+   ],
+   "notes": "Lob\u2019s LinkedIn company profile gives its employee-size band as 201\u2013500."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "San Francisco",
+    "country": "United States"
+   },
+   "citations": [
+    "https://tracxn.com/d/companies/lob/__xJBMw-qXYC7ZeZ_oyZH99ovllMrbsaaGi8xEZpKub3g"
+   ],
+   "notes": "hq_city: The company profile states that Lob is headquartered in San Francisco, United States; the requested city is San Francisco. | hq_country: The Lob company profile explicitly identifies its headquarters as San Francisco, United States."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2013.0,
+   "citations": [
+    "https://linkedin.com/company/3231576",
+    "https://boards-api.greenhouse.io/v1/boards/lob/jobs/8082143"
+   ],
+   "notes": "Lob\u2019s LinkedIn company profile states Founded 2013, and the company job posting also says Lob was founded in 2013."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "http://lob.com/category/engineering"
+   ],
+   "notes": "Lob\u2019s Engineering blog index lists multiple technical build posts, including posts on creating SDKs with OpenAPI and migrating its services to Nomad, with named authors; this exceeds the two-post threshold."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://help.lob.com/llms.txt",
+    "https://help.lob.com/developer-docs/api-quickstart-guide"
+   ],
+   "notes": "Lob\u2019s public Help Center index lists numerous developer guides and integration articles, and the API quickstart is an accessible multi-section documentation page."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://job-boards.greenhouse.io/embed/job_board?for=lob"
+   ],
+   "notes": "The live Greenhouse job board lists five openings; their titles are Enterprise Account Executive, Business Operations Manager, Corporate Counsel, Partner Operations Manager, and Senior Manager, USPS Programs, none of which is an AI/ML or data-science role title."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Lob says its address-parsing deep-learning models are trained in-house and identifies spaCy as the library used for its address parser; it does not name a third-party LLM provider.",
+   "citations": [
+    "https://www.lob.com/blog/the-growing-importance-of-addresses-in-an-online-world",
+    "https://www.lob.com/blog/parsing-addresses-with-machine-learning"
+   ],
+   "notes": "Lob\u2019s technical posts say it trains in-house deep-learning models for address parsing and chose spaCy for the address parser. These sources identify Lob\u2019s own model development and its parser library, not a third-party LLM provider."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "HIPAA",
+    "GDPR"
+   ],
+   "citations": [
+    "https://trust.lob.com/"
+   ],
+   "notes": "compliance_certs: Lob\u2019s Trust Center explicitly lists SOC 2, HIPAA, and GDPR under Compliance; these are the named items from the requested set. | compliance_certs.0: The Trust Center names SOC 2 Type 2 compliance. | compliance_certs.1: The Trust Center names HIPAA compliance and its HIPAA-related processes and audit. | compliance_certs.2: The Trust Center explicitly names GDPR among applicable regulations."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series C",
+    "date": "2021-02",
+    "amount_usd": 50000000.0
+   },
+   "citations": [
+    "https://settervc.com/company/lob",
+    "https://www.lob.com/blog/series-c"
+   ],
+   "notes": "funding_stage: The latest disclosed funding profile calls the latest round Series C; Lob\u2019s own funding announcement also names it as Series C. | funding_date: The source identifies the latest disclosed Series C as occurring on February 25, 2021; the schema requests YYYY-MM, so this is normalized to 2021-02. | funding_amount_usd: The latest-disclosed-round profile updated in November 2026 reports approximately $50 million for the Series C, and Lob\u2019s own announcement confirms the $50 million Series C financing."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://settervc.com/company/lob",
+    "https://www.lob.com/blog/series-c"
+   ],
+   "notes": "The latest publicly disclosed round is the Series C in February 2021, before the 18-month window beginning May 9, 2025."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://job-boards.greenhouse.io/embed/job_board?for=lob"
+   ],
+   "notes": "Lob\u2019s live Greenhouse board lists an Enterprise Account Executive opening, which matches the requested hiring titles."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.lob.com/blog/introducing-lobs-no-code-design-suite"
+   ],
+   "notes": "Lob announced its No-Code Design Suite on August 31, 2026, a major product feature within the six months before November 9, 2026."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.globenewswire.com/news-release/2025/11/12/3186623/0/en/Lob-Strengthens-Executive-Leadership-Team-with-Appointments-of-CFO-CPO-and-CRO.html"
+   ],
+   "notes": "Lob announced senior executive appointments on November 12, 2025, within the 12 months before November 9, 2026; the announcement identifies C-level appointments."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Marketo",
+    "Mutiny",
+    "Mailchimp"
+   ],
+   "citations": [
+    "https://www.lob.com/subprocessors"
+   ],
+   "notes": "crm_stack_signal: Lob\u2019s current subprocessor list identifies Marketo and Mutiny as customer sales lead-management providers and Mailchimp as an email marketing provider. | crm_stack_signal.0: Lob\u2019s subprocessor list names Marketo as a customer sales lead-management provider. | crm_stack_signal.1: Lob\u2019s subprocessor list names Mutiny as a customer sales lead-management provider. | crm_stack_signal.2: Lob\u2019s subprocessor list names Mailchimp as an email marketing provider."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 470.5
+}

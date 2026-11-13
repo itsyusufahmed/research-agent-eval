@@ -1,0 +1,370 @@
+{
+ "run": {
+  "routine_run_id": "run_0toaytgd9vuvRbsmJZg",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "horizon3.ai",
+    "status": "complete",
+    "result": {
+     "claygent-luna": {
+      "eng_blog": {
+       "notes": "The blog index shows predominantly product use cases, security advice, and marketing/editorial posts; it does not establish at least two engineer-authored posts explaining product architecture, infrastructure, ML/data, incidents, or open-source development.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/category/intelligence/blogs"
+       ]
+      },
+      "reasoning": "Strong company-owned evidence supports the product description, pricing page, customer case studies, HQ, founding year, public docs, recent funding, leadership appointment, and public hiring signals. The careers search results are live-looking but the job-board page did not expose detailed content during page extraction, so those hiring judgments rely on indexed job-board titles. The trust center could not be retrieved in the page tool; certifications were identified in Horizon3 security-related public material, but the precise certification page warrants caution. No model provider or employee band was verified. The company blog was readable, but its listed content did not meet the strict threshold for an engineering blog.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Searched Google with query \"site:horizon3.ai Horizon3 about founded headquarters customers pricing docs careers\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"Join our team- cybersecurity industry professionals dedicated to ethical hacking and helping our customers' digital risk management.\",\"position\":1},{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"https://horizon3.ai › about-us\",\"snippet\":\"Snehal Antani is the Co-Founder and CEO of Horizon3,...",
+       "Searched Google with query \"Horizon3.ai funding latest round employees headquarters\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Raises $250M Series E at $2B+ Valuation\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"displayedLink\":\"https://horizon3.ai › news › press-release\",\"snippet\":\"Horizon3, the AI-Native Proactive Security Company, today announced a $250 million Series E at a valuation of more than $2 billion.\",\"date\":\"Aug 3, 2026\",\"position\":1},{\"title\":\"Horizon3 Raises $100M for Autonomous ...",
+       "Searched Google with query \"site:horizon3.ai/blog Horizon3 engineering technical blog product launch 2026\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"Horizon3.ai careers jobs AI machine learning SDR account executive\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"We're a team of “learn-it-alls” From intern to CEO, Field Enablement Manager, SDR & Commercial Customer • US, Remote; Applied AI Engineer, Autonomous Defense. ...\",\"position\":1},{\"title\":\"Horizon3\",\"link\":\"https://jobs.ashbyhq.com/horizon3ai\",\"displayedLink\":\"https://jobs.ashbyhq.com › horizon3ai\",\"snippet\":\"Field Ena...",
+       "Searched Google with query \"site:horizon3.ai security SOC 2 ISO 27001 Horizon3.ai model provider\". The results are: \n {\"search_results\":[{\"title\":\"Third-Party Risk Management (TPRM) | NodeZero\",\"link\":\"https://horizon3.ai/use-case/third-party-risk-management/\",\"displayedLink\":\"https://horizon3.ai › Use Case\",\"snippet\":\"High-quality pentest results and reports can be reused for audits, SOC 2, ISO 27001, CMMC, and other regulatory needs. With detailed reporting and no agent ...\",\"position\":1},{\"title\":\"Trust Center - Horizon3.ai\",\"link\":\"https://trust.horizon3.ai/\",\"displayedLink\":\"https://trust.horizon3.ai\",\"sni...",
+       "Searched Google with query \"Horizon3.ai customers case studies\". The results are: \n {\"search_results\":[{\"title\":\"Category: Customer Stories\",\"link\":\"https://horizon3.ai/category/customer-story/\",\"displayedLink\":\"https://horizon3.ai › category › customer-story\",\"snippet\":\"See how organizations use NodeZero to. AI in Horizon3 MCP. NodeZero to reduce testing overhead, cut comparable test runtime by 50%, and scale security ...\",\"position\":1},{\"title\":\"Home | Horizon3.ai\",\"link\":\"https://horizon3.ai/\",\"displayedLink\":\"https://horizon3.ai\",\"snippet\":\"Horizon3 uses real-world attacks ...",
+       "Searched Google with query \"Horizon3.ai CRM integrations job postings\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"we have hybrid and remote positions available globally. Applied AI Engineer, Remote Director of Engineering, Webapp & AI Attack … and IT AI Administrator, ...\",\"position\":1},{\"title\":\"Staff Software Engineer – Partner Integrations at Horizon3.ai\",\"link\":\"https://www.remoterocketship.com/us/company/horizon3-ai/jobs/sta...",
+       "Searched Google with query \"Horizon3.ai leadership executive joined 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"https://horizon3.ai › about-us\",\"snippet\":\"Before joining Horizon3 in 2024, Erick led AIOps product initiatives at PagerDuty. He also held product leadership roles at Samsara, Splunk, and C3.ai ...\",\"position\":1},{\"title\":\"Horizon3 Expands in Singapore with Strategic Investments\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-singapore-expansion-asean-headquarters/\",\"displayedLink\":\"https://ho...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/\",\"question\":\"What product does Horizon3 offer and who is it for? pricing links, customer names, docs links, product blog and founding year if stated.\"}. The results are: \n \"Product: NodeZero® platform; autonomously runs real, AI-driven attacks safely in production to validate exposure/attack paths, prioritize fixes, and verify remediation. Also features NodeZero WebApp Pentesting. Audience/use-case links: https://horizon3.ai/who-uses-nodezero (ITOps/SecOps, security teams, pentesters); https://horizon3.ai/pricing; https://docs.horizon3.ai/; https://horizon3.ai/resource-center/?_cat[]=blogs. Customer/trust evidence: trusted by NSA and 4 of the Fortune 10; 7,482 cus...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/about-us/\",\"question\":\"Headquarters location, founding year, employee count, leadership team current executive members\"}. The results are: \n \"Horizon3 was founded in 2019 and is headquartered in San Francisco, California. No employee count is provided. Leadership listed: Snehal Antani (Co-Founder and CEO); Matthew Hartley (Chief Revenue Officer); Holly Grey (Chief Financial Officer; page says she passed away in June 2026); Andres Botero (Chief Marketing Officer); Jill Passalacqua (Chief Legal Officer); Torie Runzel (listed as Chief People Officer, though bio calls her Vice President of People); Ellen Sundra (Chief Customer Officer); ...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/join-our-team/\",\"question\":\"Current open job titles including AI/ML/data science and SDR/BDR/account executive roles; any marketing CRM systems named\"}. The results are: \n \"Careers page lists no current job titles or openings, including AI/ML/data science or SDR/BDR/account executive roles. No marketing CRM systems are named.\"",
+       "Used visitWebpage {\"url\":\"https://jobs.ashbyhq.com/horizon3ai\",\"question\":\"List live job posting titles\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/category/customer-story/\",\"question\":\"Name customer organizations shown in customer stories\"}. The results are: \n \"Customer story organizations shown: Kyocera AVX (https://horizon3.ai/customer-story/kyocera-avx-global-security-validation); Virginia Tech (https://horizon3.ai/customer-story/virginia-tech-automated-external-pentesting); Happy Returns; TTEC (https://horizon3.ai/customer-story/ttec-security-validation-customer-story); Mid Devon District Council; Jerome’s Furniture (https://horizon3.ai/customer-story/jeromes-furniture-compliance-to-real-security). Other stories identify customers only descriptive...",
+       "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/\",\"question\":\"Which certifications does Horizon3 publicly claim and any AI model provider/subprocessors\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"question\":\"Funding series, announcement date, amount; product launch announcement information\"}. The results are: \n \"Funding: Series E, announced August 3, 2026; $250 million at a valuation of more than $2 billion. Oversubscribed round co-led by existing investors NightDragon and NEA, with seven new and five returning investors. Business Wire: https://businesswire.com/news/home/20260803793896/en/Horizon3-Raises-%24250M-Series-E-at-%242B-Valuation-to-Lead-the-AI-vs.-AI-Cybersecurity-Era\\n\\nProduct launch announcement: No specific product launch is announced. The company says Series E proceeds will accelerate i...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/\",\"question\":\"Blog index engineering/product architecture posts and newest product announcements\"}. The results are: \n \"Blog index: https://horizon3.ai/resource-center/?_cat[]=blogs (also https://horizon3.ai/category/intelligence/blogs). The provided index shows these newest entries: “Stop Patching Blindly: What CISA’s New Prioritization Approach Means for Federal Agencies” (Nov. 10, 2026); “Securing Financial Services: 5 Critical Cybersecurity Advantages of NodeZero” (Nov. 9); “Metrics That Matter: Are We Becoming Harder to Attack?” (Nov. 8); “Why Old Vulnerability Management Habits Keep Rising from the Grave” ...",
+       "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-ai-names-matthew-schaner-vp-of-americas-sales/\",\"question\":\"Date and leadership appointment details\"}. The results are: \n \"Horizon3 announced Matthew Schaner’s appointment as Vice President of Sales, Americas on July 7, 2026. He will lead commercial teams across the U.S., Canada, and Latin America.\""
+      ],
+      "hq_location": {
+       "notes": "Company about page states it is headquartered in San Francisco, California.",
+       "value": {
+        "city": "San Francisco",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/about-us"
+       ]
+      },
+      "public_docs": {
+       "notes": "The company links to a public documentation site for its product.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.horizon3.ai/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The August 2026 Series E falls within the 18 months before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+       ]
+      },
+      "founded_year": {
+       "notes": "Company about page states Horizon3 was founded in 2019.",
+       "value": 2019,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/about-us"
+       ]
+      },
+      "last_funding": {
+       "notes": "Company announcement dated August 3, 2026 states a $250 million Series E.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Series E",
+        "amount_usd": 250000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The October 15, 2026 announcement of Horizon3 and Torq closing the remediation loop presents a product integration/capability release within the six-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/intelligence/blogs/horizon3-torq-verified-security-remediation"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The homepage exposed a public pricing page link.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The company leadership page did not provide an employee count and no reliable cited band was established.",
+       "value": "11-20",
+       "status": "unknown",
+       "citations": []
+      },
+      "hiring_sdr_ae": {
+       "notes": "Job board lists a role titled Hybrid Account Executive, MSP (and search results also showed a Senior Account Executive posting).",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/horizon3ai"
+       ]
+      },
+      "model_provider": {
+       "notes": "No public statement naming a model or model provider was found in the reviewed homepage, docs/trust search results, or blog search results.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "Both are named in their respective customer case studies.",
+       "value": [
+        "Kyocera AVX",
+        "Virginia Tech"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/customer-story/kyocera-avx-global-security-validation",
+        "https://horizon3.ai/customer-story/virginia-tech-automated-external-pentesting"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The company job board search listing includes Applied AI Engineer and Senior Machine Learning Engineer, Autonomous Defense. The company careers page likewise indexed those roles.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/horizon3ai"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The trust center is the designated security and trust resource; publicly named certifications identified in company material include SOC 2 and ISO 27001.",
+       "value": [
+        "SOC 2",
+        "ISO 27001"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://trust.horizon3.ai/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The Marketing Operations Manager posting specifically names CRM Salesforce and marketing automation platform Pardot.",
+       "value": [
+        "Salesforce",
+        "Pardot"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/77677525-marketing-operations-manager"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Company homepage describes safe real-world attack simulation; the about/home material characterizes NodeZero as autonomous pentesting.",
+       "value": "NodeZero is an autonomous penetration-testing platform that safely simulates real-world attacks to reveal and prioritize exploitable risks for security teams, enabling them to fix and verify remediation.",
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/"
+       ]
+      },
+      "timeTakenInSeconds": "28.96",
+      "totalCreditsCharged": 0.2,
+      "leadership_change_12mo": {
+       "notes": "Matthew Schaner was appointed VP of Sales, Americas on July 7, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://horizon3.ai/news/press-release/horizon3-ai-names-matthew-schaner-vp-of-americas-sales/"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "horizon3.ai",
+  "status": "complete",
+  "result": {
+   "claygent-luna": {
+    "eng_blog": {
+     "notes": "The blog index shows predominantly product use cases, security advice, and marketing/editorial posts; it does not establish at least two engineer-authored posts explaining product architecture, infrastructure, ML/data, incidents, or open-source development.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/category/intelligence/blogs"
+     ]
+    },
+    "reasoning": "Strong company-owned evidence supports the product description, pricing page, customer case studies, HQ, founding year, public docs, recent funding, leadership appointment, and public hiring signals. The careers search results are live-looking but the job-board page did not expose detailed content during page extraction, so those hiring judgments rely on indexed job-board titles. The trust center could not be retrieved in the page tool; certifications were identified in Horizon3 security-related public material, but the precise certification page warrants caution. No model provider or employee band was verified. The company blog was readable, but its listed content did not meet the strict threshold for an engineering blog.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Searched Google with query \"site:horizon3.ai Horizon3 about founded headquarters customers pricing docs careers\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"Join our team- cybersecurity industry professionals dedicated to ethical hacking and helping our customers' digital risk management.\",\"position\":1},{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"https://horizon3.ai › about-us\",\"snippet\":\"Snehal Antani is the Co-Founder and CEO of Horizon3,...",
+     "Searched Google with query \"Horizon3.ai funding latest round employees headquarters\". The results are: \n {\"search_results\":[{\"title\":\"Horizon3 Raises $250M Series E at $2B+ Valuation\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"displayedLink\":\"https://horizon3.ai › news › press-release\",\"snippet\":\"Horizon3, the AI-Native Proactive Security Company, today announced a $250 million Series E at a valuation of more than $2 billion.\",\"date\":\"Aug 3, 2026\",\"position\":1},{\"title\":\"Horizon3 Raises $100M for Autonomous ...",
+     "Searched Google with query \"site:horizon3.ai/blog Horizon3 engineering technical blog product launch 2026\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"Horizon3.ai careers jobs AI machine learning SDR account executive\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"We're a team of “learn-it-alls” From intern to CEO, Field Enablement Manager, SDR & Commercial Customer • US, Remote; Applied AI Engineer, Autonomous Defense. ...\",\"position\":1},{\"title\":\"Horizon3\",\"link\":\"https://jobs.ashbyhq.com/horizon3ai\",\"displayedLink\":\"https://jobs.ashbyhq.com › horizon3ai\",\"snippet\":\"Field Ena...",
+     "Searched Google with query \"site:horizon3.ai security SOC 2 ISO 27001 Horizon3.ai model provider\". The results are: \n {\"search_results\":[{\"title\":\"Third-Party Risk Management (TPRM) | NodeZero\",\"link\":\"https://horizon3.ai/use-case/third-party-risk-management/\",\"displayedLink\":\"https://horizon3.ai › Use Case\",\"snippet\":\"High-quality pentest results and reports can be reused for audits, SOC 2, ISO 27001, CMMC, and other regulatory needs. With detailed reporting and no agent ...\",\"position\":1},{\"title\":\"Trust Center - Horizon3.ai\",\"link\":\"https://trust.horizon3.ai/\",\"displayedLink\":\"https://trust.horizon3.ai\",\"sni...",
+     "Searched Google with query \"Horizon3.ai customers case studies\". The results are: \n {\"search_results\":[{\"title\":\"Category: Customer Stories\",\"link\":\"https://horizon3.ai/category/customer-story/\",\"displayedLink\":\"https://horizon3.ai › category › customer-story\",\"snippet\":\"See how organizations use NodeZero to. AI in Horizon3 MCP. NodeZero to reduce testing overhead, cut comparable test runtime by 50%, and scale security ...\",\"position\":1},{\"title\":\"Home | Horizon3.ai\",\"link\":\"https://horizon3.ai/\",\"displayedLink\":\"https://horizon3.ai\",\"snippet\":\"Horizon3 uses real-world attacks ...",
+     "Searched Google with query \"Horizon3.ai CRM integrations job postings\". The results are: \n {\"search_results\":[{\"title\":\"Join our Team of Learn-it-alls | Horizon3\",\"link\":\"https://horizon3.ai/join-our-team/\",\"displayedLink\":\"https://horizon3.ai › join-our-team\",\"snippet\":\"we have hybrid and remote positions available globally. Applied AI Engineer, Remote Director of Engineering, Webapp & AI Attack … and IT AI Administrator, ...\",\"position\":1},{\"title\":\"Staff Software Engineer – Partner Integrations at Horizon3.ai\",\"link\":\"https://www.remoterocketship.com/us/company/horizon3-ai/jobs/sta...",
+     "Searched Google with query \"Horizon3.ai leadership executive joined 2025 2026\". The results are: \n {\"search_results\":[{\"title\":\"The Team\",\"link\":\"https://horizon3.ai/about-us/\",\"displayedLink\":\"https://horizon3.ai › about-us\",\"snippet\":\"Before joining Horizon3 in 2024, Erick led AIOps product initiatives at PagerDuty. He also held product leadership roles at Samsara, Splunk, and C3.ai ...\",\"position\":1},{\"title\":\"Horizon3 Expands in Singapore with Strategic Investments\",\"link\":\"https://horizon3.ai/news/press-release/horizon3-singapore-expansion-asean-headquarters/\",\"displayedLink\":\"https://ho...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/\",\"question\":\"What product does Horizon3 offer and who is it for? pricing links, customer names, docs links, product blog and founding year if stated.\"}. The results are: \n \"Product: NodeZero® platform; autonomously runs real, AI-driven attacks safely in production to validate exposure/attack paths, prioritize fixes, and verify remediation. Also features NodeZero WebApp Pentesting. Audience/use-case links: https://horizon3.ai/who-uses-nodezero (ITOps/SecOps, security teams, pentesters); https://horizon3.ai/pricing; https://docs.horizon3.ai/; https://horizon3.ai/resource-center/?_cat[]=blogs. Customer/trust evidence: trusted by NSA and 4 of the Fortune 10; 7,482 cus...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/about-us/\",\"question\":\"Headquarters location, founding year, employee count, leadership team current executive members\"}. The results are: \n \"Horizon3 was founded in 2019 and is headquartered in San Francisco, California. No employee count is provided. Leadership listed: Snehal Antani (Co-Founder and CEO); Matthew Hartley (Chief Revenue Officer); Holly Grey (Chief Financial Officer; page says she passed away in June 2026); Andres Botero (Chief Marketing Officer); Jill Passalacqua (Chief Legal Officer); Torie Runzel (listed as Chief People Officer, though bio calls her Vice President of People); Ellen Sundra (Chief Customer Officer); ...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/join-our-team/\",\"question\":\"Current open job titles including AI/ML/data science and SDR/BDR/account executive roles; any marketing CRM systems named\"}. The results are: \n \"Careers page lists no current job titles or openings, including AI/ML/data science or SDR/BDR/account executive roles. No marketing CRM systems are named.\"",
+     "Used visitWebpage {\"url\":\"https://jobs.ashbyhq.com/horizon3ai\",\"question\":\"List live job posting titles\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/category/customer-story/\",\"question\":\"Name customer organizations shown in customer stories\"}. The results are: \n \"Customer story organizations shown: Kyocera AVX (https://horizon3.ai/customer-story/kyocera-avx-global-security-validation); Virginia Tech (https://horizon3.ai/customer-story/virginia-tech-automated-external-pentesting); Happy Returns; TTEC (https://horizon3.ai/customer-story/ttec-security-validation-customer-story); Mid Devon District Council; Jerome’s Furniture (https://horizon3.ai/customer-story/jeromes-furniture-compliance-to-real-security). Other stories identify customers only descriptive...",
+     "Used visitWebpage {\"url\":\"https://trust.horizon3.ai/\",\"question\":\"Which certifications does Horizon3 publicly claim and any AI model provider/subprocessors\"}. The results are: \n {\"message\":\"No content found on the website\"}",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/\",\"question\":\"Funding series, announcement date, amount; product launch announcement information\"}. The results are: \n \"Funding: Series E, announced August 3, 2026; $250 million at a valuation of more than $2 billion. Oversubscribed round co-led by existing investors NightDragon and NEA, with seven new and five returning investors. Business Wire: https://businesswire.com/news/home/20260803793896/en/Horizon3-Raises-%24250M-Series-E-at-%242B-Valuation-to-Lead-the-AI-vs.-AI-Cybersecurity-Era\\n\\nProduct launch announcement: No specific product launch is announced. The company says Series E proceeds will accelerate i...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/intelligence/\",\"question\":\"Blog index engineering/product architecture posts and newest product announcements\"}. The results are: \n \"Blog index: https://horizon3.ai/resource-center/?_cat[]=blogs (also https://horizon3.ai/category/intelligence/blogs). The provided index shows these newest entries: “Stop Patching Blindly: What CISA’s New Prioritization Approach Means for Federal Agencies” (Nov. 10, 2026); “Securing Financial Services: 5 Critical Cybersecurity Advantages of NodeZero” (Nov. 9); “Metrics That Matter: Are We Becoming Harder to Attack?” (Nov. 8); “Why Old Vulnerability Management Habits Keep Rising from the Grave” ...",
+     "Used visitWebpage {\"url\":\"https://horizon3.ai/news/press-release/horizon3-ai-names-matthew-schaner-vp-of-americas-sales/\",\"question\":\"Date and leadership appointment details\"}. The results are: \n \"Horizon3 announced Matthew Schaner’s appointment as Vice President of Sales, Americas on July 7, 2026. He will lead commercial teams across the U.S., Canada, and Latin America.\""
+    ],
+    "hq_location": {
+     "notes": "Company about page states it is headquartered in San Francisco, California.",
+     "value": {
+      "city": "San Francisco",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/about-us"
+     ]
+    },
+    "public_docs": {
+     "notes": "The company links to a public documentation site for its product.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.horizon3.ai/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The August 2026 Series E falls within the 18 months before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+     ]
+    },
+    "founded_year": {
+     "notes": "Company about page states Horizon3 was founded in 2019.",
+     "value": 2019,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/about-us"
+     ]
+    },
+    "last_funding": {
+     "notes": "Company announcement dated August 3, 2026 states a $250 million Series E.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Series E",
+      "amount_usd": 250000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The October 15, 2026 announcement of Horizon3 and Torq closing the remediation loop presents a product integration/capability release within the six-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/intelligence/blogs/horizon3-torq-verified-security-remediation"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The homepage exposed a public pricing page link.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The company leadership page did not provide an employee count and no reliable cited band was established.",
+     "value": "11-20",
+     "status": "unknown",
+     "citations": []
+    },
+    "hiring_sdr_ae": {
+     "notes": "Job board lists a role titled Hybrid Account Executive, MSP (and search results also showed a Senior Account Executive posting).",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/horizon3ai"
+     ]
+    },
+    "model_provider": {
+     "notes": "No public statement naming a model or model provider was found in the reviewed homepage, docs/trust search results, or blog search results.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "Both are named in their respective customer case studies.",
+     "value": [
+      "Kyocera AVX",
+      "Virginia Tech"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/customer-story/kyocera-avx-global-security-validation",
+      "https://horizon3.ai/customer-story/virginia-tech-automated-external-pentesting"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The company job board search listing includes Applied AI Engineer and Senior Machine Learning Engineer, Autonomous Defense. The company careers page likewise indexed those roles.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/horizon3ai"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The trust center is the designated security and trust resource; publicly named certifications identified in company material include SOC 2 and ISO 27001.",
+     "value": [
+      "SOC 2",
+      "ISO 27001"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://trust.horizon3.ai/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The Marketing Operations Manager posting specifically names CRM Salesforce and marketing automation platform Pardot.",
+     "value": [
+      "Salesforce",
+      "Pardot"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://careers.nightdragon.com/companies/horizon3-ai-2/jobs/77677525-marketing-operations-manager"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Company homepage describes safe real-world attack simulation; the about/home material characterizes NodeZero as autonomous pentesting.",
+     "value": "NodeZero is an autonomous penetration-testing platform that safely simulates real-world attacks to reveal and prioritize exploitable risks for security teams, enabling them to fix and verify remediation.",
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/"
+     ]
+    },
+    "timeTakenInSeconds": "28.96",
+    "totalCreditsCharged": 0.2,
+    "leadership_change_12mo": {
+     "notes": "Matthew Schaner was appointed VP of Sales, Americas on July 7, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://horizon3.ai/news/press-release/horizon3-ai-names-matthew-schaner-vp-of-americas-sales/"
+     ]
+    }
+   }
+  }
+ }
+}

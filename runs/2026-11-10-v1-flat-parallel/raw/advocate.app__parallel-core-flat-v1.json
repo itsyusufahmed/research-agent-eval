@@ -1,0 +1,764 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8549950b4173ef35",
+  "interaction_id": "trun_142119f6a1b4439e8549950b4173ef35",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "advocate.app"
+  },
+  "created_at": "2026-11-10T18:48:29.059310Z",
+  "modified_at": "2026-11-10T18:51:49.313304Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8549950b4173ef35",
+   "interaction_id": "trun_142119f6a1b4439e8549950b4173ef35",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "advocate.app"
+   },
+   "created_at": "2026-11-10T18:48:29.059310Z",
+   "modified_at": "2026-11-10T18:51:49.313304Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "founded year: 2020"
+       ]
+      }
+     ],
+     "reasoning": "The company LinkedIn profile explicitly gives its founded year as 2020.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "  ### ISO/IEC 27001:2022",
+        "  Our information security management system is certified against the 2022 revision of ISO/IEC 27001 by an accredited external auditor. The certificate and audit report are available on request.",
+        "  [Request certificate](https://trust.advocate.app/)",
+        "* Report available",
+        "  ### SOC 2 Type II",
+        "  An independent auditor examined the design and operating effectiveness of our controls against the AICPA Trust Services Criteria for Security across an observation period, not at a single point in time."
+       ]
+      }
+     ],
+     "reasoning": "The official security page identifies ISO/IEC 27001:2022 as certified and names SOC 2 Type II with its report available. Both names are among the requested compliance items.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Advocate \u2014 Commercial Insurance Intelligence",
+       "url": "https://www.advocate.app/about",
+       "excerpts": [
+        "Advocate is headquartered in New York City, with offices inPrague and Athens."
+       ]
+      },
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "country iso: US country name: United States locality: New York City"
+       ]
+      }
+     ],
+     "reasoning": "The company About page names New York City as headquarters, and its LinkedIn profile identifies the locality as New York City and country as the United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Company News & Product Updates | Advocate",
+       "url": "https://www.advocate.app/blog",
+       "excerpts": [
+        "Showing 1 of 1posts",
+        "Sort Newest Oldest",
+        "[Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance Blog \u00b7 Aug 17, 2026 \u00b7 6 min read ### Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance Commercial insurance is the last trillion dollar market where a buyer cannot look up what something should cost. On August 4, Advocate came out of stealth with $18 million in seed funding and the industry's first standardized pricing and coverage benchmarks, built on $7.3 billion in real premium across 70,000 policies. Read now](https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks)"
+       ]
+      },
+      {
+       "title": "Advocate Labs | Insurance Market Research & Data",
+       "url": "https://www.advocate.app/labs",
+       "excerpts": [
+        "[Read the research \u2192](https://www.advocate.app/labs/wim)",
+        "Labs is the forefront of insurance innovation.",
+        "Stay tuned for the latest breakthroughs."
+       ]
+      }
+     ],
+     "reasoning": "The blog index shows only one company-news/funding post, while the Labs index links to one research piece; the evidence does not show two engineer-authored posts about how the product is built, so the stated threshold for an engineering blog is not met.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "Advocate Technologies brings data and transparency to the commercial insurance market. We turn complex insurance policies into standardized data, then benchmark that data against billions of dollars in real-time market transactions, so our customers can close coverage gaps, catch overpriced policies, and make placement and renewal decisions with confidence.",
+        "We build for everyone managing a portfolio of insurance: commercial insurance brokers, commercial loan servicers, commercial insurance carriers, and property owners."
+       ]
+      }
+     ],
+     "reasoning": "The company describes converting complex commercial policies into standardized data and benchmarking transactions, and identifies brokers, loan servicers, carriers, and property owners as its intended users.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Advocate Technologies",
+       "url": "https://linkedin.com/company/advocate-technologies",
+       "excerpts": [
+        "employee count: 74"
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn reports 74 employees, which falls in the required 51-100 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "   ### Zero retention at model providers",
+        "   Inference runs with frontier model providers such as Anthropic and OpenAI under enterprise agreements configured for zero data retention. Prompts and outputs are not stored by the provider beyond the request."
+       ]
+      }
+     ],
+     "reasoning": "The official security page explicitly says inference uses frontier model providers such as Anthropic and OpenAI; these are the publicly named providers stated as model providers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Insurance Analytics Platform Pricing \u2014 Advocate",
+       "url": "https://advocate.app/pricing",
+       "excerpts": [
+        "Enterprise Custom Contact us for pricing"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page presents an Enterprise Custom offering and directs visitors to contact sales for pricing, which qualifies as a public pricing page even without a listed amount.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s dated announcement reports an $18 million seed round, so the most recent round amount is $18,000,000.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Insurance Software & Market Terminal for Brokers | Advocate",
+       "url": "https://www.advocate.app/",
+       "excerpts": [
+        "* KeyBank",
+        "* Greystone"
+       ]
+      }
+     ],
+     "reasoning": "The company homepage displays KeyBank and Greystone among its named customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding"
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement is dated August 4, 2026, so its YYYY-MM date is 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Platform Engineer ",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610",
+       "excerpts": [
+        "# Platform Engineer",
+        "****About us****",
+        "Over the last five years, Advocate Technologies has quietly been collecting and structuring a one-of-a-kind dataset with a single goal: bringing pricing transparency to risk. Through real-time market indices, gap analysis tools, and a proprietary rules engine, we have built a diversified data asset representing over $1.5B in insurance pricing exposure that does not exist anywhere else in the world.",
+        "We are now expanding a tactile, high-ownership Platform team responsible for the foundation everything else at Advocate runs on: our infrastructure, security, compliance, integrations, and internal tooling. The team operates with high standards under one mindset: identify the problem, solve it, and move on.",
+        "The bar is high, the feedback loop is tight, and your impact will be immediate. This is a rare opportunity to get in early and build something foundational in an industry overdue for change.",
+        "To learn more about Advocate, visit [advocate.app](https://advocate.app/) .",
+        "****About the role.****",
+        "We\u2019re hiring a NYC based Platform Engineer to own the foundation that Advocate\u2019s product and people build on.",
+        "Advocate runs on a growing surface of cloud infrastructure, integrations, internal tooling, and the security and compliance controls a regulated insurance data business demands. In this role, you will (1) own our infrastructure, security, and compliance posture as code, versioned and shipped through automated pipelines, (2) build and maintain the integrations and internal tooling that keep the platform and the company running, and (3) build the automation, including AI agents, that lets a lean team move far faster than its size suggests.",
+        "You will work directly with the platform lead as a technical right hand on infrastructure, security, and automation decisions.",
+        "This is not a reactive role. It is a forward-looking ownership position responsible for making sure our foundation scales with our ambition, and that everyone else ships faster because of it.",
+        "****What you'll do****",
+        "* Own our cloud infrastructure end-to-end, defining it as code (Terraform or similar) and shipping every change through automated, reviewable CI/CD pipelines.",
+        "* Codify security and compliance controls, from access management and secrets to logging and audit evidence, so our posture is continuously enforced rather than manually checked.",
+        "* Run our vulnerability management program across code, dependencies, containers, cloud resources, and devices, from scanning and triage to remediation within defined SLAs, with routine fixes increasingly handled by automation.",
+        "* Build and maintain in-platform and out-of-platform integrations, from customer-facing data connections to the third-party systems the company runs on.",
+        "* Design and deploy AI agents and automation that take on repetitive infrastructure, security, and operations work, with the guardrails, evals, and human review needed to trust them in production.",
+        "* Own the IT asset lifecycle and tooling, including device provisioning, identity, SaaS access, and offboarding, automated wherever possible.",
+        "* Build internal tooling that shortens the path from idea to production for the whole engineering team.",
+        "## What success looks like",
+        "* 30 days: You understand our infrastructure, our security and compliance posture, and our integration landscape, including what still lives outside of code. You're shipping meaningful changes through our pipelines.",
+        "* 90 days: You're independently owning areas end-to-end, bringing manually managed infrastructure and configuration into code, and you've shipped at least one agent or automation that removes recurring work from the team.",
+        "* 6 months: You've become the person who sees gaps before they slow us down, whether that's an unmanaged resource, an unpatched vulnerability, a control that should be enforced automatically, or a workflow that's ready to hand to an agent. Most routine platform changes now start as reviewable pull requests.",
+        "****What we're looking for****",
+        "* 3-6 years of experience in platform, infrastructure, DevOps, or SRE roles supporting production systems",
+        "* Strong hands-on experience with infrastructure as code (Terraform or equivalent) and a GitOps mindset: if it isn't in the repo, it doesn't exist",
+        "* Experience building CI/CD pipelines with automated testing, policy checks, and human review gates",
+        "* Solid grasp of a major cloud provider (AWS, GCP, or Azure), networking, identity and access management, and secrets management",
+        "* Advanced use of AI tools (Claude, Agents, etc), including building agent workflows, tool integrations (e.g. MCP), and evaluating their output",
+        "* Security-first mindset, hands-on vulnerability management experience (scanning, prioritization, remediation), and practical experience with compliance frameworks such as SOC 2 or ISO 27001",
+        "* Proficiency in at least one general-purpose language (Python, TypeScript, or Go) for automation and tooling",
+        "* Ability to work with high autonomy in a small team",
+        "## Nice to have",
+        "* Exposure to insurance, financial services, or any regulated/data-dense industry",
+        "* Experience designing guardrails, evals, or policy-as-code (e.g. OPA) for automated or AI-driven changes",
+        "* Experience with compliance automation platforms (e.g. Vanta, Drata) and producing audit evidence",
+        "* Experience running IT and identity at a growing company: MDM, SSO/SCIM, and device and SaaS lifecycle",
+        "* Prior experience at an early-stage company or on a small team where you wore multiple hats",
+        "* Interest in agentic engineering and in rethinking how software teams build and operate products",
+        "## What we offer",
+        "* Salary Range: $140,000 \u2013 $200,000 USD",
+        "* Equity / Stock Options - granted in addition to base salary",
+        "* WFH Stipend",
+        "* Health & wellness: standard health benefits",
+        "* Learning & development budget + team events",
+        "* Mentorship from industry leaders (ex-Goldman Sachs, Shopify, Productboard, and more)",
+        "Apply now",
+        "Engineering",
+        "Long Island City, NY",
+        "Share on:",
+        "[Terms of service](https://app.rippling.com/legal/user) [Privacy](https://app.rippling.com/legal/privacy) [Cookies](https://app.rippling.com/legal/cookie-notice) [Powered by Rippling](https://www.rippling.com/recruiting)"
+       ]
+      },
+      {
+       "title": "Product Engineer",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/50d16a20-4191-4bac-8915-230f81df29b3",
+       "excerpts": [
+        "# Product Engineer",
+        "****About Us****",
+        "Commercial insurance is a $1.1T+ global market. It is financial infrastructure that lets businesses take risks: borrow, invest, grow, and recover when things go wrong. Yet it has never had a common data standard to make policies legible: what it costs, what it covers, and how it compares to the broader market. This distorts pricing, hides coverage gaps, and creates enormous friction for businesses that depend on insurance.  ",
+        "Advocate has raised an $18M seed round to build that standard and a network of companies that contribute real-time policy data on top of it.  ",
+        "Today, our customers include 4 of the top 20 financial institutions. These customers participate in a network with more than $8B of premiums across 70,000+ policies. Their policies are aggregated to power Advocate's real-time insurance market pricing feed, while the coverage terms of each individual policy are normalized into a common, machine-readable schema. That means lenders, brokers, carriers, and property owners can increasingly reference the same structured understanding of coverage instead of independently interpreting the same policy.  ",
+        "Insurance professionals use this common data layer to improve how they manage these 70,000 policies: evaluate coverage gaps, benchmark pricing, manage third-party compliance, and more. Every workflow consumes data from the network while adding to it: as our customers do more work on our platform, more data enters the network.  ",
+        "This creates a compounding data flywheel: more customer activity adds more transactions and structured coverage data, which strengthens our benchmarks and models. We get better as frontier AI models improve, we can structure more of the insurance market at greater depth and lower cost, accelerating the growth and value of the network.  ",
+        "We are still early. Our ambition is to make this data layer foundational infrastructure for commercial insurance and turn this Trillion-dollar market into the next financial ecosystem.  ",
+        "The team is small and the bar is high. You will work across a highly empowered team that owns the product roadmap and on problems without established playbooks: designing systems that turn unstructured insurance contracts into reliable data, building products on top of a rapidly growing proprietary dataset, and creating workflows that become more valuable as the network grows. We expect you to be high agency and in return you will have immediate impact on global problems. Learn more at [advocate.app](https://advocate.app/) .",
+        "****About the role****",
+        "Advocate\u2019s technical staff is primarily comprised of Product Engineers. Our Product Engineers are the core builders at Advocate and take a problem from a rough thesis to something in production that customers use daily.",
+        "Product Engineers are leaders at Advocate. Each Product Engineer is responsible for a squad that owns part of our platform: evals and benchmarks, agent systems, the data layer, reporting, traded products. We will place you as a leader of one of these squads, where your instincts are strongest.",
+        "We do not have Product Managers or QA. Our organization is comprised of senior, empowered Product Engineers, Product Designers and our Infra/Platform team. As such this is not a ticket-taking role. You will be handed problems, not specs, and you will be expected to have an opinion about the answer and take the solution to delivery. Alongside this radical ownership comes freedom to solve for outcomes.",
+        "****What you do****",
+        "* Own features end to end, from scope through build, deploy, and iterate, with unusual latitude on how they get built.",
+        "* Work across the stack when the problem requires it: interface, API surface, data model, background jobs.",
+        "* Turn dense, structured insurance data into interfaces a broker, lender, or underwriter reaches for every day.",
+        "* Define what your work needs from adjacent squads, whether that is data captured, an endpoint exposed, or a permission scoped, and raise the dependency before it becomes a blocker.",
+        "* Use AI tooling aggressively as leverage. We expect engineers here to ship at a volume that only makes sense with agents in the loop.",
+        "* Contribute to the eval and benchmarking work that decides which models we trust with customer data, and where our own harness beats a raw model call.",
+        "* Bring product judgment: push back on requirements that don't hold up, propose the simpler version, kill the feature that isn't earning its keep.",
+        "****What success looks like****",
+        "* ****30 days:**** You understand the data model and the product surface, and you're shipping meaningful contributions to production.",
+        "* ****90 days:**** You independently own features end to end, from identifying the dependency to deploying the customer-facing result.",
+        "* ****6 months:**** You're the person who sees the gap before it slows us down, whether that is a bottleneck in the interface, a missing pipeline, or a feature the market is asking for that isn't on the roadmap yet.",
+        "****Your qualifications****",
+        "* 2+ years building production web applications. This role can be a fit for someone with 2 years or 15 years of experience. What matters is the ability to think about a problem and ship to completion.",
+        "* Advanced, daily use of AI tools (Codex, Claude Code, agentic workflows)",
+        "* Comfort working across the development stack",
+        "* Experience with data-heavy products: dashboards, analytics tools, pricing platforms, internal tools with real complexity",
+        "* Strong product instinct and a bias toward shipping. Desire to solve product problems.",
+        "* High autonomy in a small team. You don't need process to make progress",
+        "* Hybrid and remote working options available",
+        "****Nice to have****",
+        "* Exposure to insurance, financial services, or another regulated, data-dense industry",
+        "* Experience with real-time data, index, or benchmark products",
+        "* Early-stage experience where you wore several hats at once",
+        "* Interest in market structure and pricing transparency",
+        "****What we offer****",
+        "* Salary Range: $180,000 \u2013 $220,000 USD",
+        "* Equity / stock options, granted in addition to base salary",
+        "* Health & wellness: standard health benefits",
+        "* Hybrid work model + work-from-home stipend",
+        "* Learning & development budget + team events",
+        "* Mentorship from industry leaders (ex-Goldman Sachs, Apollo, Shopify, Productboard, and more)",
+        "Apply now",
+        "Engineering",
+        "New York, NY",
+        "Share on:",
+        "[Terms of service](https://app.rippling.com/legal/user) [Privacy](https://app.rippling.com/legal/privacy) [Cookies](https://app.rippling.com/legal/cookie-notice) [Powered by Rippling](https://www.rippling.com/recruiting)"
+       ]
+      },
+      {
+       "title": "Client Solutions Manager, InsurTech ",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4",
+       "excerpts": [
+        "# Client Solutions Manager, InsurTech",
+        "****About us****",
+        "Commercial insurance is a $1.1T+ global market. It is financial infrastructure that lets businesses take risks: borrow, invest, grow, and recover when things go wrong. Yet it has never had a common data standard to make policies legible: what it costs, what it covers, and how it compares to the broader market. This distorts pricing, hides coverage gaps, and creates enormous friction for businesses that depend on insurance.  ",
+        "Advocate has raised an $18M seed round to build that standard and a network of companies that contribute real-time policy data on top of it.  ",
+        "Today, our customers include 4 of the top 20 financial institutions. These customers participate in a network with more than $8B of premiums across 70,000+ policies. Their policies are aggregated to power Advocate's real-time insurance market pricing feed, while the coverage terms of each individual policy are normalized into a common, machine-readable schema. That means lenders, brokers, carriers, and property owners can increasingly reference the same structured understanding of coverage instead of independently interpreting the same policy.  ",
+        "Insurance professionals use this common data layer to improve how they manage these 70,000 policies: evaluate coverage gaps, benchmark pricing, manage third-party compliance, and more. Every workflow consumes data from the network while adding to it: as our customers do more work on our platform, more data enters the network.  ",
+        "This creates a compounding data flywheel: more customer activity adds more transactions and structured coverage data, which strengthens our benchmarks and models. We get better as frontier AI models improve, we can structure more of the insurance market at greater depth and lower cost, accelerating the growth and value of the network.  ",
+        "We are still early. Our ambition is to make this data layer foundational infrastructure for commercial insurance and turn this Trillion-dollar market into the next financial ecosystem.  ",
+        "The team is small and the bar is high. You will work across a highly empowered team that owns the product roadmap and on problems without established playbooks: designing systems that turn unstructured insurance contracts into reliable data, building products on top of a rapidly growing proprietary dataset, and creating workflows that become more valuable as the network grows. We expect you to be high agency and in return you will have immediate impact on global problems. Learn more at [advocate.app](https://advocate.app/) .",
+        "****About the Role****",
+        "Advocate Technologies is seeking an experienced and driven ****Client Solutions Manager**** to lead client onboarding, technical integrations, and ongoing client success across a portfolio of lender accounts.",
+        "You will own the end-to-end client experience \u2014 from implementation through long-term account growth \u2014 partnering closely with operations, product, and engineering to translate client needs into scalable workflows. As a manager-level individual contributor on the Client Solutions Team, you will set the standard for execution, mentor junior team members, and serve as a trusted advisor to senior stakeholders at our clients.",
+        "****Key Responsibilities****",
+        "****Client Onboarding & Implementation****",
+        "* Lead end-to-end onboarding engagements for new clients, including project planning, data migration, system configuration, reconciliation, and go-live readiness on the Advocate platform.",
+        "* Translate complex onboarding requirements, loan and asset information, and program specifications into scalable account configurations.",
+        "* Own quality assurance and validation across implementations to ensure data integrity and alignment with client expectations.",
+        "* Drive cross-functional execution with operations, product, and engineering stakeholders to shape client workflows and contribute to standard operating procedures.",
+        "* Develop and maintain process documentation, product guides, and internal playbooks to scale onboarding excellence.",
+        "* Build deep technical mastery of the Advocate platform, current features, and product roadmap; advocate for client needs in roadmap discussions.",
+        "****Client Success Management****",
+        "* Serve as the primary point of contact and trusted advisor for a designated portfolio of client accounts.",
+        "* Lead recurring client business reviews, identify integration needs, surface product challenges, and prioritize feature requests.",
+        "* Partner with internal product and engineering teams to translate client feedback into roadmap inputs and ensure timely resolution of escalations.",
+        "* Coordinate and manage key client initiatives across stakeholders, tracking progress and driving accountability to milestones.",
+        "* Identify opportunities for account expansion, deeper platform adoption, and retention through proactive engagement.",
+        "****Client Support & Training****",
+        "* Investigate client-reported issues, triage bugs and feature requests, and manage escalations to resolution.",
+        "* Design and deliver client training sessions and lead change management efforts during new rollouts, releases, and transitions.",
+        "* Mentor junior team members on client engagement best practices and technical troubleshooting.",
+        "****Requirements****",
+        "* 4+ years of experience in client onboarding, client success, technical account management, or implementation roles, ideally in B2B SaaS, fintech, or insurtech.",
+        "* Strong analytical skills and attention to detail in managing client data, configurations, and workflows.",
+        "* Excellent written and verbal communication skills, with the ability to explain technical concepts clearly to both technical and non-technical audiences.",
+        "* Proven ability to lead multiple complex projects and client engagements simultaneously.",
+        "* Demonstrated track record of working cross-functionally with operations, product, and engineering teams.",
+        "* Proficiency with Excel, Word, and structured workflow or CRM platforms.",
+        "* Working knowledge of REST API fundamentals \u2014 including integration testing, authentication, and reading technical documentation \u2014 is required.",
+        "****What we offer****",
+        "At Advocate, we believe in supporting our team with meaningful benefits that enhance work-life balance, well-being, and professional growth. As a ****Client Solutions Manager**** you will enjoy:",
+        "* Gross annual total compensation of \u20ac45,000.",
+        "* An annual performance bonus tied to successful new account onboarding.",
+        "* Private health insurance, fully covered by the company.",
+        "* A hybrid work model: 2 days in the office and 3 days working from home.",
+        "* Extra \u201cwork from anywhere\u201d days annually for added flexibility.",
+        "* A home office stipend to help you set up or upgrade your remote workspace.",
+        "* A monthly team bonding budget to foster connection and collaboration.",
+        "Apply now",
+        "Insurance Operations",
+        "Athina, Greece",
+        "Share on:",
+        "[Terms of service](https://app.rippling.com/legal/user) [Privacy](https://app.rippling.com/legal/privacy) [Cookies](https://app.rippling.com/legal/cookie-notice) [Powered by Rippling](https://www.rippling.com/recruiting)"
+       ]
+      },
+      {
+       "title": "Insurance Consultant",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/b327671d-9b27-4400-b436-3332d2fc95d9",
+       "excerpts": [
+        "# Insurance Consultant",
+        "****About Us****",
+        "Commercial insurance is a $1.1T+ global market. It is financial infrastructure that lets businesses take risks: borrow, invest, grow, and recover when things go wrong. Yet it has never had a common data standard to make policies legible: what it costs, what it covers, and how it compares to the broader market. This distorts pricing, hides coverage gaps, and creates enormous friction for businesses that depend on insurance.  ",
+        "Advocate has raised an $18M seed round to build that standard and a network of companies that contribute real-time policy data on top of it.  ",
+        "Today, our customers include 4 of the top 20 financial institutions. These customers participate in a network with more than $8B of premiums across 70,000+ policies. Their policies are aggregated to power Advocate's real-time insurance market pricing feed, while the coverage terms of each individual policy are normalized into a common, machine-readable schema. That means lenders, brokers, carriers, and property owners can increasingly reference the same structured understanding of coverage instead of independently interpreting the same policy.  ",
+        "Insurance professionals use this common data layer to improve how they manage these 70,000 policies: evaluate coverage gaps, benchmark pricing, manage third-party compliance, and more. Every workflow consumes data from the network while adding to it: as our customers do more work on our platform, more data enters the network.  ",
+        "This creates a compounding data flywheel: more customer activity adds more transactions and structured coverage data, which strengthens our benchmarks and models. We get better as frontier AI models improve, we can structure more of the insurance market at greater depth and lower cost, accelerating the growth and value of the network.  ",
+        "We are still early. Our ambition is to make this data layer foundational infrastructure for commercial insurance and turn this Trillion-dollar market into the next financial ecosystem.  ",
+        "The team is small and the bar is high. You will work across a highly empowered team that owns the product roadmap and on problems without established playbooks: designing systems that turn unstructured insurance contracts into reliable data, building products on top of a rapidly growing proprietary dataset, and creating workflows that become more valuable as the network grows. We expect you to be high agency and in return you will have immediate impact on global problems. Learn more at [advocate.app](https://advocate.app/) .",
+        "****About the role****",
+        "Our team is growing, and we are looking for a full-time Insurance Consultant in our Athens office. The ideal candidate will use their analytical and detail-oriented skills to collect, process and input loan transaction data into Advocate\u2019s proprietary database software engine.",
+        "Advocate values people growth and offers a transparent, merit-based career path for all our employees. Upon achievement of its objectives, the role can evolve Into a Senior Insurance Consultant position with increased responsibilities in the Insurance Operations team.",
+        "The monthly gross salary for the position is up to \u20ac1,600 (on a 14-months basis), depending on experience.",
+        "****What you'll do****",
+        "* Contribute to the daily execution of our Insurance Compliance Loan review system",
+        "* Review documents (incoming via email), extract and input information into Advocate\u2019s proprietary system",
+        "* Communicate via email coverage gaps with borrowers and lenders to seek resolution of all open issues",
+        "* Work closely with the Insurance Operations Associates to ensure that all documents are processed, and questions answered within the customers\u2019 service level agreement",
+        "* Escalate complex loan reviews to the Insurance Operations Associates in a timely manner",
+        "* Contribute to the Advocate\u2019s product feedback based on your observation of the daily insurance operations routine and customers\u2019 feedback",
+        "* Assist with any Operational / ad-hoc projects",
+        "****What you need for the role****",
+        "* English proficiency, exceptional communication skills \u2013 both written and verbal",
+        "* Computer knowledge/tech savviness- solid knowledge of Google and Office Suites",
+        "* Ability to work remotely and develop strong on-site relationships",
+        "* Flexible working hours (based on US office hours)",
+        "* Strong analytical and attention to detail skills - strong ability to summarize complex information",
+        "****We will consider as a plus if you have****",
+        "* Experience within the insurance industry, preferably in a core insurance business function such as insurance operations, underwriting, product development, business, or investments",
+        "* Call center experience managing incoming customers\u2019 requests via email or chat",
+        "****What we offer****",
+        "At Advocate, we believe in supporting our team with meaningful benefits that enhance work-life balance, well-being, and professional growth. As an Insurance Consultant, you will enjoy:",
+        "* Private health insurance, fully covered by the company",
+        "* A hybrid work model: 2 days in the office and 3 days working from home",
+        "* Extra \u201cwork from anywhere\u201d days annually for added flexibility",
+        "* A home office stipend to help you set up or upgrade your remote workspace",
+        "* A monthly team bonding budget to foster connection and collaboration",
+        "Apply now",
+        "Insurance Operations",
+        "Hybrid (Athens, GR)",
+        "Share on:",
+        "[Terms of service](https://app.rippling.com/legal/user) [Privacy](https://app.rippling.com/legal/privacy) [Cookies](https://app.rippling.com/legal/cookie-notice) [Powered by Rippling](https://www.rippling.com/recruiting)"
+       ]
+      },
+      {
+       "title": "Product Engineer (Europe, Remote)",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/a7576b54-094e-4018-9efe-f5177a3e2857",
+       "excerpts": [
+        "# Product Engineer (Europe, Remote)",
+        "****About Us****",
+        "Commercial insurance is a $1.1T+ global market. It is financial infrastructure that lets businesses take risks: borrow, invest, grow, and recover when things go wrong. Yet it has never had a common data standard to make policies legible: what it costs, what it covers, and how it compares to the broader market. This distorts pricing, hides coverage gaps, and creates enormous friction for businesses that depend on insurance.  ",
+        "Advocate has raised an $18M seed round to build that standard and a network of companies that contribute real-time policy data on top of it.  ",
+        "Today, our customers include 4 of the top 20 financial institutions. These customers participate in a network with more than $8B of premiums across 70,000+ policies. Their policies are aggregated to power Advocate's real-time insurance market pricing feed, while the coverage terms of each individual policy are normalized into a common, machine-readable schema. That means lenders, brokers, carriers, and property owners can increasingly reference the same structured understanding of coverage instead of independently interpreting the same policy.  ",
+        "Insurance professionals use this common data layer to improve how they manage these 70,000 policies: evaluate coverage gaps, benchmark pricing, manage third-party compliance, and more. Every workflow consumes data from the network while adding to it: as our customers do more work on our platform, more data enters the network.  ",
+        "This creates a compounding data flywheel: more customer activity adds more transactions and structured coverage data, which strengthens our benchmarks and models. We get better as frontier AI models improve, we can structure more of the insurance market at greater depth and lower cost, accelerating the growth and value of the network.  ",
+        "We are still early. Our ambition is to make this data layer foundational infrastructure for commercial insurance and turn this Trillion-dollar market into the next financial ecosystem.  ",
+        "The team is small and the bar is high. You will work across a highly empowered team that owns the product roadmap and on problems without established playbooks: designing systems that turn unstructured insurance contracts into reliable data, building products on top of a rapidly growing proprietary dataset, and creating workflows that become more valuable as the network grows. We expect you to be high agency and in return you will have immediate impact on global problems. Learn more at [advocate.app](https://advocate.app/) .",
+        "****About the role****",
+        "Advocate\u2019s technical staff is primarily comprised of Product Engineers. Our Product Engineers are the core builders at Advocate and take a problem from a rough thesis to something in production that customers use daily.",
+        "Product Engineers are leaders at Advocate. Each Product Engineer is responsible for a squad that owns part of our platform: evals and benchmarks, agent systems, the data layer, reporting, traded products. We will place you as a leader of one of these squads, where your instincts are strongest.",
+        "We do not have Product Managers or QA. Our organization is comprised of senior, empowered Product Engineers, Product Designers and our Infra/Platform team. As such this is not a ticket-taking role. You will be handed problems, not specs, and you will be expected to have an opinion about the answer and take the solution to delivery. Alongside this radical ownership comes freedom to solve for outcomes.",
+        "****What you do****",
+        "* Own features end to end, from scope through build, deploy, and iterate, with unusual latitude on how they get built.",
+        "* Work across the stack when the problem requires it: interface, API surface, data model, background jobs.",
+        "* Turn dense, structured insurance data into interfaces a broker, lender, or underwriter reaches for every day.",
+        "* Define what your work needs from adjacent squads, whether that is data captured, an endpoint exposed, or a permission scoped, and raise the dependency before it becomes a blocker.",
+        "* Use AI tooling aggressively as leverage. We expect engineers here to ship at a volume that only makes sense with agents in the loop.",
+        "* Contribute to the eval and benchmarking work that decides which models we trust with customer data, and where our own harness beats a raw model call.",
+        "* Bring product judgment: push back on requirements that don't hold up, propose the simpler version, kill the feature that isn't earning its keep.",
+        "****What success looks like****",
+        "* ****30 days:**** You understand the data model and the product surface, and you're shipping meaningful contributions to production.",
+        "* ****90 days:**** You independently own features end to end, from identifying the dependency to deploying the customer-facing result.",
+        "* ****6 months:**** You're the person who sees the gap before it slows us down, whether that is a bottleneck in the interface, a missing pipeline, or a feature the market is asking for that isn't on the roadmap yet.",
+        "****Your qualifications****",
+        "* 2+ years building production web applications. This role can be a fit for someone with 2 years or 15 years of experience. What matters is the ability to think about a problem and ship to completion.",
+        "* Advanced, daily use of AI tools (Codex, Claude Code, agentic workflows)",
+        "* Comfort working across the development stack",
+        "* Experience with data-heavy products: dashboards, analytics tools, pricing platforms, internal tools with real complexity",
+        "* Strong product instinct and a bias toward shipping. Desire to solve product problems.",
+        "* High autonomy in a small team. You don't need process to make progress",
+        "* Hybrid and remote working options available",
+        "****Nice to have****",
+        "* Exposure to insurance, financial services, or another regulated, data-dense industry",
+        "* Experience with real-time data, index, or benchmark products",
+        "* Early-stage experience where you wore several hats at once",
+        "* Interest in market structure and pricing transparency",
+        "****What we offer****",
+        "* Salary Range: $115,000 \u2013 $190,000 USD",
+        "* Equity / stock options, granted in addition to base salary",
+        "* Health & wellness: standard health benefits",
+        "* Work-from-home stipend",
+        "* Learning & development budget + team events",
+        "* Mentorship from industry leaders (ex-Goldman Sachs, Apollo, Shopify, Productboard, and more)",
+        "Apply now",
+        "Engineering",
+        "Remote (Greece)",
+        "Share on:",
+        "[Terms of service](https://app.rippling.com/legal/user) [Privacy](https://app.rippling.com/legal/privacy) [Cookies](https://app.rippling.com/legal/cookie-notice) [Powered by Rippling](https://www.rippling.com/recruiting)"
+       ]
+      },
+      {
+       "title": "API Reference - Advocate API",
+       "url": "https://docs.advocate.app/",
+       "excerpts": [
+        "### Getting Started",
+        "* [API Reference](https://docs.advocate.app/)",
+        "* [Authentication](https://docs.advocate.app/authentication)",
+        "### Using the API",
+        "* [Query Parameters](https://docs.advocate.app/query-parameters)",
+        "* [Responses](https://docs.advocate.app/responses)",
+        "* [Errors](https://docs.advocate.app/errors)",
+        "* [Rate Limiting](https://docs.advocate.app/rate-limits)",
+        "* [Custom Metadata](https://docs.advocate.app/custom-metadata)",
+        "### Guides",
+        "* [Case Creation Flow](https://docs.advocate.app/guides/case-creation)",
+        "* [Certificate Holder Flow](https://docs.advocate.app/guides/certificate-holder-creation)"
+       ]
+      }
+     ],
+     "reasoning": "All five current job postings and the public documentation index are readable. A posting mentions only generic \u201cCRM platforms,\u201d and none of the reviewed postings or docs names a specific CRM or sales/marketing system, so the visible named-system list is empty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Advocate Technologies Inc.",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+       "excerpts": [
+        "## Engineering",
+        "[Platform Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610)",
+        "Engineering",
+        "Long Island City, NY",
+        "View job",
+        "[Product Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/50d16a20-4191-4bac-8915-230f81df29b3)",
+        "New York, NY",
+        "[Product Engineer (Europe, Remote)](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/a7576b54-094e-4018-9efe-f5177a3e2857)",
+        "Remote (Greece)",
+        "## Insurance Operations",
+        "[Client Solutions Manager, InsurTech](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4)",
+        "Insurance Operations",
+        "Athina, Greece",
+        "[Insurance Consultant](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/b327671d-9b27-4400-b436-3332d2fc95d9)",
+        "Hybrid (Athens, GR)"
+       ]
+      }
+     ],
+     "reasoning": "The current job board lists three engineering roles and two insurance-operations roles; none of the role titles is an AI, ML, data-science, NLP, LLM, or related research-science role.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding"
+       ]
+      }
+     ],
+     "reasoning": "The latest round is explicitly called a seed round in the dated company announcement.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "API Reference - Advocate API",
+       "url": "https://docs.advocate.app/",
+       "excerpts": [
+        "### Getting Started",
+        "* [API Reference](https://docs.advocate.app/)",
+        "* [Authentication](https://docs.advocate.app/authentication)",
+        "### Using the API",
+        "* [Query Parameters](https://docs.advocate.app/query-parameters)",
+        "* [Responses](https://docs.advocate.app/responses)",
+        "* [Errors](https://docs.advocate.app/errors)",
+        "* [Rate Limiting](https://docs.advocate.app/rate-limits)",
+        "* [Custom Metadata](https://docs.advocate.app/custom-metadata)",
+        "### Guides",
+        "* [Case Creation Flow](https://docs.advocate.app/guides/case-creation)",
+        "* [Certificate Holder Flow](https://docs.advocate.app/guides/certificate-holder-creation)"
+       ]
+      }
+     ],
+     "reasoning": "The public API documentation index includes multiple getting-started topics, API topics, and guides, meeting the requirement for several public documentation pages.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Advocate \u2014 Commercial Insurance Intelligence",
+       "url": "https://www.advocate.app/about",
+       "excerpts": [
+        "Advocate is headquartered in New York City, with offices inPrague and Athens."
+       ]
+      }
+     ],
+     "reasoning": "The company About page directly states that its headquarters are in New York City.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020"
+       ]
+      }
+     ],
+     "reasoning": "The company announced its public launch on August 4, 2026, which is within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Advocate Technologies Inc.",
+       "url": "https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs",
+       "excerpts": [
+        "## Engineering",
+        "[Platform Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/4b5c500d-36da-4b42-8d93-7aae7d386610)",
+        "Engineering",
+        "Long Island City, NY",
+        "View job",
+        "[Product Engineer](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/50d16a20-4191-4bac-8915-230f81df29b3)",
+        "New York, NY",
+        "[Product Engineer (Europe, Remote)](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/a7576b54-094e-4018-9efe-f5177a3e2857)",
+        "Remote (Greece)",
+        "## Insurance Operations",
+        "[Client Solutions Manager, InsurTech](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/bba3254a-36ba-428f-a975-374bb6fbf6c4)",
+        "Insurance Operations",
+        "Athina, Greece",
+        "[Insurance Consultant](https://ats.rippling.com/en-GB/advocate-technologies-inc/jobs/b327671d-9b27-4400-b436-3332d2fc95d9)",
+        "Hybrid (Athens, GR)"
+       ]
+      }
+     ],
+     "reasoning": "The open job board lists five roles, none titled SDR, BDR, sales/business development representative, or account executive.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Advocate raises $18 million to bring pricing and coverage benchmarks to commercial insurance | Advocate",
+       "url": "https://www.advocate.app/blog/advocate-raises-18-million-commercial-insurance-benchmarks",
+       "excerpts": [
+        "August 4, 2026:** Advocate Technologies announced its public launch after operating in stealth since 2020, alongside **$18 million in seed funding"
+       ]
+      }
+     ],
+     "reasoning": "The company raised its reported $18 million seed round on August 4, 2026, inside the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "  ### ISO/IEC 27001:2022",
+        "  Our information security management system is certified against the 2022 revision of ISO/IEC 27001 by an accredited external auditor. The certificate and audit report are available on request."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly says the information security management system is certified to ISO/IEC 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security at Advocate | ISO 27001:2022 and SOC 2 Type II",
+       "url": "https://www.advocate.app/security",
+       "excerpts": [
+        "  ### SOC 2 Type II",
+        "  An independent auditor examined the design and operating effectiveness of our controls against the AICPA Trust Services Criteria for Security across an observation period, not at a single point in time."
+       ]
+      }
+     ],
+     "reasoning": "The official security page names its SOC 2 Type II report.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Insurance Software & Market Terminal for Brokers | Advocate",
+       "url": "https://www.advocate.app/",
+       "excerpts": [
+        "* KeyBank"
+       ]
+      }
+     ],
+     "reasoning": "KeyBank is named in the customer-logo list on the company homepage.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Insurance Software & Market Terminal for Brokers | Advocate",
+       "url": "https://www.advocate.app/",
+       "excerpts": [
+        "* Greystone"
+       ]
+      }
+     ],
+     "reasoning": "Greystone is named in the customer-logo list on the company homepage.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2020.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "SOC 2 Type II"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Advocate standardizes commercial insurance policy data and benchmarks coverage and pricing against live market transactions for brokers, loan servicers, carriers, and property owners.",
+    "employee_band": "51-100",
+    "model_provider": "Anthropic and OpenAI",
+    "pricing_page": true,
+    "funding_amount_usd": 18000000.0,
+    "named_customers": [
+     "KeyBank",
+     "Greystone"
+    ],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": true,
+    "hq_city": "New York City",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

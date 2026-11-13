@@ -1,0 +1,477 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea4fe7244ef56041f",
+  "interaction_id": "trun_142119f6a1b4439ea4fe7244ef56041f",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "redteam.com"
+  },
+  "created_at": "2026-11-10T18:49:02.097312Z",
+  "modified_at": "2026-11-10T18:55:38.567882Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea4fe7244ef56041f",
+   "interaction_id": "trun_142119f6a1b4439ea4fe7244ef56041f",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "redteam.com"
+   },
+   "created_at": "2026-11-10T18:49:02.097312Z",
+   "modified_at": "2026-11-10T18:55:38.567882Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Learn More About Us | RedTeam",
+       "url": "https://redteam.com/about-us",
+       "excerpts": [
+        "2006 dd RedTeam is born Founded by Michael Wright. HQ in Orlando, Florida."
+       ]
+      }
+     ],
+     "reasoning": "The company timeline identifies RedTeam as founded in 2006.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Policies | RedTeam Construction Software",
+       "url": "https://redteam.com/privacy-policy/",
+       "excerpts": [
+        "DATA SECURITY  ",
+        "RedTeam has implemented measures designed to secure your personal information from accidental loss and from unauthorized access, use, alteration and disclosure. However, the safety and security of your information also depends on you. Where we have given you, or where you have chosen, a password for access to certain parts of the Website, you are responsible for keeping this password confidential. You must not share your password with anyone.  ",
+        "Unfortunately, the transmission of information via the internet is not completely secure. Although RedTeam attempts to protect your personal information, RedTeam cannot guarantee the security of your personal information transmitted to the Website. Any transmission of personal information is at your own risk. RedTeam is not responsible for the circumvention of any privacy setting or security measures contained on the Website."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s legal privacy policy includes a data-security section but names none of the listed certifications; the cited legal page was checked for SOC 2, ISO 27001, HIPAA, GDPR, and PCI DSS.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Learn More About Us | RedTeam",
+       "url": "https://redteam.com/about-us",
+       "excerpts": [
+        "HQ in Orlando, Florida."
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/redteamsoftware",
+       "excerpts": [
+        "country iso: US country name: United States locality: Orlando, FL"
+       ]
+      }
+     ],
+     "reasoning": "The company timeline gives its headquarters as Orlando, Florida, and the company LinkedIn profile identifies its country as the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Insights Archives - Builder Blog by RedTeam",
+       "url": "https://blog.redteam.com/category/insights/",
+       "excerpts": [
+        "### [A Better Way to Manage Construction Submittals](https://blog.redteam.com/new-submittals-experience-redteam-flex/)",
+        "August 19, 2026",
+        "Make construction submittal management easier. See how general contractors can streamline submittal workflows, track reviews and responsibilities, manage documents, and keep projects moving with construction management software built around contractor workflows. Plus, learn what\u2019s new in the RedTeam submittals experience.",
+        "[Read More \u00bb](https://blog.redteam.com/new-submittals-experience-redteam-flex/)",
+        "[](https://blog.redteam.com/project-manager-playbook-bulletproof-construction-scheduling/)",
+        "### [The Project Manager\u2019s Playbook for Bulletproof Construction Scheduling](https://blog.redteam.com/project-manager-playbook-bulletproof-construction-scheduling/)",
+        "August 18, 2026",
+        "Understand the importance of Construction Scheduling in keeping projects on track and avoiding costly delays throughout the process.",
+        "### [How to Manage Your Construction Schedule of Values](https://blog.redteam.com/how-to-manage-your-construction-schedule-of-values/)",
+        "Want to see how RedTeam keeps your Schedule of Values connected to budgets, change orders, and pay applications?",
+        "[Read More \u00bb](https://blog.redteam.com/how-to-manage-your-construction-schedule-of-values/)",
+        "[](https://blog.redteam.com/how-to-perform-a-job-safety-analysis-jsa/)",
+        "### [How To Perform A Job Safety Analysis (JSA)](https://blog.redteam.com/how-to-perform-a-job-safety-analysis-jsa/)",
+        "August 10, 2026",
+        "Learn how construction project management is evolving in 2026, key phases, best practices and tech that help deliver successful projects."
+       ]
+      }
+     ],
+     "reasoning": "The Builder Blog index shows practical construction-management and project how-to articles (for example submittals, scheduling, and construction reports), not multiple engineer-authored posts about building RedTeam\u2019s product. The reviewed archive pages therefore support false under the requested definition.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About RedTeam | Construction Management Software",
+       "url": "https://redteam.com/about",
+       "excerpts": [
+        "_RedTeam is [construction management software](https://redteam.com/platform/) built by GCs, for GCs \u2014 **because we've done the job ourselves.**_ Commercial general contractors use RedTeam to run bids, budgets, daily logs, and documents from one place, from preconstruction through closeout."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s About page directly describes construction-management software built for commercial general contractors and lists bids, budgets, daily logs, documents, and the project lifecycle.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/redteamsoftware",
+       "excerpts": [
+        "employee count: 98"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 98 employees, which falls in the 51\u2013100 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "RedTeam Harnesses AWS and Generative AI to Achieve 90% Extraction Accuracy and Supercharge Document Processing\u00a0\u00a0\u00a0 | Allata",
+       "url": "https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing",
+       "excerpts": [
+        "RedTeam, a construction management software company, faced a critical bottleneck with manual specification document review consuming up to 8+ hours per document. Our team implemented an AI-driven pipeline using AWS Bedrock and Textract, achieving around 90% accuracy while cutting processing time dramatically. This solution now serves as a key differentiator and potential revenue stream for RedTeam\u2019s platform. ... **Efficiency Gains:** Processing time reduced from 8+ hours to approximately 15 minutes for documents containing 200+ submittal items. **Unique Complexity:** Supported large-scale documents up to 5,000 pages and 1GB in file size. These requirements significantly exceeded the upper bounds of many off-the-shelf solutions. ... Our team designed a comprehensive AI architecture in AWS, built on a serverless infrastructure-as-code model. This robust extraction pipeline was tailored specifically for RedTeam\u2019s needs."
+       ]
+      }
+     ],
+     "reasoning": "The Allata case study says its AI pipeline built for RedTeam uses AWS Bedrock and Textract. It does not name a particular foundation model, so the answer identifies the disclosed AWS services and notes that limitation.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Construction Management Software Pricing | RedTeam",
+       "url": "https://redteam.com/pricing/",
+       "excerpts": [
+        "# Pricing",
+        "## And priced just right for commercial GCs.",
+        "### Transparent costs",
+        "No mystery math, hidden add-ons, or surprise fees. RedTeam uses clear pricing tiers based on active project volume, so you know what drives your cost before you commit."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam has a public page headed \u201cPricing\u201d that describes its pricing tiers and active-project-volume pricing, even though prices are not simply listed as fixed amounts.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "RedTeam Software",
+       "url": "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising",
+       "excerpts": [
+        "Last Deal Details$28 millionSeries B Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series B | February 2022 | View Series B details: $28,000,000 | - | 0 |"
+       ]
+      }
+     ],
+     "reasoning": "The funding history reports the latest Series B in February 2022 at $28 million, equivalent to USD 28,000,000.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Shaub Construction Case Study: Hours to Minutes | RedTeam",
+       "url": "https://redteam.com/insights-and-stories/shaub-construction-company",
+       "excerpts": [
+        "Customer Success Story Shaub Construction ... Before new leadership arrived in 2016, Shaub Construction managed multimillion-dollar projects without project management software, creating inefficiencies across subcontracts, budgeting, and preconstruction. Founded in 1964, Shaub Construction is a Brentwood, Tennessee\u2013based commercial contractor offering general contracting, construction management, and program management."
+       ]
+      },
+      {
+       "title": "CCI Commercial Construction Boosts Organization with RedTeam",
+       "url": "https://redteam.com/resources/success-stories/cci",
+       "excerpts": [
+        "CCI Commercial Construction: Improves Internal Organization with the Help of RedTeam [CCI Commercial Construction](https://ccicommercialconstruction.com/) specializes in design/build, commercial, and industrial construction with a wide portfolio of projects including sport, leisure, and retail. ... RedTeam\u2019s construction project management software makes it simple for general contractors to effectively manage projects. With the help of RedTeam, CCI is more efficiently managing all aspects of their projects."
+       ]
+      }
+     ],
+     "reasoning": "The cited RedTeam customer stories identify Shaub Construction and CCI Commercial Construction as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "RedTeam Software",
+       "url": "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising",
+       "excerpts": [
+        "Last Deal Details$28 millionSeries B Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series B | February 2022 | View Series B details: $28,000,000 | - | 0 |"
+       ]
+      }
+     ],
+     "reasoning": "The latest round is dated February 2022, which is represented as 2022-02.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager at RedTeam - Construction Technology - RevPath",
+       "url": "https://revpath.dealhub.io/jobs/793509513-revenue-operations-manager",
+       "excerpts": [
+        "You'll run **HubSpot** and **Gainsight** , but the job is bigger than the tools."
+       ]
+      }
+     ],
+     "reasoning": "A RedTeam revenue-operations job listing says the role will run HubSpot and Gainsight, directly identifying both systems.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "RedTeam Appoints Connor Schone as Vice President of",
+       "url": "https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/RedTeam-Appoints-Connor-Schone-as-Vice-President-of-Finance.html",
+       "excerpts": [
+        "Orlando, FL, July 09, 2026 (GLOBE NEWSWIRE) -- [RedTeam Software](https://www.globenewswire.com/Tracker?data=BGZHyr2pnuf9dWEHoACXBn-dmUO7ph5Fi4vKYZEi_WZJG4-IMfZhIC7mCutRzfboRjwSLorXi3kwrnZ5KsC6XQ==) , a leading provider of construction management software built by contractors for contractors, is pleased to announce the appointment of Connor Schone as Vice President of Finance. In this role, Schone will lead RedTeam's financial strategy, planning and operations, helping drive sustainable growth while supporting the company's continued investment in innovative technology for commercial contractors as RedTeam continues to expand its product portfolio and customer base. \"Connor brings a thoughtful, data-driven approach to financial leadership that aligns perfectly with RedTeam's long-term vision,\" said Craig Tate, Chief Executive Officer of RedTeam Software. \"His experience building scalable financial operations and collaborating across the business will be instrumental as we continue to grow and deliver exceptional value to our customers.\" Schone joins RedTeam with extensive experience in corporate finance, strategic planning and operational leadership including multiple years in construction technology."
+       ]
+      }
+     ],
+     "reasoning": "A dated announcement states that Connor Schone was appointed Vice President of Finance on July 9, 2026, within the 12 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs?locale=en-US",
+       "excerpts": [
+        "Department Executive Management Marketing Operations Product Sales Success Support",
+        "[Show Me All Jobs](https://redteam.apscareerportal.com/jobs?locale=en-US)",
+        "# There are no jobs posted at this time."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s careers job board was accessible and explicitly stated that there were no jobs posted at the time, so no AI/ML/data-science role was open there.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "RedTeam Software",
+       "url": "https://aventure.vc/companies/redteam-software-orlando-fl-us/fundraising",
+       "excerpts": [
+        "Last Deal Details$28 millionSeries B Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series B | February 2022 | View Series B details: $28,000,000 | - | 0 |"
+       ]
+      },
+      {
+       "title": "RedTeam Software - 2026 Company Profile, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/redteam-software/__8uqjtcWi34fjq7b-F-SIGADWn7r4JGxDBWH1cz8DPDU",
+       "excerpts": [
+        "RedTeam Software's funding and investors RedTeam Software has raised a total funding of$33.4Mover 6 rounds.Its first funding round was onAug 04, 2017.Its latest funding round was a Series B round on Feb 02, 2022 for [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/576a91d3e4b029993b4d3778:funding-and-investors) .1 investor participated in its latest"
+       ]
+      }
+     ],
+     "reasoning": "The funding history describes the February 2022 latest round as Series B. Another database labels it differently, so Series B follows the RedTeam profile and is stated with medium confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home | Help Center",
+       "url": "https://help.redteam.com/en/",
+       "excerpts": [
+        "[Help Center](https://help.redteam.com/en/)",
+        "# Advice and answers from our Support team",
+        "Search for articles...",
+        "[Fieldlens by RedTeam Intuitive construction jobsite management solution for efficient collaboration. Connect teams in the field, reduce rework and complete projects on time. 133 articles](https://help.redteam.com/en/collections/4046168-fieldlens-by-redteam) [TeamPlayer - The Basics How to get started with TeamPlayer 1 article](https://help.redteam.com/en/collections/3696956-teamplayer-the-basics) [TeamPlayer for RedTeam Flex Customers All you need to know about TeamPlayer and what needs to be configured in the GC side in RedTeam Flex, as well as how to view and manage your TeamPlayer invoices in RedTeam Flex 11 articles](https://help.redteam.com/en/collections/3697145-teamplayer-for-redteam-flex-customers) [RedTeam Go General information about RedTeam Go 503 articles](https://help.redteam.com/en/collections/3932775-redteam-go) [RedTeam Flex General information about RedTeam Flex 236 articles](https://help.redteam.com/en/collections/3932770-redteam-flex) [All RedTeam Products General information about all RedTeam products 2 articles](https://help.redteam.com/en/collections/19682524-all-redteam-products)"
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s public Help Center lists numerous product collections with hundreds of articles, satisfying the several-articles requirement.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Learn More About Us | RedTeam",
+       "url": "https://redteam.com/about-us",
+       "excerpts": [
+        "HQ in Orlando, Florida."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s company timeline explicitly places its headquarters in Orlando, Florida.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Submittals: A New Experience in RedTeam Flex",
+       "url": "https://blog.redteam.com/new-submittals-experience-redteam-flex",
+       "excerpts": [
+        "August 19, 2026 How to Set Up a New Project in RedTeam's New Submittals Experience ... If you\u2019ve already uploaded a spec book in Plans & Specs, it isn\u2019t available to submittal extraction \u2014 you\u2019ll need to upload it again directly in the extraction tool. ... It_](https://help.redteam.com/en/articles/16102126-redteam-flex-new-submittals-overview-and-how-to-enable-it) _in the Help Center._"
+       ]
+      }
+     ],
+     "reasoning": "The Builder Blog post dated August 19, 2026 covers RedTeam Flex\u2019s new Submittals experience, an introduced product feature inside the six-month window ending November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Sales Development Representative (SDR) | RedTeam Software",
+       "url": "https://redteam.careerplug.com/jobs/3346961/apps/new",
+       "excerpts": [
+        "Sales Development Representative (SDR) Fully Remote - US ... **The Opportunity** As a Sales Development Representative (SDR), you will be on the front lines of our growth engine. You\u2019ll engage with inbound leads, proactively identify new opportunities through outbound prospecting, and play a critical role in building pipeline for our sales team. This is a high-impact role with clear career progression into Account Executive or other revenue leadership paths."
+       ]
+      },
+      {
+       "title": "[Hiring] Sales Development Representative @RedTeam Software",
+       "url": "https://remotive.com/remote/jobs/sales-business/sales-development-representative-4350267",
+       "excerpts": [
+        "|Job Type [full-time](https://remotive.com/remote-jobs?employment-type=full-time) |Posted 1wk ago | [Hiring] Sales Development Representative @RedTeam Software 1wk ago - RedTeam Software is hiring a remote Sales Development Representative. \ud83d\udcb8 Salary: unspecified \ud83d\udccdLocation: USA Role Description As a Sales Development Representative (SDR), you will be on the front lines of our growth engine. You\u2019ll engage with inbound leads, proactively identify new opportunities through outbound prospecting, and play a critical role in building pipeline for our sales team."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s SDR job posting names a Sales Development Representative role, and a recent listing says RedTeam was hiring for that role. This supports current SDR hiring despite a separate careers portal reporting no postings.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "RedTeam Software - 2026 Company Profile, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/redteam-software/__8uqjtcWi34fjq7b-F-SIGADWn7r4JGxDBWH1cz8DPDU",
+       "excerpts": [
+        "RedTeam Software's funding and investors RedTeam Software has raised a total funding of$33.4Mover 6 rounds.Its first funding round was onAug 04, 2017.Its latest funding round was a Series B round on Feb 02, 2022 for [$\\*\\*\\*\\*\\*](https://platform.tracxn.com/a/d/company/576a91d3e4b029993b4d3778:funding-and-investors) .1 investor participated in its latest"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile reports that the latest round was February 2, 2022, well before the 18-month window beginning May 9, 2025; no newer round is listed.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Shaub Construction Case Study: Hours to Minutes | RedTeam",
+       "url": "https://redteam.com/insights-and-stories/shaub-construction-company",
+       "excerpts": [
+        "Customer Success Story Shaub Construction ... Before new leadership arrived in 2016, Shaub Construction managed multimillion-dollar projects without project management software, creating inefficiencies across subcontracts, budgeting, and preconstruction. Founded in 1964, Shaub Construction is a Brentwood, Tennessee\u2013based commercial contractor offering general contracting, construction management, and program management."
+       ]
+      }
+     ],
+     "reasoning": "The RedTeam customer-success story is titled Shaub Construction and describes its use of RedTeam.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "CCI Commercial Construction Boosts Organization with RedTeam",
+       "url": "https://redteam.com/resources/success-stories/cci",
+       "excerpts": [
+        "CCI Commercial Construction: Improves Internal Organization with the Help of RedTeam [CCI Commercial Construction](https://ccicommercialconstruction.com/) specializes in design/build, commercial, and industrial construction with a wide portfolio of projects including sport, leisure, and retail. ... RedTeam\u2019s construction project management software makes it simple for general contractors to effectively manage projects. With the help of RedTeam, CCI is more efficiently managing all aspects of their projects."
+       ]
+      }
+     ],
+     "reasoning": "The RedTeam customer-success story identifies CCI Commercial Construction and describes RedTeam\u2019s use there.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager at RedTeam - Construction Technology - RevPath",
+       "url": "https://revpath.dealhub.io/jobs/793509513-revenue-operations-manager",
+       "excerpts": [
+        "You'll run **HubSpot** and **Gainsight** , but the job is bigger than the tools."
+       ]
+      }
+     ],
+     "reasoning": "The revenue-operations posting names HubSpot.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager at RedTeam - Construction Technology - RevPath",
+       "url": "https://revpath.dealhub.io/jobs/793509513-revenue-operations-manager",
+       "excerpts": [
+        "You'll run **HubSpot** and **Gainsight** , but the job is bigger than the tools."
+       ]
+      }
+     ],
+     "reasoning": "The revenue-operations posting names Gainsight.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2006.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "RedTeam provides commercial general contractors with construction-management software to manage bids, budgets, daily logs, documents, and projects from preconstruction through closeout.",
+    "employee_band": "51-100",
+    "model_provider": "AWS (Amazon Bedrock and Amazon Textract for document processing); the specific foundation model is not named.",
+    "pricing_page": true,
+    "funding_amount_usd": 28000000.0,
+    "named_customers": [
+     "Shaub Construction",
+     "CCI Commercial Construction"
+    ],
+    "funding_date": "2022-02",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Gainsight"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Orlando",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

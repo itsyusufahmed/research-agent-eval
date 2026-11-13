@@ -1,0 +1,24 @@
+{
+ "url": "https://auterion.com/making_autonomous_uav_missions_smarter/",
+ "fetched_at": "2026-11-10T19:12:53.136703+00:00",
+ "hours_after_run": 43.2,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "e41f6b8a10d88d128fdf38ebb9bc4e5a1ac3e44f43934b038a9894052a45a367",
+ "chars": 3566,
+ "truncated": false,
+ "title": "Smarter autonomous UAV missions | Auterion",
+ "markdown": "## [Product](https://auterion.com/news/product/) • [Technology](https://auterion.com/news/technology/)\n\n# Smarter autonomous UAV missions\n\nOctober 29, 2019\n\n![](https://i0.wp.com/auterion.com/wp-content/uploads/2019/10/Drone_mapping_Collision_Prevention-1200x773-1.jpg?fit=1200%2C773&ssl=1)\n\n## Our latest developments on collision prevention\n\n**Authors:**\n\n**Tanja Bauman \\| Auterion Software Engineer**\n\n**Julian Kent \\| Auterion Autonomy Lead**\n\nWe live in an era in which drone automation becomes more and more important to avoid human errors and to enable scalability. Auterion is built around high interoperability and the ability to share, in real-time and over-the-air, data and information to the cloud, making it fundamental to keep UAVs secure during manual flight close to structures and autonomous or BVLOS missions.\n\nFor such reason, we make it one of our top priorities to continuously improve our autonomy stack that allows safe operations when drones are at work.\n\nThis past month, Auterion’s autonomy team focused on improving one of the core safety features of our flight control software: not colliding into obstacles that are on the flight path, to give pilots more confidence when flying. Collision prevention uses the data from horizontal distance sensors to constrain pilot inputs and prevent the vehicle from colliding into things. We increase the cadence of our test flights to test our autonomy stack, which led us to make a number of improvements.\n\n## Smoother decelerations and stops\n\nFirst, the algorithm now correctly accounts for maximum acceleration and jerk limits as well as setpoint tracking delay, as opposed to a very responsive flight. This particularly affects vehicles tuned for smooth flight, which previously might not react fast enough to stop in time. Now, vehicles start responding sooner depending on their tuning, ensuring that they always stop in time and there isn’t a tradeoff between smooth flight and safety.\n\n## Avoid obstacles in time\n\nSecond, when collision prevention is enabled it now also constrains the maximum velocity so that you can always stop in the time given the available sensor range. The feature is designed to work correctly with mixes of different sensors with different ranges pointed in different directions, or even with overlapping sensors, taking advantage of each as they provide useful data. So, if a vehicle has long-range sensors pointing forward, and short-range to the back, it will be able to fly forward quickly, slowly backward, and not at all side-to-side where there isn’t any sensor coverage. This means collision prevention now lives up to its name, no matter what sensor mix is available.\n\n## Fly smoother in restricted environments\n\nThe third major improvement we’ve added is ‘guidance’. An issue we had when testing in more constrained environments was the vehicle feeling ‘stuck’, or locked in place, when too close to an obstacle or trying to go through gaps. This is because any requested motion not taking the vehicle away from the too-close obstacles was being blocked. To get around this we now allow the vehicle to fine-tune the requested direction of motion, to take you between, around or slightly away from obstacles. The drone still slows down like before, so this isn’t compromising safety, however, it makes flying in tight environments much easier.\n\nLearn more about collision prevention in the PX4 User Guide: [https://docs.px4.io/master/en/computer\\_vision/collision\\_prevention.html](https://docs.px4.io/master/en/computer_vision/collision_prevention.html)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "eng_blog"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T18:47:24.550279+00:00",
+ "hours_after_launch": 0.42
+}

@@ -1,0 +1,409 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eae771a07fab8df9c",
+  "interaction_id": "trun_142119f6a1b4439eae771a07fab8df9c",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "rivofi.com"
+  },
+  "created_at": "2026-11-10T18:47:53.883380Z",
+  "modified_at": "2026-11-10T18:58:20.279350Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eae771a07fab8df9c",
+   "interaction_id": "trun_142119f6a1b4439eae771a07fab8df9c",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "rivofi.com"
+   },
+   "created_at": "2026-11-10T18:47:53.883380Z",
+   "modified_at": "2026-11-10T18:58:20.279350Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/tryrivo",
+       "excerpts": [
+        "founded year: 2025"
+       ]
+      }
+     ],
+     "reasoning": "Rivo's company profile explicitly lists 2025 as its founding year: https://linkedin.com/company/tryrivo.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "FAQs | Rivo - Money Working While You Sleep",
+       "url": "https://www.rivofi.com/faqs",
+       "excerpts": [
+        "We use 256-bit encryption and are SOC 2 compliant."
+       ]
+      }
+     ],
+     "reasoning": "Rivo explicitly claims SOC 2 compliance in its security FAQ. No other certification from the requested list was established: https://www.rivofi.com/faqs.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/tryrivo",
+       "excerpts": [
+        "country name: United States"
+       ]
+      }
+     ],
+     "reasoning": "Rivo's company profile identifies its country as United States: https://linkedin.com/company/tryrivo.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog",
+       "url": "https://www.rivofi.com/blog",
+       "excerpts": [
+        "Skip to main content COMPANY NEWS Rivo Raises $3.1M and Comes Out of Beta",
+        "A Dollar Threshold Guide for Idle Cash Ambrish Tyagi October 15, 2026 22 min read PRODUCT Rivo vs SoFi Checking and Savings: Keep Your Bank or Build a New Cash Hub?",
+        "Checking Cash Flow, Settlement Timing, and Safe Balances"
+       ]
+      }
+     ],
+     "reasoning": "The rendered blog index contains company news, product explanations, comparisons and personal-finance articles, not two engineering-authored posts explaining how Rivo is built: https://www.rivofi.com/blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "FAQs | Rivo - Money Working While You Sleep",
+       "url": "https://www.rivofi.com/faqs",
+       "excerpts": [
+        "Who is Rivo for? Rivo is designed for any household looking to earn more on idle cash sitting in their bank account, automate bill and loan payments, eliminate idle cash drag in low-interest accounts, and move money instantly across accounts with ease."
+       ]
+      },
+      {
+       "title": "Rivo - Companies - South Park Commons",
+       "url": "https://www.southparkcommons.com/companies/rivo",
+       "excerpts": [
+        "Rivo automatically moves idle cash out of your existing checking and savings accounts into higher yield instruments and returns it before bills are due."
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/tryrivo",
+       "excerpts": [
+        "Rivo is the AI intelligence layer that optimizes your money across the bank accounts you already use."
+       ]
+      }
+     ],
+     "reasoning": "The FAQ identifies households as the audience; the company profile describes the AI layer; its investor describes automated transfers into higher-yielding instruments and back before bills. Sources: https://www.rivofi.com/faqs, https://linkedin.com/company/tryrivo and https://www.southparkcommons.com/companies/rivo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/tryrivo",
+       "excerpts": [
+        "employee count: 7"
+       ]
+      }
+     ],
+     "reasoning": "The public company profile reports seven employees, below every permitted band. No supported count fitting an allowed band was found, so this field is null rather than assigning 11\u201320: https://linkedin.com/company/tryrivo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Trust Center - Rivo",
+       "url": "https://trust.rivofi.com/",
+       "excerpts": [
+        "View all Sub-Processors View all Jiko USA"
+       ]
+      },
+      {
+       "title": "Privacy Policy | Rivo - Data Protection & Security",
+       "url": "https://www.rivofi.com/privacy-policy",
+       "excerpts": [
+        "**With Service Providers** : We share information with trusted third-party vendors who provide essential services such as hosting, security, and customer support."
+       ]
+      },
+      {
+       "title": "Rivo Raises $3.1M and Comes Out of Beta",
+       "url": "https://www.rivofi.com/blog/funding-announcement",
+       "excerpts": [
+        "Raj Kiran, our CTO, built foundation models previously at Krutrim and Microsoft."
+       ]
+      }
+     ],
+     "reasoning": "No AI model or provider was disclosed in the reviewed FAQ, product/blog pages, privacy policy or rendered subprocessor list. Krutrim and Microsoft are described as the CTO's former employers, not Rivo's providers. Sources: https://trust.rivofi.com/, https://www.rivofi.com/privacy-policy and https://www.rivofi.com/blog/funding-announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Rivo",
+       "url": "https://rivofi.com/",
+       "excerpts": [
+        "Footer [Get started](https://app.rivofi.com/?src=home) Get started Get started [](https://www.rivofi.com/) \u00a9 {{year}} Rivo All rights reserved. [](https://x.com/TryRivo) [](https://www.linkedin.com/company/tryrivo) [](https://www.instagram.com/tryrivo) [](https://www.tiktok.com/@tryrivo) [hello@rivofi.com](mailto:hello@rivofi.com) [Privacy](https://www.rivofi.com/privacy-policy) [Terms](https://www.rivofi.com/terms-of-service) [Trust Center](https://trust.rivofi.com/) [FAQs](https://www.rivofi.com/faqs) [Blog](https://www.rivofi.com/blog)"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation/footer has no pricing link, and the pricing URL did not provide a pricing page. Fees are explained in FAQs and blog content instead. Homepage: https://www.rivofi.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Rivo Raises $3.1M to Build Self-Driving Money and End the Inertia Tax",
+       "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax",
+       "excerpts": [
+        "building autonomous cash management on top of existing bank accounts, today launched out of beta alongside its $2.7 million seed round, bringing its total funding to $3.1 million."
+       ]
+      }
+     ],
+     "reasoning": "The announcement identifies a $2.7 million seed round. The $3.1 million headline is cumulative funding, not the round amount: https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Rivo: Earn on your idle cash automatically. No bank switch.",
+       "url": "https://www.rivofi.com/",
+       "excerpts": [
+        "Testimonials: I didn\u2019t change anything about how I bank, but now I see extra money showing up every day. It feels like having a money person in the background, without actually having one. In the first month I made $157 compared to $11 last year at my bank."
+       ]
+      }
+     ],
+     "reasoning": "The homepage has anonymous customer testimonials but does not identify two customers. No qualifying named-customer page, case study or matching G2/Capterra listing was found; partners and investors were excluded. Closest source: https://www.rivofi.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Rivo Raises $3.1M to Build Self-Driving Money and End the Inertia Tax",
+       "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax",
+       "excerpts": [
+        "Aug 4, 2026 2:00 PM Eastern Daylight Time",
+        "building autonomous cash management on top of existing bank accounts, today launched out of beta alongside its $2.7 million seed round, bringing its total funding to $3.1 million."
+       ]
+      }
+     ],
+     "reasoning": "The seed-round announcement is dated August 4, 2026, establishing 2026-08: https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [],
+     "reasoning": "No confirmed company job, documentation or integrations source established a CRM or sales/marketing system. A third-party job listing used a different company domain, so it was insufficient to assert either a named system or an empty list.",
+     "confidence": "low"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Rivo Raises $3.1M and Comes Out of Beta",
+       "url": "https://www.rivofi.com/blog/funding-announcement",
+       "excerpts": [
+        "Raj Kiran, our CTO, built foundation models previously at Krutrim and Microsoft."
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/ambrishtyagi",
+       "excerpts": [
+        "start date: 2025-04-01"
+       ]
+      }
+     ],
+     "reasoning": "The CEO's documented start predates the window, but the CTO's joining date could not be established. No complete dated leadership roster or qualifying appointment/departure announcement supported true or false. Sources: https://www.rivofi.com/blog/funding-announcement and https://linkedin.com/in/ambrishtyagi.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Rivo \u2014 Profile, Jobs & Funding",
+       "url": "https://www.employbl.com/companies/rivo",
+       "excerpts": [
+        "Employbl doesn\u2019t track Rivo\u2019s job board yet, so there\u2019s nothing to show here \u2014 they may still be hiring."
+       ]
+      }
+     ],
+     "reasoning": "No accessible, complete current careers board for rivofi.com was found. The matching company listing explicitly says its job board is not tracked, so zero displayed roles cannot establish false. The Singapore AI-engineer posting belonged to another Rivo. Source: https://www.employbl.com/companies/rivo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Rivo Raises $3.1M to Build Self-Driving Money and End the Inertia Tax",
+       "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax",
+       "excerpts": [
+        "building autonomous cash management on top of existing bank accounts, today launched out of beta alongside its $2.7 million seed round, bringing its total funding to $3.1 million."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round is explicitly described as a seed round: https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Rivo",
+       "url": "https://rivofi.com/",
+       "excerpts": [
+        "Footer [Get started](https://app.rivofi.com/?src=home) Get started Get started [](https://www.rivofi.com/) \u00a9 {{year}} Rivo All rights reserved. [](https://x.com/TryRivo) [](https://www.linkedin.com/company/tryrivo) [](https://www.instagram.com/tryrivo) [](https://www.tiktok.com/@tryrivo) [hello@rivofi.com](mailto:hello@rivofi.com) [Privacy](https://www.rivofi.com/privacy-policy) [Terms](https://www.rivofi.com/terms-of-service) [Trust Center](https://trust.rivofi.com/) [FAQs](https://www.rivofi.com/faqs) [Blog](https://www.rivofi.com/blog)",
+        "[See all FAQs](https://www.rivofi.com/faqs)"
+       ]
+      }
+     ],
+     "reasoning": "The homepage offers a single FAQ page, with no public documentation, help-center or developer-portal link. That meets the specified false condition: https://www.rivofi.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/tryrivo",
+       "excerpts": [
+        "Locality: San Francisco, CA"
+       ]
+      },
+      {
+       "title": "Exclusive: From Self-Driving Cars to Self-Driving Money: Inside Rivo's Bet on Idle Cash",
+       "url": "https://www.thisweekinfintech.com/p/exclusive-from-self-driving-cars-to-self-driving-money-inside-rivo-s-bet-on-idle-cash",
+       "excerpts": [
+        "Tyagi left Cruise in late 2024 to focus on building **Rivo** , a San Francisco-based startup he founded in 2025."
+       ]
+      }
+     ],
+     "reasoning": "The company profile places Rivo in San Francisco, corroborated by reporting describing it as San Francisco-based. Sources: https://linkedin.com/company/tryrivo and https://www.thisweekinfintech.com/p/exclusive-from-self-driving-cars-to-self-driving-money-inside-rivo-s-bet-on-idle-cash.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Rivo Raises $3.1M to Build Self-Driving Money and End the Inertia Tax",
+       "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax",
+       "excerpts": [
+        "Aug 4, 2026 2:00 PM Eastern Daylight Time",
+        "Rivo is now out of beta and open to the public."
+       ]
+      }
+     ],
+     "reasoning": "The August 4, 2026 announcement states that Rivo exited beta and opened to the public, within the requested six-month window: https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Rivo \u2014 Profile, Jobs & Funding",
+       "url": "https://www.employbl.com/companies/rivo",
+       "excerpts": [
+        "Employbl doesn\u2019t track Rivo\u2019s job board yet, so there\u2019s nothing to show here \u2014 they may still be hiring."
+       ]
+      }
+     ],
+     "reasoning": "No complete accessible current job board for rivofi.com established whether SDR, BDR or account-executive positions are open. The matching listing says the company's board is not tracked, rather than confirming no openings: https://www.employbl.com/companies/rivo.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Rivo Raises $3.1M to Build Self-Driving Money and End the Inertia Tax",
+       "url": "https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax",
+       "excerpts": [
+        "Aug 4, 2026 2:00 PM Eastern Daylight Time",
+        "building autonomous cash management on top of existing bank accounts, today launched out of beta alongside its $2.7 million seed round, bringing its total funding to $3.1 million."
+       ]
+      }
+     ],
+     "reasoning": "The $2.7 million seed round announced in August 2026 falls within the requested 18-month window: https://www.businesswire.com/news/home/20260804547168/en/Rivo-Raises-%243.1M-to-Build-Self-Driving-Money-and-End-the-Inertia-Tax.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "FAQs | Rivo - Money Working While You Sleep",
+       "url": "https://www.rivofi.com/faqs",
+       "excerpts": [
+        "We use 256-bit encryption and are SOC 2 compliant."
+       ]
+      }
+     ],
+     "reasoning": "The FAQ explicitly states SOC 2 compliance: https://www.rivofi.com/faqs.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2025.0,
+    "compliance_certs": [
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Rivo is an AI cash manager for households that moves idle cash from existing bank accounts into higher-yielding instruments and returns it before bills are due.",
+    "employee_band": null,
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": 2700000.0,
+    "named_customers": null,
+    "funding_date": "2026-08",
+    "crm_stack_signal": null,
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": null,
+    "funding_stage": "Seed",
+    "public_docs": false,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": null,
+    "raised_18mo": true
+   }
+  }
+ }
+}

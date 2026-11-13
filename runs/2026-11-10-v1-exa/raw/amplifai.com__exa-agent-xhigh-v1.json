@@ -1,0 +1,938 @@
+{
+ "id": "agent_run_a3d9500a4bff42a8acf445a1548a7153",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "schema_satisfied",
+ "createdAt": "2026-11-10T18:48:56.851Z",
+ "completedAt": "2026-11-10T18:54:15.428Z",
+ "request": {
+  "query": "Research the company AmplifAI (amplifai.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"AmplifAI unifies contact-center data and uses AI to automate quality assurance, coaching, performance management and customer-experience insights for enterprises and BPOs.\",\"citations\":[\"https://www.amplifai.com/about\",\"https://www.amplifai.com/blog/amplifai-ttec-collaborate-to-advance-ai-driven-performance-through-ttec-perform\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.amplifai.com/\"],\"notes\":\"No pricing link appears in the public site navigation/footer; the purchasing path is a demo request, and no public pricing page was found.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"SSM Health\",\"University of Miami Health System\"],\"citations\":[\"https://www.amplifai.com/customer-success\"]},\"employee_band\":{\"status\":\"asserted\",\"value\":\"101-200\",\"citations\":[\"https://www.amplifai.com\"],\"notes\":\"Normalized from a reported headcount of 168, rather than the broader 51\u2013200 company-size range.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Plano\",\"country\":\"United States\"},\"citations\":[\"https://www.amplifai.com/about\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2014,\"citations\":[\"https://www.amplifai.com/blog/your-call-is-important-ai-based-analytics-come-to-the-call-center\",\"https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience\"],\"notes\":\"The company\u2019s 2017 article explicitly says founded in 2014; its 2025 funding release instead says 2018. The discrepancy is not publicly explained; 2014 reflects the original business described contemporaneously.\"},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.amplifai.com/blog\"],\"notes\":\"The blog is contact-center research, buyer guides, product news, coaching and CX marketing; no qualifying engineering-authored build-blog series was found.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.amplifai.com/\",\"https://learn.amplifai.com/amplifai-101\"],\"notes\":\"No public documentation/help portal was found. The CX Learning Hub offers conceptual product education and case studies rather than a product help center or developer documentation.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.amplifai.com/careers\"],\"notes\":\"The readable careers board lists only Senior .Net Full Stack Developer - Plano, not a qualifying AI/ML/data-science title.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"GPT-OSS 120b, self-hosted in private single-tenant Microsoft Azure environments or the customer\u2019s environment.\",\"citations\":[\"https://email.amplifai.com/hubfs/2026%20Assets/Solution%20Guides%20-%202026/AmplifAI%20Solution%20Guide%20-%20Platform%20Overview.pdf\"]},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2 Type II\",\"ISO 27001\",\"HIPAA\",\"GDPR\",\"PCI DSS\"],\"citations\":[\"https://www.amplifai.com/trust-security-compliance\",\"https://email.amplifai.com/hubfs/2026%20Assets/Solution%20Guides%20-%202026/AmplifAI%20Solution%20Guide%20-%20Platform%20Overview.pdf\"],\"notes\":\"Public vendor claims: SOC 2 Type II, ISO 27001 and PCI DSS are described as certifications; HIPAA and GDPR are compliance programs/claims, not standalone certifications.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Series B and credit facility\",\"date\":\"2025-09\",\"amount_usd\":33700000},\"citations\":[\"https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience\"],\"notes\":\"The announced $33.7 million combines Series B funding and a credit facility; the equity-only amount is not disclosed in this announcement.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience\"],\"notes\":\"The September 23, 2025 announcement falls within May 9, 2025\u2013November 9, 2026.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.amplifai.com/careers\"],\"notes\":\"The board\u2019s sole listed opening is Senior .Net Full Stack Developer - Plano; no qualifying sales representative or account executive opening is listed.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.amplifai.com/category/press-events\",\"https://www.amplifai.com/blog/amplifai-ttec-collaborate-to-advance-ai-driven-performance-through-ttec-perform\",\"https://www.amplifai.com/blog\"],\"notes\":\"No qualifying launch was found for May 9\u2013November 9, 2026. The latest identified product/platform announcement is the April 28, 2026 TTEC Perform collaboration, before the window; later awards and editorial content are not launches.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/lucdallaire\"],\"notes\":\"Luc Dallaire joined as SVP, Digital in July 2026, within November 9, 2025\u2013November 9, 2026.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"Google Analytics\"],\"citations\":[\"https://www.amplifai.com/privacy-policy\"],\"notes\":\"The privacy policy explicitly names these tools for analytics, advertising and marketing data collection; this is internal website/marketing-stack evidence, not merely an integration listing.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The blog is contact-center research, buyer guides, product news, coaching and CX marketing; no qualifying engineering-authored build-blog series was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/blog"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Plano",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/about"
+    ]
+   },
+   "public_docs": {
+    "notes": "No public documentation/help portal was found. The CX Learning Hub offers conceptual product education and case studies rather than a product help center or developer documentation.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/",
+     "https://learn.amplifai.com/amplifai-101"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The September 23, 2025 announcement falls within May 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience"
+    ]
+   },
+   "founded_year": {
+    "notes": "The company\u2019s 2017 article explicitly says founded in 2014; its 2025 funding release instead says 2018. The discrepancy is not publicly explained; 2014 reflects the original business described contemporaneously.",
+    "value": 2014,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/blog/your-call-is-important-ai-based-analytics-come-to-the-call-center",
+     "https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience"
+    ]
+   },
+   "last_funding": {
+    "notes": "The announced $33.7 million combines Series B funding and a credit facility; the equity-only amount is not disclosed in this announcement.",
+    "value": {
+     "date": "2025-09",
+     "stage": "Series B and credit facility",
+     "amount_usd": 33700000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "No qualifying launch was found for May 9\u2013November 9, 2026. The latest identified product/platform announcement is the April 28, 2026 TTEC Perform collaboration, before the window; later awards and editorial content are not launches.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/category/press-events",
+     "https://www.amplifai.com/blog/amplifai-ttec-collaborate-to-advance-ai-driven-performance-through-ttec-perform",
+     "https://www.amplifai.com/blog"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No pricing link appears in the public site navigation/footer; the purchasing path is a demo request, and no public pricing page was found.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/"
+    ]
+   },
+   "employee_band": {
+    "notes": "Normalized from a reported headcount of 168, rather than the broader 51\u2013200 company-size range.",
+    "value": "101-200",
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The board\u2019s sole listed opening is Senior .Net Full Stack Developer - Plano; no qualifying sales representative or account executive opening is listed.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/careers"
+    ]
+   },
+   "model_provider": {
+    "value": "GPT-OSS 120b, self-hosted in private single-tenant Microsoft Azure environments or the customer\u2019s environment.",
+    "status": "asserted",
+    "citations": [
+     "https://email.amplifai.com/hubfs/2026%20Assets/Solution%20Guides%20-%202026/AmplifAI%20Solution%20Guide%20-%20Platform%20Overview.pdf"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "SSM Health",
+     "University of Miami Health System"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/customer-success"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The readable careers board lists only Senior .Net Full Stack Developer - Plano, not a qualifying AI/ML/data-science title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/careers"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "Public vendor claims: SOC 2 Type II, ISO 27001 and PCI DSS are described as certifications; HIPAA and GDPR are compliance programs/claims, not standalone certifications.",
+    "value": [
+     "SOC 2 Type II",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/trust-security-compliance",
+     "https://email.amplifai.com/hubfs/2026%20Assets/Solution%20Guides%20-%202026/AmplifAI%20Solution%20Guide%20-%20Platform%20Overview.pdf"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The privacy policy explicitly names these tools for analytics, advertising and marketing data collection; this is internal website/marketing-stack evidence, not merely an integration listing.",
+    "value": [
+     "HubSpot",
+     "Google Analytics"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/privacy-policy"
+    ]
+   },
+   "product_one_liner": {
+    "value": "AmplifAI unifies contact-center data and uses AI to automate quality assurance, coaching, performance management and customer-experience insights for enterprises and BPOs.",
+    "status": "asserted",
+    "citations": [
+     "https://www.amplifai.com/about",
+     "https://www.amplifai.com/blog/amplifai-ttec-collaborate-to-advance-ai-driven-performance-through-ttec-perform"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Luc Dallaire joined as SVP, Digital in July 2026, within November 9, 2025\u2013November 9, 2026.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/lucdallaire"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/about"
+     },
+     {
+      "url": "https://www.amplifai.com/blog/amplifai-ttec-collaborate-to-advance-ai-driven-performance-through-ttec-perform"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/customer-success"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hq_location",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/about"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/blog/your-call-is-important-ai-based-analytics-come-to-the-call-center"
+     },
+     {
+      "url": "https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/"
+     },
+     {
+      "url": "https://learn.amplifai.com/amplifai-101"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider",
+    "citations": [
+     {
+      "url": "https://email.amplifai.com/hubfs/2026%20Assets/Solution%20Guides%20-%202026/AmplifAI%20Solution%20Guide%20-%20Platform%20Overview.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/trust-security-compliance"
+     },
+     {
+      "url": "https://email.amplifai.com/hubfs/2026%20Assets/Solution%20Guides%20-%202026/AmplifAI%20Solution%20Guide%20-%20Platform%20Overview.pdf"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/blog/amplifai-raises-33-7m-to-power-high-performing-human-teams-and-ai-agents-driving-the-future-of-customer-experience"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/careers"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/category/press-events"
+     },
+     {
+      "url": "https://www.amplifai.com/blog/amplifai-ttec-collaborate-to-advance-ai-driven-performance-through-ttec-perform"
+     },
+     {
+      "url": "https://www.amplifai.com/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/lucdallaire"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal",
+    "citations": [
+     {
+      "url": "https://www.amplifai.com/privacy-policy"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

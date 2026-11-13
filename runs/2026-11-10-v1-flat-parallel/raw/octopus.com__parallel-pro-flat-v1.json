@@ -1,0 +1,539 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e90e71f4af5f54356",
+  "interaction_id": "trun_142119f6a1b4439e90e71f4af5f54356",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "octopus.com"
+  },
+  "created_at": "2026-11-10T18:47:26.069289Z",
+  "modified_at": "2026-11-10T18:51:21.558170Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e90e71f4af5f54356",
+   "interaction_id": "trun_142119f6a1b4439e90e71f4af5f54356",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "octopus.com"
+   },
+   "created_at": "2026-11-10T18:47:26.069289Z",
+   "modified_at": "2026-11-10T18:51:21.558170Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Our story and our team - Octopus Deploy",
+       "url": "https://octopus.com/company",
+       "excerpts": [
+        "2012 founded",
+        "Our founders Paul and Sonia Stovell Paul and Sonia Stovell founded Octopus Deploy in 2012."
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/company explicitly states that Paul and Sonia Stovell founded Octopus Deploy in 2012. This primary-source date is preferred over a conflicting third-party listing.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Octopus Deploy",
+       "url": "https://trust.octopus.com/",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2 SOC 3 GDPR CCPA PCI DSS - SAQ A-EP"
+       ]
+      }
+     ],
+     "reasoning": "https://trust.octopus.com/ publicly lists SOC 2, ISO 27001:2022, GDPR, and PCI DSS\u2014specifically SAQ A-EP. These are reported as public compliance claims, not as equivalent forms of certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Octopus Deploy \u2014 Colt company profile | Dealroom",
+       "url": "https://dealroom.co/companies/octopus-com",
+       "excerpts": [
+        "2012 Headquarters Brisbane, Australia"
+       ]
+      },
+      {
+       "title": "Contact Octopus Deploy - Octopus Deploy",
+       "url": "https://octopus.com/contact",
+       "excerpts": [
+        "Level 4, 199 Grey Street, South Brisbane, QLD 4101, Australia"
+       ]
+      }
+     ],
+     "reasoning": "https://dealroom.co/companies/octopus-com identifies the headquarters as Brisbane, Australia; https://octopus.com/contact provides the Australian office address.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "engineering - Octopus Deploy",
+       "url": "https://octopus.com/blog/tag/engineering",
+       "excerpts": [
+        "[Octopus Cloud architecture Engineering ### Octopus Cloud architecture Pawel Pabich Pawel Pabich September 9, 2024 \u2022 5 mins](https://octopus.com/blog/octopus-cloud-architecture)",
+        "[Defining a target architecture Engineering ### Defining a target architecture Andrew Best Andrew Best November 8, 2023 \u2022 9 mins](https://octopus.com/blog/defining-target-architecture)"
+       ]
+      },
+      {
+       "title": "Octopus Cloud Architecture  | Octopus blog",
+       "url": "https://octopus.com/blog/octopus-cloud-architecture",
+       "excerpts": [
+        "We designed Octopus Cloud as a distributed system that can withstand partial infrastructure outages."
+       ]
+      },
+      {
+       "title": "Our story and our team - Octopus Deploy",
+       "url": "https://octopus.com/company",
+       "excerpts": [
+        "Andrew Best Andrew Best Chief Technology Officer. Andrew leads engineering at Octopus and is responsible for Octopus's technical strategy"
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/blog/tag/engineering includes at least two substantive posts about building Octopus: Pawel Pabich's cloud-architecture article and Andrew Best's target-architecture article. Pabich describes the team's own system-design work at https://octopus.com/blog/octopus-cloud-architecture; https://octopus.com/company identifies Best as CTO and engineering leader. Pabich's engineering involvement is supported by his firsthand account rather than an explicit job-title biography.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Hello, Octopus Deploy! | Documentation and Support",
+       "url": "https://octopus.com/docs",
+       "excerpts": [
+        "Octopus Deploy is a sophisticated, best-of-breed continuous delivery (CD) platform for modern software teams. Octopus offers powerful release orchestration, deployment automation, and runbook automation, while handling the scale, complexity and governance expectations of even the largest organizations with the most complex deployment challenges."
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/docs describes Octopus as a continuous delivery platform for modern software teams, providing release orchestration, deployment automation, and runbook automation.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Octopus Deploy",
+       "url": "https://linkedin.com/company/octopus-deploy",
+       "excerpts": [
+        "website: https://octopus.com employee count: 328 founded year: 2012 follower count: 34682 linkedin url: https://www.linkedin.com/company/octopus-deploy country iso: AU country name: Australia locality: South Brisbane, Queensland type: Privately Held size: 200"
+       ]
+      }
+     ],
+     "reasoning": "https://linkedin.com/company/octopus-deploy reports 328 employees, which falls within the requested 201-500 band. Profile-based headcounts can differ from payroll counts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AI-Powered DevOps with Octopus Deploy",
+       "url": "https://octopus.com/docs/octopus-ai.md",
+       "excerpts": [
+        "You bring your own Anthropic API key and choose the model.",
+        "The Claude Agent Step lets you run Claude Code, an AI agent, as a step in your deployment process or runbook."
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/docs/octopus-ai.md says the Claude Agent Step runs Claude Code and requires the customer's own Anthropic API key; customers choose the model.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Octopus Deploy pricing - Octopus Deploy",
+       "url": "https://octopus.com/pricing",
+       "excerpts": [
+        "$ 2,080 USD / year"
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/pricing is a public pricing page and includes a displayed annual USD price.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Octopus Deploy",
+       "url": "https://tracxn.com/a/d/company/531a7edee4b0f7e166107d0e/octopus%20deploy#a:about",
+       "excerpts": [
+        "Name: Octopus Deploy | Investor Names: [\"Insight Partners\",\"Red Gate Software\"] | Latest Funding Round Name: Series B | All Funding Rounds: Series B 2025-10-08 Insight Partners Series B 2021-04-20 Insight Partners Seed 2014-10-02 Red Gate Software | Latest Funding Round Date: 2025-10-08 | Website Url: https://octopus.com | Primary Sector: Enterprise Infrastructure | Primary Subsector: DevOps | Stage: Series B | Founded Year: 2011 | Employee Count Official: 382 | Location Country: Australia | Location State: Queensland | Location City: Brisbane | Latest Funding Round Amount Usd: 30000000.0"
+       ]
+      },
+      {
+       "title": "Tech in Asia - Connecting Asia's startup ecosystem",
+       "url": "https://www.techinasia.com/news/insight-partners-leads-30m-australian-software-firm",
+       "excerpts": [
+        "8 Oct 2025 \u00b7 [Investments](https://www.techinasia.com/category/investments) \u00b7 [News](https://www.techinasia.com/news) Insight Partners leads $30m round for Australian software firm Share [Add TIA as a preferred source](https://techin.asia/preferredsource) [Octopus Deploy](https://octopus.com/) , a Brisbane software deployment platform, raised AU$45.6 million (US$30 million) from Insight Partners, boosting its valuation to AU$882 million (US$579 million)."
+       ]
+      }
+     ],
+     "reasoning": "The latest-round profile at https://tracxn.com/a/d/company/531a7edee4b0f7e166107d0e/octopus%20deploy#a:about reports US$30 million. The October 8, 2025 report at https://www.techinasia.com/news/insight-partners-leads-30m-australian-software-firm independently reports the same amount from Insight Partners.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Continuous Deployment & Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+       "url": "http://octopus.com/company/careers/4000924201",
+       "excerpts": [
+        "Trusted by over 4,000 organizations Walt Disney logo Dominos Pizza logo Starbucks logo Nvidia logo PayPal logo AIG logo"
+       ]
+      }
+     ],
+     "reasoning": "The Octopus homepage content retrieved at http://octopus.com/company/careers/4000924201 displays Starbucks and PayPal in its 'Trusted by over 4,000 organizations' customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Octopus Deploy",
+       "url": "https://tracxn.com/a/d/company/531a7edee4b0f7e166107d0e/octopus%20deploy#a:about",
+       "excerpts": [
+        "Name: Octopus Deploy | Investor Names: [\"Insight Partners\",\"Red Gate Software\"] | Latest Funding Round Name: Series B | All Funding Rounds: Series B 2025-10-08 Insight Partners Series B 2021-04-20 Insight Partners Seed 2014-10-02 Red Gate Software | Latest Funding Round Date: 2025-10-08 | Website Url: https://octopus.com | Primary Sector: Enterprise Infrastructure | Primary Subsector: DevOps | Stage: Series B | Founded Year: 2011 | Employee Count Official: 382 | Location Country: Australia | Location State: Queensland | Location City: Brisbane | Latest Funding Round Amount Usd: 30000000.0"
+       ]
+      },
+      {
+       "title": "Tech in Asia - Connecting Asia's startup ecosystem",
+       "url": "https://www.techinasia.com/news/insight-partners-leads-30m-australian-software-firm",
+       "excerpts": [
+        "8 Oct 2025 \u00b7 [Investments](https://www.techinasia.com/category/investments) \u00b7 [News](https://www.techinasia.com/news) Insight Partners leads $30m round for Australian software firm Share [Add TIA as a preferred source](https://techin.asia/preferredsource) [Octopus Deploy](https://octopus.com/) , a Brisbane software deployment platform, raised AU$45.6 million (US$30 million) from Insight Partners, boosting its valuation to AU$882 million (US$579 million)."
+       ]
+      }
+     ],
+     "reasoning": "The latest-round profile at https://tracxn.com/a/d/company/531a7edee4b0f7e166107d0e/octopus%20deploy#a:about gives October 8, 2025, yielding 2025-10. The contemporaneous report at https://www.techinasia.com/news/insight-partners-leads-30m-australian-software-firm is dated the same day.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Systems Specialist at Octopus Deploy",
+       "url": "https://job-boards.greenhouse.io/octopusdeploy/jobs/4008758201",
+       "excerpts": [
+        "Our IT Operations team owns HubSpot and the wider revenue stack, and we're in the middle of moving from Salesforce to HubSpot. ... Owning and maintaining our revenue systems, with HubSpot at the centre, and growing the platform in the direction you think is right."
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/octopusdeploy/jobs/4008758201 explicitly describes ownership of HubSpot and a migration from Salesforce to HubSpot. This establishes HubSpot as the destination platform and Salesforce as the system being migrated away from.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Octopus Deploy updates: news & description",
+       "url": "https://www.theofficialboard.com/news/octopus-deploy",
+       "excerpts": [
+        "[Harsh Sabikhi](https://www.theofficialboard.com/org-chart/octopus-deploy) , Chief Revenue Officer, has left the company (posted on July 21 2026) ."
+       ]
+      }
+     ],
+     "reasoning": "https://www.theofficialboard.com/news/octopus-deploy reports that Chief Revenue Officer Harsh Sabikhi left the company, with the movement posted July 21, 2026\u2014inside the requested 12-month window. The source is a third-party executive-movement tracker.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at Octopus Deploy",
+       "url": "https://job-boards.greenhouse.io/octopusdeploy",
+       "excerpts": [
+        "5 jobs Legal, Compliance, & IT 610 - IT |"
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/octopusdeploy lists five current openings: two Revenue Systems Specialist roles and three regional expressions of interest. None has a qualifying AI, ML, or data-science title.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Octopus Deploy",
+       "url": "https://tracxn.com/a/d/company/531a7edee4b0f7e166107d0e/octopus%20deploy#a:about",
+       "excerpts": [
+        "Name: Octopus Deploy | Investor Names: [\"Insight Partners\",\"Red Gate Software\"] | Latest Funding Round Name: Series B | All Funding Rounds: Series B 2025-10-08 Insight Partners Series B 2021-04-20 Insight Partners Seed 2014-10-02 Red Gate Software | Latest Funding Round Date: 2025-10-08 | Website Url: https://octopus.com | Primary Sector: Enterprise Infrastructure | Primary Subsector: DevOps | Stage: Series B | Founded Year: 2011 | Employee Count Official: 382 | Location Country: Australia | Location State: Queensland | Location City: Brisbane | Latest Funding Round Amount Usd: 30000000.0"
+       ]
+      }
+     ],
+     "reasoning": "https://tracxn.com/a/d/company/531a7edee4b0f7e166107d0e/octopus%20deploy#a:about labels the October 8, 2025 latest funding round Series B. The stage designation is supported by a third-party funding profile.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Hello, Octopus Deploy! \ud83d\udc4b  | Documentation and Support",
+       "url": "https://octopus.com/docs",
+       "excerpts": [
+        "For a tour of the key Octopus concepts, begin with our [Getting Started](https://octopus.com/docs/getting-started) guide."
+       ]
+      },
+      {
+       "title": "Get Started With Octopus Deploy  | Documentation and Support",
+       "url": "https://octopus.com/docs/getting-started",
+       "excerpts": [
+        "The [installation guide](https://octopus.com/docs/installation)",
+        "**[Projects](https://octopus.com/docs/projects)** are the applications we deploy.",
+        "Learn more about the [deployment process](https://octopus.com/docs/projects/deployment-process/) and see some example [deployments"
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/docs provides public product documentation. Its getting-started guide at https://octopus.com/docs/getting-started links to multiple articles, including installation, projects, deployment processes, variables, infrastructure, and runbooks.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Octopus Deploy \u2014 Colt company profile | Dealroom",
+       "url": "https://dealroom.co/companies/octopus-com",
+       "excerpts": [
+        "2012 Headquarters Brisbane, Australia"
+       ]
+      },
+      {
+       "title": "Contact Octopus Deploy - Octopus Deploy",
+       "url": "https://octopus.com/contact",
+       "excerpts": [
+        "Level 4, 199 Grey Street, South Brisbane, QLD 4101, Australia"
+       ]
+      }
+     ],
+     "reasoning": "https://dealroom.co/companies/octopus-com explicitly identifies Brisbane as the headquarters city. https://octopus.com/contact gives the more specific office location in South Brisbane.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Feature Flags (Public Preview) In Octopus Deploy  | Octopus blog",
+       "url": "https://octopus.com/blog/feature-flags-public-preview",
+       "excerpts": [
+        "[Michael Richardson](https://octopus.com/blog/authors/michael-richardson/1/) July 13, 2026",
+        "Octopus Feature Flags are now available to Octopus Cloud customers as a Public Preview.",
+        "Feature flags let teams control when and where new features are enabled, without needing to redeploy."
+       ]
+      }
+     ],
+     "reasoning": "https://octopus.com/blog/feature-flags-public-preview announces Feature Flags public preview for Octopus Cloud customers on July 13, 2026, within the six-month window. The feature controls when and where functionality is enabled without redeployment.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at Octopus Deploy",
+       "url": "https://job-boards.greenhouse.io/octopusdeploy",
+       "excerpts": [
+        "5 jobs Legal, Compliance, & IT 610 - IT |"
+       ]
+      },
+      {
+       "title": "Continuous Deployment & Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+       "url": "http://octopus.com/company/careers/4000924201",
+       "excerpts": [
+        "Octopus Deploy is the CD platform built for enterprise scale."
+       ]
+      }
+     ],
+     "reasoning": "The current application board at https://job-boards.greenhouse.io/octopusdeploy lists only revenue-systems roles and expressions of interest, with no SDR, BDR, or account executive opening. Although http://octopus.com/careers retains sales-role links, the checked Strategic Account Executive URL, http://octopus.com/company/careers/4000924201, renders the generic homepage rather than a live posting. The current application board is therefore preferred.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tech in Asia - Connecting Asia's startup ecosystem",
+       "url": "https://www.techinasia.com/news/insight-partners-leads-30m-australian-software-firm",
+       "excerpts": [
+        "8 Oct 2025 \u00b7 [Investments](https://www.techinasia.com/category/investments) \u00b7 [News](https://www.techinasia.com/news) Insight Partners leads $30m round for Australian software firm Share [Add TIA as a preferred source](https://techin.asia/preferredsource) [Octopus Deploy](https://octopus.com/) , a Brisbane software deployment platform, raised AU$45.6 million (US$30 million) from Insight Partners, boosting its valuation to AU$882 million (US$579 million)."
+       ]
+      }
+     ],
+     "reasoning": "https://www.techinasia.com/news/insight-partners-leads-30m-australian-software-firm reports a US$30 million investment on October 8, 2025, inside the 18-month window beginning May 9, 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Octopus Deploy",
+       "url": "https://trust.octopus.com/",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2 SOC 3 GDPR CCPA PCI DSS - SAQ A-EP"
+       ]
+      }
+     ],
+     "reasoning": "https://trust.octopus.com/ names SOC 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Octopus Deploy",
+       "url": "https://trust.octopus.com/",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2 SOC 3 GDPR CCPA PCI DSS - SAQ A-EP"
+       ]
+      }
+     ],
+     "reasoning": "https://trust.octopus.com/ names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Octopus Deploy",
+       "url": "https://trust.octopus.com/",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2 SOC 3 GDPR CCPA PCI DSS - SAQ A-EP"
+       ]
+      }
+     ],
+     "reasoning": "https://trust.octopus.com/ names GDPR as a compliance claim.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Trust Center - Octopus Deploy",
+       "url": "https://trust.octopus.com/",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2 SOC 3 GDPR CCPA PCI DSS - SAQ A-EP"
+       ]
+      }
+     ],
+     "reasoning": "https://trust.octopus.com/ names PCI DSS with the specific scope SAQ A-EP.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Systems Specialist at Octopus Deploy",
+       "url": "https://job-boards.greenhouse.io/octopusdeploy/jobs/4008758201",
+       "excerpts": [
+        "Our IT Operations team owns HubSpot and the wider revenue stack, and we're in the middle of moving from Salesforce to HubSpot. ... Owning and maintaining our revenue systems, with HubSpot at the centre, and growing the platform in the direction you think is right."
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/octopusdeploy/jobs/4008758201 states that IT Operations owns HubSpot and is making it central to the revenue stack.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Revenue Systems Specialist at Octopus Deploy",
+       "url": "https://job-boards.greenhouse.io/octopusdeploy/jobs/4008758201",
+       "excerpts": [
+        "Our IT Operations team owns HubSpot and the wider revenue stack, and we're in the middle of moving from Salesforce to HubSpot. ... Owning and maintaining our revenue systems, with HubSpot at the centre, and growing the platform in the direction you think is right."
+       ]
+      }
+     ],
+     "reasoning": "https://job-boards.greenhouse.io/octopusdeploy/jobs/4008758201 explicitly describes a migration from Salesforce to HubSpot; Salesforce is a migration-source signal, not the stated destination system.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Continuous Deployment & Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+       "url": "http://octopus.com/company/careers/4000924201",
+       "excerpts": [
+        "Trusted by over 4,000 organizations Walt Disney logo Dominos Pizza logo Starbucks logo Nvidia logo PayPal logo AIG logo"
+       ]
+      }
+     ],
+     "reasoning": "The Octopus homepage content at http://octopus.com/company/careers/4000924201 includes Starbucks in its customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Continuous Deployment & Delivery Software for DevOps teams | Octopus Deploy - Octopus Deploy",
+       "url": "http://octopus.com/company/careers/4000924201",
+       "excerpts": [
+        "Trusted by over 4,000 organizations Walt Disney logo Dominos Pizza logo Starbucks logo Nvidia logo PayPal logo AIG logo"
+       ]
+      }
+     ],
+     "reasoning": "The Octopus homepage content at http://octopus.com/company/careers/4000924201 includes PayPal in its customer logo wall.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2012.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "Australia",
+    "eng_blog": true,
+    "product_one_liner": "Octopus Deploy is a continuous delivery platform that automates release orchestration, application deployments, and operational runbooks for software teams.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic (Claude Code)",
+    "pricing_page": true,
+    "funding_amount_usd": 30000000.0,
+    "named_customers": [
+     "Starbucks",
+     "PayPal"
+    ],
+    "funding_date": "2025-10",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Brisbane",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

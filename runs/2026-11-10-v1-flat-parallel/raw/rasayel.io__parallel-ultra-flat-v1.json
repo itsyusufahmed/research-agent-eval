@@ -1,0 +1,475 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb38eff1380c52f81",
+  "interaction_id": "trun_142119f6a1b4439eb38eff1380c52f81",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "rasayel.io"
+  },
+  "created_at": "2026-11-10T18:49:01.839422Z",
+  "modified_at": "2026-11-10T18:54:40.407844Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb38eff1380c52f81",
+   "interaction_id": "trun_142119f6a1b4439eb38eff1380c52f81",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "rasayel.io"
+   },
+   "created_at": "2026-11-10T18:49:01.839422Z",
+   "modified_at": "2026-11-10T18:54:40.407844Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Rasayel | Seedcamp Job Board",
+       "url": "https://talent.seedcamp.com/companies/rasayel",
+       "excerpts": [
+        "founded in 2022"
+       ]
+      }
+     ],
+     "reasoning": "Seedcamp's company profile explicitly gives 2022 as the founding year: https://talent.seedcamp.com/companies/rasayel.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security Policy - Rasayel",
+       "url": "https://docs.rasayel.io/security-policy",
+       "excerpts": [
+        "At Rasayel, protecting our customers\u2019 data is a top priority. This Security Policy outlines the technical and organizational controls we have in place across our platform to prevent unauthorized access, misuse, alteration, or disclosure of customer data. Rasayel\u2019s infrastructure is built on Amazon Web Services (AWS), and unless stated otherwise, the practices described below refer to our AWS-based environment. We also encourage you to read our Terms of Service and Privacy Policy to learn more about how we operate."
+       ]
+      },
+      {
+       "title": "Privacy Policy",
+       "url": "https://docs.rasayel.io/privacy",
+       "excerpts": [
+        "**Legal Basis for Processing Personal Data Under General Data Protection Regulation (GDPR)** Rasayel legal basis for collecting and using the personal information described in this Privacy Policy depends on the Personal Data we collect and the specific context in which we collect it. Rasayel may process your Personal Data because: We need to perform this contract (provision of service) with you You have given us permission to do so The processing is in our legitimate interests, and it\u2019s not overridden by your rights For payment processing purposes To comply with the law **Your Data Protection Rights Under General Data Protection Regulation (GDPR)** You have certain data protection rights. Rasayel aims to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data. If you wish to be informed what Personal Data, we hold about you and if you want it to be removed from our systems, please contact us ([team@rasayel.io](mailto:team@rasayel.io)). In certain circumstances, you have the following data protection rights: **The right to access, update, or to delete** the information we have on you. **The right of rectification.** You have the right to have your information rectified if that information is inaccurate or incomplete. **The right to object.** You have the right to object to our processing of your Personal Data. **The right of restriction.** You have the right to request that we restrict the processing of your personal information. **The right to data portability.** You have the right to be provided with a copy of your Personal Data in a structured, machine-readable and commonly used format. **The right to withdraw consent.** You also have the right to withdraw your consent at any time where Rasayel relied on your consent to process your personal information. Please note that we may ask you to verify your identity before responding to such requests.",
+        "We actually hand it off to Stripe, our payment processing partner which is a certified **PCI** Level 1 Service Provider."
+       ]
+      }
+     ],
+     "reasoning": "The readable security policy names none of the five requested certifications: https://docs.rasayel.io/security-policy. The privacy policy discusses GDPR legal bases and rights without explicitly claiming certification or compliance, and its PCI certification statement belongs to Stripe, not Rasayel: https://docs.rasayel.io/privacy.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Rasayel Company Profile - Office Locations, Competitors, Revenue, Financials, Employees, Key People, Subsidiaries | Craft.co",
+       "url": "https://craft.co/rasayel",
+       "excerpts": [
+        "Cork, CO HQ Ireland"
+       ]
+      }
+     ],
+     "reasoning": "Craft identifies Cork, Ireland as headquarters: https://craft.co/rasayel.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Rasayel - Grow your business over WhatsApp - Rasayel Blog",
+       "url": "https://learn.rasayel.io/en/blog",
+       "excerpts": [
+        "Rasayel Learning Center WhatsApp Business guides for B2B sales teams Chatbot Design for Sales: Best Practices and Real Examples [WhatsApp for Sales](https://learn.rasayel.io/en/blog/whatsapp-for-sales/) \\- 11 min read [Chatbot Design for Sales: Best Practices and Real Examples](https://learn.rasayel.io/en/blog/chatbot-sales-examples/) Learn how to design sales-ready chatbots that actually convert. Discover best practices, UI examples, and common mistakes to avoid so your bot drives leads, qualifies prospects, and boosts revenue."
+       ]
+      }
+     ],
+     "reasoning": "The reviewed blog index contains WhatsApp business guides, sales and marketing tutorials, product content, and customer stories\u2014not two engineer-authored articles about building Rasayel: https://learn.rasayel.io/en/blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://www.rasayel.io/",
+       "excerpts": [
+        "The WhatsApp platform trusted by sales teams Track every conversation, automate follow ups, and sync WhatsApp with your CRM\u2014so your team sells faster, stays organized, and never drops a deal."
+       ]
+      },
+      {
+       "title": "Meet Cleo Qualify: The AI Teammate Qualifying Leads on WhatsApp - Rasayel Blog",
+       "url": "https://learn.rasayel.io/en/blog/qualification-ai-agent",
+       "excerpts": [
+        "Cleo Qualify is an AI teammate built for B2B teams selling over WhatsApp."
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes conversation tracking, automated follow-ups, and CRM synchronization for sales teams. Its Cleo announcement explicitly identifies B2B teams selling over WhatsApp as the audience: https://www.rasayel.io/ and https://learn.rasayel.io/en/blog/qualification-ai-agent.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Rasayel; website_url: https://www.rasayel.io/; employee_count_official: 15; employee_count_history: []; latest_funding_round_name: Seed; latest_funding_round_date: null; latest_funding_round_amount_usd: null; all_funding_rounds[0].round_name: Seed; all_funding_rounds[0].amount_usd: null; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: null; all_funding_rounds[0].round_investor_names: Founder Collective; funded: Yes; tracxn_url: https://platform.tracxn.com/a/d/company/60fb54e39d44921d99865582/rasayel?utm_source=parallel&utm_medium=ai#a:about"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 15 employees, which maps directly to 11-20: https://platform.tracxn.com/a/d/company/60fb54e39d44921d99865582/rasayel. The official team page also lists 12 named staff, consistent with that band: https://www.rasayel.io/about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Support AI Assistant",
+       "url": "http://docs.rasayel.io/support-ai-assistant",
+       "excerpts": [
+        "Rasayel\u2019s AI Assistant optimized for customer support is available to use as a Chatbot node"
+       ]
+      },
+      {
+       "title": "Meet Cleo Qualify: The AI Teammate Qualifying Leads on WhatsApp - Rasayel Blog",
+       "url": "https://learn.rasayel.io/en/blog/qualification-ai-agent",
+       "excerpts": [
+        "Cleo Qualify is an AI teammate built for B2B teams selling over WhatsApp."
+       ]
+      },
+      {
+       "title": "Security Policy - Rasayel",
+       "url": "https://docs.rasayel.io/security-policy",
+       "excerpts": [
+        "At Rasayel, protecting our customers\u2019 data is a top priority. This Security Policy outlines the technical and organizational controls we have in place across our platform to prevent unauthorized access, misuse, alteration, or disclosure of customer data. Rasayel\u2019s infrastructure is built on Amazon Web Services (AWS), and unless stated otherwise, the practices described below refer to our AWS-based environment. We also encourage you to read our Terms of Service and Privacy Policy to learn more about how we operate."
+       ]
+      }
+     ],
+     "reasoning": "No underlying model or AI provider was identified after reviewing the Support AI documentation, Cleo announcement, security policy, and privacy-policy service-provider disclosures. Those pages describe Rasayel's AI generically: http://docs.rasayel.io/support-ai-assistant, https://learn.rasayel.io/en/blog/qualification-ai-agent, https://docs.rasayel.io/security-policy, and https://docs.rasayel.io/privacy. The value is therefore unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Rasayel - Pricing",
+       "url": "https://rasayel.io/pricing",
+       "excerpts": [
+        "Simple pricing. No hidden fees."
+       ]
+      }
+     ],
+     "reasoning": "Rasayel has a public pricing page presenting its plans: https://rasayel.io/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Rasayel Funding Rounds, Valuation & Investors",
+       "url": "https://wellfound.com/company/rasayel/funding",
+       "excerpts": [
+        "Undisclosed amount Seed Feb 2022 $0 valuation"
+       ]
+      }
+     ],
+     "reasoning": "The February 2022 Seed round is explicitly labeled 'Undisclosed amount', so no USD funding amount can be supplied: https://wellfound.com/company/rasayel/funding. The displayed valuation placeholder is not a funding amount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://rasayel.io/",
+       "excerpts": [
+        "\" We used to operate in the dark. Until Rasayel. \" Joao Arthur Ferreira Global Sales Operations Specialist @FactorialHR",
+        "A. from Casita](https://learn.rasayel.io/en/blog/success-stories/casita/?utm_source=website) [I can't imagine selling on WhatsApp without Rasayel."
+       ]
+      }
+     ],
+     "reasoning": "Rasayel's homepage presents customer testimonials attributed to FactorialHR and Casita, with links to their success stories: https://rasayel.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Rasayel Funding Rounds, Valuation & Investors",
+       "url": "https://wellfound.com/company/rasayel/funding",
+       "excerpts": [
+        "Undisclosed amount Seed Feb 2022 $0 valuation"
+       ]
+      },
+      {
+       "title": "Rasayel 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/507248-38",
+       "excerpts": [
+        "Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Seed Round |01-Feb-2022 | | | |Completed |Generating Revenue"
+       ]
+      }
+     ],
+     "reasoning": "Wellfound dates the only listed Seed round to February 2022; PitchBook independently lists 01-Feb-2022. Normalized to the requested format, this is 2022-02: https://wellfound.com/company/rasayel/funding and https://pitchbook.com/profiles/company/507248-38.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "Introduction > Rasayel helps businesses connect with customers through WhatsApp Business messaging, campaigns, and integrations with your favorite tools. Highlights <CardGroup cols=\"2\"> <Card title=\"Shared team inbox\" icon=\"inbox\" href=\"/en/inbox/overview\"> A collaborative WhatsApp team inbox for sales and support team </Card> <Card title=\"WhatsApp Business\" icon=\"whatsapp\" href=\"/en/whatsapp-business/overview\"> Connect with customers through the world's most popular messaging platform </Card> <Card title=\"Automation\" icon=\"bullhorn\" href=\"/en/automations\"> Create and manage automations such as chatbots, sequences, and more. </Card> <Card title=\"Integrations\" icon=\"plug\" href=\"/en/introduction#integrations\"> Connect Rasayel with your favorite CRM (HubSpot, Salesforce, etc.) </Card> </CardGroup>"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation explicitly names HubSpot and Salesforce integrations: https://docs.rasayel.io/. These are visible product-integration signals, not confirmation of Rasayel's internal CRM.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Rasayel - About us",
+       "url": "https://www.rasayel.io/about",
+       "excerpts": [
+        "Tarek Khalil CEO & Co-founder Tarek previously worked as product engineer at Intercom.",
+        "Mohamed Elbadwihi COO & Co-founder Mohamed has a background in digital enterprise strategy and software engineering."
+       ]
+      }
+     ],
+     "reasoning": "The complete, small team page was checked. Its only C-level leaders are cofounders Tarek Khalil, CEO, and Mohamed Elbadwihi, COO; it lists no VP or leadership appointment/departure within the requested window: https://www.rasayel.io/about. This is a page-based negative rather than an explicit statement that no changes occurred.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Rasayel - Careers Page",
+       "url": "https://careerspage.io/rasayel",
+       "excerpts": [
+        "[Senior Software Engineer](https://careerspage.io/rasayel/senior-software-engineer-ra101) Remote Full time Mid-Senior Level"
+       ]
+      }
+     ],
+     "reasoning": "The verified careers board lists Senior Software Engineer and no qualifying AI, ML, or data-science job title. AI-related responsibilities in a generic engineering role do not meet the requested title rule: https://careerspage.io/rasayel.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Rasayel Funding Rounds, Valuation & Investors",
+       "url": "https://wellfound.com/company/rasayel/funding",
+       "excerpts": [
+        "Undisclosed amount Seed Feb 2022 $0 valuation"
+       ]
+      },
+      {
+       "title": "Rasayel - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs/funding-and-investors",
+       "excerpts": [
+        "Rasayel has 1 Seed funding round."
+       ]
+      }
+     ],
+     "reasoning": "The target-specific funding profiles identify one Seed round, dated February 2022: https://wellfound.com/company/rasayel/funding and https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs/funding-and-investors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "Introduction > Rasayel helps businesses connect with customers through WhatsApp Business messaging, campaigns, and integrations with your favorite tools. Highlights <CardGroup cols=\"2\"> <Card title=\"Shared team inbox\" icon=\"inbox\" href=\"/en/inbox/overview\"> A collaborative WhatsApp team inbox for sales and support team </Card> <Card title=\"WhatsApp Business\" icon=\"whatsapp\" href=\"/en/whatsapp-business/overview\"> Connect with customers through the world's most popular messaging platform </Card> <Card title=\"Automation\" icon=\"bullhorn\" href=\"/en/automations\"> Create and manage automations such as chatbots, sequences, and more. </Card> <Card title=\"Integrations\" icon=\"plug\" href=\"/en/introduction#integrations\"> Connect Rasayel with your favorite CRM (HubSpot, Salesforce, etc.) </Card> </CardGroup>"
+       ]
+      },
+      {
+       "title": "Support AI Assistant",
+       "url": "http://docs.rasayel.io/support-ai-assistant",
+       "excerpts": [
+        "Rasayel\u2019s AI Assistant optimized for customer support is available to use as a Chatbot node"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation contains multiple sections and articles covering the shared inbox, WhatsApp Business, automations, integrations, and Support AI: https://docs.rasayel.io/ and http://docs.rasayel.io/support-ai-assistant.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Rasayel Company Profile - Office Locations, Competitors, Revenue, Financials, Employees, Key People, Subsidiaries | Craft.co",
+       "url": "https://craft.co/rasayel",
+       "excerpts": [
+        "Cork, CO HQ Ireland"
+       ]
+      }
+     ],
+     "reasoning": "Craft identifies Cork as Rasayel's headquarters city: https://craft.co/rasayel.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Changelog",
+       "url": "https://docs.rasayel.io/en/changelog",
+       "excerpts": [
+        "<Update label=\"April 28, 2026\"> Added - Automated HubSpot property updates You can now select and automatically set specific HubSpot properties\u2014such as \u201cCreated from Rasayel\u201d, \u201cPhone Number\u201d, and more."
+       ]
+      }
+     ],
+     "reasoning": "The newest dated launch-type changelog entry is Automated HubSpot property updates on April 28, 2026, before the six-month window beginning May 9, 2026. The reviewed blog provided no newer qualifying launch: https://docs.rasayel.io/en/changelog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Rasayel - Careers Page",
+       "url": "https://careerspage.io/rasayel",
+       "excerpts": [
+        "[Senior Software Engineer](https://careerspage.io/rasayel/senior-software-engineer-ra101) Remote Full time Mid-Senior Level"
+       ]
+      }
+     ],
+     "reasoning": "The verified careers board lists Senior Software Engineer, with no SDR, BDR, sales/business-development representative, or account-executive opening: https://careerspage.io/rasayel.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Rasayel Funding Rounds, Valuation & Investors",
+       "url": "https://wellfound.com/company/rasayel/funding",
+       "excerpts": [
+        "Undisclosed amount Seed Feb 2022 $0 valuation"
+       ]
+      },
+      {
+       "title": "Rasayel - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs/funding-and-investors",
+       "excerpts": [
+        "Rasayel has 1 Seed funding round.",
+        "Last updated: October 17, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The latest target-specific funding history lists only the February 2022 Seed round, before the 18-month window beginning May 9, 2025. Tracxn's funding page was updated October 17, 2026: https://wellfound.com/company/rasayel/funding and https://tracxn.com/d/companies/rasayel/__FDHIBNoFO8Rhs4AYMsKYd_G9AJr_lU_yJO-OKgXJtTs/funding-and-investors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://rasayel.io/",
+       "excerpts": [
+        "\" We used to operate in the dark. Until Rasayel. \" Joao Arthur Ferreira Global Sales Operations Specialist @FactorialHR"
+       ]
+      }
+     ],
+     "reasoning": "The homepage testimonial identifies Joao Arthur Ferreira as Global Sales Operations Specialist at FactorialHR: https://rasayel.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Rasayel - WhatsApp for B2B sales teams",
+       "url": "https://rasayel.io/",
+       "excerpts": [
+        "A. from Casita](https://learn.rasayel.io/en/blog/success-stories/casita/?utm_source=website) [I can't imagine selling on WhatsApp without Rasayel."
+       ]
+      }
+     ],
+     "reasoning": "The homepage attributes a customer testimonial to Casita and links its success story: https://rasayel.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "Introduction > Rasayel helps businesses connect with customers through WhatsApp Business messaging, campaigns, and integrations with your favorite tools. Highlights <CardGroup cols=\"2\"> <Card title=\"Shared team inbox\" icon=\"inbox\" href=\"/en/inbox/overview\"> A collaborative WhatsApp team inbox for sales and support team </Card> <Card title=\"WhatsApp Business\" icon=\"whatsapp\" href=\"/en/whatsapp-business/overview\"> Connect with customers through the world's most popular messaging platform </Card> <Card title=\"Automation\" icon=\"bullhorn\" href=\"/en/automations\"> Create and manage automations such as chatbots, sequences, and more. </Card> <Card title=\"Integrations\" icon=\"plug\" href=\"/en/introduction#integrations\"> Connect Rasayel with your favorite CRM (HubSpot, Salesforce, etc.) </Card> </CardGroup>"
+       ]
+      }
+     ],
+     "reasoning": "The integrations card explicitly names HubSpot: https://docs.rasayel.io/. This establishes an integration signal, not internal CRM adoption.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Introduction",
+       "url": "https://docs.rasayel.io/",
+       "excerpts": [
+        "Introduction > Rasayel helps businesses connect with customers through WhatsApp Business messaging, campaigns, and integrations with your favorite tools. Highlights <CardGroup cols=\"2\"> <Card title=\"Shared team inbox\" icon=\"inbox\" href=\"/en/inbox/overview\"> A collaborative WhatsApp team inbox for sales and support team </Card> <Card title=\"WhatsApp Business\" icon=\"whatsapp\" href=\"/en/whatsapp-business/overview\"> Connect with customers through the world's most popular messaging platform </Card> <Card title=\"Automation\" icon=\"bullhorn\" href=\"/en/automations\"> Create and manage automations such as chatbots, sequences, and more. </Card> <Card title=\"Integrations\" icon=\"plug\" href=\"/en/introduction#integrations\"> Connect Rasayel with your favorite CRM (HubSpot, Salesforce, etc.) </Card> </CardGroup>"
+       ]
+      }
+     ],
+     "reasoning": "The integrations card explicitly names Salesforce: https://docs.rasayel.io/. This establishes an integration signal, not internal CRM adoption.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [],
+    "hq_country": "Ireland",
+    "eng_blog": false,
+    "product_one_liner": "Rasayel is a WhatsApp sales platform for B2B teams that tracks conversations, automates follow-ups, and synchronizes customer interactions with their CRM.",
+    "employee_band": "11-20",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "FactorialHR",
+     "Casita"
+    ],
+    "funding_date": "2022-02",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Salesforce"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": true,
+    "hq_city": "Cork",
+    "launched_6mo": false,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

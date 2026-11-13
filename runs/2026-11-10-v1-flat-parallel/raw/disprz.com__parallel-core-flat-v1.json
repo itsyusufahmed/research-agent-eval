@@ -1,0 +1,535 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e89d31598af21d60d",
+  "interaction_id": "trun_142119f6a1b4439e89d31598af21d60d",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "disprz.com"
+  },
+  "created_at": "2026-11-10T18:48:48.372172Z",
+  "modified_at": "2026-11-10T18:52:15.584757Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e89d31598af21d60d",
+   "interaction_id": "trun_142119f6a1b4439e89d31598af21d60d",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "disprz.com"
+   },
+   "created_at": "2026-11-10T18:48:48.372172Z",
+   "modified_at": "2026-11-10T18:52:15.584757Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Disprz | LinkedIn",
+       "url": "https://linkedin.com/company/13366982",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters West Orange, New Jersey Type Privately Held Founded 2015"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies Disprz as founded in 2015.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Vault - Disprz",
+       "url": "https://compliance.disprz.ai/",
+       "excerpts": [
+        "We are committed to robust information security, holding certifications like ISO 27001: 2022, SOC 2 Type II attestation, compliance towards privacy frameworks such as GDPR, PDPA Singapore and Malaysia.",
+        "SOC 2",
+        "ISO 27001:2022",
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "Disprz\u2019s Trust Vault names ISO 27001:2022 and SOC 2 Type II, and identifies GDPR as a privacy framework; all three are among the allowed named items.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Disprz | Our Mission, Team & Story",
+       "url": "https://disprz.ai/company/about-us",
+       "excerpts": [
+        "North America HQ 395 Pleasant Valley Way, West Orange NJ 07052, USA"
+       ]
+      },
+      {
+       "title": "Disprz | LinkedIn",
+       "url": "https://linkedin.com/company/13366982",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters West Orange, New Jersey Type Privately Held Founded 2015"
+       ]
+      }
+     ],
+     "reasoning": "The official about page lists a North America HQ in West Orange, New Jersey, and LinkedIn explicitly identifies West Orange, New Jersey as the company headquarters. Disprz also lists a corporate/technology HQ in Chennai, so this selects the explicitly identified North America/company-profile headquarters.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog | Disprz",
+       "url": "https://disprz.ai/blog",
+       "excerpts": [
+        "Learning Content Strategy in 2026: How to Develop, Scale & Deliver High-Impact L&D Content",
+        "From LMS Reporting to Conversational Analytics: The Future of Enterprise Learning",
+        "Soft Skills Training for Manufacturing and Engineering",
+        "What is Technical Training?"
+       ]
+      }
+     ],
+     "reasoning": "The blog index excerpts show learning-content strategy, learning analytics, soft-skills training, and technical-training guide content. They are educational/marketing topics rather than multiple engineer-authored posts about how the product is built.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Skills & Learning Platform | Learning, Upskilling & Mobility",
+       "url": "https://disprz.ai/",
+       "excerpts": [
+        "Disprz is an AI-powered learning and skilling platform that combines LMS, LXP, and AI content authoring to help enterprises build workforce capability at scale."
+       ]
+      }
+     ],
+     "reasoning": "The company homepage describes an AI-powered learning and skilling platform combining LMS, LXP, and AI content authoring for enterprise workforce capability.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Disprz | LinkedIn",
+       "url": "https://linkedin.com/company/13366982",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters West Orange, New Jersey Type Privately Held Founded 2015"
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn lists Disprz\u2019s company size as 201\u2013500 employees.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Disprz: Reducing training content costs",
+       "url": "https://www.microsoft.com/en-in/aifirstmovers/disprz",
+       "excerpts": [
+        "**Disprz solved this by using Generative AI to create engagement and Azure OpenAI to drive personalisation.**",
+        "In addition, Disprz is also solving for a high degree of personalisation and accessibility of learning materials by using Advanced Learning Models from Azure OpenAI."
+       ]
+      }
+     ],
+     "reasoning": "Microsoft\u2019s Disprz profile says the product uses Azure OpenAI for personalization and advanced learning models.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Disprz Pricing & Plans | Essentials and Enterprise",
+       "url": "https://disprz.ai/pricing",
+       "excerpts": [
+        "See Plans & Pricing [Talk to an Expert](https://disprz.ai/request-a-demo) Essentials",
+        "Disprz Plans and Pricing"
+       ]
+      }
+     ],
+     "reasoning": "Disprz has a public page titled Plans and Pricing that presents plan options, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Disprz Ignites The Future of Workplace Learning and Skills with US$30m Series C Funding",
+       "url": "https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html",
+       "excerpts": [
+        "MUMBAI, India , Aug. 7, 2023 /PRNewswire/ -- Enterprise skilling platform aims to expand its thriving footprint in Southeast Asia , India , and the Middle East while breaking into the US market Continue Reading ... Disprz, the pioneering global leader in the enterprise learning and skilling industry, has achieved a remarkable milestone with a significant US$30 million secured in its Series C funding round."
+       ]
+      }
+     ],
+     "reasoning": "The August 2023 company-provided announcement states that Disprz secured US$30 million in its Series C round.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Skills & Learning Platform | Learning, Upskilling & Mobility",
+       "url": "https://disprz.ai/",
+       "excerpts": [
+        "Companies like Amazon, Axis Bank, Starbucks, and Bharat Petroleum trust Disprz to power workforce capability at scale."
+       ]
+      }
+     ],
+     "reasoning": "Disprz\u2019s homepage names Amazon, Axis Bank, Starbucks, and Bharat Petroleum as companies that trust the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Disprz Ignites The Future of Workplace Learning and Skills with US$30m Series C Funding",
+       "url": "https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html",
+       "excerpts": [
+        "MUMBAI, India , Aug. 7, 2023 /PRNewswire/ -- Enterprise skilling platform aims to expand its thriving footprint in Southeast Asia , India , and the Middle East while breaking into the US market Continue Reading ... Disprz, the pioneering global leader in the enterprise learning and skilling industry, has achieved a remarkable milestone with a significant US$30 million secured in its Series C funding round."
+       ]
+      },
+      {
+       "title": "Disprz Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/disprz/financials",
+       "excerpts": [
+        "Total Raised $52.6M Investors Count 12 Deal Terms 1 Funding, Valuation & Revenue 9 Fundings Disprz has **raised $52.6M** over **9 rounds** . Disprz's **latest funding round** was a **Series C for $30M** on **August 7, 2023** ."
+       ]
+      }
+     ],
+     "reasoning": "The company-provided funding announcement dates the Series C to August 7, 2023; a funding profile also identifies that August 2023 Series C as the latest round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Manager - Business Operations @ Disprz | HighFive Partners Job Board",
+       "url": "https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations",
+       "excerpts": [
+        "Own HubSpot end-to-end: architecture, pipeline configuration, deal stage definitions, properties, and user access management across all geographies",
+        "Own evaluation, configuration, and contract management of the GTM and operational tech stack (HubSpot, Avoma, analytics tools, and adjacent platforms) Identify integration gaps between GTM tools (HubSpot), Customer Success, Implementation, and Finance systems (Zoho Books, QuickBooks, Zenskar)"
+       ]
+      }
+     ],
+     "reasoning": "A Disprz business-operations job post says the role owns HubSpot end to end and names HubSpot and Avoma among the GTM/operational stack.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "disprz.keka.com",
+       "url": "https://disprz.keka.com/careers",
+       "excerpts": [
+        "Product 2 jobs [### AI Content Operations Intern 41 days ago Chennai 0-1 Full Time](https://disprz.keka.com/careers/jobdetails/140799) [### Senior Security Manager 3 days ago Chennai 10+ Full Time](https://disprz.keka.com/careers/jobdetails/139582)"
+       ]
+      }
+     ],
+     "reasoning": "The official careers page lists an AI Content Operations Intern role as open; AI appears in the role title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Disprz Ignites The Future of Workplace Learning and Skills with US$30m Series C Funding",
+       "url": "https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html",
+       "excerpts": [
+        "MUMBAI, India , Aug. 7, 2023 /PRNewswire/ -- Enterprise skilling platform aims to expand its thriving footprint in Southeast Asia , India , and the Middle East while breaking into the US market Continue Reading ... Disprz, the pioneering global leader in the enterprise learning and skilling industry, has achieved a remarkable milestone with a significant US$30 million secured in its Series C funding round."
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round is explicitly described as Series C in the August 2023 announcement.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home - Disprz External API \u2013 Enterprise Learning Integration",
+       "url": "https://apidocs-uae.disprz.com/",
+       "excerpts": [
+        "[Home](https://apidocs-uae.disprz.com/) [APIs](https://apidocs-uae.disprz.com/apis) [Products](https://apidocs-uae.disprz.com/products) \u2630 Welcome to Disprz Developer Portal Empowering developers to build, integrate, and innovate with Disprz. [Explore APIs](https://apidocs-uae.disprz.com/apis)"
+       ]
+      },
+      {
+       "title": "APIs: List - Disprz External API \u2013 Enterprise Learning Integration",
+       "url": "https://apidocs-in.disprz.com/apis",
+       "excerpts": [
+        "APIs Group by tag |Name |Description |Type | |[Disprz Business API Service](https://apidocs-in.disprz.com/api-details=disprz-business-api-service \"Disprz Business API Service\") |API designed to provide structured access to learning and training-related data from our Disprz learning platform. It en\u2026 |REST | |[OAuth Credentials](https://apidocs-in.disprz.com/api-details=oauth-credentials \"OAuth Credentials\") |An API that is used to obtain access tokens that will enable access for the rest of the APIs available in the Disprz cat\u2026 |REST |"
+       ]
+      }
+     ],
+     "reasoning": "Disprz provides a public developer portal and an API documentation catalog listing multiple APIs with descriptions.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Disprz | Our Mission, Team & Story",
+       "url": "https://disprz.ai/company/about-us",
+       "excerpts": [
+        "North America HQ 395 Pleasant Valley Way, West Orange NJ 07052, USA"
+       ]
+      },
+      {
+       "title": "Disprz | LinkedIn",
+       "url": "https://linkedin.com/company/13366982",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters West Orange, New Jersey Type Privately Held Founded 2015"
+       ]
+      }
+     ],
+     "reasoning": "The official page and LinkedIn profile identify the North America/company-profile headquarters as West Orange, New Jersey; the company separately labels Chennai as its corporate and technology HQ.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Disprz Crosses 130 Crore Arr And Launches Autonomous Enablement Os Pioneering A New Category Beyond Traditional Ld 302890265",
+       "url": "https://www.prnewswire.com/in/news-releases/disprz-crosses-130-crore-arr-and-launches-autonomous-enablement-os-pioneering-a-new-category-beyond-traditional-ld-302890265.html",
+       "excerpts": [
+        "The launch comes as Disprz crosses \u20b9130 crore in ARR, with 500+ enterprises across 25+ countries. MUMBAI, India , Sept. 28, 2026 /PRNewswire/ -- Disprz, the AI-powered enterprise learning and skilling platform trusted by 500+ enterprises and 3.5 million+ learners across 25+ countries, has unveiled Autonomous"
+       ]
+      }
+     ],
+     "reasoning": "A September 28, 2026 announcement says Disprz unveiled its Autonomous Enablement OS, within the six-month window ending November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Sales Jobs at Disprz | 1 Open Roles",
+       "url": "https://techsalesjobs.org/companies/disprz",
+       "excerpts": [
+        "Open Positions (1) Disprz logo [Business Development Representative - Sharjah/Ajman](https://techsalesjobs.org/jobs/d3f381db-c77b-416d-8629-a3f3baba8e14) New [Disprz](https://techsalesjobs.org/companies/disprz) UAE, United Arab Emirates Business Development Representative - Sharjah/AjmanLocation: UAE, United Arab EmiratesDepartment: ME Demand GenExperience: 2 - 3 yrsAbout the BDR role... Apply Now Posted 3 days ago"
+       ]
+      }
+     ],
+     "reasoning": "A live job-board listing shows an open Business Development Representative role with an Apply Now link and a posting age of three days.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Disprz Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/disprz/financials",
+       "excerpts": [
+        "Total Raised $52.6M Investors Count 12 Deal Terms 1 Funding, Valuation & Revenue 9 Fundings Disprz has **raised $52.6M** over **9 rounds** . Disprz's **latest funding round** was a **Series C for $30M** on **August 7, 2023** ."
+       ]
+      },
+      {
+       "title": "Disprz Ignites The Future of Workplace Learning and Skills with US$30m Series C Funding",
+       "url": "https://www.prnewswire.com/apac/news-releases/disprz-ignites-the-future-of-workplace-learning-and-skills-with-us30m-series-c-funding-301894503.html",
+       "excerpts": [
+        "MUMBAI, India , Aug. 7, 2023 /PRNewswire/ -- Enterprise skilling platform aims to expand its thriving footprint in Southeast Asia , India , and the Middle East while breaking into the US market Continue Reading ... Disprz, the pioneering global leader in the enterprise learning and skilling industry, has achieved a remarkable milestone with a significant US$30 million secured in its Series C funding round."
+       ]
+      }
+     ],
+     "reasoning": "The identified latest funding round is the $30 million Series C dated August 2023, before the 18-month window beginning May 9, 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Vault - Disprz",
+       "url": "https://compliance.disprz.ai/",
+       "excerpts": [
+        "We are committed to robust information security, holding certifications like ISO 27001: 2022, SOC 2 Type II attestation, compliance towards privacy frameworks such as GDPR, PDPA Singapore and Malaysia.",
+        "ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Vault names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Vault - Disprz",
+       "url": "https://compliance.disprz.ai/",
+       "excerpts": [
+        "We are committed to robust information security, holding certifications like ISO 27001: 2022, SOC 2 Type II attestation, compliance towards privacy frameworks such as GDPR, PDPA Singapore and Malaysia.",
+        "SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Vault names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Vault - Disprz",
+       "url": "https://compliance.disprz.ai/",
+       "excerpts": [
+        "We are committed to robust information security, holding certifications like ISO 27001: 2022, SOC 2 Type II attestation, compliance towards privacy frameworks such as GDPR, PDPA Singapore and Malaysia.",
+        "GDPR"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Vault names GDPR as a privacy framework.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Skills & Learning Platform | Learning, Upskilling & Mobility",
+       "url": "https://disprz.ai/",
+       "excerpts": [
+        "Companies like Amazon, Axis Bank, Starbucks, and Bharat Petroleum trust Disprz to power workforce capability at scale."
+       ]
+      }
+     ],
+     "reasoning": "The Disprz homepage names Amazon as a company trusting the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Skills & Learning Platform | Learning, Upskilling & Mobility",
+       "url": "https://disprz.ai/",
+       "excerpts": [
+        "Companies like Amazon, Axis Bank, Starbucks, and Bharat Petroleum trust Disprz to power workforce capability at scale."
+       ]
+      }
+     ],
+     "reasoning": "The Disprz homepage names Axis Bank as a company trusting the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Skills & Learning Platform | Learning, Upskilling & Mobility",
+       "url": "https://disprz.ai/",
+       "excerpts": [
+        "Companies like Amazon, Axis Bank, Starbucks, and Bharat Petroleum trust Disprz to power workforce capability at scale."
+       ]
+      }
+     ],
+     "reasoning": "The Disprz homepage names Starbucks as a company trusting the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.3",
+     "citations": [
+      {
+       "title": "Skills & Learning Platform | Learning, Upskilling & Mobility",
+       "url": "https://disprz.ai/",
+       "excerpts": [
+        "Companies like Amazon, Axis Bank, Starbucks, and Bharat Petroleum trust Disprz to power workforce capability at scale."
+       ]
+      }
+     ],
+     "reasoning": "The Disprz homepage names Bharat Petroleum as a company trusting the platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Manager - Business Operations @ Disprz | HighFive Partners Job Board",
+       "url": "https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations",
+       "excerpts": [
+        "Own HubSpot end-to-end: architecture, pipeline configuration, deal stage definitions, properties, and user access management across all geographies",
+        "Own evaluation, configuration, and contract management of the GTM and operational tech stack (HubSpot, Avoma, analytics tools, and adjacent platforms) Identify integration gaps between GTM tools (HubSpot), Customer Success, Implementation, and Finance systems (Zoho Books, QuickBooks, Zenskar)"
+       ]
+      }
+     ],
+     "reasoning": "A Disprz job post says it owns and administers HubSpot as its CRM.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Manager - Business Operations @ Disprz | HighFive Partners Job Board",
+       "url": "https://jobs.highfivepartners.com/companies/disprz/jobs/77522184-manager-business-operations",
+       "excerpts": [
+        "Own evaluation, configuration, and contract management of the GTM and operational tech stack (HubSpot, Avoma, analytics tools, and adjacent platforms) Identify integration gaps between GTM tools (HubSpot), Customer Success, Implementation, and Finance systems (Zoho Books, QuickBooks, Zenskar)"
+       ]
+      }
+     ],
+     "reasoning": "The job post lists Avoma in the GTM and operational technology stack.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "ISO 27001:2022",
+     "SOC 2 Type II",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Disprz is an AI-powered learning and skilling platform combining LMS, LXP, and AI content authoring to help enterprises build workforce capability at scale.",
+    "employee_band": "201-500",
+    "model_provider": "Microsoft Azure OpenAI",
+    "pricing_page": true,
+    "funding_amount_usd": 30000000.0,
+    "named_customers": [
+     "Amazon",
+     "Axis Bank",
+     "Starbucks",
+     "Bharat Petroleum"
+    ],
+    "funding_date": "2023-08",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Avoma"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "West Orange",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

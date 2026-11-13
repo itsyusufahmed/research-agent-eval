@@ -1,0 +1,409 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eaa59e489e80e88df",
+  "interaction_id": "trun_142119f6a1b4439eaa59e489e80e88df",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "maximum.com"
+  },
+  "created_at": "2026-11-10T18:48:32.958810Z",
+  "modified_at": "2026-11-10T18:54:05.038670Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eaa59e489e80e88df",
+   "interaction_id": "trun_142119f6a1b4439eaa59e489e80e88df",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "maximum.com"
+   },
+   "created_at": "2026-11-10T18:48:32.958810Z",
+   "modified_at": "2026-11-10T18:54:05.038670Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/1474291-54",
+       "excerpts": [
+        "Maximum Overview Update this profile * Year Founded"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook's company profile lists Maximum's year founded as 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system. \u00b7 Privacy Policy",
+       "url": "https://maximum.com/privacy",
+       "excerpts": [
+        "Security We use industry-standard physical, technical, and administrative safeguards (such as encryption and firewalls)",
+        "Legal [Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility](https://maximum.com/accessibility)"
+       ]
+      }
+     ],
+     "reasoning": "The privacy/legal material describes general safeguards and lists legal links, but does not name SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS. The certification list is therefore empty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Maximum \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/maximum",
+       "excerpts": [
+        "Headquarters Miami, United States"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies its headquarters as Miami, United States.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/blog",
+       "excerpts": [
+        "Maximum The intelligent system built for the next century of banking.",
+        "Company [Home](https://maximum.com/) [Newsroom](https://maximum.com/newsroom) [Careers](https://maximum.com/careers) [LinkedIn (opens in new window)](https://www.linkedin.com/company/maximum/) Legal [Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility"
+       ]
+      }
+     ],
+     "reasoning": "The /blog URL returned the homepage rather than a blog index, and the visible company navigation lists Home, Newsroom, Careers, and LinkedIn rather than a blog. No engineering blog was found, so this is unknown rather than a claim that a marketing blog contains no technical posts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Maximum Raises $30 Million to Build the AI-Native Operating",
+       "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/Maximum-Raises-30-Million-to-Build-the-AI-Native-Operating-System-for-Banks.html",
+       "excerpts": [
+        "Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core, providing an environment for banks to build and deploy custom agents to automate complex operational workflows, gain real-time visibility into customer activity, and deliver innovative financial products to drive growth for the bank. Maximum unlocks the ambition of banking leaders, delivering a comprehensive platform purpose-built to power banking for the next century."
+       ]
+      }
+     ],
+     "reasoning": "The company description calls Maximum an AI-native operating system for banks and explains that banks can deploy custom agents to automate operational workflows.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/maximum",
+       "excerpts": [
+        "employee count: 11"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile reports an employee count of 11, which falls in the 11-20 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system. \u00b7 Privacy Policy",
+       "url": "https://maximum.com/privacy",
+       "excerpts": [
+        "How We Share Your Information Below are the circumstances in which we may share information: Maximum works with third-party service providers who,"
+       ]
+      },
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/security",
+       "excerpts": [
+        "Security Engineered to defend. Architected to protect financial institutions and their customers from sophisticated threats using advanced security protocols and risk management controls."
+       ]
+      },
+      {
+       "title": "New fintech Maximum aims to take on the core banking cabal | American Banker",
+       "url": "https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal",
+       "excerpts": [
+        "Fernando is aiming to enter the bank core provider market with an offering that is built on agentic AI."
+       ]
+      }
+     ],
+     "reasoning": "The privacy page refers generally to third-party service providers without naming them; the security page and the article discussing Maximum's AI banking product do not name a model or model provider. The provider is not publicly identified in the sources checked.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/",
+       "excerpts": [
+        "[Home](https://maximum.com/) [Newsroom](https://maximum.com/newsroom) [Careers](https://maximum.com/careers) [LinkedIn (opens in new window)]",
+        "[Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility](https://maximum.com/accessibility)"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation and footer list no pricing link, and the attempted pricing URL did not return a pricing page. Under the requested rule, pricing_page is false.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/1474291-54",
+       "excerpts": [
+        "Latest Deal Type Seed * Latest Deal Amount $30M"
+       ]
+      },
+      {
+       "title": "New fintech Maximum aims to take on the core banking cabal | American Banker",
+       "url": "https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal",
+       "excerpts": [
+        "Randy Fernando is formally launching his latest startup, Maximum, with a $30 million seed funding round led by CRV."
+       ]
+      }
+     ],
+     "reasoning": "The profile and announcement identify a $30 million seed round; expressed in USD, that is 30000000.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Emprise Bank Selects Maximum to Power Its Next Generation of Banking Infrastructure - Emprise Bank",
+       "url": "https://www.emprisebank.com/about/news/emprise-bank-selects-maximum-to-power-its-next-generation-of-banking-infrastructure",
+       "excerpts": [
+        "The partnership will equip Emprise with advanced technology designed to accelerate innovation, streamline operations and deliver exceptional customer experiences while preserving the personalized,"
+       ]
+      },
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/clients",
+       "excerpts": [
+        "An animated diagram illustrates Maximum's AI layer embedded across eight platform categories: Core Banking, Payments, Cards, Risk & Ops, Digital, Developer, Lending, and Wealth. Operating system AI-native technology for banks. An intelligent bank operating system delivering real-time visibility, continuous monitoring and predictive reasoning for forward-thinking institutions. Autonomous banking Powered by agents. A secure environment for banks to build and deploy custom agents, automate complex operational workflows and deliver innovative financial products. Security Engineered to defend. Architected to protect financial institutions and their customers from sophisticated threats using advanced security protocols and risk management controls. AI Migration engine Leave legacy behind. Purpose-built to transform banks and accelerate the evolution of a modern banking system. Reimagine core migrations with intelligent data extraction, built-in compliance continuity, and automated reconciliation. Backed by CRV Pear VC Restive Plug and Play Ventures Anthemis"
+       ]
+      }
+     ],
+     "reasoning": "The Emprise announcement names a bank that selected Maximum, but the clients page content does not show two customer names; the visible named organizations there are backers. Since the available customer material does not establish at least two customers, the list is empty under the requested rule.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Maximum Raises $30 Million to Build the AI-Native Operating",
+       "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+       "excerpts": [
+        "August 03, 2026 14:00 ET | Source: [Maximum Technologies Inc.](https://www.globenewswire.com/en/search/organization/Maximum%2520Technologies%2520Inc%C2%A7) Follow"
+       ]
+      },
+      {
+       "title": "New fintech Maximum aims to take on the core banking cabal | American Banker",
+       "url": "https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal",
+       "excerpts": [
+        "Randy Fernando is formally launching his latest startup, Maximum, with a $30 million seed funding round led by CRV."
+       ]
+      }
+     ],
+     "reasoning": "The funding announcement is dated August 3, 2026, and reports the seed round. The requested YYYY-MM date is 2026-08.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Maximum \u00b7 Careers",
+       "url": "https://maximum.com/careers",
+       "excerpts": [
+        "We use AI coding agents heavily, and directing them is part of the job. Responsibilities Own a domain service end to end: schema, gRPC API, workflows,",
+        "Own a domain service end to end: schema, gRPC API, workflows, event consumers, tests, and the docs that explain why you built it the way you did. Design tables and queries in our schema DSL. Write workflows that survive partial failure: replay-safe, idempotent, and resumable from the step that broke. Test against real environments in containers. Mocking is a last resort, and we will ask why you needed it. Review pull requests from humans and from agents, with the same suspicion for both."
+       ]
+      }
+     ],
+     "reasoning": "The open job descriptions mention engineering tools and workflows, but no CRM or sales/marketing system. The CRM/sales/marketing systems list is therefore empty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [],
+     "reasoning": "The available profile identifies Randy Fernando as Founder & CEO with a January 2025 start date, outside the 12-month window. The company page does not provide a complete leadership roster or dated changes, so whether another C-level or VP joined or left during the window remains unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Maximum \u00b7 Careers",
+       "url": "https://maximum.com/careers",
+       "excerpts": [
+        "Senior Staff Software Engineer Location: Remote (US or Canada)",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer) with the subject line \u201cStaff Software Engineer\u201d. ## Senior Software Engineer Location: Remote (US or Canada)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists software engineering roles, including Senior Staff Software Engineer and Staff Software Engineer, but no AI, ML, or data-science role title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Maximum 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/1474291-54",
+       "excerpts": [
+        "Latest Deal Type Seed * Latest Deal Amount $30M"
+       ]
+      },
+      {
+       "title": "New fintech Maximum aims to take on the core banking cabal | American Banker",
+       "url": "https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal",
+       "excerpts": [
+        "Randy Fernando is formally launching his latest startup, Maximum, with a $30 million seed funding round led by CRV."
+       ]
+      }
+     ],
+     "reasoning": "The latest disclosed round is described as a seed round.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Powerful infrastructure to transform the banking system.",
+       "url": "https://maximum.com/",
+       "excerpts": [
+        "[Home](https://maximum.com/) [Newsroom](https://maximum.com/newsroom) [Careers](https://maximum.com/careers) [LinkedIn (opens in new window)]",
+        "[Terms of Use](https://maximum.com/terms) [Privacy](https://maximum.com/privacy) Cookies [Accessibility](https://maximum.com/accessibility)"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation and footer contain no documentation, help center, or developer portal links, and no public docs portal was found. Under the stated rule, public_docs is false.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Maximum \u2014 venture-backed company profile | Dealroom",
+       "url": "https://dealroom.co/companies/maximum",
+       "excerpts": [
+        "Headquarters Miami, United States"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies its headquarters city as Miami.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/maximum",
+       "excerpts": [
+        "Today, we're introducing <a class=\"link\" href=\"https://www.linkedin.com/company/maximum?trk=public_post_reshare-text\" target=\"_self\" data-tracking-control-name=\"public_post_reshare-text\" data-tracking-will-navigate=\"\">Maximum</a> as we emerge from stealth with a $30 million Seed round led by <a class=\"link\" href=\"https://www.linkedin.com/company/crvvc?trk=public_post_reshare-text\" target=\"_self\" data-tracking-control-name=\"public_post_reshare-text\" data-tracking-will-navigate=\"\">CRV</a>, alongside"
+       ]
+      },
+      {
+       "title": "Maximum Raises $30 Million to Build the AI-Native Operating",
+       "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+       "excerpts": [
+        "August 03, 2026 14:00 ET | Source: [Maximum Technologies Inc.](https://www.globenewswire.com/en/search/organization/Maximum%2520Technologies%2520Inc%C2%A7) Follow"
+       ]
+      }
+     ],
+     "reasoning": "The company announced its introduction as it emerged from stealth in August 2026, within the six months before November 9, 2026. This supports a product/company launch in the requested window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Maximum \u00b7 Careers",
+       "url": "https://maximum.com/careers",
+       "excerpts": [
+        "Senior Staff Software Engineer Location: Remote (US or Canada)",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Senior%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Senior%20Staff%20Software%20Engineer)",
+        "To apply, email your resume to [careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer](mailto:careers@maximum.com?subject=Application%3A%20Staff%20Software%20Engineer) with the subject line \u201cStaff Software Engineer\u201d. ## Senior Software Engineer Location: Remote (US or Canada)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists software engineering roles and no SDR, BDR, sales/business-development representative, or account executive opening.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Maximum Raises $30 Million to Build the AI-Native Operating",
+       "url": "https://www.globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+       "excerpts": [
+        "August 03, 2026 14:00 ET | Source: [Maximum Technologies Inc.](https://www.globenewswire.com/en/search/organization/Maximum%2520Technologies%2520Inc%C2%A7) Follow"
+       ]
+      },
+      {
+       "title": "New fintech Maximum aims to take on the core banking cabal | American Banker",
+       "url": "https://www.americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal",
+       "excerpts": [
+        "Randy Fernando is formally launching his latest startup, Maximum, with a $30 million seed funding round led by CRV."
+       ]
+      }
+     ],
+     "reasoning": "The company announced its $30 million seed round on August 3, 2026, within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2025.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": null,
+    "product_one_liner": "Maximum provides banks with an AI-native core banking operating system for running banking services and deploying AI agents to automate workflows.",
+    "employee_band": "11-20",
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": 30000000.0,
+    "named_customers": [],
+    "funding_date": "2026-08",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": false,
+    "hq_city": "Miami",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

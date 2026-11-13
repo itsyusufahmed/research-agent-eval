@@ -1,0 +1,171 @@
+{
+ "schema_version": "v0",
+ "company": "Aviso AI",
+ "domain": "aviso.com",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Aviso AI provides an AI-powered revenue intelligence and execution platform for sales and go-to-market teams to forecast, guide deals, and coordinate revenue workflows.",
+   "citations": [
+    "https://www.aviso.com/"
+   ],
+   "notes": "Aviso\u2019s homepage describes an end-to-end AI revenue platform for modern GTM teams and identifies forecasting, agentic workflows, and AI revenue capabilities, supporting the one-sentence description."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aviso.com/pricing"
+   ],
+   "notes": "Aviso has a public /pricing page that describes flexible plans and invites visitors to request a tailored proposal, so a public pricing page exists even though prices are not shown."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "New Relic",
+    "DataStax"
+   ],
+   "citations": [
+    "https://www.aviso.com/resources/case-study"
+   ],
+   "notes": "named_customers: Aviso\u2019s case-study index names both New Relic and DataStax as customer case studies. | named_customers.0: The case-study index names New Relic as an Aviso customer. | named_customers.1: The case-study index names DataStax as an Aviso customer."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://about.linkedin.com/company/aviso-inc"
+   ],
+   "notes": "The LinkedIn company profile gives a company size of 201\u2013500 employees, which directly matches the requested band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Redwood City",
+    "country": "United States"
+   },
+   "citations": [
+    "https://linkedin.com/company/3713385"
+   ],
+   "notes": "hq_city: The company profile lists its headquarters as Redwood City, California, US; the city component is Redwood City. | hq_country: The company LinkedIn location identifies Redwood City, California, US, supporting the United States country value."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2012.0,
+   "citations": [
+    "https://www.aviso.com/press/aviso-achieves-record-high-accuracy-rates-for-ai-powered-sales-predictions"
+   ],
+   "notes": "Aviso\u2019s company press release states that it was founded in 2012; a LinkedIn profile lists 2014, so I rely on the direct press statement and retain medium confidence given the discrepancy."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.aviso.com/blog",
+    "http://www.aviso.com/blog/author/bithika-bishesh"
+   ],
+   "notes": "The blog index is a general sales/marketing and product blog, and its technical harness article is by Bithika Bishesh, whose Aviso bio identifies her as Manager of Research & Content rather than an engineer. The evidence does not show the two engineer-authored build-focused posts required for a true result."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://dochelp.aviso.com/en_US/aviso-ai-integrations-"
+   ],
+   "notes": "Aviso\u2019s public help center has sections for getting started, product modules, administration, mobile app, integrations, and FAQs, with numerous linked articles, meeting the requirement for public documentation."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.aviso.com/careers"
+   ],
+   "notes": "The current careers index lists open roles, including account executive, customer success, demand generation, software engineer, and server-side developer; none has one of the specified AI/ML/data-science titles."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "GPT/ChatGPT; Aviso describes its Chief of Staff Assistant as ChatGPT-powered.",
+   "citations": [
+    "https://www.aviso.com/blog/the-power-of-generative-ai-in-b2b-sales"
+   ],
+   "notes": "Aviso\u2019s blog says its Chief of Staff Assistant is a ChatGPT-powered model and describes integrating GPT generative-AI capabilities, which supports GPT/ChatGPT as a publicly named model."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "ISO 27001",
+    "PCI DSS",
+    "SOC 2",
+    "GDPR"
+   ],
+   "citations": [
+    "https://www.aviso.com/compliance-at-aviso-ai"
+   ],
+   "notes": "compliance_certs: Aviso\u2019s compliance page explicitly names ISO 27001, PCI DSS Service Provider Level 1, and SOC 2 Type II, and separately says it completed an internal assessment and compliance review under GDPR regulations. The listed answer reflects those named claims. | compliance_certs.0: The compliance page names ISO 27001 and says Aviso is certified to it. | compliance_certs.1: The compliance page names PCI DSS Service Provider Level 1. | compliance_certs.2: The compliance page names SOC 2 Type II. | compliance_certs.3: The compliance page says Aviso completed an internal assessment and compliance review under GDPR regulations."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2022-01",
+    "amount_usd": 14000000.0
+   },
+   "citations": [
+    "https://aventure.vc/companies/aviso-redwood-city-ca-us/fundraising",
+    "https://pitchbook.com/profiles/company/57271-24"
+   ],
+   "notes": "funding_stage: The funding history identifies the January 2022 round as Series B; the later PitchBook financing event is expressly a secondary transaction. | funding_date: The listed latest funding round is the January 2022 Series B; the later 2025 PitchBook entry is categorized as a secondary transaction. | funding_amount_usd: The funding history lists a January 2022 Series B of $14 million. PitchBook lists a later June 2025 event as a private secondary transaction, not a later funding round; the amount is therefore the latest reported round amount. Confidence is medium because funding aggregators differ in how they label financing events."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://aventure.vc/companies/aviso-redwood-city-ca-us/fundraising",
+    "https://pitchbook.com/profiles/company/57271-24"
+   ],
+   "notes": "The latest reported funding round is January 2022, before the 18-month window. PitchBook\u2019s June 2025 entry is explicitly a secondary transaction rather than a new funding round, so the evidence does not show Aviso raising a round within the window."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aviso.com/careers/us/account-executive-1"
+   ],
+   "notes": "Aviso\u2019s careers page describes an open Account Executive position, published November 2, 2026, satisfying the specified sales-role category at the cutoff date."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aviso.com/blog/aviso-agentic-ai"
+   ],
+   "notes": "Aviso published an announcement titled \u201cIntroducing Aviso Agentic AI\u201d on November 6, 2026, within the six months before the November 9, 2026 cutoff, and described the new agentic system."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": []
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "HubSpot",
+    "Microsoft Dynamics",
+    "Oracle",
+    "SAP",
+    "Siebel"
+   ],
+   "citations": [
+    "https://www.aviso.com/integrations"
+   ],
+   "notes": "crm_stack_signal: Aviso\u2019s integrations page description names Salesforce, HubSpot, Microsoft Dynamics, Oracle, SAP, and Siebel as CRM connections. | crm_stack_signal.0: Aviso names Salesforce in its CRM integrations description. | crm_stack_signal.1: Aviso names HubSpot in its CRM integrations description. | crm_stack_signal.2: Aviso names Microsoft Dynamics in its CRM integrations description. | crm_stack_signal.3: Aviso names Oracle in its CRM integrations description. | crm_stack_signal.4: Aviso names SAP in its CRM integrations description. | crm_stack_signal.5: Aviso names Siebel in its CRM integrations description."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 336.0
+}

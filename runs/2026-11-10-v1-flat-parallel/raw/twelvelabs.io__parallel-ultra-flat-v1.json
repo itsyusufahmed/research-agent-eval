@@ -1,0 +1,474 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8f0d59a688707f82",
+  "interaction_id": "trun_142119f6a1b4439e8f0d59a688707f82",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "twelvelabs.io"
+  },
+  "created_at": "2026-11-10T18:47:57.406918Z",
+  "modified_at": "2026-11-10T18:52:22.921917Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8f0d59a688707f82",
+   "interaction_id": "trun_142119f6a1b4439e8f0d59a688707f82",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "twelvelabs.io"
+   },
+   "created_at": "2026-11-10T18:47:57.406918Z",
+   "modified_at": "2026-11-10T18:52:22.921917Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "TwelveLabs",
+       "url": "https://linkedin.com/company/twelvelabs",
+       "excerpts": [
+        "Headquarters: San Francisco, California. Type: Privately Held. Founded: 2021. Locations. Primary. 55 Green St. San Francisco, California 94111, US."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s LinkedIn profile explicitly lists its founding year as 2021: https://linkedin.com/company/twelvelabs.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Twelve Labs",
+       "url": "https://trust.twelvelabs.io/",
+       "excerpts": [
+        "Compliance [SOC2 Type II (2026)](https://trust.twelvelabs.io/?requestAccessOpen=true&requestedResources=6acfbe6c93cacd62bec8949f) [SOC2 Type II (2025)](https://trust.twelvelabs.io/?requestAccessOpen=true&requestedResources=69cc2958e4e4a2ade3254629) [SOC2 Type II (2024)"
+       ]
+      }
+     ],
+     "reasoning": "The official trust center lists SOC 2 Type II reports, including a 2026 report. SOC 2 is the certification named in the cited compliance section: https://trust.twelvelabs.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "TwelveLabs",
+       "url": "https://linkedin.com/company/twelvelabs",
+       "excerpts": [
+        "Headquarters: San Francisco, California. Type: Privately Held. Founded: 2021. Locations. Primary. 55 Green St. San Francisco, California 94111, US."
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies San Francisco as headquarters and gives its primary address in the US: https://linkedin.com/company/twelvelabs.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "From Microservices Mesh to Streamlined Video Indexing",
+       "url": "https://www.twelvelabs.io/blog/indexing-3-0-part-1",
+       "excerpts": [
+        "Twelve Labs rebuilt its video indexing platform from a microservices mesh into a layered system after Indexing 2.0 stopped scaling \u2014 not in raw compute, but in engineering throughput, deployment portability, and the ability for new contributors to reason about the system end to end.",
+        "Stu Stewart, Abraham Jo, SJ Kim, Paritosh Mohan"
+       ]
+      },
+      {
+       "title": "Indexing 3.0: Design Choices for Execution and Deployment",
+       "url": "https://www.twelvelabs.io/blog/indexing-3-0-part-2",
+       "excerpts": [
+        "The core reframe was to treat indexing as a coherent, portable system: moving from a microservices mesh to streamlined layers where application logic stays readable, an execution layer handles distribution, and infrastructure becomes swappable rather than defining.",
+        "Stu Stewart, Abraham Jo, SJ Kim, Paritosh Mohan"
+       ]
+      },
+      {
+       "title": "Why I Joined TwelveLabs",
+       "url": "https://www.twelvelabs.io/blog/why-i-joined-twelvelabs",
+       "excerpts": [
+        "The next frontier in AI is in helping machines understand the world as we do*.* That\u2019s why I joined TwelveLabs as VP of Engineering."
+       ]
+      }
+     ],
+     "reasoning": "Two engineering posts explain the product\u2019s internal architecture and execution/deployment design: https://www.twelvelabs.io/blog/indexing-3-0-part-1 and https://www.twelvelabs.io/blog/indexing-3-0-part-2. Both list the same four coauthors. Coauthor Paritosh Mohan identifies himself as VP of Engineering at https://www.twelvelabs.io/blog/why-i-joined-twelvelabs. These are implementation accounts, not merely product announcements or customer tutorials.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "twelvelabs.io",
+       "url": "https://www.twelvelabs.io/llms.txt",
+       "excerpts": [
+        "> TwelveLabs is a multimodal AI company that builds video-native foundation models and provides a Video Intelligence API Platform. Developers use the TwelveLabs API to search, analyze, and embed video content using natural language and other modalities."
+       ]
+      }
+     ],
+     "reasoning": "The company describes its video-native foundation models and API platform, explicitly stating that developers use its API to search, analyze, and embed video through natural language: https://www.twelvelabs.io/llms.txt.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "TwelveLabs Valuation, Funding & Investors | TipRanks",
+       "url": "https://www.tipranks.com/private-companies/twelvelabs",
+       "excerpts": [
+        "TwelveLabs had 173 employees as of November 2, 2026."
+       ]
+      }
+     ],
+     "reasoning": "The profile reports 173 employees as of November 2, 2026, which falls in the 101-200 band: https://www.tipranks.com/private-companies/twelvelabs. This is a third-party headcount estimate.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Introduction | TwelveLabs",
+       "url": "http://docs.twelvelabs.io/",
+       "excerpts": [
+        "TwelveLabs models Marengo Embedding model, proficient at performing cross-modal searches - across text, audio, image, and video. Use this model for search and embedding tasks. Pegasus Generative model that can answer questions, generate creative outputs, and provide detailed analysis of any video. Use this model to analyze videos and generate text based on their content."
+       ]
+      }
+     ],
+     "reasoning": "The public documentation identifies TwelveLabs\u2019 own Marengo embedding model and Pegasus generative model and explains their respective uses: http://docs.twelvelabs.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "TwelveLabs Pricing: API Plans and Costs",
+       "url": "https://www.twelvelabs.io/pricing",
+       "excerpts": [
+        "Start free. Choose a plan as you grow."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page offers plans under the heading 'Start free. Choose a plan as you grow': https://www.twelvelabs.io/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Twelve Labs",
+       "url": "https://tracxn.com/a/d/company/6058c9f8c2f6111eb227e327/twelve%20labs#a:about",
+       "excerpts": [
+        "Name: Twelve Labs | Website Url: https://www.twelvelabs.io/ | Primary Sector: High Tech | Primary Subsector: Generative AI | Stage: Series B | Founded Year: 2021 | Employee Count Official: 176 | Location Country: United States | Location State: Washington | Location City: Seattle | Latest Funding Round Amount Usd: 100000000.0"
+       ]
+      },
+      {
+       "title": "TwelveLabs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/439422-85",
+       "excerpts": [
+        "Later Stage VC (Series B) |01-Jul-2026 |$100M"
+       ]
+      }
+     ],
+     "reasoning": "The latest-round record identifies a $100 million Series B on July 1, 2026, corroborated by PitchBook\u2019s round listing: https://tracxn.com/a/d/company/6058c9f8c2f6111eb227e327/twelve%20labs#a:about and https://pitchbook.com:8443/profiles/company/439422-85.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "SBS Case Study: AI for Video Archive and Scene Search",
+       "url": "https://www.twelvelabs.io/case-studies/sbs",
+       "excerpts": [
+        "TwelveLabs multimodal AI models helped SBS enable reuse of their media assets, and enable scene-level search across internal and individual archives."
+       ]
+      },
+      {
+       "title": "Dyn Sport Case Study: AI-Powered Sports Content Creation",
+       "url": "https://www.twelvelabs.io/case-studies/dyn-sport",
+       "excerpts": [
+        "TwelveLabs and Dyn Sport \u2014 Revolutionizing Sports Content Creation"
+       ]
+      }
+     ],
+     "reasoning": "Official customer case studies document SBS\u2019s use of the models and Dyn Sport\u2019s content-creation deployment: https://www.twelvelabs.io/case-studies/sbs and https://www.twelvelabs.io/case-studies/dyn-sport.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "TwelveLabs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/439422-85",
+       "excerpts": [
+        "Later Stage VC (Series B) |01-Jul-2026 |$100M"
+       ]
+      },
+      {
+       "title": "TwelveLabs Raises $100M to Build Video Superintelligence",
+       "url": "https://www.twelvelabs.io/blog/twelvelabs-series-b-100m",
+       "excerpts": [
+        "Jae Lee, Jul 1, 2026, 5 min, Copy link to article"
+       ]
+      }
+     ],
+     "reasoning": "The round listing dates the Series B to July 1, 2026; the company\u2019s funding announcement carries the same date. Thus the requested month is 2026-07: https://pitchbook.com:8443/profiles/company/439422-85 and https://www.twelvelabs.io/blog/twelvelabs-series-b-100m.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Business Systems & Analytics Lead at TwelveLabs",
+       "url": "https://startup.jobs/business-systems-analytics-lead-twelvelabs-9169570",
+       "excerpts": [
+        "CRM: HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The Business Systems & Analytics Lead job description explicitly lists 'CRM: HubSpot' in its business systems stack: https://startup.jobs/business-systems-analytics-lead-twelvelabs-9169570.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "About TwelveLabs: Video-Native AI Company",
+       "url": "https://www.twelvelabs.io/about-us",
+       "excerpts": [
+        "OuR ADVISORS Who we\u2019re guided by Fei-Fei Li Professor at Stanford University Silvio Savarese Professor at Stanford University Jeffrey Katzenberg Former Dreamworks Animation CEO Alex Wang Founder, CEO of Scale AI Lukas Biewald Founder, CEO of Weight and Biases Nicolas Dessaigne, Founder, CEO of Algolia, Jay Simons, President of Atlassian, INVESTORS AND BOARD"
+       ]
+      },
+      {
+       "title": "Why I Joined TwelveLabs",
+       "url": "https://www.twelvelabs.io/blog/why-i-joined-twelvelabs",
+       "excerpts": [
+        "Paritosh Mohan, Oct 1, 2025, 4 min, Copy link to article"
+       ]
+      }
+     ],
+     "reasoning": "Unknown. The official About page presents advisors rather than a complete executive roster: https://www.twelvelabs.io/about-us. The identified VP Engineering joining announcement predates the requested window: https://www.twelvelabs.io/blog/why-i-joined-twelvelabs. No qualifying within-window appointment or departure was verified, and the available roster is insufficient to support false.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Staff ML Research Engineer, Multimodal Structure & Marengo @ TwelveLabs",
+       "url": "https://jobs.ashbyhq.com/twelve-labs/0869a12a-5beb-4f36-bda6-36cdb32931b4",
+       "excerpts": [
+        "[Apply for this Job](https://jobs.ashbyhq.com/twelve-labs/0869a12a-5beb-4f36-bda6-36cdb32931b4/application)"
+       ]
+      }
+     ],
+     "reasoning": "The live posting titled 'Staff ML Research Engineer, Multimodal Structure & Marengo' includes an application link and directly qualifies as an ML opening: https://jobs.ashbyhq.com/twelve-labs/0869a12a-5beb-4f36-bda6-36cdb32931b4.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Twelve Labs",
+       "url": "https://tracxn.com/a/d/company/6058c9f8c2f6111eb227e327/twelve%20labs#a:about",
+       "excerpts": [
+        "Name: Twelve Labs | Website Url: https://www.twelvelabs.io/ | Primary Sector: High Tech | Primary Subsector: Generative AI | Stage: Series B | Founded Year: 2021 | Employee Count Official: 176 | Location Country: United States | Location State: Washington | Location City: Seattle | Latest Funding Round Amount Usd: 100000000.0 | Latest Funding Round Date: 2026-07-01 | Latest Funding Round Name: Series B"
+       ]
+      },
+      {
+       "title": "TwelveLabs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/439422-85",
+       "excerpts": [
+        "Later Stage VC (Series B) |01-Jul-2026 |$100M"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding record and PitchBook round listing both identify Series B: https://tracxn.com/a/d/company/6058c9f8c2f6111eb227e327/twelve%20labs#a:about and https://pitchbook.com:8443/profiles/company/439422-85.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Introduction | TwelveLabs",
+       "url": "http://docs.twelvelabs.io/",
+       "excerpts": [
+        "Access the following core capabilities through simple APIs: Search : Find specific moments in your videos using text or image queries. Search across visual content, spoken words, on-screen text, and audio. Analyze : Generate tailored text outputs such as tables of contents, action items, memos, reports, and comprehensive analyses based on your prompts. Extract structured, timestamped segments from your videos by defining custom segment types and fields. Embed : Create multimodal embeddings for semantic search, recommendations, classification, and other downstream AI tasks. Most popular Quickstart guides Get started quickly with simplified examples and core parameters. Guides Comprehensive guides covering more features and parameters. API Reference Complete documentation for each endpoint. TwelveLabs SDKs Discover how to utilize the official client libraries to streamline your integration process."
+       ]
+      }
+     ],
+     "reasoning": "The public documentation includes quickstart guides, comprehensive guides, an API reference, and SDK documentation, rather than a single FAQ: http://docs.twelvelabs.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Staff Product Manager, Platform Integrations & Partnerships @ TwelveLabs",
+       "url": "https://jobs.ashbyhq.com/twelve-labs/0ec8c8c8-464a-487e-aad5-47b33fc85f22",
+       "excerpts": [
+        "We are a global company, headquartered in San Francisco with offices in Seoul, New York, and London, and employees around the world."
+       ]
+      }
+     ],
+     "reasoning": "An official job posting explicitly states that TwelveLabs is headquartered in San Francisco: https://jobs.ashbyhq.com/twelve-labs/0ec8c8c8-464a-487e-aad5-47b33fc85f22.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "TwelveLabs Brings Video Understanding to Physical AI With",
+       "url": "https://www.globenewswire.com/news-release/2026/10/06/3375633/0/en/twelvelabs-brings-video-understanding-to-physical-ai-with-latest-launch.html",
+       "excerpts": [
+        "SAN FRANCISCO, Oct. 06, 2026 (GLOBE NEWSWIRE) -- [TwelveLabs,](https://www.globenewswire.com/Tracker?data=jLoPVGu8JGPRBq9WygRwil-1t9DjvqkzmuEowJxnEZAuiT8OHkMGHm8FDl2RgcZ4Ge0UNCJfATsbXCoTrL0Gvw==) a leading video intelligence company, today announced the release of Pegasus 1.6, which adds new capabilities for understanding and navigating complex real-world environments. This latest model enables TwelveLabs expansion into physical AI, the domain of artificial intelligence that can perceive, reason about, and act in the physical world through machines like robots, drones, autonomous vehicles, and industrial equipment. Now TwelveLabs can solve key workflow-specific challenges and unlock the full potential for physical AI."
+       ]
+      }
+     ],
+     "reasoning": "The company announced the release of Pegasus 1.6 on October 6, 2026, adding capabilities for understanding complex real-world environments. This falls within the six months before November 9, 2026: https://www.globenewswire.com/news-release/2026/10/06/3375633/0/en/twelvelabs-brings-video-understanding-to-physical-ai-with-latest-launch.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Sales Development Representative, Emerging Verticals @ TwelveLabs",
+       "url": "https://jobs.ashbyhq.com/twelve-labs/4c347677-cb97-481f-b8d2-41c8d999040e",
+       "excerpts": [
+        "TwelveLabs is expanding beyond our core Media & Entertainment focus to bring the transformative power of video AI to new and emerging verticals. As a Sales Development Representative for Emerging Verticals, you will play a critical role in building our presence across Marketing & Advertising, Health & Life Sciences, Manufacturing, Robotics, Automotive, and other high-potential industries."
+       ]
+      }
+     ],
+     "reasoning": "The live Sales Development Representative, Emerging Verticals posting explicitly describes the SDR role: https://jobs.ashbyhq.com/twelve-labs/4c347677-cb97-481f-b8d2-41c8d999040e.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "TwelveLabs Raises $100M to Build Video Superintelligence",
+       "url": "https://www.twelvelabs.io/blog/twelvelabs-series-b-100m",
+       "excerpts": [
+        "Jae Lee, Jul 1, 2026, 5 min, Copy link to article"
+       ]
+      },
+      {
+       "title": "TwelveLabs 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com:8443/profiles/company/439422-85",
+       "excerpts": [
+        "Later Stage VC (Series B) |01-Jul-2026 |$100M"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s $100 million funding announcement is dated July 1, 2026, matching the recorded Series B date and falling within the 18 months before November 9, 2026: https://www.twelvelabs.io/blog/twelvelabs-series-b-100m and https://pitchbook.com:8443/profiles/company/439422-85.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Twelve Labs",
+       "url": "https://trust.twelvelabs.io/",
+       "excerpts": [
+        "Compliance [SOC2 Type II (2026)](https://trust.twelvelabs.io/?requestAccessOpen=true&requestedResources=6acfbe6c93cacd62bec8949f) [SOC2 Type II (2025)](https://trust.twelvelabs.io/?requestAccessOpen=true&requestedResources=69cc2958e4e4a2ade3254629) [SOC2 Type II (2024)"
+       ]
+      }
+     ],
+     "reasoning": "The official trust center names SOC 2 Type II reports: https://trust.twelvelabs.io/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "SBS Case Study: AI for Video Archive and Scene Search",
+       "url": "https://www.twelvelabs.io/case-studies/sbs",
+       "excerpts": [
+        "TwelveLabs multimodal AI models helped SBS enable reuse of their media assets, and enable scene-level search across internal and individual archives."
+       ]
+      }
+     ],
+     "reasoning": "The SBS case study explicitly describes SBS using TwelveLabs models for media reuse and scene-level search: https://www.twelvelabs.io/case-studies/sbs.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Dyn Sport Case Study: AI-Powered Sports Content Creation",
+       "url": "https://www.twelvelabs.io/case-studies/dyn-sport",
+       "excerpts": [
+        "TwelveLabs and Dyn Sport \u2014 Revolutionizing Sports Content Creation"
+       ]
+      }
+     ],
+     "reasoning": "The official Dyn Sport customer case study names the company and its sports-content use case: https://www.twelvelabs.io/case-studies/dyn-sport.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Business Systems & Analytics Lead at TwelveLabs",
+       "url": "https://startup.jobs/business-systems-analytics-lead-twelvelabs-9169570",
+       "excerpts": [
+        "CRM: HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The business systems job description explicitly identifies HubSpot as the company\u2019s CRM: https://startup.jobs/business-systems-analytics-lead-twelvelabs-9169570.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2021.0,
+    "compliance_certs": [
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "TwelveLabs provides video-native AI models and APIs for developers to search, analyze, and embed video content using natural language.",
+    "employee_band": "101-200",
+    "model_provider": "TwelveLabs\u2019 proprietary Marengo and Pegasus models",
+    "pricing_page": true,
+    "funding_amount_usd": 100000000.0,
+    "named_customers": [
+     "SBS",
+     "Dyn Sport"
+    ],
+    "funding_date": "2026-07",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

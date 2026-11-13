@@ -1,0 +1,404 @@
+{
+ "run": {
+  "routine_run_id": "run_0toaylbaRupSw4T66bV",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "fly.io",
+    "status": "complete",
+    "result": {
+     "claygent-auto-A": {
+      "eng_blog": {
+       "notes": "Thomas Ptacek explains Fly.io's container-to-Firecracker implementation in the first post and its eBPF/XDP, UDP and WireGuard networking implementation in the second.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/blog/docker-without-docker",
+        "https://fly.io/blog/bpf-xdp-packet-filters-and-udp"
+       ]
+      },
+      "reasoning": "Most findings are supported by current first-party pages, including the July 2026 funding, product and CEO announcement, the live careers page, documentation and October 2026 legal disclosures. Headquarters is corroborated by LinkedIn and YC. Employee band is derived from the official team roster rather than an incompatible LinkedIn band. Founding year has conflicting secondary reports, disclosed in the notes. AI providers are explicitly limited to internal tooling rather than being represented as models powering Fly.io's core hosting service.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Searched Google with query \"Fly.io company funding employees headquarters careers pricing customers\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Doubles Down on Computers for Agents with $25M ...\",\"link\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"displayedLink\":\"https://fly.io › news › fly-io-launches-computers-for-ag...\",\"snippet\":\"Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure. July 24, 2026. Funding, customer ...\",\"date\":\"Jul 24, 2026\",\"position\":1},{\"title\":\"Fly Jobs\",\"link\":\"https://fly.io/jobs/\",\"displayedLink\":\"https://...",
+       "Used visitWebpage {\"url\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"question\":\"What funding round, date, amount, new product launch, customers and executive changes are announced?\"}. The results are: \n \"Fly.io press release (July 24, 2026): Announces $25 million Series D funding, co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado (Andreessen Horowitz) and Daniel Docter (Dell Technologies Capital) join the board. New product/vision: “computers for agents”—connected infrastructure with durable disks, secure connectivity, and scaling to millions of instances for production AI applications. Customer figures: more...",
+       "Used visitWebpage {\"url\":\"https://fly.io/jobs/\",\"question\":\"What current open job titles are listed, with posting links, and what links to company information, docs, pricing, security and blog appear?\"}. The results are: \n \"Current openings: Fullstack Engineer — Remote — “Read more” posting link present (URL not provided); Infrastructure Operations Engineer — Remote — “Read more” posting link present (URL not provided); Networking Engineer: Proxy and Corrosion — Remote — “Read more” posting link present (URL not provided); Platform Security Engineer — Remote (US only) — “Read more” posting link present (URL not provided). Links: Company/About https://fly.io/about; Docs https://docs.fly.io; Pricing https://fly.io/p...",
+       "Searched Google with query \"Fly.io LinkedIn headquarters company size founded\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io\",\"link\":\"https://www.linkedin.com/company/flydotio\",\"displayedLink\":\"11K+ followers\",\"snippet\":\"Information and Internet Company size 51-200 employees Headquarters Chicago, Illinois Type. Primary 321 N Clark St Chicago, Illinois, US\",\"position\":1},{\"title\":\"Fly.io Doubles Down on Computers for Agents with $25M ...\",\"link\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"displayedLink\":\"https://fly.io › news › fly-io-launches-computers-for-ag...\",\"s...",
+       "Searched Google with query \"site:fly.io pricing customers SOC 2 subprocessors AI models\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-22: Do any of your sub-processors use customer data to train or improve AI/ML models? Three exceptions, none with application ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3A...",
+       "Used visitWebpage {\"url\":\"https://fly.io/legal/security-questionnaire/\",\"question\":\"Which compliance certifications are completed, which AI providers or models and subprocessors are used, and are sales or marketing systems named?\"}. The results are: \n \"Relevant Fly.io sources: Compliance certifications/reports: https://fly.io/legal/security-questionnaire#compliance-16-which-certifications-and-reports-can-you-provide-soc-2-iso-27001-pci-dss-hipaa-penetration-test\\n\\nAI vendors/models and data access: https://fly.io/legal/security-questionnaire#compliance-10-do-you-use-ai-vendors-and-do-they-see-our-application-data-or-logs\\nAI subprocessors’ training/use of customer data: https://fly.io/legal/security-questionnaire#compliance-22-do-any-of-your...",
+       "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/fly-io\",\"question\":\"What are founding year, team size, city and country?\"}. The results are: \n \"Fly.io — Batch: Winter 2020; Team size: 48; Location: Chicago, IL, United States.\"",
+       "Used visitWebpage {\"url\":\"https://fly.io/about/\",\"question\":\"What does the product do and for whom, founding year, team count and headquarters? What links to technical blog and privacy or subprocessor pages exist?\"}. The results are: \n \"Fly.io is a developer-focused public cloud, designed to be easy to deploy on and powerful to grow on; aimed at developers. Operating/founding since 2017. The page lists 54 team members. Headquarters: not stated.\\n\\nTechnical/content links: Blog https://fly.io/blog; Infra Log https://fly.io/infra-log; Docs https://docs.fly.io\\nPrivacy/legal: Privacy policy https://fly.io/legal/privacy-policy. No subprocessor page/link is shown.\"",
+       "Used visitWebpage {\"url\":\"https://fly.io/pricing\",\"question\":\"Is public product pricing provided and what plans or usage rates are shown?\"}. The results are: \n \"Public pricing is shown at https://fly.io/pricing, with a “Start for free, pay as you grow” offer, $1 free to start, and no credit card needed. Rates/plans listed:\\n\\nMachines compute (per hour / month): shared-cpu-1x 256MB $0.0030/$2.19; shared-cpu-2x 512MB $0.0061/$4.39; shared-cpu-4x 1GB $0.0122/$8.78; shared-cpu-6x 1.5GB $0.0183/$13.16; shared-cpu-8x 2GB $0.0244/$17.55; performance-1x 2GB $0.0458/$33.00; performance-2x 4GB $0.0917/$66.00; performance-4x 8GB $0.1833/$132.01; performance-6x 1...",
+       "Used visitWebpage {\"url\":\"https://fly.io/blog\",\"question\":\"Identify at least two engineering-authored posts explaining how Fly.io is built, including authors, titles and URLs. What are newest major product announcements?\"}. The results are: \n \"Engineering-authored architecture posts: • Kurt Mackey — “Docker without Docker” — https://fly.io/blog/docker-without-docker (Fly converts Docker containers to Firecracker micro-VMs; explains why Fly does not use Docker at runtime). • Jerome Gravel-Niquet, Thomas Ptacek & Jerome Gravel-Niquet — “SSH and User-mode IP WireGuard” — https://fly.io/blog/ssh-and-user-mode-ip-wireguard (Fly’s global hardware, Anycast, WireGuard mesh, containers transformed into Firecracker micro-VMs). • Thomas Ptacek ...",
+       "Used visitWebpage {\"url\":\"https://docs.fly.io\",\"question\":\"What public product documentation sections and articles exist, and are AI model providers, CRM or marketing integrations referenced?\"}. The results are: \n \"Public documentation links/sections provided: Fly Docs – Getting Started (https://docs.fly.io/getting-started); Fly Machines (https://docs.fly.io/machines); Machines API (https://docs.fly.io/api/machines); Fly Volumes (https://docs.fly.io/volumes); Managed Postgres (https://docs.fly.io/postgres); Database & Storage Guides (https://docs.fly.io/database-storage-guides); Sprite Docs (https://docs.fly.io/sprites); Sprites API – List Connectors (https://docs.fly.io/sprites/api/connectors/list-connec...",
+       "Searched Google with query \"site:fly.io/legal/security-questionnaire \"COMPLIANCE-16\" \"SOC\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-16: Which certifications and reports can you provide (SOC 2, ISO 27001, PCI DSS, HIPAA, penetration test)?. SOC 2 Type 2 (Sept 2026), ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q...",
+       "Searched Google with query \"site:fly.io/legal/security-questionnaire \"COMPLIANCE-10\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-10: Do you use AI vendors, and do they see our application data or logs? No training; internal inference only. Fly.io does not ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3...",
+       "Used visitWebpage {\"url\":\"https://fly.io/legal/sub-processors\",\"question\":\"List AI model providers and sales, CRM and marketing vendors; what purposes do Anthropic or OpenAI serve?\"}. The results are: \n \"AI model providers: Anthropic — AI-assisted log analysis, support responses, and signup classification; OpenAI — incident summary generation; OpenRouter — AI model routing for internal tooling. Fly.io states Anthropic, OpenAI, and OpenRouter are used only for internal tooling under its AI usage policy. Sales/CRM/marketing vendors: HubSpot — customer relationship management; Snowflake — customer relationship management; Customer.io — newsletters and transactional email; Mailgun — transactional e...",
+       "Used visitWebpage {\"url\":\"https://fly.io/legal/privacy-policy\",\"question\":\"Are AI model providers or CRM and marketing systems identified, and what certifications or compliance frameworks are claimed?\"}. The results are: \n \"Relevant sources: Fly.io Sub-processors page (https://fly.io/legal/sub-processors), Privacy Policy data-sharing section (https://fly.io/legal/privacy-policy#how-we-share-the-information-we-collect), analytics/tracking sections (https://fly.io/legal/privacy-policy#analytics; https://fly.io/legal/privacy-policy#our-use-of-cookies-and-tracking; https://fly.io/legal/privacy-policy#tracking), security section (https://fly.io/legal/privacy-policy#how-fly-io-secures-your-information), Public Data Priv...",
+       "Used visitWebpage {\"url\":\"https://fly.io/blog/docker-without-docker\",\"question\":\"Who wrote this post and what technical implementation of Fly.io does it describe?\"}. The results are: \n \"Post: “Docker without Docker” by Thomas Ptacek (@tqbf), published Apr 8, 2021. It describes Fly.io’s implementation of converting OCI/Docker container images into Firecracker micro-VMs: a custom multi-tenant Docker registry; server-local containerd using an LVM2 thin pool and devmapper snapshots/cache; VM setup with loop-backed filesystems, injected init/kernel/configuration, persistent volumes, TAP networking and BPF; and a custom Rust init that mounts the filesystem, configures networking/DNS...",
+       "Used visitWebpage {\"url\":\"https://fly.io/blog/bpf-xdp-packet-filters-and-udp\",\"question\":\"Who wrote this post and what Fly.io infrastructure implementation does it explain?\"}. The results are: \n \"Author: Thomas Ptacek (@tqbf). The post explains Fly.io’s UDP networking implementation using eBPF/XDP and TC BPF: distributed service discovery updates routing maps via bpf(2); edge XDP routes UDP packets, adds proxy headers, and forwards them over WireGuard to the closest worker; worker-side TC BPF handles WireGuard limitations, while XDP on Firecracker tap devices handles reply packets. It replaces a userland AF_PACKET proxy/daemon and enables UDP applications on Fly.io.\"",
+       "Searched Google with query \"site:fly.io \"OpenAI\" \"Anthropic\" \"support\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Sub-processors\",\"link\":\"https://fly.io/legal/sub-processors/\",\"displayedLink\":\"https://fly.io › legal › sub-processors\",\"snippet\":\"Customer support communication. Discourse, United States, Customer ... Anthropic, OpenAI and OpenRouter are used only by Fly.io's internal ...\",\"date\":\"Oct 29, 2026\",\"position\":1},{\"title\":\"Deploy OpenClaw on Fly.io\",\"link\":\"https://docs.fly.io/blueprints/deploy-openclaw\",\"displayedLink\":\"https://docs.fly.io › Fly docs › Guides (Bl...",
+       "Used visitWebpage {\"url\":\"https://docs.fly.io/security/security-at-fly-io\",\"question\":\"Which completed compliance certifications or attestations are claimed, particularly SOC 2, ISO 27001, HIPAA, GDPR and PCI DSS?\"}. The results are: \n \"Relevant compliance context: Fly.io claims SOC 2 Type 2: https://fly.io/blog/soc2-the-screenshots-will-continue-until-security-improves. It provides information about running HIPAA-compliant applications, but the provided text does not explicitly confirm a completed HIPAA certification/attestation: https://docs.fly.io/about/healthcare. Compliance resources: https://fly.io/compliance and https://docs.fly.io/security/security-at-fly-io. No provided context explicitly claims completed ISO 27001, G...",
+       "Searched Google with query \"site:fly.io/legal/security-questionnaire \"SOC 2 Type 2\" \"HIPAA\" \"ISO\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-16: Which certifications and reports can you provide (SOC 2, ISO 27001, PCI DSS, HIPAA, penetration test)?. SOC 2 Type 2 (Sept 2026), ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q...",
+       "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/flydotio\",\"question\":\"What headquarters city and country, founding year and employee size are listed?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/flydotio\",\"locality\":\"Chicago, Illinois\",\"country\":\"US\",\"founded\":null,\"size\":\"51-200 employees\"}",
+       "Searched Google with query \"site:fly.io \"HubSpot\" jobs\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"... Jobs · Healthcare on Fly.io · Extensions Program · Extensions API · Merch ... HubSpot and Slack, October 2026; our PostHog organization is on ...\",\"date\":\"Oct 26, 2026\",\"position\":1},{\"title\":\"Fly.io Sub-processors\",\"link\":\"https://fly.io/legal/sub-processors/\",\"displayedLink\":\"https://fly.i...",
+       "Searched Google with query \"site:fly.io/about \"2017\" \"Scott\"\". The results are: \n {\"search_results\":[{\"title\":\"About us\",\"link\":\"https://fly.io/about/\",\"displayedLink\":\"https://fly.io › about\",\"snippet\":\"Meet the Fly.io team. We've been building a developer-focused public cloud on our own hardware since 2017, from a company spread across six continents ... Scott ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Afly.io%2Fabout%20%222017%22%20%22Scott%22&hl=en&gl=us\"}",
+       "Searched Google with query \"Fly.io founded 2017 2016 company founding year\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Doubles Down on Computers for Agents with $25M ...\",\"link\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"displayedLink\":\"https://fly.io › news › fly-io-launches-computers-for-ag...\",\"snippet\":\"For nearly a decade, Fly.io has helped developers build and run software. Fly.io just closed its strongest quarter in company history, em, co- ...\",\"date\":\"Jul 24, 2026\",\"position\":1},{\"title\":\"Fly.io IPO Timeline and Financing Details\",\"link\":\"https://for..."
+      ],
+      "hq_location": {
+       "notes": "LinkedIn explicitly identifies Chicago as headquarters; YC also lists Chicago.",
+       "value": {
+        "city": "Chicago",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/flydotio",
+        "https://www.ycombinator.com/companies/fly-io"
+       ]
+      },
+      "public_docs": {
+       "notes": "Public documentation includes getting started, Machines, the Machines API, Volumes, Postgres, Sprites and flyctl.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.fly.io"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The July 24, 2026 Series D falls within May 9, 2025–November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/news/fly-io-launches-computers-for-agents/"
+       ]
+      },
+      "founded_year": {
+       "notes": "Built In explicitly reports founded in 2017, consistent with the official site's operating history since 2017. Some private-market databases instead report 2016.",
+       "value": 2017,
+       "status": "asserted",
+       "citations": [
+        "https://www.builtinchicago.org/articles/fly-raises-12m-series-a-25m-series-b-hiring",
+        "https://fly.io/about/"
+       ]
+      },
+      "last_funding": {
+       "notes": "Announced July 24, 2026; co-led by Dell Technologies Capital and Intel Capital.",
+       "value": {
+        "date": "2026-07",
+        "stage": "Series D",
+        "amount_usd": 25000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/news/fly-io-launches-computers-for-agents/"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The dated July 24, 2026 announcement launches computers for agents, describing connected infrastructure with durable disks, secure connectivity and large-scale instance provisioning; this falls within May 9–November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/news/fly-io-launches-computers-for-agents/"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public usage-based pricing covers compute, storage, networking, Sprites and managed Postgres.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The official team page lists 54 people. YC reports 48, apparently an older count; LinkedIn's broader 51–200 band does not resolve the requested bands.",
+       "value": "51-100",
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/about/"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The current careers page lists four engineering openings and no SDR, BDR or account executive role.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/jobs/"
+       ]
+      },
+      "model_provider": {
+       "notes": "Explicitly disclosed for internal tooling, not as a proprietary model underlying the hosting platform: Anthropic supports log analysis, support responses and signup classification; OpenAI generates incident summaries; OpenRouter provides model routing.",
+       "value": "Anthropic, OpenAI and OpenRouter",
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/legal/sub-processors"
+       ]
+      },
+      "named_customers": {
+       "notes": "Named as customers in the July 24, 2026 announcement.",
+       "value": [
+        "Firecrawl",
+        "Kilocode",
+        "Plastic Labs",
+        "Phonic"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/news/fly-io-launches-computers-for-agents/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "Listed openings are Fullstack Engineer, Infrastructure Operations Engineer, Networking Engineer: Proxy and Corrosion, and Platform Security Engineer; none has a qualifying AI/ML/data-science title.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/jobs/"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The questionnaire identifies a completed SOC 2 Type 2 report dated September 2026. HIPAA application support is not treated as a certification.",
+       "value": [
+        "SOC 2"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/legal/security-questionnaire/",
+        "https://docs.fly.io/security/security-at-fly-io"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The official subprocessor list explicitly identifies HubSpot for CRM, Customer.io for newsletters and transactional email, and Mailgun for transactional email. These are direct vendor-use disclosures rather than merely supported integrations.",
+       "value": [
+        "HubSpot",
+        "Customer.io",
+        "Mailgun"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/legal/sub-processors"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Fly.io is a developer-focused public cloud for deploying and running applications and AI agents on globally distributed infrastructure.",
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/about/",
+        "https://fly.io/news/fly-io-launches-computers-for-agents/"
+       ]
+      },
+      "timeTakenInSeconds": "122.47",
+      "totalCreditsCharged": 5.7,
+      "leadership_change_12mo": {
+       "notes": "On July 24, 2026, Fly.io announced Scott Johnston as CEO and board member, with founder Kurt Mackey transitioning to an advisory role while remaining on the board.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://fly.io/news/fly-io-launches-computers-for-agents/"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "fly.io",
+  "status": "complete",
+  "result": {
+   "claygent-auto-A": {
+    "eng_blog": {
+     "notes": "Thomas Ptacek explains Fly.io's container-to-Firecracker implementation in the first post and its eBPF/XDP, UDP and WireGuard networking implementation in the second.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/blog/docker-without-docker",
+      "https://fly.io/blog/bpf-xdp-packet-filters-and-udp"
+     ]
+    },
+    "reasoning": "Most findings are supported by current first-party pages, including the July 2026 funding, product and CEO announcement, the live careers page, documentation and October 2026 legal disclosures. Headquarters is corroborated by LinkedIn and YC. Employee band is derived from the official team roster rather than an incompatible LinkedIn band. Founding year has conflicting secondary reports, disclosed in the notes. AI providers are explicitly limited to internal tooling rather than being represented as models powering Fly.io's core hosting service.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Searched Google with query \"Fly.io company funding employees headquarters careers pricing customers\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Doubles Down on Computers for Agents with $25M ...\",\"link\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"displayedLink\":\"https://fly.io › news › fly-io-launches-computers-for-ag...\",\"snippet\":\"Fly.io Doubles Down on Computers for Agents with $25M to Deliver the Next Generation of AI Infrastructure. July 24, 2026. Funding, customer ...\",\"date\":\"Jul 24, 2026\",\"position\":1},{\"title\":\"Fly Jobs\",\"link\":\"https://fly.io/jobs/\",\"displayedLink\":\"https://...",
+     "Used visitWebpage {\"url\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"question\":\"What funding round, date, amount, new product launch, customers and executive changes are announced?\"}. The results are: \n \"Fly.io press release (July 24, 2026): Announces $25 million Series D funding, co-led by Dell Technologies Capital and Intel Capital, with participation from Andreessen Horowitz, EQT, Geodesic, and YC. Martin Casado (Andreessen Horowitz) and Daniel Docter (Dell Technologies Capital) join the board. New product/vision: “computers for agents”—connected infrastructure with durable disks, secure connectivity, and scaling to millions of instances for production AI applications. Customer figures: more...",
+     "Used visitWebpage {\"url\":\"https://fly.io/jobs/\",\"question\":\"What current open job titles are listed, with posting links, and what links to company information, docs, pricing, security and blog appear?\"}. The results are: \n \"Current openings: Fullstack Engineer — Remote — “Read more” posting link present (URL not provided); Infrastructure Operations Engineer — Remote — “Read more” posting link present (URL not provided); Networking Engineer: Proxy and Corrosion — Remote — “Read more” posting link present (URL not provided); Platform Security Engineer — Remote (US only) — “Read more” posting link present (URL not provided). Links: Company/About https://fly.io/about; Docs https://docs.fly.io; Pricing https://fly.io/p...",
+     "Searched Google with query \"Fly.io LinkedIn headquarters company size founded\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io\",\"link\":\"https://www.linkedin.com/company/flydotio\",\"displayedLink\":\"11K+ followers\",\"snippet\":\"Information and Internet Company size 51-200 employees Headquarters Chicago, Illinois Type. Primary 321 N Clark St Chicago, Illinois, US\",\"position\":1},{\"title\":\"Fly.io Doubles Down on Computers for Agents with $25M ...\",\"link\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"displayedLink\":\"https://fly.io › news › fly-io-launches-computers-for-ag...\",\"s...",
+     "Searched Google with query \"site:fly.io pricing customers SOC 2 subprocessors AI models\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-22: Do any of your sub-processors use customer data to train or improve AI/ML models? Three exceptions, none with application ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3A...",
+     "Used visitWebpage {\"url\":\"https://fly.io/legal/security-questionnaire/\",\"question\":\"Which compliance certifications are completed, which AI providers or models and subprocessors are used, and are sales or marketing systems named?\"}. The results are: \n \"Relevant Fly.io sources: Compliance certifications/reports: https://fly.io/legal/security-questionnaire#compliance-16-which-certifications-and-reports-can-you-provide-soc-2-iso-27001-pci-dss-hipaa-penetration-test\\n\\nAI vendors/models and data access: https://fly.io/legal/security-questionnaire#compliance-10-do-you-use-ai-vendors-and-do-they-see-our-application-data-or-logs\\nAI subprocessors’ training/use of customer data: https://fly.io/legal/security-questionnaire#compliance-22-do-any-of-your...",
+     "Used visitWebpage {\"url\":\"https://www.ycombinator.com/companies/fly-io\",\"question\":\"What are founding year, team size, city and country?\"}. The results are: \n \"Fly.io — Batch: Winter 2020; Team size: 48; Location: Chicago, IL, United States.\"",
+     "Used visitWebpage {\"url\":\"https://fly.io/about/\",\"question\":\"What does the product do and for whom, founding year, team count and headquarters? What links to technical blog and privacy or subprocessor pages exist?\"}. The results are: \n \"Fly.io is a developer-focused public cloud, designed to be easy to deploy on and powerful to grow on; aimed at developers. Operating/founding since 2017. The page lists 54 team members. Headquarters: not stated.\\n\\nTechnical/content links: Blog https://fly.io/blog; Infra Log https://fly.io/infra-log; Docs https://docs.fly.io\\nPrivacy/legal: Privacy policy https://fly.io/legal/privacy-policy. No subprocessor page/link is shown.\"",
+     "Used visitWebpage {\"url\":\"https://fly.io/pricing\",\"question\":\"Is public product pricing provided and what plans or usage rates are shown?\"}. The results are: \n \"Public pricing is shown at https://fly.io/pricing, with a “Start for free, pay as you grow” offer, $1 free to start, and no credit card needed. Rates/plans listed:\\n\\nMachines compute (per hour / month): shared-cpu-1x 256MB $0.0030/$2.19; shared-cpu-2x 512MB $0.0061/$4.39; shared-cpu-4x 1GB $0.0122/$8.78; shared-cpu-6x 1.5GB $0.0183/$13.16; shared-cpu-8x 2GB $0.0244/$17.55; performance-1x 2GB $0.0458/$33.00; performance-2x 4GB $0.0917/$66.00; performance-4x 8GB $0.1833/$132.01; performance-6x 1...",
+     "Used visitWebpage {\"url\":\"https://fly.io/blog\",\"question\":\"Identify at least two engineering-authored posts explaining how Fly.io is built, including authors, titles and URLs. What are newest major product announcements?\"}. The results are: \n \"Engineering-authored architecture posts: • Kurt Mackey — “Docker without Docker” — https://fly.io/blog/docker-without-docker (Fly converts Docker containers to Firecracker micro-VMs; explains why Fly does not use Docker at runtime). • Jerome Gravel-Niquet, Thomas Ptacek & Jerome Gravel-Niquet — “SSH and User-mode IP WireGuard” — https://fly.io/blog/ssh-and-user-mode-ip-wireguard (Fly’s global hardware, Anycast, WireGuard mesh, containers transformed into Firecracker micro-VMs). • Thomas Ptacek ...",
+     "Used visitWebpage {\"url\":\"https://docs.fly.io\",\"question\":\"What public product documentation sections and articles exist, and are AI model providers, CRM or marketing integrations referenced?\"}. The results are: \n \"Public documentation links/sections provided: Fly Docs – Getting Started (https://docs.fly.io/getting-started); Fly Machines (https://docs.fly.io/machines); Machines API (https://docs.fly.io/api/machines); Fly Volumes (https://docs.fly.io/volumes); Managed Postgres (https://docs.fly.io/postgres); Database & Storage Guides (https://docs.fly.io/database-storage-guides); Sprite Docs (https://docs.fly.io/sprites); Sprites API – List Connectors (https://docs.fly.io/sprites/api/connectors/list-connec...",
+     "Searched Google with query \"site:fly.io/legal/security-questionnaire \"COMPLIANCE-16\" \"SOC\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-16: Which certifications and reports can you provide (SOC 2, ISO 27001, PCI DSS, HIPAA, penetration test)?. SOC 2 Type 2 (Sept 2026), ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q...",
+     "Searched Google with query \"site:fly.io/legal/security-questionnaire \"COMPLIANCE-10\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-10: Do you use AI vendors, and do they see our application data or logs? No training; internal inference only. Fly.io does not ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3...",
+     "Used visitWebpage {\"url\":\"https://fly.io/legal/sub-processors\",\"question\":\"List AI model providers and sales, CRM and marketing vendors; what purposes do Anthropic or OpenAI serve?\"}. The results are: \n \"AI model providers: Anthropic — AI-assisted log analysis, support responses, and signup classification; OpenAI — incident summary generation; OpenRouter — AI model routing for internal tooling. Fly.io states Anthropic, OpenAI, and OpenRouter are used only for internal tooling under its AI usage policy. Sales/CRM/marketing vendors: HubSpot — customer relationship management; Snowflake — customer relationship management; Customer.io — newsletters and transactional email; Mailgun — transactional e...",
+     "Used visitWebpage {\"url\":\"https://fly.io/legal/privacy-policy\",\"question\":\"Are AI model providers or CRM and marketing systems identified, and what certifications or compliance frameworks are claimed?\"}. The results are: \n \"Relevant sources: Fly.io Sub-processors page (https://fly.io/legal/sub-processors), Privacy Policy data-sharing section (https://fly.io/legal/privacy-policy#how-we-share-the-information-we-collect), analytics/tracking sections (https://fly.io/legal/privacy-policy#analytics; https://fly.io/legal/privacy-policy#our-use-of-cookies-and-tracking; https://fly.io/legal/privacy-policy#tracking), security section (https://fly.io/legal/privacy-policy#how-fly-io-secures-your-information), Public Data Priv...",
+     "Used visitWebpage {\"url\":\"https://fly.io/blog/docker-without-docker\",\"question\":\"Who wrote this post and what technical implementation of Fly.io does it describe?\"}. The results are: \n \"Post: “Docker without Docker” by Thomas Ptacek (@tqbf), published Apr 8, 2021. It describes Fly.io’s implementation of converting OCI/Docker container images into Firecracker micro-VMs: a custom multi-tenant Docker registry; server-local containerd using an LVM2 thin pool and devmapper snapshots/cache; VM setup with loop-backed filesystems, injected init/kernel/configuration, persistent volumes, TAP networking and BPF; and a custom Rust init that mounts the filesystem, configures networking/DNS...",
+     "Used visitWebpage {\"url\":\"https://fly.io/blog/bpf-xdp-packet-filters-and-udp\",\"question\":\"Who wrote this post and what Fly.io infrastructure implementation does it explain?\"}. The results are: \n \"Author: Thomas Ptacek (@tqbf). The post explains Fly.io’s UDP networking implementation using eBPF/XDP and TC BPF: distributed service discovery updates routing maps via bpf(2); edge XDP routes UDP packets, adds proxy headers, and forwards them over WireGuard to the closest worker; worker-side TC BPF handles WireGuard limitations, while XDP on Firecracker tap devices handles reply packets. It replaces a userland AF_PACKET proxy/daemon and enables UDP applications on Fly.io.\"",
+     "Searched Google with query \"site:fly.io \"OpenAI\" \"Anthropic\" \"support\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Sub-processors\",\"link\":\"https://fly.io/legal/sub-processors/\",\"displayedLink\":\"https://fly.io › legal › sub-processors\",\"snippet\":\"Customer support communication. Discourse, United States, Customer ... Anthropic, OpenAI and OpenRouter are used only by Fly.io's internal ...\",\"date\":\"Oct 29, 2026\",\"position\":1},{\"title\":\"Deploy OpenClaw on Fly.io\",\"link\":\"https://docs.fly.io/blueprints/deploy-openclaw\",\"displayedLink\":\"https://docs.fly.io › Fly docs › Guides (Bl...",
+     "Used visitWebpage {\"url\":\"https://docs.fly.io/security/security-at-fly-io\",\"question\":\"Which completed compliance certifications or attestations are claimed, particularly SOC 2, ISO 27001, HIPAA, GDPR and PCI DSS?\"}. The results are: \n \"Relevant compliance context: Fly.io claims SOC 2 Type 2: https://fly.io/blog/soc2-the-screenshots-will-continue-until-security-improves. It provides information about running HIPAA-compliant applications, but the provided text does not explicitly confirm a completed HIPAA certification/attestation: https://docs.fly.io/about/healthcare. Compliance resources: https://fly.io/compliance and https://docs.fly.io/security/security-at-fly-io. No provided context explicitly claims completed ISO 27001, G...",
+     "Searched Google with query \"site:fly.io/legal/security-questionnaire \"SOC 2 Type 2\" \"HIPAA\" \"ISO\"\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"COMPLIANCE-16: Which certifications and reports can you provide (SOC 2, ISO 27001, PCI DSS, HIPAA, penetration test)?. SOC 2 Type 2 (Sept 2026), ...\",\"date\":\"Oct 26, 2026\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q...",
+     "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/flydotio\",\"question\":\"What headquarters city and country, founding year and employee size are listed?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/flydotio\",\"locality\":\"Chicago, Illinois\",\"country\":\"US\",\"founded\":null,\"size\":\"51-200 employees\"}",
+     "Searched Google with query \"site:fly.io \"HubSpot\" jobs\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Security & Compliance Questionnaire\",\"link\":\"https://fly.io/legal/security-questionnaire/\",\"displayedLink\":\"https://fly.io › legal › security-questionnaire\",\"snippet\":\"... Jobs · Healthcare on Fly.io · Extensions Program · Extensions API · Merch ... HubSpot and Slack, October 2026; our PostHog organization is on ...\",\"date\":\"Oct 26, 2026\",\"position\":1},{\"title\":\"Fly.io Sub-processors\",\"link\":\"https://fly.io/legal/sub-processors/\",\"displayedLink\":\"https://fly.i...",
+     "Searched Google with query \"site:fly.io/about \"2017\" \"Scott\"\". The results are: \n {\"search_results\":[{\"title\":\"About us\",\"link\":\"https://fly.io/about/\",\"displayedLink\":\"https://fly.io › about\",\"snippet\":\"Meet the Fly.io team. We've been building a developer-focused public cloud on our own hardware since 2017, from a company spread across six continents ... Scott ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Afly.io%2Fabout%20%222017%22%20%22Scott%22&hl=en&gl=us\"}",
+     "Searched Google with query \"Fly.io founded 2017 2016 company founding year\". The results are: \n {\"search_results\":[{\"title\":\"Fly.io Doubles Down on Computers for Agents with $25M ...\",\"link\":\"https://fly.io/news/fly-io-launches-computers-for-agents/\",\"displayedLink\":\"https://fly.io › news › fly-io-launches-computers-for-ag...\",\"snippet\":\"For nearly a decade, Fly.io has helped developers build and run software. Fly.io just closed its strongest quarter in company history, em, co- ...\",\"date\":\"Jul 24, 2026\",\"position\":1},{\"title\":\"Fly.io IPO Timeline and Financing Details\",\"link\":\"https://for..."
+    ],
+    "hq_location": {
+     "notes": "LinkedIn explicitly identifies Chicago as headquarters; YC also lists Chicago.",
+     "value": {
+      "city": "Chicago",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/flydotio",
+      "https://www.ycombinator.com/companies/fly-io"
+     ]
+    },
+    "public_docs": {
+     "notes": "Public documentation includes getting started, Machines, the Machines API, Volumes, Postgres, Sprites and flyctl.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.fly.io"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The July 24, 2026 Series D falls within May 9, 2025–November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/news/fly-io-launches-computers-for-agents/"
+     ]
+    },
+    "founded_year": {
+     "notes": "Built In explicitly reports founded in 2017, consistent with the official site's operating history since 2017. Some private-market databases instead report 2016.",
+     "value": 2017,
+     "status": "asserted",
+     "citations": [
+      "https://www.builtinchicago.org/articles/fly-raises-12m-series-a-25m-series-b-hiring",
+      "https://fly.io/about/"
+     ]
+    },
+    "last_funding": {
+     "notes": "Announced July 24, 2026; co-led by Dell Technologies Capital and Intel Capital.",
+     "value": {
+      "date": "2026-07",
+      "stage": "Series D",
+      "amount_usd": 25000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/news/fly-io-launches-computers-for-agents/"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The dated July 24, 2026 announcement launches computers for agents, describing connected infrastructure with durable disks, secure connectivity and large-scale instance provisioning; this falls within May 9–November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/news/fly-io-launches-computers-for-agents/"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public usage-based pricing covers compute, storage, networking, Sprites and managed Postgres.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The official team page lists 54 people. YC reports 48, apparently an older count; LinkedIn's broader 51–200 band does not resolve the requested bands.",
+     "value": "51-100",
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/about/"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The current careers page lists four engineering openings and no SDR, BDR or account executive role.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/jobs/"
+     ]
+    },
+    "model_provider": {
+     "notes": "Explicitly disclosed for internal tooling, not as a proprietary model underlying the hosting platform: Anthropic supports log analysis, support responses and signup classification; OpenAI generates incident summaries; OpenRouter provides model routing.",
+     "value": "Anthropic, OpenAI and OpenRouter",
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/legal/sub-processors"
+     ]
+    },
+    "named_customers": {
+     "notes": "Named as customers in the July 24, 2026 announcement.",
+     "value": [
+      "Firecrawl",
+      "Kilocode",
+      "Plastic Labs",
+      "Phonic"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/news/fly-io-launches-computers-for-agents/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "Listed openings are Fullstack Engineer, Infrastructure Operations Engineer, Networking Engineer: Proxy and Corrosion, and Platform Security Engineer; none has a qualifying AI/ML/data-science title.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/jobs/"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The questionnaire identifies a completed SOC 2 Type 2 report dated September 2026. HIPAA application support is not treated as a certification.",
+     "value": [
+      "SOC 2"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/legal/security-questionnaire/",
+      "https://docs.fly.io/security/security-at-fly-io"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The official subprocessor list explicitly identifies HubSpot for CRM, Customer.io for newsletters and transactional email, and Mailgun for transactional email. These are direct vendor-use disclosures rather than merely supported integrations.",
+     "value": [
+      "HubSpot",
+      "Customer.io",
+      "Mailgun"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/legal/sub-processors"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Fly.io is a developer-focused public cloud for deploying and running applications and AI agents on globally distributed infrastructure.",
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/about/",
+      "https://fly.io/news/fly-io-launches-computers-for-agents/"
+     ]
+    },
+    "timeTakenInSeconds": "122.47",
+    "totalCreditsCharged": 5.7,
+    "leadership_change_12mo": {
+     "notes": "On July 24, 2026, Fly.io announced Scott Johnston as CEO and board member, with founder Kurt Mackey transitioning to an advisory role while remaining on the board.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://fly.io/news/fly-io-launches-computers-for-agents/"
+     ]
+    }
+   }
+  }
+ }
+}

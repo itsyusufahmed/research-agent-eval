@@ -1,0 +1,708 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9d9efc58fe9661e1",
+  "interaction_id": "trun_142119f6a1b4439e9d9efc58fe9661e1",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "neostella.com"
+  },
+  "created_at": "2026-11-10T18:48:10.868868Z",
+  "modified_at": "2026-11-10T18:53:31.721076Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9d9efc58fe9661e1",
+   "interaction_id": "trun_142119f6a1b4439e9d9efc58fe9661e1",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "neostella.com"
+   },
+   "created_at": "2026-11-10T18:48:10.868868Z",
+   "modified_at": "2026-11-10T18:53:31.721076Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "## fast facts.",
+        "founded in 2019",
+        "in Milwaukee, WI. 250+ employees",
+        "across the globe. 500+ customers served",
+        "Across the legal industry. 4 global offices",
+        "Milwaukee, Wisconsin | Chicago, Illinois | Medell\u00edn, Colombia | Guadalajara, Mexico",
+        "EXPLORE"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s official About page states \u201cfounded in 2019.\u201d",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "## Compliance",
+        "SOC 2 Type II",
+        "HIPAA",
+        "GDPR",
+        "US Data Privacy"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s Trust Center Compliance section names SOC 2 Type II, HIPAA, and GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "## neostella offices",
+        "### Neostella, Inc. HQ Milwaukee",
+        "200 N Jefferson Street",
+        "Milwaukee, Wisconsin, USA",
+        "\\+1-414-215-0980"
+       ]
+      }
+     ],
+     "reasoning": "The official About page labels Milwaukee as HQ and gives its address as Milwaukee, Wisconsin, USA.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blogs - Neostella",
+       "url": "https://neostella.com/resources/blogs",
+       "excerpts": [
+        "# insights. reads. wisdom.",
+        "* [5 questions to ask before automating a legal workflow](https://neostella.com/blogs/legal-automation-questions/)",
+        "  ARTICLE",
+        "  ## [5 questions to ask before automating a legal workflow](https://neostella.com/blogs/legal-automation-questions/)",
+        "  November 5, 2026",
+        "* [how to reduce manual follow-up with better workflow rules](https://neostella.com/blogs/how-to-reduce-manual-follow-up-with-better-workflow-rules/)",
+        "  ## [how to reduce manual follow-up with better workflow rules](https://neostella.com/blogs/how-to-reduce-manual-follow-up-with-better-workflow-rules/)",
+        "  November 4, 2026",
+        "* [5 Signs Your Law Firm\u2019s Technology Is Creating More Work Than It Removes](https://neostella.com/blogs/5-signs-your-law-firms-technology-is-creating-more-work-than-it-removes/)",
+        "  ## [5 Signs Your Law Firm\u2019s Technology Is Creating More Work Than It Removes](https://neostella.com/blogs/5-signs-your-law-firms-technology-is-creating-more-work-than-it-removes/)",
+        "  October 29, 2026",
+        "* [before defining tomorrow: the story behind neostella](https://neostella.com/blogs/why-we-built-neostella/)",
+        "  ## [before defining tomorrow: the story behind neostella](https://neostella.com/blogs/why-we-built-neostella/)",
+        "1 [2](https://neostella.com/resources/blogs?query-6-page=2) [3](https://neostella.com/resources/blogs?query-6-page=3) \u2026 [14](https://neostella.com/resources/blogs?query-6-page=14)",
+        "[\u2192](https://neostella.com/resources/blogs/?query-6-page=2)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index lists general legal-operations, workflow, technology, and company-story articles; it does not show the required engineering/technical blog with at least two build-focused posts by engineers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Legal Case Management Software for Enterprise Firms | Neostella",
+       "url": "https://neostella.com/platform",
+       "excerpts": [
+        "Connect cases, documents, workflows, communications, reporting, and AI in one platform built for growing and enterprise legal teams."
+       ]
+      }
+     ],
+     "reasoning": "The platform page describes a connected platform bringing cases, documents, workflows, communications, reporting, and AI together for growing and enterprise legal teams.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella#a:about",
+       "excerpts": [
+        "Name: Neostella | Short Description: Provider of RPA, BPM, application integration, and more services | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 |"
+       ]
+      }
+     ],
+     "reasoning": "The Neostella company profile reports an official employee count of 313, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "march 2026 release notes \u2013 Neostella Support Center",
+       "url": "https://help.neostella.com/hc/en-us/articles/38853128362903-march-2026-release-notes",
+       "excerpts": [
+        "Automated OpenAI Integration Setup:** OpenAI credentials are now automatically configured during tenant provisioning, simplifying AI feature activation."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s March 2026 product release notes say OpenAI credentials are automatically configured during tenant provisioning to activate AI features, identifying OpenAI as a provider used by the product.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Neostella Pricing | Legal Case Management Software",
+       "url": "https://neostella.com/pricing",
+       "excerpts": [
+        "# all fair, no catch.",
+        "Packages that grow with your firm, giving you only what you need.",
+        "## we keep it simple. we keep it fair.",
+        "Transparent legal case management software pricing you can trust.",
+        "See how it adds up",
+        "## frequently asked questions.",
+        "do you offer alternative pricing models?",
+        "Case-based pricing is also available for firms with fluctuating volume or client-pass-through needs.",
+        "[Contact us](https://neostella.com/contact/) to explore whether this legal case management software pricing is a fit for your practice. how do document storage limits work?",
+        "Storage is pooled across your entire team. Each user license includes 20GB of storage, which combines into one shared total.",
+        "For example, if you have 100 users, your firm receives 2TB of total shared storage. Any user can use more than 20GB as long as your firm stays within the overall limit. what happens if we go over document storage?"
+       ]
+      }
+     ],
+     "reasoning": "The company has a public legal-software pricing page describing its packages, pricing model, and related FAQ.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://platform.tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella?utm_source=parallel&utm_medium=ai#a:about",
+       "excerpts": [
+        "Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B"
+       ]
+      }
+     ],
+     "reasoning": "The Neostella profile lists the latest funding amount as USD 10,700,000.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Enterprise Legal Case Management Software | Neostella",
+       "url": "https://neostella.com/",
+       "excerpts": [
+        "Donna Law Marston** , Firm Administrator, Aylstock, Witkin, Kreis & Overholtz"
+       ]
+      },
+      {
+       "title": "Neostella Launches the Legal Industry\u2019s First Case Management Platform That Connects All Legal Tools",
+       "url": "https://www.businesswire.com/news/home/20251204063220/en/Neostella-Launches-the-Legal-Industrys-First-Case-Management-Platform-That-Connects-All-Legal-Tools",
+       "excerpts": [
+        "\u201cNeostella has been a trusted partner, committed to supporting our goals and growth,\u201d said Aaron Jophlin, Managing Partner at Bell Legal Group."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s customer testimonial identifies Aylstock, Witkin, Kreis & Overholtz, and its platform-launch announcement quotes Bell Legal Group\u2019s managing partner as a customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://platform.tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella?utm_source=parallel&utm_medium=ai#a:about",
+       "excerpts": [
+        "Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B"
+       ]
+      }
+     ],
+     "reasoning": "The Neostella profile gives the latest round date as May 23, 2025; the requested YYYY-MM representation is 2025-05.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/subprocessors",
+       "excerpts": [
+        "## Subprocessors",
+        "|Amazon Web Services \u2022 Cloud provider United States Cloud Infrastructure |",
+        "| --- |",
+        "|Logo for Microsoft 365 Microsoft 365 \u2022 Email, document collaboration, productivity tools United States |",
+        "|Zendesk \u2022 Customer support and ticketing United States Customer support and ticketing |",
+        "|Logo for Nylas Nylas \u2022 Email, calendar, and contacts APIs United States Email, calendar, and contacts APIs |",
+        "|Logo for Svix Svix \u2022 Webhook delivery & event infrastructure United States Webhook delivery & event infrastructure |",
+        "|Salesforce \u2022 Sales United States CRM and sales automation platform |",
+        "|DocuSign \u2022 Document management United States Electronic signatures & workflows |",
+        "|Hubspot \u2022 CRM, marketing & sales automation United State CRM, marketing & sales automation |",
+        "|SendGrid (Twilio) SendGrid (Twilio) \u2022 Transactional email delivery United States Transactional email delivery |",
+        "1-9 of 9 results"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center subprocessor list identifies Salesforce as CRM and sales automation and Hubspot as CRM, marketing, and sales automation.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Samm Karshenas",
+       "url": "https://linkedin.com/in/samm-karshenas",
+       "excerpts": [
+        "title: VP, Partner Apps start date year: 2026 start date month: 4 start date: 2026-04-01"
+       ]
+      }
+     ],
+     "reasoning": "Samm Karshenas\u2019s profile lists a current Neostella VP, Partner Apps role starting April 1, 2026, within the 12-month window.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Neostella - Current Openings",
+       "url": "https://apply.workable.com/neostella",
+       "excerpts": [
+        "## Job Openings",
+        "10 jobs",
+        "Workplace type",
+        "Location",
+        "Work type",
+        "* [](https://apply.workable.com/neostella/j/1F8EA2E35E/)",
+        "  ### React Developer",
+        "  Posted 16 days ago",
+        "  **Hybrid**",
+        "  Guadalajara, Jalisco, Mexico",
+        "  Medell\u00edn, Medellin, Colombia",
+        "  Research & Development Full time Posted 16 days ago",
+        "* [](https://apply.workable.com/neostella/j/2546F699BA/)",
+        "  ### Regional Events Manager",
+        "  Milwaukee, Wisconsin, United States",
+        "  Sales & Marketing Full time Posted 16 days ago",
+        "* [](https://apply.workable.com/neostella/j/A05F90CF69/)",
+        "  ### Python Developer",
+        "* [](https://apply.workable.com/neostella/j/DC5A31C815/)",
+        "  ### Senior Python Developer",
+        "  Posted 17 days ago",
+        "  Cebu City, Cebu, Philippines",
+        "  Research & Development Posted 17 days ago",
+        "* [](https://apply.workable.com/neostella/j/37EFC428AF/)",
+        "  ### Senior React Developer",
+        "  Research & Development Full time Posted 17 days ago",
+        "* [](https://apply.workable.com/neostella/j/B7FC96C4C0/)",
+        "  ### Senior Media Designer",
+        "  Posted 23 days ago",
+        "  Sales & Marketing Full time Posted 23 days ago",
+        "* [](https://apply.workable.com/neostella/j/3BE292C915/)",
+        "  ### Communications Designer",
+        "* [](https://apply.workable.com/neostella/j/1E28C381FD/)",
+        "  ### Director, Business Development Representatives",
+        "  Posted about 1 month ago",
+        "  Chicago, Illinois, United States",
+        "  Sales & Marketing Full time Posted about 1 month ago",
+        "* [](https://apply.workable.com/neostella/j/16BD1602B3/)",
+        "  ### Technical Writer",
+        "  Customer Success & Support Full time Posted about 1 month ago",
+        "* [](https://apply.workable.com/neostella/j/8A9EB63ED0/)",
+        "  ### Account Executive",
+        "  Posted 2 months ago",
+        "  Sales & Marketing Full time Posted 2 months ago",
+        "[View website](https://www.neostella.com/)"
+       ]
+      }
+     ],
+     "reasoning": "The current Workable board lists ten open jobs, and none of the listed titles is an AI, ML, or data-science role.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://platform.tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella?utm_source=parallel&utm_medium=ai#a:about",
+       "excerpts": [
+        "Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B"
+       ]
+      }
+     ],
+     "reasoning": "The Neostella profile identifies the latest round as Series B.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Neostella Support Center",
+       "url": "https://help.neostella.com/hc/en-us/",
+       "excerpts": [
+        "## Browse Topics",
+        "neostella - general",
+        "* [notifications](https://help.neostella.com/hc/en-us/sections/38823807472535-notifications)",
+        "* [Neostella Add-In Document generator](https://help.neostella.com/hc/en-us/sections/39098253700119-Neostella-Add-In-Document-generator)",
+        "neostella - control center",
+        "* [process studio - stages](https://help.neostella.com/hc/en-us/sections/39929806143639-process-studio-stages)",
+        "* [finance - invoice](https://help.neostella.com/hc/en-us/sections/39833403868695-finance-invoice)",
+        "* [finance - time](https://help.neostella.com/hc/en-us/sections/39827014221335-finance-time)",
+        "* [access - partners](https://help.neostella.com/hc/en-us/sections/39825594227863-access-partners)",
+        "* [access](https://help.neostella.com/hc/en-us/sections/38862011180567-access)",
+        "* [access - user activity](https://help.neostella.com/hc/en-us/sections/38987244638743-access-user-activity)",
+        "* [access - user](https://help.neostella.com/hc/en-us/sections/39020039698711-access-user)",
+        "* [access - groups](https://help.neostella.com/hc/en-us/sections/38998931959447-access-groups)",
+        "* [access - permission sets](https://help.neostella.com/hc/en-us/sections/39021511581591-access-permission-sets)",
+        "* [access - roles](https://help.neostella.com/hc/en-us/sections/38999839808407-access-roles)",
+        "* [dashboard](https://help.neostella.com/hc/en-us/sections/38906932296855-dashboard)",
+        "* [account](https://help.neostella.com/hc/en-us/sections/38173083314967-account)",
+        "* [account - general settings](https://help.neostella.com/hc/en-us/sections/38173761961495-account-general-settings)",
+        "* [account - entities](https://help.neostella.com/hc/en-us/sections/38174596524311-account-entities)",
+        "* [account - offices](https://help.neostella.com/hc/en-us/sections/38186087924119-account-offices)",
+        "* [account - tags](https://help.neostella.com/hc/en-us/sections/38186477224215-account-tags)",
+        "* [account - translations](https://help.neostella.com/hc/en-us/sections/38191661775383-account-translations)",
+        "* [account - webhooks](https://help.neostella.com/hc/en-us/sections/43339593325463-account-webhooks)",
+        "* [Schema](https://help.neostella.com/hc/en-us/sections/37655419099799-Schema)",
+        "* [Schema - Data](https://help.neostella.com/hc/en-us/sections/37650817199895-Schema-Data)",
+        "* [Schema - Forms](https://help.neostella.com/hc/en-us/sections/37696098960023-Schema-Forms)",
+        "* [Schemas - activity Feed](https://help.neostella.com/hc/en-us/sections/37939172438423-Schemas-activity-Feed)",
+        "* [Process Studio - Automations](https://help.neostella.com/hc/en-us/sections/37569684720663-Process-Studio-Automations)",
+        "* [process studio - workflows](https://help.neostella.com/hc/en-us/sections/38111282297111-process-studio-workflows)",
+        "* [documents](https://help.neostella.com/hc/en-us/sections/37787085622295-documents)",
+        "* [documents - templates](https://help.neostella.com/hc/en-us/sections/37801351465751-documents-templates)",
+        "* [documents - document settings](https://help.neostella.com/hc/en-us/sections/37802337360407-documents-document-settings)",
+        "* [documents - folder structures](https://help.neostella.com/hc/en-us/sections/38273585105943-documents-folder-structures)",
+        "neostella - cases - intake",
+        "* [Intake](https://help.neostella.com/hc/en-us/sections/39928962156567-Intake)",
+        "* [Leads](https://help.neostella.com/hc/en-us/sections/39928908070039-Leads)",
+        "* [contact](https://help.neostella.com/hc/en-us/sections/39886804658455-contact)",
+        "* [projects](https://help.neostella.com/hc/en-us/sections/39880801750807-projects)",
+        "* [messages](https://help.neostella.com/hc/en-us/sections/39095055776023-messages)",
+        "* [activity](https://help.neostella.com/hc/en-us/sections/38908810341143-activity)",
+        "* [communication](https://help.neostella.com/hc/en-us/sections/38862179591575-communication)",
+        "* [tasks](https://help.neostella.com/hc/en-us/sections/38267231809175-tasks)",
+        "* [documents](https://help.neostella.com/hc/en-us/sections/38853007815831-documents)",
+        "* [reports](https://help.neostella.com/hc/en-us/sections/38449169079447-reports)",
+        "* [explore](https://help.neostella.com/hc/en-us/sections/38908927091351-explore)",
+        "integrations solutions",
+        "* [general platform](https://help.neostella.com/hc/en-us/sections/43135794286743-general-platform)",
+        "* [integrations](https://help.neostella.com/hc/en-us/sections/43135874852247-integrations)",
+        "technical reference",
+        "* [Technical Reference](https://help.neostella.com/hc/en-us/sections/37104332142743-Technical-Reference)",
+        "resources & releases",
+        "* [Support Information](https://help.neostella.com/hc/en-us/sections/26927771821079-Support-Information)",
+        "* [Release Notes](https://help.neostella.com/hc/en-us/sections/25195091012887-Release-Notes)",
+        "legacy documentation",
+        "* [Legacy Documentation](https://help.neostella.com/hc/en-us/sections/42815598970007-Legacy-Documentation)"
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s public Support Center has numerous product help topics, integrations resources, technical reference materials, and release notes.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Neostella | Neostella Company",
+       "url": "https://neostella.com/about-us",
+       "excerpts": [
+        "## neostella offices",
+        "### Neostella, Inc. HQ Milwaukee",
+        "200 N Jefferson Street",
+        "Milwaukee, Wisconsin, USA",
+        "\\+1-414-215-0980"
+       ]
+      }
+     ],
+     "reasoning": "The official About page explicitly labels the Milwaukee office as Neostella, Inc. HQ.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "neostella hosts legal conference \u201cneosummit.\" - Neostella",
+       "url": "https://neostella.com/news/neostella-hosts-legal-conference-neosummit",
+       "excerpts": [
+        "May 15, 2026",
+        "introduced brand new, industry-defining platform capabilities designed to help high-volume firms improve visibility, consistency, and connection across their operations."
+       ]
+      }
+     ],
+     "reasoning": "Neostella\u2019s May 15, 2026 announcement says it introduced new platform capabilities, which is within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Neostella - Current Openings",
+       "url": "https://apply.workable.com/neostella",
+       "excerpts": [
+        "## Job Openings",
+        "10 jobs",
+        "Workplace type",
+        "Location",
+        "Work type",
+        "* [](https://apply.workable.com/neostella/j/1F8EA2E35E/)",
+        "  ### React Developer",
+        "  Posted 16 days ago",
+        "  **Hybrid**",
+        "  Guadalajara, Jalisco, Mexico",
+        "  Medell\u00edn, Medellin, Colombia",
+        "  Research & Development Full time Posted 16 days ago",
+        "* [](https://apply.workable.com/neostella/j/2546F699BA/)",
+        "  ### Regional Events Manager",
+        "  Milwaukee, Wisconsin, United States",
+        "  Sales & Marketing Full time Posted 16 days ago",
+        "* [](https://apply.workable.com/neostella/j/A05F90CF69/)",
+        "  ### Python Developer",
+        "* [](https://apply.workable.com/neostella/j/DC5A31C815/)",
+        "  ### Senior Python Developer",
+        "  Posted 17 days ago",
+        "  Cebu City, Cebu, Philippines",
+        "  Research & Development Posted 17 days ago",
+        "* [](https://apply.workable.com/neostella/j/37EFC428AF/)",
+        "  ### Senior React Developer",
+        "  Research & Development Full time Posted 17 days ago",
+        "* [](https://apply.workable.com/neostella/j/B7FC96C4C0/)",
+        "  ### Senior Media Designer",
+        "  Posted 23 days ago",
+        "  Sales & Marketing Full time Posted 23 days ago",
+        "* [](https://apply.workable.com/neostella/j/3BE292C915/)",
+        "  ### Communications Designer",
+        "* [](https://apply.workable.com/neostella/j/1E28C381FD/)",
+        "  ### Director, Business Development Representatives",
+        "  Posted about 1 month ago",
+        "  Chicago, Illinois, United States",
+        "  Sales & Marketing Full time Posted about 1 month ago",
+        "* [](https://apply.workable.com/neostella/j/16BD1602B3/)",
+        "  ### Technical Writer",
+        "  Customer Success & Support Full time Posted about 1 month ago",
+        "* [](https://apply.workable.com/neostella/j/8A9EB63ED0/)",
+        "  ### Account Executive",
+        "  Posted 2 months ago",
+        "  Sales & Marketing Full time Posted 2 months ago",
+        "[View website](https://www.neostella.com/)"
+       ]
+      }
+     ],
+     "reasoning": "The live job board includes a Director, Business Development Representatives posting and an Account Executive posting.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "platform.tracxn.com",
+       "url": "https://platform.tracxn.com/a/d/company/58de2c0ee4b0d836de6f116e/neostella?utm_source=parallel&utm_medium=ai#a:about",
+       "excerpts": [
+        "Name: Neostella | Website Url: https://neostella.com | Primary Sector: Business Services | Primary Subsector: Digital Transformation Services | Stage: Series B | Founded Year: 2008 | Employee Count Official: 313 | Location Country: United States | Location State: Wisconsin | Location City: Milwaukee | Latest Funding Round Amount Usd: 10700000.0 | Latest Funding Round Date: 2025-05-23 | Latest Funding Round Name: Series B | Total Disclosed Funding Usd: 10700000.0 | Acquisitions As Acquirer Count: 1 | Funded: Yes | Short Description: Provider of RPA, BPM, application integration, and more"
+       ]
+      }
+     ],
+     "reasoning": "The latest round is dated May 23, 2025, within the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "## Compliance",
+        "SOC 2 Type II",
+        "HIPAA",
+        "GDPR",
+        "US Data Privacy"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "## Compliance",
+        "SOC 2 Type II",
+        "HIPAA",
+        "GDPR",
+        "US Data Privacy"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names HIPAA.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/",
+       "excerpts": [
+        "## Compliance",
+        "SOC 2 Type II",
+        "HIPAA",
+        "GDPR",
+        "US Data Privacy"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Enterprise Legal Case Management Software | Neostella",
+       "url": "https://neostella.com/",
+       "excerpts": [
+        "Donna Law Marston** , Firm Administrator, Aylstock, Witkin, Kreis & Overholtz"
+       ]
+      }
+     ],
+     "reasoning": "The customer quote identifies Aylstock, Witkin, Kreis & Overholtz as the customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Neostella Launches the Legal Industry\u2019s First Case Management Platform That Connects All Legal Tools",
+       "url": "https://www.businesswire.com/news/home/20251204063220/en/Neostella-Launches-the-Legal-Industrys-First-Case-Management-Platform-That-Connects-All-Legal-Tools",
+       "excerpts": [
+        "\u201cNeostella has been a trusted partner, committed to supporting our goals and growth,\u201d said Aaron Jophlin, Managing Partner at Bell Legal Group."
+       ]
+      }
+     ],
+     "reasoning": "The launch announcement identifies Bell Legal Group through a quoted managing partner.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/subprocessors",
+       "excerpts": [
+        "## Subprocessors",
+        "|Amazon Web Services \u2022 Cloud provider United States Cloud Infrastructure |",
+        "| --- |",
+        "|Logo for Microsoft 365 Microsoft 365 \u2022 Email, document collaboration, productivity tools United States |",
+        "|Zendesk \u2022 Customer support and ticketing United States Customer support and ticketing |",
+        "|Logo for Nylas Nylas \u2022 Email, calendar, and contacts APIs United States Email, calendar, and contacts APIs |",
+        "|Logo for Svix Svix \u2022 Webhook delivery & event infrastructure United States Webhook delivery & event infrastructure |",
+        "|Salesforce \u2022 Sales United States CRM and sales automation platform |",
+        "|DocuSign \u2022 Document management United States Electronic signatures & workflows |",
+        "|Hubspot \u2022 CRM, marketing & sales automation United State CRM, marketing & sales automation |",
+        "|SendGrid (Twilio) SendGrid (Twilio) \u2022 Transactional email delivery United States Transactional email delivery |",
+        "1-9 of 9 results"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list names Salesforce and describes its CRM and sales automation role.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Trust Center - Neostella",
+       "url": "http://trust.neostella.com/subprocessors",
+       "excerpts": [
+        "## Subprocessors",
+        "|Amazon Web Services \u2022 Cloud provider United States Cloud Infrastructure |",
+        "| --- |",
+        "|Logo for Microsoft 365 Microsoft 365 \u2022 Email, document collaboration, productivity tools United States |",
+        "|Zendesk \u2022 Customer support and ticketing United States Customer support and ticketing |",
+        "|Logo for Nylas Nylas \u2022 Email, calendar, and contacts APIs United States Email, calendar, and contacts APIs |",
+        "|Logo for Svix Svix \u2022 Webhook delivery & event infrastructure United States Webhook delivery & event infrastructure |",
+        "|Salesforce \u2022 Sales United States CRM and sales automation platform |",
+        "|DocuSign \u2022 Document management United States Electronic signatures & workflows |",
+        "|Hubspot \u2022 CRM, marketing & sales automation United State CRM, marketing & sales automation |",
+        "|SendGrid (Twilio) SendGrid (Twilio) \u2022 Transactional email delivery United States Transactional email delivery |",
+        "1-9 of 9 results"
+       ]
+      }
+     ],
+     "reasoning": "The subprocessor list names Hubspot and describes its CRM, marketing, and sales automation role.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2019.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Neostella provides connected enterprise legal case-management software that brings cases, documents, workflows, communications, reporting, and AI together for growing and enterprise legal teams.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI",
+    "pricing_page": true,
+    "funding_amount_usd": 10700000.0,
+    "named_customers": [
+     "Aylstock, Witkin, Kreis & Overholtz",
+     "Bell Legal Group"
+    ],
+    "funding_date": "2025-05",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Hubspot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Milwaukee",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

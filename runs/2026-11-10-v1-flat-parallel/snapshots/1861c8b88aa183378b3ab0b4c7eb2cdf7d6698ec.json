@@ -1,0 +1,24 @@
+{
+ "url": "https://austn.net/work/companycam",
+ "fetched_at": "2026-11-10T19:12:47.160325+00:00",
+ "hours_after_run": 43.2,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "fecd3d63f50f6e2af89328cfead00bbf26c2f6daf608632063aeb5e6072d13bb",
+ "chars": 2931,
+ "truncated": false,
+ "title": "CompanyCam · Austin French",
+ "markdown": "[Skip to content](https://austn.net/work/companycam#main)\n\n[← All work](https://austn.net/work)\n\n# CompanyCam\n\nLed Pages AI from an idea to about 5,000 requests a day, and built shared RubyLLM abstractions that were adopted across the product.\n\n- **~5,000** requests a day to the Pages AI assistant\n- **4% → 11%** of active companies using Pages\n- **2 to 5 hrs** saved a week, customers told us\n- **10x** smaller PDF exports\n\nCompanyCam is the photo app contractors use on job sites: 140,000+ contractors take photos, write reports and send them to customers. I was on the Workflows & Outputs team from November 2023 to August 2025, working in a large Rails monolith.\n\n## Pages AI\n\nPages is CompanyCam's document builder. Contractors use it to turn job photos into reports and other documents for their customers. Writing those on a phone at a job site is slow.\n\nI led the Pages AI assistant from the first idea to production. A contractor types or talks into their phone on the job site and gets finished documentation back. It grew to about 5,000 requests a day. With the assistant, the share of active companies using Pages went from 4% to 11%, and customers told us it saved them 2 to 5 hours a week.\n\nWe measured adoption by company, not by user. One company can have a lot of users who never make a document, so the per-company number was the more honest one.\n\n![CompanyCam's Pages feature page: put your photos to work, build job documents, photo reports, SOPs and daily logs from the photos you're already taking](https://austn.net/work/companycam-1-pages.webp)Pages, as CompanyCam sells it today. The assistant lives inside this.\n\n## The shared AI layer\n\nEvery AI feature needs the same plumbing: picking a model, prompting it, calling tools, handling failures.\n\nSo I built shared Rails abstractions on top of [RubyLLM](https://rubyllm.com/), and they were adopted across the product. RubyLLM doesn't care which provider you use, and we shipped on Anthropic, OpenAI and Groq. Voice commands, context-aware invoice generation and tool-calling workflows all ran on that layer.\n\nPages AIVoice commandsInvoice generationTool-calling workflowsShared AI layerRails, on RubyLLMAnthropicOpenAIGroq\n\nFeatures on the left, providers on the right, one layer in between.\n\nI also worked on evals and autonomy gating for the AI features: checking output quality and deciding when the system could act on its own.\n\n## Search with RAG\n\nI worked on the RAG pipelines too. We indexed the backend records into pgvector so search could understand natural language, not just keywords. That included photos: type \"cat\" and you get the photos of cats.\n\n## Other work\n\n- **Share Link** (Rails, React/TypeScript): any asset a contractor has, they can share securely with clients and payers who aren't on CompanyCam.\n- **PDF exports:** cut file size 10x with streaming, compression and async processing on Sidekiq and S3, for 10,000+ exports a day.",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider"
+ ],
+ "late": true,
+ "launched_utc": "2026-11-10T18:47:24.550279+00:00",
+ "hours_after_launch": 0.42
+}

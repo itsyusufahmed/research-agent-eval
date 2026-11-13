@@ -1,0 +1,398 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb15a20f5f6efeafc",
+  "interaction_id": "trun_142119f6a1b4439eb15a20f5f6efeafc",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "on3works.com"
+  },
+  "created_at": "2026-11-10T18:48:58.078550Z",
+  "modified_at": "2026-11-10T18:53:43.647948Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb15a20f5f6efeafc",
+   "interaction_id": "trun_142119f6a1b4439eb15a20f5f6efeafc",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "on3works.com"
+   },
+   "created_at": "2026-11-10T18:48:58.078550Z",
+   "modified_at": "2026-11-10T18:53:43.647948Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About ON3 Works: AI-Native Tech Recruitment Agency (UK & Spain)",
+       "url": "https://on3works.com/about",
+       "excerpts": [
+        "|Founded |2022 | |Founders |John Kinloch (Co-founder & CEO) and Daniel Kinloch (Co-founder) |"
+       ]
+      }
+     ],
+     "reasoning": "The official company facts explicitly state that ON3 Works was founded in 2022. Source: https://on3works.com/about",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Notice | Hiron",
+       "url": "https://hiron.ai/privacy",
+       "excerpts": [
+        "Other mechanisms permitted under UK GDPR",
+        "Effective from 4 June 2025 \u00b7 ON3 WORKS LTD"
+       ]
+      }
+     ],
+     "reasoning": "The Hiron privacy notice, issued by ON3 WORKS LTD, names UK GDPR and describes safeguards under it. GDPR is included as one of the requested compliance labels, not as an independently audited certification. Source: https://hiron.ai/privacy",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About ON3 Works: AI-Native Tech Recruitment Agency (UK & Spain)",
+       "url": "https://on3works.com/about",
+       "excerpts": [
+        "|Headquarters |Mallorca, Spain (remote-first) |"
+       ]
+      }
+     ],
+     "reasoning": "The official about page lists headquarters as Mallorca, Spain, remote-first. Source: https://on3works.com/about",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Engineering Hiring Research & Insights | ON3 Works",
+       "url": "https://on3works.com/insights",
+       "excerpts": [
+        "\u2014 INDEX \u00b7 INSIGHTS Research on hiring *engineers.* Sourced, comparative, and written for hiring managers and founders making real trade-offs.",
+        "[GUIDE \u00b7 FEES-UK \u00b7 12 min read<h3>Recruitment Agency Fees UK: What Employers Pay in 2026 (+ Calculator)</h3>Contingency, retained and RPO fee models"
+       ]
+      }
+     ],
+     "reasoning": "The readable Insights index covers recruitment fees, hiring comparisons, salaries and hiring locations. It does not establish two engineer-authored posts about building the product; the AI-pipeline explainer alone would not qualify. Source: https://on3works.com/insights",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About ON3 Works: AI-Native Tech Recruitment Agency (UK & Spain)",
+       "url": "https://on3works.com/about",
+       "excerpts": [
+        "**ON3 Works is an AI-native technical recruitment agency that finds, vets and shortlists engineers, developers and IT specialists for companies hiring in the United Kingdom and Spain.**"
+       ]
+      }
+     ],
+     "reasoning": "The official description identifies the AI-native recruiting service, its technical talent focus and its customer markets. Source: https://on3works.com/about",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/on3works",
+       "excerpts": [
+        "employee count: 14"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 14 employees, which maps to 11-20. Profile-associated headcount may differ from payroll headcount. Source: https://linkedin.com/company/on3works",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Privacy Notice | Hiron",
+       "url": "https://hiron.ai/privacy",
+       "excerpts": [
+        "| Cohere | AI embeddings for job matching | Profile text (skills, experience, etc.) |",
+        "| OpenAI | Resume extraction (fallback) | Resume content |",
+        "| Google (Gemini) | Resume extraction | Resume content |"
+       ]
+      },
+      {
+       "title": "AI Recruiting Explained: How the Pipeline Works & What It Costs (2026)",
+       "url": "https://on3works.com/ai-recruiting",
+       "excerpts": [
+        "ON3 also owns its sourcing infrastructure \u2014 the ON3 database and hiron.ai \u2014 rather than renting third-party tools."
+       ]
+      }
+     ],
+     "reasoning": "Hiron's processor list names Cohere for embeddings, Google Gemini for resume extraction and OpenAI as the extraction fallback. ON3 Works explicitly identifies Hiron as its owned sourcing infrastructure; this disclosure does not establish the models behind every ON3 recruiting function. Sources: https://hiron.ai/privacy and https://on3works.com/ai-recruiting",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing \u2014 Agentic & Atelier Technical Recruiting | ON3 Works",
+       "url": "https://on3works.com/pricing",
+       "excerpts": [
+        "Pricing \u2014 INDEX \u00b7 PRICING Same advantage. *Different depth of vetting.* Both tracks run on proprietary AI, our private talent database, our curated technical network, and our recruiting judgment. ... **AI-powered technical recruiting for speed.** For teams that need qualified candidates quickly."
+       ]
+      }
+     ],
+     "reasoning": "A public pricing page describes the Agentic and Atelier recruiting offerings. Source: https://on3works.com/pricing",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "ON3WORKS - 2025 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+       "excerpts": [
+        "ON3WORKS is an unfunded company based in London (United Kingdom), founded in 2022. It operates as an Online platform offering resume preparation for candidate. ON3WORKS has not raised any funding yet."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile says ON3WORKS has not raised funding. There is therefore no latest-round amount to report; null is used rather than inventing a zero-dollar round. Source: https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "ON3 Works \u2014 AI-Native Technical Recruitment, UK & Spain",
+       "url": "https://on3works.com/",
+       "excerpts": [
+        "> On3 Works has become my favorite external recruiting partner. They're fast, efficient, and bring us candidates already vetted, qualified, and ready to hire. They've made talent search easy for me and my team. ![Gabriel Garcia, Vice-President Consulting Services at CGI]() Gabriel Garcia Vice-President Consulting Services \u00b7 CGI"
+       ]
+      }
+     ],
+     "reasoning": "The homepage testimonial section names CGI, but no second named customer was found on the reviewed customer evidence. The requested minimum-two rule therefore produces an empty list, not a claim that ON3 has no customers. Source: https://on3works.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "ON3WORKS - 2025 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+       "excerpts": [
+        "ON3WORKS is an unfunded company based in London (United Kingdom), founded in 2022. It operates as an Online platform offering resume preparation for candidate. ON3WORKS has not raised any funding yet."
+       ]
+      }
+     ],
+     "reasoning": "The company is reported as unfunded, so no funding-round date applies. Source: https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "For Candidates \u2014 Jobs Come to You with Hiron.AI | ON3 Works",
+       "url": "https://on3works.com/candidates",
+       "excerpts": [
+        "We use Google Ads cookies to measure which ads bring enquiries."
+       ]
+      }
+     ],
+     "reasoning": "ON3 Works explicitly says it uses Google Ads cookies to measure advertising enquiries. This establishes a marketing-system signal, not a CRM deployment. Source: https://on3works.com/candidates",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "About ON3 Works: AI-Native Tech Recruitment Agency (UK & Spain)",
+       "url": "https://on3works.com/about-us",
+       "excerpts": [
+        "Brothers John and Daniel Kinloch founded ON3 Works in Mallorca in 2022. John leads product and technology; Daniel leads clients and operations."
+       ]
+      },
+      {
+       "title": "About ON3 Works: AI-Native Tech Recruitment Agency (UK & Spain)",
+       "url": "https://on3works.com/about",
+       "excerpts": [
+        "Today the team is the two founders, a panel of senior engineers who run Atelier interviews, and the recruiting AI John built, which also powers hiron.ai."
+       ]
+      }
+     ],
+     "reasoning": "The small, fully reviewed team page identifies the two founders, established in 2022, as the current leadership; no new C-level or VP appointment or departure was found for the requested window. This is an absence-based finding, not a comprehensive personnel record. Sources: https://on3works.com/about-us and https://on3works.com/about",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [],
+     "reasoning": "Unknown: no verifiable internal careers page or job board for this company was located. The official candidates page concerns recruitment clients, and the third-party careers listing could not reliably establish ON3 Works' own vacancies. Reviewed: https://on3works.com/candidates and https://jenniejohnson.com/company/on3-works",
+     "confidence": "low"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "ON3WORKS - 2025 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+       "excerpts": [
+        "ON3WORKS is an unfunded company based in London (United Kingdom), founded in 2022. It operates as an Online platform offering resume preparation for candidate. ON3WORKS has not raised any funding yet."
+       ]
+      }
+     ],
+     "reasoning": "The funding database explicitly describes ON3WORKS as unfunded and says it has not raised funding. The company materials reviewed disclose no outside round. Source: https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "ON3 Works \u2014 AI-Native Technical Recruitment, UK & Spain",
+       "url": "https://on3works.com/",
+       "excerpts": [
+        "FAQ [AI Recruiting](https://on3works.com/ai-recruiting)",
+        "Explore"
+       ]
+      }
+     ],
+     "reasoning": "The reviewed homepage navigation and footer link to service pages, recruitment resources and FAQs, but not a product documentation site, help center or developer portal. Source: https://on3works.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About ON3 Works: AI-Native Tech Recruitment Agency (UK & Spain)",
+       "url": "https://on3works.com/about",
+       "excerpts": [
+        "|Headquarters |Mallorca, Spain (remote-first) |",
+        "Co-founder & CEO \u00b7 Sant Joan, Mallorca",
+        "Co-founder \u00b7 Palma, Mallorca"
+       ]
+      }
+     ],
+     "reasoning": "The official headquarters disclosure names Mallorca, an island, rather than a city. The founders are separately located in Sant Joan and Palma, so neither town can safely be assigned as headquarters. Source: https://on3works.com/about",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Engineering Hiring Research & Insights | ON3 Works",
+       "url": "https://on3works.com/insights",
+       "excerpts": [
+        "\u2014 INDEX \u00b7 INSIGHTS Research on hiring *engineers.* Sourced, comparative, and written for hiring managers and founders making real trade-offs."
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/on3works",
+       "excerpts": [
+        "posted date: 2024-02-14 content html + \ud83d\ude80 Exploring the Core of ON3 WORKS: Episode 2 - \"Precision Matching: How It Works\" \ud83d\ude80 In the second installment of our enlightening series \"AI in Recruitment: The Future is Now,\"",
+        "posted date: 2026-10-30 content html: For the Juniors out there! likes count: 1"
+       ]
+      }
+     ],
+     "reasoning": "No qualifying product or major-feature launch was found in the readable Insights index or visible company posts within the requested six-month window. The dated product-capability explainer is from February 2024; the October 2026 post is advice for juniors, not a launch. Public post coverage may be incomplete. Sources: https://on3works.com/insights and https://linkedin.com/company/on3works",
+     "confidence": "low"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [],
+     "reasoning": "Unknown: no authentic internal careers board was verified. Client recruiting services and uncertain third-party listings cannot establish whether ON3 Works itself is hiring SDRs, BDRs or account executives. Reviewed: https://on3works.com/candidates and https://jenniejohnson.com/company/on3-works",
+     "confidence": "low"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "ON3WORKS - 2025 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+       "excerpts": [
+        "ON3WORKS is an unfunded company based in London (United Kingdom), founded in 2022. It operates as an Online platform offering resume preparation for candidate. ON3WORKS has not raised any funding yet."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile reports no funding raised, supporting false for the requested 18-month window. Source: https://tracxn.com/d/companies/on3works/__Ui9HFPFE6DMuE-WnQEIl0MMFNagicD-LkN34xfSwduQ",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Privacy Notice | Hiron",
+       "url": "https://hiron.ai/privacy",
+       "excerpts": [
+        "Other mechanisms permitted under UK GDPR"
+       ]
+      }
+     ],
+     "reasoning": "The legal notice expressly names UK GDPR. This is a compliance reference, not evidence of independent certification. Source: https://hiron.ai/privacy",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "For Candidates \u2014 Jobs Come to You with Hiron.AI | ON3 Works",
+       "url": "https://on3works.com/candidates",
+       "excerpts": [
+        "We use Google Ads cookies to measure which ads bring enquiries."
+       ]
+      }
+     ],
+     "reasoning": "The company expressly identifies Google Ads as used to measure its advertising enquiries. Source: https://on3works.com/candidates",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [
+     "GDPR"
+    ],
+    "hq_country": "Spain",
+    "eng_blog": false,
+    "product_one_liner": "ON3 Works uses AI sourcing and technical vetting to find and shortlist engineers, developers and IT specialists for companies hiring in the United Kingdom and Spain.",
+    "employee_band": "11-20",
+    "model_provider": "Google Gemini, OpenAI and Cohere, disclosed for its owned Hiron platform.",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Google Ads"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": null,
+    "funding_stage": "none",
+    "public_docs": false,
+    "hq_city": null,
+    "launched_6mo": false,
+    "hiring_sdr_ae": null,
+    "raised_18mo": false
+   }
+  }
+ }
+}

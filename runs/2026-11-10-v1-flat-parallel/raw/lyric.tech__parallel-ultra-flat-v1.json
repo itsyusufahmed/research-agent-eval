@@ -1,0 +1,536 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eaa80be95cd41c630",
+  "interaction_id": "trun_142119f6a1b4439eaa80be95cd41c630",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "lyric.tech"
+  },
+  "created_at": "2026-11-10T18:47:50.495992Z",
+  "modified_at": "2026-11-10T18:55:04.510596Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eaa80be95cd41c630",
+   "interaction_id": "trun_142119f6a1b4439eaa80be95cd41c630",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "lyric.tech"
+   },
+   "created_at": "2026-11-10T18:47:50.495992Z",
+   "modified_at": "2026-11-10T18:55:04.510596Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "**Founded:** 2021"
+       ]
+      }
+     ],
+     "reasoning": "Lyric explicitly gives 2021 as its founding year: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "SOC 2 Type 2 attested; SOC 3 report publicly available",
+        "ISO/IEC 27001 certified",
+        "Aligned with GDPR, CCPA, CPRA, and CSA STAR Level 1"
+       ]
+      }
+     ],
+     "reasoning": "Lyric claims SOC 2 Type 2 attestation, ISO/IEC 27001 certification, and alignment with GDPR. GDPR is included as a publicly claimed compliance framework, not as an independently certified status. Source: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "**Headquarters:** Sunnyvale, California, United States"
+       ]
+      }
+     ],
+     "reasoning": "The official company information identifies the headquarters country as the United States: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "The Real Reason Your Planning System Slows Down - Lyric",
+       "url": "https://lyric.tech/blogs-and-whitepapers/the-real-reason-your-planning-system-slows-down",
+       "excerpts": [
+        "AUTHOR Aditya Jaroli & Pradeep Vijayakumar",
+        "**Cache Layer:** where speed lives. A disk-based columnar store with vectorized execution, it delivers sub-second query performance without requiring the dataset to fit in memory. When an application is built and deployed, only the tables relevant to that application are selectively loaded into the Cache Layer, not the entire dataset."
+       ]
+      },
+      {
+       "title": "Aditya Jaroli",
+       "url": "https://linkedin.com/in/adityajaroli",
+       "excerpts": [
+        "Role: Staff Software Engineer @ Lyric."
+       ]
+      },
+      {
+       "title": "Pradeep Vijayakumar",
+       "url": "https://linkedin.com/in/pradeepvijayakumar-4",
+       "excerpts": [
+        "Role: Data Architect @ Lyric."
+       ]
+      },
+      {
+       "title": "The Technology Behind Modeling at Scale  - Lyric",
+       "url": "https://lyric.tech/blogs-and-whitepapers/the-technology-behind-modeling-at-scale",
+       "excerpts": [
+        "AUTHOR Ganesh Ramakrishna",
+        "Through this sequence, modelers can daisy chain models (in a no-code environment) to build complex algorithmic workflows tailored to the organization's unique needs."
+       ]
+      }
+     ],
+     "reasoning": "The blog contains at least two substantive implementation articles: \u201cThe Real Reason Your Planning System Slows Down,\u201d by a staff software engineer and data architect, explains storage, caching, and scenario architecture; \u201cThe Technology Behind Modeling at Scale,\u201d by technically experienced founder Ganesh Ramakrishna, explains Lyric's sequence layer and distributed computation. These are technical posts within a broader company blog, not a separate engineering-only publication. Sources: https://lyric.tech/blogs-and-whitepapers/the-real-reason-your-planning-system-slows-down; https://lyric.tech/blogs-and-whitepapers/the-technology-behind-modeling-at-scale; https://linkedin.com/in/adityajaroli; https://linkedin.com/in/pradeepvijayakumar-4.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "Lyric Studio is one platform with four integrated layers, with agentic intelligence woven through each, for every supply chain decision from strategy to planning to execution.",
+        "Lyric Studio is built for the world's most demanding supply chains: enterprises above $1B in revenue, including Fortune 500 companies, running complex networks of plants, distribution centers, suppliers, and customers."
+       ]
+      }
+     ],
+     "reasoning": "The official description covers supply-chain decisions from strategy through execution and identifies large enterprises with complex supply networks as its target customers: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Lyric Tech",
+       "url": "https://linkedin.com/company/lyric-tech",
+       "excerpts": [
+        "employee count: 323 founded year: 2021 follower count: 16666 linkedin url: https://www.linkedin.com/company/lyric-tech country iso: US country name: United States locality: Sunnyvale, California type: Privately Held size: 200"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 323 employees, which falls within the required 201-500 band. This is a profile-based count rather than an audited headcount: https://linkedin.com/company/lyric-tech.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Generative AI Meets Time Series Forecasting | Lyric",
+       "url": "https://lyric.tech/blogs-and-whitepapers/generative-ai-meets-time-series-forecasting",
+       "excerpts": [
+        "At Lyric, we bring together the best of both worlds: powerful foundation models like TimesFM and Amazon Chronos (with the option to fine tune with your data for better results), alongside proven statistical, machine learning, and deep learning techniques.",
+        "Models like Google\u2019s TimesFM and Amazon\u2019s Chronos (more to come on these in a minute) show that foundation models aren\u2019t just for language anymore."
+       ]
+      }
+     ],
+     "reasoning": "Lyric explicitly says it combines TimesFM and Amazon Chronos in its forecasting offering, including optional fine-tuning with customer data. The same article identifies TimesFM as Google's model: https://lyric.tech/blogs-and-whitepapers/generative-ai-meets-time-series-forecasting.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Lyric by Lyric | AWS Marketplace",
+       "url": "https://aws.amazon.com/marketplace/pp/prodview-kbxc4aoesit6k",
+       "excerpts": [
+        "Pricing",
+        "|Lyric Studio |Access to Lyric Studio |$0.00 |100% |"
+       ]
+      }
+     ],
+     "reasoning": "Lyric has a public AWS Marketplace listing with a Pricing section and a Lyric Studio pricing dimension. This is marketplace pricing, not a conventional self-service pricing page on lyric.tech; the displayed $0.00 should not be interpreted as the full enterprise contract price. Source: https://aws.amazon.com/marketplace/pp/prodview-kbxc4aoesit6k.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "About Lyric | Why We're Rebuilding Supply Chain Tech",
+       "url": "https://lyric.tech/about-us",
+       "excerpts": [
+        "A $55.5M Series B, more than $80M raised to date, and revenue up 500%."
+       ]
+      },
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "$55.5M Series B, led by Insight Partners"
+       ]
+      },
+      {
+       "title": "Lyric Raises $43.5M Series B | Built for Builders",
+       "url": "https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform",
+       "excerpts": [
+        "I\u2019m excited to share that Lyric has raised $43.5 million in Series B funding."
+       ]
+      }
+     ],
+     "reasoning": "The current company overview and official information page state a $55.5 million Series B, so that is the reported amount used here. There is a material discrepancy: the original August 2025 announcement reported $43.5 million, and no separately dated explanation of the increase was found. Sources: https://lyric.tech/about-us; https://lyric.tech/ai-info-about-lyric; https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "Organizations that use Lyric Studio include",
+        "ACCO Brands, BCG, Beyond Better Foods, Bob Evans Foods, BODYARMOR, Coca-Cola, Coca-Cola Consolidated, e.l.f."
+       ]
+      }
+     ],
+     "reasoning": "Coca-Cola and BODYARMOR are explicitly listed as organizations using Lyric Studio, rather than investors or partners: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [],
+     "reasoning": "The month associated with the currently reported $55.5 million Series B could not be established. The current timeline places it in 2025 without a month: https://lyric.tech/about-us. The precisely dated August 5, 2025 announcement reports $43.5 million, not $55.5 million: https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform. Assigning that month to the updated amount would require an unsupported assumption.",
+     "confidence": "low"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Applied AI / GTM Engineer @ Lyric",
+       "url": "https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314",
+       "excerpts": [
+        "Embed AI deeply into the company and GTM tech stack (Slack, Salesforce, Notion, Claude, Fathom, internal tooling)."
+       ]
+      },
+      {
+       "title": "Revenue Operations / GTM Engineer at Lyric | HuntYourTribe",
+       "url": "https://huntyourtribe.com/jobs/lyric/266d3307-cb7e-4a1f-b585-51fbd6d80aff",
+       "excerpts": [
+        "Keep HubSpot and Salesforce clean, deduped and reliable Build campaign and funnel reporting marketing can act on"
+       ]
+      }
+     ],
+     "reasoning": "The official Applied AI / GTM Engineer posting names Salesforce in Lyric's internal GTM stack. A Revenue Operations / GTM Engineer listing also names HubSpot and Salesforce. Sources: https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314; https://huntyourtribe.com/jobs/lyric/266d3307-cb7e-4a1f-b585-51fbd6d80aff.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/debkennedy938",
+       "excerpts": [
+        "title: Vice-President, AI Supply Chain Sales",
+        "start date: 2025-12-01",
+        "-Lead the Americas go-to-market strategy as the first VP of Sales, building and scaling Lyric\u2019s AI Supply Chain and decision intelligence business across the region."
+       ]
+      }
+     ],
+     "reasoning": "Deb Kennedy's profile dates her start as Vice-President, AI Supply Chain Sales at Lyric to December 2025, within the requested twelve-month window. Her description identifies Lyric's supply-chain decision-intelligence business, avoiding confusion with healthcare companies of the same name. Source: https://linkedin.com/in/debkennedy938.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Applied AI / GTM Engineer @ Lyric",
+       "url": "https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314",
+       "excerpts": [
+        "Applied AI / GTM Engineer",
+        "We're looking for a motivated IC who builds AI-powered products, ships them into production, and uses them to drive real GTM impact.",
+        "**Applied AI is the job.** From Claude Code and the Claude Agent SDK to custom agents, you'll use AI to multiply output across GTM. Your first instinct is \"how can we build that better/faster/stronger?\""
+       ]
+      }
+     ],
+     "reasoning": "The live Applied AI / GTM Engineer opening explicitly involves building and shipping AI-powered products and agents. Despite its GTM context, it is a technical AI-building role, not an excluded AI-sales title. Source: https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "$55.5M Series B, led by Insight Partners"
+       ]
+      },
+      {
+       "title": "About Lyric | Why We're Rebuilding Supply Chain Tech",
+       "url": "https://lyric.tech/about-us",
+       "excerpts": [
+        "A $55.5M Series B, more than $80M raised to date, and revenue up 500%."
+       ]
+      }
+     ],
+     "reasoning": "Both current company summaries identify the financing stage as Series B. The amount discrepancy does not affect the stage: https://lyric.tech/ai-info-about-lyric; https://lyric.tech/about-us.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "AI-native Supply Chain Decision Platform | Lyric",
+       "url": "https://lyric.tech/",
+       "excerpts": [
+        "Resource Hub Resources [](https://lyric.tech/videos) On-Demand Videos Watch webinars, podcasts, and product sessions. [](https://lyric.tech/events) Live Events Join live sessions with industry experts. [](https://lyric.tech/blogs) Blogs & Whitepapers Explore expert insights and in-depth research. [](https://lyric.tech/empower/chicago-2026) Empower On Demand New Front row at supply chain's best party. [](https://lyric.tech/resources) All Resources Browse every guide, article, video, and resource."
+       ]
+      },
+      {
+       "title": "Lyric Documentation Access",
+       "url": "https://docs.lyric.tech/",
+       "excerpts": [
+        "Email address \\* Enter the email you use for Lyric Studio Continue"
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation does not expose a public product-documentation or help-center collection, and the documentation address presents an email-access gate rather than several publicly readable articles. This is false for public documentation, not a claim that customer documentation does not exist. Sources: https://lyric.tech/; https://docs.lyric.tech/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "**Headquarters:** Sunnyvale, California, United States"
+       ]
+      }
+     ],
+     "reasoning": "The official company information identifies Sunnyvale, California, as the headquarters city: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Supply Chain Insights, Research & Ideas | Lyric",
+       "url": "https://lyric.tech/blog",
+       "excerpts": [
+        "Explore latest Blogs [](https://lyric.tech/blog/lyric-named-as-an-example-vendor-2026-gartner-market-overview-integrated-supply-chain-ai-agents) Analyst Mention Lyric named as an Example Vendor in the 2026 Gartner\u00ae Market Overview for Integrated Supply Chain AI Agents November 4, 2026 [](https://lyric.tech/blog/lyric-named-as-a-pioneer-2026-gartner-emerging-market-quadrant-integrated-supply-chain-ai-agents) Analyst Mention Lyric named as a Pioneer in the 2026 Gartner\u00ae Emerging Market Quadrant for Integrated Supply Chain AI Agents \u2013 Established Vendors November 4, 2026 [](https://lyric.tech/blog/lyric-gartner-analytics-decision-making-platforms) Analyst Mention Lyric named as an Example Vendor in the 2026 Gartner\u00ae Market Overview for Analytics and Decision Making Platforms for Supply Chain September 29, 2026 [](https://lyric.tech/blog/first-supply-chain-engineer) Leadership & Decision Culture The First Supply Chain Engineer I Ever Met August 12, 2026 [](https://lyric.tech/blog/lyric-included-gartner-supply-chain-orchestration-platforms) Analyst Mention Lyric named as an Example Vendor in the 2026 Gartner\u00ae Market Overview for Supply Chain Orchestration Platforms August 6, 2026 [](https://lyric.tech/blog/agents-meet-demand-forecasting) Planning & Forecasting Agents Meet Demand Forecasting August 4, 2026"
+       ]
+      },
+      {
+       "title": "Lyric",
+       "url": "https://lyric.tech/blog?paged=1",
+       "excerpts": [
+        "[Architecture & Composability Lyric Leverages NVIDIA cuOpt to Elevate Supply Chain AI Mar 18, 2025](./blogs-and-whitepapers/lyric-leverages-nvidia-cuopt-to-elevate-supply-chain-ai)"
+       ]
+      },
+      {
+       "title": "Agents Meet Demand Forecasting | Lyric",
+       "url": "https://lyric.tech/blog/agents-meet-demand-forecasting",
+       "excerpts": [
+        "The next one belongs to whoever teaches the forecast to understanding context, without giving up the arithmetic that made automation worth trusting. That's where we're building."
+       ]
+      }
+     ],
+     "reasoning": "The readable blog history through November 2026 shows analyst recognition and thought leadership, rather than a dated major launch in the requested six-month window. The August forecasting article describes a development direction without an explicit release announcement. The newest qualifying integration announcement identified was NVIDIA cuOpt on March 18, 2025, outside the window. Sources: https://lyric.tech/blog; https://lyric.tech/blog/agents-meet-demand-forecasting; https://lyric.tech/blog/lyric-leverages-nvidia-cuopt-to-elevate-supply-chain-ai.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Enterprise Account Executive @ Lyric",
+       "url": "https://jobs.ashbyhq.com/lyric/bd834e1f-3499-4c5c-9302-74d017807618",
+       "excerpts": [
+        "Enterprise Account Executive"
+       ]
+      }
+     ],
+     "reasoning": "Lyric has a live Enterprise Account Executive posting, a qualifying sales role: https://jobs.ashbyhq.com/lyric/bd834e1f-3499-4c5c-9302-74d017807618.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Lyric Raises $43.5M Series B | Built for Builders",
+       "url": "https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform",
+       "excerpts": [
+        "Aug 5, 2025",
+        "I\u2019m excited to share that Lyric has raised $43.5 million in Series B funding."
+       ]
+      }
+     ],
+     "reasoning": "Lyric announced its Series B on August 5, 2025, after the May 9, 2025 start of the requested eighteen-month window. The later discrepancy in the reported round amount does not change this positive funding-event answer. Source: https://lyric.tech/blog/built-for-builders-backed-to-scale-43-5m-to-grow-lyric-s-ai-platform.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "SOC 2 Type 2 attested; SOC 3 report publicly available"
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 Type 2 attestation is explicitly claimed at https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "ISO/IEC 27001 certified"
+       ]
+      }
+     ],
+     "reasoning": "ISO/IEC 27001 certification is explicitly claimed at https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "Aligned with GDPR, CCPA, CPRA, and CSA STAR Level 1"
+       ]
+      }
+     ],
+     "reasoning": "The company claims GDPR alignment, not a separate GDPR certification: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Applied AI / GTM Engineer @ Lyric",
+       "url": "https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314",
+       "excerpts": [
+        "Embed AI deeply into the company and GTM tech stack (Slack, Salesforce, Notion, Claude, Fathom, internal tooling)."
+       ]
+      }
+     ],
+     "reasoning": "The official job posting names Salesforce in the internal GTM stack: https://jobs.ashbyhq.com/lyric/07f709d6-f763-4b19-a246-2cb92e144314.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Revenue Operations / GTM Engineer at Lyric | HuntYourTribe",
+       "url": "https://huntyourtribe.com/jobs/lyric/266d3307-cb7e-4a1f-b585-51fbd6d80aff",
+       "excerpts": [
+        "Keep HubSpot and Salesforce clean, deduped and reliable Build campaign and funnel reporting marketing can act on"
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations / GTM Engineer listing names HubSpot operational responsibilities: https://huntyourtribe.com/jobs/lyric/266d3307-cb7e-4a1f-b585-51fbd6d80aff.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "ACCO Brands, BCG, Beyond Better Foods, Bob Evans Foods, BODYARMOR, Coca-Cola, Coca-Cola Consolidated, e.l.f."
+       ]
+      }
+     ],
+     "reasoning": "Coca-Cola appears in the official list of Lyric Studio users: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Official Info About Lyric | Company, Platform, Customers, Funding",
+       "url": "https://lyric.tech/ai-info-about-lyric",
+       "excerpts": [
+        "ACCO Brands, BCG, Beyond Better Foods, Bob Evans Foods, BODYARMOR, Coca-Cola, Coca-Cola Consolidated, e.l.f."
+       ]
+      }
+     ],
+     "reasoning": "BODYARMOR appears in the official list of Lyric Studio users: https://lyric.tech/ai-info-about-lyric.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2021.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Lyric Studio is an AI-native supply-chain decision platform that helps large enterprises model, plan, and optimize decisions from strategy through execution.",
+    "employee_band": "201-500",
+    "model_provider": "Google TimesFM and Amazon Chronos",
+    "pricing_page": true,
+    "funding_amount_usd": 55500000.0,
+    "named_customers": [
+     "Coca-Cola",
+     "BODYARMOR"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": false,
+    "hq_city": "Sunnyvale",
+    "launched_6mo": false,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

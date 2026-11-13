@@ -1,0 +1,354 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob0s4xZoAeXKS62AD",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "askethos.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The visible updates index lists product announcements and feature updates, not engineering posts.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://askethos.com/updates"
+       ]
+      },
+      "reasoning": "The public company profile supports a 2024 founding, London headquarters, and an AI-powered expertise-to-opportunity matching product. Ethos’s subprocessor list names AI providers and sales-intelligence systems. Its DPA does not specifically assert the example security certifications. The Evals product has public pricing and developer documentation. A funding announcement establishes a May 2026 Series A. Public updates show no engineering blog or launch within the stated six-month window; role listings distinguish direct Ethos hiring from client-facing expert opportunities. Employee size is outside the supplied bands, and no verifiable recent C-level/VP change or two named customers was established.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.linkedin.com/company/askethos",
+       "Visited https://agent.askethos.com/ethos-dpa",
+       "Visited https://askethos.com/updates",
+       "Visited https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding",
+       "Visited https://agent.askethos.com/ethos-subprocessors",
+       "Visited https://evals.askethos.com/pricing",
+       "Visited https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+       "Visited https://agent.askethos.com/opportunities/ai-engineer",
+       "Visited https://agent.askethos.com/opportunities/customer-support-associate-contract",
+       "Visited https://evals.askethos.com/mcp",
+       "Visited https://agent.askethos.com/opportunities/account-executive"
+      ],
+      "hq_location": {
+       "notes": "",
+       "value": {
+        "city": "London",
+        "country": "United Kingdom"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/askethos/",
+        "https://agent.askethos.com/ethos-dpa"
+       ]
+      },
+      "public_docs": {
+       "notes": "Ethos Evals provides a public developer/MCP documentation portal with connection instructions and tool documentation.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://evals.askethos.com/mcp"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The May 6, 2026 Series A falls within the 18 months before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+       ]
+      },
+      "founded_year": {
+       "notes": "",
+       "value": 2024,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/askethos/"
+       ]
+      },
+      "last_funding": {
+       "notes": "The announcement was dated May 6, 2026.",
+       "value": {
+        "date": "2026-05",
+        "stage": "Series A",
+        "amount_usd": 22750000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The visible product-updates index’s newest listed item is dated July 1, 2025, before the May 9–November 9, 2026 window.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://askethos.com/updates"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Ethos publishes a public pricing page for its Ethos Evals product; this is distinct from the main expert-opportunity marketplace.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://evals.askethos.com/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The current LinkedIn company profile reports 2–10 employees, which falls below every allowed band; 11–20 is supplied only as the lowest schema-permitted fallback, not as a factual estimate.",
+       "value": "11-20",
+       "status": "unknown",
+       "citations": [
+        "https://www.linkedin.com/company/askethos/"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The direct Ethos opening found is Customer Support Associate. The Account Executive listing is an expert contract for training a client AI lab’s model, not an Ethos sales-role vacancy.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://agent.askethos.com/opportunities/customer-support-associate-contract",
+        "https://agent.askethos.com/opportunities/account-executive"
+       ]
+      },
+      "model_provider": {
+       "notes": "These are named in Ethos’s public subprocessor list; the list does not specify which model is used for which feature.",
+       "value": "Anthropic, Google Gemini, OpenAI, and Groq; OpenRouter is listed as the model gateway and routing provider.",
+       "status": "asserted",
+       "citations": [
+        "https://agent.askethos.com/ethos-subprocessors"
+       ]
+      },
+      "named_customers": {
+       "notes": "The cited report says Ethos does not name its client base; it identifies only customer categories, not specific customer names.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The direct Ethos AI Engineer listing is marked closed; the current direct Ethos role found is Customer Support Associate. AI-related expert opportunities for client projects are not Ethos AI/ML employee openings.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://agent.askethos.com/opportunities/ai-engineer",
+        "https://agent.askethos.com/opportunities/customer-support-associate-contract"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The DPA mentions SOC 2 and ISO/IEC 27001 only as examples of certifications or audit reports that may be maintained where applicable; it does not specifically claim either certification, and names none of HIPAA or PCI DSS as a certification.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://agent.askethos.com/ethos-dpa"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "Ethos lists both as subprocessors for B2B sales intelligence and lead generation.",
+       "value": [
+        "Apollo",
+        "RevenueBase"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://agent.askethos.com/ethos-subprocessors"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Ethos uses AI to match professionals’ expertise with paid opportunities such as consulting, advisory calls, research, and full-time roles, serving both organizations seeking expertise and the professionals seeking work.",
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/askethos/"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "The small LinkedIn company profile lists the company but provides no dated C-level or VP join/departure within the 12-month window; no departure announcement was located.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/askethos/"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "askethos.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The visible updates index lists product announcements and feature updates, not engineering posts.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://askethos.com/updates"
+     ]
+    },
+    "reasoning": "The public company profile supports a 2024 founding, London headquarters, and an AI-powered expertise-to-opportunity matching product. Ethos’s subprocessor list names AI providers and sales-intelligence systems. Its DPA does not specifically assert the example security certifications. The Evals product has public pricing and developer documentation. A funding announcement establishes a May 2026 Series A. Public updates show no engineering blog or launch within the stated six-month window; role listings distinguish direct Ethos hiring from client-facing expert opportunities. Employee size is outside the supplied bands, and no verifiable recent C-level/VP change or two named customers was established.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.linkedin.com/company/askethos",
+     "Visited https://agent.askethos.com/ethos-dpa",
+     "Visited https://askethos.com/updates",
+     "Visited https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding",
+     "Visited https://agent.askethos.com/ethos-subprocessors",
+     "Visited https://evals.askethos.com/pricing",
+     "Visited https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/",
+     "Visited https://agent.askethos.com/opportunities/ai-engineer",
+     "Visited https://agent.askethos.com/opportunities/customer-support-associate-contract",
+     "Visited https://evals.askethos.com/mcp",
+     "Visited https://agent.askethos.com/opportunities/account-executive"
+    ],
+    "hq_location": {
+     "notes": "",
+     "value": {
+      "city": "London",
+      "country": "United Kingdom"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/askethos/",
+      "https://agent.askethos.com/ethos-dpa"
+     ]
+    },
+    "public_docs": {
+     "notes": "Ethos Evals provides a public developer/MCP documentation portal with connection instructions and tool documentation.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://evals.askethos.com/mcp"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The May 6, 2026 Series A falls within the 18 months before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+     ]
+    },
+    "founded_year": {
+     "notes": "",
+     "value": 2024,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/askethos/"
+     ]
+    },
+    "last_funding": {
+     "notes": "The announcement was dated May 6, 2026.",
+     "value": {
+      "date": "2026-05",
+      "stage": "Series A",
+      "amount_usd": 22750000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The visible product-updates index’s newest listed item is dated July 1, 2025, before the May 9–November 9, 2026 window.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://askethos.com/updates"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Ethos publishes a public pricing page for its Ethos Evals product; this is distinct from the main expert-opportunity marketplace.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://evals.askethos.com/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The current LinkedIn company profile reports 2–10 employees, which falls below every allowed band; 11–20 is supplied only as the lowest schema-permitted fallback, not as a factual estimate.",
+     "value": "11-20",
+     "status": "unknown",
+     "citations": [
+      "https://www.linkedin.com/company/askethos/"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The direct Ethos opening found is Customer Support Associate. The Account Executive listing is an expert contract for training a client AI lab’s model, not an Ethos sales-role vacancy.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://agent.askethos.com/opportunities/customer-support-associate-contract",
+      "https://agent.askethos.com/opportunities/account-executive"
+     ]
+    },
+    "model_provider": {
+     "notes": "These are named in Ethos’s public subprocessor list; the list does not specify which model is used for which feature.",
+     "value": "Anthropic, Google Gemini, OpenAI, and Groq; OpenRouter is listed as the model gateway and routing provider.",
+     "status": "asserted",
+     "citations": [
+      "https://agent.askethos.com/ethos-subprocessors"
+     ]
+    },
+    "named_customers": {
+     "notes": "The cited report says Ethos does not name its client base; it identifies only customer categories, not specific customer names.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The direct Ethos AI Engineer listing is marked closed; the current direct Ethos role found is Customer Support Associate. AI-related expert opportunities for client projects are not Ethos AI/ML employee openings.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://agent.askethos.com/opportunities/ai-engineer",
+      "https://agent.askethos.com/opportunities/customer-support-associate-contract"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The DPA mentions SOC 2 and ISO/IEC 27001 only as examples of certifications or audit reports that may be maintained where applicable; it does not specifically claim either certification, and names none of HIPAA or PCI DSS as a certification.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://agent.askethos.com/ethos-dpa"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "Ethos lists both as subprocessors for B2B sales intelligence and lead generation.",
+     "value": [
+      "Apollo",
+      "RevenueBase"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://agent.askethos.com/ethos-subprocessors"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Ethos uses AI to match professionals’ expertise with paid opportunities such as consulting, advisory calls, research, and full-time roles, serving both organizations seeking expertise and the professionals seeking work.",
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/askethos/"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "The small LinkedIn company profile lists the company but provides no dated C-level or VP join/departure within the 12-month window; no departure announcement was located.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/askethos/"
+     ]
+    }
+   }
+  }
+ }
+}

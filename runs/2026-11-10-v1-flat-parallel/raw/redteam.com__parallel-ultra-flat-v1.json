@@ -1,0 +1,473 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e886520788ac7a824",
+  "interaction_id": "trun_142119f6a1b4439e886520788ac7a824",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "redteam.com"
+  },
+  "created_at": "2026-11-10T18:49:02.499351Z",
+  "modified_at": "2026-11-10T18:56:05.221955Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e886520788ac7a824",
+   "interaction_id": "trun_142119f6a1b4439e886520788ac7a824",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "redteam.com"
+   },
+   "created_at": "2026-11-10T18:49:02.499351Z",
+   "modified_at": "2026-11-10T18:56:05.221955Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Learn More About Us | RedTeam",
+       "url": "https://redteam.com/about-us",
+       "excerpts": [
+        "2006 dd RedTeam is born Founded by Michael Wright."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s company history explicitly places its founding by Michael Wright in 2006. Source: https://redteam.com/about-us",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Policies | RedTeam Construction Software",
+       "url": "https://redteam.com/privacy-policies",
+       "excerpts": [
+        "CONFIDENTIALITY AND SECURITY Information submitted via the Internet, including through a web page or email, is subject to interception or incorrect routing, and the Internet is not a fully secure communications channel. Please consider this prior to submitting any information to RedTeam via the Site, Products, or Services. No method of transmission over the Internet, or method of electronic storage, is 100 percent secure. Therefore, while RedTeam strives to use commercially acceptable means to protect your personal information, RedTeam cannot guarantee its absolute security. ... We cannot guarantee that such security measures will be sufficient, effective, or properly implemented, managed, or maintained by our trusted third-party service providers or integrators, nor can we control or enforce the implementation and use of such measures by such third-party service providers and integrators."
+       ]
+      }
+     ],
+     "reasoning": "The privacy policy, including its confidentiality and security section, names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS. The empty list represents no qualifying claims on that legal page, not a finding that RedTeam lacks certifications. Source: https://redteam.com/privacy-policies",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Learn More About Us | RedTeam",
+       "url": "https://redteam.com/about-us",
+       "excerpts": [
+        "2006 dd RedTeam is born Founded by Michael Wright. HQ in Orlando, Florida."
+       ]
+      },
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/redteamsoftware",
+       "excerpts": [
+        "Book a demo to see how RedTeam fits your team. website: https://redteam.com/why-red-team/ employee count: 98 founded year: 2006 follower count: 8722 linkedin url: https://www.linkedin.com/company/redteamsoftware country iso: US country name: United States locality: Orlando, FL type: Privately Held size: 10 company headline Construction project management software built for commercial general contractors."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s history identifies its headquarters as Orlando, Florida, and its company profile explicitly identifies the country as United States. Sources: https://redteam.com/about-us and https://linkedin.com/company/redteamsoftware",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Builder Blog by RedTeam | Construction Management Software",
+       "url": "https://blog.redteam.com/",
+       "excerpts": [
+        "Every sub on your job hands you a certificate of insurance before they mobilize."
+       ]
+      },
+      {
+       "title": "Resources, Insights & Stories | RedTeam",
+       "url": "https://redteam.com/resources/release-notes",
+       "excerpts": [
+        "The 2026 Construction Inspection Software Buyer's Guide [Read More](https://redteam.com/insights-and-stories/construction-inspection-buyers-guide/) [Featured](https://redteam.com/insights-and-stories/category/featured/) , [Insights](https://redteam.com/insights-and-stories/category/insights/) , [Solutions](https://redteam.com/insights-and-stories/category/solutions/) 8 MIN READ How to Track Certificates of Insurance (COIs) for Your Subcontractors [Read More](https://redteam.com/insights-and-stories/subcontractor-insurance-tracking-manage-cois-reduce-risk/) [Featured](https://redteam.com/insights-and-stories/category/featured/) , [Insights](https://redteam.com/insights-and-stories/category/insights/) , [Solutions](https://redteam.com/insights-and-stories/category/solutions/) 4 MIN READ Cost-to-Complete (CTC) vs. Estimate-at-Completion (EAC): How to Forecast Profit Accurately [Read More](https://redteam.com/insights-and-stories/cost-to-complete-ctc-vs-estimate-at-completion-eac/) [Featured](https://redteam.com/insights-and-stories/category/featured/) , [Insights](https://redteam.com/insights-and-stories/category/insights/) , [Solutions](https://redteam.com/insights-and-stories/category/solutions/) 5 MIN READ A General Contractor's Guide to Construction Procurement [Read More](https://redteam.com/insights-and-stories/construction-procurement-guide-for-general-contractors/) [Featured](https://redteam.com/insights-and-stories/category/featured/) , [Insights](https://redteam.com/insights-and-stories/category/insights/) , [Solutions](https://redteam.com/insights-and-stories/category/solutions/) 7 MIN READ Time & Materials Contracts Explained: How Better Documentation Leads to Better Project Outcomes [Read More](https://redteam.com/insights-and-stories/time-and-material-contract/)"
+       ]
+      }
+     ],
+     "reasoning": "The Builder Blog and resources index show construction advice, buyer guides, procurement guidance, and contract explainers rather than two engineer-authored posts explaining how RedTeam itself is built. Sources: https://blog.redteam.com/ and https://redteam.com/resources/release-notes",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Construction Management Software for GCs | RedTeam",
+       "url": "https://redteam.com/",
+       "excerpts": [
+        "RedTeam is construction management software built for small and mid-sized commercial GCs to manage [projects](https://redteam.com/construction-project-management-software/) , [financials](https://redteam.com/construction-financial-management-software/) , documents, and team coordination in [one connected platform"
+       ]
+      }
+     ],
+     "reasoning": "The homepage directly identifies small and mid-sized commercial general contractors as its audience and projects, financials, documents, and team coordination as its functions. Source: https://redteam.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/redteamsoftware",
+       "excerpts": [
+        "Book a demo to see how RedTeam fits your team. website: https://redteam.com/why-red-team/ employee count: 98 founded year: 2006 follower count: 8722 linkedin url: https://www.linkedin.com/company/redteamsoftware country iso: US country name: United States locality: Orlando, FL type: Privately Held size: 10 company headline Construction project management software built for commercial general contractors."
+       ]
+      },
+      {
+       "title": "RedTeam - Construction Technology Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/redteam---construction-technology/5a1da3502300005e009569a6",
+       "excerpts": [
+        "Minus sign icon Plus sign icon As of August 2026 , RedTeam - Construction Technology has approximately 99 employees across 4 continents, including North America , Asia and South America ."
+       ]
+      }
+     ],
+     "reasoning": "The company profile lists 98 employees, while LeadIQ reports approximately 99 as of August 2026; both fall within 51\u2013100. Other directory estimates differ, so the band is not treated as certain. Sources: https://linkedin.com/company/redteamsoftware and https://leadiq.com/c/redteam---construction-technology/5a1da3502300005e009569a6",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "RedTeam Harnesses AWS and Generative AI to Achieve 90% Extraction Accuracy and Supercharge Document Processing\u00a0\u00a0\u00a0 | Allata",
+       "url": "https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing",
+       "excerpts": [
+        "Our team implemented an AI-driven pipeline using AWS Bedrock and Textract, achieving around 90% accuracy while cutting processing time dramatically.",
+        "**AI Services:** Amazon Bedrock, Textract",
+        "**Patrick Smith** Chief Technology Officer, RedTeam"
+       ]
+      }
+     ],
+     "reasoning": "Allata\u2019s RedTeam client case study explicitly identifies an AWS Bedrock and Textract pipeline and includes attribution to RedTeam\u2019s CTO. It does not name a specific foundation model. Source: https://www.allata.com/client-stories/redteam-harnesses-aws-and-generative-ai-to-achieve-90-extraction-accuracy-and-supercharge-document-processing",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Construction Management Software Pricing | RedTeam",
+       "url": "https://redteam.com/pricing",
+       "excerpts": [
+        "How is RedTeam pricing structured? RedTeam pricing is based on your Active Project Value (APV), which is the total value of projects you're actively managing in the platform. Smaller APV tiers can receive an estimated annual price through the calculator, while larger accounts are custom quoted so RedTeam can tailor pricing to the size and complexity of the business."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page explains Active Project Value pricing, an annual-price calculator for smaller tiers, and custom quotes for larger accounts. Source: https://redteam.com/pricing",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: RedTeam Software; latest_funding_round_amount_usd: 28000000.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 28000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2022-02-02; all_funding_rounds[0].round_investor_names: Braemont Capital; all_funding_rounds[1].round_name: Series A; all_funding_rounds[1].amount_usd: 5000000.0; all_funding_rounds[1].round_valuation_usd: null; all_funding_rounds[1].round_date: 2020-09-21; all_funding_rounds[1].round_investor_names: JettyCove; all_funding_rounds[2].round_name: Series A; a"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the latest round amount as USD 28,000,000. Source: https://tracxn.com/d/companies/redteam-software/__8uqjtcWi34fjq7b-F-SIGADWn7r4JGxDBWH1cz8DPDU",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Construction Management Software for GCs | RedTeam",
+       "url": "https://redteam.com/",
+       "excerpts": [
+        "\"Since the software is extremely user-friendly, you save a lot of time working on invoices, and the communication is much more streamlined.\" Julio Claussen Project Manager, T&G Constructors",
+        "\"The first thing we noticed when we started using RedTeam is how much time it was saving us and that time savings allowed the company to grow without hiring new staff.\" Joel Anzelc Vice President, ASI General Contractors"
+       ]
+      }
+     ],
+     "reasoning": "The homepage presents customer testimonials attributed to T&G Constructors and ASI General Contractors, with case-study links. Source: https://redteam.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: RedTeam Software; website_url: https://redteam.com; founded_year: 2006; employee_count_official: 98; employee_count_history[0].employee_count: 50; employee_count_history[0].year: 2024; employee_count_history[0].month: 12; employee_count_history[1].employee_count: 51; employee_count_history[1].year: 2023; employee_count_history[1].month: 12; employee_count_history[2].employee_count: 60; employee_count_history[2].year: 2022; employee_count_history[2].month: 12; employee_count_history[3].employee_count: 38; employee_count_history[3].year: 2021; employee_count_history[3].month: 12; employee_"
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded funding date is February 2, 2022, normalized to the requested YYYY-MM format. Source: https://tracxn.com/d/companies/redteam-software/__8uqjtcWi34fjq7b-F-SIGADWn7r4JGxDBWH1cz8DPDU",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager | RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+       "excerpts": [
+        "You'll run HubSpot and Gainsight, but the job is bigger than the tools.",
+        "Process Ownership and Improvement Own the end-to-end revenue process: lead routing, Marketing-to-Sales and Sales-to-CS handoffs, deal stages, onboarding, and renewals Spot friction and gaps before they become problems, and bring recommendations to leadership backed by data Define and document process standards (stage definitions, required fields, handoff criteria) and drive adoption across teams Build and maintain a prioritized RevOps roadmap, and manage incoming requests against it Lead the rollout of new processes and tools, including training, documentation, and follow-up to make sure changes stick Reporting and Insights Own the accuracy of core revenue metrics: pipeline, conversion rates, bookings, churn, GRR, and NRR Build and maintain dashboards for Sales, Marketing, Customer Success, and the leadership team Support forecasting and prepare data for leadership and board reporting Flag trends and risks early instead of waiting to be asked Systems Administration (HubSpot and Gainsight) Own HubSpot configuration across Sales, Marketing, Service, and Operations Hub: users, permissions, pipelines, lifecycle stages, workflows, and automation Administer Gainsight: customer health scoring, lifecycle stages, playbooks, Success Plans, and CTAs Keep data in sync between HubSpot, Gainsight, and the rest of the GTM stack (including PandaDoc"
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Manager posting explicitly names HubSpot and Gainsight as systems the employee will run, and PandaDoc as part of the go-to-market stack. Gainsight is primarily a customer-success platform rather than a conventional sales CRM. Source: https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "RedTeam Appoints Connor Schone as Vice President of",
+       "url": "https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/RedTeam-Appoints-Connor-Schone-as-Vice-President-of-Finance.html",
+       "excerpts": [
+        "RedTeam Appoints Connor Schone as Vice President of Finance",
+        "July 09, 2026 11:15 ET | Source: [RedTeam Software](https://www.globenewswire.com/en/search/organization/RedTeam%2520Software) Follow"
+       ]
+      }
+     ],
+     "reasoning": "RedTeam announced Connor Schone\u2019s appointment as Vice President of Finance on July 9, 2026, within the requested 12-month window. Source: https://www.globenewswire.com/news-release/2026/07/09/3324998/0/en/RedTeam-Appoints-Connor-Schone-as-Vice-President-of-Finance.html",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs?locale=en-US",
+       "excerpts": [
+        "There are no jobs posted at this time."
+       ]
+      },
+      {
+       "title": "Revenue Operations Manager | RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+       "excerpts": [
+        "ALL JOBS Revenue Operations Manager FULL TIME \u2022 FULLY REMOTE - US"
+       ]
+      }
+     ],
+     "reasoning": "The official job index explicitly states that no jobs are posted. A separately accessible live posting is for Revenue Operations Manager, which does not qualify. The index and direct postings have inconsistent availability signals, limiting confidence in the negative. Sources: https://redteam.apscareerportal.com/jobs?locale=en-US and https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: RedTeam Software; website_url: https://redteam.com; founded_year: 2006; employee_count_official: 98; employee_count_history[0].employee_count: 50; employee_count_history[0].year: 2024; employee_count_history[0].month: 12; employee_count_history[1].employee_count: 51; employee_count_history[1].year: 2023; employee_count_history[1].month: 12; employee_count_history[2].employee_count: 60; employee_count_history[2].year: 2022; employee_count_history[2].month: 12; employee_count_history[3].employee_count: 38; employee_count_history[3].year: 2021; employee_count_history[3].month: 12; employee_"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile explicitly labels the latest recorded financing as Series B. Source: https://tracxn.com/d/companies/redteam-software/__8uqjtcWi34fjq7b-F-SIGADWn7r4JGxDBWH1cz8DPDU",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home | Help Center",
+       "url": "https://help.redteam.com/en",
+       "excerpts": [
+        "133 articles](https://help.redteam.com/en/collections/4046168-fieldlens-by-redteam) [TeamPlayer - The Basics How to get started with TeamPlayer 1 article](https://help.redteam.com/en/collections/3696956-teamplayer-the-basics) [TeamPlayer for RedTeam Flex Customers All you need to know about TeamPlayer and what needs to be configured in the GC side in RedTeam Flex, as well as how to view and manage your TeamPlayer invoices in RedTeam Flex 11 articles"
+       ]
+      }
+     ],
+     "reasoning": "The public help center lists substantial documentation collections, including 133 Fieldlens articles, 501 RedTeam Go articles, and 236 RedTeam Flex articles. Source: https://help.redteam.com/en",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Learn More About Us | RedTeam",
+       "url": "https://redteam.com/about-us",
+       "excerpts": [
+        "2006 dd RedTeam is born Founded by Michael Wright. HQ in Orlando, Florida."
+       ]
+      }
+     ],
+     "reasoning": "RedTeam\u2019s company history explicitly identifies its headquarters as Orlando, Florida. Source: https://redteam.com/about-us",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Submittals: A New Experience in RedTeam Flex",
+       "url": "https://blog.redteam.com/new-submittals-experience-redteam-flex",
+       "excerpts": [
+        "August 19, 2026",
+        "RedTeam Flex has a rebuilt Submittals experience, currently in beta, that replaces the legacy submittals tool with a faster setup process and clearer tracking of who owns the next action on every item."
+       ]
+      }
+     ],
+     "reasoning": "An August 19, 2026 article presents a rebuilt Submittals experience, available in beta, replacing the legacy tool with new setup and responsibility-tracking workflows. This is treated as a major-feature beta announcement within the six-month window, not a general-availability launch. Source: https://blog.redteam.com/new-submittals-experience-redteam-flex",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive - SMB | RedTeam Software",
+       "url": "https://redteam.careerplug.com/jobs/3327123/apps/new",
+       "excerpts": [
+        "Account Executive - SMB Fully Remote - US",
+        "(if you already have a resume on Indeed) _Or apply here._ \\* required fields First Name \\* Last Name \\* Email \\* Phone \\*"
+       ]
+      }
+     ],
+     "reasoning": "A directly accessible Account Executive \u2013 SMB posting includes an application form. Confidence is limited because the aggregate job index reports no openings despite accessible individual postings. Source: https://redteam.careerplug.com/jobs/3327123/apps/new",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: RedTeam Software; website_url: https://redteam.com; founded_year: 2006; employee_count_official: 98; employee_count_history[0].employee_count: 50; employee_count_history[0].year: 2024; employee_count_history[0].month: 12; employee_count_history[1].employee_count: 51; employee_count_history[1].year: 2023; employee_count_history[1].month: 12; employee_count_history[2].employee_count: 60; employee_count_history[2].year: 2022; employee_count_history[2].month: 12; employee_count_history[3].employee_count: 38; employee_count_history[3].year: 2021; employee_count_history[3].month: 12; employee_"
+       ]
+      },
+      {
+       "title": "Kirkland Advises Braemont Capital and JettyCove Holdings on Investment in RedTeam Software | News | Kirkland & Ellis LLP",
+       "url": "https://www.kirkland.com/news/press-release/2022/02/kirkland-advises-braemont-capital-and-jettycove",
+       "excerpts": [
+        "11 February 2022",
+        "Kirkland & Ellis advised Texas investment firms Braemont Capital and JettyCove Holdings on their investments in RedTeam Software, a construction management software provider, and in connection with RedTeam\u2019s acquisition of PASKR, a cloud-based construction management solution."
+       ]
+      }
+     ],
+     "reasoning": "The latest recorded round is February 2022, before the May 2025 cutoff. Investor counsel\u2019s dated announcement independently confirms the investment that month. Sources: https://tracxn.com/d/companies/redteam-software/__8uqjtcWi34fjq7b-F-SIGADWn7r4JGxDBWH1cz8DPDU and https://www.kirkland.com/news/press-release/2022/02/kirkland-advises-braemont-capital-and-jettycove",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Construction Management Software for GCs | RedTeam",
+       "url": "https://redteam.com/",
+       "excerpts": [
+        "\"Since the software is extremely user-friendly, you save a lot of time working on invoices, and the communication is much more streamlined.\" Julio Claussen Project Manager, T&G Constructors"
+       ]
+      }
+     ],
+     "reasoning": "The homepage attributes a customer testimonial to Julio Claussen, Project Manager at T&G Constructors. Source: https://redteam.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Construction Management Software for GCs | RedTeam",
+       "url": "https://redteam.com/",
+       "excerpts": [
+        "\"The first thing we noticed when we started using RedTeam is how much time it was saving us and that time savings allowed the company to grow without hiring new staff.\" Joel Anzelc Vice President, ASI General Contractors"
+       ]
+      }
+     ],
+     "reasoning": "The homepage attributes a customer testimonial to Joel Anzelc, Vice President at ASI General Contractors. Source: https://redteam.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager | RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+       "excerpts": [
+        "You'll run HubSpot and Gainsight, but the job is bigger than the tools."
+       ]
+      }
+     ],
+     "reasoning": "The Revenue Operations Manager posting explicitly says the employee will run HubSpot. Source: https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager | RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+       "excerpts": [
+        "You'll run HubSpot and Gainsight, but the job is bigger than the tools."
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly says the employee will run Gainsight. It is included as a customer-lifecycle system within RedTeam\u2019s broader go-to-market stack. Source: https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Revenue Operations Manager | RedTeam Software",
+       "url": "https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+       "excerpts": [
+        "Process Ownership and Improvement Own the end-to-end revenue process: lead routing, Marketing-to-Sales and Sales-to-CS handoffs, deal stages, onboarding, and renewals Spot friction and gaps before they become problems, and bring recommendations to leadership backed by data Define and document process standards (stage definitions, required fields, handoff criteria) and drive adoption across teams Build and maintain a prioritized RevOps roadmap, and manage incoming requests against it Lead the rollout of new processes and tools, including training, documentation, and follow-up to make sure changes stick Reporting and Insights Own the accuracy of core revenue metrics: pipeline, conversion rates, bookings, churn, GRR, and NRR Build and maintain dashboards for Sales, Marketing, Customer Success, and the leadership team Support forecasting and prepare data for leadership and board reporting Flag trends and risks early instead of waiting to be asked Systems Administration (HubSpot and Gainsight) Own HubSpot configuration across Sales, Marketing, Service, and Operations Hub: users, permissions, pipelines, lifecycle stages, workflows, and automation Administer Gainsight: customer health scoring, lifecycle stages, playbooks, Success Plans, and CTAs Keep data in sync between HubSpot, Gainsight, and the rest of the GTM stack (including PandaDoc"
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly identifies PandaDoc as part of RedTeam\u2019s go-to-market stack. Source: https://redteam.apscareerportal.com/jobs/3672234/apps/new",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2006.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "RedTeam provides construction management software for small and mid-sized commercial general contractors to manage projects, financials, documents, and team coordination in one platform.",
+    "employee_band": "51-100",
+    "model_provider": "Amazon Web Services \u2014 Amazon Bedrock and Amazon Textract",
+    "pricing_page": true,
+    "funding_amount_usd": 28000000.0,
+    "named_customers": [
+     "T&G Constructors",
+     "ASI General Contractors"
+    ],
+    "funding_date": "2022-02",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Gainsight",
+     "PandaDoc"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Orlando",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

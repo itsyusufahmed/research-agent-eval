@@ -1,0 +1,170 @@
+{
+ "schema_version": "v0",
+ "company": "Momentus Technologies",
+ "domain": "gomomentus.com",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Momentus Technologies provides event and venue management software that helps venue operators and event professionals manage bookings, streamline operations, and increase revenue.",
+   "citations": [
+    "https://www.gomomentus.com/",
+    "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813"
+   ],
+   "notes": "The homepage identifies bookings, event operations and venue revenue as core outcomes; the company job posting identifies event professionals and venue types as the audience. Sources: https://www.gomomentus.com/ and https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813"
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.gomomentus.com/pricing"
+   ],
+   "notes": "The public pricing page lists Enterprise and Elite plan tiers. Prices are quote-based, which still meets the requested definition. Source: https://www.gomomentus.com/pricing"
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Google",
+    "Microsoft"
+   ],
+   "citations": [
+    "https://www.gomomentus.com/"
+   ],
+   "notes": "named_customers: The homepage's customer endorsement explicitly names Google and Microsoft. Source: https://www.gomomentus.com/ | named_customers.0: Google is explicitly named in the homepage's customer endorsement. | named_customers.1: Microsoft is explicitly named in the homepage's customer endorsement."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/57378"
+   ],
+   "notes": "The company's LinkedIn page explicitly lists 201\u2013500 employees. Source: https://linkedin.com/company/57378"
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "St. Louis",
+    "country": "United States"
+   },
+   "citations": [
+    "https://linkedin.com/company/57378"
+   ],
+   "notes": "hq_city: The company's LinkedIn page explicitly lists St. Louis, Missouri as its headquarters. Source: https://linkedin.com/company/57378 | hq_country: The company's LinkedIn description explicitly places its headquarters in the United States. Source: https://linkedin.com/company/57378"
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 1985.0,
+   "citations": [
+    "https://infohub.gomomentus.com/hubfs/ebooks/How-to-Successfully-Choose-the-Right-Venue-and-Event-Management-Solution-for-Your-Business.pdf?hsLang=en"
+   ],
+   "notes": "The company's publication explicitly states that Momentus was founded in 1985. Source: https://infohub.gomomentus.com/hubfs/ebooks/How-to-Successfully-Choose-the-Right-Venue-and-Event-Management-Solution-for-Your-Business.pdf?hsLang=en"
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://gomomentus.com/blog",
+    "https://gomomentus.com/blog/data-residency-requirements"
+   ],
+   "notes": "The blog index and candidate-post review did not establish two engineer-authored posts about how the product is built. One post describes actual security implementation; the other plausible candidates are predominantly industry or procurement guidance by a product executive. This is false under the specified two-post threshold, not a claim that the site has no technical content. Sources: https://gomomentus.com/blog and https://gomomentus.com/blog/data-residency-requirements"
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35430168339351-Public-Momentus-Connect-API-Now-Available",
+    "https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35490423637143-Momentus-API-Reference-Documentation"
+   ],
+   "notes": "Two public support articles link to regional API documentation, and the reference article identifies Enterprise OData, Enterprise Standard and Elite API collections. Sources: https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35430168339351-Public-Momentus-Connect-API-Now-Available and https://connectsupportcenter.ungerboeck.com/hc/en-us/articles/35490423637143-Momentus-API-Reference-Documentation"
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4280768"
+   ],
+   "notes": "The live AI Operations Manager posting has an application link and describes building and deploying AI/LLM tooling. Its title qualifies under the requested AI-title criterion. Source: https://recruiting.paylocity.com/Recruiting/Jobs/Details/4280768"
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "AWS Bedrock, with access to foundation models from Anthropic, Meta, Amazon and Cohere and model selection performed per task.",
+   "citations": [
+    "https://gomomentus.com/momentus-answers"
+   ],
+   "notes": "The product FAQ states that Momentus AI products run on AWS Bedrock, names the available foundation-model providers, and explains task-specific model selection. It does not establish that every named provider is used for every feature. Source: https://gomomentus.com/momentus-answers"
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "GDPR",
+    "PCI DSS"
+   ],
+   "citations": [
+    "https://trustcenter.gomomentus.com/",
+    "https://gomomentus.com/ticketing"
+   ],
+   "notes": "compliance_certs: The Trust Center names SOC 2, ISO 27001:2022 and PCI DSS; the ticketing product page explicitly claims GDPR compliance. GDPR is included as a requested compliance claim, not as an independently issued certification. Sources: https://trustcenter.gomomentus.com/ and https://gomomentus.com/ticketing | compliance_certs.0: SOC 2 is explicitly named in the company's Trust Center. | compliance_certs.1: ISO 27001:2022 is explicitly named in the company's Trust Center. | compliance_certs.2: The ticketing page explicitly claims GDPR compliance. | compliance_certs.3: The Trust Center explicitly lists PCI DSS \u2014 SAQ D, Merchant."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Debt - Acquisition",
+    "date": null,
+    "amount_usd": null
+   },
+   "citations": [
+    "https://pitchbook.com/profiles/company/233445-43"
+   ],
+   "notes": "funding_stage: PitchBook labels the latest deal type 'Debt - Acquisition.' Other databases have incomplete or conflicting funding coverage, so this is reported with medium confidence rather than treating the company as unfunded. Source: https://pitchbook.com/profiles/company/233445-43 | funding_date: Unknown. A date for the latest acquisition-debt financing was not publicly disclosed in the reviewed profile. Acquisition dates and the older ownership transaction do not establish the date of this financing. Source reviewed: https://pitchbook.com/profiles/company/233445-43 | funding_amount_usd: Unknown. The reviewed funding profile identifies acquisition debt as the latest financing type but does not disclose its amount publicly. The reported $38.3 million is cumulative funding and cannot be substituted for the latest round. Source reviewed: https://pitchbook.com/profiles/company/233445-43"
+  },
+  "raised_18mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown. Funding history exists, but the latest financing's date could not be established, so a yes/no answer for the preceding eighteen months would be speculative. Unrelated Momentus space-company financing announcements were excluded. Source reviewed: https://pitchbook.com/profiles/company/233445-43"
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.smartrecruiters.com/MomentusTechnologies/744000109067005-account-executive"
+   ],
+   "notes": "The Account Executive job page identifies a full-time position and provides an active application action. Source: https://jobs.smartrecruiters.com/MomentusTechnologies/744000109067005-account-executive"
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.prnewswire.com/news-releases/momentus-technologies-launches-momentusmax-an-ai-platform-built-for-venues-and-brings-max-for-sales-to-general-availability-302878223.html"
+   ],
+   "notes": "The September 15, 2026 announcement reports general availability of MAX for Sales, an AI-native CRM, within the preceding six months. Source: https://www.prnewswire.com/news-releases/momentus-technologies-launches-momentusmax-an-ai-platform-built-for-venues-and-brings-max-for-sales-to-general-availability-302878223.html"
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://gomomentus.com/blog/momentus-technologies-strengthens-leadership-with-appointment-of-joel-sackett-as-chief-product-officer-and-james-hughes-as-chief-technology-officer"
+   ],
+   "notes": "The dated January 24, 2026 announcement names Joel Sackett as Chief Product Officer and James Hughes as Chief Technology Officer, within the preceding twelve months. Source: https://gomomentus.com/blog/momentus-technologies-strengthens-leadership-with-appointment-of-joel-sackett-as-chief-product-officer-and-james-hughes-as-chief-technology-officer"
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "HubSpot",
+    "Gong"
+   ],
+   "citations": [
+    "https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813"
+   ],
+   "notes": "crm_stack_signal: The Sales Operations Analyst posting explicitly names Salesforce as the primary platform, alongside HubSpot and Gong, as systems the employee will support. Source: https://recruiting.paylocity.com/Recruiting/Jobs/Details/4563813 | crm_stack_signal.0: The job posting explicitly calls Salesforce the primary sales technology platform. | crm_stack_signal.1: The job posting explicitly includes HubSpot among the platforms supported. | crm_stack_signal.2: The job posting explicitly includes Gong among the platforms supported."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 323.3
+}

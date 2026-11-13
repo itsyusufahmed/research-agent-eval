@@ -1,0 +1,494 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e836942f14e849207",
+  "interaction_id": "trun_142119f6a1b4439e836942f14e849207",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "orangelogic.com"
+  },
+  "created_at": "2026-11-10T18:48:14.480173Z",
+  "modified_at": "2026-11-10T18:52:09.804354Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e836942f14e849207",
+   "interaction_id": "trun_142119f6a1b4439e836942f14e849207",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "orangelogic.com"
+   },
+   "created_at": "2026-11-10T18:48:14.480173Z",
+   "modified_at": "2026-11-10T18:52:09.804354Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Orange Logic | LinkedIn",
+       "url": "https://linkedin.com/company/320369",
+       "excerpts": [
+        "Headquarters Irvine, California Type Privately Held Founded 1998"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly lists Founded 1998. Source: https://linkedin.com/company/320369",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "TRUST + SECURITY SOC 2, ISO 27001, HIPAA and GDPR certified"
+       ]
+      }
+     ],
+     "reasoning": "The homepage publicly claims all four named compliance credentials; these are reported as company claims. Source: https://www.orangelogic.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Orange Logic | LinkedIn",
+       "url": "https://linkedin.com/company/320369",
+       "excerpts": [
+        "Headquarters Irvine, California Type Privately Held Founded 1998"
+       ]
+      },
+      {
+       "title": "Orange Logic",
+       "url": "https://linkedin.com/company/orange-logic",
+       "excerpts": [
+        "country iso: US country name: United States locality: Irvine, California"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies Irvine, California as headquarters, and its location record explicitly names the United States. Sources: https://linkedin.com/company/320369 and https://linkedin.com/company/orange-logic",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "DAM Blog: Trends, Tips & Insights | Orange Logic",
+       "url": "https://www.orangelogic.com/blog/all",
+       "excerpts": [
+        "[](https://www.orangelogic.com/dam-blog/how-dam-helps-marketing-teams-localize-assets-globally)",
+        "May 26, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The reviewed blog index presents DAM advice, customer outcomes, and product or marketing content. It does not establish two engineer-authored posts explaining how Orange Logic itself is built; technical-sounding titles alone do not satisfy that criterion. Source: https://www.orangelogic.com/blog/all",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Orange Logic | Our Story, Mission & Values",
+       "url": "https://www.orangelogic.com/about",
+       "excerpts": [
+        "Orange Logic is a content orchestration platform that offers digital asset management and media asset management solutions that go beyond traditional DAM and MAM. Since 1998, its platform has helped the world's largest brands, archives, and government agencies manage, govern, and orchestrate content at scale."
+       ]
+      }
+     ],
+     "reasoning": "The About page describes the content-orchestration platform, its digital and media asset management capabilities, and its audience of brands, archives, and government agencies. Source: https://www.orangelogic.com/about",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Orange Logic",
+       "url": "https://linkedin.com/company/orange-logic",
+       "excerpts": [
+        "employee count: 278 founded year: 1998 follower count: 175468 linkedin url: https://www.linkedin.com/company/orange-logic country iso: US country name: United States locality: Irvine, California type: Privately Held size: 200"
+       ]
+      }
+     ],
+     "reasoning": "The reported employee count of 278 falls within 201-500. LinkedIn-associated headcount is an estimate rather than a verified payroll count. Source: https://linkedin.com/company/orange-logic",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Orange Logic Brings NVIDIA Nemotron to Agent Studio, Advancing Governed AI Agents for Enterprise Content",
+       "url": "https://www.orangelogic.com/dam-blog/orange-logic-brings-nvidia-nemotron-to-agent-studio-advancing-governed-ai-agents-for-enterprise-content",
+       "excerpts": [
+        "Orange Logic is embedding NVIDIA Nemotron open models in Agent Studio, announced ahead of IBC2026."
+       ]
+      }
+     ],
+     "reasoning": "The announcement explicitly identifies NVIDIA Nemotron open models as being embedded in Agent Studio. Source: https://www.orangelogic.com/dam-blog/orange-logic-brings-nvidia-nemotron-to-agent-studio-advancing-governed-ai-agents-for-enterprise-content",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "Products OrangeLogic_lionsgate-global-marketing_cta-1 Lionsgate: One home for global marketing [Read Story](https://www.orangelogic.com/dam-case-studies/lionsgate) [Read Story](https://www.orangelogic.com/dam-case-studies/lionsgate) OrangeLogic_ae-global-media-waterfall_cta-1 A+E Global Media: Talent approvals, all in one place [Read Story](https://www.orangelogic.com/dam-case-studies/ae-global-media) [Read Story](https://www.orangelogic.com/dam-case-studies/ae-global-media) Solutions OrangeLogic_pmc-media-publishing_cta-1 PMC: From live events to global audiences [Read Story](https://www.orangelogic.com/dam-case-studies/penske-media) [Read Story](https://www.orangelogic.com/dam-case-studies/penske-media) OrangeLogic_carnegie-hall-auditorium_cta-1 Carnegie Hall: Opening music history to the world [Read Story](https://www.orangelogic.com/dam-case-studies/carnegie-hall) [Read Story](https://www.orangelogic.com/dam-case-studies/carnegie-hall) [Customers](https://www.orangelogic.com/digital-asset-management-software-customers) Resources",
+        "[BOOK A DEMO](https://www.orangelogic.com/demo)"
+       ]
+      }
+     ],
+     "reasoning": "The reviewed homepage navigation and footer direct visitors to demos rather than a pricing page and contain no pricing link. The /pricing URL also returned no readable page. Source: https://www.orangelogic.com/",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Orange Logic - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/orangelogic/__D9NVOUdnIQotwFvHfBdFdu6be-9zNDnP1bcWWHTidig/funding-and-investors",
+       "excerpts": [
+        "Orange Logic has raised an undisclosed amount of funding from 1 PE round on May 16, 2023from Bregal Sagemount."
+       ]
+      }
+     ],
+     "reasoning": "The funding history describes the May 2023 private-equity investment as an undisclosed amount, so no supported USD amount can be supplied. Source: https://tracxn.com/d/companies/orangelogic/__D9NVOUdnIQotwFvHfBdFdu6be-9zNDnP1bcWWHTidig/funding-and-investors",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "Lionsgate: One home for global marketing",
+        "A+E Global Media: Talent approvals, all in one place"
+       ]
+      }
+     ],
+     "reasoning": "The homepage features customer stories for Lionsgate and A+E Global Media. Source: https://www.orangelogic.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Sagemount Announces Strategic Investment In Orange Logic | Bregal Sagemount",
+       "url": "https://www.sagemount.com/news/bregal-sagemount-announces-strategic-growth-investment-in-orange-logic",
+       "excerpts": [
+        "IRVINE, CA \u2013 May 16, 2023 \u2013 Orange Logic, a leading provider of digital asset management (\u201cDAM\u201d) software, today announced that it has received significant investment from Bregal Sagemount (\u201cSagemount\u201d), a leading growth-focused private equity firm."
+       ]
+      },
+      {
+       "title": "Orange Logic Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/orange-logic/financials",
+       "excerpts": [
+        "Orange Logic's **latest funding round** was a **Private Equity for** on **May 16, 2023** ."
+       ]
+      }
+     ],
+     "reasoning": "The investor announcement dates the investment to May 16, 2023, and the funding profile identifies it as the latest round; the requested month is 2023-05. Sources: https://www.sagemount.com/news/bregal-sagemount-announces-strategic-growth-investment-in-orange-logic and https://www.cbinsights.com/company/orange-logic/financials",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Sales Development Representative position | Orange Logic",
+       "url": "https://www.orangelogic.com/jobs/sales-development-representative",
+       "excerpts": [
+        "Experience using CRM software (preferably HubSpot) and proficiency in G Suite or Microsoft Office"
+       ]
+      }
+     ],
+     "reasoning": "The SDR posting explicitly prefers experience with HubSpot. This is a CRM-stack signal, not definitive proof of deployment. Source: https://www.orangelogic.com/jobs/sales-development-representative",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Shawnna Sumaoang",
+       "url": "https://linkedin.com/in/shawnnasumaoang",
+       "excerpts": [
+        "Returned fields: {experience_text='Orange Logic 2026-08-01 Vice President of Marketing SCS Collective Greater Seattle Area 2022-05-01 Strategic Advisor', slug='shawnnasumaoang', url='https://linkedin.com/in/shawnnasumaoang', name='Shawnna Sumaoang', company_name='Orange Logic', title='Vice President of Marketing'}"
+       ]
+      }
+     ],
+     "reasoning": "Shawnna Sumaoang's profile dates the start of her Orange Logic Vice President of Marketing role to August 2026, within the requested 12-month window. Source: https://linkedin.com/in/shawnnasumaoang",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Applied AI Product Engineer | Orange Logic",
+       "url": "https://www.orangelogic.com/jobs/global-applied-ai-product-engineer-orange-logic",
+       "excerpts": [
+        "Careers at Orange Logic # Applied AI Product Engineer Global",
+        "Apply now"
+       ]
+      }
+     ],
+     "reasoning": "The live Applied AI Product Engineer posting includes an application action and meets the title criterion. Source: https://www.orangelogic.com/jobs/global-applied-ai-product-engineer-orange-logic",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Orange Logic Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/orange-logic/financials",
+       "excerpts": [
+        "Orange Logic's **latest funding round** was a **Private Equity for** on **May 16, 2023** ."
+       ]
+      },
+      {
+       "title": "Sagemount Announces Strategic Investment In Orange Logic | Bregal Sagemount",
+       "url": "https://www.sagemount.com/news/bregal-sagemount-announces-strategic-growth-investment-in-orange-logic",
+       "excerpts": [
+        "Bregal Sagemount Announces Strategic Growth Investment In Orange Logic"
+       ]
+      }
+     ],
+     "reasoning": "The latest round is classified as private equity, while the investor calls it a strategic growth investment. Sources: https://www.cbinsights.com/company/orange-logic/financials and https://www.sagemount.com/news/bregal-sagemount-announces-strategic-growth-investment-in-orange-logic",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "OrangeDAM",
+       "url": "https://developer.orangelogic.com/",
+       "excerpts": [
+        "**# Build beyond DAM ** Use the Orange Logic API to build applications, integrations, and plugins that extend Orange Logic's capabilities across your software suite. **[Start building](https://developer.orangelogic.com/reference/about)** * * **## Building blocks ** ## API reference Learn about the Orange Logic API. **[Get started \u2192](https://developer.orangelogic.com/reference/about)** Core features Browse calls related to core features, including asset links, batch-edit, search, upload, and more. **[Browse calls \u2192](https://developer.orangelogic.com/reference/asset-links)** Manage assets, users, and more Use the highly-flexible DataTable API to create, read, update, or delete assets, users, and other objects. **[Explore the DataTable API \u2192](https://developer.orangelogic.com/reference/datatable-apis)**"
+       ]
+      }
+     ],
+     "reasoning": "The public developer portal links to API reference documentation, core-feature endpoints, and DataTable APIs, establishing multiple documentation sections. Source: https://developer.orangelogic.com/",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Orange Logic | LinkedIn",
+       "url": "https://linkedin.com/company/320369",
+       "excerpts": [
+        "Headquarters Irvine, California Type Privately Held Founded 1998"
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly lists Irvine, California as headquarters. Source: https://linkedin.com/company/320369",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Orange Logic Brings NVIDIA Nemotron to Agent Studio, Advancing Governed AI Agents for Enterprise Content",
+       "url": "https://www.orangelogic.com/dam-blog/orange-logic-brings-nvidia-nemotron-to-agent-studio-advancing-governed-ai-agents-for-enterprise-content",
+       "excerpts": [
+        "On September 8, 2026, ahead of IBC2026, Orange Logic announced it is embedding NVIDIA Nemotron open models in Agent Studio, expanding the AI capabilities",
+        "Date published: September 8, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The September 8, 2026 announcement introduces NVIDIA Nemotron integration into Agent Studio, a substantive AI capability announcement within the six-month window. The evidence establishes the announcement, not deployment to every customer. Source: https://www.orangelogic.com/dam-blog/orange-logic-brings-nvidia-nemotron-to-agent-studio-advancing-governed-ai-agents-for-enterprise-content",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive position | Orange Logic",
+       "url": "https://www.orangelogic.com/jobs/account-executive",
+       "excerpts": [
+        "Account Executive US [apply now](https://www.orangelogic.com/jobs/account-executive)"
+       ]
+      }
+     ],
+     "reasoning": "The live US Account Executive posting includes an application link and meets the specified sales-role criterion. Source: https://www.orangelogic.com/jobs/account-executive",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Orange Logic Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/orange-logic/financials",
+       "excerpts": [
+        "Orange Logic's **latest funding round** was a **Private Equity for** on **May 16, 2023** ."
+       ]
+      },
+      {
+       "title": "Orange Logic - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/orangelogic/__D9NVOUdnIQotwFvHfBdFdu6be-9zNDnP1bcWWHTidig/funding-and-investors",
+       "excerpts": [
+        "Orange Logic has raised an undisclosed amount of funding from 1 PE round on May 16, 2023from Bregal Sagemount."
+       ]
+      }
+     ],
+     "reasoning": "The funding histories identify May 16, 2023 as the latest and only listed round, before the 18-month window beginning in May 2025. Sources: https://www.cbinsights.com/company/orange-logic/financials and https://tracxn.com/d/companies/orangelogic/__D9NVOUdnIQotwFvHfBdFdu6be-9zNDnP1bcWWHTidig/funding-and-investors",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "TRUST + SECURITY SOC 2, ISO 27001, HIPAA and GDPR certified"
+       ]
+      }
+     ],
+     "reasoning": "The homepage explicitly names SOC 2 in its compliance claims.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "TRUST + SECURITY SOC 2, ISO 27001, HIPAA and GDPR certified"
+       ]
+      }
+     ],
+     "reasoning": "The homepage explicitly names ISO 27001 in its compliance claims.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "TRUST + SECURITY SOC 2, ISO 27001, HIPAA and GDPR certified"
+       ]
+      }
+     ],
+     "reasoning": "The homepage explicitly names HIPAA in its compliance claims.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "TRUST + SECURITY SOC 2, ISO 27001, HIPAA and GDPR certified"
+       ]
+      }
+     ],
+     "reasoning": "The homepage explicitly names GDPR in its compliance claims.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "Lionsgate: One home for global marketing"
+       ]
+      }
+     ],
+     "reasoning": "Lionsgate is featured in a homepage customer story.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Orange Logic | Digital Asset Management Software (DAM)",
+       "url": "https://www.orangelogic.com/",
+       "excerpts": [
+        "A+E Global Media: Talent approvals, all in one place"
+       ]
+      }
+     ],
+     "reasoning": "A+E Global Media is featured in a homepage customer story.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Sales Development Representative position | Orange Logic",
+       "url": "https://www.orangelogic.com/jobs/sales-development-representative",
+       "excerpts": [
+        "Experience using CRM software (preferably HubSpot) and proficiency in G Suite or Microsoft Office"
+       ]
+      }
+     ],
+     "reasoning": "The SDR posting names HubSpot as the preferred CRM experience, providing a stack signal rather than conclusive deployment evidence.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1998.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Orange Logic provides a content-orchestration platform that helps enterprises, archives, and government agencies manage, govern, and orchestrate digital and media assets at scale.",
+    "employee_band": "201-500",
+    "model_provider": "NVIDIA Nemotron open models",
+    "pricing_page": false,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Lionsgate",
+     "A+E Global Media"
+    ],
+    "funding_date": "2023-05",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Private equity",
+    "public_docs": true,
+    "hq_city": "Irvine",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

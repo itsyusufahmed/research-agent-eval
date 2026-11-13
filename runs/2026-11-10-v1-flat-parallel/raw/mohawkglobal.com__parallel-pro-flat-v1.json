@@ -1,0 +1,468 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea3b8d5c4917a4ab7",
+  "interaction_id": "trun_142119f6a1b4439ea3b8d5c4917a4ab7",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "mohawkglobal.com"
+  },
+  "created_at": "2026-11-10T18:48:38.997483Z",
+  "modified_at": "2026-11-10T18:52:52.543614Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea3b8d5c4917a4ab7",
+   "interaction_id": "trun_142119f6a1b4439ea3b8d5c4917a4ab7",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "mohawkglobal.com"
+   },
+   "created_at": "2026-11-10T18:48:38.997483Z",
+   "modified_at": "2026-11-10T18:52:52.543614Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Us - Mohawk Global",
+       "url": "https://mohawkglobal.com/about-us",
+       "excerpts": [
+        "Since its foundation in 1993, Mohawk Global has grown beyond its headquarters in Syracuse, New York to nine offices in six states, with a worldwide reach."
+       ]
+      }
+     ],
+     "reasoning": "Mohawk Global\u2019s About Us page says it was founded in 1993.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [],
+     "reasoning": "The company\u2019s privacy policy and information-security section were checked; the page names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Us - Mohawk Global",
+       "url": "https://mohawkglobal.com/about-us",
+       "excerpts": [
+        "Since its foundation in 1993, Mohawk Global has grown beyond its headquarters in Syracuse, New York to nine offices in six states, with a worldwide reach."
+       ]
+      },
+      {
+       "title": "Mohawk Global | LinkedIn",
+       "url": "https://linkedin.com/company/mohawk-global-logistics",
+       "excerpts": [
+        "Primary 123 Air Cargo Road N Syracuse, NY 13212, US"
+       ]
+      }
+     ],
+     "reasoning": "The About Us page places Mohawk Global\u2019s headquarters in Syracuse, New York; its company listing gives a U.S. address, establishing the country as the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Knowledge Center and Resources - Mohawk Global",
+       "url": "https://mohawkglobal.com/knowledge-center",
+       "excerpts": [
+        "[Tariff News](https://mohawkglobal.com/category/word-from-the-white-house/) With all the changes in the trade landscape, it's important to have clear information in one place. This is where you'll find the latest tariff updates.",
+        "[Case Studies](https://mohawkglobal.com/category/case-studies/) Discover how Mohawk Global can support your business, by exploring all the ways that we\u2019ve supported others.",
+        "[Articles To Read](https://mohawkglobal.com/category/articles-to-read/) At Mohawk Global, our knowledge extends across a broad range of shipping and logistics topics. Read our articles for an in-depth look at some of them."
+       ]
+      }
+     ],
+     "reasoning": "The Knowledge Center index organizes content into trade, tariff, industry, case-study, and general article categories, not an engineering or technical blog; no qualifying product-build posts are shown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About Us - Mohawk Global",
+       "url": "https://mohawkglobal.com/about-us",
+       "excerpts": [
+        "About Us We are supply chain solutions and trade experts dedicated to being your strategic business partner. [Home Mohawk Global](https://mohawkglobal.com/) > [About Us](https://mohawkglobal.com/about-us/) At Mohawk Global\u00ae, we focus on streamlining operations, controlling costs, and taking supply chain management off your mind, by putting it on our shoulders. We enhance business operations by integrating data and technology with a human touch, bringing you the imagination and creativity to turn numbers on spreadsheets into ideas and actions in the real world."
+       ]
+      }
+     ],
+     "reasoning": "Mohawk Global describes itself as supply-chain solutions and trade experts serving customers as a strategic business partner, and says it helps businesses integrate data and technology into operations.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Mohawk Global | LinkedIn",
+       "url": "https://linkedin.com/company/mohawk-global-logistics",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters N Syracuse, NY Type Privately Held Founded 1993"
+       ]
+      }
+     ],
+     "reasoning": "The company profile gives its size as 201\u2013500 employees, matching the requested band.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "GlobalLink - Public API",
+       "url": "https://api.mohawkglobal.com/",
+       "excerpts": [
+        "Introduction Mohawk API enables you to programmatically interact with Mohawk\u2019s data. This allows us to simplify and streamline our operations while providing our clients and partners with real time visibility to the data in our systems. Our API follows modern RESTful conventions and speaks JSON in both directions. **The following endpoints are in production. Details for each endpoint are included in this document:**"
+       ]
+      },
+      {
+       "title": "Innovation, Community, & Sustainability: Our 2025 Journey - Mohawk Global",
+       "url": "https://mohawkglobal.com/corporate-news/innovation-community-sustainability-our-2025-journey",
+       "excerpts": [
+        "We expanded our use of AI to streamline internal processes and enhance how we monitor and communicate rapidly shifting tariff policies\u2014ensuring you receive timely, accurate insights when you need them most."
+       ]
+      }
+     ],
+     "reasoning": "The API documentation, the company\u2019s discussion of AI, and its privacy policy were checked, but none names an AI model or provider; the provider is therefore unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Supply Chain Management - Mohawk Global",
+       "url": "https://mohawkglobal.com/",
+       "excerpts": [
+        "[International ## International](https://mohawkglobal.com/international/) [Domestic ## North American Transportation](https://mohawkglobal.com/north-american-transportation/) [Trade Advisors ## Trade Advisors]"
+       ]
+      },
+      {
+       "title": "Rates - Mohawk Global",
+       "url": "https://mohawkglobal.com/rates",
+       "excerpts": [
+        "Rates [April](https://mohawkglobal.com/2020/04/) [20](https://mohawkglobal.com/2020/04/20/) , [2020](https://mohawkglobal.com/2020/) [554 \u00d7 542](https://mohawkglobal.com/wp-content/uploads/2020/04/Rates.jpg) December 31 st 1969 , , 0mm, f /0, 0 seconds, 0 ISO"
+       ]
+      },
+      {
+       "title": "Transportation Quote - Mohawk Global",
+       "url": "https://mohawkglobal.com/contact-us/transportation-quote",
+       "excerpts": [
+        "Just a few simple details is all our pricing department needs to give you a quick and competitive transportation quote."
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation does not show a pricing link. The Rates page is an old post with an image rather than a displayed price list, and the transportation-quote page asks customers to request a quote. This supports no public pricing page.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Mohawkglobal; website_url: https://mohawkglobal.com; funded: null; stage: Unfunded; latest_funding_round_name: null; latest_funding_round_date: null; latest_funding_round_amount_usd: null; total_disclosed_funding_usd: null; all_funding_rounds: []; tracxn_url: https://platform.tracxn.com/a/d/company/531a5427e4b0f7e1660d05b4/mohawkglobal?utm_source=parallel&utm_medium=ai#a:about"
+       ]
+      }
+     ],
+     "reasoning": "The company-matched funding profile reports no funding rounds and no latest-round amount, so there is no amount to report.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Umbra Streamlines Customs Entry with Mohawk Global's Innovative Software Program - Mohawk Global",
+       "url": "https://mohawkglobal.com/case-studies/umbra-streamlines-customs-entry-with-mohawk-globals-innovative-software-program",
+       "excerpts": [
+        "Overview Umbra, is a home accessories design and manufacturing company. The company sells more than 2,000 home products through over 25,000 retailers in 120 countries and utilizes Mohawk Global's Customs Brokerage services."
+       ]
+      },
+      {
+       "title": "C A SE STUDY",
+       "url": "https://mohawkglobal.com/wp-content/uploads/2017/06/Case-Study-Iron-Foundrys-Production-Line-Flows-Seamlessly-Thanks-To-Inbound-Program.pdf",
+       "excerpts": [
+        "After years of managing their inbound transportation in-house, Frazer & Jones decided to conserve internal resources by outsourcing this function to Mohawk Global Logistics."
+       ]
+      }
+     ],
+     "reasoning": "Mohawk Global\u2019s case study says Umbra uses its customs brokerage services, and a separate case study says Frazer & Jones outsourced inbound transportation to Mohawk Global.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Mohawkglobal; website_url: https://mohawkglobal.com; funded: null; stage: Unfunded; latest_funding_round_name: null; latest_funding_round_date: null; latest_funding_round_amount_usd: null; total_disclosed_funding_usd: null; all_funding_rounds: []; tracxn_url: https://platform.tracxn.com/a/d/company/531a5427e4b0f7e1660d05b4/mohawkglobal?utm_source=parallel&utm_medium=ai#a:about"
+       ]
+      }
+     ],
+     "reasoning": "The company-matched funding profile lists no latest funding round or round date, so no funding date is available.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Mohawk Global Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/mohawk-global/5a1d92ae540000520077609b",
+       "excerpts": [
+        "**Technology Enablement** The company utilizes a modern tech stack including iCIMS, LinkedIn Recruiter, WordPress, Microsoft 365, Pardot, HubSpot, and analytics tools."
+       ]
+      }
+     ],
+     "reasoning": "The cited company technology-stack listing explicitly names HubSpot and Pardot among its systems.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Executive Team and Who We Are - Mohawk Global",
+       "url": "https://mohawkglobal.com/about-us/executive-team",
+       "excerpts": [
+        "Gar Grannell Chairman and Chief Executive Officer [Read more](https://mohawkglobal.com/team/gar-grannell/) Mike Kuhn President & Chief Growth Officer [Read more](https://mohawkglobal.com/team/mike-kuhn/) Matt Lumia Chief Financial Officer [Read more](https://mohawkglobal.com/team/matt-lumia/) John Esborn Chief Operating Officer [Read more](https://mohawkglobal.com/team/john-esborn/) Candace Matsuura Chief People Officer [Read more](https://mohawkglobal.com/team/candace-matsuura/) Richard Schuyler Chief Technology Officer [Read more](https://mohawkglobal.com/team/richard-schuyler/) Anthony Pagnotto Vice President, Global Sales & Marketing [Read more](https://mohawkglobal.com/team/anthony-pagnotto/) Gerry McDevitt Senior Vice President, Domestic Services [Read more](https://mohawkglobal.com/team/gerry-mcdevitt/) Karl Neyhart Senior Vice President, General Manager, MGTA [Read more](https://mohawkglobal.com/team/karl-neyhart/) Karen Damon Vice President, Regulatory Compliance [Read more](https://mohawkglobal.com/team/karen-damon/) Rich Roche Senior Vice President [Read more](https://mohawkglobal.com/team/rich-roche/) Chris Lindstrand Vice President, International Transportation [Read more](https://mohawkglobal.com/team/chris-lindstrand/) Scott Dawkins Vice President, General Manager, Canada"
+       ]
+      },
+      {
+       "title": "Matt Lumia - Mohawk Global",
+       "url": "https://mohawkglobal.com/team/matt-lumia/",
+       "excerpts": [
+        "Matt joined Mohawk Global\u2019s Executive Team as Chief Financial Officer in 2022."
+       ]
+      },
+      {
+       "title": "Corporate News Archives - Mohawk Global",
+       "url": "https://mohawkglobal.com/category/corporate-news",
+       "excerpts": [
+        "[Karen Damon Elected President of the National Customs Brokers & Forwarders Association of America, Inc."
+       ]
+      }
+     ],
+     "reasoning": "The executive-team listing was checked in full, and reviewed executive bios and corporate announcements did not show a C-level or VP-level join or departure in the 12-month window. The bio that states an executive join date gives 2022; the recent association-election announcement concerns an outside association role, not a Mohawk Global leadership change.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Mohawk Global Careers: 11 Open Jobs (Oct 2026) | Scoutify",
+       "url": "https://scoutify.com/companies/wfn-oj70836",
+       "excerpts": [
+        "11 open roles [Associate Regulatory Compliance Specialist Atlanta, Cheektowaga, Clifton Park, Georgia, Illinois, Itasca, Massachusetts, Middleburg Heights, New York, North Syracuse, Ohio, Rochester, Rockland, Syracuse, United States \u00b7 full-time View role](https://scoutify.com/companies/wfn-oj70836/jobs/3093340/) [Supply Chain Operations Intern New York, Syracuse, United States \u00b7 internship \u00b7 $35k - 40k View role](https://scoutify.com/companies/wfn-oj70836/jobs/3055462/) [Account Manager - Inland / Final Mile Cheektowaga, Illinois, Itasca, Massachusetts, Middleburg Heights, New York, Ohio, Rochester, Rockland, Syracuse, United States \u00b7 full-time \u00b7 $65k - 85k View role](https://scoutify.com/companies/wfn-oj70836/jobs/3017200/) [Supply Chain Operations Intern Edison, New Jersey, United States \u00b7 internship \u00b7 $35k - 40k View role](https://scoutify.com/companies/wfn-oj70836/jobs/3002268/) [Export Auditor (part-time, 25-30 hours per week) Albany, Cheektowaga, Edison, New Jersey, New York, Rochester, Syracuse, United States \u00b7 part-time \u00b7 $54k - 71k View role](https://scoutify.com/companies/wfn-oj70836/jobs/2625018/) [Supply Chain Operations Intern Atlanta, Georgia, United States \u00b7 internship \u00b7 $35k - 40k View role](https://scoutify.com/companies/wfn-oj70836/jobs/2588947/) [International Freight Pricing & Procurement Manager Atlanta, Cheektowaga, Edison, Georgia, Illinois, Itasca, Massachusetts, Middleburg Heights, New Jersey, New York, Ohio, Rochester, Rockland, Syracuse, United States \u00b7 full-time \u00b7 $105k - 125k View role](https://scoutify.com/companies/wfn-oj70836/jobs/2588949/) [Sales Manager (International Freight Forwarding) Chicago, Illinois, Itasca, United States \u00b7 full-time \u00b7 $120k - 130k View role](https://scoutify.com/companies/wfn-oj70836/jobs/2476254/) [Account Executive (Domestic 3PL) Boston, Massachusetts, Rockland, United States \u00b7 full-time \u00b7 $80k - 100k View role](https://scoutify.com/companies/wfn-oj70836/jobs/2476253/) [Account Executive (International Trade Consulting) Alabama, Atlanta, Birmingham, Boston, California, Charleston, Charlotte, Cheektowaga, Chicago, Cincinnati, Cleveland, Clifton Park, Columbia, Columbus, Detroit, Edison, Florida, Georgia, Grand Rapids, Houston, Huntsville, Illinois, Indiana, Indianapolis, Jacksonville, Kansas City, Long Beach, Los Angeles, Massachusetts, Memphis, Michigan, Milwaukee, Missouri, Nashville, New Jersey, New York, New York City, North Carolina, Ohio, Pennsylvania, Pittsburgh, Raleigh, Rochester, Savannah, South Carolina, St. Louis, Syracuse, Tennessee, Texas, United States, Wisconsin \u00b7 full-time \u00b7 $90k - 135k View role](https://scoutify.com/companies/wfn-oj70836/jobs/2476255/) Show all 11 roles",
+        "Sources reviewed 2026-10-20."
+       ]
+      }
+     ],
+     "reasoning": "A job-listing page with roles reviewed in October 2026 lists current openings but shows no AI, ML, or data-science role title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Mohawkglobal; website_url: https://mohawkglobal.com; funded: null; stage: Unfunded; latest_funding_round_name: null; latest_funding_round_date: null; latest_funding_round_amount_usd: null; total_disclosed_funding_usd: null; all_funding_rounds: []; tracxn_url: https://platform.tracxn.com/a/d/company/531a5427e4b0f7e1660d05b4/mohawkglobal?utm_source=parallel&utm_medium=ai#a:about"
+       ]
+      }
+     ],
+     "reasoning": "The company-matched funding profile labels the company unfunded and lists no funding rounds, supporting stage \"none\".",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "GlobalLink - Public API",
+       "url": "https://api.mohawkglobal.com/",
+       "excerpts": [
+        "Mohawk API enables you to programmatically interact with Mohawk\u2019s data. This allows us to simplify and streamline our operations while providing our clients and partners with real time visibility to the data in our systems. Our API follows modern RESTful conventions and speaks JSON in both directions.",
+        "Authentication Bookings Brokerage Data Brokerage Reporting Container Management Container Tracking Customs Status Documents Domestic Status Report EDI210 (Inland Freight Invoice from motor carrier) Events ISF Status Location Matrix: Estimated and Actual Dates of Container for Origin, Ports and Final Destination, including Rail sightings. Mohawk\u2019s Invoice Purchase Orders Rail Events Shipment Details Tracking Callback Events WebHooks Quick Track"
+       ]
+      }
+     ],
+     "reasoning": "Mohawk Global publishes API documentation with multiple sections covering authentication, bookings, brokerage, container tracking, customs, and other topics, including endpoint references.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Us - Mohawk Global",
+       "url": "https://mohawkglobal.com/about-us",
+       "excerpts": [
+        "Since its foundation in 1993, Mohawk Global has grown beyond its headquarters in Syracuse, New York to nine offices in six states, with a worldwide reach."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s About Us page identifies Syracuse, New York as its headquarters location.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Corporate News Archives - Mohawk Global",
+       "url": "https://mohawkglobal.com/category/corporate-news",
+       "excerpts": [
+        "[Mohawk Global Ranks No. 8 on 2026 FORTUNE Best Workplaces in Transportation\u2122 List](https://mohawkglobal.com/corporate-news/mohawk-global-ranks-no-8-on-2026-fortune-best-workplaces-in-transportation-list/) [October](https://mohawkglobal.com/2026/10/) [20](https://mohawkglobal.com/2026/10/20/) , [2026](https://mohawkglobal.com/2026/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Mohawk Global Ranks No. 8 on 2026 FORTUNE Best Workplaces in Transportation\u2122 List](https://mohawkglobal.com/corporate-news/mohawk-global-ranks-no-8-on-2026-fortune-best-workplaces-in-transportation-list/) Mohawk Global, a family-owned supply chain services company, is proud to announce that it has ranked No. 8 among 20 companies on the 2026 FORTUNE Best Workplaces in Transportation\u2122 list. This achievement recognizes the company\u2019s commitment to its people and celebrates a workplace culture built on trust, meaningful relationships, and a shared dedication to caring\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/mohawk-global-ranks-no-8-on-2026-fortune-best-workplaces-in-transportation-list/) [Mohawk Global Advocates for Smarter Freight Policy on Capitol Hill](https://mohawkglobal.com/corporate-news/mohawk-global-advocates-for-smarter-freight-policy-on-capitol-hill/) [October](https://mohawkglobal.com/2026/10/) [8](https://mohawkglobal.com/2026/10/08/) , [2026](https://mohawkglobal.com/2026/) [Articles To Read](https://mohawkglobal.com/category/articles-to-read/) , [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Mohawk Global Advocates for Smarter Freight Policy on Capitol Hill](https://mohawkglobal.com/corporate-news/mohawk-global-advocates-for-smarter-freight-policy-on-capitol-hill/) When transportation policy changes, supply chains feel the impact. That's why Mohawk Global\u2019s Gerry McDevitt, Senior Vice President of Domestic Services, and Wayne Wolfe, Director of Domestic Services, traveled to Capitol Hill this September as part of the Transportation Intermediaries Association's (TIA) 2026 Policy Forum. Alongside more than 130 transportation and logistics professionals, the group\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/mohawk-global-advocates-for-smarter-freight-policy-on-capitol-hill/) [Mohawk Global\u2019s Rich Roche to Receive Prestigious NCBFAA Centurion Award](https://mohawkglobal.com/corporate-news/mohawk-globals-rich-roche-to-receive-prestigious-ncbfaa-centurion-award/) [October](https://mohawkglobal.com/2026/10/) [7](https://mohawkglobal.com/2026/10/07/) , [2026](https://mohawkglobal.com/2026/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Mohawk Global\u2019s Rich Roche to Receive Prestigious NCBFAA Centurion Award](https://mohawkglobal.com/corporate-news/mohawk-globals-rich-roche-to-receive-prestigious-ncbfaa-centurion-award/) Mohawk Global is proud to announce that Rich Roche, Senior Vice President at Mohawk Global and Chair of the National Customs Brokers & Forwarders Association of America, Inc. (NCBFAA) Maritime Committee, will receive the prestigious NCBFAA Centurion Award during the closing ceremony of the 54th NCBFAA Annual Conference in Orlando, Florida, on April 14, 2027.\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/mohawk-globals-rich-roche-to-receive-prestigious-ncbfaa-centurion-award/) [Mohawk Global Celebrates Community Garden Through Sowing Kindness Initiative at Buffalo PS 45 \u2013 International School](https://mohawkglobal.com/corporate-news/mohawk-global-celebrates-community-garden-through-sowing-kindness-initiative-at-buffalo-ps-45-international-school/) [June](https://mohawkglobal.com/2026/06/) [25](https://mohawkglobal.com/2026/06/25/) , [2026](https://mohawkglobal.com/2026/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) , [Sustainability](https://mohawkglobal.com/category/sustainability/) [Mohawk Global Celebrates Community Garden Through Sowing Kindness Initiative at Buffalo PS 45 \u2013 International School](https://mohawkglobal.com/corporate-news/mohawk-global-celebrates-community-garden-through-sowing-kindness-initiative-at-buffalo-ps-45-international-school/) Mohawk Global, in partnership with Grassroots Gardens WNY and Buffalo PS 45 \u2013 International School, celebrated the installation of new raised-bed gardens on May 29, expanding the company's Sowing Kindness initiative and creating new opportunities for students to learn, grow, and connect with their community. The project marks the third community garden established through Sowing\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/mohawk-global-celebrates-community-garden-through-sowing-kindness-initiative-at-buffalo-ps-45-international-school/) [Mohawk Global Receives Art Hagy Spirit of Generosity Award from Troy Area United Ministries](https://mohawkglobal.com/corporate-news/mohawk-global-receives-art-hagy-spirit-of-generosity-award-from-troy-area-united-ministries/) [June](https://mohawkglobal.com/2026/06/) [2](https://mohawkglobal.com/2026/06/02/) , [2026](https://mohawkglobal.com/2026/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) , [Sustainability](https://mohawkglobal.com/category/sustainability/) [Mohawk Global Receives Art Hagy Spirit of Generosity Award from Troy Area United Ministries](https://mohawkglobal.com/corporate-news/mohawk-global-receives-art-hagy-spirit-of-generosity-award-from-troy-area-united-ministries/) Mohawk Global was honored with the Art Hagy Spirit of Generosity Award at the annual FEAST! banquet hosted by Troy Area United Ministries (TAUM) on May 28, 2026, at Franklin Terrace Ballroom. The award recognizes individuals and organizations that have made significant contributions to the wellbeing and growth of TAUM and the communities it serves.\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/mohawk-global-receives-art-hagy-spirit-of-generosity-award-from-troy-area-united-ministries/) [Mohawk Global Earns Great Place to Work Certification for 13th Consecutive Year](https://mohawkglobal.com/corporate-news/mohawk-global-earns-great-place-to-work-certification-for-13th-consecutive-year/) [May](https://mohawkglobal.com/2026/05/) [14](https://mohawkglobal.com/2026/05/14/) , [2026](https://mohawkglobal.com/2026/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Mohawk Global Earns Great Place to Work Certification for 13th Consecutive Year](https://mohawkglobal.com/corporate-news/mohawk-global-earns-great-place-to-work-certification-for-13th-consecutive-year/) Mohawk Global has once again been Certified\u2122 by Great Place To Work, marking its 13th consecutive year receiving the recognition. The certification is based entirely on anonymous employee feedback collected through the organization\u2019s annual Trust Index\u2122 survey, in which 94% of Mohawk Global employees said the company is a great place to work, well above\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/mohawk-global-earns-great-place-to-work-certification-for-13th-consecutive-year/) [Karen Damon Elected President of the National Customs Brokers & Forwarders Association of America, Inc.](https://mohawkglobal.com/corporate-news/karen-damon-elected-president-of-the-national-customs-brokers-forwarders-association-of-america-inc/) [April](https://mohawkglobal.com/2026/04/) [17](https://mohawkglobal.com/2026/04/17/) , [2026](https://mohawkglobal.com/2026/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Karen Damon Elected President of the National Customs Brokers & Forwarders Association of America, Inc.](https://mohawkglobal.com/corporate-news/karen-damon-elected-president-of-the-national-customs-brokers-forwarders-association-of-america-inc/) Mohawk Global is proud to announce that Karen Damon, Vice President of Regulatory Compliance at Mohawk Global, has been elected President of the National Customs Brokers & Forwarders Association of America, Inc. (NCBFAA). Karen was elected during the NCBFAA Annual Conference held in San Antonio, Texas, on April 16, 2026. She most recently served as\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/karen-damon-elected-president-of-the-national-customs-brokers-forwarders-association-of-america-inc/) [Innovation, Community, & Sustainability: Our 2025 Journey](https://mohawkglobal.com/corporate-news/innovation-community-sustainability-our-2025-journey/) [December](https://mohawkglobal.com/2025/12/) [17](https://mohawkglobal.com/2025/12/17/) , [2025](https://mohawkglobal.com/2025/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Innovation, Community, & Sustainability: Our 2025 Journey](https://mohawkglobal.com/corporate-news/innovation-community-sustainability-our-2025-journey/) This year has been one of meaningful progress\u2014both in how we serve our clients and in how we show up for our communities and our planet. At Mohawk Global, we believe that good business and good stewardship go hand in hand and in 2025, that belief guided some of our most impactful achievements. This year,\u2026 [Read More \u00bb](https://mohawkglobal.com/corporate-news/innovation-community-sustainability-our-2025-journey/) [Expanding MGCX to Deliver Smarter, Greener Container Transport Across Upstate New York](https://mohawkglobal.com/corporate-news/expanding-mgcx-to-deliver-smarter-greener-container-transport-across-upstate-new-york/) [December](https://mohawkglobal.com/2025/12/) [4](https://mohawkglobal.com/2025/12/04/) , [2025](https://mohawkglobal.com/2025/) [Corporate News](https://mohawkglobal.com/category/corporate-news/) [Expanding MGCX to Deliver Smarter, Greener Container Transport Across Upstate New York](https://mohawkglobal.com/corporate-news/expanding-mgcx-to-deliver-smarter-greener-container-transport-across-upstate-new-york/) We are excited to share the continued growth of the Mohawk Global Container Exchange (MGCX)\u2014our rail-based solution designed to make international container transport more efficient, cost-effective, and environmentally responsible for clients across Central and Western New York. A Smarter Way to Move Containers Launched in 2019, MGCX was created to solve a challenge many importers\u2026"
+       ]
+      },
+      {
+       "title": "Expanding MGCX to Deliver Smarter, Greener Container Transport Across Upstate New York - Mohawk Global",
+       "url": "https://mohawkglobal.com/corporate-news/expanding-mgcx-to-deliver-smarter-greener-container-transport-across-upstate-new-york",
+       "excerpts": [
+        "Expanding MGCX to Deliver Smarter, Greener Container Transport Across Upstate New York [December](https://mohawkglobal.com/2025/12/) [4](https://mohawkglobal.com/2025/12/04/) , [2025](https://mohawkglobal.com/2025/) [Corporate News"
+       ]
+      }
+     ],
+     "reasoning": "The corporate-news archive\u2019s launch-like service expansion announcement is the MGCX post dated December 4, 2025, before the May 9\u2013November 9, 2026 window. The August 2026 GlobalLink item is identified as a customer case study, not a new-product or feature announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Mohawk Global hiring Account Executive (Domestic 3PL) Job in Cheektowaga, NY | Glassdoor",
+       "url": "https://www.glassdoor.com/job-listing/account-executive-domestic-3pl-mohawk-global-JV_IC1158925_KO0,30_KE31,44.htm?jl=1010101156327",
+       "excerpts": [
+        "Account Executive (Domestic 3PL) Cheektowaga, NY",
+        "Mohawk Global is currently seeking an individual of high-integrity with an innate passion for sales and forging long-standing partnerships, to join our Domestic division as an Account Executive for our Northeast region."
+       ]
+      }
+     ],
+     "reasoning": "A current listing says Mohawk Global is seeking an Account Executive (Domestic 3PL) in Cheektowaga, New York.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Mohawkglobal; website_url: https://mohawkglobal.com; funded: null; stage: Unfunded; latest_funding_round_name: null; latest_funding_round_date: null; latest_funding_round_amount_usd: null; total_disclosed_funding_usd: null; all_funding_rounds: []; tracxn_url: https://platform.tracxn.com/a/d/company/531a5427e4b0f7e1660d05b4/mohawkglobal?utm_source=parallel&utm_medium=ai#a:about"
+       ]
+      }
+     ],
+     "reasoning": "The company-matched funding profile reports unfunded status and no rounds, supporting that no funding was raised in the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Umbra Streamlines Customs Entry with Mohawk Global's Innovative Software Program - Mohawk Global",
+       "url": "https://mohawkglobal.com/case-studies/umbra-streamlines-customs-entry-with-mohawk-globals-innovative-software-program",
+       "excerpts": [
+        "Overview Umbra, is a home accessories design and manufacturing company. The company sells more than 2,000 home products through over 25,000 retailers in 120 countries and utilizes Mohawk Global's Customs Brokerage services."
+       ]
+      }
+     ],
+     "reasoning": "The case study identifies Umbra and says it uses Mohawk Global\u2019s customs brokerage services.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "C A SE STUDY",
+       "url": "https://mohawkglobal.com/wp-content/uploads/2017/06/Case-Study-Iron-Foundrys-Production-Line-Flows-Seamlessly-Thanks-To-Inbound-Program.pdf",
+       "excerpts": [
+        "After years of managing their inbound transportation in-house, Frazer & Jones decided to conserve internal resources by outsourcing this function to Mohawk Global Logistics."
+       ]
+      }
+     ],
+     "reasoning": "The case study says Frazer & Jones outsourced its inbound transportation function to Mohawk Global.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Mohawk Global Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/mohawk-global/5a1d92ae540000520077609b",
+       "excerpts": [
+        "**Technology Enablement** The company utilizes a modern tech stack including iCIMS, LinkedIn Recruiter, WordPress, Microsoft 365, Pardot, HubSpot, and analytics tools."
+       ]
+      }
+     ],
+     "reasoning": "The technology-stack listing explicitly names HubSpot.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Mohawk Global Company Overview, Contact Details & Competitors | LeadIQ",
+       "url": "https://leadiq.com/c/mohawk-global/5a1d92ae540000520077609b",
+       "excerpts": [
+        "**Technology Enablement** The company utilizes a modern tech stack including iCIMS, LinkedIn Recruiter, WordPress, Microsoft 365, Pardot, HubSpot, and analytics tools."
+       ]
+      }
+     ],
+     "reasoning": "The technology-stack listing explicitly names Pardot.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1993.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Mohawk Global provides supply-chain solutions and trade expertise to businesses seeking a strategic partner to manage their supply chains.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": false,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Umbra",
+     "Frazer & Jones"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "HubSpot",
+     "Pardot"
+    ],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "none",
+    "public_docs": true,
+    "hq_city": "Syracuse",
+    "launched_6mo": false,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

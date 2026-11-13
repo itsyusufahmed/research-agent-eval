@@ -1,0 +1,170 @@
+{
+ "schema_version": "v0",
+ "company": "Spacelift",
+ "domain": "spacelift.io",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Spacelift automates infrastructure provisioning, configuration, and governance for DevOps, platform, and SRE teams using infrastructure as code.",
+   "citations": [
+    "https://spacelift.io/about-us"
+   ],
+   "notes": "The about page identifies DevOps, platform, and SRE users and describes infrastructure provisioning, configuration, governance, and integration with IaC tooling: https://spacelift.io/about-us."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://spacelift.io/pricing"
+   ],
+   "notes": "A public plans and pricing page exists and describes plans for different stages of growth: https://spacelift.io/pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Figma",
+    "1Password"
+   ],
+   "citations": [
+    "https://www.spacelift.io/customers"
+   ],
+   "notes": "named_customers: The customer stories page explicitly names Figma and 1Password in case-study titles: https://www.spacelift.io/customers. | named_customers.0: Figma is named in a customer case-study title: https://www.spacelift.io/customers. | named_customers.1: 1Password is named in a customer case-study title: https://www.spacelift.io/customers."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "101-200",
+   "citations": [
+    "https://careers.spacelift.io/",
+    "https://linkedin.com/company/spacelift-io"
+   ],
+   "notes": "The careers page reports more than 130 employees, while the company profile gives an upper band of 200; together these support 101-200: https://careers.spacelift.io/ and https://linkedin.com/company/spacelift-io."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Redwood City",
+    "country": "United States"
+   },
+   "citations": [
+    "https://linkedin.com/company/spacelift-io"
+   ],
+   "notes": "hq_city: The company profile explicitly identifies Redwood City, California as headquarters: https://linkedin.com/company/spacelift-io. | hq_country: The company profile identifies headquarters as Redwood City, California, placing it in the United States: https://linkedin.com/company/spacelift-io."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2020.0,
+   "citations": [
+    "https://careers.spacelift.io/"
+   ],
+   "notes": "The company explicitly states that it was founded in 2020: https://careers.spacelift.io/."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://spacelift.io/blog/spacelift-workerpool-operator",
+    "https://spacelift.io/blog/autoscaling-native-kubernetes-workers"
+   ],
+   "notes": "Two engineer-authored technical posts meet the content test. Adam Connelly, identified as a Spacelift backend engineer, explains worker and launcher architecture in https://spacelift.io/blog/spacelift-workerpool-operator. Joey Stout, identified as a programmer specializing in SRE and DevOps, explains the worker controller, Prometheus exporter, and KEDA autoscaling implementation in https://spacelift.io/blog/autoscaling-native-kubernetes-workers. These are technical infrastructure articles within the company blog rather than a separately branded engineering publication."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.spacelift.io/"
+   ],
+   "notes": "The public documentation portal contains multiple setup articles and extensive product and integration documentation: https://docs.spacelift.io/."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://careers.spacelift.io/jobs"
+   ],
+   "notes": "The readable jobs board lists eight openings across sales, marketing, partnerships, people, Kubernetes engineering/product, product operations, and software engineering. None has a qualifying AI, ML, or data-science title: https://careers.spacelift.io/jobs."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic Claude models through Amazon Web Services' Amazon Bedrock",
+   "citations": [
+    "https://docs.spacelift.io/legal/ai-terms"
+   ],
+   "notes": "The AI terms explicitly list Amazon Web Services\u2014Amazon Bedrock and Anthropic\u2014Claude models: https://docs.spacelift.io/legal/ai-terms."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "GDPR",
+    "PCI DSS"
+   ],
+   "citations": [
+    "https://trust.spacelift.io/"
+   ],
+   "notes": "compliance_certs: The Trust Center names SOC 2 and GDPR and provides a SOC 2 Type II report and a PCI-DSS SAQ-A 2025 document: https://trust.spacelift.io/. PCI DSS is supported by the published self-assessment document, not a claim of independent certification. ISO 27001 and HIPAA are not included. | compliance_certs.0: The Trust Center explicitly provides a SOC 2 Type II report: https://trust.spacelift.io/. | compliance_certs.1: GDPR is explicitly listed in the Trust Center's compliance section: https://trust.spacelift.io/. | compliance_certs.2: The Trust Center lists a PCI-DSS SAQ-A 2025 document. This supports a public self-assessed PCI DSS compliance claim, not independent certification: https://trust.spacelift.io/."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series C",
+    "date": "2025-07",
+    "amount_usd": 51000000.0
+   },
+   "citations": [
+    "https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html"
+   ],
+   "notes": "funding_stage: The funding announcement explicitly identifies the round as Series C: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html. | funding_date: The Series C announcement is dated July 10, 2025, supporting the requested month 2025-07: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html. | funding_amount_usd: The company's funding announcement discloses a $51 million Series C round: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html. The amount is reported as disclosed, without adding unsupported precision."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html"
+   ],
+   "notes": "The $51 million Series C was announced in July 2025, within the preceding 18 months: https://www.prnewswire.com/news-releases/spacelift-raises-51m-series-c-to-redefine-enterprise-infrastructure-automation-302501578.html."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://careers.spacelift.io/jobs",
+    "https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas"
+   ],
+   "notes": "The current jobs board links an Enterprise Account Executive opening for remote US/Texas, and the posting is readable: https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://careers.spacelift.io/"
+   ],
+   "notes": "The company's dated timeline records the launch of Flows in June 2026, within the six-month window: https://careers.spacelift.io/."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.prnewswire.com/news-releases/spacelift-adds-senior-leaders-in-sales-and-product-as-growth-momentum-accelerates-with-spacelift-intelligence-302762880.html"
+   ],
+   "notes": "On May 5, 2026, Spacelift announced John Henry Archer as senior vice president of sales and channel and Jonah Kowall as senior vice president of product and design, within the 12-month window: https://www.prnewswire.com/news-releases/spacelift-adds-senior-leaders-in-sales-and-product-as-growth-momentum-accelerates-with-spacelift-intelligence-302762880.html."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "HubSpot"
+   ],
+   "citations": [
+    "https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas",
+    "https://trust.spacelift.io/subprocessors"
+   ],
+   "notes": "crm_stack_signal: The Enterprise Account Executive posting names Salesforce: https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas. The subprocessor list identifies HubSpot for marketing: https://trust.spacelift.io/subprocessors. | crm_stack_signal.0: The account executive job posting explicitly names Salesforce as a sales tracking tool: https://careers.spacelift.io/jobs/8625239-enterprise-account-executive-remote-us-texas. | crm_stack_signal.1: The subprocessor list explicitly identifies HubSpot for marketing: https://trust.spacelift.io/subprocessors."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 235.3
+}

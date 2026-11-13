@@ -1,0 +1,179 @@
+{
+ "schema_version": "v0",
+ "company": "Appspace",
+ "domain": "appspace.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Appspace provides organizations with a unified workplace platform for employee communications, intranets, digital signage, room booking and visitor management.",
+   "citations": [
+    "https://appspace.com/pricing",
+    "https://www.appspace.com/platform-overview"
+   ],
+   "notes": "The pricing page describes workplace-wide software covering employee communications and office spaces; the platform overview explicitly lists intranet, digital signage, room booking and visitor management. Sources: https://appspace.com/pricing and https://www.appspace.com/platform-overview"
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://appspace.com/pricing"
+   ],
+   "notes": "Appspace has a public pricing page explaining how purchases and pricing depend on customers' requirements. Source: https://appspace.com/pricing"
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Costco Wholesale",
+    "Insight"
+   ],
+   "citations": [
+    "https://www.appspace.com/case-studies",
+    "https://www.appspace.com/blog/insight-the-visitor-journey-cs"
+   ],
+   "notes": "named_customers: Costco Wholesale appears on Appspace's case-studies page. The Insight visitor-journey case study explicitly says Insight chose Appspace, supporting a customer relationship rather than merely a partner listing. Sources: https://www.appspace.com/case-studies and https://www.appspace.com/blog/insight-the-visitor-journey-cs | named_customers.0: Appspace displays Costco Wholesale on its customer case-studies page. | named_customers.1: The visitor-journey case study explicitly says Insight chose Appspace for its requirements, supporting product use despite an existing partnership."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://linkedin.com/company/683260"
+   ],
+   "notes": "Appspace's company LinkedIn profile explicitly lists 201\u2013500 employees. Source: https://linkedin.com/company/683260"
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Tampa",
+    "country": "United States"
+   },
+   "citations": [
+    "https://www.appspace.com/wp-content/uploads/2025/10/Appspace-2025-Type-2-SOC-3-Final-Report.pdf"
+   ],
+   "notes": "hq_city: Appspace's assurance report explicitly identifies Tampa, Florida as its headquarters. Source: https://www.appspace.com/wp-content/uploads/2025/10/Appspace-2025-Type-2-SOC-3-Final-Report.pdf | hq_country: The company's assurance report identifies its headquarters as Tampa, Florida, which is in the United States. Source: https://www.appspace.com/wp-content/uploads/2025/10/Appspace-2025-Type-2-SOC-3-Final-Report.pdf"
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2002.0,
+   "citations": [
+    "https://www.appspace.com/wp-content/uploads/2025/10/Appspace-2025-Type-2-SOC-3-Final-Report.pdf"
+   ],
+   "notes": "Appspace's assurance report explicitly states that the company was founded in 2002. Source: https://www.appspace.com/wp-content/uploads/2025/10/Appspace-2025-Type-2-SOC-3-Final-Report.pdf"
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.appspace.com/resources/blog",
+    "https://www.appspace.com/blog/category/technology"
+   ],
+   "notes": "The readable blog index presents workplace communications and hybrid-work advice, while the Technology archive exposes glossary-style content rather than two engineer-authored posts about building Appspace. Index coverage was incomplete, limiting confidence in this negative finding. Sources: https://www.appspace.com/resources/blog and https://www.appspace.com/blog/category/technology"
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.appspace.com/"
+   ],
+   "notes": "The public Knowledge Center contains multiple product guides, including configuration articles for BrightSign, Samsung Tizen and LG webOS devices. Source: https://docs.appspace.com/"
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://job-boards.greenhouse.io/appspace"
+   ],
+   "notes": "The current job board lists seven openings: two security roles and five business-development/account-executive roles. None has a qualifying AI, ML or data-science title. Source: https://job-boards.greenhouse.io/appspace"
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Azure AI and Google Vertex AI; BYOM options include Azure OpenAI, Microsoft Foundry and Gemini Enterprise.",
+   "citations": [
+    "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf",
+    "https://www.appspace.com/ai-assistants"
+   ],
+   "notes": "The security whitepaper explicitly names Azure AI and Google Vertex AI as Appspace's LLM services. The current AI product page separately identifies Azure OpenAI, Microsoft Foundry and Gemini Enterprise as BYOM options. Sources: https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf and https://www.appspace.com/ai-assistants"
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "ISO 27001",
+    "GDPR"
+   ],
+   "citations": [
+    "https://www.appspace.com/ai-assistants",
+    "https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf"
+   ],
+   "notes": "compliance_certs: Appspace publicly names SOC 2 Type II, ISO 27001 and GDPR; its security whitepaper separately affirms GDPR compliance. No HIPAA or PCI DSS claim was identified. Sources: https://www.appspace.com/ai-assistants and https://www.appspace.com/wp-content/uploads/2026/09/Appspace-Security-Whitepaper.pdf | compliance_certs.0: The AI product page explicitly names SOC 2 Type II. | compliance_certs.1: The AI product page explicitly names ISO 27001. | compliance_certs.2: The security whitepaper expressly states that Appspace complies with GDPR requirements."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Strategic growth investment (Series A)",
+    "date": "2023-09",
+    "amount_usd": null
+   },
+   "citations": [
+    "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience",
+    "https://tracxn.com"
+   ],
+   "notes": "funding_stage: Accel-KKR describes the transaction as a strategic growth investment, while the funding profile classifies the same September 2023 round as Series A. Both descriptions are preserved rather than substituting an unsupported stage. Source: https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience | funding_date: The investor announcement is dated September 21, 2023, and the funding history identifies that date as the latest round. The requested month format is therefore 2023-09. Source: https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience | funding_amount_usd: A reliable USD amount could not be verified: the funding record leaves the latest-round amount unspecified, and the investor announcement provides no transaction size. An inconsistent, non-currency-denominated number on a secondary table was not treated as a verified USD amount. Source: https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience"
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://tracxn.com",
+    "https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience",
+    "https://tracxn.com/d/companies/appspace/__vPx-08N3ZxvXo4lqNtY32Um2Nu6LItTpNbflpAm-r7s/funding-and-investors"
+   ],
+   "notes": "The latest identified funding round was September 21, 2023, before the May 2025 start of the requested 18-month window. The current funding history continues to identify that round as the latest. Sources: https://www.accel-kkr.com/appspace-secures-strategic-growth-investment-from-accel-kkr-to-help-organizations-elevate-the-workplace-experience and https://tracxn.com/d/companies/appspace/__vPx-08N3ZxvXo4lqNtY32Um2Nu6LItTpNbflpAm-r7s/funding-and-investors"
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://job-boards.greenhouse.io/appspace/jobs/6228311004",
+    "https://job-boards.greenhouse.io/appspace"
+   ],
+   "notes": "The current job board lists a Business Development Representative opening and multiple account-executive openings, with a live BDR application page. Sources: https://job-boards.greenhouse.io/appspace/jobs/6228311004 and https://job-boards.greenhouse.io/appspace"
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.appspace.com/blog/dorado-new-features"
+   ],
+   "notes": "The July 10, 2026 Dorado release introduced substantial capabilities, including platform-wide conversational analytics, offline content access and cross-system assistant integrations. This falls within the requested six-month window. Source: https://www.appspace.com/blog/dorado-new-features"
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.appspace.com/blog/appspace-expands-executive-team"
+   ],
+   "notes": "A March 19, 2026 announcement identifies Eric Daggett joining as Chief Sales Officer and Dan Ward joining as Chief Technology Officer, within the requested 12-month window. Source: https://www.appspace.com/blog/appspace-expands-executive-team"
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce",
+    "SalesLoft",
+    "Chili Piper",
+    "Gong",
+    "ZoomInfo",
+    "LinkedIn"
+   ],
+   "citations": [
+    "https://job-boards.greenhouse.io/appspace/jobs/6228311004"
+   ],
+   "notes": "crm_stack_signal: The BDR posting explicitly instructs employees to use Salesforce, SalesLoft and Chili Piper, and requests proficiency with Salesforce, Gong, ZoomInfo and LinkedIn. The latter three are hiring-based stack signals rather than independently verified installations. Source: https://job-boards.greenhouse.io/appspace/jobs/6228311004 | crm_stack_signal.0: The BDR posting explicitly names Salesforce among platforms employees use. | crm_stack_signal.1: The BDR posting explicitly names SalesLoft among platforms employees use. | crm_stack_signal.2: The BDR posting explicitly names Chili Piper among platforms employees use. | crm_stack_signal.3: The BDR posting requests proficiency with GONG.io, providing a hiring-based sales-stack signal. | crm_stack_signal.4: The BDR posting requests proficiency with Zoominfo, providing a hiring-based sales-stack signal. | crm_stack_signal.5: The BDR posting requests proficiency with LinkedIn; it does not specify a particular LinkedIn sales product."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 444.2
+}

@@ -1,0 +1,1008 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ebcecbdfbc106163b",
+  "interaction_id": "trun_142119f6a1b4439ebcecbdfbc106163b",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "bombbomb.com"
+  },
+  "created_at": "2026-11-10T18:48:45.904713Z",
+  "modified_at": "2026-11-10T18:55:57.657308Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ebcecbdfbc106163b",
+   "interaction_id": "trun_142119f6a1b4439ebcecbdfbc106163b",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "bombbomb.com"
+   },
+   "created_at": "2026-11-10T18:48:45.904713Z",
+   "modified_at": "2026-11-10T18:55:57.657308Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://www.bombbomb.com/company",
+       "excerpts": [
+        "founded 2006"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s About page states that it was founded in 2006.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Async Video FAQs | BombBomb",
+       "url": "https://bombbomb.com/faqs/",
+       "excerpts": [
+        "Currently, Essentials customers can easily upgrade to Engage. Plus customers relying on advanced marketing tools will retain their current features until Engage offers comparable functionality. Please connect with your CSM or sales team for guidance.",
+        "Is BombBomb Engage secure and enterprise-ready?",
+        "Yes. Engage provides enterprise-level security, including Single Sign-On (SSO), SOC 2 Type II compliance and advanced administrative controls and user permissions.",
+        "Does Engage comply with data privacy regulations (GDPR, CCPA)?",
+        "Yes. BombBomb Engage meets global privacy standards, including GDPR and CCPA, ensuring your data\u2014and your customers\u2019 data\u2014is always secure and compliant."
+       ]
+      }
+     ],
+     "reasoning": "The company FAQ explicitly names SOC 2 Type II compliance and GDPR compliance, supporting both publicly claimed items.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/bombbomb",
+       "excerpts": [
+        "country iso: US country name: United States locality: Denver, Colorado"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s LinkedIn company profile identifies its country as the United States and gives Denver, Colorado as the locality.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Monthly Hackathons at BombBomb \u2013 Patrick McDavid",
+       "url": "https://patrickmcdavid.com/hackinginyourorganization",
+       "excerpts": [
+        "Monthly Hackathons at BombBomb December 1, 2017 ~ 4 min read ~ [Technology](https://patrickmcdavid.com/archive/?tag=technology) , [Business](https://patrickmcdavid.com/archive/?tag=business) , [Software Engineering](https://patrickmcdavid.com/archive/?tag=software%20engineering) , _Reblogged from [developer.bombbomb.com](https://developer.bombbomb.com/blog/2017/11/30/HackingInYourOrganization/)_ I\u2019ve had the enormous fortune to lead an engineering organization"
+       ]
+      },
+      {
+       "title": "CloudFront Invalidation with TravisCI \u2013 Patrick McDavid",
+       "url": "https://patrickmcdavid.com/travisci-cloudfront-cache-invalidation",
+       "excerpts": [
+        "CloudFront Invalidation with TravisCI February 27, 2018 ~ 2 min read ~ [Infrastructure](https://patrickmcdavid.com/archive/?tag=infrastructure) , [Software Engineering](https://patrickmcdavid.com/archive/?tag=software%20engineering) , _This is reblogged from [my post on the BombBomb Developer Blog](https://developer.bombbomb.com/blog/2018/02/27/TravisCI-Cloudfront-Cache-Invalidation/)_ I wrote here a few months ago about [Easy Cloudfront cache-busting with Travis-CI"
+       ]
+      }
+     ],
+     "reasoning": "Two engineering/technical posts are identified as reposts from the BombBomb Developer Blog: a post on engineering hackathons that says the author led an engineering organization, and a technical CloudFront/TravisCI infrastructure post. This satisfies the two-post threshold; the surviving citations are archived reposts rather than a current developer-blog index.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/company",
+       "excerpts": [
+        "BombBomb Engage is our newest video messaging platform, designed to help teams quickly create, send and track personalized videos that strengthen relationships, improve engagement and accelerate business outcomes."
+       ]
+      },
+      {
+       "title": "Director of Marketing - BombBomb - Career Page",
+       "url": "http://bombbomb.applytojob.com/apply/P94nf0nbFB/Director-Of-Marketing",
+       "excerpts": [
+        "BombBomb is on a mission to help relationship-driven sales teams create authentic connections with their customers."
+       ]
+      }
+     ],
+     "reasoning": "The company describes Engage as a platform for creating, sending, and tracking personalized videos; its career-page description identifies relationship-driven sales teams as its audience.",
+     "confidence": "medium"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "BombBomb 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/57973-78",
+       "excerpts": [
+        "Employees 75 Employees"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook reports 75 employees, which falls in the requested 51\u2013100 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | BombBomb",
+       "url": "https://bombbomb.com/pricing",
+       "excerpts": [
+        "Billed monthly Billed annually Save up to 20%"
+       ]
+      }
+     ],
+     "reasoning": "The cited BombBomb page is titled Pricing and displays billing options, establishing that a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "BombBomb, Inc. - fund raising filing",
+       "url": "https://formds.com/issuers/bombbomb-inc",
+       "excerpts": [
+        "Mar 13, 2025 |Initial |$2,432,406"
+       ]
+      }
+     ],
+     "reasoning": "The fundraising filing record reports an amount of $2,432,406 for the round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "The BombBomb About page\u2019s customer-logo area names the listed organizations.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "BombBomb 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/57973-78",
+       "excerpts": [
+        "Later Stage VC (Series A) |12-Mar-2025 |$2.43M"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook dates the latest listed Series A round to March 12, 2025; the requested YYYY-MM value is 2025-03.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      },
+      {
+       "title": "Pricing | BombBomb",
+       "url": "https://bombbomb.com/pricing",
+       "excerpts": [
+        "On any plan, you can record and send from your phone or desktop, right inside Gmail, Outlook, Chrome and Edge."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s integrations documentation lists HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert, Zendesk, and Follow Up Boss as standard CRM/sales integrations; its pricing page separately names Salesforce among its integrations.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/kathrynadamson",
+       "excerpts": [
+        "Vice President of Growth ... title: Vice President of Growth f summary I lead Growth - owning Sales, Marketing, Customer Success, and Support\u2014focused on one core idea: in a world flooded with automation and AI, transparency and authenticity are the only real differentiators. ... start date year: 2026 start date month: 3 start date: 2026-03-01"
+       ]
+      }
+     ],
+     "reasoning": "The profile identifies a BombBomb Vice President of Growth whose BombBomb start date was March 1, 2026, inside the 12 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "BombBomb - Career Page",
+       "url": "https://bombbomb.applytojob.com/",
+       "excerpts": [
+        "View All Jobs](http://bombbomb.applytojob.com/apply/) [View Our Website](http://bombbomb.com/) brand logo Thanks for visiting our Job Board. Please review our open positions and apply to the positions that match your qualifications. There are no open positions at this time."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s careers job board says there are no open positions, so it has no open AI/ML/data-science role listed.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "BombBomb 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/57973-78",
+       "excerpts": [
+        "Latest Deal Type Series A * Latest Deal Amount $2.43M"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook identifies the latest deal type as Series A.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Developer",
+       "url": "https://developer.bombbomb.com/",
+       "excerpts": [
+        "Home Getting Started 1\\. Create an Account 2\\. OAuth Guide 3\\. EZ Integrate 4\\. Webhooks API [Developers](https://developer.bombbomb.com/) Growing relationships on your platform Get Started Why build with BombBomb? All kinds of people in all kinds of industries all around the world are using BombBomb every day. ... [Check out our open API](https://developer.bombbomb.com/api) and start a free developer account to explore what's possible. VIEW V2 API Features Manage Videos Bring BombBomb videos into your workflow with our video endpoints. ... [API](https://developer.bombbomb.com/api) [Getting Started](https://developer.bombbomb.com/getting-started-1)"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb has a public developer portal listing several guides, including account creation, OAuth, integration, and webhook documentation, as well as API resources.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "BombBomb | LinkedIn",
+       "url": "https://linkedin.com/company/1810547",
+       "excerpts": [
+        "Headquarters Denver, Colorado"
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s company profile states its headquarters are in Denver, Colorado; the requested city is Denver.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "New BombBomb Experience \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/49827659565965-New-BombBomb-Experience",
+       "excerpts": [
+        "# New BombBomb Experience",
+        "### Welcome to the new BombBomb!",
+        "Your BombBomb is moving to the new BombBomb experience on **November 9** . You can try it today with the toggle in your account, and switch back any time before **November 9** . Take a few minutes to look around and see what's new.",
+        "### What's New:",
+        "**Dashboard and recent activity.** Start here to see what's happened since your last visit.",
+        "BombBomb 3.0 Dashboard - Step 1.jpeg",
+        "**Video library.** All your videos are in the left sidebar.",
+        "BombBomb 3.0 Library - Step 1.jpeg",
+        "**Notifications.** New activity shows as unread. Click one to open the video the recipient watched.",
+        "Bombbomb 3.0 Notifications - Step 0.jpeg",
+        "**Record your screen in Chrome or Edge.** Start a screen recording right in your browser. There's nothing to install.",
+        "Bombbomb 3.0 Record Screen - Step 0.jpeg",
+        "**Your video page.** Vertical videos now fill the screen. If you use transcripts, viewers can search for a word and jump to that moment.",
+        "### A few things you'll notice",
+        "* **Easier screen recording.** Record your screen in Chrome or Edge with nothing to install. If your connection drops, your recording is saved.",
+        "* **Faster follow-up.** New activity shows as unread, so you can see who watched and follow up sooner.",
+        "* **A better video page.** Vertical videos fit your viewer's screen. If you use transcripts, viewers can search them.",
+        "### What moved where?",
+        "|If you used |Now look for |",
+        "| --- | --- |",
+        "|Tracking Feed |Notifications |",
+        "|Folders |Tags |",
+        "|Views |Plays |",
+        "|Video library |Left sidebar |",
+        "|Search activity |Dashboard search |",
+        "### Frequently asked questions",
+        "**Do I need to move myself?** No. We'll move your account to the new BombBomb experience automatically on November 9.",
+        "**Can I switch back?** Before November 9, use the toggle in your account to switch back. After November 9, the new BombBomb experience will be the one you will see when logging in."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s support announcement describes the new experience and states that accounts would move to it on November 9, including a redesigned dashboard, video library, notifications, and recording/viewer improvements. That major experience rollout falls within the six-month window ending November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "BombBomb - Career Page",
+       "url": "https://bombbomb.applytojob.com/",
+       "excerpts": [
+        "View All Jobs](http://bombbomb.applytojob.com/apply/) [View Our Website](http://bombbomb.com/) brand logo Thanks for visiting our Job Board. Please review our open positions and apply to the positions that match your qualifications. There are no open positions at this time."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s careers page says there are no open positions, so it is not hiring SDRs, BDRs, or account executives.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "BombBomb 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/57973-78",
+       "excerpts": [
+        "12-Mar-2025 |$2.43M"
+       ]
+      },
+      {
+       "title": "BombBomb, Inc. - fund raising filing",
+       "url": "https://formds.com/issuers/bombbomb-inc",
+       "excerpts": [
+        "Mar 13, 2025 |Initial |$2,432,406"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round dates to March 2025, before the 18-month window preceding November 9, 2026 (which begins in May 2025).",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Async Video FAQs | BombBomb",
+       "url": "https://bombbomb.com/faqs/",
+       "excerpts": [
+        "Currently, Essentials customers can easily upgrade to Engage. Plus customers relying on advanced marketing tools will retain their current features until Engage offers comparable functionality. Please connect with your CSM or sales team for guidance.",
+        "Is BombBomb Engage secure and enterprise-ready?",
+        "Yes. Engage provides enterprise-level security, including Single Sign-On (SSO), SOC 2 Type II compliance and advanced administrative controls and user permissions.",
+        "Does Engage comply with data privacy regulations (GDPR, CCPA)?",
+        "Yes. BombBomb Engage meets global privacy standards, including GDPR and CCPA, ensuring your data\u2014and your customers\u2019 data\u2014is always secure and compliant."
+       ]
+      }
+     ],
+     "reasoning": "The FAQ explicitly names SOC 2 Type II compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Async Video FAQs | BombBomb",
+       "url": "https://bombbomb.com/faqs/",
+       "excerpts": [
+        "Currently, Essentials customers can easily upgrade to Engage. Plus customers relying on advanced marketing tools will retain their current features until Engage offers comparable functionality. Please connect with your CSM or sales team for guidance.",
+        "Is BombBomb Engage secure and enterprise-ready?",
+        "Yes. Engage provides enterprise-level security, including Single Sign-On (SSO), SOC 2 Type II compliance and advanced administrative controls and user permissions.",
+        "Does Engage comply with data privacy regulations (GDPR, CCPA)?",
+        "Yes. BombBomb Engage meets global privacy standards, including GDPR and CCPA, ensuring your data\u2014and your customers\u2019 data\u2014is always secure and compliant."
+       ]
+      }
+     ],
+     "reasoning": "The FAQ explicitly names GDPR compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "UWM is named among BombBomb\u2019s customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "Farmers Insurance is named among BombBomb\u2019s customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "ASU is named among BombBomb\u2019s customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.3",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "Affinitiv is named among BombBomb\u2019s customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.4",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "Berkshire Hathaway is named among BombBomb\u2019s customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.5",
+     "citations": [
+      {
+       "title": "About BombBomb | Video Messaging & Screen Recording Experts",
+       "url": "https://bombbomb.com/about",
+       "excerpts": [
+        "UWM Farmers Insurance ASU Affinitiv Berkshire Hathaway Flagstar Bank"
+       ]
+      }
+     ],
+     "reasoning": "Flagstar Bank is named among BombBomb\u2019s customer logos.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      }
+     ],
+     "reasoning": "The integrations page names HubSpot as a standard CRM/sales integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      }
+     ],
+     "reasoning": "The integrations page names Microsoft Dynamics Customer Insights as a standard CRM/sales integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      }
+     ],
+     "reasoning": "The integrations page names Outreach as a standard CRM/sales integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      }
+     ],
+     "reasoning": "The integrations page names Total Expert as a standard CRM/sales integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      }
+     ],
+     "reasoning": "The integrations page names Zendesk as a standard CRM/sales integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.5",
+     "citations": [
+      {
+       "title": "What Integrations does BombBomb Support? \u2013 Engage",
+       "url": "https://support.bombbomb.com/hc/en-us/articles/36073249519757-What-Integrations-does-BombBomb-Support",
+       "excerpts": [
+        "## Standard Integrations \u2014 Built by BombBomb",
+        "These create a direct connection between BombBomb and your CRM or sales platform. Your reps access BombBomb from inside the platform and record and send videos from within contact records, deals, or sequences \u2014 without leaving the tool.",
+        "|Integration |Works in Classic |Works in Engage |",
+        "| --- | --- | --- |",
+        "|HubSpot |No |Yes |",
+        "|Microsoft Dynamics Customer Insights |No |Yes |",
+        "|Outreach |Yes |Yes |",
+        "|Total Expert |Yes |Yes |",
+        "|Zendesk |Yes |Yes |",
+        "|Follow Up Boss |Yes |Yes |",
+        "**Articles for each integration:**",
+        "* [How to Connect Hubspot](https://support.bombbomb.com/hc/en-us/articles/40187674520717)",
+        "* How to Use Hubspot",
+        "* [How to Connect Microsoft Dynamics Customer Insights](https://support.bombbomb.com/hc/en-us/articles/39359902524429)",
+        "* How to Use Microsoft Dynamics Customer Insights",
+        "* [How to Connect Outreach](https://support.bombbomb.com/hc/en-us/articles/39172370477581)",
+        "* How to Use Outreach",
+        "* [How to Connect Total Expert](https://support.bombbomb.com/hc/en-us/articles/39176455909261)",
+        "* How to Use Total Expert",
+        "* * *",
+        "## Automated Workflow Connectors \u2014 Built by BombBomb",
+        "An Automated Workflow Connector passes BombBomb video tracking data \u2014 opens, plays, clicks \u2014 back into your CRM so it appears alongside your other contact activity. This is a separate and optional connection. Automated Workflows send videos with or without it.",
+        "**Available for:** HubSpot, Microsoft Dynamics Customer Insights, Outreach, Total Expert.",
+        "**Article for each connector:**",
+        "* Hubspot Automated Workflow Connector",
+        "* Microsoft Dynamics Customer Insights Automated Workflow Connector",
+        "* Outreach Automated Workflow Connector",
+        "* Total Expert Automated Workflow Connector",
+        "## Email & Communication Integrations \u2014 Built by BombBomb",
+        "|Integration |What It Does |Status |",
+        "|BombBomb Outlook Add-in |Record, insert, send, and track videos directly from Outlook |Live |",
+        "|Send Video Emails via Outlook |Connects Outlook to BombBomb Engage so your video emails are sent through Outlook's mail servers |Live |",
+        "|Send Video Emails via Gmail |Connects Gmail to BombBomb Engage so your video emails are sent through Gmail's mail servers |**Coming soon!** |",
+        "**Note:** The Outlook Add-in and Send Video Emails via Outlook are two separate features that do not depend on each other.",
+        "**Articles:**",
+        "* [How to Install and Use the BombBomb Outlook Add-in](https://support.bombbomb.com/hc/en-us/articles/36073135831309)",
+        "* [How to Send Video Emails via Outlook](https://support.bombbomb.com/hc/en-us/articles/41026319722637)",
+        "## Other Integrations: Not Built by BombBomb",
+        "These are third-party connections built by other platforms or via BombBomb's API. They let you insert BombBomb video links into those tools.",
+        "|Integration |",
+        "| --- |",
+        "|Agent Legend |",
+        "|BoomTown |",
+        "|Curaytor |",
+        "|DigiDeck |",
+        "|Homebot |",
+        "|IXACT Connect |",
+        "|Livewire |",
+        "|OnTask Recruiter |",
+        "|Realvolve |",
+        "|Shape Software |",
+        "|Stikkum |",
+        "|Usherpa |"
+       ]
+      }
+     ],
+     "reasoning": "The integrations page names Follow Up Boss as a standard CRM/sales integration.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.6",
+     "citations": [
+      {
+       "title": "Pricing | BombBomb",
+       "url": "https://bombbomb.com/pricing",
+       "excerpts": [
+        "On any plan, you can record and send from your phone or desktop, right inside Gmail, Outlook, Chrome and Edge."
+       ]
+      }
+     ],
+     "reasoning": "BombBomb\u2019s pricing page names Salesforce among the connected tools.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2006.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "BombBomb Engage helps relationship-driven sales teams create, send, and track personalized video messages to strengthen customer relationships and improve engagement.",
+    "employee_band": "51-100",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 2432406.0,
+    "named_customers": [
+     "UWM",
+     "Farmers Insurance",
+     "ASU",
+     "Affinitiv",
+     "Berkshire Hathaway",
+     "Flagstar Bank"
+    ],
+    "funding_date": "2025-03",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Microsoft Dynamics Customer Insights",
+     "Outreach",
+     "Total Expert",
+     "Zendesk",
+     "Follow Up Boss",
+     "Salesforce"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A",
+    "public_docs": true,
+    "hq_city": "Denver",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

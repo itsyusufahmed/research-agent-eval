@@ -1,0 +1,488 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e95f52fe73aeddd5c",
+  "interaction_id": "trun_142119f6a1b4439e95f52fe73aeddd5c",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "forwoodsafety.com"
+  },
+  "created_at": "2026-11-10T18:48:49.447503Z",
+  "modified_at": "2026-11-10T18:55:52.829366Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e95f52fe73aeddd5c",
+   "interaction_id": "trun_142119f6a1b4439e95f52fe73aeddd5c",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "forwoodsafety.com"
+   },
+   "created_at": "2026-11-10T18:48:49.447503Z",
+   "modified_at": "2026-11-10T18:55:52.829366Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Forwood - UN Global Compact Network Australia",
+       "url": "https://unglobalcompact.org.au/our-members/forwood",
+       "excerpts": [
+        "Established in 1995, Forwood have grown from a small business to a cutting edge technology company supported by an extensive Channel Partner Network around the globe."
+       ]
+      }
+     ],
+     "reasoning": "Forwood's membership profile explicitly states it was established in 1995: https://unglobalcompact.org.au/our-members/forwood.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Forwood",
+       "url": "https://trust.forwoodsafety.com/sitemap.xml",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "The official trust-center content lists ISO 27001:2022 and SOC 2 under Compliance: https://trust.forwoodsafety.com/sitemap.xml.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "Corporate Office Brisbane, Queensland Australia"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies the corporate office as Brisbane, Queensland, Australia: https://pitchbook.com/profiles/company/267247-81.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "News and Articles - Forwood Safety",
+       "url": "https://forwoodsafety.com/resources/news-articles",
+       "excerpts": [
+        "Forwood Safety uses Amazon QuickSight Q to extend life-saving safety analytics to larger audiences",
+        "Access key data with ease in Safety+ 2.0",
+        "Choosing the Right EHS Software for Your Business"
+       ]
+      }
+     ],
+     "reasoning": "The blog index shows safety advice, marketing and product updates, with only the QuickSight Q article plausibly describing product engineering; it does not show two qualifying engineering posts: https://forwoodsafety.com/resources/news-articles.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Investing in workplace fatality prevention software | Macquarie Group",
+       "url": "https://www.macquarie.com/us/en/insights/investing-in-workplace-fatality-prevention-software.html",
+       "excerpts": [
+        "Forwood provides safety software to companies in high-risk industries globally, including mining, construction, and utilities."
+       ]
+      },
+      {
+       "title": "Solutions - Forwood Safety",
+       "url": "https://forwoodsafety.com/solutions",
+       "excerpts": [
+        "CRM+ Eliminate serious injuries and fatalities using our Critical Risk Management Solution."
+       ]
+      }
+     ],
+     "reasoning": "Macquarie identifies the safety-software product and its mining, construction and utilities customers; Forwood describes its critical-risk-management solution as eliminating fatalities and serious injuries. Sources: https://www.macquarie.com/us/en/insights/investing-in-workplace-fatality-prevention-software.html and https://forwoodsafety.com/solutions.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "Year Founded * Status Private * Employees 94"
+       ]
+      }
+     ],
+     "reasoning": "The profile reports 94 employees, which falls within 51\u2013100: https://pitchbook.com/profiles/company/267247-81.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Forwood Safety uses Amazon QuickSight Q to extend life-saving safety analytics to larger audiences - Forwood Safety",
+       "url": "https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics",
+       "excerpts": [
+        "In addition, our Forwood Analytical Self-Service Tool (FAST) enables our customers to use self-service reporting to get updated dashboards that display key safety and fatality prevention metrics. For several years, we used AWS QuickSight to provide data visualization for our CRM and FAST reporting products, with great success. Most of our technology stack was already based on AWS, so we knew QuickSight would be easy to integrate. QuickSight is agnostic in terms of data sources and types, and it's a very flexible tool. ... QuickSight Q is a feature within QuickSight that uses machine learning to understand questions and how they relate to business data. The feature provides data insights and visualizations within seconds. With this capability, users can simply type in questions in natural language to access data insights about risk and compliance."
+       ]
+      }
+     ],
+     "reasoning": "Forwood says it uses AWS QuickSight and QuickSight Q, explaining that Q uses machine learning to interpret natural-language questions. This supports AWS as the provider, without identifying a particular foundation model: https://forwoodsafety.com/forwood-amazon-quicksight-q-extend-life-saving-safety-analytics.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Home - Forwood Safety",
+       "url": "https://forwoodsafety.com/",
+       "excerpts": [
+        "CRM+",
+        "Keeping you safe at over 1000 operating sites in 60 countries."
+       ]
+      }
+     ],
+     "reasoning": "The homepage navigation and footer show no pricing link, and the checked /pricing route returned no pricing page. The cited homepage is the required negative-evidence location: https://forwoodsafety.com/.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Later Stage VC |31-Oct-2023 | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The latest listed round has a blank Amount column, and the investor's account also does not disclose a round size; the USD amount could not be established. Sources: https://pitchbook.com/profiles/company/267247-81 and https://www.macquarie.com/us/en/insights/investing-in-workplace-fatality-prevention-software.html.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Home - Forwood Safety",
+       "url": "https://forwoodsafety.com/",
+       "excerpts": [
+        "What our customers say about us > _The most important reason that we use Forwood's CRM solution is that is gives us a fatality prevention program. We don't want fatalities in Metso. ... When BHP, Rio Tinto, and Newmont talk to us about safety, it's always about what we are doing regarding our critical controls. It's important to us to be a tier 1 company, which is what we aspire to be!_ > > **Senior Safety Advisor, Metso**"
+       ]
+      },
+      {
+       "title": "Peabody Australia join the Forwood Critical Risk Management Community - Forwood Safety",
+       "url": "https://forwoodsafety.com/peabody-australia-join-the-forwood-critical-risk-management-community",
+       "excerpts": [
+        "Peabody Australia join the Forwood Critical Risk Management Community Forwood is thrilled to announce that Peabody have joined the growing community of organisations applying a laser focus on fatality prevention, through the management of critical controls within Forwood's Critical Management Solution Background Safety is Peabody's first value; committing to safety and health as a way of life. Upon review of current system capability as well as a market sweep, Forwood CRM was evaluated and identified as the leading critical control management tool on the market. Forwood's turn-key solution provided Peabody immediate benefit through the standardised global benchmark checklists, which verify and record critical control effectiveness above and below ground using Forwood's online/offline App."
+       ]
+      }
+     ],
+     "reasoning": "Metso provides a customer testimonial, and Forwood separately announces Peabody Australia's adoption of its critical-risk-management solution. Sources: https://forwoodsafety.com/ and https://forwoodsafety.com/peabody-australia-join-the-forwood-critical-risk-management-community.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Later Stage VC |31-Oct-2023 | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The latest listed transaction is dated 31-Oct-2023, normalized to 2023-10: https://pitchbook.com/profiles/company/267247-81.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Zoho CRM LinkedIn Integration Case Study | Forwood Safety",
+       "url": "https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration",
+       "excerpts": [
+        "Forwood Safety Zoho CRM LinkedIn Integration for a Scalable B2B Sales Pipeline Forwood Safety is an Australian-headquartered global enterprise specialising in critical risk management and safety ... Their Zoho CRM was poorly managed, with fragmented processes, no website integration, and no automated lead capture from LinkedIn. ... Tecomato was engaged to optimise Forwood Safety's Zoho CRM, integrate it with their website and LinkedIn via LeadsBridge, establish marketing automation workflows, and provide ongoing strategic ... The Process **Zoho CRM Optimisation & LinkedIn LeadsBridge Integration Process** **01** **CRM Assessment & Process Mapping:** Tecomato audited Forwood's Zoho CRM, documenting workflows, data ... **Website & LinkedIn Integration via LeadsBridge:** A bespoke integration was built connecting Forwood's WordPress website and LinkedIn lead generation forms directly into Zoho CRM through"
+       ]
+      }
+     ],
+     "reasoning": "An implementation case study describes optimizing Forwood's Zoho CRM and connecting LinkedIn lead-generation forms through LeadsBridge: https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Muralidhar Siddavatam - Author & Maintainer - Agentic Architecture Skills",
+       "url": "https://himalayas.app/@muralidharsiddavatam",
+       "excerpts": [
+        "Head of Innovation & CTO Forwood Safety Jan 2020 - Dec 2025 ( 5 years 11 months) Executive technology leader for a global mining-safety company, owning a USD 5.4M annual budget and an organisation of 80+ across Australia and India."
+       ]
+      }
+     ],
+     "reasoning": "Muralidhar Siddavatam's profile dates his Head of Innovation & CTO tenure at Forwood Safety from January 2020 to December 2025, placing his departure within the requested 12-month window: https://himalayas.app/@muralidharsiddavatam.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "\n\t\tBambooHR\n\t",
+       "url": "https://forwoodsafety.bamboohr.com/careers",
+       "excerpts": [
+        "[Account Executive - Enterprise SaaS Sales](https://forwoodsafety.bamboohr.com/careers/160)",
+        "[Industry & Critical Risk Management Specialist](https://forwoodsafety.bamboohr.com/careers/161)",
+        "[Senior Enterprise Sales Executive (SaaS)](https://forwoodsafety.bamboohr.com/careers/162)",
+        "[Industry & Critical Risk Management Specialist](https://forwoodsafety.bamboohr.com/careers/163)"
+       ]
+      }
+     ],
+     "reasoning": "The complete careers index lists four sales or critical-risk-management roles and no qualifying AI, ML or data-science title: https://forwoodsafety.bamboohr.com/careers.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Later Stage VC |31-Oct-2023 | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The latest listed round is classified as Later Stage VC: https://pitchbook.com/profiles/company/267247-81.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Home | Forwood Safety Help Center",
+       "url": "https://help.forwoodsafety.com/en",
+       "excerpts": [
+        "[Forwood Users 4 articles](https://help.forwoodsafety.com/en/collections/8382503-forwood-users) [Team Management 1 article](https://help.forwoodsafety.com/en/collections/10401612-team-management)"
+       ]
+      }
+     ],
+     "reasoning": "The public help center lists multiple documentation collections, including four Forwood Users articles and a Team Management article: https://help.forwoodsafety.com/en.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "Corporate Office Brisbane, Queensland Australia"
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies Brisbane as the corporate-office city: https://pitchbook.com/profiles/company/267247-81.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "News and Articles - Forwood Safety",
+       "url": "https://forwoodsafety.com/resources/news-articles",
+       "excerpts": [
+        "[](https://forwoodsafety.com/access-key-data-with-ease-in-safety-2-0/) Access key data with ease in Safety+ 2.0 You asked, we listened. Safety+ version 2.0 is here! Built on client feedback, we\u2019ve[...] [Learn More](https://forwoodsafety.com/access-key-data-with-ease-in-safety-2-0/)"
+       ]
+      },
+      {
+       "title": "Wp Json",
+       "url": "https://forwoodsafety.com/wp-json/wp/v2/posts/5379",
+       "excerpts": [
+        "{\"id\":5379,\"date\":\"2025-01-21T00:35:54\",\"date_gmt\":\"2025-01-21T00:35:54\""
+       ]
+      }
+     ],
+     "reasoning": "The newest product-release announcement identified in the readable news index is Safety+ 2.0. Its publication record dates it to January 21, 2025, before the six-month window. Sources: https://forwoodsafety.com/resources/news-articles, https://forwoodsafety.com/access-key-data-with-ease-in-safety-2-0 and https://forwoodsafety.com/wp-json/wp/v2/posts/5379.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "\n\t\tBambooHR\n\t",
+       "url": "https://forwoodsafety.bamboohr.com/careers",
+       "excerpts": [
+        "[Account Executive - Enterprise SaaS Sales](https://forwoodsafety.bamboohr.com/careers/160)"
+       ]
+      }
+     ],
+     "reasoning": "The current careers board links an open Account Executive - Enterprise SaaS Sales position: https://forwoodsafety.bamboohr.com/careers/160. Board: https://forwoodsafety.bamboohr.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Forwood Safety 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/267247-81",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |1\\. Later Stage VC |31-Oct-2023 | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The latest listed funding round is October 31, 2023, before the requested 18-month window: https://pitchbook.com/profiles/company/267247-81.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Forwood",
+       "url": "https://trust.forwoodsafety.com/sitemap.xml",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is explicitly listed in Forwood's official trust-center content: https://trust.forwoodsafety.com/sitemap.xml.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Forwood",
+       "url": "https://trust.forwoodsafety.com/sitemap.xml",
+       "excerpts": [
+        "Compliance ISO 27001:2022 SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "ISO 27001:2022 is explicitly listed in Forwood's official trust-center content: https://trust.forwoodsafety.com/sitemap.xml.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Home - Forwood Safety",
+       "url": "https://forwoodsafety.com/",
+       "excerpts": [
+        "What our customers say about us > _The most important reason that we use Forwood's CRM solution is that is gives us a fatality prevention program. We don't want fatalities in Metso. ... When BHP, Rio Tinto, and Newmont talk to us about safety, it's always about what we are doing regarding our critical controls. It's important to us to be a tier 1 company, which is what we aspire to be!_ > > **Senior Safety Advisor, Metso**"
+       ]
+      }
+     ],
+     "reasoning": "A Metso safety advisor describes using Forwood's solution in the homepage customer testimonials: https://forwoodsafety.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Peabody Australia join the Forwood Critical Risk Management Community - Forwood Safety",
+       "url": "https://forwoodsafety.com/peabody-australia-join-the-forwood-critical-risk-management-community",
+       "excerpts": [
+        "Peabody Australia join the Forwood Critical Risk Management Community Forwood is thrilled to announce that Peabody have joined the growing community of organisations applying a laser focus on fatality prevention, through the management of critical controls within Forwood's Critical Management Solution Background Safety is Peabody's first value; committing to safety and health as a way of life. Upon review of current system capability as well as a market sweep, Forwood CRM was evaluated and identified as the leading critical control management tool on the market. Forwood's turn-key solution provided Peabody immediate benefit through the standardised global benchmark checklists, which verify and record critical control effectiveness above and below ground using Forwood's online/offline App."
+       ]
+      }
+     ],
+     "reasoning": "Forwood announces Peabody Australia's selection and implementation of its solution: https://forwoodsafety.com/peabody-australia-join-the-forwood-critical-risk-management-community.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Zoho CRM LinkedIn Integration Case Study | Forwood Safety",
+       "url": "https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration",
+       "excerpts": [
+        "Forwood Safety Zoho CRM LinkedIn Integration for a Scalable B2B Sales Pipeline Forwood Safety is an Australian-headquartered global enterprise specialising in critical risk management and safety ... Their Zoho CRM was poorly managed, with fragmented processes, no website integration, and no automated lead capture from LinkedIn. ... Tecomato was engaged to optimise Forwood Safety's Zoho CRM, integrate it with their website and LinkedIn via LeadsBridge, establish marketing automation workflows, and provide ongoing strategic ... The Process **Zoho CRM Optimisation & LinkedIn LeadsBridge Integration Process** **01** **CRM Assessment & Process Mapping:** Tecomato audited Forwood's Zoho CRM, documenting workflows, data ... **Website & LinkedIn Integration via LeadsBridge:** A bespoke integration was built connecting Forwood's WordPress website and LinkedIn lead generation forms directly into Zoho CRM through"
+       ]
+      }
+     ],
+     "reasoning": "The implementation case study explicitly identifies Forwood's Zoho CRM: https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Zoho CRM LinkedIn Integration Case Study | Forwood Safety",
+       "url": "https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration",
+       "excerpts": [
+        "Forwood Safety Zoho CRM LinkedIn Integration for a Scalable B2B Sales Pipeline Forwood Safety is an Australian-headquartered global enterprise specialising in critical risk management and safety ... Their Zoho CRM was poorly managed, with fragmented processes, no website integration, and no automated lead capture from LinkedIn. ... Tecomato was engaged to optimise Forwood Safety's Zoho CRM, integrate it with their website and LinkedIn via LeadsBridge, establish marketing automation workflows, and provide ongoing strategic ... The Process **Zoho CRM Optimisation & LinkedIn LeadsBridge Integration Process** **01** **CRM Assessment & Process Mapping:** Tecomato audited Forwood's Zoho CRM, documenting workflows, data ... **Website & LinkedIn Integration via LeadsBridge:** A bespoke integration was built connecting Forwood's WordPress website and LinkedIn lead generation forms directly into Zoho CRM through"
+       ]
+      }
+     ],
+     "reasoning": "The case study describes integrating LinkedIn lead-generation forms into Forwood's sales workflow: https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Zoho CRM LinkedIn Integration Case Study | Forwood Safety",
+       "url": "https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration",
+       "excerpts": [
+        "Forwood Safety Zoho CRM LinkedIn Integration for a Scalable B2B Sales Pipeline Forwood Safety is an Australian-headquartered global enterprise specialising in critical risk management and safety ... Their Zoho CRM was poorly managed, with fragmented processes, no website integration, and no automated lead capture from LinkedIn. ... Tecomato was engaged to optimise Forwood Safety's Zoho CRM, integrate it with their website and LinkedIn via LeadsBridge, establish marketing automation workflows, and provide ongoing strategic ... The Process **Zoho CRM Optimisation & LinkedIn LeadsBridge Integration Process** **01** **CRM Assessment & Process Mapping:** Tecomato audited Forwood's Zoho CRM, documenting workflows, data ... **Website & LinkedIn Integration via LeadsBridge:** A bespoke integration was built connecting Forwood's WordPress website and LinkedIn lead generation forms directly into Zoho CRM through"
+       ]
+      }
+     ],
+     "reasoning": "The case study explicitly names LeadsBridge as the connector used for Forwood's website, LinkedIn and Zoho CRM integration: https://tecomato.com/portfolio/forwood-safety-zoho-crm-linkedin-leadsbridge-integration.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 1995.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001"
+    ],
+    "hq_country": "Australia",
+    "eng_blog": false,
+    "product_one_liner": "Forwood Safety provides safety and critical-risk-management software that helps companies in high-risk industries such as mining, construction and utilities prevent workplace fatalities and serious injuries.",
+    "employee_band": "51-100",
+    "model_provider": "Amazon Web Services (Amazon QuickSight Q)",
+    "pricing_page": false,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Metso",
+     "Peabody Australia"
+    ],
+    "funding_date": "2023-10",
+    "crm_stack_signal": [
+     "Zoho CRM",
+     "LinkedIn",
+     "LeadsBridge"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Later Stage VC",
+    "public_docs": true,
+    "hq_city": "Brisbane",
+    "launched_6mo": false,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

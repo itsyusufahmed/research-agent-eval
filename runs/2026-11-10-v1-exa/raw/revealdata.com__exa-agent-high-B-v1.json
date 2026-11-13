@@ -1,0 +1,1235 @@
+{
+ "id": "agent_run_11328ea4d38b4f85909852f69f0b8142",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T18:45:11.705Z",
+ "completedAt": "2026-11-10T18:48:51.875Z",
+ "request": {
+  "query": "Research the company Reveal (revealdata.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "high"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Reveal provides AI-powered eDiscovery and investigation software that helps law firms, corporate legal departments, service providers and government agencies collect, analyze and review evidence.\",\"citations\":[\"https://www.revealdata.com\",\"https://www.revealdata.com/about-us\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.revealdata.com\",\"https://www.revealdata.com/pricing\"],\"notes\":\"No pricing link was found; /pricing displays a demo-request page rather than plans or prices.\"},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Balfour Beatty\",\"Baker Donelson\"],\"citations\":[\"https://www.revealdata.com/success-stories\"]},\"employee_band\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"The official About page reports 500+ employees, outside the permitted bands; LinkedIn lists a 501\u20131000 company-size band despite a lower observed profile count. No supported selection among the allowed bands.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"Chicago\",\"country\":\"United States\"},\"citations\":[\"https://www.revealdata.com/about-us\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2008,\"citations\":[\"https://www.revealdata.com/news/reveal-data-furthers-international-expansion-with-appointment-of-new-vice-president\"],\"notes\":\"Reveal\u2019s own historical announcement explicitly states founded in 2008; the About timeline dates its product launch to January 2009.\"},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.revealdata.com/blog\"],\"notes\":\"The public index is an eDiscovery practice/product marketing blog; the reviewed material did not establish two engineer-authored posts explaining how the product is built.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://ai-help.revealdata.com/en/Reveal-AI-Model-Library.html\",\"https://docs.revealdata.com/onna/docs/platform-security\"],\"notes\":\"Public help documentation includes multiple product and technical articles.\"},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://jobs.jobvite.com/reveal\"],\"notes\":\"The current board lists support, strategy, collections, full-stack engineering and sales roles, but no qualifying AI/ML/data-science job title.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"Amazon Bedrock; Google Vertex AI\",\"citations\":[\"https://www.revealdata.com/guides/ai-assisted-document-review-security-data-privacy\"],\"notes\":\"Reveal names these services as its LLM providers for AI-Assisted Document Review, selected by region; this source does not identify an underlying model version.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"SOC 2\",\"ISO 27001\",\"GDPR\"],\"citations\":[\"https://security.revealdata.com/\"],\"notes\":\"The Trust Center lists SOC 2 Type 2, ISO/IEC 27001 and GDPR under Compliance. GDPR is a regulatory compliance claim, not an independently issued certification. HIPAA appears as a report, not an explicit certification.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Growth equity\",\"date\":\"2021-01\",\"amount_usd\":250000000},\"citations\":[\"https://www.revealdata.com/about-us\",\"https://www.cbinsights.com/company/reveal-data/financials\"],\"notes\":\"Reveal\u2019s official history reports a $250M K1 capital investment in January 2021. The funding database identifies the latest round as Growth Equity on January 26, 2021, but reports $200M; the amount here follows the company\u2019s own published figure.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.revealdata.com/about-us\",\"https://www.cbinsights.com/company/reveal-data/financials\"],\"notes\":\"The latest recorded funding round is January 2021, before the May 9, 2025\u2013November 9, 2026 window; acquisition transaction values are not treated as funding rounds.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://jobs.jobvite.com/reveal/job/oAdJAfwQ\"],\"notes\":\"The live posting is Account Executive, II in Chicago.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.revealdata.com/news/reveal-launches-powerful-agentic-ai-suite-automating-ediscovery-from-preservation-to-case-development\"],\"notes\":\"On August 24, 2026, Reveal announced Reveal AI, an agentic suite spanning eDiscovery and case development, within the May 9\u2013November 9, 2026 window.\"},\"leadership_change_12mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://linkedin.com/in/mertozdecankaya\"],\"notes\":\"Mert Ozde Cankaya\u2019s professional profile lists his Reveal Chief Strategy Officer role as beginning January 2026, within the November 9, 2025\u2013November 9, 2026 window.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"Salesforce\",\"SFDC Pardot\",\"ZoomInfo\",\"Groove\",\"Gong\",\"Mutiny\"],\"citations\":[\"https://jobs.jobvite.com/reveal/job/oAdJAfwQ\",\"https://docs.revealdata.com/logikcull/docs/logikculls-data-sub-processors\"],\"notes\":\"The AE posting explicitly uses Salesforce CRM and lists ZoomInfo, Groove and Gong as sales tools for which experience is preferred. Logikcull\u2019s subprocessor page lists Salesforce/SFDC Pardot for lead and campaign management and Mutiny for marketing notifications; that page is marked updated April 27, 2021.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The public index is an eDiscovery practice/product marketing blog; the reviewed material did not establish two engineer-authored posts explaining how the product is built.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/blog"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "Chicago",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/about-us"
+    ]
+   },
+   "public_docs": {
+    "notes": "Public help documentation includes multiple product and technical articles.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://ai-help.revealdata.com/en/Reveal-AI-Model-Library.html",
+     "https://docs.revealdata.com/onna/docs/platform-security"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "The latest recorded funding round is January 2021, before the May 9, 2025\u2013November 9, 2026 window; acquisition transaction values are not treated as funding rounds.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/about-us",
+     "https://www.cbinsights.com/company/reveal-data/financials"
+    ]
+   },
+   "founded_year": {
+    "notes": "Reveal\u2019s own historical announcement explicitly states founded in 2008; the About timeline dates its product launch to January 2009.",
+    "value": 2008,
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/news/reveal-data-furthers-international-expansion-with-appointment-of-new-vice-president"
+    ]
+   },
+   "last_funding": {
+    "notes": "Reveal\u2019s official history reports a $250M K1 capital investment in January 2021. The funding database identifies the latest round as Growth Equity on January 26, 2021, but reports $200M; the amount here follows the company\u2019s own published figure.",
+    "value": {
+     "date": "2021-01",
+     "stage": "Growth equity",
+     "amount_usd": 250000000
+    },
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/about-us",
+     "https://www.cbinsights.com/company/reveal-data/financials"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "On August 24, 2026, Reveal announced Reveal AI, an agentic suite spanning eDiscovery and case development, within the May 9\u2013November 9, 2026 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/news/reveal-launches-powerful-agentic-ai-suite-automating-ediscovery-from-preservation-to-case-development"
+    ]
+   },
+   "pricing_page": {
+    "notes": "No pricing link was found; /pricing displays a demo-request page rather than plans or prices.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com",
+     "https://www.revealdata.com/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "The official About page reports 500+ employees, outside the permitted bands; LinkedIn lists a 501\u20131000 company-size band despite a lower observed profile count. No supported selection among the allowed bands.",
+    "status": "unknown",
+    "citations": []
+   },
+   "hiring_sdr_ae": {
+    "notes": "The live posting is Account Executive, II in Chicago.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+    ]
+   },
+   "model_provider": {
+    "notes": "Reveal names these services as its LLM providers for AI-Assisted Document Review, selected by region; this source does not identify an underlying model version.",
+    "value": "Amazon Bedrock; Google Vertex AI",
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/guides/ai-assisted-document-review-security-data-privacy"
+    ]
+   },
+   "named_customers": {
+    "value": [
+     "Balfour Beatty",
+     "Baker Donelson"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com/success-stories"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The current board lists support, strategy, collections, full-stack engineering and sales roles, but no qualifying AI/ML/data-science job title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://jobs.jobvite.com/reveal"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The Trust Center lists SOC 2 Type 2, ISO/IEC 27001 and GDPR under Compliance. GDPR is a regulatory compliance claim, not an independently issued certification. HIPAA appears as a report, not an explicit certification.",
+    "value": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://security.revealdata.com/"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "The AE posting explicitly uses Salesforce CRM and lists ZoomInfo, Groove and Gong as sales tools for which experience is preferred. Logikcull\u2019s subprocessor page lists Salesforce/SFDC Pardot for lead and campaign management and Mutiny for marketing notifications; that page is marked updated April 27, 2021.",
+    "value": [
+     "Salesforce",
+     "SFDC Pardot",
+     "ZoomInfo",
+     "Groove",
+     "Gong",
+     "Mutiny"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://jobs.jobvite.com/reveal/job/oAdJAfwQ",
+     "https://docs.revealdata.com/logikcull/docs/logikculls-data-sub-processors"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Reveal provides AI-powered eDiscovery and investigation software that helps law firms, corporate legal departments, service providers and government agencies collect, analyze and review evidence.",
+    "status": "asserted",
+    "citations": [
+     "https://www.revealdata.com",
+     "https://www.revealdata.com/about-us"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "Mert Ozde Cankaya\u2019s professional profile lists his Reveal Chief Strategy Officer role as beginning January 2026, within the November 9, 2025\u2013November 9, 2026 window.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://linkedin.com/in/mertozdecankaya"
+    ]
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com"
+     },
+     {
+      "url": "https://www.revealdata.com/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com"
+     },
+     {
+      "url": "https://www.revealdata.com/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com"
+     },
+     {
+      "url": "https://www.revealdata.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com"
+     },
+     {
+      "url": "https://www.revealdata.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com"
+     },
+     {
+      "url": "https://www.revealdata.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/success-stories"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/success-stories"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/news/reveal-data-furthers-international-expansion-with-appointment-of-new-vice-president"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/news/reveal-data-furthers-international-expansion-with-appointment-of-new-vice-president"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/news/reveal-data-furthers-international-expansion-with-appointment-of-new-vice-president"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/blog"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://ai-help.revealdata.com/en/Reveal-AI-Model-Library.html"
+     },
+     {
+      "url": "https://docs.revealdata.com/onna/docs/platform-security"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://ai-help.revealdata.com/en/Reveal-AI-Model-Library.html"
+     },
+     {
+      "url": "https://docs.revealdata.com/onna/docs/platform-security"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.notes",
+    "citations": [
+     {
+      "url": "https://ai-help.revealdata.com/en/Reveal-AI-Model-Library.html"
+     },
+     {
+      "url": "https://docs.revealdata.com/onna/docs/platform-security"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/guides/ai-assisted-document-review-security-data-privacy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/guides/ai-assisted-document-review-security-data-privacy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/guides/ai-assisted-document-review-security-data-privacy"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://security.revealdata.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://security.revealdata.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://security.revealdata.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/reveal-data/financials"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/reveal-data/financials"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/reveal-data/financials"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/reveal-data/financials"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/reveal-data/financials"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://www.cbinsights.com/company/reveal-data/financials"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/news/reveal-launches-powerful-agentic-ai-suite-automating-ediscovery-from-preservation-to-case-development"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/news/reveal-launches-powerful-agentic-ai-suite-automating-ediscovery-from-preservation-to-case-development"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/news/reveal-launches-powerful-agentic-ai-suite-automating-ediscovery-from-preservation-to-case-development"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.value",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mertozdecankaya"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.citations",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mertozdecankaya"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.leadership_change_12mo.notes",
+    "citations": [
+     {
+      "url": "https://linkedin.com/in/mertozdecankaya"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+     },
+     {
+      "url": "https://docs.revealdata.com/logikcull/docs/logikculls-data-sub-processors"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+     },
+     {
+      "url": "https://docs.revealdata.com/logikcull/docs/logikculls-data-sub-processors"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://jobs.jobvite.com/reveal/job/oAdJAfwQ"
+     },
+     {
+      "url": "https://docs.revealdata.com/logikcull/docs/logikculls-data-sub-processors"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://www.revealdata.com/about-us"
+     },
+     {
+      "url": "https://linkedin.com/company/reveal-data"
+     }
+    ],
+    "confidence": "high"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 2,
+  "searches": 60,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 0.5,
+  "agentCompute": 0.2,
+  "search": 0.3,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

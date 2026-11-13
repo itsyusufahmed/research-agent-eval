@@ -1,0 +1,366 @@
+{
+ "run": {
+  "routine_run_id": "run_0toaywpjpHi2o7vhqeZ",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "mimica.ai",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The article index consists of product explainers, business-impact/marketing content, announcements, and company news; it does not show at least two engineer-authored posts about how the product is built.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/articles"
+       ]
+      },
+      "reasoning": "The product, audience, founding year, customer testimonials, and security claims are stated on Mimica’s first-party pages. Its public articles index is marketing/product-oriented rather than an engineering blog. Official Ashby listings show live ML and business-development roles and identify Salesforce and example AI model providers. The latest identified funding announcement is the September 2025 Series B, and the September 2026 Maker announcement is within the six-month window measured from 2026-11-09. The employee band and HQ are supported by company-profile sources; leadership-change timing could not be verified from a complete executive roster.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://www.mimica.ai/about-us",
+       "Visited https://trust.mimica.ai/overview",
+       "Visited https://www.mimica.ai/",
+       "Visited https://www.mimica.ai/articles",
+       "Visited https://linkedin.com/company/mimicaautomation",
+       "Visited https://pitchbook.com/profiles/company/227010-61",
+       "Visited https://jobs.ashbyhq.com/mimica/c69566a5-bcdf-4380-b40e-a7844acecfd8?gh_src=Entrepreneurs%20First%20job%20board",
+       "Visited https://www.mimica.ai/contact",
+       "Visited https://jobs.ashbyhq.com/mimica/157112c3-9fbf-440b-a5e4-5c40f0cd2fa0",
+       "Visited https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095",
+       "Visited https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+       "Visited https://www.mimica.ai/articles/mimica-maker-ai-agents-watch-learn"
+      ],
+      "hq_location": {
+       "notes": "The company profile identifies London, United Kingdom as headquarters; Mimica’s own site gives its London address.",
+       "value": {
+        "city": "London",
+        "country": "United Kingdom"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://pitchbook.com/profiles/company/227010-61",
+        "https://www.mimica.ai/"
+       ]
+      },
+      "public_docs": {
+       "notes": "The public site’s homepage/footer provides no product documentation, help-center, or developer-portal link; the visible guides and articles are marketing resources rather than product docs.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The Series B was announced 2025-09-24, inside the 18-month period beginning 2025-05-09.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows"
+       ]
+      },
+      "founded_year": {
+       "notes": "Mimica’s About Us timeline explicitly marks 2018 as its founding year.",
+       "value": 2018,
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/about-us"
+       ]
+      },
+      "last_funding": {
+       "notes": "Mimica announced a $26.2 million Series B on 2025-09-24; its company timeline lists the 2025 Series B as its latest funding milestone.",
+       "value": {
+        "date": "2025-09",
+        "stage": "Series B",
+        "amount_usd": 26200000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+        "https://www.mimica.ai/about-us"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Mimica announced Maker on 2026-09-30, within the six months before 2026-11-09.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/articles/mimica-maker-ai-agents-watch-learn"
+       ]
+      },
+      "pricing_page": {
+       "notes": "No public pricing page is shown; the contact page is an inquiry/demo form that directs prospects to ask product experts pricing questions.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/",
+        "https://www.mimica.ai/contact"
+       ]
+      },
+      "employee_band": {
+       "notes": "The sources show about 310–316 employees, which falls in the 201-500 band.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/mimicaautomation",
+        "https://pitchbook.com/profiles/company/227010-61"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "Mimica has an active Associate Business Development Representative posting with an application link.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095"
+       ]
+      },
+      "model_provider": {
+       "notes": "Mimica’s AI-agent engineering job description names these as example models/providers, not as a single exclusive default.",
+       "value": "Anthropic (Claude), Google (Gemini), and OpenAI (GPT)",
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/mimica/c69566a5-bcdf-4380-b40e-a7844acecfd8"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both organizations are named alongside customer testimonials on Mimica’s homepage.",
+       "value": [
+        "Goodyear",
+        "ClearBank"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The live Ashby posting is titled Senior/Lead Machine Learning Engineer and includes an application link.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/mimica/157112c3-9fbf-440b-a5e4-5c40f0cd2fa0"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The Trust Center lists ISO 27001:2022; Mimica’s homepage also states that it is compliant with GDPR.",
+       "value": [
+        "ISO 27001",
+        "GDPR"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://trust.mimica.ai/overview",
+        "https://www.mimica.ai/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The Associate Business Development Representative posting says to keep Salesforce updated.",
+       "value": [
+        "Salesforce"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "The homepage describes capturing clicks and keystrokes, mapping processes, automating work, and an enterprise focus.",
+       "value": "Mimica records employees’ work activity to map processes, reveal inefficiencies, and create production-ready AI agents for large enterprises.",
+       "status": "asserted",
+       "citations": [
+        "https://www.mimica.ai/"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "The About Us page lists the founders as CEO and CTO but does not provide a complete executive roster or dated C-level/VP appointment/departure history, so a change in the 12 months before 2026-11-09 cannot be verified.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "mimica.ai",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The article index consists of product explainers, business-impact/marketing content, announcements, and company news; it does not show at least two engineer-authored posts about how the product is built.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/articles"
+     ]
+    },
+    "reasoning": "The product, audience, founding year, customer testimonials, and security claims are stated on Mimica’s first-party pages. Its public articles index is marketing/product-oriented rather than an engineering blog. Official Ashby listings show live ML and business-development roles and identify Salesforce and example AI model providers. The latest identified funding announcement is the September 2025 Series B, and the September 2026 Maker announcement is within the six-month window measured from 2026-11-09. The employee band and HQ are supported by company-profile sources; leadership-change timing could not be verified from a complete executive roster.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://www.mimica.ai/about-us",
+     "Visited https://trust.mimica.ai/overview",
+     "Visited https://www.mimica.ai/",
+     "Visited https://www.mimica.ai/articles",
+     "Visited https://linkedin.com/company/mimicaautomation",
+     "Visited https://pitchbook.com/profiles/company/227010-61",
+     "Visited https://jobs.ashbyhq.com/mimica/c69566a5-bcdf-4380-b40e-a7844acecfd8?gh_src=Entrepreneurs%20First%20job%20board",
+     "Visited https://www.mimica.ai/contact",
+     "Visited https://jobs.ashbyhq.com/mimica/157112c3-9fbf-440b-a5e4-5c40f0cd2fa0",
+     "Visited https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095",
+     "Visited https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+     "Visited https://www.mimica.ai/articles/mimica-maker-ai-agents-watch-learn"
+    ],
+    "hq_location": {
+     "notes": "The company profile identifies London, United Kingdom as headquarters; Mimica’s own site gives its London address.",
+     "value": {
+      "city": "London",
+      "country": "United Kingdom"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://pitchbook.com/profiles/company/227010-61",
+      "https://www.mimica.ai/"
+     ]
+    },
+    "public_docs": {
+     "notes": "The public site’s homepage/footer provides no product documentation, help-center, or developer-portal link; the visible guides and articles are marketing resources rather than product docs.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The Series B was announced 2025-09-24, inside the 18-month period beginning 2025-05-09.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows"
+     ]
+    },
+    "founded_year": {
+     "notes": "Mimica’s About Us timeline explicitly marks 2018 as its founding year.",
+     "value": 2018,
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/about-us"
+     ]
+    },
+    "last_funding": {
+     "notes": "Mimica announced a $26.2 million Series B on 2025-09-24; its company timeline lists the 2025 Series B as its latest funding milestone.",
+     "value": {
+      "date": "2025-09",
+      "stage": "Series B",
+      "amount_usd": 26200000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/articles/mimica-secures-26-2-million-in-series-b-funding-to-train-agentic-ai-on-real-enterprise-workflows",
+      "https://www.mimica.ai/about-us"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Mimica announced Maker on 2026-09-30, within the six months before 2026-11-09.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/articles/mimica-maker-ai-agents-watch-learn"
+     ]
+    },
+    "pricing_page": {
+     "notes": "No public pricing page is shown; the contact page is an inquiry/demo form that directs prospects to ask product experts pricing questions.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/",
+      "https://www.mimica.ai/contact"
+     ]
+    },
+    "employee_band": {
+     "notes": "The sources show about 310–316 employees, which falls in the 201-500 band.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/mimicaautomation",
+      "https://pitchbook.com/profiles/company/227010-61"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "Mimica has an active Associate Business Development Representative posting with an application link.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095"
+     ]
+    },
+    "model_provider": {
+     "notes": "Mimica’s AI-agent engineering job description names these as example models/providers, not as a single exclusive default.",
+     "value": "Anthropic (Claude), Google (Gemini), and OpenAI (GPT)",
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/mimica/c69566a5-bcdf-4380-b40e-a7844acecfd8"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both organizations are named alongside customer testimonials on Mimica’s homepage.",
+     "value": [
+      "Goodyear",
+      "ClearBank"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The live Ashby posting is titled Senior/Lead Machine Learning Engineer and includes an application link.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/mimica/157112c3-9fbf-440b-a5e4-5c40f0cd2fa0"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The Trust Center lists ISO 27001:2022; Mimica’s homepage also states that it is compliant with GDPR.",
+     "value": [
+      "ISO 27001",
+      "GDPR"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://trust.mimica.ai/overview",
+      "https://www.mimica.ai/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The Associate Business Development Representative posting says to keep Salesforce updated.",
+     "value": [
+      "Salesforce"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://jobs.ashbyhq.com/mimica/b64e2711-b743-4d59-8115-15c46fda5095"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "The homepage describes capturing clicks and keystrokes, mapping processes, automating work, and an enterprise focus.",
+     "value": "Mimica records employees’ work activity to map processes, reveal inefficiencies, and create production-ready AI agents for large enterprises.",
+     "status": "asserted",
+     "citations": [
+      "https://www.mimica.ai/"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "The About Us page lists the founders as CEO and CTO but does not provide a complete executive roster or dated C-level/VP appointment/departure history, so a change in the 12 months before 2026-11-09 cannot be verified.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    }
+   }
+  }
+ }
+}

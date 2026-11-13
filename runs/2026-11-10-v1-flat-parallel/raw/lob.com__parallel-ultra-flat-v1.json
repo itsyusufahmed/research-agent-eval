@@ -1,0 +1,524 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9e41d59546f51f31",
+  "interaction_id": "trun_142119f6a1b4439e9e41d59546f51f31",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "lob.com"
+  },
+  "created_at": "2026-11-10T18:47:29.673401Z",
+  "modified_at": "2026-11-10T18:54:26.189579Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9e41d59546f51f31",
+   "interaction_id": "trun_142119f6a1b4439e9e41d59546f51f31",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "lob.com"
+   },
+   "created_at": "2026-11-10T18:47:29.673401Z",
+   "modified_at": "2026-11-10T18:54:26.189579Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Lob: Lob is the only automation platform that transforms direct mail into\u2026 | Y Combinator",
+       "url": "https://www.ycombinator.com/companies/lob",
+       "excerpts": [
+        "Founded in 2013 and based in San Francisco, Lob is venture backed by Y Combinator, Polaris Partners, Floodgate, and First Round Capital."
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s Y Combinator profile explicitly states that it was founded in 2013: https://www.ycombinator.com/companies/lob.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Lob.com, Inc.",
+       "url": "https://trust.lob.com/",
+       "excerpts": [
+        "**SOC 2 Type 2 Compliance** \u2013 We complete an annual audit against all five Trust Services Criteria (security, availability, processing integrity, confidentiality, and privacy) to demonstrate our commitment to security and compliance.",
+        "Compliance SOC 2 HIPAA Microsoft Supplier Security & Privacy Assurance Program GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s Trust Center names SOC 2, HIPAA and GDPR, and describes its annual SOC 2 Type 2 audit. ISO 27001 and PCI DSS are not included in the reported list: https://trust.lob.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Lob - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/lob/__xJBMw-qXYC7ZeZ_oyZH99ovllMrbsaaGi8xEZpKub3g",
+       "excerpts": [
+        "Lob is headquartered in San Francisco, [United States](https://tracxn.com/d/geographies/united-states/__agFBbaWLXQ9BaxreLIz_EPAASY3VwAK-kFQ6rvJvIco) ."
+       ]
+      }
+     ],
+     "reasoning": "The company profile explicitly locates Lob\u2019s headquarters in San Francisco, United States: https://tracxn.com/d/companies/lob/__xJBMw-qXYC7ZeZ_oyZH99ovllMrbsaaGi8xEZpKub3g.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Lob Blog - Engineering",
+       "url": "http://lob.com/category/engineering",
+       "excerpts": [
+        "[#### How We Used OpenAPI to Write 7 SDKs in a Year](http://lob.com/blog/how-we-used-openapi-to-write-7-sdks-in-a-year)",
+        "[#### To Infinity & Beyond: Our Migration to Nomad is Complete](http://lob.com/blog/nomad-migration)"
+       ]
+      },
+      {
+       "title": "How We Used OpenAPI to Write 7 SDKs in a Year",
+       "url": "http://lob.com/blog/how-we-used-openapi-to-write-7-sdks-in-a-year",
+       "excerpts": [
+        "Our developer experience team at Lob is small but mighty."
+       ]
+      },
+      {
+       "title": "Replatforming with HashiCorp's Nomad",
+       "url": "http://lob.com/blog/nomad-migration",
+       "excerpts": [
+        "Lob\u2019s core API has been fully migrated to Nomad, Lob\u2019s _Next Generation_ service platform!"
+       ]
+      }
+     ],
+     "reasoning": "The engineering index lists separate technical articles about generating seven SDKs with OpenAPI and migrating Lob\u2019s core API to Nomad. Their bodies describe internal developer-experience and infrastructure implementation work, rather than marketing. Article-page author-role metadata is incomplete, so confidence is medium. Sources: http://lob.com/category/engineering, http://lob.com/blog/how-we-used-openapi-to-write-7-sdks-in-a-year and http://lob.com/blog/nomad-migration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Lob Strengthens Executive Leadership Team with Appointments",
+       "url": "https://www.globenewswire.com/news-release/2025/11/12/3186623/0/en/Lob-Strengthens-Executive-Leadership-Team-with-Appointments-of-CFO-CPO-and-CRO.html",
+       "excerpts": [
+        "For more information on Lob and available job opportunities, please visit [https://www.lob.com/careers](https://www.globenewswire.com/Tracker?data=DygwkX0m5gGSHE5MxlOrdwTebiM0nM8W20mBsDu_BU86tn4wcyNB_1vcBVdPBjbqa6cHFTWm-RCGpodvOnwqgqvkFVQtft4Y8oi3EoAq7GPfOCIJVatQrtr-qkhEMNDj) . **About Lob** Lob is a direct mail automation platform founded in 2013 that brings the power of digital to direct mail. With its nationwide Print Delivery Network (PDN) and end-to-end automated platform, Lob enables businesses to build personalized, high-quality direct mail programs at scale. Marketing, product and operations teams can automate campaigns, connect direct and digital channels and optimize performance through real-time measurement."
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s company-issued announcement describes an automated platform for personalized direct-mail programs at scale and specifically identifies marketing, product and operations teams as users: https://www.globenewswire.com/news-release/2025/11/12/3186623/0/en/Lob-Strengthens-Executive-Leadership-Team-with-Appointments-of-CFO-CPO-and-CRO.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Lob | LinkedIn",
+       "url": "https://linkedin.com/company/3231576",
+       "excerpts": [
+        "Industry Software Development Company size 201-500 employees Headquarters San Francisco, California Type Privately Held Founded 2013 Specialties ..."
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s LinkedIn company profile reports a company size of 201\u2013500 employees: https://linkedin.com/company/3231576.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "How Lob's Machine Learning Models Aim to Cut Cost and Waste",
+       "url": "https://lob.com/blog/how-lobs-machine-learning-models-aim-to-cut-cost-and-waste-in-direct-mail",
+       "excerpts": [
+        "In this post, we\u2019ll walk through two powerful ML use cases we are currently testing: optimizing postage class selection and predicting Return-to-Sender (RTS) mail risk.",
+        "Lob\u2019s Postage Class Optimization model uses historical mail delivery data to predict how quickly mailpieces will reach their destinations via different USPS classes.",
+        "Our Return-to-Sender (RTS) Prediction Model solves this with proactive intelligence."
+       ]
+      }
+     ],
+     "reasoning": "Lob names these two models and expressly describes their use cases as being tested. The answer preserves that qualification rather than claiming production deployment or an external provider: https://lob.com/blog/how-lobs-machine-learning-models-aim-to-cut-cost-and-waste-in-direct-mail.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Direct Mail Pricing | Certified Mail Cost & Price Package - Lob",
+       "url": "https://www.lob.com/pricing",
+       "excerpts": [
+        "Starting at $0/ month"
+       ]
+      }
+     ],
+     "reasoning": "Lob has a public pricing page displaying a starting price of $0 per month: https://www.lob.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Lob 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/58146-22",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |6\\. Debt - General | | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook identifies a completed Debt\u2013General transaction but leaves its amount blank. The $50 million figure disclosed for the older Series C cannot safely be assigned to this debt transaction: https://pitchbook.com/profiles/company/58146-22.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer Case Studies and Testimonials - Lob",
+       "url": "https://lob.com/customers",
+       "excerpts": [
+        "120Water accelerates critical regulatory mail by 80% with Lob",
+        "Included Health uses automated direct mail for brand awareness and acquisition."
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s customer page explicitly describes 120Water and Included Health using its services: https://lob.com/customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Lob 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/58146-22",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |6\\. Debt - General | | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "The latest reported debt transaction has no visible date in PitchBook\u2019s funding table. February 2021 belongs to the Series C, not the undated debt: https://pitchbook.com/profiles/company/58146-22.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Subprocessors - Lob",
+       "url": "https://www.lob.com/subprocessors",
+       "excerpts": [
+        "Marketo, Inc. Customer Sales Lead Management United States",
+        "Mutiny HQ Corporation Customer Sales Lead Management United States",
+        "Salesforce.com LLC Customer Management or Support United States",
+        "The Rocket Science Group LLC d/b/a Mailchimp Email Marketing Provider United States"
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s subprocessor list identifies Marketo and Mutiny for sales-lead management, Salesforce for customer management or support, and Mailchimp for email marketing: https://www.lob.com/subprocessors.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Lob Strengthens Executive Leadership Team with Appointments",
+       "url": "https://www.globenewswire.com/news-release/2025/11/12/3186623/0/en/lob-strengthens-executive-leadership-team-with-appointments-of-cfo-cpo-and-cro.html",
+       "excerpts": [
+        "November 12, 2025 12:30 ET | Source: [Lob Com Inc.](https://www.globenewswire.com/en/search/organization/Lob%2520Com%2520Inc%C2%A7) Follow",
+        "\u201cDavid, Raji and Paul each bring unique expertise in scaling technology companies, and together they'll help us deliver even greater value to customers while\u2026\u201d * * * * *"
+       ]
+      }
+     ],
+     "reasoning": "Lob announced new executive appointments on November 12, 2025, within the twelve-month window, including David Pickel as CFO: https://www.globenewswire.com/news-release/2025/11/12/3186623/0/en/lob-strengthens-executive-leadership-team-with-appointments-of-cfo-cpo-and-cro.html.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "boards-api.greenhouse.io",
+       "url": "https://boards-api.greenhouse.io/v1/boards/lob/jobs",
+       "excerpts": [
+        "{\"jobs\":[{\"absolute_url\":\"http://www.lob.com/careers/apply?gh_jid=8164681\",\"data_compliance\":[{\"type\":\"gdpr\",\"requires_consent\":false,\"requires_processing_consent\":false,\"requires_retention_consent\":false,\"retention_period\":null,\"demographic_data_consent_applies\":false}],\"internal_job_id\":3533426,\"location\":{\"name\":\"United States\"},\"metadata\":null,\"id\":8164681,\"updated_at\":\"2026-10-23T17:56:50-04:00\",\"requisition_id\":\"722\",\"title\":\"Business Operations Manager \\t\",\"company_name\":\"Lob\",\"first_published\":\"2026-09-11T16:35:35-04:00\",\"language\":\"en\",\"application_deadline\":null},{\"absolute_url\":\"http://www.lob.com/careers/apply?gh_jid=8265237\",\"data_compliance\":[{\"type\":\"gdpr\",\"requires_consent\":false,\"requires_processing_consent\":false,\"requires_retention_consent\":false,\"retention_period\":null,\"demographic_data_consent_applies\":false}],\"internal_job_id\":3576228,\"location\":{\"name\":\"United States\"},\"metadata\":null,\"id\":8265237,\"updated_at\":\"2026-10-13T14:45:53-04:00\",\"requisition_id\":\"734\",\"title\":\"Corporate Counsel\",\"company_name\":\"Lob\",\"first_published\":\"2026-10-12T13:40:44-04:00\",\"language\":\"en\",\"application_deadline\":null},{\"absolute_url\":\"http://www.lob.com/careers/apply?gh_jid=8082143\",\"data_compliance\":[{\"type\":\"gdpr\",\"requires_consent\":false,\"requires_processing_consent\":false,\"requires_retention_consent\":false,\"retention_period\":null,\"demographic_data_consent_applies\":false}],\"internal_job_id\":3501595,\"location\":{\"name\":\"United States\"},\"metadata\":null,\"id\":8082143,\"updated_at\":\"2026-10-21T11:02:52-04:00\",\"requisition_id\":\"711\",\"title\":\"Enterprise Account Executive\",\"company_name\":\"Lob\",\"first_published\":\"2026-07-23T20:21:45-04:00\",\"language\":\"en\",\"application_deadline\":null},{\"absolute_url\":\"http://www.lob.com/careers/apply?gh_jid=8279364\",\"data_compliance\":[{\"type\":\"gdpr\",\"requires_consent\":false,\"requires_processing_consent\":false,\"requires_retention_consent\":false,\"retention_period\":null,\"demographic_data_consent_applies\":false}],\"internal_job_id\":3581230,\"location\":{\"name\":\"United States\"},\"metadata\":null,\"id\":8279364,\"updated_at\":\"2026-10-14T14:57:27-04:00\",\"requisition_id\":\"736\",\"title\":\"Partner Operations Manager\",\"company_name\":\"Lob\",\"first_published\":\"2026-10-14T14:57:27-04:00\",\"language\":\"en\",\"application_deadline\":null},{\"absolute_url\":\"http://www.lob.com/careers/apply?gh_jid=8240031\",\"data_compliance\":[{\"type\":\"gdpr\",\"requires_consent\":false,\"requires_processing_consent\":false,\"requires_retention_consent\":false,\"retention_period\":null,\"demographic_data_consent_applies\":false}],\"internal_job_id\":3565562,\"location\":{\"name\":\"United States\"},\"metadata\":null,\"id\":8240031,\"updated_at\":\"2026-10-21T17:43:56-04:00\",\"requisition_id\":\"729\",\"title\":\"Senior Manager, USPS Programs\",\"company_name\":\"Lob\",\"first_published\":\"2026-10-02T13:23:12-04:00\",\"language\":\"en\",\"application_deadline\":null}],\"meta\":{\"total\":5}}"
+       ]
+      }
+     ],
+     "reasoning": "The complete live board lists five roles: Business Operations Manager, Corporate Counsel, Enterprise Account Executive, Partner Operations Manager and Senior Manager, USPS Programs. None has a qualifying AI, ML or data-science title: https://boards-api.greenhouse.io/v1/boards/lob/jobs.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Lob 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/58146-22",
+       "excerpts": [
+        "* Latest Deal Type Debt",
+        "|6\\. Debt - General | | | | |Completed |Generating Revenue |"
+       ]
+      }
+     ],
+     "reasoning": "PitchBook explicitly labels the latest deal type as Debt and lists a completed Debt\u2013General transaction. Other profiles identify February 2021 Series C as the latest dated round, creating some uncertainty; the debt date and amount remain undisclosed: https://pitchbook.com/profiles/company/58146-22.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Ready to get started?",
+       "url": "https://help.lob.com/",
+       "excerpts": [
+        "Dive right in: Send your [first campaign](/print-and-mail/send-mail/launch-your-first-campaign.md) via [our easy-to-follow dashboard UI](https://dashboard.lob.com/campaigns) to get a feel for intelligent direct mail. Explore our APIs! Check out our [API quickstart quide](/developer-docs/api-quickstart-guide.md) to explore our [APIs ](https://docs.lob.com/)in your preferred programming language, explore our our [Postman collection](https://www.postman.com/lobteam/workspace/lob-public-workspace/documentation/16169677-975ecb9f-ea22-4d8f-a4f9-53a42f2aee03), and go to [GitHub](https://www.github.com/lob) to access our supported SDK libraries.",
+        "Explore how to operationalize [dynamic personalizations](/print-and-mail/designing-mail/maximizing-engagement/dynamic-personalization.md) to create mail pieces that can truly resonate with your audience&#x20;"
+       ]
+      }
+     ],
+     "reasoning": "The public help center links to multiple product guides, including launching a first campaign, the API quickstart and dynamic personalization: https://help.lob.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Lob | LinkedIn",
+       "url": "https://linkedin.com/company/3231576",
+       "excerpts": [
+        "Industry Software Development Company size 201-500 employees Headquarters San Francisco, California Type Privately Held Founded 2013 Specialties ..."
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s LinkedIn company profile explicitly lists San Francisco, California as its headquarters: https://linkedin.com/company/3231576.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Personalized Direct Mail With Lob's No-Code Design Suite",
+       "url": "https://www.lob.com/blog/introducing-lobs-no-code-design-suite",
+       "excerpts": [
+        "August 31, 2026 Personalization Introducing Lob's No-Code Design Suite",
+        "**A new way to create personalized direct mail** Now you can bring your creative to life without code. [Lob's No-Code Design Suite](https://www.lob.com/no-code) , brings pro-level mail personalization without the technical bottlenecks. With the powerful No-Code Design Suite, you can move from approved concept to completion all in one workflow. Dynamic field mapping, intuitive visual editing, and a production-ready template library make it easier than ever to launch personalized direct mail campaigns at the speed of digital."
+       ]
+      }
+     ],
+     "reasoning": "Lob introduced its No-Code Design Suite on August 31, 2026, within the six-month window. The announcement describes a substantial new workflow with visual editing, dynamic field mapping and templates: https://www.lob.com/blog/introducing-lobs-no-code-design-suite.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "boards-api.greenhouse.io",
+       "url": "https://boards-api.greenhouse.io/v1/boards/lob/jobs/8082143",
+       "excerpts": [
+        "{\"absolute_url\":\"http://www.lob.com/careers/apply?gh_jid=8082143\",\"data_compliance\":[{\"type\":\"gdpr\",\"requires_consent\":false,\"requires_processing_consent\":false,\"requires_retention_consent\":false,\"retention_period\":null,\"demographic_data_consent_applies\":false}],\"internal_job_id\":3501595,\"location\":{\"name\":\"United States\"},\"metadata\":null,\"id\":8082143,\"updated_at\":\"2026-10-21T11:02:52-04:00\",\"requisition_id\":\"711\",\"title\":\"Enterprise Account Executive\",\"company_name\":\"Lob\",\"first_published\":\"2026-07-23T20:21:45-04:00\",\"language\":\"en\",\"application_deadline\":null,\"content\":\"\\u0026lt;div class=\\u0026quot;content-intro\\u0026quot;\\u0026gt;\\u0026lt;p\\u0026gt;Lob was founded in 2013 by technical co-founders with a vision to connect the world one mailbox at a time."
+       ]
+      }
+     ],
+     "reasoning": "Lob has a live Enterprise Account Executive posting, first published July 23, 2026: https://boards-api.greenhouse.io/v1/boards/lob/jobs/8082143.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Lob 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/58146-22",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | |6\\. Debt - General | | | | |Completed |Generating Revenue |"
+       ]
+      },
+      {
+       "title": "Lob - 2026 Company Profile, Team, Funding & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/lob/__xJBMw-qXYC7ZeZ_oyZH99ovllMrbsaaGi8xEZpKub3g",
+       "excerpts": [
+        "Latest Funding Round Series C, Feb 25, 2021, $\\*\\*\\*\\*\\*"
+       ]
+      }
+     ],
+     "reasoning": "Timing is unresolved. The latest dated round is February 2021, outside the window, but PitchBook reports a latest debt transaction without a date. A reliable true or false cannot be assigned without dating that debt. Sources: https://pitchbook.com/profiles/company/58146-22 and https://tracxn.com/d/companies/lob/__xJBMw-qXYC7ZeZ_oyZH99ovllMrbsaaGi8xEZpKub3g.",
+     "confidence": "low"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Lob.com, Inc.",
+       "url": "https://trust.lob.com/",
+       "excerpts": [
+        "**SOC 2 Type 2 Compliance** \u2013 We complete an annual audit against all five Trust Services Criteria (security, availability, processing integrity, confidentiality, and privacy) to demonstrate our commitment to security and compliance."
+       ]
+      }
+     ],
+     "reasoning": "Lob explicitly describes its annual SOC 2 Type 2 audit.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Lob.com, Inc.",
+       "url": "https://trust.lob.com/",
+       "excerpts": [
+        "Compliance SOC 2 HIPAA Microsoft Supplier Security & Privacy Assurance Program GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is explicitly named in the Trust Center\u2019s compliance list.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust Center - Lob.com, Inc.",
+       "url": "https://trust.lob.com/",
+       "excerpts": [
+        "Compliance SOC 2 HIPAA Microsoft Supplier Security & Privacy Assurance Program GDPR CCPA"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly named in the Trust Center\u2019s compliance list.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer Case Studies and Testimonials - Lob",
+       "url": "https://lob.com/customers",
+       "excerpts": [
+        "120Water accelerates critical regulatory mail by 80% with Lob"
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s customer page describes 120Water accelerating regulatory mail with Lob.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customer Case Studies and Testimonials - Lob",
+       "url": "https://lob.com/customers",
+       "excerpts": [
+        "Included Health uses automated direct mail for brand awareness and acquisition."
+       ]
+      }
+     ],
+     "reasoning": "Lob\u2019s customer page explicitly states that Included Health uses automated direct mail.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Subprocessors - Lob",
+       "url": "https://www.lob.com/subprocessors",
+       "excerpts": [
+        "Marketo, Inc. Customer Sales Lead Management United States"
+       ]
+      }
+     ],
+     "reasoning": "Marketo is listed for customer sales-lead management.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Subprocessors - Lob",
+       "url": "https://www.lob.com/subprocessors",
+       "excerpts": [
+        "Mutiny HQ Corporation Customer Sales Lead Management United States"
+       ]
+      }
+     ],
+     "reasoning": "Mutiny is listed for customer sales-lead management.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Subprocessors - Lob",
+       "url": "https://www.lob.com/subprocessors",
+       "excerpts": [
+        "Salesforce.com LLC Customer Management or Support United States"
+       ]
+      }
+     ],
+     "reasoning": "Salesforce is listed for customer management or support.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Subprocessors - Lob",
+       "url": "https://www.lob.com/subprocessors",
+       "excerpts": [
+        "The Rocket Science Group LLC d/b/a Mailchimp Email Marketing Provider United States"
+       ]
+      }
+     ],
+     "reasoning": "Mailchimp is listed as Lob\u2019s email marketing provider.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2013.0,
+    "compliance_certs": [
+     "SOC 2",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Lob helps marketing, product and operations teams create, personalize, send and track automated direct-mail campaigns at scale.",
+    "employee_band": "201-500",
+    "model_provider": "Lob\u2019s Postage Class Optimization and Return-to-Sender (RTS) Prediction models, publicly described as being tested.",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "120Water",
+     "Included Health"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Marketo",
+     "Mutiny",
+     "Salesforce",
+     "Mailchimp"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Debt",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": null
+   }
+  }
+ }
+}

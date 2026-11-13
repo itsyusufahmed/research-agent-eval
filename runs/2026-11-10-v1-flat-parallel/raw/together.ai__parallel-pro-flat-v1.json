@@ -1,0 +1,505 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9418dc24a39f82a4",
+  "interaction_id": "trun_142119f6a1b4439e9418dc24a39f82a4",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "together.ai"
+  },
+  "created_at": "2026-11-10T18:48:25.789163Z",
+  "modified_at": "2026-11-10T18:51:07.901010Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9418dc24a39f82a4",
+   "interaction_id": "trun_142119f6a1b4439e9418dc24a39f82a4",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "together.ai"
+   },
+   "created_at": "2026-11-10T18:48:25.789163Z",
+   "modified_at": "2026-11-10T18:51:07.901010Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/togethercomputer",
+       "excerpts": [
+        "Together AI Headquarters San Francisco, California Type Privately Held Founded 2022. Primary 251 Rhode Island St Suite 205 San Francisco, California 94103, US."
+       ]
+      }
+     ],
+     "reasoning": "Together AI's company profile explicitly states Founded 2022: https://linkedin.com/company/togethercomputer.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "SOC 2 Type 2 SOC 2 Type 2 Report ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The trust center lists a SOC 2 Type 2 report and ISO 27001:2022 certification, rather than describing them as in progress: https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/togethercomputer",
+       "excerpts": [
+        "Together AI Headquarters San Francisco, California Type Privately Held Founded 2022. Primary 251 Rhode Island St Suite 205 San Francisco, California 94103, US."
+       ]
+      }
+     ],
+     "reasoning": "The company profile identifies San Francisco as headquarters and gives its primary address in the US: https://linkedin.com/company/togethercomputer.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Research Blog | Together AI",
+       "url": "https://www.together.ai/research-blog",
+       "excerpts": [
+        "[Together Compiler: Continual Compilation for AI inference Reyna Abhyankar, Dylan Lim, and Simran Arora](https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference)"
+       ]
+      },
+      {
+       "title": "Together Compiler: Continual Compilation for AI inference",
+       "url": "https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference",
+       "excerpts": [
+        "We designed a cost model that uses a tiered measurement strategy involving hardware specs, microbenchmarks, and measured forward passes to construct a high-fidelity representation while rapidly pruning the configuration search space to support continual traffic drift."
+       ]
+      },
+      {
+       "title": "To Infinity and Beyond: ThunderKittens Now on NVIDIA Vera Rubin NVL72!",
+       "url": "https://www.together.ai/blog/to-infinity-and-beyond-thunderkittens-now-on-nvidia-vera-rubin-nvl72",
+       "excerpts": [
+        "Authors Dylan Lim, Xinyi Li, Sonny Li, Peter Wu, Dan Fu, Simran Arora",
+        "The kernels team at Together recently received access to the NVIDIA Vera Rubin NVL72 platform.",
+        "We finished adding some functionality into ThunderKittens to write NVFP4 and FP8 GEMMs on Vera Rubin, as well as help fellow kittens explore the stars."
+       ]
+      }
+     ],
+     "reasoning": "The research blog contains at least two named-author implementation articles: Together Compiler explains the team's cost-model and inference-engine design, while ThunderKittens describes the kernels team's GPU-kernel implementation. Engineering authorship is supported by first-person implementation work and team attribution, although individual job titles are not supplied. Sources: https://www.together.ai/research-blog; https://www.together.ai/blog/together-compiler-continual-compilation-for-ai-inference; https://www.together.ai/blog/to-infinity-and-beyond-thunderkittens-now-on-nvidia-vera-rubin-nvl72.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Job Application for Machine Learning Engineer - Inference at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/4385540007",
+       "excerpts": [
+        "Together AI, the AI Native Cloud, is purpose-built for AI engineers. AI application developers get high-performance inference that scales reliably, fine-tuning and reinforcement learning for creating frontier-level specialized models, and pre-training at massive scale for fully custom intelligence, all around a marketplace of leading open models that teams can run, adapt, and own. Trusted by Cursor, Decagon, ElevenLabs, Salesforce, and Zoom, Together serves 400+ trillion tokens a month."
+       ]
+      },
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "Our purpose-built GPU cloud platform empowers AI engineers and researchers to train, fine-tune, and run frontier class AI models. Our customers include leading SaaS companies such as Salesforce, Zoom, and Zomato, as well as pioneering AI startups like ElevenLabs, Hedra, and Cartesia."
+       ]
+      }
+     ],
+     "reasoning": "Together AI describes its audience as AI engineers and researchers and its capabilities as inference, fine-tuning, and large-scale training: https://job-boards.greenhouse.io/togetherai/jobs/4385540007 and https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Together AI",
+       "url": "https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about",
+       "excerpts": [
+        "Name: Together AI | Website Url: https://www.together.ai/ | Primary Sector: High Tech | Primary Subsector: AI Infrastructure | Stage: Series C | Founded Year: 2022 | Employee Count Official: 436 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Funding Round Amount Usd: 800000000.0 | Latest Funding Round Date: 2026-07-01 | Latest Funding Round Name: Series C | Latest Valuation Usd: 8300000000.0 | Total Disclosed Funding Usd: 1333500000.0 | Acquisitions As Acquirer Count: 2 | Funded: Yes"
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 436 employees, which falls within 201-500. This is a third-party headcount rather than a direct company statement: https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Together AI | The Enterprise Platform for Inference & Fine-tuning",
+       "url": "https://www.together.ai/enterprise",
+       "excerpts": [
+        "Run production-grade inference Run popular models like Llama or Qwen, or your own custom model, on our highly scalable Together Inference Engine."
+       ]
+      }
+     ],
+     "reasoning": "The enterprise page explicitly names Llama and Qwen as models customers can run on the Together Inference Engine: https://www.together.ai/enterprise.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Together AI",
+       "url": "https://www.together.ai/pricing",
+       "excerpts": [
+        "Trusted by ... ```json \"url\": \"https://www.together.ai/pricing\", \"name\": \"Pricing | Together AI\", \"description\": \"Transparent, flexible pricing across serverless inference, dedicated endpoints, fine-tuning, and GPU clusters. Start for free, scale on demand.\", ```"
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page describes pricing for serverless inference, dedicated endpoints, fine-tuning, and GPU clusters: https://www.together.ai/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Together AI",
+       "url": "https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about",
+       "excerpts": [
+        "Name: Together AI | Website Url: https://www.together.ai/ | Primary Sector: High Tech | Primary Subsector: AI Infrastructure | Stage: Series C | Founded Year: 2022 | Employee Count Official: 436 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Funding Round Amount Usd: 800000000.0 | Latest Funding Round Date: 2026-07-01 | Latest Funding Round Name: Series C | Latest Valuation Usd: 8300000000.0 | Total Disclosed Funding Usd: 1333500000.0 | Acquisitions As Acquirer Count: 2 | Funded: Yes"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies the latest round amount as USD 800,000,000, distinct from cumulative funding: https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "Our purpose-built GPU cloud platform empowers AI engineers and researchers to train, fine-tune, and run frontier class AI models. Our customers include leading SaaS companies such as Salesforce, Zoom, and Zomato, as well as pioneering AI startups like ElevenLabs, Hedra, and Cartesia."
+       ]
+      }
+     ],
+     "reasoning": "Together AI explicitly calls Salesforce and Zoom customers, not merely partners or investors: https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Together AI",
+       "url": "https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about",
+       "excerpts": [
+        "Name: Together AI | Website Url: https://www.together.ai/ | Primary Sector: High Tech | Primary Subsector: AI Infrastructure | Stage: Series C | Founded Year: 2022 | Employee Count Official: 436 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Funding Round Amount Usd: 800000000.0 | Latest Funding Round Date: 2026-07-01 | Latest Funding Round Name: Series C | Latest Valuation Usd: 8300000000.0 | Total Disclosed Funding Usd: 1333500000.0 | Acquisitions As Acquirer Count: 2 | Funded: Yes"
+       ]
+      },
+      {
+       "title": "Together AI Raises $800 Million at $8.3 Billion Valuation to Make Frontier AI Accessible to All",
+       "url": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All",
+       "excerpts": [
+        "Jul 1, 2026 11:28 AM Eastern Daylight Time"
+       ]
+      }
+     ],
+     "reasoning": "The latest-round record gives July 1, 2026, matching the dated funding announcement; the requested month is 2026-07. Sources: https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about and https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for GTM Engineer at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/5178712007",
+       "excerpts": [
+        "Centralize Data: Build a cohesive, automated engine that centralizes data in CRM and eventually data warehouse (Salesforce, Hubspot, Snowflake, Clay, Claude Cowork)."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Salesforce, Hubspot, and Clay in its CRM/data-centralization stack. Snowflake and Claude Cowork are excluded from this CRM/sales-system list: https://job-boards.greenhouse.io/togetherai/jobs/5178712007.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Together AI welcomes Alon Gavrielov as VP of Infrastructure Strategy",
+       "url": "https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy",
+       "excerpts": [
+        "Together AI welcomes Alon Gavrielov as VP of Infrastructure Strategy Authors Vipul Ved Prakash Table of contents",
+        "Published 2/3/2026",
+        "Join us in welcoming Alon to the team."
+       ]
+      }
+     ],
+     "reasoning": "The February 3, 2026 announcement welcomes Alon Gavrielov as VP of Infrastructure Strategy, within the requested twelve-month window: https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for Machine Learning Engineer - Inference at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/4385540007",
+       "excerpts": [
+        "Machine Learning Engineer - Inference",
+        "Apply"
+       ]
+      }
+     ],
+     "reasoning": "The live Machine Learning Engineer - Inference posting includes an application option and has a qualifying machine-learning title: https://job-boards.greenhouse.io/togetherai/jobs/4385540007.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Together AI",
+       "url": "https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about",
+       "excerpts": [
+        "Name: Together AI | Website Url: https://www.together.ai/ | Primary Sector: High Tech | Primary Subsector: AI Infrastructure | Stage: Series C | Founded Year: 2022 | Employee Count Official: 436 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Funding Round Amount Usd: 800000000.0 | Latest Funding Round Date: 2026-07-01 | Latest Funding Round Name: Series C | Latest Valuation Usd: 8300000000.0 | Total Disclosed Funding Usd: 1333500000.0 | Acquisitions As Acquirer Count: 2 | Funded: Yes"
+       ]
+      }
+     ],
+     "reasoning": "The company funding profile explicitly identifies the latest funding round as Series C: https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Quickstart",
+       "url": "https://docs.together.ai/docs/quickstart",
+       "excerpts": [
+        "> Make your first request to Together AI in a few minutes.",
+        "> [card] [Choose a model](https://docs.together.ai/docs/serverless/models.md) > > Browse the catalog of models for chat, coding, vision, and reasoning.",
+        "> [card] [Dedicated model inference](https://docs.together.ai/docs/dedicated-endpoints/overview.md) > > Reserve GPUs for steady traffic or fine-tuned models.",
+        "> [card] [GPU clusters](https://docs.together.ai/docs/gpu-clusters-overview.md) > > Run large-scale training and custom workloads on dedicated GPU clusters."
+       ]
+      }
+     ],
+     "reasoning": "The public quickstart provides product instructions and links to several additional documentation articles covering model selection, dedicated inference, fine-tuning, and GPU clusters: https://docs.together.ai/docs/quickstart.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/togethercomputer",
+       "excerpts": [
+        "Together AI Headquarters San Francisco, California Type Privately Held Founded 2022. Primary 251 Rhode Island St Suite 205 San Francisco, California 94103, US."
+       ]
+      }
+     ],
+     "reasoning": "Together AI's company profile explicitly identifies San Francisco as headquarters: https://linkedin.com/company/togethercomputer.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Together AI Launches Together Compiler for Continual Optimization of Open Source AI Models",
+       "url": "https://www.businesswire.com/news/home/20261104879153/en/Together-AI-Launches-Together-Compiler-for-Continual-Optimization-of-Open-Source-AI-Models",
+       "excerpts": [
+        "Nov 4, 2026 9:19 AM Eastern Standard Time **Together AI Launches Together Compiler for Continual Optimization of Open Source AI Models** Share * * _AI agents now tune new open source models overnight instead of over weeks, beating hand-written expert code by up to 2.6x_"
+       ]
+      }
+     ],
+     "reasoning": "Together AI announced the launch of Together Compiler on November 4, 2026. This is a new compiler product rather than a bug fix or UI tweak, and falls within the requested six-month window: https://www.businesswire.com/news/home/20261104879153/en/Together-AI-Launches-Together-Compiler-for-Continual-Optimization-of-Open-Source-AI-Models.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Strategic Account Executive at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/4543435007",
+       "excerpts": [
+        "Close deals and drive revenue: own the full sales cycle for strategic AI-native and enterprise accounts, from prospecting through close and expansion.",
+        "Apply"
+       ]
+      }
+     ],
+     "reasoning": "The live Strategic Account Executive posting describes owning the full sales cycle and includes an application option: https://job-boards.greenhouse.io/togetherai/jobs/4543435007.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Together AI",
+       "url": "https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about",
+       "excerpts": [
+        "Name: Together AI | Website Url: https://www.together.ai/ | Primary Sector: High Tech | Primary Subsector: AI Infrastructure | Stage: Series C | Founded Year: 2022 | Employee Count Official: 436 | Location Country: United States | Location State: California | Location City: San Francisco | Latest Funding Round Amount Usd: 800000000.0 | Latest Funding Round Date: 2026-07-01 | Latest Funding Round Name: Series C | Latest Valuation Usd: 8300000000.0 | Total Disclosed Funding Usd: 1333500000.0 | Acquisitions As Acquirer Count: 2 | Funded: Yes"
+       ]
+      },
+      {
+       "title": "Together AI Raises $800 Million at $8.3 Billion Valuation to Make Frontier AI Accessible to All",
+       "url": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All",
+       "excerpts": [
+        "Jul 1, 2026 11:28 AM Eastern Daylight Time"
+       ]
+      }
+     ],
+     "reasoning": "The USD 800 million round dated July 1, 2026 falls within eighteen months before November 9, 2026. Sources: https://tracxn.com/a/d/company/60a93e9184a11e4839b06955/together%20ai#a:about and https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "SOC 2 Type 2 SOC 2 Type 2 Report ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The trust center explicitly names SOC 2 Type 2: https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "SOC 2 Type 2 SOC 2 Type 2 Report ISO 27001:2022"
+       ]
+      }
+     ],
+     "reasoning": "The trust center explicitly names ISO 27001:2022: https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "Our purpose-built GPU cloud platform empowers AI engineers and researchers to train, fine-tune, and run frontier class AI models. Our customers include leading SaaS companies such as Salesforce, Zoom, and Zomato, as well as pioneering AI startups like ElevenLabs, Hedra, and Cartesia."
+       ]
+      }
+     ],
+     "reasoning": "Salesforce is explicitly identified as a customer: https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Trust Center - Together.ai",
+       "url": "https://trust.together.ai/compliance",
+       "excerpts": [
+        "Our purpose-built GPU cloud platform empowers AI engineers and researchers to train, fine-tune, and run frontier class AI models. Our customers include leading SaaS companies such as Salesforce, Zoom, and Zomato, as well as pioneering AI startups like ElevenLabs, Hedra, and Cartesia."
+       ]
+      }
+     ],
+     "reasoning": "Zoom is explicitly identified as a customer: https://trust.together.ai/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for GTM Engineer at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/5178712007",
+       "excerpts": [
+        "Centralize Data: Build a cohesive, automated engine that centralizes data in CRM and eventually data warehouse (Salesforce, Hubspot, Snowflake, Clay, Claude Cowork)."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Salesforce in the CRM/data stack: https://job-boards.greenhouse.io/togetherai/jobs/5178712007.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for GTM Engineer at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/5178712007",
+       "excerpts": [
+        "Centralize Data: Build a cohesive, automated engine that centralizes data in CRM and eventually data warehouse (Salesforce, Hubspot, Snowflake, Clay, Claude Cowork)."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Hubspot, normalized here to HubSpot: https://job-boards.greenhouse.io/togetherai/jobs/5178712007.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Application for GTM Engineer at Together AI",
+       "url": "https://job-boards.greenhouse.io/togetherai/jobs/5178712007",
+       "excerpts": [
+        "Centralize Data: Build a cohesive, automated engine that centralizes data in CRM and eventually data warehouse (Salesforce, Hubspot, Snowflake, Clay, Claude Cowork)."
+       ]
+      }
+     ],
+     "reasoning": "The GTM Engineer posting names Clay in its GTM data-centralization stack: https://job-boards.greenhouse.io/togetherai/jobs/5178712007.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [
+     "SOC 2 Type 2",
+     "ISO 27001:2022"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Together AI provides a GPU cloud platform for AI engineers and researchers to run inference, fine-tune models, and train custom AI models at scale.",
+    "employee_band": "201-500",
+    "model_provider": "Llama and Qwen, served through Together AI's inference engine.",
+    "pricing_page": true,
+    "funding_amount_usd": 800000000.0,
+    "named_customers": [
+     "Salesforce",
+     "Zoom"
+    ],
+    "funding_date": "2026-07",
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot",
+     "Clay"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

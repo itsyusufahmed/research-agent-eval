@@ -1,0 +1,539 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e96c5b4ded1e7b73e",
+  "interaction_id": "trun_142119f6a1b4439e96c5b4ded1e7b73e",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "haasalert.com"
+  },
+  "created_at": "2026-11-10T18:48:50.130805Z",
+  "modified_at": "2026-11-10T18:54:39.646281Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e96c5b4ded1e7b73e",
+   "interaction_id": "trun_142119f6a1b4439e96c5b4ded1e7b73e",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "haasalert.com"
+   },
+   "created_at": "2026-11-10T18:48:50.130805Z",
+   "modified_at": "2026-11-10T18:54:39.646281Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "HAAS Alert: Volition Capital Closes Growth Investment",
+       "url": "https://www.volitioncapital.com/news/haas-alert-announcement",
+       "excerpts": [
+        "HAAS Alert was founded in 2015."
+       ]
+      },
+      {
+       "title": "About Us | HAAS Alert",
+       "url": "https://www.haasalert.com/about",
+       "excerpts": [
+        "2015 HAAS Alert creates Safety Cloud HAAS Alert launches Safety Cloud, the first-ever connected safety platform with in-vehicle alerting."
+       ]
+      }
+     ],
+     "reasoning": "The investor announcement explicitly states that HAAS Alert was founded in 2015: https://www.volitioncapital.com/news/haas-alert-announcement. The company's history also places its creation of Safety Cloud in 2015: https://www.haasalert.com/about. These primary sources are preferred over the conflicting 2016 date in its LinkedIn profile.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "Our organization holds several key certifications, including ISO 27001, SOC 2, ISO 9001 and GDPR which demonstrate our commitment to security and regulatory compliance."
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center explicitly claims ISO 27001, SOC 2 and GDPR, alongside ISO 9001, which is outside the requested list. These are reported as public claims, not independent verification: https://www.haasalert.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "HAAS Alert - The Emergency Services Show 2026",
+       "url": "https://www.emergencyuk.com/exhibitors/haas-alert",
+       "excerpts": [
+        "Address HAAS Alert Global Headquarters 2071 N Southport Ave Suite 206 Chicago IL 60614 United States"
+       ]
+      }
+     ],
+     "reasoning": "The company's exhibitor profile labels its Chicago, Illinois address as its Global Headquarters and names the United States: https://www.emergencyuk.com/exhibitors/haas-alert.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Digital Alerting Resources & Case Studies | HAAS Alert",
+       "url": "https://haasalert.com/media",
+       "excerpts": [
+        "Blog [](https://haasalert.com/blog/safety-cloud-product-update-spring-2026) Blog the HAAS Alert Team Dylan Strother Blogs Safety Cloud Product Update: Spring 2026",
+        "Blog [](https://haasalert.com/blog/improve-community-safety-police-technology) Blog the HAAS Alert Team Brynne Piehowski Blogs How to Improve Community Safety Through Police Technology"
+       ]
+      }
+     ],
+     "reasoning": "The readable media index contains product updates and safety/product marketing articles, including the Spring 2026 product update and a police-technology article. Review did not identify the required two engineer-authored posts explaining internal product construction: https://haasalert.com/media.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "HAAS Alert Safety Cloud\u00ae | Digital Alerting for Connected Roads",
+       "url": "https://www.haasalert.com/",
+       "excerpts": [
+        "Safety Cloud\u00ae is a collision prevention service that sends real-time digital alerts to drivers to warn them of nearby emergency vehicles and roadway hazards"
+       ]
+      },
+      {
+       "title": "About Us | HAAS Alert",
+       "url": "https://www.haasalert.com/about",
+       "excerpts": [
+        "Our digital alerting solution is the biggest data provider to navigation apps like Waze and available on millions of passenger vehicles, connecting thousands of emergency and roadway fleets directly to the motoring public every day."
+       ]
+      }
+     ],
+     "reasoning": "The homepage describes real-time collision-prevention alerts, while the About page explains delivery through navigation apps and passenger vehicles for emergency and roadway fleets: https://www.haasalert.com/ and https://www.haasalert.com/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "HAAS Alert Chicago Office: Careers, Perks + Culture | Built In Chicago",
+       "url": "https://www.builtinchicago.org/company/haas-alert",
+       "excerpts": [
+        "70 Total Employees"
+       ]
+      }
+     ],
+     "reasoning": "Built In reports 70 total employees, which maps to 51-100. This is a third-party headcount rather than a company-confirmed census: https://www.builtinchicago.org/company/haas-alert.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Privacy & Cookie Policy | HAAS Alert",
+       "url": "https://www.haasalert.com/privacy",
+       "excerpts": [
+        "Our group companies and third-party service providers"
+       ]
+      },
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "The Trust Center is your centralized resource for understanding how we safeguard data, maintain platform integrity, and uphold the highest standard in security, privacy, and performance."
+       ]
+      },
+      {
+       "title": "HAAS Alert and Neutron Edge Partner to Deliver AI-Powered Emergency Response for Fire and EMS Agencies  | HAAS Alert",
+       "url": "https://haasalert.com/news/haas-alert-neutron-edge-ai-powered-emergency-response",
+       "excerpts": [
+        "The partnership brings together Neutron Edge"
+       ]
+      }
+     ],
+     "reasoning": "No underlying AI model or model provider used by Safety Cloud was identified after reviewing documentation, the blog index, security information, and privacy disclosures. The privacy policy provides recipient categories rather than a named AI-subprocessor list. Neutron Edge and Nexar are described as integration partners, not disclosed underlying model providers. Sources reviewed include https://www.haasalert.com/privacy, https://www.haasalert.com/trust-center, https://haas.knowledgeowl.com/help/digital-alerting, https://haasalert.com/media and https://haasalert.com/news/haas-alert-neutron-edge-ai-powered-emergency-response. Null means not publicly established by the reviewed evidence.",
+     "confidence": "low"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Safety Cloud\u00ae Pricing | HAAS Alert",
+       "url": "https://www.haasalert.com/pricing",
+       "excerpts": [
+        "Get equipped with Safety Cloud\u00ae [Public Safety](https://www.haasalert.com/pricing-public-safety) [Towing](https://www.haasalert.com/pricing-towing) [Construction & Utility](https://www.haasalert.com/pricing-roads) _HA-7: Connect any vehicle with HAAS Alert's reliable, road-proven device, sold separately ($399)"
+       ]
+      }
+     ],
+     "reasoning": "A public pricing page presents purchasing categories and equipment pricing: https://www.haasalert.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "HAAS Alert Secures $50,000 Scale Grant to Expand Detroit Footprint  | HAAS Alert",
+       "url": "https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant",
+       "excerpts": [
+        "That commitment has now advanced through receipt of a $50,000 Scale Grant",
+        "HAAS Alert was one of three companies selected for the $50,000 award"
+       ]
+      }
+     ],
+     "reasoning": "The latest publicly announced financing found is a $50,000 Detroit Startup Fund Scale Grant. This treats non-dilutive grants as funding, rather than reporting only equity rounds: https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant. The earlier January 2024 Volition growth investment did not disclose its amount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "WJ Group Leads the Way in Road Worker Safety with Safety Cloud\u00ae | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/wj-group-safety-cloud",
+       "excerpts": [
+        "To close those gaps, WJ Group became the first in the UK to adopt Safety Cloud digital alerting."
+       ]
+      },
+      {
+       "title": "Cobb County Sheriff's Office + Safety Cloud\u00ae: Weaving Safety into the Fabric of the Community | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/cobb-county-sheriffs-office",
+       "excerpts": [
+        "Cobb County Sheriff's Office case study with HAAS Alert"
+       ]
+      }
+     ],
+     "reasoning": "Company case studies identify WJ Group as a Safety Cloud adopter and Cobb County Sheriff's Office as a customer deployment: https://www.haasalert.com/case-study/wj-group-safety-cloud and https://www.haasalert.com/case-study/cobb-county-sheriffs-office.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "HAAS Alert Secures $50,000 Scale Grant to Expand Detroit Footprint  | HAAS Alert",
+       "url": "https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant",
+       "excerpts": [
+        "April 17, 2026",
+        "That commitment has now advanced through receipt of a $50,000 Scale Grant"
+       ]
+      }
+     ],
+     "reasoning": "The announcement of the received Scale Grant is dated April 17, 2026, yielding 2026-04. This is the announcement month; a separate disbursement date is not established: https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero, and more) and own the architecture and integrations behind it."
+       ]
+      }
+     ],
+     "reasoning": "The RevOps Manager / GTM Engineer posting explicitly calls HubSpot, RevOps.io, Gong and RevHero its existing stack, establishing actual use rather than merely an available integration: https://www.haasalert.com/roles/revops-manager-gtm-engineer.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "HAAS Alert | The Org",
+       "url": "https://theorg.com/org/haas-alert",
+       "excerpts": [
+        "Cory James Hohs CEO / Co-Founder 31"
+       ]
+      },
+      {
+       "title": "Brock Aun",
+       "url": "https://linkedin.com/in/brockaun",
+       "excerpts": [
+        "Returned fields: {experience_text='HAAS Alert 2026-07-01 Chief Strategy Officer"
+       ]
+      }
+     ],
+     "reasoning": "An external C-level/VP join or departure within the window could not be established conclusively. Brock Aun's profile shows an internal move from VP of Product to Chief Strategy Officer in July 2026, not a new company hire. Available leadership listings and profiles do not conclusively establish an exhaustive absence of external changes, so this is left unknown rather than asserted false. Sources: https://theorg.com/org/haas-alert and https://linkedin.com/in/brockaun.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Careers | HAAS Alert",
+       "url": "https://www.haasalert.com/careers",
+       "excerpts": [
+        "Job openings Join our mission in reshaping roadway safety RevOps Manager / GTM Engineer [details](https://www.haasalert.com/roles/revops-manager-gtm-engineer) Product Manager [details](https://www.haasalert.com/roles/product-manager) Technical Delivery & Solutions Lead"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists RevOps Manager / GTM Engineer, Product Manager, and Technical Delivery & Solutions Lead. None has a qualifying AI, ML or data-science title: https://www.haasalert.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "HAAS Alert Secures $50,000 Scale Grant to Expand Detroit Footprint  | HAAS Alert",
+       "url": "https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant",
+       "excerpts": [
+        "That commitment has now advanced through receipt of a $50,000 Scale Grant"
+       ]
+      }
+     ],
+     "reasoning": "The latest announced funding identified is explicitly called a Scale Grant from the Detroit Startup Fund, so the stage is Grant. It is non-dilutive funding, distinct from the earlier Volition equity investment: https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Digital Alerting | HAAS Alert Knowledge Base",
+       "url": "https://haas.knowledgeowl.com/help/digital-alerting",
+       "excerpts": [
+        "[What are Digital Alerts from HAAS Alert?](https://support.haasalert.com/help/what-are-digital-alerts)",
+        "[Why Digital Alerts Are More Effective Than Lights and Sirens Alone](https://support.haasalert.com/help/how-are-digital-alerts-different-from-lights-and-sirens)",
+        "[How do I install my HAAS Alert transponder?](https://support.haasalert.com/help/how-do-i-install-my-haas-alert-digital-alerting-transponder)"
+       ]
+      }
+     ],
+     "reasoning": "The public knowledge base lists multiple product documentation articles, including digital-alert explanations, effectiveness compared with lights and sirens, and transponder installation instructions: https://haas.knowledgeowl.com/help/digital-alerting.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "HAAS Alert - The Emergency Services Show 2026",
+       "url": "https://www.emergencyuk.com/exhibitors/haas-alert",
+       "excerpts": [
+        "Address HAAS Alert Global Headquarters 2071 N Southport Ave Suite 206 Chicago IL 60614"
+       ]
+      }
+     ],
+     "reasoning": "The exhibitor profile explicitly labels the Chicago address as HAAS Alert Global Headquarters: https://www.emergencyuk.com/exhibitors/haas-alert.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Safety Cloud Product Update: Summer 2026 | HAAS Alert",
+       "url": "https://www.haasalert.com/blog/safety-cloud-product-update-summer-2026",
+       "excerpts": [
+        "Safety Cloud Product Update: Summer 2026 August 5, 2026 Written by the HAAS Alert Team HAAS Alert Team SHARE Reading Progress: **Introducing the Safety Cloud Mobile App, Mutual Aid, and More** This summer's Safety Cloud release marks our biggest step yet toward putting real-time access and visibility wherever your team is working. We're introducing the Safety Cloud mobile app, expanding Mutual Aid Sharing to every public safety agency, enhancing Dashboard tools, launching a new report type for measuring Asset Activity, and opening up a new in-product Knowledge Base. Each of these enhancements is available to Safety Cloud users now"
+       ]
+      }
+     ],
+     "reasoning": "The August 5, 2026 product update announces an available Safety Cloud mobile app and expanded Mutual Aid Sharing. These are substantive launches within six months of November 9, 2026, rather than bug fixes or cosmetic changes: https://www.haasalert.com/blog/safety-cloud-product-update-summer-2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Careers | HAAS Alert",
+       "url": "https://www.haasalert.com/careers",
+       "excerpts": [
+        "Job openings Join our mission in reshaping roadway safety RevOps Manager / GTM Engineer [details](https://www.haasalert.com/roles/revops-manager-gtm-engineer) Product Manager [details](https://www.haasalert.com/roles/product-manager) Technical Delivery & Solutions Lead"
+       ]
+      }
+     ],
+     "reasoning": "The readable careers page lists three openings, none titled SDR, BDR, sales/business development representative or account executive: https://www.haasalert.com/careers.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "HAAS Alert Secures $50,000 Scale Grant to Expand Detroit Footprint  | HAAS Alert",
+       "url": "https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant",
+       "excerpts": [
+        "April 17, 2026",
+        "That commitment has now advanced through receipt of a $50,000 Scale Grant"
+       ]
+      }
+     ],
+     "reasoning": "HAAS Alert announced receipt of a $50,000 Scale Grant on April 17, 2026, inside the 18-month window. True includes non-dilutive grant funding and does not imply a recent equity raise: https://haasalert.com/blog/haas-alert-secures-50-000-scale-grant.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "Our organization holds several key certifications, including ISO 27001, SOC 2"
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is explicitly named in the company's certification claims: https://www.haasalert.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "Our organization holds several key certifications, including ISO 27001"
+       ]
+      }
+     ],
+     "reasoning": "ISO 27001 is explicitly named in the company's certification claims: https://www.haasalert.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "HAAS Alert Trust Center",
+       "url": "https://www.haasalert.com/trust-center",
+       "excerpts": [
+        "Our organization holds several key certifications, including ISO 27001, SOC 2, ISO 9001 and GDPR"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly included in the company's public claims; this reports its wording, not an independent determination that GDPR is a certification: https://www.haasalert.com/trust-center.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "WJ Group Leads the Way in Road Worker Safety with Safety Cloud\u00ae | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/wj-group-safety-cloud",
+       "excerpts": [
+        "To close those gaps, WJ Group became the first in the UK to adopt Safety Cloud digital alerting."
+       ]
+      }
+     ],
+     "reasoning": "The case study explicitly states that WJ Group adopted Safety Cloud: https://www.haasalert.com/case-study/wj-group-safety-cloud.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Cobb County Sheriff's Office + Safety Cloud\u00ae: Weaving Safety into the Fabric of the Community | HAAS Alert",
+       "url": "https://www.haasalert.com/case-study/cobb-county-sheriffs-office",
+       "excerpts": [
+        "Cobb County Sheriff's Office case study with HAAS Alert"
+       ]
+      }
+     ],
+     "reasoning": "HAAS Alert publishes a customer case study naming Cobb County Sheriff's Office: https://www.haasalert.com/case-study/cobb-county-sheriffs-office.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "HubSpot is named as part of the existing revenue-operations stack: https://www.haasalert.com/roles/revops-manager-gtm-engineer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io"
+       ]
+      }
+     ],
+     "reasoning": "RevOps.io is named as part of the existing revenue-operations stack: https://www.haasalert.com/roles/revops-manager-gtm-engineer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong"
+       ]
+      }
+     ],
+     "reasoning": "Gong is named as part of the existing revenue-operations stack: https://www.haasalert.com/roles/revops-manager-gtm-engineer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Openings at HAAS Alert - RevOps Manager / GTM Engineer",
+       "url": "https://www.haasalert.com/roles/revops-manager-gtm-engineer",
+       "excerpts": [
+        "Yes, you'll administer and optimize the existing stack (HubSpot, RevOps.io, Gong, RevHero"
+       ]
+      }
+     ],
+     "reasoning": "RevHero is named as part of the existing revenue-operations stack: https://www.haasalert.com/roles/revops-manager-gtm-engineer.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2015.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "HAAS Alert\u2019s Safety Cloud helps emergency services and roadway fleets prevent collisions by sending real-time warnings about approaching emergency vehicles and road hazards to drivers through connected vehicles and navigation apps.",
+    "employee_band": "51-100",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 50000.0,
+    "named_customers": [
+     "WJ Group",
+     "Cobb County Sheriff's Office"
+    ],
+    "funding_date": "2026-04",
+    "crm_stack_signal": [
+     "HubSpot",
+     "RevOps.io",
+     "Gong",
+     "RevHero"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Grant",
+    "public_docs": true,
+    "hq_city": "Chicago",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": true
+   }
+  }
+ }
+}

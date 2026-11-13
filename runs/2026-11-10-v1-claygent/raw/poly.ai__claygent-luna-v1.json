@@ -1,0 +1,394 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob03mA9avu6t4hw4W",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "poly.ai",
+    "status": "complete",
+    "result": {
+     "claygent-luna": {
+      "eng_blog": {
+       "notes": "The blog has multiple engineering/infrastructure posts, including enterprise infrastructure and GitOps architecture.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/resources/blog",
+        "https://poly.ai/blog/building-an-enterprise-grade-infrastructure-for-omnichannel-customer-service-ai",
+        "https://poly.ai/blog/building-an-enterprise-grade-infrastructure-part-2-the-self-healing-engine-behind-your-ai"
+       ]
+      },
+      "reasoning": "Company-owned pages establish the product, pricing, customers, docs, certifications, funding, blog announcements, and leadership change. LinkedIn supplies employee band and headquarters, while PolyAI's careers page and live listings verify open roles. The model answer is limited to the proprietary models named publicly rather than inferring an external provider.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Searched Google with query \"site:poly.ai PolyAI customers pricing careers security SOC 2 founded headquarters employees\". The results are: \n {\"search_results\":[{\"title\":\"PolyAI | Enterprise Voice AI: The Agentic Dialog Platform\",\"link\":\"https://poly.ai/\",\"displayedLink\":\"https://poly.ai\",\"snippet\":\"Enterprise voice AI that finishes what your customers start. Dialog agents on PolyAI&#39;s. Certified SOC 2+ Type 2, ISO 27001, PCI DSS, GDPR. customer-led ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Apoly.ai%20PolyAI%20customers%20pricing%20careers...",
+       "Searched Google with query \"PolyAI funding latest round 2025 2026 funding Crunchbase\". The results are: \n {\"search_results\":[{\"title\":\"The Week's 10 Biggest Funding Rounds: AI Drives A ...\",\"link\":\"https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-biotech-robotics-tenstorrent/\",\"displayedLink\":\"https://news.crunchbase.com › venture › biggest-funding...\",\"snippet\":\"Want to keep track of the largest startup funding deals in 2026 with our curated list of $100 million-plus venture deals to U.S.-based ...\",\"date\":\"Oct 23, 2026\",\"position\":1},{\"title\":\"PolyAI - Crunchbase Company Profi...",
+       "Searched Google with query \"site:poly.ai/blog PolyAI engineering technical blog model provider\". The results are: \n {\"search_results\":[{\"title\":\"Moving from Engineering to Orchestrating Conversations\",\"link\":\"https://poly.ai/blog/moving-from-engineering-to-orchestrating-conversations\",\"displayedLink\":\"https://poly.ai › Blog\",\"snippet\":\"PolyAI co-founder and CTO Shawn Wen on why hand-engineered dialog systems fall short, and why task-specific dialog agents should be ...\",\"date\":\"Jan 21, 2019\",\"position\":1},{\"title\":\"Why enterprise AI needs forward deployed engineers\",\"link\":\"https://poly.ai/blog/forward-deploy...",
+       "Searched Google with query \"PolyAI careers jobs SDR account executive AI machine learning\". The results are: \n {\"search_results\":[{\"title\":\"Careers at PolyAI | Help Build the Future of Dialog Agents\",\"link\":\"https://poly.ai/careers\",\"displayedLink\":\"https://poly.ai › careers\",\"snippet\":\"Explore remote-friendly, flexible roles at PolyAI and help make bad customer service a thing of the past. See open positions and our values.\",\"position\":1},{\"title\":\"Polyai Jobs in Worldwide (32000+ Open Roles)\",\"link\":\"https://www.linkedin.com/jobs/polyai-jobs-worldwide\",\"displayedLink\":\"https://www.linkedin.com › jobs ›...",
+       "Searched Google with query \"PolyAI company headquarters founded employee count LinkedIn\". The results are: \n {\"search_results\":[{\"title\":\"PolyAI\",\"link\":\"https://www.linkedin.com/company/polyai\",\"displayedLink\":\"96.9K+ followers\",\"snippet\":\"Website: https://poly.ai. External link for PolyAI ; Industry: Software Development ; Company size: 201-500 employees ; Headquarters: San Francisco, California.\",\"position\":1},{\"title\":\"Floor Talk with Nikola Mrkšić, CEO + Co-Founder of PolyAI\",\"link\":\"https://www.linkedin.com/posts/nathanbenaich_floor-talk-with-nikola-mrk%C5%A1i%C4%87-ceo-co-founder-activity-722630...",
+       "Used visitWebpage {\"url\":\"https://poly.ai/\",\"question\":\"Find product description, navigation/footer pricing docs, customers, compliance and company facts\"}. The results are: \n \"**Products:** PolyAI’s Agentic Dialog Platform builds, runs, and optimizes enterprise dialog agents across customer channels, connecting to existing systems. Dialog Agent combines flows, tools, and brand voice; Dialog Studio is for designing and optimizing agents. Wren helps design, build, test, and optimize dialog experiences. Models: Dialog-RSN-1 (audio-native voice model; <300 ms response, 89.8 turn-taking accuracy, 3.7% word error rate) and Dialog-RAVEN-3.5 (text-based webchat/multilingual;...",
+       "Used visitWebpage {\"url\":\"https://poly.ai/careers\",\"question\":\"Current live openings and titles, especially AI ML roles and sales roles\"}. The results are: \n \"PolyAI careers page: 33 open positions overall. The page displays these openings: Forward Deployed Engineer, Agentic AI (United Kingdom) — https://job-boards.eu.greenhouse.io/polyai/jobs/5032627101; Senior Marketing Manager, EMEA (United Kingdom) — https://job-boards.eu.greenhouse.io/polyai/jobs/5010878101; Staff Product Manager, Runtime Team (London, United Kingdom) — https://job-boards.eu.greenhouse.io/polyai/jobs/5027239101. No explicitly titled AI/ML or sales roles appear in the displayed l...",
+       "Used visitWebpage {\"url\":\"https://poly.ai/blog\",\"question\":\"Blog index newest announcements, technical engineering posts, and AI model provider disclosures\"}. The results are: \n \"PolyAI blog index (https://poly.ai/resources/blog), latest posts shown: 21 Oct 2026 — “Your agent should be better tomorrow than it is today”; 14 Oct — “PolyAI named Best AI Tool by Digiday & one of the UK’s fastest-growing companies by the FT” (https://poly.ai/blog/digiday-best-ai-tool-ft-fastest-growing-companies); 8 Oct — “PolyAI appoints Sunil Shah as Chief Financial Officer” (https://poly.ai/blog/polyai-appoints-sunil-shah-cfo); 6 Oct — “Dialog-RSN-1 is now on AWS SageMaker” (https://poly....",
+       "Used visitWebpage {\"url\":\"https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers\",\"question\":\"Funding round date amount and model provider\"}. The results are: \n \"PolyAI raised $86 million in Series D funding on 15 Dec 2025. The webpage does not identify a model provider.\"",
+       "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/polyai\",\"question\":\"Headquarters, company size, founded date\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/polyai\",\"locations\":[{\"address\":\"4 W 4th Ave, San Francisco, California 94402, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"4 W 4th Ave\",\"formatted_address\":\"4 W 4th Ave, San Mateo, CA 94402\",\"business_region\":\"NAM\",\"latitude\":37.562316,\"locality\":\"San Mateo\",\"admin_district\":\"California\",\"admin_district2\":\"San Mateo County\",\"country_region\":\"United States\",\"locationstr\":\"4 W 4th Ave, San Francisco, California 94402, US\",\"metro_area\":\"San Fr...",
+       "Used visitWebpage {\"url\":\"https://poly.ai/customers\",\"question\":\"List named customer logos/case studies with names\"}. The results are: \n \"Named customer stories/case studies: Pacific Gas & Electric (PG&E); Carter’s; SafeRide Health; UniCredit; Fogo de Chão; Audibel. Links: https://poly.ai/customers/carter's; https://poly.ai/customers/saferide; https://poly.ai/customers/unicredit-zagrebacka-banka; https://poly.ai/customers/fogodechao; https://poly.ai/customers/audibel; customer stories: https://poly.ai/customers\"",
+       "Used visitWebpage {\"url\":\"https://poly.ai/pricing\",\"question\":\"Does public pricing page exist and what does it display?\"}. The results are: \n \"A public Pricing page exists: https://poly.ai/pricing. It displays public plan pricing and features: Essentials ($49/month), Plus ($199/month), Scale ($299 per location/month), and custom-priced Enterprise plans; included minutes and overage rates; plan comparisons, integrations, features, FAQs, and separate API/platform usage pricing (Model API: 2¢/minute; Platform: 9.5¢+/minute).\"",
+       "Used visitWebpage {\"url\":\"https://docs.poly.ai\",\"question\":\"Public documentation contents and integrations mentioning CRM/sales marketing systems/model provider\"}. The results are: \n \"PolyAI documentation says its integrations cover telephony, CRM, payments, and custom or MCP connectors. The platform supports custom tools and integrations, and agents can be built or operated through Agent Studio, ADK, or REST APIs. The page mentions Raven as PolyAI’s voice-native model. Relevant links: Integrations index (https://docs.poly.ai/llms.txt); Create tool (https://docs.poly.ai/tools/how-to-setup); Using tools (https://docs.poly.ai/tools/using-tools-in-knowledge-base); ADK (https://...",
+       "Used visitWebpage {\"url\":\"https://poly.ai/security\",\"question\":\"List compliance certifications and named AI/model providers or subprocessors\"}. The results are: \n \"Compliance: ISO 27001-certified; aligned with National Cyber Security Centre Guidelines. Infrastructure is hosted on AWS. Named integrations/providers listed: Amazon Web Services, Five9, NICE, Salesforce, Twilio, Verizon Business, and Zendesk. The page also mentions third-party penetration-testing firms but does not name them.\"",
+       "Used visitWebpage {\"url\":\"https://poly.ai/blog/polyai-appoints-sunil-shah-cfo\",\"question\":\"Dated leadership appointment and role\"}. The results are: \n \"October 8, 2026: PolyAI appointed Sunil Shah Chief Financial Officer. As CFO, he will lead global finance, including financial planning, accounting, treasury, and revenue operations, and help shape capital strategy. He most recently served as Senior Vice President of Finance at Rapid7. Announcement: https://poly.ai/blog/polyai-appoints-sunil-shah-cfo\"",
+       "Used visitWebpage {\"url\":\"https://poly.ai/about\",\"question\":\"Founded date and headquarters/company description\"}. The results are: \n \"Founded in 2017. PolyAI helps enterprises build, run, govern, and improve dialog agents for complex customer conversations. Its Agentic Dialog Platform combines purpose-built AI with enterprise-grade controls, enabling companies to deploy agents that sound and act like their human representatives. Offices: New York, London, San Francisco, San Mateo, Belgrade, and Toronto. About: https://poly.ai/about\""
+      ],
+      "hq_location": {
+       "notes": "LinkedIn structured profile marks San Mateo, California as headquarters.",
+       "value": {
+        "city": "San Mateo",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/polyai"
+       ]
+      },
+      "public_docs": {
+       "notes": "A public docs site includes multiple articles and API, ADK, tools, and integration documentation.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.poly.ai/llms.txt"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The December 2025 Series D falls within the 18 months before 2026-11-09.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers"
+       ]
+      },
+      "founded_year": {
+       "notes": "About page states PolyAI was founded in 2017.",
+       "value": 2017,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/about"
+       ]
+      },
+      "last_funding": {
+       "notes": "Company announcement gives the $86 million Series D in December 2025.",
+       "value": {
+        "date": "2025-12",
+        "stage": "Series D",
+        "amount_usd": 86000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The blog index lists the September 9, 2026 announcement introducing Wren, within the six-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/resources/blog",
+        "https://poly.ai/blog/wren-agent-improves-dialog-agents"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public pricing page lists plans and prices.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "LinkedIn company profile indicates 201–500 employees.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/polyai"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "A live Enterprise Account Executive posting is listed.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/careers#open-positions",
+        "https://builtin.com/job/enterprise-account-executive-west-coast/6659212"
+       ]
+      },
+      "model_provider": {
+       "notes": "Public materials identify proprietary PolyAI models; they do not specify an external model-provider relationship.",
+       "value": "PolyAI's own Dialog-RSN-1 and Dialog-RAVEN-3.5 models; no external model provider is publicly specified as the product's provider.",
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/resources/blog",
+        "https://docs.poly.ai/llms.txt"
+       ]
+      },
+      "named_customers": {
+       "notes": "Both appear as customer stories on the customers page.",
+       "value": [
+        "Pacific Gas & Electric (PG&E)",
+        "Carter’s"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/customers"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "Live Forward Deployed Engineer, Agentic AI posting includes AI in its title.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/careers#open-positions",
+        "https://job-boards.eu.greenhouse.io/polyai/jobs/5032627101"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Company homepage explicitly claims SOC 2 Type 2, ISO 27001, PCI DSS, and GDPR.",
+       "value": [
+        "SOC 2",
+        "ISO 27001",
+        "PCI DSS",
+        "GDPR"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/",
+        "https://poly.ai/security"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The security page identifies Salesforce and Zendesk as named integrations.",
+       "value": [
+        "Salesforce",
+        "Zendesk"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/security"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Describes the enterprise dialog platform and customer-service automation.",
+       "value": "PolyAI provides enterprise voice and dialog AI agents that automate customer-service conversations across channels for organizations.",
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/",
+        "https://poly.ai/about"
+       ]
+      },
+      "timeTakenInSeconds": "43.24",
+      "totalCreditsCharged": 0.2,
+      "leadership_change_12mo": {
+       "notes": "PolyAI announced Sunil Shah's appointment as CFO on October 8, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://poly.ai/blog/polyai-appoints-sunil-shah-cfo"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "poly.ai",
+  "status": "complete",
+  "result": {
+   "claygent-luna": {
+    "eng_blog": {
+     "notes": "The blog has multiple engineering/infrastructure posts, including enterprise infrastructure and GitOps architecture.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/resources/blog",
+      "https://poly.ai/blog/building-an-enterprise-grade-infrastructure-for-omnichannel-customer-service-ai",
+      "https://poly.ai/blog/building-an-enterprise-grade-infrastructure-part-2-the-self-healing-engine-behind-your-ai"
+     ]
+    },
+    "reasoning": "Company-owned pages establish the product, pricing, customers, docs, certifications, funding, blog announcements, and leadership change. LinkedIn supplies employee band and headquarters, while PolyAI's careers page and live listings verify open roles. The model answer is limited to the proprietary models named publicly rather than inferring an external provider.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Searched Google with query \"site:poly.ai PolyAI customers pricing careers security SOC 2 founded headquarters employees\". The results are: \n {\"search_results\":[{\"title\":\"PolyAI | Enterprise Voice AI: The Agentic Dialog Platform\",\"link\":\"https://poly.ai/\",\"displayedLink\":\"https://poly.ai\",\"snippet\":\"Enterprise voice AI that finishes what your customers start. Dialog agents on PolyAI&#39;s. Certified SOC 2+ Type 2, ISO 27001, PCI DSS, GDPR. customer-led ...\",\"position\":1}],\"results_returned_count\":1,\"specificVendor\":\"serper\",\"link_to_google_search\":\"https://www.google.com/search?q=site%3Apoly.ai%20PolyAI%20customers%20pricing%20careers...",
+     "Searched Google with query \"PolyAI funding latest round 2025 2026 funding Crunchbase\". The results are: \n {\"search_results\":[{\"title\":\"The Week's 10 Biggest Funding Rounds: AI Drives A ...\",\"link\":\"https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-biotech-robotics-tenstorrent/\",\"displayedLink\":\"https://news.crunchbase.com › venture › biggest-funding...\",\"snippet\":\"Want to keep track of the largest startup funding deals in 2026 with our curated list of $100 million-plus venture deals to U.S.-based ...\",\"date\":\"Oct 23, 2026\",\"position\":1},{\"title\":\"PolyAI - Crunchbase Company Profi...",
+     "Searched Google with query \"site:poly.ai/blog PolyAI engineering technical blog model provider\". The results are: \n {\"search_results\":[{\"title\":\"Moving from Engineering to Orchestrating Conversations\",\"link\":\"https://poly.ai/blog/moving-from-engineering-to-orchestrating-conversations\",\"displayedLink\":\"https://poly.ai › Blog\",\"snippet\":\"PolyAI co-founder and CTO Shawn Wen on why hand-engineered dialog systems fall short, and why task-specific dialog agents should be ...\",\"date\":\"Jan 21, 2019\",\"position\":1},{\"title\":\"Why enterprise AI needs forward deployed engineers\",\"link\":\"https://poly.ai/blog/forward-deploy...",
+     "Searched Google with query \"PolyAI careers jobs SDR account executive AI machine learning\". The results are: \n {\"search_results\":[{\"title\":\"Careers at PolyAI | Help Build the Future of Dialog Agents\",\"link\":\"https://poly.ai/careers\",\"displayedLink\":\"https://poly.ai › careers\",\"snippet\":\"Explore remote-friendly, flexible roles at PolyAI and help make bad customer service a thing of the past. See open positions and our values.\",\"position\":1},{\"title\":\"Polyai Jobs in Worldwide (32000+ Open Roles)\",\"link\":\"https://www.linkedin.com/jobs/polyai-jobs-worldwide\",\"displayedLink\":\"https://www.linkedin.com › jobs ›...",
+     "Searched Google with query \"PolyAI company headquarters founded employee count LinkedIn\". The results are: \n {\"search_results\":[{\"title\":\"PolyAI\",\"link\":\"https://www.linkedin.com/company/polyai\",\"displayedLink\":\"96.9K+ followers\",\"snippet\":\"Website: https://poly.ai. External link for PolyAI ; Industry: Software Development ; Company size: 201-500 employees ; Headquarters: San Francisco, California.\",\"position\":1},{\"title\":\"Floor Talk with Nikola Mrkšić, CEO + Co-Founder of PolyAI\",\"link\":\"https://www.linkedin.com/posts/nathanbenaich_floor-talk-with-nikola-mrk%C5%A1i%C4%87-ceo-co-founder-activity-722630...",
+     "Used visitWebpage {\"url\":\"https://poly.ai/\",\"question\":\"Find product description, navigation/footer pricing docs, customers, compliance and company facts\"}. The results are: \n \"**Products:** PolyAI’s Agentic Dialog Platform builds, runs, and optimizes enterprise dialog agents across customer channels, connecting to existing systems. Dialog Agent combines flows, tools, and brand voice; Dialog Studio is for designing and optimizing agents. Wren helps design, build, test, and optimize dialog experiences. Models: Dialog-RSN-1 (audio-native voice model; <300 ms response, 89.8 turn-taking accuracy, 3.7% word error rate) and Dialog-RAVEN-3.5 (text-based webchat/multilingual;...",
+     "Used visitWebpage {\"url\":\"https://poly.ai/careers\",\"question\":\"Current live openings and titles, especially AI ML roles and sales roles\"}. The results are: \n \"PolyAI careers page: 33 open positions overall. The page displays these openings: Forward Deployed Engineer, Agentic AI (United Kingdom) — https://job-boards.eu.greenhouse.io/polyai/jobs/5032627101; Senior Marketing Manager, EMEA (United Kingdom) — https://job-boards.eu.greenhouse.io/polyai/jobs/5010878101; Staff Product Manager, Runtime Team (London, United Kingdom) — https://job-boards.eu.greenhouse.io/polyai/jobs/5027239101. No explicitly titled AI/ML or sales roles appear in the displayed l...",
+     "Used visitWebpage {\"url\":\"https://poly.ai/blog\",\"question\":\"Blog index newest announcements, technical engineering posts, and AI model provider disclosures\"}. The results are: \n \"PolyAI blog index (https://poly.ai/resources/blog), latest posts shown: 21 Oct 2026 — “Your agent should be better tomorrow than it is today”; 14 Oct — “PolyAI named Best AI Tool by Digiday & one of the UK’s fastest-growing companies by the FT” (https://poly.ai/blog/digiday-best-ai-tool-ft-fastest-growing-companies); 8 Oct — “PolyAI appoints Sunil Shah as Chief Financial Officer” (https://poly.ai/blog/polyai-appoints-sunil-shah-cfo); 6 Oct — “Dialog-RSN-1 is now on AWS SageMaker” (https://poly....",
+     "Used visitWebpage {\"url\":\"https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers\",\"question\":\"Funding round date amount and model provider\"}. The results are: \n \"PolyAI raised $86 million in Series D funding on 15 Dec 2025. The webpage does not identify a model provider.\"",
+     "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/polyai\",\"question\":\"Headquarters, company size, founded date\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/polyai\",\"locations\":[{\"address\":\"4 W 4th Ave, San Francisco, California 94402, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"4 W 4th Ave\",\"formatted_address\":\"4 W 4th Ave, San Mateo, CA 94402\",\"business_region\":\"NAM\",\"latitude\":37.562316,\"locality\":\"San Mateo\",\"admin_district\":\"California\",\"admin_district2\":\"San Mateo County\",\"country_region\":\"United States\",\"locationstr\":\"4 W 4th Ave, San Francisco, California 94402, US\",\"metro_area\":\"San Fr...",
+     "Used visitWebpage {\"url\":\"https://poly.ai/customers\",\"question\":\"List named customer logos/case studies with names\"}. The results are: \n \"Named customer stories/case studies: Pacific Gas & Electric (PG&E); Carter’s; SafeRide Health; UniCredit; Fogo de Chão; Audibel. Links: https://poly.ai/customers/carter's; https://poly.ai/customers/saferide; https://poly.ai/customers/unicredit-zagrebacka-banka; https://poly.ai/customers/fogodechao; https://poly.ai/customers/audibel; customer stories: https://poly.ai/customers\"",
+     "Used visitWebpage {\"url\":\"https://poly.ai/pricing\",\"question\":\"Does public pricing page exist and what does it display?\"}. The results are: \n \"A public Pricing page exists: https://poly.ai/pricing. It displays public plan pricing and features: Essentials ($49/month), Plus ($199/month), Scale ($299 per location/month), and custom-priced Enterprise plans; included minutes and overage rates; plan comparisons, integrations, features, FAQs, and separate API/platform usage pricing (Model API: 2¢/minute; Platform: 9.5¢+/minute).\"",
+     "Used visitWebpage {\"url\":\"https://docs.poly.ai\",\"question\":\"Public documentation contents and integrations mentioning CRM/sales marketing systems/model provider\"}. The results are: \n \"PolyAI documentation says its integrations cover telephony, CRM, payments, and custom or MCP connectors. The platform supports custom tools and integrations, and agents can be built or operated through Agent Studio, ADK, or REST APIs. The page mentions Raven as PolyAI’s voice-native model. Relevant links: Integrations index (https://docs.poly.ai/llms.txt); Create tool (https://docs.poly.ai/tools/how-to-setup); Using tools (https://docs.poly.ai/tools/using-tools-in-knowledge-base); ADK (https://...",
+     "Used visitWebpage {\"url\":\"https://poly.ai/security\",\"question\":\"List compliance certifications and named AI/model providers or subprocessors\"}. The results are: \n \"Compliance: ISO 27001-certified; aligned with National Cyber Security Centre Guidelines. Infrastructure is hosted on AWS. Named integrations/providers listed: Amazon Web Services, Five9, NICE, Salesforce, Twilio, Verizon Business, and Zendesk. The page also mentions third-party penetration-testing firms but does not name them.\"",
+     "Used visitWebpage {\"url\":\"https://poly.ai/blog/polyai-appoints-sunil-shah-cfo\",\"question\":\"Dated leadership appointment and role\"}. The results are: \n \"October 8, 2026: PolyAI appointed Sunil Shah Chief Financial Officer. As CFO, he will lead global finance, including financial planning, accounting, treasury, and revenue operations, and help shape capital strategy. He most recently served as Senior Vice President of Finance at Rapid7. Announcement: https://poly.ai/blog/polyai-appoints-sunil-shah-cfo\"",
+     "Used visitWebpage {\"url\":\"https://poly.ai/about\",\"question\":\"Founded date and headquarters/company description\"}. The results are: \n \"Founded in 2017. PolyAI helps enterprises build, run, govern, and improve dialog agents for complex customer conversations. Its Agentic Dialog Platform combines purpose-built AI with enterprise-grade controls, enabling companies to deploy agents that sound and act like their human representatives. Offices: New York, London, San Francisco, San Mateo, Belgrade, and Toronto. About: https://poly.ai/about\""
+    ],
+    "hq_location": {
+     "notes": "LinkedIn structured profile marks San Mateo, California as headquarters.",
+     "value": {
+      "city": "San Mateo",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/polyai"
+     ]
+    },
+    "public_docs": {
+     "notes": "A public docs site includes multiple articles and API, ADK, tools, and integration documentation.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.poly.ai/llms.txt"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The December 2025 Series D falls within the 18 months before 2026-11-09.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers"
+     ]
+    },
+    "founded_year": {
+     "notes": "About page states PolyAI was founded in 2017.",
+     "value": 2017,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/about"
+     ]
+    },
+    "last_funding": {
+     "notes": "Company announcement gives the $86 million Series D in December 2025.",
+     "value": {
+      "date": "2025-12",
+      "stage": "Series D",
+      "amount_usd": 86000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/blog/polyai-raises-86m-to-transform-how-enterprises-talk-to-their-customers"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The blog index lists the September 9, 2026 announcement introducing Wren, within the six-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/resources/blog",
+      "https://poly.ai/blog/wren-agent-improves-dialog-agents"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public pricing page lists plans and prices.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "LinkedIn company profile indicates 201–500 employees.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/polyai"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "A live Enterprise Account Executive posting is listed.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/careers#open-positions",
+      "https://builtin.com/job/enterprise-account-executive-west-coast/6659212"
+     ]
+    },
+    "model_provider": {
+     "notes": "Public materials identify proprietary PolyAI models; they do not specify an external model-provider relationship.",
+     "value": "PolyAI's own Dialog-RSN-1 and Dialog-RAVEN-3.5 models; no external model provider is publicly specified as the product's provider.",
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/resources/blog",
+      "https://docs.poly.ai/llms.txt"
+     ]
+    },
+    "named_customers": {
+     "notes": "Both appear as customer stories on the customers page.",
+     "value": [
+      "Pacific Gas & Electric (PG&E)",
+      "Carter’s"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/customers"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "Live Forward Deployed Engineer, Agentic AI posting includes AI in its title.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/careers#open-positions",
+      "https://job-boards.eu.greenhouse.io/polyai/jobs/5032627101"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Company homepage explicitly claims SOC 2 Type 2, ISO 27001, PCI DSS, and GDPR.",
+     "value": [
+      "SOC 2",
+      "ISO 27001",
+      "PCI DSS",
+      "GDPR"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/",
+      "https://poly.ai/security"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The security page identifies Salesforce and Zendesk as named integrations.",
+     "value": [
+      "Salesforce",
+      "Zendesk"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/security"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Describes the enterprise dialog platform and customer-service automation.",
+     "value": "PolyAI provides enterprise voice and dialog AI agents that automate customer-service conversations across channels for organizations.",
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/",
+      "https://poly.ai/about"
+     ]
+    },
+    "timeTakenInSeconds": "43.24",
+    "totalCreditsCharged": 0.2,
+    "leadership_change_12mo": {
+     "notes": "PolyAI announced Sunil Shah's appointment as CFO on October 8, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://poly.ai/blog/polyai-appoints-sunil-shah-cfo"
+     ]
+    }
+   }
+  }
+ }
+}

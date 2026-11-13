@@ -1,0 +1,176 @@
+{
+ "schema_version": "v0",
+ "company": "Aikido",
+ "domain": "aikido.dev",
+ "config_id": "parallel-core-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Aikido provides developer-first software-security tools that detect and fix risks across code, cloud, and runtime so development teams can ship securely without slowing down.",
+   "citations": [
+    "https://www.aikido.dev/company/press-kit"
+   ],
+   "notes": "Aikido\u2019s press kit describes developer-first security products and says the platform secures code, cloud, and runtime for teams, supporting the concise product-and-audience summary."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/pricing"
+   ],
+   "notes": "A public Aikido pricing page exists and displays a Developer plan with a price."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Deel",
+    "Revolut",
+    "Soundcloud",
+    "Niantic"
+   ],
+   "citations": [
+    "https://www.aikido.dev/customers"
+   ],
+   "notes": "named_customers: Aikido\u2019s customer page displays these customer logos, directly identifying them as customers. | named_customers.0: The customer page displays the Deel logo and name. | named_customers.1: The customer page displays the Revolut logo and name. | named_customers.2: The customer page displays the Soundcloud logo and name. | named_customers.3: The customer page displays the Niantic logo and name."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://pitchbook.com/profiles/company/516044-26"
+   ],
+   "notes": "PitchBook reports 238 employees, which falls within the specified 201\u2013500 band."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Ghent",
+    "country": "Belgium"
+   },
+   "citations": [
+    "https://www.gleif.org/lei/699400E5YPMHFRISO315"
+   ],
+   "notes": "hq_city: The LEI record explicitly labels the headquarters address locality as Gent, the English spelling of Ghent. | hq_country: The LEI record labels the headquarters address as Gent and gives the country as Belgium."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2022.0,
+   "citations": [
+    "https://psgequity.com/news/aikido-security-announces-60m-series-b-investment-with-participation-from-psg-equity"
+   ],
+   "notes": "The investment announcement identifies Aikido as founded in 2022."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.aikido.dev/category/engineering",
+    "https://www.aikido.dev/blog/why-determinism-is-necessary",
+    "https://www.aikido.dev/team-members/dania-durnas?a5f5d31e_page=2"
+   ],
+   "notes": "The Engineering category index shows technical pieces, but the visible evidence does not establish two qualifying product-build posts written by engineers. The byline on the determinism article is Dania Durnas, whose Aikido profile identifies her current role as Developer Content Writer (though it notes her prior engineering experience); the index/category and evidence do not establish the required two engineer-authored posts, so this does not meet the stated threshold."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/contact",
+    "https://help.aikido.dev/autofix-and-remediation/overview-aikido-autofix",
+    "https://help.aikido.dev/autofix-and-remediation/scope/ai-autofix-for-sast-and-iac-issues"
+   ],
+   "notes": "The company contact page links to public documentation, and the public Help Center contains multiple distinct product-documentation articles, including AutoFix overview and SAST guidance."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://careersitesearch.com/company/aikido-security",
+    "https://aikidosecurity.recruitee.com/"
+   ],
+   "notes": "The current jobs inventory lists an AI Engineer posting and links to Aikido\u2019s own careers site; the first-party job board also lists the AI Engineer role."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "AWS Bedrock for AutoFix; the Trust Center also lists Microsoft Azure, Google Cloud, and OpenAI Developer API Access for AI inference.",
+   "citations": [
+    "https://help.aikido.dev/autofix-and-remediation/overview-aikido-autofix",
+    "https://trustcenter.aikido.dev/?requestAccessOpen=true&requestedResources=690b20388b56979a0d3c5f2c"
+   ],
+   "notes": "Aikido\u2019s AutoFix documentation specifically says code snippets go to AI models hosted on AWS Bedrock. The Trust Center separately lists Microsoft Azure Cloud, Google Cloud, and OpenAI Developer API Access as AI-inference subprocessors; the answer preserves that product-specific distinction."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR",
+    "ISO 27001",
+    "SOC 2"
+   ],
+   "citations": [
+    "https://trustcenter.aikido.dev/"
+   ],
+   "notes": "compliance_certs: Aikido\u2019s public Trust Center compliance list names GDPR, ISO 27001:2022, and SOC 2; these correspond to the requested certification categories. Other labels on that page are outside the requested set. | compliance_certs.0: The Trust Center\u2019s compliance list names GDPR. | compliance_certs.1: The Trust Center\u2019s compliance list names ISO 27001:2022. | compliance_certs.2: The Trust Center\u2019s compliance list names SOC 2."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series B",
+    "date": "2026-01",
+    "amount_usd": 60000000.0
+   },
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-funding-series-b"
+   ],
+   "notes": "funding_stage: Aikido\u2019s announcement calls the January 2026 round a Series B. | funding_date: The company announcement dates the Series B funding announcement to January 14, 2026, so the requested YYYY-MM value is 2026-01. | funding_amount_usd: Aikido\u2019s own funding announcement states that it raised $60M in its Series B."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-funding-series-b"
+   ],
+   "notes": "The most recent funding round was announced January 14, 2026, which is within the 18-month window before November 9, 2026."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://aikidosecurity.recruitee.com/"
+   ],
+   "notes": "Aikido\u2019s live careers board lists Account Executive and Business Development Representative openings."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.aikido.dev/blog/aikido-launches-external-network-pentesting"
+   ],
+   "notes": "Aikido announced the launch of external network pentesting on October 28, 2026, within the six months before November 9, 2026."
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/thijsjanse"
+   ],
+   "notes": "The LinkedIn profile identifies Thijs Janse as Aikido\u2019s Chief Revenue Officer starting April 2026, within the 12 months before the requested cutoff."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot",
+    "LinkedIn",
+    "Outreach",
+    "Salesloft"
+   ],
+   "citations": [
+    "https://aikidosecurity.recruitee.com/o/technical-business-development-representative-2"
+   ],
+   "notes": "crm_stack_signal: Aikido\u2019s BDR job posting says it uses HubSpot and names LinkedIn, Outreach, and Salesloft among its sales tools. | crm_stack_signal.0: The job posting explicitly says Aikido uses HubSpot. | crm_stack_signal.1: The job posting names LinkedIn as a sales tool. | crm_stack_signal.2: The job posting names Outreach as a sales tool. | crm_stack_signal.3: The job posting names Salesloft as a sales tool."
+  }
+ },
+ "cost_usd": 0.025,
+ "latency_seconds": 326.5
+}

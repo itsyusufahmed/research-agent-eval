@@ -1,0 +1,21 @@
+{
+ "url": "https://auterion.com/enabling_uav_navigation_in_environments_with_limited_or_no_gps_signal/",
+ "fetched_at": "2026-11-09T21:46:47.099797+00:00",
+ "hours_after_run": 21.8,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "e7718f2e4a06e045fa5ecefc4f3b818f045e4c30757377aa3d44fa34dc3ecaae",
+ "chars": 3384,
+ "truncated": false,
+ "title": "Enabling navigation with limited or no GPS signal | Auterion",
+ "markdown": "## [Product](https://auterion.com/news/product/) • [Technology](https://auterion.com/news/technology/)\n\n# Enabling navigation with limited or no GPS signal\n\nNovember 27, 2019\n\n![](https://i0.wp.com/auterion.com/wp-content/uploads/2020/05/Indoor-flight-2020-05-05-at-13.29.59.png?fit=1280%2C768&ssl=1)\n\n# Enabling UAV navigation in environments with limited or no GPS signal\n\nAuthor: Kamil Ritz, Computer Vision Engineer at Auterion\n\nGPS signal loss is a common problem for today’s drone operators since a vehicle becomes unstable and can potentially crash. But what if, say, a firefighter needs to inspect the interior of an unsafe building? Having the opportunity to send a drone to survey the dangerous area and keeping the first responder out of harm’s way is a big challenge our engineers wanted to address and solve.\n\nThe value of flying remotely indoors or in other GPS denied environments is enormous. It allows operators to reduce inspection costs by performing more thorough and frequent inspections, save time by gathering more data faster when assessing critical situations, and it increases safety with remote inspections by not exposing operators to dangerous situations.\n\n## Using visual sensor data for precise drone positioning\n\nMost drones only use GPS signals to determine their position. While this may be good enough when flying over large areas, when flying close to buildings or tall structures, they decrease the number of direct GPS signals and therefore degrade the computed GPS location. In addition, GPS signals can bounce off large objects and provide a drone with incorrect position information. This phenomenon is called “GPS multipathing” and can cause a drone to oscillate or drift. As a pilot, it is very difficult to correct this unpredictable movement, which can result in a crash.\n\nTo overcome these potentially hazardous operating scenarios, the Auterion autonomy team worked on integrating visual information as an additional data source for our positioning systems. By having knowledge of localization data, we can detect and reject bad GPS information. Not only does this increase the robustness and safety of the vehicle, but it can also increase the flight performance on platforms with low quality GPS receivers.\n\n## Safe indoor operations with Visual Inertial Odometry (VIO)\n\nAs a second source of positioning, we use visual information from an onboard stereo camera sensor. By running visual-inertial odometry (VIO) algorithms on the camera images, we can determine how the drone is moving and analyze how the image is changing with the drone’s motion. So while a drone close to a building is receiving bad positioning information through the GPS signal, it is still able to observe its motion through the camera. The drone is, therefore, able to hold its position correctly and allow operators to focus on their tasks at hand.\n\nHaving a second non-GPS sensor for position on a drone is not only helpful in cases of unreliable GPS information, but it is also essential when no GPS signals are available, such as flying indoors. In this case, the newly integrated vision information allows the drone to maintain its position.\n\nOur most recent work on VIO integration enables robust and safe indoor inspection. This new algorithm is part of the next Auterion Enterprise PX4 release and will be available to our customers in the coming weeks.",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "eng_blog"
+ ]
+}

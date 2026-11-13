@@ -1,0 +1,510 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea6e07f7a5877f134",
+  "interaction_id": "trun_142119f6a1b4439ea6e07f7a5877f134",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "opendental.com"
+  },
+  "created_at": "2026-11-10T18:48:58.793324Z",
+  "modified_at": "2026-11-10T18:55:36.497047Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea6e07f7a5877f134",
+   "interaction_id": "trun_142119f6a1b4439ea6e07f7a5877f134",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "opendental.com"
+   },
+   "created_at": "2026-11-10T18:48:58.793324Z",
+   "modified_at": "2026-11-10T18:55:36.497047Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "Employment at Open Dental Open Dental is a growing dental practice management software company founded in 2003 and located in Salem, Oregon."
+       ]
+      }
+     ],
+     "reasoning": "Open Dental's employment page says the company was founded in 2003.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Open Dental Software - HIPAA at Open Dental Software, Inc.",
+       "url": "https://www.opendental.com/site/hipaaopendental.html",
+       "excerpts": [
+        "Open Dental Software, Inc. follows HIPAA guidelines and standards for security and privacy, implementing physical and electronic safeguards, including encryption.",
+        "**Our HIPAA procedures and policies are up to date and available** Open Dental Software, Inc."
+       ]
+      }
+     ],
+     "reasoning": "The company says it follows HIPAA guidelines and standards and that its HIPAA procedures and policies are current. HIPAA is the listed compliance framework supported by the cited company pages.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Open Dental: Contact Information",
+       "url": "https://www.opendental.com/site/contact.html",
+       "excerpts": [
+        "Address Open Dental Software 3275 Marietta St SE Salem, OR 97317"
+       ]
+      },
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "Employment at Open Dental Open Dental is a growing dental practice management software company founded in 2003 and located in Salem, Oregon."
+       ]
+      }
+     ],
+     "reasoning": "The company's contact page gives its Salem, Oregon address, and its employment page also identifies Salem, Oregon as its location.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Jordan's blog - Open Dental Forum",
+       "url": "https://www.opendentalsoft.com:8085/forum/viewtopic.php?t=8045",
+       "excerpts": [
+        "We finally got the permit for Bldg H.",
+        "So the db query goes on a background thread.",
+        "This would hide the existing property and allow us to put it in the OD category which is more convenient.",
+        "I've personally been working on the ImageSelector at the left.",
+        "This has required a lot of work on peripheral issues like the ToolTip, vector drawing with SVG-style commands, and some threading to load thumbnails quickly."
+       ]
+      },
+      {
+       "title": "Open Dental Through the Years - Open Dental Blog",
+       "url": "https://opendental.blog/open-dental-through-the-years",
+       "excerpts": [
+        "Open Dental was originally designed and developed by Dr."
+       ]
+      }
+     ],
+     "reasoning": "Jordan's blog contains dated posts by jordansparks describing software-development work: one discusses moving a database query to a background thread and WPF; another describes his work on the ImageSelector and its threading and graphics implementation. The company history identifies Dr. Jordan Sparks as the original designer and developer of Open Dental, supporting the technical-author criterion.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Open Dental Software - Practice Management Software",
+       "url": "https://www.opendental.com/",
+       "excerpts": [
+        "Quality Software for Dental Offices Comprehensive, highly customizable dental practice management software at an affordable price for practices of any size."
+       ]
+      },
+      {
+       "title": "Open Dental, Open-Source | TrustRadius",
+       "url": "https://www.trustradius.com/reviews/open-dental-software-2021-10-05-09-06-04",
+       "excerpts": [
+        "**25** \\- Open Dental [Software] combines scheduling, billing, and patient records into one software, so everyone in the practice uses Open Dental [Software] from the front desk to the dental assistants to the doctors themselves."
+       ]
+      }
+     ],
+     "reasoning": "The company homepage describes customizable dental practice-management software for dental offices; a user review identifies scheduling, billing, and patient records as product functions.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Open Dental Software",
+       "url": "https://linkedin.com/company/open-dental-software",
+       "excerpts": [
+        "employee count: 221 founded year: 2003 follower count: 5610 linkedin url: https://www.linkedin.com/company/open-dental-software country iso: US country name: United States locality: Salem, Oregon"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile gives an employee count of 221, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Open Dental: BetterDiagnostics",
+       "url": "https://www.opendental.com/site/betterdiagnostics.html",
+       "excerpts": [
+        "BetterDiagnostics is a third-party program that performs AI-generated radiograph image analysis. BetterDiagnostics AI diagnostics is natively integrated in the Open Dental Imaging Module. This helps providers easily identify common dental pathologies for patients 18 and above."
+       ]
+      }
+     ],
+     "reasoning": "The product page identifies an integrated third-party AI radiograph-analysis product, but the cited public material does not name the underlying AI model or model provider.",
+     "confidence": "low"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Open Dental Software - Fees for Support and Services",
+       "url": "https://www.opendental.com/site/fees.html",
+       "excerpts": [
+        "|**Open Dental Software License and Support** |United States |Initial Rate: $199/month/location or office |12 months |Covers all computers per location or office for up to 3 providers. Mobile treatment units are each treated as one physical location for billing purposes. Customer hosts the program locally or manages hosting it remotely (Self-Hosted). The Current Reduced Rate is defined as the fee published on the day the office reaches the 13th month. Offices which started at an initial rate of $179 (prior to February 2nd, 2026) will keep that rate for the entire initial 12 month period, rather than $199. |"
+       ]
+      }
+     ],
+     "reasoning": "The company's fees page publicly lists Open Dental software license and support pricing, including rates, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Open Dental - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/open-dental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "excerpts": [
+        "Open Dental's funding and investors Open Dental has not raised any funding rounds yet."
+       ]
+      },
+      {
+       "title": "Open Dental Software company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/open_dental_software",
+       "excerpts": [
+        "No known external funding Contact us to add funding data"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile says the company has not raised any funding rounds and another funding database reports no known external funding. With no round, there is no amount to report.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Testimonial Sweet Truth Dental",
+       "url": "https://learn.flex.dental/testimonial-sweet-truth-dental",
+       "excerpts": [
+        "We chose to use Open Dental as our software service and knew the integration with Flex was one of the biggest selling points."
+       ]
+      },
+      {
+       "title": "Open Dental, Open-Source | TrustRadius",
+       "url": "https://www.trustradius.com/reviews/open-dental-software-2021-10-05-09-06-04",
+       "excerpts": [
+        "Aspen Hill Smiles Family Dentistry Hospital & Health Care , 11-50 employees"
+       ]
+      }
+     ],
+     "reasoning": "The Flex testimonial page is titled for Sweet Truth Dental and says the practice chose Open Dental. A TrustRadius review identifies Aspen Hill Smiles Family Dentistry in connection with Open Dental.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Open Dental - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/open-dental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "excerpts": [
+        "Open Dental's funding and investors Open Dental has not raised any funding rounds yet."
+       ]
+      },
+      {
+       "title": "Open Dental Software company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/open_dental_software",
+       "excerpts": [
+        "No known external funding Contact us to add funding data"
+       ]
+      }
+     ],
+     "reasoning": "The cited funding databases report no funding rounds or known external funding; therefore, no most-recent round date exists.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Open Dental: Mass Email Feature",
+       "url": "https://www.opendental.com/site/massemail.html",
+       "excerpts": [
+        "Mass Email is an [eService](https://www.opendental.com/site/eservices.html) that allows users to send Mass Email from Open Dental using Mailchimp."
+       ]
+      }
+     ],
+     "reasoning": "Open Dental's product documentation says its Mass Email eService uses Mailchimp.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Open Dental Software CEO, Founder, Key Executive Team, Board of Directors & Employees",
+       "url": "https://www.cbinsights.com/company/open-dental-software/people",
+       "excerpts": [
+        "Open Dental Software Management Team 2 Team Members Open Dental Software has 2executives.",
+        "|Name |Work History |Title |Status | |Jordan Sparks | |Founder |Current |"
+       ]
+      },
+      {
+       "title": "Nathan Sparks - Founder & CEO at Open Dental Software | The Org",
+       "url": "https://theorg.com/org/open-dental-software/org-chart/nathan-sparks",
+       "excerpts": [
+        "Nathan Sparks Founder & CEO Contact No bio yet"
+       ]
+      }
+     ],
+     "reasoning": "The available executive profiles do not provide join or departure dates, and the executive listing is only partially visible. The evidence does not establish whether a C-level or VP-level change occurred in the specified period.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "We are actively hiring for the following positions. Dental Assistant/Software Support Daycare Aide **To apply:** please email your resume to [jobs@opendental.com](mailto:jobs@opendental.com) and indicate which position you are applying for. Open Positions: Dental Assistant/Software Support",
+        "Software QA Engineer I (Programmer)",
+        "Software Engineer I (Programmer)",
+        "Software Engineer II (Web Developer)",
+        "Software Engineer I (UI/UX)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists active openings, including software engineering and QA roles, but the reviewed job-title list contains no AI, ML, or data-science title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Open Dental - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/open-dental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "excerpts": [
+        "Open Dental's funding and investors Open Dental has not raised any funding rounds yet."
+       ]
+      },
+      {
+       "title": "Open Dental Software company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/open_dental_software",
+       "excerpts": [
+        "No known external funding Contact us to add funding data"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile says Open Dental has not raised any funding rounds, and another profile reports no known external funding; the funding stage is therefore none.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Open Dental Software - Documentation",
+       "url": "https://www.opendental.com/site/documentation.html",
+       "excerpts": [
+        "Developers wanting to integrate with Open Dental should review our [API Specification](https://www.opendental.com/site/apispecification.html) ."
+       ]
+      },
+      {
+       "title": "Open Dental Software - Programming Resources",
+       "url": "https://www.opendental.com/site/programmingresources.html",
+       "excerpts": [
+        "See [API Specification](https://www.opendental.com/site/apispecification.html) ."
+       ]
+      }
+     ],
+     "reasoning": "The company provides public developer documentation and programming resources, including links to its API specification and database schema.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Open Dental: Contact Information",
+       "url": "https://www.opendental.com/site/contact.html",
+       "excerpts": [
+        "Address Open Dental Software 3275 Marietta St SE Salem, OR 97317"
+       ]
+      }
+     ],
+     "reasoning": "The company contact page lists its address in Salem, Oregon.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Open Dental Software - Version 26.1",
+       "url": "https://www.opendental.com/site/version26_1.html",
+       "excerpts": [
+        "Version 26.1 was released as stable on 08/06/2026."
+       ]
+      },
+      {
+       "title": "Software Update: Stable Version 26.1 Highlights - Open Dental Blog",
+       "url": "https://opendental.blog/software-update-stable-version-26-1-highlights",
+       "excerpts": [
+        "[August 13, 2026](https://opendental.blog/software-update-stable-version-26-1-highlights/)",
+        "The updated [ODTouch 25](https://opendental.com/site/odtouch.html) app has been released!"
+       ]
+      }
+     ],
+     "reasoning": "Open Dental states that version 26.1 became stable on August 6, 2026, and its August 2026 announcement reports the updated ODTouch app release. These launches fall within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Open Dental: Employment at Open Dental",
+       "url": "https://www.opendental.com/site/employment.html",
+       "excerpts": [
+        "We are actively hiring for the following positions. Dental Assistant/Software Support Daycare Aide **To apply:** please email your resume to [jobs@opendental.com](mailto:jobs@opendental.com) and indicate which position you are applying for. Open Positions: Dental Assistant/Software Support",
+        "Verbally communicate with customers in a professional manner Benefits include very good medical and dental insurance, 401k retirement with up to 4% company match, paid life insurance, paid holidays, and paid time off (vacation or sick).",
+        "Daycare Aide",
+        "Software QA Engineer I (Programmer)",
+        "Software Engineer I (Programmer)",
+        "Software Engineer II (Web Developer)"
+       ]
+      }
+     ],
+     "reasoning": "The careers page is open and lists non-sales roles; the reviewed openings include no SDR, BDR, business-development representative, or account-executive title.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Open Dental - 2026 Company Profile, Team & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/open-dental/__0A2CdUck8mtb68pPQSt1jt9GgwjdITyrSarRQpFdc7I",
+       "excerpts": [
+        "Open Dental's funding and investors Open Dental has not raised any funding rounds yet."
+       ]
+      },
+      {
+       "title": "Open Dental Software company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/open_dental_software",
+       "excerpts": [
+        "No known external funding Contact us to add funding data"
+       ]
+      }
+     ],
+     "reasoning": "The funding databases report no funding rounds or known external funding, so there was no round in the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Open Dental Software - HIPAA at Open Dental Software, Inc.",
+       "url": "https://www.opendental.com/site/hipaaopendental.html",
+       "excerpts": [
+        "Open Dental Software, Inc. follows HIPAA guidelines and standards for security and privacy, implementing physical and electronic safeguards, including encryption.",
+        "**Our HIPAA procedures and policies are up to date and available** Open Dental Software, Inc."
+       ]
+      }
+     ],
+     "reasoning": "The cited company pages name HIPAA and describe the company's HIPAA policies and adherence to HIPAA guidelines.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Open Dental: Mass Email Feature",
+       "url": "https://www.opendental.com/site/massemail.html",
+       "excerpts": [
+        "Mass Email is an [eService](https://www.opendental.com/site/eservices.html) that allows users to send Mass Email from Open Dental using Mailchimp."
+       ]
+      }
+     ],
+     "reasoning": "The documentation explicitly says Open Dental's Mass Email eService uses Mailchimp.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Testimonial Sweet Truth Dental",
+       "url": "https://learn.flex.dental/testimonial-sweet-truth-dental",
+       "excerpts": [
+        "We chose to use Open Dental as our software service and knew the integration with Flex was one of the biggest selling points."
+       ]
+      }
+     ],
+     "reasoning": "The page is a testimonial for Sweet Truth Dental and states that the practice chose to use Open Dental.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Open Dental, Open-Source | TrustRadius",
+       "url": "https://www.trustradius.com/reviews/open-dental-software-2021-10-05-09-06-04",
+       "excerpts": [
+        "Aspen Hill Smiles Family Dentistry Hospital & Health Care , 11-50 employees"
+       ]
+      }
+     ],
+     "reasoning": "The review page names Aspen Hill Smiles Family Dentistry in connection with Open Dental.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2003.0,
+    "compliance_certs": [
+     "HIPAA"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Open Dental provides customizable practice-management software for dental offices, including tools for scheduling, billing, and patient records.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Sweet Truth Dental",
+     "Aspen Hill Smiles Family Dentistry"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Mailchimp"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "none",
+    "public_docs": true,
+    "hq_city": "Salem",
+    "launched_6mo": true,
+    "hiring_sdr_ae": false,
+    "raised_18mo": false
+   }
+  }
+ }
+}

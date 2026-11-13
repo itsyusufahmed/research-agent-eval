@@ -1,0 +1,21 @@
+{
+ "url": "https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai",
+ "fetched_at": "2026-11-09T21:09:53.492848+00:00",
+ "hours_after_run": 21.2,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "35164d62f02504374da57fe0108a6475a42200be7db0683feab2a863f5d3911a",
+ "chars": 3108,
+ "truncated": false,
+ "title": "AI | Koodisi Documentation",
+ "markdown": "[Skip to main content](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai#__docusaurus_skipToContent_fallback)\n\nOn this page\n\nUse the AI group to build workflows that call language models, generate embeddings, store and retrieve vector data, maintain conversational memory, invoke MCP tools, or coordinate an AI agent.\n\n## Available activities [​](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai\\#available-activities \"Direct link to Available activities\")\n\n| Activity | Purpose |\n| --- | --- |\n| **LLM Provider** | Defines and calls a supported language-model provider |\n| **Embedding Model** | Converts text or other supported content into vector embeddings |\n| **Vector DB** | Stores and searches vector data |\n| **Memory** | Provides durable or provider-backed conversational memory |\n| **Simple Memory** | Provides lightweight organization-level memory for straightforward flows |\n| **MCP** | Makes configured Model Context Protocol tools available to an AI flow |\n| **AI Agent** | Coordinates a model, instructions, memory, and tools to complete a task |\n\n## Build an AI workflow [​](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai\\#build-an-ai-workflow \"Direct link to Build an AI workflow\")\n\n1. Configure the required provider and credentials as resources or managed secrets.\n2. Add **LLM Provider** for direct model calls, or **AI Agent** for tool-using, multi-step behavior.\n3. Add memory only when the workflow needs context across interactions.\n4. Add **Embedding Model** and **Vector DB** for retrieval-augmented generation or semantic search.\n5. Add **MCP** only for approved servers and tools.\n6. Map model output through validation and business rules before it reaches a write operation.\n\n## Safety and governance [​](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai\\#safety-and-governance \"Direct link to Safety and governance\")\n\n- Do not place secrets, regulated data, or unnecessary personal information in prompts.\n- Treat model output as untrusted input and validate it before executing commands or changing records.\n- Restrict MCP and other tools to the minimum required permissions.\n- Require human confirmation for consequential or irreversible actions.\n- Set token, timeout, and iteration limits to control cost and prevent loops.\n- Record provider, model, prompt version, tool calls, and outcome where audit policy permits.\n\nFor AI-assisted application development in Studio, see the [Koodisi AI user guide](https://docs.koodisi.com/nxagent-user-guide/). For publishing API operations as AI tools, see [MCP Servers](https://docs.koodisi.com/api-manager/mcp-servers/).\n\n- [Available activities](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai#available-activities)\n- [Build an AI workflow](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai#build-an-ai-workflow)\n- [Safety and governance](https://docs.koodisi.com/working-with-activities/list-of-available-activities/ai#safety-and-governance)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ]
+}

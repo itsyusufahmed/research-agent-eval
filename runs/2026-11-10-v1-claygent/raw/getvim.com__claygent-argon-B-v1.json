@@ -1,0 +1,394 @@
+{
+ "run": {
+  "routine_run_id": "run_0toawrcJwopjwzYkwWr",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "getvim.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "Vim Engineering has multiple technical posts, including an engineering-security hackathon write-up and a post on TypeScript practices used at Vim.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://medium.com/getvim",
+        "https://medium.com/getvim/put-the-hack-back-in-hackathon-1a67f935c845",
+        "https://medium.com/getvim/writing-scalable-types-in-typescript-83b73e1fd578"
+       ]
+      },
+      "reasoning": "Vim’s own press kit and product site describe its healthcare workflow platform, founded in 2015, with 132 employees and New York headquarters; its case studies name Humana and MyCare Medical. Its trust center names SOC 2 Type II and HIPAA, and the company has a public pricing page and developer documentation. Funding records show a July 2021 Series C as the latest dated deal found, so it did not raise in the previous 18 months. The current careers board says there are no openings; the dated news archive and changelog show no product launch in the six-month window. A LinkedIn profile lists Vim Chief Growth Officer Yuval Rechter starting in March 2026. Vim’s public materials reviewed did not identify its own AI model provider.",
+      "confidence": "high",
+      "stepsTaken": [
+       "Visited https://getvim.com/press-kit",
+       "Visited https://www.getvim.ai/trust-center",
+       "Visited https://medium.com/getvim",
+       "Visited https://medium.com/getvim/put-the-hack-back-in-hackathon-1a67f935c845",
+       "Visited https://medium.com/getvim/writing-scalable-types-in-typescript-83b73e1fd578",
+       "Visited https://getvim.com/case-studies/humana",
+       "Visited https://getvim.com/case-studies/mycare-medical",
+       "Visited https://getvim.com/",
+       "Visited https://getvim.com/vim-canvas-pricing",
+       "Visited https://pitchbook.com/profiles/company/166321-18",
+       "Visited https://job-boards.greenhouse.io/vim",
+       "Visited https://www.getvim.ai/media",
+       "Visited https://docs.getvim.com/change-log/index",
+       "Visited https://www.linkedin.com/in/yuval-rechter-52650b3/",
+       "Visited https://getvim.com/about-us",
+       "Visited https://docs.getvim.com/platform/platform",
+       "Visited https://job-boards.greenhouse.io/vim/jobs/7938820"
+      ],
+      "hq_location": {
+       "notes": "Vim’s press kit lists New York, NY as a headquarters location; the company profile identifies its New York office in the United States.",
+       "value": {
+        "city": "New York",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://getvim.com/press-kit",
+        "https://pitchbook.com/profiles/company/166321-18"
+       ]
+      },
+      "public_docs": {
+       "notes": "Vim publishes a developer documentation site with multiple navigation sections and guides.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://docs.getvim.com/",
+        "https://docs.getvim.com/platform/platform"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The latest specifically dated funding deal found was the July 2021 Series C, well before the 18 months ending November 9, 2026.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://pitchbook.com/profiles/company/166321-18",
+        "https://getvim.com/about-us"
+       ]
+      },
+      "founded_year": {
+       "notes": "The press kit states Vim was founded in 2015.",
+       "value": 2015,
+       "status": "asserted",
+       "citations": [
+        "https://getvim.com/press-kit"
+       ]
+      },
+      "last_funding": {
+       "notes": "PitchBook identifies a July 1, 2021 Series C deal of $24.7M, while Vim’s history also records Series C funding in 2021. Funding summaries differ on round classification and amounts; this uses the later, specifically dated Series C deal entry.",
+       "value": {
+        "date": "2021-07",
+        "stage": "Series C",
+        "amount_usd": 24700000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://pitchbook.com/profiles/company/166321-18",
+        "https://getvim.com/about-us"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The newsroom’s newest dated items are from March 2026, and the changelog’s newest dated feature release is March 10, 2026, both before the May 9–November 9, 2026 window. The site has an undated AgentFlow teaser, but no dated launch announcement for it was found.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.getvim.ai/media",
+        "https://docs.getvim.com/change-log/index"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The page publicly describes pricing models and plans, including enterprise/custom pricing.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://getvim.com/vim-canvas-pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The company press kit reports 132 employees.",
+       "value": "101-200",
+       "status": "asserted",
+       "citations": [
+        "https://getvim.com/press-kit"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "The current Greenhouse board states there are no current openings.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://job-boards.greenhouse.io/vim"
+       ]
+      },
+      "model_provider": {
+       "notes": "Reviewed Vim’s public developer documentation, trust center, blog materials, and privacy information; none of the available material identifies the model or model provider used by Vim’s own product.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "Both are identified in Vim case studies as organizations that partnered with or deployed Vim.",
+       "value": [
+        "Humana",
+        "MyCare Medical"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://getvim.com/case-studies/humana",
+        "https://getvim.com/case-studies/mycare-medical"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The company’s current Greenhouse careers board says there are no current openings.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://job-boards.greenhouse.io/vim"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The trust center names SOC 2 Type II and HIPAA; it also mentions HITRUST, which is outside the requested list.",
+       "value": [
+        "SOC 2 Type II",
+        "HIPAA"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.getvim.ai/trust-center"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "These CRM, advertising, outbound, meeting, and automation tools appear in Vim’s Revenue Operations job-post stack; general-purpose documentation and data-warehouse tools are omitted.",
+       "value": [
+        "HubSpot",
+        "Meta Ads",
+        "Clay",
+        "HeyReach",
+        "Fathom",
+        "n8n"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://job-boards.greenhouse.io/vim/jobs/7938820"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "This summarizes Vim’s stated platform and the healthcare stakeholders it serves.",
+       "value": "Vim connects payers, providers, EHRs, and healthcare technology developers through an in-workflow platform that puts data, tools, and applications into clinical workflows at the point of care.",
+       "status": "asserted",
+       "citations": [
+        "https://getvim.com/",
+        "https://getvim.com/press-kit"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "Yuval Rechter’s profile lists his current Chief Growth Officer role at Vim starting in March 2026, within the 12 months before November 9, 2026.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/in/yuval-rechter-52650b3/"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "getvim.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "Vim Engineering has multiple technical posts, including an engineering-security hackathon write-up and a post on TypeScript practices used at Vim.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://medium.com/getvim",
+      "https://medium.com/getvim/put-the-hack-back-in-hackathon-1a67f935c845",
+      "https://medium.com/getvim/writing-scalable-types-in-typescript-83b73e1fd578"
+     ]
+    },
+    "reasoning": "Vim’s own press kit and product site describe its healthcare workflow platform, founded in 2015, with 132 employees and New York headquarters; its case studies name Humana and MyCare Medical. Its trust center names SOC 2 Type II and HIPAA, and the company has a public pricing page and developer documentation. Funding records show a July 2021 Series C as the latest dated deal found, so it did not raise in the previous 18 months. The current careers board says there are no openings; the dated news archive and changelog show no product launch in the six-month window. A LinkedIn profile lists Vim Chief Growth Officer Yuval Rechter starting in March 2026. Vim’s public materials reviewed did not identify its own AI model provider.",
+    "confidence": "high",
+    "stepsTaken": [
+     "Visited https://getvim.com/press-kit",
+     "Visited https://www.getvim.ai/trust-center",
+     "Visited https://medium.com/getvim",
+     "Visited https://medium.com/getvim/put-the-hack-back-in-hackathon-1a67f935c845",
+     "Visited https://medium.com/getvim/writing-scalable-types-in-typescript-83b73e1fd578",
+     "Visited https://getvim.com/case-studies/humana",
+     "Visited https://getvim.com/case-studies/mycare-medical",
+     "Visited https://getvim.com/",
+     "Visited https://getvim.com/vim-canvas-pricing",
+     "Visited https://pitchbook.com/profiles/company/166321-18",
+     "Visited https://job-boards.greenhouse.io/vim",
+     "Visited https://www.getvim.ai/media",
+     "Visited https://docs.getvim.com/change-log/index",
+     "Visited https://www.linkedin.com/in/yuval-rechter-52650b3/",
+     "Visited https://getvim.com/about-us",
+     "Visited https://docs.getvim.com/platform/platform",
+     "Visited https://job-boards.greenhouse.io/vim/jobs/7938820"
+    ],
+    "hq_location": {
+     "notes": "Vim’s press kit lists New York, NY as a headquarters location; the company profile identifies its New York office in the United States.",
+     "value": {
+      "city": "New York",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://getvim.com/press-kit",
+      "https://pitchbook.com/profiles/company/166321-18"
+     ]
+    },
+    "public_docs": {
+     "notes": "Vim publishes a developer documentation site with multiple navigation sections and guides.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://docs.getvim.com/",
+      "https://docs.getvim.com/platform/platform"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The latest specifically dated funding deal found was the July 2021 Series C, well before the 18 months ending November 9, 2026.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://pitchbook.com/profiles/company/166321-18",
+      "https://getvim.com/about-us"
+     ]
+    },
+    "founded_year": {
+     "notes": "The press kit states Vim was founded in 2015.",
+     "value": 2015,
+     "status": "asserted",
+     "citations": [
+      "https://getvim.com/press-kit"
+     ]
+    },
+    "last_funding": {
+     "notes": "PitchBook identifies a July 1, 2021 Series C deal of $24.7M, while Vim’s history also records Series C funding in 2021. Funding summaries differ on round classification and amounts; this uses the later, specifically dated Series C deal entry.",
+     "value": {
+      "date": "2021-07",
+      "stage": "Series C",
+      "amount_usd": 24700000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://pitchbook.com/profiles/company/166321-18",
+      "https://getvim.com/about-us"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The newsroom’s newest dated items are from March 2026, and the changelog’s newest dated feature release is March 10, 2026, both before the May 9–November 9, 2026 window. The site has an undated AgentFlow teaser, but no dated launch announcement for it was found.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.getvim.ai/media",
+      "https://docs.getvim.com/change-log/index"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The page publicly describes pricing models and plans, including enterprise/custom pricing.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://getvim.com/vim-canvas-pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The company press kit reports 132 employees.",
+     "value": "101-200",
+     "status": "asserted",
+     "citations": [
+      "https://getvim.com/press-kit"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "The current Greenhouse board states there are no current openings.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://job-boards.greenhouse.io/vim"
+     ]
+    },
+    "model_provider": {
+     "notes": "Reviewed Vim’s public developer documentation, trust center, blog materials, and privacy information; none of the available material identifies the model or model provider used by Vim’s own product.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "Both are identified in Vim case studies as organizations that partnered with or deployed Vim.",
+     "value": [
+      "Humana",
+      "MyCare Medical"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://getvim.com/case-studies/humana",
+      "https://getvim.com/case-studies/mycare-medical"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The company’s current Greenhouse careers board says there are no current openings.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://job-boards.greenhouse.io/vim"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The trust center names SOC 2 Type II and HIPAA; it also mentions HITRUST, which is outside the requested list.",
+     "value": [
+      "SOC 2 Type II",
+      "HIPAA"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.getvim.ai/trust-center"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "These CRM, advertising, outbound, meeting, and automation tools appear in Vim’s Revenue Operations job-post stack; general-purpose documentation and data-warehouse tools are omitted.",
+     "value": [
+      "HubSpot",
+      "Meta Ads",
+      "Clay",
+      "HeyReach",
+      "Fathom",
+      "n8n"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://job-boards.greenhouse.io/vim/jobs/7938820"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "This summarizes Vim’s stated platform and the healthcare stakeholders it serves.",
+     "value": "Vim connects payers, providers, EHRs, and healthcare technology developers through an in-workflow platform that puts data, tools, and applications into clinical workflows at the point of care.",
+     "status": "asserted",
+     "citations": [
+      "https://getvim.com/",
+      "https://getvim.com/press-kit"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "Yuval Rechter’s profile lists his current Chief Growth Officer role at Vim starting in March 2026, within the 12 months before November 9, 2026.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/in/yuval-rechter-52650b3/"
+     ]
+    }
+   }
+  }
+ }
+}

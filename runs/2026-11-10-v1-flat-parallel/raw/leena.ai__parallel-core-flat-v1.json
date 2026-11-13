@@ -1,0 +1,540 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e878c8d8c559f20d2",
+  "interaction_id": "trun_142119f6a1b4439e878c8d8c559f20d2",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "leena.ai"
+  },
+  "created_at": "2026-11-10T18:47:28.582142Z",
+  "modified_at": "2026-11-10T18:54:00.886789Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e878c8d8c559f20d2",
+   "interaction_id": "trun_142119f6a1b4439e878c8d8c559f20d2",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "leena.ai"
+   },
+   "created_at": "2026-11-10T18:47:28.582142Z",
+   "modified_at": "2026-11-10T18:54:00.886789Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Leena AI: AI Colleagues for Enterprise back-office Automation",
+       "url": "https://leena.ai/about-us",
+       "excerpts": [
+        "About Leena AI Leena AI is a pioneer in Agentic AI Colleagues for enterprises - voice-enabled, personified AI coworkers prebuilt for IT, HR, Finance, and Procurement."
+       ]
+      }
+     ],
+     "reasoning": "Leena AI\u2019s official About page explicitly says it was founded in 2018.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust & Security at Leena AI | Enterprise Agentic AI",
+       "url": "https://leena.ai/platform/enterprise-agentic-ai-trust-security",
+       "excerpts": [
+        "SOC 1, SOC 2 Type II, ISO 27001, ISO 27017, ISO 27018, ISO 27701, HIPAA, GDPR, CCPA, LGPD, VCDPA and CSA STAR."
+       ]
+      }
+     ],
+     "reasoning": "The official Trust & Security page names SOC 2 Type II, ISO 27001, HIPAA, and GDPR among its certifications; the answer includes only the requested categories appearing there.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Contact us | Leena AI",
+       "url": "https://leena.ai/contact-us",
+       "excerpts": [
+        "Where we work New York, NY New York, NY 132 West, 31st Street, Suite #1006, NY 10001"
+       ]
+      }
+     ],
+     "reasoning": "The official contact page lists the company\u2019s New York, NY location and street address, establishing its U.S. headquarters location.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Leena AI PDF Parsing Pipelines: Accuracy, Speed, and Scale",
+       "url": "https://leena.ai/blog/enterprise-grade-pdf-parsing-pipelines-accuracy-speed-and-scale-for-2025",
+       "excerpts": [
+        "Over the past quarter, our engineering team undertook an ambitious overhaul of our PDF parsing pipeline. We set out to enhance extraction accuracy, dramatically increase throughput, and robustly handle the growing volume of enterprise documents. The result is a future-proof pipeline delivering up to 22% improvement in layout ... 3\\.1 Model Transition: Detectron2 to In-house Model We evaluated several architectures, Detectron2, EfficientDet, and Model variants, against enterprise-specific metrics for small-object recall and inference cost on GPU and FPGA. ... Each service ingests a chunk of pages, extracts tables via an optimized PDF SDK, and writes JSON schemas to S3. A Lambda function collates results and triggers downstream indexing."
+       ]
+      },
+      {
+       "title": "How Do We Benchmark an Agentic AI System? Here\u2019s Our Approach, Fully Open. - Leena AI Blog",
+       "url": "https://leena.ai/blog/how-do-we-benchmark-an-agentic-ai-system-heres-our-approach-fully-open",
+       "excerpts": [
+        "Every vendor building AI agents for the enterprise, ourselves included, makes claims about accuracy, reliability, and performance. Almost none of those claims are independently reproducible. ... Consider a workflow like reconciling a purchase order against an invoice and a receipt. ... These are the individual capabilities an agent draws on inside those workflows: parsing a document, looking up an employee record, running a calculation, executing code, managing a case. ... |Accuracy / Pass rate |Of all scenarios, how many the agent got right end-to-end (the headline number). | ... He has been at Leena AI for 7+ years (since the start) and is VP of Engineering. He was previously Co-Founder, VadR Inc. (Amplitude for Extended Reality apps). He graduated from IIT Delhi."
+       ]
+      }
+     ],
+     "reasoning": "Leena AI\u2019s blog includes a technical deep dive into its PDF parsing pipeline and its engineering team\u2019s work, and a separate reproducible agent-benchmarking article written by its VP of Engineering. These are two product-building technical posts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Welcome to Leena AI",
+       "url": "https://docs.leena.ai/docs/welcome-to-leena-ai",
+       "excerpts": [
+        "Welcome to Leena AI Leena AI is an enterprise Agentic AI platform built for global organizations. Our **AI Colleagues** act as persistent digital workers for the back office \u2014 they understand requests, take action, and ... This documentation is your complete reference for configuring, deploying, and governing Leena AI across your enterprise."
+       ]
+      }
+     ],
+     "reasoning": "The official documentation describes an enterprise Agentic AI platform for global organizations whose AI Colleagues are digital workers for automating back-office work.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Leena Ai",
+       "url": "https://linkedin.com/company/leena-ai",
+       "excerpts": [
+        "employee count: 327"
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn\u2019s company profile reports 327 employees, which falls in the 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Model configuration",
+       "url": "https://docs.leena.ai/docs/model-configuration",
+       "excerpts": [
+        "| Provider                   | Available models                                                                                            |",
+        "| -------------------------- | ----------------------------------------------------------------------------------------------------------- |",
+        "| OpenAI                     | GPT 6 Astra (New), GPT 6.1 Sol (New), GPT 5.6 Terra (New), GPT 5.5, GPT 4.1 (retiring)                      |",
+        "| Azure OpenAI               | GPT 6 Astra (New), GPT 6.1 Sol (New), GPT 5.6 Terra (New), GPT 5.5, GPT 4.1 (retiring)                      |",
+        "| Anthropic                  | Opus 5.5 (New), Sonnet 5.5 (New), Sonnet 4.6, Opus 4.7 (retiring), Opus 4.6 (retiring), Opus 4.5 (retiring) |",
+        "| Amazon Bedrock (Anthropic) | Opus 5.5 (New), Sonnet 5.5 (New), Sonnet 4.6, Opus 4.7 (retiring), Opus 4.6 (retiring), Opus 4.5 (retiring) |"
+       ]
+      }
+     ],
+     "reasoning": "The official model-configuration documentation lists OpenAI, Azure OpenAI, Anthropic, and Amazon Bedrock as providers for the Master Orchestrator model.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Leena AI Pricing | Custom Quote in One Business Day",
+       "url": "https://leena.ai/pricing",
+       "excerpts": [
+        "Leena AI pricing, built around your numbers Answer six questions, and we'll price a proposal based on your headcount, use cases, and volumes. About two minutes. No email needed until the last step. **Universal Assistant** : Flat license, per employee per year. Unlimited use. **AI Colleagues Platform** : Platform fee + usage, billed in tokens you can audit. **Integrations** : Included. 200+ pre-built connectors, not custom code:"
+       ]
+      }
+     ],
+     "reasoning": "The official pricing URL provides pricing information and describes the pricing model and proposal calculator, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "HCCB case study",
+       "url": "https://leena.ai/HCCB-employee-experience-ai",
+       "excerpts": [
+        "Customer Hindustan Coca-Cola Beverages FMCG"
+       ]
+      },
+      {
+       "title": "Beacon Mobility\u2019s employee support gets an Agentic AI makeover",
+       "url": "https://leena.ai/agentic-ai-for-beacon-mobility",
+       "excerpts": [
+        "Customer Beacon Mobility Transportation"
+       ]
+      }
+     ],
+     "reasoning": "Two official Leena AI case studies explicitly identify Hindustan Coca-Cola Beverages and Beacon Mobility as customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Ibm Ventures Invests In Leena Ai To Accelerate Agentic Ai Across The Enterprise Back Office 302914251",
+       "url": "https://www.prnewswire.com/news-releases/ibm-ventures-invests-in-leena-ai-to-accelerate-agentic-ai-across-the-enterprise-back-office-302914251.html",
+       "excerpts": [
+        "Strategic investment backs Leena AI's AI Colleague platform as enterprises move from AI assistants to autonomous AI agents for HR, IT and Finance operations NEW YORK , Oct. 20, 2026 /PRNewswire/ -- Leena AI, the enterprise agentic AI company, today announced a strategic investment from IBM Ventures, the venture capital arm of IBM (NYSE: IBM). The investment will support Leena AI's growth as enterprise demand rises for AI agents that run back-office processes end to end rather than simply answer questions."
+       ]
+      }
+     ],
+     "reasoning": "The dated announcement reports a strategic investment from IBM Ventures on October 20, 2026; the requested month is 2026-10.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Enterprise Sales Development Representative- Europe @ Leena AI | Quiet Job Board",
+       "url": "https://careers.quiet.com/companies/leena-ai/jobs/98737938-enterprise-sales-development-representative-europe",
+       "excerpts": [
+        "Familiarity with **CRM** software such as **Salesforce, HubSpot** , or similar platforms.",
+        "**CRM Management:** Accurately record and track all sales activities, leads, and opportunities in the CRM system - HubSpot."
+       ]
+      }
+     ],
+     "reasoning": "Leena AI\u2019s sales-development job postings name Salesforce and HubSpot as CRM systems, and one identifies HubSpot as its CRM system.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/tarunbhatti",
+       "excerpts": [
+        "company name: Leena AI title: Vice President, Product Marketing and Brand Marketing start date year: 2026 start date: 2026-01-01 locality: Present ... Proficiency name: Native or bilingual proficiency Experience is current: true company name: Leena AI locality: Present start date: 2026-01-01 start date year: 2026 title: Vice President, Product Marketing and Brand Marketing Seniority seniority: Vice President (VP)"
+       ]
+      }
+     ],
+     "reasoning": "The captured profile identifies a current Leena AI VP role and a 2026 start date, placing a VP-level join within the 12-month window before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Engineering Manager - AL/ML @ Leena AI | B Capital Job Board",
+       "url": "https://jobs.b.capital/companies/leena-ai/jobs/92146253-engineering-manager-al-ml",
+       "excerpts": [
+        "Engineering Manager - AL/ML Leena AI Leena AI Software Engineering, Other Engineering, Data Science\u00b7Full-time Gurugram, Haryana, India Postedon Sep 3, 2026 Apply now"
+       ]
+      },
+      {
+       "title": "Leena AI \u2014 All Open Positions",
+       "url": "https://apply.workable.com/leena-ai/jobs.md",
+       "excerpts": [
+        "# Leena AI \u2014 All Open Positions",
+        "> Last updated: 2026-11-03",
+        "| Title | Department | Location | Type | Salary | Posted | Details |",
+        "|-------|-----------|----------|------|--------|--------|---------|",
+        "| Enterprise Sales Development Representative- Europe | Business Development | Gurugram, India | Full-time | \u2014 | 2026-09-11 | [View](https://apply.workable.com/leena-ai/jobs/view/5C7CA928D2.md) |",
+        "| Enterprise Sales Development Representative - US | Business Development | Bengaluru, India | Full-time | \u2014 | 2026-09-11 | [View](https://apply.workable.com/leena-ai/jobs/view/6DB727B53E.md) |",
+        "| VP, Demand Generation | Demand Generation | New York, United States | Full-time | \u2014 | 2026-09-25 | [View](https://apply.workable.com/leena-ai/jobs/view/9F39D55151.md) |",
+        "| Integration Architect (Workday) | Engineering Integration Architect | Gurugram, India | Full-time | \u2014 | 2026-10-09 | [View](https://apply.workable.com/leena-ai/jobs/view/D2E4D92832.md) |",
+        "| Controller | Finance | New York, United States (Hybrid) | Full-time | USD 180,000\u2013225,000 | 2026-09-24 | [View](https://apply.workable.com/leena-ai/jobs/view/E1AEC3AA9E.md) |",
+        "| Director of Technical Delivery | Forward Deployed Engineer | United States (Remote) | Full-time | USD 180,000\u2013240,000 | 2026-10-29 | [View](https://apply.workable.com/leena-ai/jobs/view/DEDE57949D.md) |",
+        "| Forward Deployed Engineer | Forward Deployed Engineer | Gurugram, India | \u2014 | \u2014 | 2026-10-22 | [View](https://apply.workable.com/leena-ai/jobs/view/923BDC8170.md) |",
+        "| Forward Deployed Engineer | Forward Deployed Engineer | United States (Remote) | Full-time | USD 150,000\u2013220,000 | 2026-09-25 | [View](https://apply.workable.com/leena-ai/jobs/view/D4C4A9641D.md) |",
+        "| Senior QA Engineer - Implementation | Implementation QA | Gurugram, India | Full-time | \u2014 | 2026-10-26 | [View](https://apply.workable.com/leena-ai/jobs/view/68D93DAEF4.md) |",
+        "| Senior Account Executive - Enterprise | Leena AI (US) | United States (Remote) | Full-time | USD 300,000\u2013400,000 | 2026-10-02 | [View](https://apply.workable.com/leena-ai/jobs/view/01DB703E7F.md) |",
+        "| Project Manager, Professional Services (International Market) | Project Manager | Gurugram, India | \u2014 | \u2014 | 2026-10-26 | [View](https://apply.workable.com/leena-ai/jobs/view/322BD9B3B5.md) |",
+        "| Senior Solution Consultant | Solution Consultant | Gurugram, India | Full-time | \u2014 | 2026-10-22 | [View](https://apply.workable.com/leena-ai/jobs/view/9CBF6EB683.md) |"
+       ]
+      }
+     ],
+     "reasoning": "A Leena AI Engineering Manager - AI/ML posting on the B Capital job board is dated September 3, 2026 and still presents an Apply now action. The official Workable list last updated November 3 does not show that title, so the answer is based on the apparently live ML posting and carries some source-status uncertainty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Ibm Ventures Invests In Leena Ai To Accelerate Agentic Ai Across The Enterprise Back Office 302914251",
+       "url": "https://www.prnewswire.com/news-releases/ibm-ventures-invests-in-leena-ai-to-accelerate-agentic-ai-across-the-enterprise-back-office-302914251.html",
+       "excerpts": [
+        "Strategic investment backs Leena AI's AI Colleague platform as enterprises move from AI assistants to autonomous AI agents for HR, IT and Finance operations NEW YORK , Oct. 20, 2026 /PRNewswire/ -- Leena AI, the enterprise agentic AI company, today announced a strategic investment from IBM Ventures"
+       ]
+      }
+     ],
+     "reasoning": "The latest dated funding announcement characterizes IBM Ventures\u2019 October 2026 funding as a strategic investment.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Welcome to Leena AI",
+       "url": "https://docs.leena.ai/docs/welcome-to-leena-ai",
+       "excerpts": [
+        "Welcome to Leena AI Leena AI is an enterprise Agentic AI platform built for global organizations. Our **AI Colleagues** act as persistent digital workers for the back office \u2014 they understand requests, take action, and ... This documentation is your complete reference for configuring, deploying, and governing Leena AI across your enterprise. *** \ud83d\udee0 Build Design the AI agents, automations, and knowledge that power your employee experience. <Cards columns=\"3\"> ... Create, configure, and manage AI Colleagues \u2014 tools, actions, knowledge access, and responses. </Card> <Card title=\"Workflows Studio\" href=\"https://docs.leena.ai/docs/overview-1\" icon=\"fa-diagram-project\" target=\"_blank\"> Automate multi-step processes with forms, approval paths, logic nodes, and integrations."
+       ]
+      },
+      {
+       "title": "Knowledge Article Generation and Management",
+       "url": "https://docs.leena.ai/docs/knowledge-article-generation-and-management",
+       "excerpts": [
+        "[Documentation](https://docs.leena.ai/docs) [Product Updates](https://docs.leena.ai/changelog) Knowledge Article Generation and Management Getting Started ... [Initiating a Workflow via Virtual Assistant](https://docs.leena.ai/docs/initiating-a-workflow-via-virtual-assistant) [AI-Assisted Documentation](https://docs.leena.ai/docs/ai-assisted-documentation) Integrations [Overview](https://docs.leena.ai/docs/overview-7) ... [Candidate Metrics](https://docs.leena.ai/docs/candidate-metrics) NOTIFICATIONs [User Guide](https://docs.leena.ai/docs/user-guide-4) ... Knowledge Article Generation and Management Knowledge Creation Helpdesk Insights can generate generates knowledge articles, with a click of a button, based on the insights gained from clustered tickets."
+       ]
+      }
+     ],
+     "reasoning": "Leena AI has a public documentation site describing itself as a complete reference and linking to multiple guides and feature articles.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Contact us | Leena AI",
+       "url": "https://leena.ai/contact-us",
+       "excerpts": [
+        "Where we work New York, NY New York, NY 132 West, 31st Street, Suite #1006, NY 10001"
+       ]
+      }
+     ],
+     "reasoning": "The official contact page lists the company\u2019s New York, NY location and its New York street address.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Introducing Leena Forge: pilot to production in 187 days, then 43. Next, hours. - Leena AI Blog",
+       "url": "https://leena.ai/blog/introducing-leenaai-forge",
+       "excerpts": [
+        "# Introducing Leena Forge: pilot to production in 187 days, then 43. Next, hours.",
+        "Most AI pilots never reach production, and the ones that do rarely lead to a second. Leena Forge, live today, is how we start closing that gap.",
+        "Written by",
+        "Tarun Bhatti",
+        "Tarun Bhatti VP Product Marketing & Brand Marketing",
+        "Details",
+        "Published: **October 14, 2026**"
+       ]
+      }
+     ],
+     "reasoning": "Leena AI announced Leena Forge as live on October 14, 2026, within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Leena AI \u2014 All Open Positions",
+       "url": "https://apply.workable.com/leena-ai/jobs.md",
+       "excerpts": [
+        "# Leena AI \u2014 All Open Positions",
+        "> Last updated: 2026-11-03",
+        "| Title | Department | Location | Type | Salary | Posted | Details |",
+        "|-------|-----------|----------|------|--------|--------|---------|",
+        "| Enterprise Sales Development Representative- Europe | Business Development | Gurugram, India | Full-time | \u2014 | 2026-09-11 | [View](https://apply.workable.com/leena-ai/jobs/view/5C7CA928D2.md) |",
+        "| Enterprise Sales Development Representative - US | Business Development | Bengaluru, India | Full-time | \u2014 | 2026-09-11 | [View](https://apply.workable.com/leena-ai/jobs/view/6DB727B53E.md) |",
+        "| VP, Demand Generation | Demand Generation | New York, United States | Full-time | \u2014 | 2026-09-25 | [View](https://apply.workable.com/leena-ai/jobs/view/9F39D55151.md) |",
+        "| Integration Architect (Workday) | Engineering Integration Architect | Gurugram, India | Full-time | \u2014 | 2026-10-09 | [View](https://apply.workable.com/leena-ai/jobs/view/D2E4D92832.md) |",
+        "| Controller | Finance | New York, United States (Hybrid) | Full-time | USD 180,000\u2013225,000 | 2026-09-24 | [View](https://apply.workable.com/leena-ai/jobs/view/E1AEC3AA9E.md) |",
+        "| Director of Technical Delivery | Forward Deployed Engineer | United States (Remote) | Full-time | USD 180,000\u2013240,000 | 2026-10-29 | [View](https://apply.workable.com/leena-ai/jobs/view/DEDE57949D.md) |",
+        "| Forward Deployed Engineer | Forward Deployed Engineer | Gurugram, India | \u2014 | \u2014 | 2026-10-22 | [View](https://apply.workable.com/leena-ai/jobs/view/923BDC8170.md) |",
+        "| Forward Deployed Engineer | Forward Deployed Engineer | United States (Remote) | Full-time | USD 150,000\u2013220,000 | 2026-09-25 | [View](https://apply.workable.com/leena-ai/jobs/view/D4C4A9641D.md) |",
+        "| Senior QA Engineer - Implementation | Implementation QA | Gurugram, India | Full-time | \u2014 | 2026-10-26 | [View](https://apply.workable.com/leena-ai/jobs/view/68D93DAEF4.md) |",
+        "| Senior Account Executive - Enterprise | Leena AI (US) | United States (Remote) | Full-time | USD 300,000\u2013400,000 | 2026-10-02 | [View](https://apply.workable.com/leena-ai/jobs/view/01DB703E7F.md) |"
+       ]
+      }
+     ],
+     "reasoning": "The current Workable openings list includes two Enterprise Sales Development Representative roles and a Senior Account Executive role.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Ibm Ventures Invests In Leena Ai To Accelerate Agentic Ai Across The Enterprise Back Office 302914251",
+       "url": "https://www.prnewswire.com/news-releases/ibm-ventures-invests-in-leena-ai-to-accelerate-agentic-ai-across-the-enterprise-back-office-302914251.html",
+       "excerpts": [
+        "Strategic investment backs Leena AI's AI Colleague platform as enterprises move from AI assistants to autonomous AI agents for HR, IT and Finance operations NEW YORK , Oct. 20, 2026 /PRNewswire/ -- Leena AI, the enterprise agentic AI company, today announced a strategic investment from IBM Ventures, the venture capital arm of IBM (NYSE: IBM). The investment will support Leena AI's growth as enterprise demand rises"
+       ]
+      }
+     ],
+     "reasoning": "The October 20, 2026 strategic investment occurred within the 18 months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust & Security at Leena AI | Enterprise Agentic AI",
+       "url": "https://leena.ai/platform/enterprise-agentic-ai-trust-security",
+       "excerpts": [
+        "SOC 1, SOC 2 Type II, ISO 27001, ISO 27017, ISO 27018, ISO 27701, HIPAA, GDPR, CCPA, LGPD, VCDPA and CSA STAR."
+       ]
+      }
+     ],
+     "reasoning": "The Trust & Security page names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust & Security at Leena AI | Enterprise Agentic AI",
+       "url": "https://leena.ai/platform/enterprise-agentic-ai-trust-security",
+       "excerpts": [
+        "SOC 1, SOC 2 Type II, ISO 27001, ISO 27017, ISO 27018, ISO 27701, HIPAA, GDPR, CCPA, LGPD, VCDPA and CSA STAR."
+       ]
+      }
+     ],
+     "reasoning": "The Trust & Security page names ISO 27001.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Trust & Security at Leena AI | Enterprise Agentic AI",
+       "url": "https://leena.ai/platform/enterprise-agentic-ai-trust-security",
+       "excerpts": [
+        "SOC 1, SOC 2 Type II, ISO 27001, ISO 27017, ISO 27018, ISO 27701, HIPAA, GDPR, CCPA, LGPD, VCDPA and CSA STAR."
+       ]
+      }
+     ],
+     "reasoning": "The Trust & Security page names HIPAA.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Trust & Security at Leena AI | Enterprise Agentic AI",
+       "url": "https://leena.ai/platform/enterprise-agentic-ai-trust-security",
+       "excerpts": [
+        "SOC 1, SOC 2 Type II, ISO 27001, ISO 27017, ISO 27018, ISO 27701, HIPAA, GDPR, CCPA, LGPD, VCDPA and CSA STAR."
+       ]
+      }
+     ],
+     "reasoning": "The Trust & Security page names GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "HCCB case study",
+       "url": "https://leena.ai/HCCB-employee-experience-ai",
+       "excerpts": [
+        "Customer Hindustan Coca-Cola Beverages FMCG"
+       ]
+      }
+     ],
+     "reasoning": "The HCCB case study labels Hindustan Coca-Cola Beverages as the customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Beacon Mobility\u2019s employee support gets an Agentic AI makeover",
+       "url": "https://leena.ai/agentic-ai-for-beacon-mobility",
+       "excerpts": [
+        "Customer Beacon Mobility Transportation"
+       ]
+      }
+     ],
+     "reasoning": "The case study labels Beacon Mobility as the customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Enterprise Sales Development Representative- Europe @ Leena AI | Quiet Job Board",
+       "url": "https://careers.quiet.com/companies/leena-ai/jobs/98737938-enterprise-sales-development-representative-europe",
+       "excerpts": [
+        "Familiarity with **CRM** software such as **Salesforce, HubSpot** , or similar platforms."
+       ]
+      }
+     ],
+     "reasoning": "A Leena AI sales-development posting names Salesforce as CRM software.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Enterprise Sales Development Representative- Europe @ Leena AI | Quiet Job Board",
+       "url": "https://careers.quiet.com/companies/leena-ai/jobs/98737938-enterprise-sales-development-representative-europe",
+       "excerpts": [
+        "**CRM Management:** Accurately record and track all sales activities, leads, and opportunities in the CRM system - HubSpot."
+       ]
+      }
+     ],
+     "reasoning": "A Leena AI sales-development posting explicitly identifies HubSpot as its CRM system.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2018.0,
+    "compliance_certs": [
+     "SOC 2 Type II",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "Leena AI provides global enterprises with AI Colleagues\u2014digital workers that handle requests and automate complex back-office workflows.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI, Azure OpenAI, Anthropic, and Amazon Bedrock are listed as configurable model providers.",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "Hindustan Coca-Cola Beverages",
+     "Beacon Mobility"
+    ],
+    "funding_date": "2026-10",
+    "crm_stack_signal": [
+     "Salesforce",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Strategic investment",
+    "public_docs": true,
+    "hq_city": "New York",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

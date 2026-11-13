@@ -1,0 +1,22 @@
+{
+ "url": "https://developer.orangelogic.com/reference/datatable-apis",
+ "fetched_at": "2026-11-10T20:53:22.523221+00:00",
+ "hours_after_run": 44.9,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "33873683ac1ad5c8c449517aca4e8d4b989c3012092f096e4d9e9aa3b29a934a",
+ "chars": 2566,
+ "truncated": false,
+ "title": "Introduction to the DataTable APIs",
+ "markdown": "For AI agents: the docs index is at https://developer.orangelogic.com/llms.txt. Append .md to any documentation page URL to get its markdown version.\n\nOrange Logic’s DataTable APIs allow you to perform CRUD (Create/Add, Read, Update, Delete) actions on database objects. Database objects are categorized by type and include:\n\n- **Documents**: All digitized and non-digitized assets stored in the Orange Logic platform, including files (audio, images, text documents, video, etc.) and containers (folders, virtual folders, etc.)\n- **Contacts**: Orange Logic user accounts (client accounts, source accounts, staff accounts, etc.) and Groups.\n- **Keywords**: Tags added to assets and organized in Tag Types.\n\n> 📙\n>\n> ### Feature documentation   [Skip link to Feature documentation](https://developer.orangelogic.com/reference/datatable-apis\\#feature-documentation)\n>\n> Orange Logic users with a Link account can go to the following articles to learn more:\n>\n> - [Accounts](https://link.orangelogic.com/CMS4/Permalinks/2P7YOHD4UWB9)\n> - [Asset Types](https://link.orangelogic.com/CMS4/Permalinks/2P7YOHAZ296F)\n> - [Groups](https://link.orangelogic.com/CMS4/Permalinks/2P7YOHDZQUNL)\n> - [Tags](https://link.orangelogic.com/CMS4/Permalinks/2P7YOHD3LX2A)\n\n## Versioning   [Skip link to Versioning](https://developer.orangelogic.com/reference/datatable-apis\\#versioning)\n\n**DataTable v2.2** is used for most actions on documents (assets), such as audio, images, folders, text documents, videos, virtual folders, etc.\n\n> **POST** or **GET** **`/API/DataTable/v2.2`**\n\n**DataTable v.2.1** is used for actions on contacts, tags, and actions on documents that include Permissions.\n\n> **POST** or **GET** **`/API/DataTable/v2.1`**\n\n> ℹ️\n>\n> ### Note   [Skip link to Note](https://developer.orangelogic.com/reference/datatable-apis\\#note)\n>\n> Many Orange Logic APIs can be run as **GET** or **POST** calls. You might find running **GET** calls directly in your browser convenient for testing.\n>\n> However, be aware that there is a character limit for URLs, which varies by browser. A 403 error might indicate that your call is too long. In this situation, use the **POST** method to send the values in the body of the call as form data instead of in the URL.\n>\n> With a POST request, some parameters can be passed either in in the HTTP header or in the URL. If the same parameter is present in both places, the value in the HTTP header overrides the URL.\n\nUpdated 3 months ago\n\n* * *\n\nDid this page help you?\n\nYes\n\nNo\n\nUpdated 3 months ago\n\n* * *\n\nDid this page help you?\n\nYes\n\nNo",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true
+}

@@ -1,0 +1,742 @@
+{
+  "type": "object",
+  "properties": {
+    "product_one_liner": {
+      "type": "object",
+      "description": "What does the product do, and who is it for? One sentence.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "pricing_page": {
+      "type": "object",
+      "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "named_customers": {
+      "type": "object",
+      "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "employee_band": {
+      "type": "object",
+      "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "11-20",
+            "21-50",
+            "51-100",
+            "101-200",
+            "201-500",
+            null
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "hq_location": {
+      "type": "object",
+      "description": "Headquarters city and country.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "city": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "city",
+            "country"
+          ],
+          "additionalProperties": false
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "founded_year": {
+      "type": "object",
+      "description": "Year founded.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "eng_blog": {
+      "type": "object",
+      "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "public_docs": {
+      "type": "object",
+      "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "ai_ml_roles_open": {
+      "type": "object",
+      "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "model_provider": {
+      "type": "object",
+      "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "compliance_certs": {
+      "type": "object",
+      "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "last_funding": {
+      "type": "object",
+      "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "stage": {
+              "type": "string"
+            },
+            "date": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "description": "YYYY-MM"
+            },
+            "amount_usd": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
+          },
+          "required": [
+            "stage",
+            "date",
+            "amount_usd"
+          ],
+          "additionalProperties": false
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "raised_18mo": {
+      "type": "object",
+      "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "hiring_sdr_ae": {
+      "type": "object",
+      "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "launched_6mo": {
+      "type": "object",
+      "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "leadership_change_12mo": {
+      "type": "object",
+      "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    },
+    "crm_stack_signal": {
+      "type": "object",
+      "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.",
+      "properties": {
+        "status": {
+          "type": "string",
+          "enum": [
+            "asserted",
+            "unknown"
+          ]
+        },
+        "value": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "citations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Source URLs whose pages support the answer; empty when status is unknown."
+        },
+        "notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "value",
+        "citations",
+        "notes"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+  ],
+  "additionalProperties": false
+}

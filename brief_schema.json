@@ -1,0 +1,522 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gtmopen.com/schemas/part2-brief.v0.json",
+  "title": "GTM Research Eval \u2014 shared account brief (all configs, both tracks)",
+  "description": "Every vendor config and model-track run must emit exactly this shape per company. status=asserted requires a non-null value and >=1 citation URL; status=unknown is the honest abstention and carries value null.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "company",
+    "domain",
+    "config_id",
+    "track",
+    "run_date",
+    "answers"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "v0"
+    },
+    "company": {
+      "type": "string",
+      "minLength": 1
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.-]+\\.[a-z]{2,}$"
+    },
+    "config_id": {
+      "type": "string",
+      "description": "e.g. exa-agent-high-B-v1, parallel-core-A-v1, parallel-core-flat-v1, claygent-argon-B-v1"
+    },
+    "track": {
+      "enum": [
+        "managed",
+        "model"
+      ]
+    },
+    "run_date": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "prompt_version": {
+      "type": "string",
+      "description": "task text version the config received (brief_task.PROMPT_VERSION)"
+    },
+    "answers": {
+      "type": "object",
+      "required": [
+        "product_one_liner",
+        "pricing_page",
+        "named_customers",
+        "employee_band",
+        "hq_location",
+        "founded_year",
+        "eng_blog",
+        "public_docs",
+        "ai_ml_roles_open",
+        "model_provider",
+        "compliance_certs",
+        "last_funding",
+        "raised_18mo",
+        "hiring_sdr_ae",
+        "launched_6mo",
+        "leadership_change_12mo",
+        "crm_stack_signal"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "product_one_liner": {
+          "$ref": "#/$defs/ansString"
+        },
+        "pricing_page": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "named_customers": {
+          "$ref": "#/$defs/ansStringList"
+        },
+        "employee_band": {
+          "$ref": "#/$defs/ansBand"
+        },
+        "hq_location": {
+          "$ref": "#/$defs/ansLocation"
+        },
+        "founded_year": {
+          "$ref": "#/$defs/ansYear"
+        },
+        "eng_blog": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "public_docs": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "ai_ml_roles_open": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "model_provider": {
+          "$ref": "#/$defs/ansString"
+        },
+        "compliance_certs": {
+          "$ref": "#/$defs/ansStringList"
+        },
+        "last_funding": {
+          "$ref": "#/$defs/ansFunding"
+        },
+        "raised_18mo": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "hiring_sdr_ae": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "launched_6mo": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "leadership_change_12mo": {
+          "$ref": "#/$defs/ansBool"
+        },
+        "crm_stack_signal": {
+          "$ref": "#/$defs/ansStringList"
+        },
+        "sales_leader": {
+          "$ref": "#/$defs/ansPerson"
+        },
+        "marketing_leader": {
+          "$ref": "#/$defs/ansPerson"
+        }
+      }
+    },
+    "trajectory": {
+      "type": "object",
+      "description": "Model track: always. Managed track: whatever the vendor API exposes, else omit.",
+      "additionalProperties": false,
+      "properties": {
+        "queries_issued": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sources_opened": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "sources_rejected": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "tool_calls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "stopped_reason": {
+          "enum": [
+            "sufficient_evidence",
+            "budget_exhausted",
+            "vendor_internal",
+            "error"
+          ]
+        }
+      }
+    },
+    "cost_usd": {
+      "type": "number",
+      "minimum": 0
+    },
+    "latency_seconds": {
+      "type": "number",
+      "minimum": 0
+    }
+  },
+  "$defs": {
+    "citations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^https?://"
+      },
+      "minItems": 1
+    },
+    "unknownArm": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "const": "unknown"
+        },
+        "value": {
+          "type": "null"
+        },
+        "citations": {
+          "type": "array",
+          "maxItems": 0
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ansString": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "type": "string",
+              "minLength": 1
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansBool": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "type": "boolean"
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansStringList": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansBand": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "enum": [
+                "11-20",
+                "21-50",
+                "51-100",
+                "101-200",
+                "201-500"
+              ]
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansLocation": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "type": "object",
+              "required": [
+                "city",
+                "country"
+              ],
+              "properties": {
+                "city": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansYear": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 1900,
+              "maximum": 2026
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansFunding": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "oneOf": [
+                {
+                  "const": "none"
+                },
+                {
+                  "type": "object",
+                  "required": [
+                    "stage",
+                    "date"
+                  ],
+                  "properties": {
+                    "stage": {
+                      "type": "string"
+                    },
+                    "date": {
+                      "type": [
+                        "string",
+                        "null"
+                      ],
+                      "pattern": "^\\d{4}-\\d{2}$"
+                    },
+                    "amount_usd": {
+                      "type": [
+                        "number",
+                        "null"
+                      ],
+                      "minimum": 0
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ansPerson": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/unknownArm"
+        },
+        {
+          "type": "object",
+          "required": [
+            "status",
+            "value",
+            "citations"
+          ],
+          "properties": {
+            "status": {
+              "const": "asserted"
+            },
+            "value": {
+              "type": "object",
+              "required": [
+                "name",
+                "title"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "linkedin_url": {
+                  "type": "string",
+                  "pattern": "^https?://([a-z.]+\\.)?linkedin\\.com/"
+                }
+              },
+              "additionalProperties": false
+            },
+            "citations": {
+              "$ref": "#/$defs/citations"
+            },
+            "notes": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
+}

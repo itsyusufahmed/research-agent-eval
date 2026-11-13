@@ -1,0 +1,606 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9d93384a0c9bd20d",
+  "interaction_id": "trun_142119f6a1b4439e9d93384a0c9bd20d",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "scandit.com"
+  },
+  "created_at": "2026-11-10T18:48:18.972184Z",
+  "modified_at": "2026-11-10T18:53:26.700339Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9d93384a0c9bd20d",
+   "interaction_id": "trun_142119f6a1b4439e9d93384a0c9bd20d",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "scandit.com"
+   },
+   "created_at": "2026-11-10T18:48:18.972184Z",
+   "modified_at": "2026-11-10T18:53:26.700339Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Scandit - Smart Data Capture for the Enterprise",
+       "url": "https://www.scandit.com/company",
+       "excerpts": [
+        "Scandit, founded in 2009 by three researchers"
+       ]
+      }
+     ],
+     "reasoning": "Scandit's company page states it was founded in 2009.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Security by Design | Scandit",
+       "url": "https://www.scandit.com/company/security/",
+       "excerpts": [
+        "**Certification and governance**  ",
+        "Scandit is ISO 27001:2022 Certified and has a dedicated information security team and executive-level oversight committee.",
+        "**Product and data security**  ",
+        "All image processing is performed on the scanning device itself to ensure high availability and confidentiality.\\* Any data you choose to share with us is encrypted both during transit and at rest.",
+        "**Infrastructure security**",
+        "Data you choose to send us is protected by both Scandit\u2019s security expertise and the protection provided by industry-leading multi-certified cloud service providers.",
+        "## Our commitment to information security",
+        "### Certification and governance",
+        "**Certification and compliance:** Scandit is [ISO 27001:2022 Certified](https://www.certipedia.com/certificates/01+153+2400165%252F01?locale=en) \\*\\* \u2014 an independently audited, globally recognised enterprise-grade international standard for information security, cyber security, and privacy. Of course, we also comply with applicable privacy regulations, including GDPR and CCPA."
+       ]
+      }
+     ],
+     "reasoning": "The security page names ISO 27001:2022 certification and separately states GDPR compliance; both are among the compliance items requested.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About Scandit - Smart Data Capture for the Enterprise",
+       "url": "https://www.scandit.com/company",
+       "excerpts": [
+        "Zurich, Switzerland \u2013 Global Headquarters"
+       ]
+      }
+     ],
+     "reasoning": "Scandit's company page explicitly labels Zurich, Switzerland as its global headquarters.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Take a Look Inside the Scandit Vision AI Engine",
+       "url": "https://www.scandit.com/blog/take-a-look-inside-the-scandit-ai-engine",
+       "excerpts": [
+        "[Christian Floerkemeier](https://www.scandit.com/authors/christian-floerkemeier/) VP Product, CTO & Co-Founder Published February 26, 2026",
+        "Our [barcode scanning](https://www.scandit.com/products/barcode-scanning/) products share a unified codebase and common machine learning models. ... Barcode scanning Scandit has been using machine learning (ML) to decode barcodes from the camera feed of smart devices for over 15 years."
+       ]
+      },
+      {
+       "title": "How the Scandit Vision AI Engine Makes Shelf Technology Smarter",
+       "url": "https://www.scandit.com/blog/how-the-scandit-vision-ai-engine-makes-shelf-technology-smarter/",
+       "excerpts": [
+        "[Christian Floerkemeier](https://www.scandit.com/authors/christian-floerkemeier/) VP Product, CTO & Co-Founder Published July 15, 2026 Categories Products & Solutions",
+        "We built [ShelfView](https://www.scandit.com/products/shelfview/) , our shelf intelligence and execution solution, to close this gap. It analyzes images captured by mobile, fixed-position, and robotic cameras, and turns pictures into prioritized, actionable insights"
+       ]
+      }
+     ],
+     "reasoning": "The Scandit blog has at least two technical posts by its CTO: one discusses the Vision AI Engine's codebase and machine-learning models, and another explains how ShelfView is built and processes shelf images.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Smart Data Capture on Smart Devices",
+       "url": "https://www.scandit.com/about",
+       "excerpts": [
+        "Empower frontline workers and innovate customer experiences with Scandit Smart Data Capture. The flexible, modern way to capture barcodes, text, objects and IDs. Try for free Get pricing **Trusted by over 2,100 customers worldwide** AI-powered smart data capture Embed intelligence at the point of capture on any smart device. Adapts to context, automates data capture, and accelerates workflows to reduce operational costs."
+       ]
+      },
+      {
+       "title": "Smart Data Capture | Scanning Technology | Scandit",
+       "url": "https://www.scandit.com/products",
+       "excerpts": [
+        "Scandit Smart Data Capture Deliver real-time insights and automate processes with barcode scanning, ID scanning, and store intelligence \u2014 all powered by vision AI."
+       ]
+      }
+     ],
+     "reasoning": "Scandit describes smart data capture for frontline workers and customer experiences, with barcode, ID, text and object capture that automates processes and provides insights.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Scandit Number of Employees 2026 | Employee Count & Headcount Data | Revelio Labs",
+       "url": "https://www.reveliolabs.com/companies/scandit/employees",
+       "excerpts": [
+        "Scandit AG has approximately326 total employees worldwide as ofJune 2026 , according to Revelio Labs workforce intelligence data.Scandit\u2019s total headcount has declined28.8% from 457 employees in 2023 to 326 in 2026. ... Scandit AG is an Information Technology Services company that employs **326** people worldwide as of June 2026"
+       ]
+      },
+      {
+       "title": "Scandit - Crunchbase Company Profile & Funding",
+       "url": "https://www.crunchbase.com/organization/scandit",
+       "excerpts": [
+        "Headcount [251-500](https://www.crunchbase.com/discover/people/field/organizations/num_employees_enum/scandit) Employee Profiles"
+       ]
+      }
+     ],
+     "reasoning": "Workforce reporting places Scandit at about 326 employees, and a company profile reports a 251\u2013500 headcount range; both fall in the requested 201\u2013500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Take a Look Inside the Scandit Vision AI Engine",
+       "url": "https://www.scandit.com/blog/take-a-look-inside-the-scandit-ai-engine",
+       "excerpts": [
+        "The Scandit Vision AI Engine is the intelligence layer powering barcode scanning, ID verification, and shelf intelligence in Scandit Smart Data Capture.",
+        "In ID scanning and verification, the Scandit Vision AI Engine combines ML, vision language models (VLM), and other technologies like optical character recognition (OCR)."
+       ]
+      },
+      {
+       "title": "Privacy Policy - Subprocessors - Scandit",
+       "url": "https://www.scandit.com/privacy/subprocessors/",
+       "excerpts": [
+        "|Name of processor |Export mechanism (Standard Contractual Clauses (SCCs)) |Address |",
+        "| --- | --- | --- |",
+        "|Amazon Web Services Inc. |Standard Contractual Clauses (SCCs) |ATTN: Data Protection Officer Amazon Web Services, Inc 410 Terry Avenue North, Seattle, WA 98109-5210, USA |",
+        "|Google LLC |Standard Contractual Clauses (SCCs) |ATTN: Data Protection Officer Google LLC 1600 Amphitheatre Parkway Mountain View, CA 94043 United States |",
+        "|Hetzner Online GmbH |EU based |ATTN: Data Protection Officer Hetzner Online GmbH Industriestr. 25 91710 Gunzenhausen Germany Tel.: +49 (0)9831 505-0 Fax: +49 (0)9831 505-3 Email: [data-protection@hetzner.com](mailto:data-protection@hetzner.com) |",
+        "|Scandit Affiliates: Scandit Inc. (US) Scandit Limited (UK) Scandit Sp.zo.o. (Poland) Scandit Finland Oy (Finland) |Standard Contractual Clauses (SCCs)/EU based |ATTN: Data Protection Officer Aphaia Ltd Studio 5, 155 Commercial Street London Tel.: +44 20 3917 4158 Email: [dpo@aphaia.co.uk](mailto:dpo@aphaia.co.uk) |",
+        "|**For users of Scandit Apps in the United States of America:** **If You use the Scandit App to scan Your identification document (ID) which corresponds to the AAMVA standards, Scandit may transfer personal data encoded in the scanned barcodes of such ID to AAMVA.** Purpose: our legitimate interests to improve and develop our products and services and for debugging, statistical analysis, and performance monitoring. AAMVA will use Your personal data to confirm whether the scanned ID is likely a genuine ID. **Exercising Your rights (** **_\u201cDo Not Sell or Share My Personal Information\u201d, \u201cLimit the Use of My Sensitive Personal Information\u201d_** **):** If you do not wish Your data to be shared with AAMVA (or any other processors), please do not scan Your ID. If you wish to access Your data, have it deleted or limit the sharing and other processing of your data, please use the form provided in the Scandit App available via the App\u2019s \u201cAbout\u201d menu (in the \u201cAbout\u201d menu, click \u201cPrivacy & Terms\u201d. If you have any questions related to AAMVA\u2019s processing of your data via Scandit Apps, please reach out to Scandit via the form provided in the Scandit App. **Scandit does not sell Your data.** | | |",
+        "|AAMVA American Association of Motor Vehicle Administrators |N/A |Privacy Attn: CISO AAMVA 4401 Wilson Blvd, Suite 700 Arlington, VA 22203 |"
+       ]
+      }
+     ],
+     "reasoning": "Scandit names its own Vision AI Engine and says ID verification combines machine learning and VLMs. Its current subprocessor list does not identify a third-party AI model provider, so the answer names Scandit's engine and avoids attributing an undisclosed external provider.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Smart Data Capture on Smart Devices",
+       "url": "https://www.scandit.com/",
+       "excerpts": [
+        "Get pricing](https://www.scandit.com/pricing/)"
+       ]
+      },
+      {
+       "title": "Scandit Pricing: Fixed and Flexible Options",
+       "url": "https://www.scandit.com/pricing",
+       "excerpts": [
+        "Get a quote"
+       ]
+      }
+     ],
+     "reasoning": "The homepage links to Scandit's pricing URL, which has a pricing page and a quote request option.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Scandit Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/scandit/financials",
+       "excerpts": [
+        "Scandit's **latest funding round** was a **Series D for $150M** on **February 9, 2022** ."
+       ]
+      },
+      {
+       "title": "Scandit Announces $150m Series D Investment Led by Warburg Pincus",
+       "url": "https://www.scandit.com/blog/scandit-smart-data-capture-leader-150m-series-d-investment",
+       "excerpts": [
+        "completed a Series D funding round of $150 million at a company valuation in excess of $1 billion."
+       ]
+      }
+     ],
+     "reasoning": "The funding history identifies a latest Series D on February 9, 2022, and Scandit's announcement states that round raised $150 million.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customer Stories | Scandit",
+       "url": "https://www.scandit.com/resources/customer-stories",
+       "excerpts": [
+        "VF Corporation [Read the case study",
+        "Chace Burnette Chace Burnette Principal Engineer, Shipt"
+       ]
+      }
+     ],
+     "reasoning": "Scandit's customer-stories page includes a VF Corporation case study and a testimonial attributed to a Shipt principal engineer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Scandit Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/scandit/financials",
+       "excerpts": [
+        "Scandit's **latest funding round** was a **Series D for $150M** on **February 9, 2022** ."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile dates Scandit's latest round to February 9, 2022, which is 2022-02 in the requested format.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Key Account Manager at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_app?for=scandit&token=8352309",
+       "excerpts": [
+        "* Regular regional and company wide sales events to ensure collaboration, communication and alignment.",
+        "* Access to supporting functions including Business Development Representatives, Partnerships, Marketing, Customer Success, Sales Operations and Sales Enablement",
+        "* Flat, accessible leadership structure to support in commercial activities: win as a team.",
+        "* Salesforce, Gong, Highspot, DealHub and a dedicated deal desk.",
+        "* Quarterly reviews in Zurich and Boston, and a yearly company outing.",
+        "* Dedicated BDR, Partnerships, Customer Success, Solutions Consulting and RevOps teams, hands-on leaders, and a clear path into larger books of business."
+       ]
+      }
+     ],
+     "reasoning": "A Scandit Key Account Manager posting lists Salesforce, Gong, Highspot and DealHub as the commercial technology stack.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Tom Karrat - Scandit",
+       "url": "https://linkedin.com/in/tom-karrat-3a7a02",
+       "excerpts": [
+        "Chief Revenue Officer Scandit Jan 2026 - Present."
+       ]
+      }
+     ],
+     "reasoning": "Tom Karrat's profile shows him as Scandit's Chief Revenue Officer beginning in January 2026, within the 12 months before the run date.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Job Application for Senior Machine Learning Engineer (Biometrics & Face Recognition) at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_app?for=scandit&token=8264704",
+       "excerpts": [
+        "Senior Machine Learning Engineer (Biometrics & Face Recognition) Tampere Apply Scandit gives people superpowers. ... As a Senior Machine Learning Engineer in our ID Capture team, you will build the machine learning behind that, centred on face recognition and face matching. You will also support our liveness and presentation attack detection work. You will have real ownership of the architecture, data and benchmarks, and your models will run fully on device"
+       ]
+      }
+     ],
+     "reasoning": "The current Scandit application posting is for a Senior Machine Learning Engineer role and describes building machine-learning models.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Scandit Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/scandit/financials",
+       "excerpts": [
+        "Scandit's **latest funding round** was a **Series D for $150M** on **February 9, 2022** ."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile identifies Series D as Scandit's latest round.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Scandit Developer Documentation",
+       "url": "https://docs.scandit.com/",
+       "excerpts": [
+        "Select your framework to view supported products and features",
+        "Run the following command in your project directory."
+       ]
+      }
+     ],
+     "reasoning": "Scandit provides a public developer documentation site with framework-specific product guidance and technical instructions.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Scandit - Smart Data Capture for the Enterprise",
+       "url": "https://www.scandit.com/company",
+       "excerpts": [
+        "Zurich, Switzerland \u2013 Global Headquarters"
+       ]
+      }
+     ],
+     "reasoning": "Scandit's company page identifies Zurich as its global headquarters city.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "The Scandit Blog - Scandit",
+       "url": "https://www.scandit.com/blog/",
+       "excerpts": [
+        "## Latest posts",
+        "[Retail ### Self-Checkout Loss Prevention Without Surveillance: How Scandit Protects Privacy September 15, 2026](https://www.scandit.com/blog/self-checkout-loss-prevention-protect-privacy/)",
+        "[Products & Solutions ### Inside Self-Checkout Loss Prevention: How Vision AI Helps Stop Loss as It Happens September 15, 2026](https://www.scandit.com/blog/self-checkout-loss-prevention-vision-ai/) [Product Releases ### Scandit Enters Loss Prevention Market: Self-Checkout Solution Reduces Loss While Keeping Shopping Frictionless September 15, 2026](https://www.scandit.com/blog/scandit-enters-loss-prevention-market/)",
+        "## Explore all posts"
+       ]
+      },
+      {
+       "title": "Scandit Enters Loss Prevention Market: Self-Checkout Solution Reduces Loss While Keeping Shopping Frictionless",
+       "url": "https://www.scandit.com/blog/scandit-enters-loss-prevention-market",
+       "excerpts": [
+        "Scandit Enters Loss Prevention Market: Self-Checkout Solution Reduces Loss While Keeping Shopping Frictionless Published September 15, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The Scandit blog index lists September 15, 2026 posts, including a Product Releases announcement for its self-checkout loss-prevention solution; that launch falls within the six-month window.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jobs at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_board?for=scandit&validityToken=DxvDFW55k66ZFh_M_CCWZmR2v8Jw6_1vJ6MZ86sz_WsHPZk3IPDgXA0bQR9m9hzkPJj8Rjq8fUJcYIdDQOKvYZcM-YmIwRWEKecrlFHXfi_Wh3QWT8Ak7WX-iLih0yGN2on3KyAnHGXqFilB_idAWAPgQ9c6f6LU3Auxs5AN8NothnTn3W1TqvMihyd-Lw7Ft64VACIx12I54rW6Yi7eSyBThOuR1r3aCt127MiSrHZ582xHZjPcww0W4aq9pHgXo4erIzV3y55iFNWTDsSA_VgWQWk1Akk6YxSaE4VAqeS-KDzi-4J6R56IJpDyr5FfO7khm0KUrQFPyuMkJDrYmg%3D%3D",
+       "excerpts": [
+        "10 jobs Business Development |Job | |[Business Development Representative - French Speaker London"
+       ]
+      }
+     ],
+     "reasoning": "Scandit's live Greenhouse job board lists a Business Development Representative opening, which is within the requested SDR/BDR/AE titles.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Scandit Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/scandit/financials",
+       "excerpts": [
+        "Scandit's **latest funding round** was a **Series D for $150M** on **February 9, 2022** ."
+       ]
+      },
+      {
+       "title": "Scandit Announces $150m Series D Investment Led by Warburg Pincus",
+       "url": "https://www.scandit.com/blog/scandit-smart-data-capture-leader-150m-series-d-investment",
+       "excerpts": [
+        "completed a Series D funding round of $150 million at a company valuation in excess of $1 billion."
+       ]
+      }
+     ],
+     "reasoning": "The most recent disclosed round was February 9, 2022, well before the 18-month window ending in November 2026; therefore Scandit did not raise within that period.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Security by Design | Scandit",
+       "url": "https://www.scandit.com/company/security/",
+       "excerpts": [
+        "**Certification and governance**  ",
+        "Scandit is ISO 27001:2022 Certified and has a dedicated information security team and executive-level oversight committee.",
+        "**Product and data security**  ",
+        "All image processing is performed on the scanning device itself to ensure high availability and confidentiality.\\* Any data you choose to share with us is encrypted both during transit and at rest.",
+        "**Infrastructure security**",
+        "Data you choose to send us is protected by both Scandit\u2019s security expertise and the protection provided by industry-leading multi-certified cloud service providers.",
+        "## Our commitment to information security",
+        "### Certification and governance",
+        "**Certification and compliance:** Scandit is [ISO 27001:2022 Certified](https://www.certipedia.com/certificates/01+153+2400165%252F01?locale=en) \\*\\* \u2014 an independently audited, globally recognised enterprise-grade international standard for information security, cyber security, and privacy. Of course, we also comply with applicable privacy regulations, including GDPR and CCPA."
+       ]
+      }
+     ],
+     "reasoning": "The security page explicitly calls Scandit ISO 27001:2022 certified.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Security by Design | Scandit",
+       "url": "https://www.scandit.com/company/security/",
+       "excerpts": [
+        "**Certification and governance**  ",
+        "Scandit is ISO 27001:2022 Certified and has a dedicated information security team and executive-level oversight committee.",
+        "**Product and data security**  ",
+        "All image processing is performed on the scanning device itself to ensure high availability and confidentiality.\\* Any data you choose to share with us is encrypted both during transit and at rest.",
+        "**Infrastructure security**",
+        "Data you choose to send us is protected by both Scandit\u2019s security expertise and the protection provided by industry-leading multi-certified cloud service providers.",
+        "## Our commitment to information security",
+        "### Certification and governance",
+        "**Certification and compliance:** Scandit is [ISO 27001:2022 Certified](https://www.certipedia.com/certificates/01+153+2400165%252F01?locale=en) \\*\\* \u2014 an independently audited, globally recognised enterprise-grade international standard for information security, cyber security, and privacy. Of course, we also comply with applicable privacy regulations, including GDPR and CCPA."
+       ]
+      }
+     ],
+     "reasoning": "The same page explicitly states compliance with GDPR; GDPR is included in the requested compliance items.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customer Stories | Scandit",
+       "url": "https://www.scandit.com/resources/customer-stories",
+       "excerpts": [
+        "VF Corporation [Read the case study"
+       ]
+      }
+     ],
+     "reasoning": "The customer-stories page names VF Corporation and links its case study.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customer Stories | Scandit",
+       "url": "https://www.scandit.com/resources/customer-stories",
+       "excerpts": [
+        "Chace Burnette Chace Burnette Principal Engineer, Shipt"
+       ]
+      }
+     ],
+     "reasoning": "The customer-stories page identifies a testimonial speaker as a principal engineer at Shipt.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Key Account Manager at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_app?for=scandit&token=8352309",
+       "excerpts": [
+        "* Regular regional and company wide sales events to ensure collaboration, communication and alignment.",
+        "* Access to supporting functions including Business Development Representatives, Partnerships, Marketing, Customer Success, Sales Operations and Sales Enablement",
+        "* Flat, accessible leadership structure to support in commercial activities: win as a team.",
+        "* Salesforce, Gong, Highspot, DealHub and a dedicated deal desk.",
+        "* Quarterly reviews in Zurich and Boston, and a yearly company outing.",
+        "* Dedicated BDR, Partnerships, Customer Success, Solutions Consulting and RevOps teams, hands-on leaders, and a clear path into larger books of business."
+       ]
+      }
+     ],
+     "reasoning": "The Scandit sales posting names Salesforce in its technology stack.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Key Account Manager at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_app?for=scandit&token=8352309",
+       "excerpts": [
+        "* Regular regional and company wide sales events to ensure collaboration, communication and alignment.",
+        "* Access to supporting functions including Business Development Representatives, Partnerships, Marketing, Customer Success, Sales Operations and Sales Enablement",
+        "* Flat, accessible leadership structure to support in commercial activities: win as a team.",
+        "* Salesforce, Gong, Highspot, DealHub and a dedicated deal desk.",
+        "* Quarterly reviews in Zurich and Boston, and a yearly company outing.",
+        "* Dedicated BDR, Partnerships, Customer Success, Solutions Consulting and RevOps teams, hands-on leaders, and a clear path into larger books of business."
+       ]
+      }
+     ],
+     "reasoning": "The Scandit sales posting names Gong in its technology stack.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Application for Key Account Manager at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_app?for=scandit&token=8352309",
+       "excerpts": [
+        "* Regular regional and company wide sales events to ensure collaboration, communication and alignment.",
+        "* Access to supporting functions including Business Development Representatives, Partnerships, Marketing, Customer Success, Sales Operations and Sales Enablement",
+        "* Flat, accessible leadership structure to support in commercial activities: win as a team.",
+        "* Salesforce, Gong, Highspot, DealHub and a dedicated deal desk.",
+        "* Quarterly reviews in Zurich and Boston, and a yearly company outing.",
+        "* Dedicated BDR, Partnerships, Customer Success, Solutions Consulting and RevOps teams, hands-on leaders, and a clear path into larger books of business."
+       ]
+      }
+     ],
+     "reasoning": "The Scandit sales posting names Highspot in its technology stack.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Application for Key Account Manager at Scandit",
+       "url": "https://job-boards.greenhouse.io/embed/job_app?for=scandit&token=8352309",
+       "excerpts": [
+        "* Regular regional and company wide sales events to ensure collaboration, communication and alignment.",
+        "* Access to supporting functions including Business Development Representatives, Partnerships, Marketing, Customer Success, Sales Operations and Sales Enablement",
+        "* Flat, accessible leadership structure to support in commercial activities: win as a team.",
+        "* Salesforce, Gong, Highspot, DealHub and a dedicated deal desk.",
+        "* Quarterly reviews in Zurich and Boston, and a yearly company outing.",
+        "* Dedicated BDR, Partnerships, Customer Success, Solutions Consulting and RevOps teams, hands-on leaders, and a clear path into larger books of business."
+       ]
+      }
+     ],
+     "reasoning": "The Scandit sales posting names DealHub in its technology stack.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2009.0,
+    "compliance_certs": [
+     "ISO 27001",
+     "GDPR"
+    ],
+    "hq_country": "Switzerland",
+    "eng_blog": true,
+    "product_one_liner": "Scandit provides businesses with vision-AI smart data capture on smart devices\u2014scanning barcodes, text, IDs and objects to automate workflows and deliver actionable insights for frontline workers and customer experiences.",
+    "employee_band": "201-500",
+    "model_provider": "Scandit Vision AI Engine (using machine learning and vision-language models; no external model provider is publicly named).",
+    "pricing_page": true,
+    "funding_amount_usd": 150000000.0,
+    "named_customers": [
+     "VF Corporation",
+     "Shipt"
+    ],
+    "funding_date": "2022-02",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Gong",
+     "Highspot",
+     "DealHub"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series D",
+    "public_docs": true,
+    "hq_city": "Zurich",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

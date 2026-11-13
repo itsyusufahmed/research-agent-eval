@@ -1,0 +1,169 @@
+{
+ "schema_version": "v0",
+ "company": "BombBomb",
+ "domain": "bombbomb.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "BombBomb helps relationship-driven sales teams record, send, and track personalized video messages to build customer relationships.",
+   "citations": [
+    "http://bombbomb.applytojob.com/apply/P94nf0nbFB/Director-Of-Marketing",
+    "https://bombbomb.com/company"
+   ],
+   "notes": "The company describes creating, sending, and tracking personalized videos, while its job posting identifies relationship-driven sales teams as the intended audience. Sources: https://bombbomb.com/company and http://bombbomb.applytojob.com/apply/P94nf0nbFB/Director-Of-Marketing"
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://bombbomb.com/pricing"
+   ],
+   "notes": "The public pricing page lists a per-user monthly price, directly establishing that a pricing page exists. Source: https://bombbomb.com/pricing"
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Farmers Insurance",
+    "Affinitiv"
+   ],
+   "citations": [
+    "https://bombbomb.com/company",
+    "https://bombbomb.com/about"
+   ],
+   "notes": "named_customers: Farmers Insurance and Affinitiv appear in the company page's customer-logo area, introduced as companies that use BombBomb. Source: https://bombbomb.com/company | named_customers.0: Farmers Insurance appears in the company page's customer-logo area. Source: https://bombbomb.com/company | named_customers.1: Affinitiv appears in the company page's customer-logo area. Source: https://bombbomb.com/company"
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "51-100",
+   "citations": [
+    "https://leadiq.com/c/bombbomb/5a1d8a6a240000240063c880"
+   ],
+   "notes": "The company profile reports approximately 71 employees as of October 2026, which falls in the 51-100 band. This is a third-party estimate. Source: https://leadiq.com/c/bombbomb/5a1d8a6a240000240063c880"
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "Denver",
+    "country": "United States"
+   },
+   "citations": [
+    "https://linkedin.com/company/1810547"
+   ],
+   "notes": "hq_city: BombBomb's LinkedIn company profile explicitly lists Denver, Colorado as its headquarters. Source: https://linkedin.com/company/1810547 | hq_country: BombBomb's LinkedIn company profile identifies Denver, Colorado as headquarters and gives its primary address in the US. Source: https://linkedin.com/company/1810547"
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2006.0,
+   "citations": [
+    "https://www.bombbomb.com/company"
+   ],
+   "notes": "BombBomb's company page explicitly states that it was founded in 2006. Source: https://www.bombbomb.com/company"
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://bombbomb.com/blog/"
+   ],
+   "notes": "The blog index presents video-marketing, prospecting, customer-relationship, and product-use content. It does not establish two engineer-authored posts explaining how BombBomb itself is built, so it fails the specified engineering-blog threshold. Source: https://bombbomb.com/blog/"
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://developer.bombbomb.com/"
+   ],
+   "notes": "The public developer portal provides account setup, OAuth, integration, webhooks, and API documentation rather than a single FAQ. Source: https://developer.bombbomb.com/"
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://bombbomb.applytojob.com/"
+   ],
+   "notes": "BombBomb's public job board states that there are no open positions, which includes no qualifying AI, ML, or data-science roles. Source: https://bombbomb.applytojob.com/"
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Amazon Web Services (AWS), for automated video captions and transcription.",
+   "citations": [
+    "https://bombbomb.com/video-captions"
+   ],
+   "notes": "BombBomb's captions implementation article explicitly identifies an Amazon Web Services API as its chosen approach for automated captions and transcription. This supports AWS for that capability, but does not establish the provider of every newer AI feature. Source: https://bombbomb.com/video-captions"
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "GDPR"
+   ],
+   "citations": [
+    "https://www.bombbomb.com/bombbomb-features/security-and-compliance"
+   ],
+   "notes": "compliance_certs: The security page claims SOC 2 Type 2 certification and GDPR compliance. Both are among the requested categories; neither is described as merely in progress. Source: https://www.bombbomb.com/bombbomb-features/security-and-compliance | compliance_certs.0: The security page explicitly claims SOC 2 Type 2 certification. Source: https://www.bombbomb.com/bombbomb-features/security-and-compliance | compliance_certs.1: The security page explicitly claims GDPR compliance. Source: https://www.bombbomb.com/bombbomb-features/security-and-compliance"
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series A",
+    "date": "2025-02",
+    "amount_usd": 2432406.0
+   },
+   "citations": [
+    "https://tracxn.com",
+    "https://pitchbook.com/profiles/company/57973-78",
+    "https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml"
+   ],
+   "notes": "funding_stage: The funding profiles both classify the latest financing as Series A, despite using different transaction-date conventions. Sources: https://tracxn.com/d/companies/bombbomb/__STBuK4nCr_u1b2KzDNgaw523cmxkROX00BqoJfOwTUo and https://pitchbook.com/profiles/company/57973-78 | funding_date: The latest funding record uses February 24, 2025, matching the SEC filing's first-sale date. The answer therefore uses 2025-02 rather than the March 12 filing-signature date reported by another funding profile. Source: https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml | funding_amount_usd: The SEC Form D reports $2,432,406 sold, matching the amount associated with the latest Series A funding record. Sources: https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml and https://tracxn.com/d/companies/bombbomb/__STBuK4nCr_u1b2KzDNgaw523cmxkROX00BqoJfOwTUo"
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://tracxn.com",
+    "https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml"
+   ],
+   "notes": "The latest identified funding is the February 24, 2025 financing documented in the SEC filing. It predates the eighteen-month window beginning May 9, 2025; no newer round appears in the funding history. Sources: https://www.sec.gov/Archives/edgar/data/2060429/000206042925000001/xslFormDX01/primary_doc.xml and https://tracxn.com/d/companies/bombbomb/__STBuK4nCr_u1b2KzDNgaw523cmxkROX00BqoJfOwTUo"
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://bombbomb.applytojob.com/"
+   ],
+   "notes": "The public job board states that there are no open positions, so it lists no qualifying SDR, BDR, or account-executive openings. Source: https://bombbomb.applytojob.com/"
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://support.bombbomb.com/hc/en-us/articles/49827659565965-New-BombBomb-Experience"
+   ],
+   "notes": "The new-platform announcement specifies a November 9 migration and immediate early access. Its page metadata is dated October 22, 2026, placing this rollout within the requested window. New capabilities include browser-native screen recording and searchable transcripts, not merely cosmetic changes. The year requires combining the announcement with its timestamp. Source: https://support.bombbomb.com/hc/en-us/articles/49827659565965-New-BombBomb-Experience"
+  },
+  "leadership_change_12mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/in/kathrynadamson"
+   ],
+   "notes": "Kathryn Adamson's profile dates her BombBomb Vice President of Growth role to March 2026, within the requested twelve-month window. The evidence establishes the role's start date rather than providing a separate appointment announcement. Source: https://linkedin.com/in/kathrynadamson"
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Salesforce"
+   ],
+   "citations": [
+    "https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance"
+   ],
+   "notes": "crm_stack_signal: The Revenue Operations and Strategic Finance job posting explicitly requires synchronization of customer and revenue data between Salesforce and Chargebee, establishing Salesforce as an internal CRM signal. Source: https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance | crm_stack_signal.0: The job posting names Salesforce as a system holding BombBomb's customer and revenue data. Source: https://bombbomb.applytojob.com/apply/6O9IaWs77l/Director-Revenue-Operations-Strategic-Finance"
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 293.6
+}

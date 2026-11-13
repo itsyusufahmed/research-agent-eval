@@ -1,0 +1,551 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb035d936234c40de",
+  "interaction_id": "trun_142119f6a1b4439eb035d936234c40de",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "talowiz.com"
+  },
+  "created_at": "2026-11-10T18:49:03.946020Z",
+  "modified_at": "2026-11-10T18:55:02.964431Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb035d936234c40de",
+   "interaction_id": "trun_142119f6a1b4439eb035d936234c40de",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "talowiz.com"
+   },
+   "created_at": "2026-11-10T18:49:03.946020Z",
+   "modified_at": "2026-11-10T18:55:02.964431Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Talowiz | LinkedIn",
+       "url": "https://linkedin.com/company/76995163",
+       "excerpts": [
+        "Founded 2022"
+       ]
+      },
+      {
+       "title": "Talowiz 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/495789-58",
+       "excerpts": [
+        "* Year Founded 2021 Year Founded"
+       ]
+      }
+     ],
+     "reasoning": "Talowiz\u2019s LinkedIn company profile says it was founded in 2022; PitchBook reports 2021, so I use the first-party company profile while noting the conflicting directory date.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Policy | Talowiz",
+       "url": "https://www.talowiz.ai/privacy-policy",
+       "excerpts": [
+        "\u200d  ",
+        "**4\\. Security** Talowiz will process any and all personal data of the Users ensuring maintenance of strict confidentiality, and will implement all the appropriate organizational and technical measures as mandated by applicable regulations. Talowiz makes use of standard encryption to ensure the protection of Users\u2019 data in process. Standard encryption is commonly known as Secure Socket Layer (SSL) technology or Transport Layer Security Technology (TLS).  ",
+        "5\\.5. Talowiz will get into contract with any third parties for the function of processing operations as part of fulfillments of Service obligations, where the processing would involve accessing the personal data of the Users\u2019 Recipients without express Authorisation. With the exception of the following, any third party processing shall be considered as unauthorised by the User: AWS - Amazon Web Services, Inc. for providing hosting services, through servers located in the US;  ",
+        "Google Services: Google APIs, Google Analytics, Google Access Token, Google Apps, Google Forms and Webmaster Tools;  ",
+        "Intercom, for the purpose of customer services;  ",
+        "5\\.6. The User shall be responsible for processing of personal data of their Recipients in context of the GDPR. The User will be the sole source for describing the instructions as per which the processing methods and purposes will be carried out. Thus, Talowiz processes the personal data of the Users\u2019 Recipients for the purposes only when they lead to the fulfilment of the Service and act on the behalf of the User. In turn, the User must adhere to the obligations which are applicable as per data protection regulations; this includes a mandatory obligation to obtain consent of their Recipients to give third parties access to the personal data for purposes of processing. Only the User, and not Talowiz shall be held solely responsible for completing these obligations.  "
+       ]
+      }
+     ],
+     "reasoning": "Talowiz\u2019s legal policy describes confidentiality and encryption and refers to GDPR in the context of data-protection duties, but does not claim any of the listed certifications; GDPR is discussed as a regulation, not as a Talowiz certification.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Talowiz | LinkedIn",
+       "url": "https://linkedin.com/company/76995163",
+       "excerpts": [
+        "Headquarters Ashburn, VA Type Privately Held Founded 2022 Locations Primary Ashburn, VA 20147, US"
+       ]
+      },
+      {
+       "title": "Talowiz company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/talowiz",
+       "excerpts": [
+        "HQ location Ashburn, United States"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile and Dealroom both place Talowiz in the United States; the country is consistent even though sources differ on the city.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Talowiz | LinkedIn",
+       "url": "https://linkedin.com/company/76995163",
+       "excerpts": [
+        "Headquarters Ashburn, VA Type Privately Held Founded 2022 Locations Primary Ashburn, VA 20147, US"
+       ]
+      },
+      {
+       "title": "Talowiz company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/talowiz",
+       "excerpts": [
+        "HQ location Ashburn, United States"
+       ]
+      },
+      {
+       "title": "Privacy Policy | Talowiz",
+       "url": "https://www.talowiz.ai/privacy-policy",
+       "excerpts": [
+        "\u200d **1\\.2 Company Details \u200d** When we address Talowiz, we are talking about Talowiz, a registered corporation having address at **6469 Almaden ExpySte 80 #477San Jose, CA 95120.** Company operates https://talowiz.com and all subdomains."
+       ]
+      }
+     ],
+     "reasoning": "LinkedIn explicitly labels Ashburn as headquarters and Dealroom also lists Ashburn. Talowiz\u2019s legal/contact address is in San Jose, so the city is not perfectly consistent; I use the repeated explicit headquarters listing.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Talowiz Blog",
+       "url": "https://www.talowiz.ai/blog",
+       "excerpts": [
+        "\ud83d\udce2 Talowiz has been featured on 10+ G2 reports for it's excellence in recruiting",
+        "Blog",
+        "# Resource library",
+        "Subscribe to learn about new product features, the latest in technology, solutions, and updates.",
+        "We care about your data in our [privacy policy](https://www.talowiz.ai/privacy-policy) .",
+        "Thank you! Your submission has been received!",
+        "Oops! Something went wrong while submitting the form.",
+        "All",
+        "Marketing",
+        "Growth",
+        "Tech",
+        "[Aditya Datta March 6, 2026](https://www.talowiz.ai/post/scale-hiring) [### How to Scale Hiring without Increasing Recruiters?](https://www.talowiz.ai/post/scale-hiring)",
+        "[Shubhanshu Srivastava February 25, 2026](https://www.talowiz.ai/post/ai-interviewer) [### How AI Interviewer works in Hiring?](https://www.talowiz.ai/post/ai-interviewer)",
+        "[Aditya Datta November 27, 2025](https://www.talowiz.ai/post/candidate-assessment) [### How to Take a Candidate Assessment?](https://www.talowiz.ai/post/candidate-assessment)",
+        "[Aparna Rajkhowa November 26, 2025](https://www.talowiz.ai/post/lateral-hiring) [### Lateral Hiring: Definition, Trends, Benefits, and Challenges](https://www.talowiz.ai/post/lateral-hiring)",
+        "[Aditya Datta November 25, 2025](https://www.talowiz.ai/post/hiring-manager-role-recruitment-guide) [### Hiring Managers: Understanding their Role and How to Recruit Them?](https://www.talowiz.ai/post/hiring-manager-role-recruitment-guide)",
+        "[Aditya Datta November 18, 2025](https://www.talowiz.ai/post/sourcing-automation-ai-recruiting) [### What Is Sourcing Automation? (And How It\u2019s Changing Hiring Forever)](https://www.talowiz.ai/post/sourcing-automation-ai-recruiting)",
+        "[Lavishka Tyagi November 18, 2025](https://www.talowiz.ai/post/ai-candidate-selection-hiring-tips) [### How to Select the Right Candidate?](https://www.talowiz.ai/post/ai-candidate-selection-hiring-tips)",
+        "[Aditya Datta November 14, 2025](https://www.talowiz.ai/post/how-to-outsource-recruiting-without-losing-control) [### How to Outsource Recruiting Operations \u2014 Without Losing Control](https://www.talowiz.ai/post/how-to-outsource-recruiting-without-losing-control)",
+        "[Aditya Datta November 13, 2025](https://www.talowiz.ai/post/ai-sourcing-software) [### Is It Worth Paying for AI Sourcing Software?](https://www.talowiz.ai/post/ai-sourcing-software)",
+        "[Aditya Datta November 6, 2025](https://www.talowiz.ai/post/how-large-companies-scale-hiring) [### How Large Companies Scale Hiring\u2014Without Increasing Recruiter Headcount](https://www.talowiz.ai/post/how-large-companies-scale-hiring)",
+        "[Aparna Rajkhowa July 2, 2025](https://www.talowiz.ai/post/various-methods-of-recruitment) [### What are the various methods of recruitment?](https://www.talowiz.ai/post/various-methods-of-recruitment)",
+        "[Aditya Datta June 26, 2025](https://www.talowiz.ai/post/candidate-rating-ranking-and-selection) [### Candidate Evaluation: Rating, Ranking & Selecting the Right Fit](https://www.talowiz.ai/post/candidate-rating-ranking-and-selection)",
+        "[Aditya Datta June 24, 2025](https://www.talowiz.ai/post/talowiz-ai-agents-vs-other-hiring-tools) [### Talowiz AI agents vs. Other Hiring tools](https://www.talowiz.ai/post/talowiz-ai-agents-vs-other-hiring-tools)",
+        "[Aditya Datta June 18, 2025](https://www.talowiz.ai/post/build-tech-team-in-saudi-arabia) [### How to Scale a Tech Team in Saudi Arabia? (Without Paying Expensive Agencies)](https://www.talowiz.ai/post/build-tech-team-in-saudi-arabia)",
+        "[Aditya Datta June 15, 2025](https://www.talowiz.ai/post/best-recruitment-agencies-for-saudization) [### Best Recruitment Agencies for Saudization in 2025](https://www.talowiz.ai/post/best-recruitment-agencies-for-saudization)",
+        "[Aparna Rajkhowa May 20, 2025](https://www.talowiz.ai/post/contract-to-hire-vs-full-time-vs-outsourcing) [### Contract to Hire vs Full-Time vs Outsourcing: What\u2019s Right for You?](https://www.talowiz.ai/post/contract-to-hire-vs-full-time-vs-outsourcing)",
+        "[Aparna Rajkhowa May 19, 2025](https://www.talowiz.ai/post/contract-to-hire) [### Contract-to-Hire Explained: What It Is, How It Works, and When to Use It](https://www.talowiz.ai/post/contract-to-hire)",
+        "[Aditya Datta May 14, 2025](https://www.talowiz.ai/post/sourcing-tools-recruiters) [### 2025\u2019s Top Candidate Sourcing Softwares for Recruiters](https://www.talowiz.ai/post/sourcing-tools-recruiters)",
+        "[Aparna Rajkhowa May 9, 2025](https://www.talowiz.ai/post/diversity-recruiting-how-to-attract-diverse-talent) [### How to Attract & Retain Diverse Talent in 2025 and Beyond](https://www.talowiz.ai/post/diversity-recruiting-how-to-attract-diverse-talent)",
+        "[Aditya Datta May 7, 2025](https://www.talowiz.ai/post/strategic-trends-in-talent-acquisition) [### Strategic Trends in Talent Acquisition (2025\u20132027)](https://www.talowiz.ai/post/strategic-trends-in-talent-acquisition)",
+        "[Aparna Rajkhowa May 1, 2025](https://www.talowiz.ai/post/diversity-hiring) [### What Is Diversity Hiring? Why It Matters More Than Ever](https://www.talowiz.ai/post/diversity-hiring)",
+        "[Shubhanshu Srivastava April 28, 2025](https://www.talowiz.ai/post/saudi-arabia-top-recruitment-agencies-talowiz) [### Best Recruitment agency in Saudi Arabia](https://www.talowiz.ai/post/saudi-arabia-top-recruitment-agencies-talowiz)",
+        "[Shubhanshu Srivastava April 23, 2025](https://www.talowiz.ai/post/jadarat-program-saudi-hiring-vision-2030) [### Jadarat Program: A New Era in Saudi Hiring](https://www.talowiz.ai/post/jadarat-program-saudi-hiring-vision-2030)",
+        "[Lavishka Tyagi April 1, 2025](https://www.talowiz.ai/post/sources-of-recruitment-internal-vs-external-hiring-strategies) [### Sources of Recruitment](https://www.talowiz.ai/post/sources-of-recruitment-internal-vs-external-hiring-strategies)",
+        "[Lavishka Tyagi March 21, 2025](https://www.talowiz.ai/post/candidate-assessment-tools-for-recruitment-selection) [### Candidate Assessment tools for Recruitment & Selection](https://www.talowiz.ai/post/candidate-assessment-tools-for-recruitment-selection)",
+        "[Aparna Rajkhowa March 19, 2025](https://www.talowiz.ai/post/job-titles-in-recruitment-industry) [### Job titles in recruitment industry](https://www.talowiz.ai/post/job-titles-in-recruitment-industry)",
+        "[Dheeraj Lalchandani March 17, 2025](https://www.talowiz.ai/post/companies-with-unique-recruitment-strategies) [### Top Companies with unique recruitment strategies](https://www.talowiz.ai/post/companies-with-unique-recruitment-strategies)",
+        "[Lavishka Tyagi March 12, 2025](https://www.talowiz.ai/post/hr-recruiter-role-skills-resume-job-description) [### HR Recruiter Role, Skills for resume + job description template](https://www.talowiz.ai/post/hr-recruiter-role-skills-resume-job-description)",
+        "[Lavishka Tyagi March 11, 2025](https://www.talowiz.ai/post/glassdoor-vs-indeed) [### Glassdoor vs. Indeed: A detailed analysis](https://www.talowiz.ai/post/glassdoor-vs-indeed)",
+        "[Lavishka Tyagi March 10, 2025](https://www.talowiz.ai/post/cost-per-hire-definition-formula-analysis) [### How to Calculate and Analyze Hiring cost per hire](https://www.talowiz.ai/post/cost-per-hire-definition-formula-analysis)",
+        "[Aparna Rajkhowa March 7, 2025](https://www.talowiz.ai/post/strategic-role-of-hr-recruiters) [### The Strategic Role of HR Recruiters in Workforce Development](https://www.talowiz.ai/post/strategic-role-of-hr-recruiters)",
+        "[Aparna Rajkhowa March 6, 2025](https://www.talowiz.ai/post/hiring-team-structure-roles-strategies) [### Understanding Hiring Team Structures: Roles, Strategies, and Best Practices](https://www.talowiz.ai/post/hiring-team-structure-roles-strategies)",
+        "[Lavishka Tyagi March 4, 2025](https://www.talowiz.ai/post/diversity-hiring-strategies-for-inclusive-workforce) [### The Power of Inclusive Hiring: Building a Diverse Workforce for a Stronger Future](https://www.talowiz.ai/post/diversity-hiring-strategies-for-inclusive-workforce)",
+        "[Lavishka Tyagi March 3, 2025](https://www.talowiz.ai/post/employee-referrals-smarter-hiring) [### Employee Referrals: The Hidden Key to Smarter Hiring](https://www.talowiz.ai/post/employee-referrals-smarter-hiring)",
+        "[Aditya Datta February 24, 2025](https://www.talowiz.ai/post/newest-ai-tools-for-sourcing-and-recruiting-tech-talent) [### The newest ai tools for Sourcing and Recruiting tech talent in 2025](https://www.talowiz.ai/post/newest-ai-tools-for-sourcing-and-recruiting-tech-talent)",
+        "[Aparna Rajkhowa February 12, 2025](https://www.talowiz.ai/post/ai-sourcing-vs-manual-sourcing) [### AI Sourcing vs. Manual Sourcing: Which One Gives Recruiters the Edge?](https://www.talowiz.ai/post/ai-sourcing-vs-manual-sourcing)",
+        "[Lavishka Tyagi February 10, 2025](https://www.talowiz.ai/post/ai-interview-tools-revolutionizing-hiring) [### AI Interview Tools: Revolutionizing Candidate Assessment and Selection](https://www.talowiz.ai/post/ai-interview-tools-revolutionizing-hiring)",
+        "[Lavishka Tyagi February 7, 2025](https://www.talowiz.ai/post/ai-market-in-recruitment-industry) [### AI in Recruitment: Trends, Innovations, and what\u2019s ahead?](https://www.talowiz.ai/post/ai-market-in-recruitment-industry)",
+        "[Lavishka Tyagi February 6, 2025](https://www.talowiz.ai/post/candidate-sourcing-software) [### Top AI Candidate Sourcing Software to make your sourcing effortless](https://www.talowiz.ai/post/candidate-sourcing-software)",
+        "[Aditya Datta February 5, 2025](https://www.talowiz.ai/post/ai-staffing-agencies) [### Top 10 AI Staffing Agencies in 2025](https://www.talowiz.ai/post/ai-staffing-agencies)",
+        "[Aditya Datta January 26, 2025](https://www.talowiz.ai/post/ai-recruitment-software) [### How to Choose the Best AI ai recruitment software for your Business?](https://www.talowiz.ai/post/ai-recruitment-software)",
+        "[Shubhanshu Srivastava January 15, 2025](https://www.talowiz.ai/post/what-is-ai-recruiting) [### What is AI Recruiting? Understanding the Tools and Strategies](https://www.talowiz.ai/post/what-is-ai-recruiting)",
+        "[Aditya Datta January 10, 2025](https://www.talowiz.ai/post/how-ai-agents-social-media-will-revolutionize-recruiting) [### How AI Agents & Social Media will Revolutionize Recruiting in 2025?](https://www.talowiz.ai/post/how-ai-agents-social-media-will-revolutionize-recruiting)",
+        "[December 1, 2024](https://www.talowiz.ai/post/cost-of-hiring-offshore-employees) [### The Cost of Hiring Offshore Employees: What You Need to Know](https://www.talowiz.ai/post/cost-of-hiring-offshore-employees)",
+        "[Aditya Datta November 25, 2024](https://www.talowiz.ai/post/how-to-set-up-gcc-india) [### How to Set Up a Global Capability Center in India: Legal, Hiring, and Operational Considerations](https://www.talowiz.ai/post/how-to-set-up-gcc-india)",
+        "[Aditya Datta November 11, 2024](https://www.talowiz.ai/post/how-to-recruit-engineers) [### How to Recruit Engineers?](https://www.talowiz.ai/post/how-to-recruit-engineers)",
+        "[Aditya Datta November 6, 2024](https://www.talowiz.ai/post/nearshore-vs-offshore-outsourcing) [### Nearshore vs Offshore Outsourcing: Which is Best for Your Business?](https://www.talowiz.ai/post/nearshore-vs-offshore-outsourcing)",
+        "[Aditya Datta October 29, 2024](https://www.talowiz.ai/post/india-hotspot-for-new-gcc) [### Why is India the Hotspot for New GCCs?](https://www.talowiz.ai/post/india-hotspot-for-new-gcc)",
+        "[Aditya Datta October 29, 2024](https://www.talowiz.ai/post/global-capability-centers) [### Global Capability Centers (GCC) and Their Role in Outsourcing](https://www.talowiz.ai/post/global-capability-centers)",
+        "[Dheeraj Lalchandani October 24, 2024](https://www.talowiz.ai/post/how-to-hire-offshore-employees) [### How to Hire Offshore Employees: A Step-by-Step Guide for International Companies](https://www.talowiz.ai/post/how-to-hire-offshore-employees)",
+        "[Dheeraj Lalchandani October 21, 2024](https://www.talowiz.ai/post/global-capability-centers-offshore-development) [### Global Capability Centers & Offshore Development in India: A Complete Guide](https://www.talowiz.ai/post/global-capability-centers-offshore-development)",
+        "[Dheeraj Lalchandani August 30, 2024](https://www.talowiz.ai/post/how-to-prevent-candidate-ghosting) [### 7 Common Reasons Candidates Ghost and How to Prevent It](https://www.talowiz.ai/post/how-to-prevent-candidate-ghosting)",
+        "[Aparna Rajkhowa July 2, 2024](https://www.talowiz.ai/post/saas-companies-hiring-best-engineering-talent) [### Which SaaS companies hires the best Engineering Talent in India?](https://www.talowiz.ai/post/saas-companies-hiring-best-engineering-talent)",
+        "[Aditya Datta June 27, 2024](https://www.talowiz.ai/post/fintech-hiring-in-india) [### Understanding India\u2019s Fintech for Better Hiring in 2024](https://www.talowiz.ai/post/fintech-hiring-in-india)",
+        "[Aditya Datta April 4, 2024](https://www.talowiz.ai/post/how-to-search-employees-of-a-company) [### How to search employees of a company?](https://www.talowiz.ai/post/how-to-search-employees-of-a-company)",
+        "[Aditya Datta March 26, 2024](https://www.talowiz.ai/post/how-to-evaluate-recruiter-performance) [### How to evaluate recruiter performance?](https://www.talowiz.ai/post/how-to-evaluate-recruiter-performance)",
+        "[Aditya Datta January 9, 2024](https://www.talowiz.ai/post/automatic-sourcing-tools-to-speedup-your-hiring) [### Automatic Sourcing Tools to speedup your Hiring](https://www.talowiz.ai/post/automatic-sourcing-tools-to-speedup-your-hiring)",
+        "[December 20, 2023](https://www.talowiz.ai/post/talent-mapping) [### This Talent Mapping Tool shows you Exactly Who to Hire](https://www.talowiz.ai/post/talent-mapping)",
+        "[Aditya Datta December 15, 2023](https://www.talowiz.ai/post/no-job-boards-no-linkedin) [### 1K+ Exact Candidates Sourced in Seconds (No Job Boards, No LinkedIn)](https://www.talowiz.ai/post/no-job-boards-no-linkedin)",
+        "[Aditya Datta December 11, 2023](https://www.talowiz.ai/post/save-your-hours-in-sourcing) [### How Talowiz can save your hours in sourcing?](https://www.talowiz.ai/post/save-your-hours-in-sourcing)",
+        "[Aditya Datta December 8, 2023](https://www.talowiz.ai/post/hiring-machine-of-the-month-nov-2023) [### Gulf's Fintech Powerhouse Wins Nov '23 Hiring Machine](https://www.talowiz.ai/post/hiring-machine-of-the-month-nov-2023)",
+        "[Aditya Datta December 5, 2023](https://www.talowiz.ai/post/personalization-at-scale) [### Personalization at Scale: The Next Evolution in Hiring Practices?](https://www.talowiz.ai/post/personalization-at-scale)",
+        "[Dheeraj Lalchandani December 5, 2023](https://www.talowiz.ai/post/war-of-talent) [### Why Some Companies Always Win the Talent War?](https://www.talowiz.ai/post/war-of-talent)",
+        "[Aditya Datta December 5, 2023](https://www.talowiz.ai/post/cold-call-in-recruitment) [### Why are the smartest companies abandoning cold calls in recruitment?](https://www.talowiz.ai/post/cold-call-in-recruitment)",
+        "[Shubhanshu Srivastava November 23, 2023](https://www.talowiz.ai/post/navigating-through-hiring-winter-like-a-champion) [### Navigating through Hiring Winter Like a Champion](https://www.talowiz.ai/post/navigating-through-hiring-winter-like-a-champion)",
+        "[Cold calling in recruitment Aditya Datta March 14, 2023](https://www.talowiz.ai/post/cold-calling-in-recruitment) [### What\u2019s wrong with Cold Calling in Recruitment?](https://www.talowiz.ai/post/cold-calling-in-recruitment)",
+        "[Kritika Sondhi February 12, 2023 Growth](https://www.talowiz.ai/post/interview-feedback-ranking-criteria-how-are-you-ranking-your-candidates) [### Interview Feedback Ranking Criteria - How are you ranking your candidates?](https://www.talowiz.ai/post/interview-feedback-ranking-criteria-how-are-you-ranking-your-candidates)",
+        "How can we create a feedback ranking criteria and have a more structured interview process?",
+        "[Dheeraj Lalchandani February 12, 2023](https://www.talowiz.ai/post/recruitment-tech-set-for-a-seismic-shift) [### Recruitment tech set for a seismic shift](https://www.talowiz.ai/post/recruitment-tech-set-for-a-seismic-shift)",
+        "Amidst the talent war, our traditional processes have proven to become counter-productive.",
+        "[Aditya Datta February 12, 2023](https://www.talowiz.ai/post/recruitment-automation) [### Recruiting Automation 2023: A Step-by-step guide](https://www.talowiz.ai/post/recruitment-automation)",
+        "Stay ahead of the competition and surf the wave of transformation with our 10-step framework to recruitment automation.",
+        "[Kritika Sondhi February 12, 2023](https://www.talowiz.ai/post/re-engineering-the-interview-process) [### Re-engineering the interview process - the role of AI and Humans](https://www.talowiz.ai/post/re-engineering-the-interview-process)",
+        "How can humans and AI work together to re-engineer the interview process?",
+        "[Dheeraj Lalchandani February 12, 2023](https://www.talowiz.ai/post/talent-will-determine-the-fate-of-any-organization) [### Talent will Determine the Fate of Any Organization](https://www.talowiz.ai/post/talent-will-determine-the-fate-of-any-organization)",
+        "Hiring will be the key top-line growth driver, not a cost-centre to the company.",
+        "[Dheeraj Lalchandani February 12, 2023](https://www.talowiz.ai/post/future-of-recruitment-tech) [### Future of Recruitment tech](https://www.talowiz.ai/post/future-of-recruitment-tech)"
+       ]
+      }
+     ],
+     "reasoning": "The company blog index is a resource library whose listed posts are recruitment guidance, hiring strategy, and user-facing product explainers; it does not show at least two engineer-authored articles about how Talowiz is built.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "Build teams at Machine Speed Talowiz AI Agents autonomously source, evaluate, interview, and select talent \u2014 replacing manual recruitment workflows with intelligent automation. Book a Demo"
+       ]
+      }
+     ],
+     "reasoning": "Talowiz\u2019s homepage describes its AI agents as autonomously sourcing, evaluating, interviewing, and selecting talent, and presents this as automation of recruiting workflows for talent acquisition.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/talowiz",
+       "excerpts": [
+        "If hiring is a bottleneck in your company\u2019s growth, we\u2019re building Talowiz for you. website: https://talowiz.ai employee count: 15 founded year: 2022"
+       ]
+      },
+      {
+       "title": "Talowiz - 2026 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/talowiz/__V4vPXpp4iMqeXfNhyC1MQbWhedn204GFdweebE_XsPI",
+       "excerpts": [
+        "How many employees does Talowiz have? As of May 31, 2026, the latest [employee count](https://platform.tracxn.com/a/d/company/67d50f4fafe50655daab3e67/talowiz:people) at Talowiz is 15."
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company record gives an employee count of 15, and Tracxn reports 15 as of May 31, 2026; 15 falls in the 11\u201320 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Privacy Policy | Talowiz",
+       "url": "https://www.talowiz.ai/privacy-policy",
+       "excerpts": [
+        "** We employ third-party tools to monitor and analyse the use of our websites, and to automate certain processes related to the development and operation of our websites.  ",
+        "7\\.1. **Google Analytics** : Utilization of Google Analytics is employed for the purpose of tracking our website traffic. Google Analytics serves as a web analytics service provided by Google itself. The data collected through this service is utilized by Google to oversee and monitor the usage of our websites, and this information may also be shared with other Google services. Google may apply this gathered data to tailor and personalize advertisements within its advertising network. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.2. **Mailchimp** : In the case of Mailchimp, we rely on it to effectively manage our newsletters and transactional emails. If you would like to gain insights into Mailchimp's privacy practices, please consult their privacy policy at [Mailchimp Privacy Policy](https://mailchimp.com/legal/privacy/) , and pay particular attention to the \"Privacy for Contacts\" section: [Mailchimp Privacy for Contacts](https://mailchimp.com/legal/privacy/._Privacy_for_Contacts) .  ",
+        "7\\.3. **AI Training Model - Talowiz** : We have developed a custom AI model to personalize the behavior and content as per user persona. For this, data we are capturing are name, role and actions on the website (profile selected/rejected interview feedback). The storage of captured data is complied with [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.4. **Google API** :  Utilization of Google APIs are role specific. Recruiters will be sending emails to candidates via Google APIs. Interviewers will be sharing their calendar for slot booking for interviews. Hence, we share name, email id and role in the case of recruiter. And email id and name in case of interviewer. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) ."
+       ]
+      }
+     ],
+     "reasoning": "Talowiz\u2019s privacy policy says it developed a custom AI model; it names no external model provider, so the supported answer is Talowiz\u2019s own custom model.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Talowiz - Automated Data-Driven Recruiting",
+       "url": "https://www.talowiz.ai/pricing",
+       "excerpts": [
+        "Pricing Choose the plan that works for you Monthly biling Annual billing Save 20% Starter $199 per month For startups and small teams looking to fill 2-3 positions."
+       ]
+      },
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "Quick Links [Talowiz Vs All Hiring tools](https://www.talowiz.ai/talowiz-vs-hiring-universe) [Pricing](https://www.talowiz.ai/get-pricing) [Blog](https://www.talowiz.ai/blog) Office [6469 Almaden Expy Ste 80 #477 San Jose, CA 95120 United States](https://www.linkedin.com/newsletters/the-talent-times-ttt-7028325118254723072/) [\\+1-2064792022](https://www.linkedin.com/newsletters/the-talent-times-ttt-7028325118254723072/) [Terms](https://www.talowiz.ai/terms-of-use) [Privacy](https://www.talowiz.ai/privacy-policy)"
+       ]
+      }
+     ],
+     "reasoning": "The Talowiz pricing page publicly lists plans and prices, and its homepage footer links to Pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "AVP HR - Vedantu Partnering with Talowiz was a gamechanger for GoodGist. Their innovative approach and advanced technology enabled us to hire top talent within just one month, without the hassle and cost of building an in-house recruitment team. Ruban Phukan CEO - GoodGist"
+       ]
+      }
+     ],
+     "reasoning": "The homepage testimonials identify Vedantu and GoodGist as client organizations.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Privacy Policy | Talowiz",
+       "url": "https://www.talowiz.ai/privacy-policy",
+       "excerpts": [
+        "** We employ third-party tools to monitor and analyse the use of our websites, and to automate certain processes related to the development and operation of our websites.  ",
+        "7\\.1. **Google Analytics** : Utilization of Google Analytics is employed for the purpose of tracking our website traffic. Google Analytics serves as a web analytics service provided by Google itself. The data collected through this service is utilized by Google to oversee and monitor the usage of our websites, and this information may also be shared with other Google services. Google may apply this gathered data to tailor and personalize advertisements within its advertising network. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.2. **Mailchimp** : In the case of Mailchimp, we rely on it to effectively manage our newsletters and transactional emails. If you would like to gain insights into Mailchimp's privacy practices, please consult their privacy policy at [Mailchimp Privacy Policy](https://mailchimp.com/legal/privacy/) , and pay particular attention to the \"Privacy for Contacts\" section: [Mailchimp Privacy for Contacts](https://mailchimp.com/legal/privacy/._Privacy_for_Contacts) .  ",
+        "7\\.3. **AI Training Model - Talowiz** : We have developed a custom AI model to personalize the behavior and content as per user persona. For this, data we are capturing are name, role and actions on the website (profile selected/rejected interview feedback). The storage of captured data is complied with [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.4. **Google API** :  Utilization of Google APIs are role specific. Recruiters will be sending emails to candidates via Google APIs. Interviewers will be sharing their calendar for slot booking for interviews. Hence, we share name, email id and role in the case of recruiter. And email id and name in case of interviewer. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) ."
+       ]
+      }
+     ],
+     "reasoning": "Talowiz\u2019s privacy policy says it uses Google Analytics to track website traffic and Mailchimp to manage newsletters and transactional email; these are the named sales/marketing systems found in the reviewed material.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Talowiz Jobs & Careers | TheJobsMap",
+       "url": "https://www.thejobsmap.com/company/talowiz",
+       "excerpts": [
+        "Jobs at Talowiz No open positions right now.Explore more companies on [TheJobsMap](https://www.thejobsmap.com/) . Talowiz jobs: common questions Is Talowiz hiring right now? Talowiz has no open roles listed as of November 9, 2026. Roles appear here as soon as they are posted on Talowiz's careers site."
+       ]
+      }
+     ],
+     "reasoning": "The Talowiz jobs listing states as of November 9, 2026 that there are no open positions, so there is no open AI/ML/data-science role.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Talowiz 2026 Company Profile: Valuation, Funding & Investors | PitchBook",
+       "url": "https://pitchbook.com/profiles/company/495789-58",
+       "excerpts": [
+        "|Deal Type |Date |Amount |Raised to Date |Post-Val |Status |Stage | ... |1\\. Early Stage VC | | | | |Completed |Startup | [To view Talowiz\u2019s complete valuation and funding history, request access \u00bb](https://pitchbook.com/profiles/request-access)"
+       ]
+      },
+      {
+       "title": "Talowiz Stock Price, Funding, Valuation, Revenue & Financial Statements",
+       "url": "https://www.cbinsights.com/company/talowiz/financials",
+       "excerpts": [
+        "1 Fundings Talowiz's **latest funding round** was a **Other Investors for** on . |Date |Round |Amount |Investors |Valuation Valuations are submitted by companies, mined from state filings or news, provided by VentureSource, or based on a comparables valuation model. |Revenue |Sources | | |Other Investors | |[FortyTwo VC](https://www.cbinsights.com/investor/fortytwo-vc) |$XXM |0 FY undefined |1 | |Date | |"
+       ]
+      },
+      {
+       "title": "Talowiz company information, funding & investors | Dealroom.co",
+       "url": "https://app.dealroom.co/companies/talowiz",
+       "excerpts": [
+        "[Edit](https://app.dealroom.co/companies/talowiz/edit/funding-rounds) No known external funding Contact us to add funding data"
+       ]
+      },
+      {
+       "title": "Talowiz - 2026 Company Profile & Competitors - Tracxn",
+       "url": "https://tracxn.com/d/companies/talowiz/__V4vPXpp4iMqeXfNhyC1MQbWhedn204GFdweebE_XsPI",
+       "excerpts": [
+        "Talowiz has not raised any funding rounds yet."
+       ]
+      }
+     ],
+     "reasoning": "PitchBook identifies a completed Early Stage VC deal and CB Insights associates Talowiz with an investor, FortyTwo VC, but Dealroom and Tracxn report no known external rounds. The available record supports the displayed stage, while the funding date and amount are not disclosed and the sources conflict.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "Quick Links",
+        "[Talowiz Vs All Hiring tools](https://www.talowiz.ai/talowiz-vs-hiring-universe) [Pricing](https://www.talowiz.ai/get-pricing) [Blog](https://www.talowiz.ai/blog)",
+        "Office",
+        "[6469 Almaden Expy Ste 80 #477 San Jose, CA 95120 United States](https://www.linkedin.com/newsletters/the-talent-times-ttt-7028325118254723072/) [\\+1-2064792022](https://www.linkedin.com/newsletters/the-talent-times-ttt-7028325118254723072/)",
+        "[Terms](https://www.talowiz.ai/terms-of-use) [Privacy](https://www.talowiz.ai/privacy-policy)"
+       ]
+      }
+     ],
+     "reasoning": "The homepage footer\u2019s quick links include comparison, pricing, and blog links plus Terms and Privacy, but no public documentation or help-center link.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Talowiz | LinkedIn",
+       "url": "https://linkedin.com/company/76995163",
+       "excerpts": [
+        "8mo \ud83d\ude80 Launch Alert ... Who\u2019s interested. Who\u2019s worth the next round. And now, thanks to AI, every resume looks perfect. Finally, Talowiz AI pipeline builder have an answer to that. Our AI agents now build your talent pipeline before you ever step in. You don\u2019t start with resumes anymore. You start with a ready pipeline of relevant, interested candidates. That\u2019s the new Talowiz. Built for speed, quality & reduce cost per hire. \ud83d\udc49 See how it works in the comments."
+       ]
+      },
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "[](https://www.talowiz.ai/post/scale-hiring) [### How to Scale Hiring without Increasing Recruiters?](https://www.talowiz.ai/post/scale-hiring) Aditya Datta March 6, 2026 \u2022 5 min read [](https://www.talowiz.ai/post/ai-interviewer) [### How AI Interviewer works in Hiring?](https://www.talowiz.ai/post/ai-interviewer) Shubhanshu Srivastava February 25, 2026 \u2022"
+       ]
+      }
+     ],
+     "reasoning": "The visible LinkedIn Launch Alert is marked eight months old, before the six-month window, and the latest dated homepage/blog items shown are from March and February 2026. No qualifying in-window dated launch announcement is shown; this is medium confidence because a newer product landing page exists without a clear dated launch announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Talowiz Jobs & Careers | TheJobsMap",
+       "url": "https://www.thejobsmap.com/company/talowiz",
+       "excerpts": [
+        "Jobs at Talowiz No open positions right now.Explore more companies on [TheJobsMap](https://www.thejobsmap.com/) . Talowiz jobs: common questions Is Talowiz hiring right now? Talowiz has no open roles listed as of November 9, 2026. Roles appear here as soon as they are posted on Talowiz's careers site."
+       ]
+      }
+     ],
+     "reasoning": "The Talowiz jobs listing says there are no open positions as of November 9, 2026, so it is not hiring an SDR, BDR, or account executive.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "Partnering with Talowiz was a gamechanger for GoodGist. Their innovative approach and advanced technology enabled us to hire top talent within just one month, without the hassle and cost of building an in-house recruitment team."
+       ]
+      }
+     ],
+     "reasoning": "The company homepage testimonial names GoodGist.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Talowiz - The AI agents built for Talent Acquisition",
+       "url": "https://www.talowiz.ai/",
+       "excerpts": [
+        "AVP HR - Vedantu"
+       ]
+      }
+     ],
+     "reasoning": "The company homepage testimonial identifies Vedantu.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Privacy Policy | Talowiz",
+       "url": "https://www.talowiz.ai/privacy-policy",
+       "excerpts": [
+        "** We employ third-party tools to monitor and analyse the use of our websites, and to automate certain processes related to the development and operation of our websites.  ",
+        "7\\.1. **Google Analytics** : Utilization of Google Analytics is employed for the purpose of tracking our website traffic. Google Analytics serves as a web analytics service provided by Google itself. The data collected through this service is utilized by Google to oversee and monitor the usage of our websites, and this information may also be shared with other Google services. Google may apply this gathered data to tailor and personalize advertisements within its advertising network. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.2. **Mailchimp** : In the case of Mailchimp, we rely on it to effectively manage our newsletters and transactional emails. If you would like to gain insights into Mailchimp's privacy practices, please consult their privacy policy at [Mailchimp Privacy Policy](https://mailchimp.com/legal/privacy/) , and pay particular attention to the \"Privacy for Contacts\" section: [Mailchimp Privacy for Contacts](https://mailchimp.com/legal/privacy/._Privacy_for_Contacts) .  ",
+        "7\\.3. **AI Training Model - Talowiz** : We have developed a custom AI model to personalize the behavior and content as per user persona. For this, data we are capturing are name, role and actions on the website (profile selected/rejected interview feedback). The storage of captured data is complied with [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.4. **Google API** :  Utilization of Google APIs are role specific. Recruiters will be sending emails to candidates via Google APIs. Interviewers will be sharing their calendar for slot booking for interviews. Hence, we share name, email id and role in the case of recruiter. And email id and name in case of interviewer. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) ."
+       ]
+      }
+     ],
+     "reasoning": "The privacy policy states that Google Analytics is used to track website traffic.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Privacy Policy | Talowiz",
+       "url": "https://www.talowiz.ai/privacy-policy",
+       "excerpts": [
+        "** We employ third-party tools to monitor and analyse the use of our websites, and to automate certain processes related to the development and operation of our websites.  ",
+        "7\\.1. **Google Analytics** : Utilization of Google Analytics is employed for the purpose of tracking our website traffic. Google Analytics serves as a web analytics service provided by Google itself. The data collected through this service is utilized by Google to oversee and monitor the usage of our websites, and this information may also be shared with other Google services. Google may apply this gathered data to tailor and personalize advertisements within its advertising network. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.2. **Mailchimp** : In the case of Mailchimp, we rely on it to effectively manage our newsletters and transactional emails. If you would like to gain insights into Mailchimp's privacy practices, please consult their privacy policy at [Mailchimp Privacy Policy](https://mailchimp.com/legal/privacy/) , and pay particular attention to the \"Privacy for Contacts\" section: [Mailchimp Privacy for Contacts](https://mailchimp.com/legal/privacy/._Privacy_for_Contacts) .  ",
+        "7\\.3. **AI Training Model - Talowiz** : We have developed a custom AI model to personalize the behavior and content as per user persona. For this, data we are capturing are name, role and actions on the website (profile selected/rejected interview feedback). The storage of captured data is complied with [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) .  ",
+        "7\\.4. **Google API** :  Utilization of Google APIs are role specific. Recruiters will be sending emails to candidates via Google APIs. Interviewers will be sharing their calendar for slot booking for interviews. Hence, we share name, email id and role in the case of recruiter. And email id and name in case of interviewer. For a comprehensive understanding of Google's privacy practices, we recommend referring to the Google Privacy Terms web page: [Google Privacy Terms](https://policies.google.com/privacy?hl=en) . Additionally, we encourage you to explore Google's data protection policy: [Google Data Protection Policy](https://support.google.com/analytics/answer/6004245) ."
+       ]
+      }
+     ],
+     "reasoning": "The privacy policy states that Mailchimp is used to manage newsletters and transactional emails.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Talowiz is an AI hiring platform for recruiting and talent-acquisition teams that autonomously sources, evaluates, interviews, and selects candidates to automate recruitment workflows.",
+    "employee_band": "11-20",
+    "model_provider": "Talowiz's custom AI model",
+    "pricing_page": true,
+    "funding_amount_usd": null,
+    "named_customers": [
+     "GoodGist",
+     "Vedantu"
+    ],
+    "funding_date": null,
+    "crm_stack_signal": [
+     "Google Analytics",
+     "Mailchimp"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Early Stage VC",
+    "public_docs": false,
+    "hq_city": "Ashburn",
+    "launched_6mo": false,
+    "hiring_sdr_ae": false,
+    "raised_18mo": null
+   }
+  }
+ }
+}

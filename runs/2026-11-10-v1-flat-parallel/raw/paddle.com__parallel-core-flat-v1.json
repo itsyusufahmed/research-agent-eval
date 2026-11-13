@@ -1,0 +1,478 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439ea16a1307dbd814b8",
+  "interaction_id": "trun_142119f6a1b4439ea16a1307dbd814b8",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "paddle.com"
+  },
+  "created_at": "2026-11-10T18:47:37.322839Z",
+  "modified_at": "2026-11-10T18:54:33.430886Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439ea16a1307dbd814b8",
+   "interaction_id": "trun_142119f6a1b4439ea16a1307dbd814b8",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "paddle.com"
+   },
+   "created_at": "2026-11-10T18:47:37.322839Z",
+   "modified_at": "2026-11-10T18:54:33.430886Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Notion portfolio: Paddle",
+       "url": "https://www.notioncapital.com/portfolio/paddle",
+       "excerpts": [
+        "Founded: 2012"
+       ]
+      },
+      {
+       "title": "PADDLE.COM MARKET LIMITED overview - Find and update company information - GOV.UK",
+       "url": "https://find-and-update.company-information.service.gov.uk/company/08172165",
+       "excerpts": [
+        "Incorporated on 8 August 2012"
+       ]
+      }
+     ],
+     "reasoning": "The Paddle portfolio profile states it was founded in 2012; Companies House independently shows Paddle.com Market Limited was incorporated in August 2012.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center - Paddle",
+       "url": "https://trust.paddle.com/",
+       "excerpts": [
+        "## Compliance",
+        "SOC 2",
+        "PCI DSS 4.0.1",
+        "GDPR",
+        "CCPA"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s Trust Center compliance section names SOC 2, PCI DSS 4.0.1, and GDPR. Those are the requested named items; CCPA is not included because it is outside the requested list.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/paddle",
+       "excerpts": [
+        "country iso: GB country name: United Kingdom locality: London, England"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s LinkedIn company profile identifies its location as London, England, United Kingdom, supporting United Kingdom as the headquarters country.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Paddle.engineering",
+       "url": "https://paddle.engineering/",
+       "excerpts": [
+        "[[Engineering] ## Go microservices at Paddle: Consistency, without killing innovation Learn how Paddle transitioned from microservice chaos to engineering consistency by making it easier to build the right thing. We built toolkits that teams actually want to use, freeing up engineers to focus on solving customer problems. Author Photo George Wilson \u2022 Jan 28, 2026](https://paddle.engineering/blog/go-microservices-at-paddle-consistency-catalyst)",
+        "[[Features] ## From manual high-touch to self-serve: how we migrated over a million subscriptions Navigating the technical complexity of two incompatible architectures: how we transformed a weeks-long, engineering-intensive migration process into a self-serve experience that customers love. Author Photo Stephane De Keerle \u2022 Dec 16, 2025](https://paddle.engineering/blog/self-serve-migrations)",
+        "[[Events] ## Your APIs are now AI infrastructure: takeaways from POST/CON 25 Key takeaways from POST/CON 25 on how to build AI-ready APIs and design for a future where AI agents are first-class consumers. Author Photo Michael McGovern \u2022 Jul 21, 2025](https://paddle.engineering/blog/postcon-2025-apis-ai-future)",
+        "[[Engineering] ## Behind webhooks at Paddle: Insights into event delivery at scale Learn how Paddle built webhook infrastructure that scales from Black Friday peaks to daily volume. Insights on event delivery, queue prioritization, and dev tools. Author Photo Michael Woodward \u2022 May 2, 2025](https://paddle.engineering/blog/hookdeck-podcast-event-delivery-scale)",
+        "[[Features] ## Our latest DX updates: enhanced integration, better testing and stability Major updates from Paddle's DX team including Go SDK v1 release, Next.js Starter Kit, and the highly-requested Webhook Simulator for streamlined integration testing. Author Photo Kieran Mountford \u2022 Jan 15, 2025](https://paddle.engineering/blog/dx-updates-webhook-simulator)",
+        "[[Engineering] ## From legacy to leading: How we rebuilt Paddle for developers The story of how Paddle reimagined and rebuilt their core product to deliver a world-class developer experience, focusing on API-first culture and comprehensive documentation. Author Photo Kieran Mountford \u2022 Nov 15, 2024](https://paddle.engineering/blog/how-we-rebuilt-paddle-for-developers)",
+        "[[Engineering] ## Boosting resilience through chaos testing: One test at a time How Paddle uses chaos engineering practices to identify system weaknesses, improve fault tolerance, and enhance the resilience of their microservices architecture. Author Photo Jordi Pallar\u00e9s \u2022 Sep 25, 2024](https://paddle.engineering/blog/chaos-engineering-tests)",
+        "[[Engineering] ## Payment routing part #2: Developing Paddle's rules engine A deep dive into Paddle's rules engine that determines payment routing destinations, featuring fallback and weighted strategies, data-driven improvements, and future machine learning plans. Author Photo George Wilson \u2022 Aug 12, 2024](https://paddle.engineering/blog/payment-routing-part-2-developing-paddles-rules-engine)",
+        "[[Engineering] ## Payment routing part #1: Unifying the payments lifecycle How Paddle built a unified payment lifecycle to standardize integrations with multiple payment service providers, enabling intelligent routing and better acceptance rates. Author Photo George Wilson \u2022 Jul 18, 2024](https://paddle.engineering/blog/payment-routing-part-1-unifying-the-payments-lifecycle)"
+       ]
+      }
+     ],
+     "reasoning": "Paddle identifies this as its product and engineering team blog. Its index includes multiple technical engineering posts, including the Go microservices architecture article and payment-routing engineering deep dives, meeting the two-post threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "What is Paddle?",
+       "url": "https://developer.paddle.com/get-started/how-paddle-works",
+       "excerpts": [
+        "Paddle is the developer-first merchant of record, built for modern SaaS, mobile app, AI, and digital product companies. It helps you increase your revenue, decrease your costs, and reduce your risk. Paddle is an all-in-one payments and billing [merchant of record](https://mor.paddle.com/) for modern SaaS, mobile app, AI, and digital product companies. You can use Paddle to add checkout, subscriptions, global tax compliance, metrics, fraud protection, and retention tooling to your app through one unified API."
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s developer documentation describes it as an all-in-one merchant of record for modern SaaS, mobile app, AI, and digital product companies, with checkout, subscriptions, tax compliance, metrics, fraud protection, and retention tools.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Paddle Employee Directory, Headcount & Staff | LeadIQ",
+       "url": "https://www.leadiq.com/c/paddle/5a1da7c423000052009b6870/employee-directory",
+       "excerpts": [
+        "Paddle is a software development company based in London, United Kingdom, located at 18-29 Mora Street, London, EC1V 8BT, and employing between 201 and 500 people."
+       ]
+      }
+     ],
+     "reasoning": "The company directory reports Paddle employs between 201 and 500 people, which matches the permitted band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "All-in-One Pricing, No Hidden Costs | Paddle",
+       "url": "https://www.paddle.com/pricing",
+       "excerpts": [
+        "Pay-as-you-go Start selling globally with Paddle as your Merchant of Record. Payments, checkout, and billing in one platform Global tax and regulatory compliance Fraud protection, chargebacks, and buyer support No monthly fees, migration fees, or hidden extras 5% + 50\u00a2 per Checkout transaction"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s public pricing page lists its pay-as-you-go plan and a transaction price, so a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "PADDLE.COM MARKET LIMITED \u2014 The Accounts",
+       "url": "https://theaccounts.uk/company/08172165/paddle-com-market-limited",
+       "excerpts": [
+        "Significant events \"Subsequent to the year end, on 29 May 2026, the Company constituted a Convertible Loan Note Instrument 2026 and issued unsecured convertible loan notes with an aggregate principal amount of US$25,000,000 (approximately \u00a318.6 million) in four tranches to a group of existing institutional shareholders.\""
+       ]
+      },
+      {
+       "title": "tisegroup.com",
+       "url": "https://tisegroup.com/market/news/360624",
+       "excerpts": [
+        "**NOTICE OF ADMISSION TO OFFICIAL LIST** The following securities have been admitted to the Official List of The International Stock Exchange with effect from 13 July 2026 at 18:00. **Paddle.com Market Limited** USD25,000,000 unsecured subordinated convertible loan notes 2026"
+       ]
+      }
+     ],
+     "reasoning": "The accounts summary reports that Paddle issued convertible loan notes with aggregate principal of US$25 million on 29 May 2026; the exchange notice independently identifies Paddle\u2019s USD 25 million 2026 convertible notes.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Paddle Reviews & Testimonials",
+       "url": "https://www.paddle.com/customers",
+       "excerpts": [
+        "[MacPaw Logo 200% increase in revenue 75% first subscription renewal rate](https://www.paddle.com/customers/macpaw-move-to-saas)",
+        "Fortinet Logo MacPaw Logo Laravel Spark Logo Adaptavist Logo Geoguessr Logo n8n logo Tailwind Logo removebg Logo BeyondCode Logo Daylite Logo GetBlock Logo Runna Logo HubX Logo"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s customer stories page names MacPaw and Fortinet among its customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "PADDLE.COM MARKET LIMITED \u2014 The Accounts",
+       "url": "https://theaccounts.uk/company/08172165/paddle-com-market-limited",
+       "excerpts": [
+        "Significant events \"Subsequent to the year end, on 29 May 2026, the Company constituted a Convertible Loan Note Instrument 2026 and issued unsecured convertible loan notes with an aggregate principal amount of US$25,000,000 (approximately \u00a318.6 million) in four tranches to a group of existing institutional shareholders.\""
+       ]
+      }
+     ],
+     "reasoning": "The reported issuance date is 29 May 2026, which formats as 2026-05.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Senior Lifecycle Marketing Specialist  @ Paddle",
+       "url": "https://jobs.ashbyhq.com/paddle/e36ef18a-1911-42b5-8985-beaab978992a",
+       "excerpts": [
+        "* **Integrate Lifecycle & Product:** Work in lockstep with Risk, Product, and Data teams to tie lifecycle communications directly to our onboarding paths. You will ensure that as we increase velocity for \"revenue-ready\" ICPs, our messaging evolves in real-time to match their stage.",
+        "* **Advance Lifecycle Infrastructure:** Own the end-to-end requirements gathering necessary to activate comprehensive lifecycle marketing strategies. Partner with and drive conversations across Data Engineering, Product, and Analytics teams to bridge the gap between our engagement tools (HubSpot) and data warehouse, ensuring the delivery of real-time triggering, data synchronization, and advanced personalization at scale."
+       ]
+      }
+     ],
+     "reasoning": "A Paddle lifecycle-marketing job posting explicitly identifies HubSpot as an engagement tool used with its data warehouse.",
+     "confidence": "high"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Senior AI Engineer (GTM)  @ Paddle",
+       "url": "https://jobs.ashbyhq.com/paddle/e802f2b7-f0df-4354-a2a1-1c322e2706fd",
+       "excerpts": [
+        "Senior AI Engineer (GTM) Location UK; Toronto Employment Type Full time Location Type Remote Department Product & Engineering Engineering Compensation For this role, the expected base salary range is circa CA$0 \u2013 CA$150K ... **The role:** We\u2019re looking for an entrepreneurial and technically strong Senior AI Engineer to join our Data & AI team and work with our Go-To-Market organisation. This is a builder's role, end to end. You\u2019ll work closely with Marketing, Sales, and RevOps to solve high-value problems, design practical AI solutions and build them into reliable systems that ... Design and build AI-powered systems for account segmentation, enrichment, scoring, prioritisation and buying-signal detection"
+       ]
+      },
+      {
+       "title": "Head of Data Science @ Paddle",
+       "url": "https://jobs.ashbyhq.com/paddle/1f3ae2ca-b855-4451-9ed2-018f330baa14",
+       "excerpts": [
+        "Head of Data Science Location UK; Ireland; Portugal Employment Type Full time Location Type Remote ... Our Merchant of Record model gives us a data position no PSP or billing provider has: subscription and pricing context ... The mandate is deliberately narrow and deliberately ambitious: data science at Paddle owns **automated decisioning inside the product** \u2014 traditional machine learning and agentic systems alike \u2014 not decision-support analytics. ... Able to hire, level and develop senior data scientists and ML engineers, and to set standards for a function that doesn't exist yet. ... [Apply for this Job](https://jobs.ashbyhq.com/paddle/1f3ae2ca-b855-4451-9ed2-018f330baa14/application)"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s live job listings include a Senior AI Engineer and a Head of Data Science posting, both matching the specified AI/ML/data-science titles.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "PADDLE.COM MARKET LIMITED \u2014 The Accounts",
+       "url": "https://theaccounts.uk/company/08172165/paddle-com-market-limited",
+       "excerpts": [
+        "Significant events \"Subsequent to the year end, on 29 May 2026, the Company constituted a Convertible Loan Note Instrument 2026 and issued unsecured convertible loan notes with an aggregate principal amount of US$25,000,000 (approximately \u00a318.6 million) in four tranches to a group of existing institutional shareholders.\""
+       ]
+      },
+      {
+       "title": "tisegroup.com",
+       "url": "https://tisegroup.com/market/news/360624",
+       "excerpts": [
+        "**NOTICE OF ADMISSION TO OFFICIAL LIST** The following securities have been admitted to the Official List of The International Stock Exchange with effect from 13 July 2026 at 18:00. **Paddle.com Market Limited** USD25,000,000 unsecured subordinated convertible loan notes 2026"
+       ]
+      }
+     ],
+     "reasoning": "The latest reported capital event is the May 2026 issuance of unsecured convertible loan notes, a convertible debt financing.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "What is Paddle?",
+       "url": "https://developer.paddle.com/get-started/how-paddle-works",
+       "excerpts": [
+        "Paddle is the developer-first merchant of record, built for modern SaaS, mobile app, AI, and digital product companies. It helps you increase your revenue, decrease your costs, and reduce your risk. Paddle is an all-in-one payments and billing [merchant of record](https://mor.paddle.com/) for modern SaaS, mobile app, AI, and digital product companies. You can use Paddle to add checkout, subscriptions, global tax compliance, metrics, fraud protection, and retention tooling to your app through one unified API."
+       ]
+      },
+      {
+       "title": "Get started",
+       "url": "https://developer.paddle.com/get-started",
+       "excerpts": [
+        "> For the complete documentation index, see [llms.txt](https://developer.paddle.com/llms.txt). > ... Get started Understand Paddle, find your use case, build a quickstart, and use AI tools to integrate faster. --- Pick your path [Learn how Paddle works](https://developer.paddle.com/get-started/how-paddle-works.md): Learn how Paddle works for SaaS, mobile, AI, and one-time products. [Quickstart](https://developer.paddle.com/get-started/quickstart.md): Step through sandbox, catalog, pricing page, checkout, and webhooks end to end. [Build with AI tools](https://developer.paddle.com/get-started/ai.md): Wire the Paddle MCP server and docs MCP server to Lovable, Cursor, or Claude Code and prompt your integration."
+       ]
+      }
+     ],
+     "reasoning": "Paddle maintains a public developer documentation portal with product explanations, quickstarts, and documentation index links, satisfying the several-articles requirement.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/paddle",
+       "excerpts": [
+        "country iso: GB country name: United Kingdom locality: London, England"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s company profile lists London, England, United Kingdom as its locality; the city component is London.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Paddle Launches Ai Toolkit Bringing Global Selling Into Ai Workflows",
+       "url": "https://www.paddle.com/blog/paddle-launches-ai-toolkit-bringing-global-selling-into-ai-workflows",
+       "excerpts": [
+        "# Paddle launches AI Toolkit, bringing global selling into the AI workflows builders already use",
+        "Published",
+        "Oct 20, 2026",
+        "**LONDON, October 20, 2026** \u2013 Paddle, the Merchant of Record platform for AI-native, app and SaaS companies, today announced the **Paddle AI Toolkit** , allowing developers to set up, test, and manage key parts of their billing directly from AI tools including Claude Code, Codex, Cursor, and Gemini CLI. As Merchant of Record, Paddle remains the legal reseller for every sale, responsible for payments, tax, and regulatory compliance across the more than 300 markets its customers sell to globally.",
+        "AI-assisted development is enabling leaner teams to build and launch digital products faster. At the same time, selling globally has become more complex, with even small teams facing payments, tax, and compliance requirements across multiple markets from day one, usually managed in separate dashboards away from the tools where they build.",
+        "The **Paddle AI Toolkit** lets developers and their AI agents configure pricing, test checkouts, and manage billing from the tools they already use. Paddle\u2019s MCP servers, Docs MCP and Billing MCP, connect Paddle with AI tools through Model Context Protocol (MCP), an open standard that lets AI tools connect with external software.",
+        "* With **Docs MCP** and **Ask AI** , developers can access Paddle-specific guidance through Paddle\u2019s documentation and supported AI tools. **AI-assisted Getting Started** provides guided prompts, while Agent Skills help AI agents complete common implementation tasks with step-by-step procedures, code templates, and best practices.",
+        "* **Billing MCP** lets authenticated developers and their agents view and take action in their Paddle account. Before going live, they can check that their setup is ready, verifying webhook setup and running controlled test checkouts, then recreate supported products and prices they have tested in a sandbox in their live account. They can also create products and prices and manage supported subscription operations.",
+        "* The **Paddle plugin** brings Docs MCP, Billing MCP and Agent Skills together in one starting point, helping developers move from initial setup to launch and ongoing billing management within the same workflow. Changes remain subject to authentication, account permissions and human oversight, with Paddle's dashboard and APIs available whenever teams prefer to use them."
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s announcement dated October 20, 2026 says it launched the AI Toolkit and announced native Usage-Based Billing, both within the six-month window preceding November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Business Development Representative @ Paddle",
+       "url": "https://jobs.ashbyhq.com/paddle/008fabd1-7f7a-41f0-a8e2-7111e20c5ee4",
+       "excerpts": [
+        "# Business Development Representative",
+        "## Location",
+        "UK",
+        "## Employment Type",
+        "Full time",
+        "## Location Type",
+        "Remote",
+        "## Department",
+        "Commercial Sales International",
+        "[Overview](https://jobs.ashbyhq.com/paddle/008fabd1-7f7a-41f0-a8e2-7111e20c5ee4) [Application](https://jobs.ashbyhq.com/paddle/008fabd1-7f7a-41f0-a8e2-7111e20c5ee4/application)"
+       ]
+      }
+     ],
+     "reasoning": "Paddle\u2019s live job listing is titled Business Development Representative and gives an application link; this meets the requested BDR criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "PADDLE.COM MARKET LIMITED \u2014 The Accounts",
+       "url": "https://theaccounts.uk/company/08172165/paddle-com-market-limited",
+       "excerpts": [
+        "Significant events \"Subsequent to the year end, on 29 May 2026, the Company constituted a Convertible Loan Note Instrument 2026 and issued unsecured convertible loan notes with an aggregate principal amount of US$25,000,000 (approximately \u00a318.6 million) in four tranches to a group of existing institutional shareholders.\""
+       ]
+      },
+      {
+       "title": "tisegroup.com",
+       "url": "https://tisegroup.com/market/news/360624",
+       "excerpts": [
+        "**NOTICE OF ADMISSION TO OFFICIAL LIST** The following securities have been admitted to the Official List of The International Stock Exchange with effect from 13 July 2026 at 18:00. **Paddle.com Market Limited** USD25,000,000 unsecured subordinated convertible loan notes 2026"
+       ]
+      }
+     ],
+     "reasoning": "The documented $25 million convertible-note issuance occurred in May 2026, inside the 18 months before November 9, 2026.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [],
+     "reasoning": "The Trust Center explicitly lists SOC 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [],
+     "reasoning": "The Trust Center explicitly lists PCI DSS 4.0.1.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [],
+     "reasoning": "The Trust Center explicitly lists GDPR.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Paddle Reviews & Testimonials",
+       "url": "https://www.paddle.com/customers",
+       "excerpts": [
+        "[MacPaw Logo 200% increase in revenue 75% first subscription renewal rate](https://www.paddle.com/customers/macpaw-move-to-saas)"
+       ]
+      }
+     ],
+     "reasoning": "The Paddle customer stories page names MacPaw as a customer and links to its story.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Paddle Reviews & Testimonials",
+       "url": "https://www.paddle.com/customers",
+       "excerpts": [
+        "Fortinet Logo MacPaw Logo Laravel Spark Logo Adaptavist Logo Geoguessr Logo n8n logo Tailwind Logo removebg Logo BeyondCode Logo Daylite Logo GetBlock Logo Runna Logo HubX Logo"
+       ]
+      }
+     ],
+     "reasoning": "The Paddle customer stories page names Fortinet in its customer logo wall.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Senior Lifecycle Marketing Specialist  @ Paddle",
+       "url": "https://jobs.ashbyhq.com/paddle/e36ef18a-1911-42b5-8985-beaab978992a",
+       "excerpts": [
+        "* **Integrate Lifecycle & Product:** Work in lockstep with Risk, Product, and Data teams to tie lifecycle communications directly to our onboarding paths. You will ensure that as we increase velocity for \"revenue-ready\" ICPs, our messaging evolves in real-time to match their stage.",
+        "* **Advance Lifecycle Infrastructure:** Own the end-to-end requirements gathering necessary to activate comprehensive lifecycle marketing strategies. Partner with and drive conversations across Data Engineering, Product, and Analytics teams to bridge the gap between our engagement tools (HubSpot) and data warehouse, ensuring the delivery of real-time triggering, data synchronization, and advanced personalization at scale."
+       ]
+      }
+     ],
+     "reasoning": "The job posting explicitly names HubSpot as an engagement tool.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2012.0,
+    "compliance_certs": [
+     "SOC 2",
+     "PCI DSS",
+     "GDPR"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": true,
+    "product_one_liner": "Paddle is an all-in-one merchant-of-record payments and billing platform that helps SaaS, mobile app, AI, and other digital-product companies sell globally, handling checkout, subscriptions, tax compliance, fraud protection, and retention.",
+    "employee_band": "201-500",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 25000000.0,
+    "named_customers": [
+     "MacPaw",
+     "Fortinet"
+    ],
+    "funding_date": "2026-05",
+    "crm_stack_signal": [
+     "HubSpot"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Convertible loan notes (debt financing)",
+    "public_docs": true,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

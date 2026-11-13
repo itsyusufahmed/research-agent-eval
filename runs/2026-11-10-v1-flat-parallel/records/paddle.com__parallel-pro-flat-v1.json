@@ -1,0 +1,168 @@
+{
+ "schema_version": "v0",
+ "company": "Paddle",
+ "domain": "paddle.com",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Paddle is a merchant-of-record platform that handles payments, subscriptions, tax compliance, fraud protection, and retention for SaaS, mobile app, AI, and digital product companies.",
+   "citations": [
+    "https://developer.paddle.com/get-started/how-paddle-works"
+   ],
+   "notes": "Paddle's developer documentation directly identifies the target businesses and its unified payments, billing, tax, fraud, and retention capabilities: https://developer.paddle.com/get-started/how-paddle-works."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.paddle.com/pricing"
+   ],
+   "notes": "Paddle has a public pricing page showing pay-as-you-go pricing of 5% + 50\u00a2 per checkout transaction and custom pricing options: https://www.paddle.com/pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "MacPaw",
+    "GeoGuessr",
+    "n8n"
+   ],
+   "citations": [
+    "https://www.paddle.com/blog/paddle-launches-ai-toolkit-bringing-global-selling-into-ai-workflows"
+   ],
+   "notes": "named_customers: Paddle explicitly names MacPaw, GeoGuessr, and n8n among companies that trust it to operate and grow: https://www.paddle.com/blog/paddle-launches-ai-toolkit-bringing-global-selling-into-ai-workflows. | named_customers.0: Paddle explicitly names MacPaw among companies using its services. | named_customers.1: Paddle explicitly names GeoGuessr among companies using its services. | named_customers.2: Paddle explicitly names n8n among companies using its services."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "201-500",
+   "citations": [
+    "https://www.leadiq.com/c/paddle/5a1da7c423000052009b6870/employee-directory"
+   ],
+   "notes": "LeadIQ explicitly places Paddle in the 201\u2013500 employee band. This is a third-party estimate rather than an official headcount: https://www.leadiq.com/c/paddle/5a1da7c423000052009b6870/employee-directory."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "London",
+    "country": "United Kingdom"
+   },
+   "citations": [
+    "https://companyview.io/company/paddle",
+    "https://www.leadiq.com/c/paddle/5a1da7c423000052009b6870/employee-directory",
+    "https://www.notioncapital.com/portfolio/paddle"
+   ],
+   "notes": "hq_city: CompanyView identifies London, England, United Kingdom, and LeadIQ independently describes Paddle as based in London. These are third-party company-location sources: https://companyview.io/company/paddle and https://www.leadiq.com/c/paddle/5a1da7c423000052009b6870/employee-directory. | hq_country: Notion Capital's Paddle portfolio page explicitly identifies its headquarters country as the UK: https://www.notioncapital.com/portfolio/paddle."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2012.0,
+   "citations": [
+    "https://www.notioncapital.com/portfolio/paddle"
+   ],
+   "notes": "Paddle investor Notion Capital explicitly lists its founding year as 2012: https://www.notioncapital.com/portfolio/paddle."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://paddle.engineering/blog/payment-routing-part-2-developing-paddles-rules-engine",
+    "https://paddle.engineering/blog/go-microservices-at-paddle-consistency-catalyst"
+   ],
+   "notes": "Two distinct technical articles describe Paddle's payment-routing rules engine and Go microservice architecture. Both identify their author, George Wilson, as Head of Engineering, Payments: https://paddle.engineering/blog/payment-routing-part-2-developing-paddles-rules-engine and https://paddle.engineering/blog/go-microservices-at-paddle-consistency-catalyst."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://developer.paddle.com/get-started/how-paddle-works"
+   ],
+   "notes": "Paddle's public developer documentation links to multiple detailed articles, a checkout quickstart, and starter kits, establishing a multi-article documentation portal: https://developer.paddle.com/get-started/how-paddle-works."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/paddle/1f3ae2ca-b855-4451-9ed2-018f330baa14"
+   ],
+   "notes": "A live Head of Data Science posting includes an application link, satisfying the requested role-title criterion: https://jobs.ashbyhq.com/paddle/1f3ae2ca-b855-4451-9ed2-018f330baa14."
+  },
+  "model_provider": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "No underlying AI model or model provider was verified. Paddle names Kapa.ai as the vendor powering its documentation assistant, but does not identify that assistant's underlying model. Claude Code, Codex, Cursor, and Gemini CLI are described as compatible tools, not models powering Paddle. Sources checked include https://developer.paddle.com/changelog/2026/ai-native-docs-launch, https://developer.paddle.com/get-started/ai, and https://trust.paddle.com/subprocessors."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2",
+    "GDPR",
+    "PCI DSS"
+   ],
+   "citations": [
+    "https://security.paddle.com/"
+   ],
+   "notes": "compliance_certs: Paddle's trust center lists SOC 2, PCI DSS 4.0.1, and GDPR under compliance. The answer includes only the requested frameworks named there: https://security.paddle.com/. | compliance_certs.0: SOC 2 is explicitly listed in Paddle's trust center. | compliance_certs.1: GDPR is explicitly listed in Paddle's trust center; it is reported as a public compliance claim, not characterized as a formal certification. | compliance_certs.2: PCI DSS 4.0.1 is explicitly listed in Paddle's trust center."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Conventional Debt",
+    "date": "2025-07",
+    "amount_usd": 25000000.0
+   },
+   "citations": [
+    "https://tracxn.com/d/companies/paddle/__8MXiRvlcZyrTHTirJwCMcc5_5-PHOmEETZExlNNL-sM/funding-and-investors",
+    "https://www.paddle.com/blog/paddle-raises-25m"
+   ],
+   "notes": "funding_stage: The funding-history entry classifies the latest $25 million financing as Conventional Debt, rather than a new equity series: https://tracxn.com/d/companies/paddle/__8MXiRvlcZyrTHTirJwCMcc5_5-PHOmEETZExlNNL-sM/funding-and-investors. | funding_date: The announcement and latest listed funding entry agree on July 17, 2025, normalized to 2025-07: https://www.paddle.com/blog/paddle-raises-25m and https://tracxn.com/d/companies/paddle/__8MXiRvlcZyrTHTirJwCMcc5_5-PHOmEETZExlNNL-sM/funding-and-investors. | funding_amount_usd: Paddle announced $25 million in financing on July 17, 2025. The funding-history page identifies it as the latest listed financing: https://www.paddle.com/blog/paddle-raises-25m and https://tracxn.com/d/companies/paddle/__8MXiRvlcZyrTHTirJwCMcc5_5-PHOmEETZExlNNL-sM/funding-and-investors."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.paddle.com/blog/paddle-raises-25m"
+   ],
+   "notes": "The $25 million financing announced July 17, 2025 falls inside the 18-month window beginning May 9, 2025. This is debt financing, not an equity round: https://www.paddle.com/blog/paddle-raises-25m."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/paddle/0989784d-6614-4f92-be52-1ff2cdea786d?source=himalayas.app",
+    "https://www.paddle.com/careers"
+   ],
+   "notes": "The careers page lists a San Francisco Senior Account Executive vacancy, and its individual job posting is readable: https://www.paddle.com/careers and https://jobs.ashbyhq.com/paddle/0989784d-6614-4f92-be52-1ff2cdea786d."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://www.paddle.com/blog/paddle-launches-ai-toolkit-bringing-global-selling-into-ai-workflows"
+   ],
+   "notes": "Paddle announced the Paddle AI Toolkit on October 20, 2026, within the six-month window beginning May 9, 2026. It enables billing setup, testing, and management from AI development tools: https://www.paddle.com/blog/paddle-launches-ai-toolkit-bringing-global-selling-into-ai-workflows."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "A qualifying company join or departure could not be verified for November 9, 2025\u2013November 9, 2026. Brooke Freedman's profile shows a VP role beginning in October 2026 but earlier Paddle employment, so it may be an internal promotion rather than a company join. The verified multi-executive appointment announcement dates to February 2024, outside the window. Sources: https://linkedin.com/in/brookefreedman and https://www.sharecast.com/press_note/market_reports/paddle-bolsters-leadership-team-with-new-cpo-cfo-and-vp-of-people-ahead-of-the-next-stage-of-global-expansion--16351728.html."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "HubSpot",
+    "Dreamdata"
+   ],
+   "citations": [
+    "http://jobs.kindredcapital.vc/companies/paddle/jobs/89244157-marketing-operations-specialist"
+   ],
+   "notes": "crm_stack_signal: Paddle's Marketing Operations Specialist job description explicitly includes HubSpot and Dreamdata in 'our Martech stack.' Only clearly relevant marketing systems are included: http://jobs.kindredcapital.vc/companies/paddle/jobs/89244157-marketing-operations-specialist. | crm_stack_signal.0: The job description explicitly names HubSpot as part of Paddle's marketing technology stack. | crm_stack_signal.1: The job description explicitly names Dreamdata as part of Paddle's marketing technology stack."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 386.3
+}

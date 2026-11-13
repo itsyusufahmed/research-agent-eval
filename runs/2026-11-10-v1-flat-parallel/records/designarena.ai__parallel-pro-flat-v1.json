@@ -1,0 +1,169 @@
+{
+ "schema_version": "v0",
+ "company": "Design Arena",
+ "domain": "designarena.ai",
+ "config_id": "parallel-pro-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Design Arena lets creators generate and compare AI-produced websites, apps and multimedia, while helping AI developers benchmark models using real-world human preferences.",
+   "citations": [
+    "https://www.designarena.ai/profile",
+    "https://www.ycombinator.com/companies/design-arena"
+   ],
+   "notes": "The product profile describes generating and comparing websites, apps and multimedia; YC describes evaluating models on real-world design tasks with users. Sources: https://www.designarena.ai/profile and https://www.ycombinator.com/companies/design-arena."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://www.designarena.ai/"
+   ],
+   "notes": "No pricing link appears in the homepage navigation or footer, and the tested pricing route returned only a self-redirect rather than plans or pricing content. Source: https://www.designarena.ai/. The redirect makes this a qualified negative."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Google",
+    "OpenAI"
+   ],
+   "citations": [
+    "https://www.indexventures.com/perspectives/proving-ai-in-the-real-world-our-investment-in-the-intelligence-company"
+   ],
+   "notes": "named_customers: Index Ventures' company write-up explicitly says Google used Design Arena to test Gemini 3 and OpenAI used it to evaluate models. These names are based on documented product use, not investor status or provider logos; paid-contract status is not disclosed. Source: https://www.indexventures.com/perspectives/proving-ai-in-the-real-world-our-investment-in-the-intelligence-company. | named_customers.0: The company write-up explicitly says Google used Design Arena to test Gemini 3 ahead of launch. It establishes product use, although payment is not disclosed: https://www.indexventures.com/perspectives/proving-ai-in-the-real-world-our-investment-in-the-intelligence-company. | named_customers.1: The company write-up explicitly includes OpenAI among organizations using Design Arena to evaluate models. It establishes product use, although payment is not disclosed: https://www.indexventures.com/perspectives/proving-ai-in-the-real-world-our-investment-in-the-intelligence-company."
+  },
+  "employee_band": {
+   "status": "asserted",
+   "value": "11-20",
+   "citations": [
+    "https://linkedin.com/company/design-arena-ai"
+   ],
+   "notes": "The LinkedIn company record reports 12 employees, placing it in 11-20. This is a profile count, not an audited payroll total: https://linkedin.com/company/design-arena-ai."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "San Francisco",
+    "country": "United States"
+   },
+   "citations": [
+    "https://www.g2.com/sellers/design-arena"
+   ],
+   "notes": "hq_city: The matching G2 listing explicitly gives HQ Location: San Francisco, US: https://www.g2.com/sellers/design-arena. | hq_country: The matching G2 listing identifies HQ Location: San Francisco, US and links designarena.ai: https://www.g2.com/sellers/design-arena."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2025.0,
+   "citations": [
+    "https://www.ycombinator.com/companies/design-arena"
+   ],
+   "notes": "The Y Combinator profile explicitly lists Founded: 2025: https://www.ycombinator.com/companies/design-arena."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://notes.designarena.ai/what-weve-learned-from-50-000-ai-slides-generations-open-sourced-for-you-today-2/",
+    "https://notes.designarena.ai/evaluating-mobile-app-building-agents/",
+    "https://notes.designarena.ai/author/grace/",
+    "https://www.ycombinator.com/companies/design-arena"
+   ],
+   "notes": "At least two posts explain product implementation: slide-generation harnesses and mobile-agent evaluation infrastructure. They appear in technical cofounder Grace Li's author archive, and YC identifies her computer-science background. Her engineering authorship is supported by technical content and background rather than an explicit engineer job title. Sources: https://notes.designarena.ai/what-weve-learned-from-50-000-ai-slides-generations-open-sourced-for-you-today-2/; https://notes.designarena.ai/evaluating-mobile-app-building-agents/; https://notes.designarena.ai/author/grace/; https://www.ycombinator.com/companies/design-arena."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://docs.designarena.ai/introduction"
+   ],
+   "notes": "The public developer documentation links multiple resources, including Quickstart, API Reference and Leaderboard Endpoint: https://docs.designarena.ai/introduction."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.ashbyhq.com/intelligence/3de9ad79-9225-4aed-bb0f-8a9830818a8d",
+    "https://intelligence.ai/careers"
+   ],
+   "notes": "A live ML Engineer posting and the current careers listing for Member of Technical Staff, ML Research Engineer satisfy the title requirement. Sources: https://jobs.ashbyhq.com/intelligence/3de9ad79-9225-4aed-bb0f-8a9830818a8d and https://intelligence.ai/careers."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "OpenAI, Anthropic, Google, xAI and Mistral; NVIDIA Llama 3.1 Nemotron Ultra 253B via OpenRouter.",
+   "citations": [
+    "https://notes.designarena.ai/evaluating-mobile-app-building-agents/",
+    "https://www.designarena.ai/changelog"
+   ],
+   "notes": "The technical blog explicitly lists OpenAI, Anthropic, Google, xAI and Mistral as supported providers. The changelog names NVIDIA's model via OpenRouter. Sources: https://notes.designarena.ai/evaluating-mobile-app-building-agents/ and https://www.designarena.ai/changelog."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "SOC 2 (cloud infrastructure providers)",
+    "ISO 27001 (cloud infrastructure providers)"
+   ],
+   "citations": [
+    "https://www.designarena.ai/security"
+   ],
+   "notes": "compliance_certs: The security page names SOC 2 and ISO 27001 specifically for its cloud infrastructure providers, not as certifications independently held by Design Arena; the answer preserves that limitation: https://www.designarena.ai/security. | compliance_certs.0: https://www.designarena.ai/security names SOC 2 for its cloud hosting providers, not Design Arena's own certification. | compliance_certs.1: https://www.designarena.ai/security names ISO 27001 for its cloud hosting providers, not Design Arena's own certification."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "seed",
+    "date": "2026-08",
+    "amount_usd": 7900000.0
+   },
+   "citations": [
+    "https://x.com/grx_xce/status/2084361692792934488",
+    "https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models"
+   ],
+   "notes": "funding_stage: Both the founder announcement and funding report explicitly call the latest located financing a seed round. Sources: https://x.com/grx_xce/status/2084361692792934488 and https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models. | funding_date: The seed round was announced August 3, 2026, yielding 2026-08. This is the public announcement month; the closing date is not separately disclosed. Sources: https://x.com/grx_xce/status/2084361692792934488 and https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models. | funding_amount_usd: The founder announcement and TechCrunch report identify the latest located round as $7.9 million, converted to 7900000 USD. Sources: https://x.com/grx_xce/status/2084361692792934488 and https://techcrunch.com/2026/08/03/designarena-creators-raise-7-9-million-to-bring-taste-to-ai-models."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://x.com/grx_xce/status/2084361692792934488"
+   ],
+   "notes": "The founder's August 3, 2026 announcement confirms a $7.9 million seed raise within the requested 18-month window: https://x.com/grx_xce/status/2084361692792934488."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://intelligence.ai/careers"
+   ],
+   "notes": "The readable careers page lists ML Research Engineer, Platform and Founding Launch Designer, but no SDR, BDR or account executive opening: https://intelligence.ai/careers."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://notes.designarena.ai/",
+    "https://notes.designarena.ai/what-weve-learned-from-50-000-ai-slides-generations-open-sourced-for-you-today-2/"
+   ],
+   "notes": "The company announced and open-sourced its slide-generation implementation on July 10, 2026, within the six-month window. This is a substantive technical release rather than a cosmetic update. Sources: https://notes.designarena.ai/ and https://notes.designarena.ai/what-weve-learned-from-50-000-ai-slides-generations-open-sourced-for-you-today-2/."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown: no dated C-level or VP joining/departure announcement was established. The About page is methodology rather than a leadership history, and the YC founder roster does not provide start dates sufficient to establish a negative."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [],
+   "citations": [
+    "https://intelligence.ai/careers",
+    "https://docs.designarena.ai/introduction"
+   ],
+   "notes": "The readable careers page and public API documentation name no CRM or sales/marketing system, supporting an empty list rather than unknown. Sources: https://intelligence.ai/careers and https://docs.designarena.ai/introduction."
+  }
+ },
+ "cost_usd": 0.1,
+ "latency_seconds": 338.2
+}

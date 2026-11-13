@@ -1,0 +1,162 @@
+{
+ "schema_version": "v0",
+ "company": "Ethos",
+ "domain": "askethos.com",
+ "config_id": "parallel-ultra-flat-v1",
+ "track": "managed",
+ "run_date": "2026-11-09",
+ "prompt_version": "v1-2026-11-10",
+ "answers": {
+  "product_one_liner": {
+   "status": "asserted",
+   "value": "Ethos uses AI to connect professionals with paid expert calls, market research and job opportunities, helping organizations find relevant human expertise.",
+   "citations": [
+    "https://www.a16z.news/p/investing-in-ethos",
+    "https://askethos.com/careers"
+   ],
+   "notes": "The investor describes AI voice agents capturing expertise and matching people to research, expert calls and jobs; Ethos\u2019s website confirms paid consulting, advisory and research opportunities. Sources: https://www.a16z.news/p/investing-in-ethos and https://askethos.com/careers."
+  },
+  "pricing_page": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://evals.askethos.com/pricing"
+   ],
+   "notes": "Ethos Evals has a public pricing page describing usage-based charges with no subscription: https://evals.askethos.com/pricing."
+  },
+  "named_customers": {
+   "status": "asserted",
+   "value": [
+    "Elm Labs",
+    "Kendal.ai"
+   ],
+   "citations": [
+    "https://www.recruiting.askethos.com/"
+   ],
+   "notes": "named_customers: The recruiting site explicitly lists Elm Labs and Kendal.ai under \u201cCOMPANIES HIRING WITH ETHOS,\u201d supporting their inclusion as recruiting customers rather than investors: https://www.recruiting.askethos.com/. | named_customers.0: Elm Labs is named among companies hiring with Ethos: https://www.recruiting.askethos.com/. | named_customers.1: Kendal.ai is named among companies hiring with Ethos: https://www.recruiting.askethos.com/."
+  },
+  "employee_band": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "No permitted band could be established reliably. The investor board reports 1\u201310 employees, while the company profile reports 670; neither maps to an allowed answer band, and the figures do not establish internal headcount consistently. Sources: https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a and https://linkedin.com/company/askethos."
+  },
+  "hq_location": {
+   "status": "asserted",
+   "value": {
+    "city": "London",
+    "country": "United Kingdom"
+   },
+   "citations": [
+    "https://agent.askethos.com/ethos-dpa"
+   ],
+   "notes": "hq_city: Ethos\u2019s legal agreement gives its registered office in Kings Cross, London, consistent with its reported London base: https://agent.askethos.com/ethos-dpa. | hq_country: Ethos\u2019s legal agreement gives its London registered office in the United Kingdom, consistent with its reported London base: https://agent.askethos.com/ethos-dpa."
+  },
+  "founded_year": {
+   "status": "asserted",
+   "value": 2024.0,
+   "citations": [
+    "https://linkedin.com/company/askethos"
+   ],
+   "notes": "The company profile explicitly reports 2024 as its founding year: https://linkedin.com/company/askethos. This uses the reported founding field rather than inferring incorporation from a founder\u2019s employment history."
+  },
+  "eng_blog": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://askethos.com/updates"
+   ],
+   "notes": "The readable updates index contains product announcements such as Company Profiles, Investment Researcher and Expert Calls with AI, rather than two engineer-authored explanations of how the product is built: https://askethos.com/updates."
+  },
+  "public_docs": {
+   "status": "asserted",
+   "value": false,
+   "citations": [
+    "https://askethos.com/",
+    "https://evals.askethos.com/llms.txt"
+   ],
+   "notes": "False under the requested several-article threshold: the main homepage has no docs/help navigation, while Evals exposes a single substantial MCP setup/reference guide plus a machine-readable tool listing, rather than a verified multi-article documentation portal. Technical documentation is therefore not entirely absent. Sources: https://askethos.com/, https://evals.askethos.com/mcp and https://evals.askethos.com/llms.txt."
+  },
+  "ai_ml_roles_open": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a/jobs/93899281-expert-opportunity-data-scientist-80-hr-up-to-1-600-week#content"
+   ],
+   "notes": "A live Data Scientist posting under Ethos offers an application link. It is an expert-contractor engagement supporting a foundational AI lab, not evidence of an internal salaried data-science opening; contractor roles are included because the question does not restrict employment type. Source: https://jobs.generalcatalyst.com/companies/ethos-2-e1b0048b-7d7c-4a76-97d7-b71911ec294a/jobs/93899281-expert-opportunity-data-scientist-80-hr-up-to-1-600-week#content."
+  },
+  "model_provider": {
+   "status": "asserted",
+   "value": "Anthropic; Google (Gemini); Groq; OpenAI; OpenRouter",
+   "citations": [
+    "https://agent.askethos.com/ethos-subprocessors"
+   ],
+   "notes": "The public list of engaged subprocessors names Anthropic, Google/Gemini, Groq, OpenAI and OpenRouter for AI processing, inference or model routing: https://agent.askethos.com/ethos-subprocessors. OpenRouter is identified as a gateway rather than an underlying model."
+  },
+  "compliance_certs": {
+   "status": "asserted",
+   "value": [
+    "GDPR"
+   ],
+   "citations": [
+    "https://agent.askethos.com/ethos-dpa"
+   ],
+   "notes": "compliance_certs: The DPA commits to UK GDPR and, where applicable, EU GDPR compliance. GDPR is therefore included as a publicly claimed compliance framework, not an independently awarded certification. SOC 2 and ISO 27001 appear only as conditional examples of certifications or reports, so they are not counted as achieved certifications: https://agent.askethos.com/ethos-dpa. | compliance_certs.0: The DPA explicitly commits to UK GDPR and applicable EU GDPR compliance: https://agent.askethos.com/ethos-dpa."
+  },
+  "last_funding": {
+   "status": "asserted",
+   "value": {
+    "stage": "Series A",
+    "date": "2026-05",
+    "amount_usd": 22750000.0
+   },
+   "citations": [
+    "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding"
+   ],
+   "notes": "funding_stage: The latest identified funding round is explicitly described as Series A: https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding. | funding_date: The reported Series A announcement is dated May 6, 2026, giving 2026-05 in the requested format: https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding. | funding_amount_usd: The May 6, 2026 funding report states that the Series A round was $22.75 million, equivalent to USD 22,750,000, rather than the rounded $23 million used elsewhere: https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding."
+  },
+  "raised_18mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding"
+   ],
+   "notes": "The May 6, 2026 Series A falls within the requested preceding 18 months: https://techcrunch.com/2026/05/06/ethos-raises-22-75m-from-a16z-for-its-expert-network-with-voice-onboarding."
+  },
+  "hiring_sdr_ae": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://agent.askethos.com/opportunities/senior-account-executive"
+   ],
+   "notes": "The live Senior Account Executive opportunity accepts applications. It recruits experienced AEs for hourly expert work training an AI lab\u2019s model, not for an internal salaried sales position. It qualifies by the requested title-based criterion, with that limitation: https://agent.askethos.com/opportunities/senior-account-executive."
+  },
+  "launched_6mo": {
+   "status": "asserted",
+   "value": true,
+   "citations": [
+    "https://linkedin.com/company/askethos"
+   ],
+   "notes": "Ethos announced the private beta of its Eval platform on November 6, 2026, within the six-month window. This is a new product beta rather than a cosmetic update: https://linkedin.com/company/askethos."
+  },
+  "leadership_change_12mo": {
+   "status": "unknown",
+   "value": null,
+   "citations": [],
+   "notes": "Unknown. No complete dated leadership roster or verified qualifying appointment/departure within the window was established. The reviewed CEO profile and CTO biography do not establish the company-wide answer: https://linkedin.com/in/yfjameslo and https://danielmankowitz.wixsite.com/danielm."
+  },
+  "crm_stack_signal": {
+   "status": "asserted",
+   "value": [
+    "Apollo",
+    "RevenueBase"
+   ],
+   "citations": [
+    "https://agent.askethos.com/ethos-subprocessors"
+   ],
+   "notes": "crm_stack_signal: Ethos\u2019s engaged-subprocessor documentation names Apollo and RevenueBase for B2B sales intelligence and lead generation. These are sales-system signals, not evidence of a particular CRM deployment: https://agent.askethos.com/ethos-subprocessors. | crm_stack_signal.0: Apollo is listed as an engaged provider of B2B sales intelligence and lead generation: https://agent.askethos.com/ethos-subprocessors. | crm_stack_signal.1: RevenueBase is listed as an engaged provider of B2B sales intelligence and lead generation: https://agent.askethos.com/ethos-subprocessors."
+  }
+ },
+ "cost_usd": 0.3,
+ "latency_seconds": 776.7
+}

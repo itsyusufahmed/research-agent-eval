@@ -1,0 +1,1290 @@
+{
+ "id": "agent_run_152a87de46b44355adcca7eb0ead9176",
+ "object": "agent_run",
+ "status": "completed",
+ "stopReason": "iteration_limit_reached",
+ "createdAt": "2026-11-10T19:11:54.261Z",
+ "completedAt": "2026-11-10T19:15:18.136Z",
+ "request": {
+  "query": "Research the company Qubrid AI (qubrid.com). Today's date is 2026-11-09.\nAnswer the 17 questions below about this company only. If another organization shares its name, ignore that organization.\n\nRules:\n- Every answer you assert must carry at least one source URL whose page supports it.\n- Scoring: a correct answer scores one, an unknown scores zero, a wrong answer scores below zero. Look for every fact where it would live. Set status to \"unknown\" and leave value out only when you have looked there and found nothing to cite either way. Never guess.\n- A negative answer (false, \"none\", or an empty list) is an answer, not an unknown. It means the place where the thing would appear exists and does not show it. Cite that place. Each question below says when its answer is negative and what to cite for it.\n- Time windows are measured back from 2026-11-09.\n\nQuestions:\n1. product_one_liner: What does the product do, and who is it for? One sentence.\n2. pricing_page: Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true.\n3. named_customers: Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers.\n4. employee_band: Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500.\n5. hq_location: Headquarters city and country.\n6. founded_year: Year founded.\n7. eng_blog: Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all.\n8. public_docs: Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage.\n9. ai_ml_roles_open: Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere.\n10. model_provider: Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown.\n11. compliance_certs: Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count.\n12. last_funding: Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page.\n13. raised_18mo: Did it raise funding in the 18 months before 2026-11-09? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all.\n14. hiring_sdr_ae: Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere.\n15. launched_6mo: Did it launch a product or major feature in the 6 months before 2026-11-09? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read.\n16. leadership_change_12mo: Did a C-level or VP-level person join or leave in the 12 months before 2026-11-09? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified.\n17. crm_stack_signal: Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read.\n\nReturn the result in the provided output schema.",
+  "outputSchema": {
+   "type": "object",
+   "required": [
+    "product_one_liner",
+    "pricing_page",
+    "named_customers",
+    "employee_band",
+    "hq_location",
+    "founded_year",
+    "eng_blog",
+    "public_docs",
+    "ai_ml_roles_open",
+    "model_provider",
+    "compliance_certs",
+    "last_funding",
+    "raised_18mo",
+    "hiring_sdr_ae",
+    "launched_6mo",
+    "leadership_change_12mo",
+    "crm_stack_signal"
+   ],
+   "properties": {
+    "eng_blog": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have an engineering or technical blog (not the marketing blog)? True needs at least two posts about how the product is built (architecture, infrastructure, ML, data, incidents, open source), by engineers. False when the blog index shows only product, marketing or hiring posts, a changelog, release notes, or a single lone engineering post; cite the blog index. Unknown only when there is no blog at all."
+    },
+    "hq_location": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "city",
+        "country"
+       ],
+       "properties": {
+        "city": {
+         "type": "string"
+        },
+        "country": {
+         "type": "string"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Headquarters city and country."
+    },
+    "public_docs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have public product documentation or a developer portal? True needs a public docs site, help center or developer portal with several articles. False when no docs or help link exists in the navigation or footer, docs and help subdomains do not resolve, or only a single FAQ page exists; cite the homepage."
+    },
+    "raised_18mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it raise funding in the 18 months before the run date? Cite a dated announcement or filing. False when the most recent round is dated before the window or the company has no outside funding; cite the last round's announcement or the page that establishes no funding. Unknown only if you can find no funding history at all."
+    },
+    "founded_year": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "integer"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Year founded."
+    },
+    "last_funding": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "object",
+       "required": [
+        "stage"
+       ],
+       "properties": {
+        "date": {
+         "type": "string",
+         "description": "YYYY-MM"
+        },
+        "stage": {
+         "type": "string"
+        },
+        "amount_usd": {
+         "type": "number"
+        }
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Its most recent funding round: stage, date (YYYY-MM) and amount in USD. If the company has no known outside funding, set stage to \"none\". Stage \"none\" when funding databases show no rounds and the company describes itself as bootstrapped or says nothing about outside funding; cite the database profile or the about page."
+    },
+    "launched_6mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did it launch a product or major feature in the 6 months before the run date? Cite a dated announcement (blog, press release, changelog, LinkedIn). False when the blog, changelog, press page or LinkedIn company posts are readable and the newest launch-type item (a release, an \"introducing\" or \"announcing\" post, a Product Hunt launch, a changelog entry presented as new) is dated before the window; cite that newest item or the blog index. Bug fixes and UI tweaks are not launches. Unknown only when there is no blog, changelog or post history to read."
+    },
+    "pricing_page": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does the company have a public pricing page? If true, cite the pricing page. False when the site has no pricing link in its navigation or footer and the pricing URL is missing or a bare contact form; cite the homepage or that contact page. A pricing page that lists plans without prices is still true."
+    },
+    "employee_band": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "enum": [
+        "11-20",
+        "21-50",
+        "51-100",
+        "101-200",
+        "201-500"
+       ],
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Employee count band: exactly one of 11-20, 21-50, 51-100, 101-200, 201-500."
+    },
+    "hiring_sdr_ae": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Is it hiring SDRs, BDRs or account executives right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none is titled SDR, BDR, sales or business development representative, or account executive, or the careers page says there are no openings; cite the careers page. Account manager, customer success, sales engineer, head or VP of sales and partnerships titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "model_provider": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which AI model or model provider does the product publicly say it uses? Unknown if the company has not said so publicly. Look in the product docs, the AI or security FAQ, the blog and the subprocessor list on the trust or privacy page before answering unknown."
+    },
+    "named_customers": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Name at least two of its customers. Every name must appear on a cited page (logo wall, case study, review). An empty list when a customers page, case studies or a G2 or Capterra listing exist and show fewer than two customer names; cite the page that came closest. Partners and investors do not count as customers."
+    },
+    "ai_ml_roles_open": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Does it have an open AI, ML or data-science role right now? If true, cite a live posting. False when the careers page or job board is open and lists roles but none has AI, ML, machine learning, data science, applied scientist, research scientist, NLP, LLM or computer vision in its title, or the careers page says there are no openings; cite the careers page. Data engineer, analytics engineer, data analyst, BI and AI-sales titles do not count. Unknown only when no careers page or job board exists anywhere."
+    },
+    "compliance_certs": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which compliance certifications does it publicly claim (SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS)? List only certifications named on the cited page. An empty list when a security, trust or legal page or a footer badge area exists and names none of the five; cite that page. A certification described as in progress does not count."
+    },
+    "crm_stack_signal": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       }
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Which CRM or sales and marketing systems does it visibly use (job posts, docs, integration pages)? Each named system must appear on the cited page. An empty list when job posts, docs or an integrations page are readable and none names a system; cite the page you read. Unknown only when there are no job posts, docs or integrations page to read."
+    },
+    "product_one_liner": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "string"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "What does the product do, and who is it for? One sentence."
+    },
+    "leadership_change_12mo": {
+     "type": "object",
+     "required": [
+      "status",
+      "citations"
+     ],
+     "properties": {
+      "notes": {
+       "type": "string"
+      },
+      "value": {
+       "type": "boolean"
+      },
+      "status": {
+       "enum": [
+        "asserted",
+        "unknown"
+       ],
+       "type": "string"
+      },
+      "citations": {
+       "type": "array",
+       "items": {
+        "type": "string"
+       },
+       "description": "Source URLs that support the answer; empty when unknown."
+      }
+     },
+     "description": "Did a C-level or VP-level person join or leave in the 12 months before the run date? Cite a dated announcement or profile. False when the team page is small enough to check in full and shows no C-level or VP who started inside the window, and no departure was announced; cite the team page or the LinkedIn People tab. Unknown when the team page is absent or too large to check and nothing else can be verified."
+    }
+   }
+  },
+  "effort": "xhigh"
+ },
+ "error": null,
+ "output": {
+  "text": "{\"product_one_liner\":{\"status\":\"asserted\",\"value\":\"Qubrid AI provides GPU cloud infrastructure and a unified inference API so developers, researchers, startups and enterprises can build, deploy and scale AI workloads.\",\"citations\":[\"https://docs.platform.qubrid.com/\"]},\"pricing_page\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.qubrid.com/pricing\"]},\"named_customers\":{\"status\":\"asserted\",\"value\":[\"Chaitanya Bharathi Institute of Technology\",\"Lern.Law\"],\"citations\":[\"https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus\",\"https://platform.qubrid.com/model-studio/hugging-face-models\"],\"notes\":\"CBIT is a documented platform user in a case study; Lern.Law provides a testimonial describing its use of Qubrid support and platform.\"},\"employee_band\":{\"status\":\"asserted\",\"value\":\"11-20\",\"citations\":[\"https://pitchbook.com/profiles/company/533112-58\",\"https://www.linkedin.com/company/qubrid\"],\"notes\":\"PitchBook reports 16 employees as of 2026; the company profile reports 19.\"},\"hq_location\":{\"status\":\"asserted\",\"value\":{\"city\":\"McLean\",\"country\":\"United States\"},\"citations\":[\"https://pitchbook.com/profiles/company/533112-58\",\"https://www.vcbacked.co/company/qubrid-ai\"]},\"founded_year\":{\"status\":\"asserted\",\"value\":2024,\"citations\":[\"https://www.linkedin.com/company/qubrid\",\"https://www.prnewswire.com/news-releases/dihuni-launches-qubrid-hybrid-classical-quantum-computing-platform-301824350.html\"],\"notes\":\"The company profile gives 2024. Some databases give 2023, when the predecessor Qubrid platform was launched by Dihuni.\"},\"eng_blog\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.qubrid.com/blog-news\",\"https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side\",\"https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace\"],\"notes\":\"The reviewed blog contains model guides, benchmarks and product announcements; the product posts are attributed to Qubrid Team, not identified engineers, and do not establish two engineer-authored accounts of how the product is built.\"},\"public_docs\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://docs.platform.qubrid.com/\",\"https://docs.platform.qubrid.com/GPU%20Clusters\",\"https://docs.platform.qubrid.com/Integrations/Connect%20Your%20Tools\"]},\"ai_ml_roles_open\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6\"],\"notes\":\"The official careers site lists Full Stack AI Engineer, a remote full-time role.\"},\"model_provider\":{\"status\":\"asserted\",\"value\":\"DeepSeek, Qwen, Kimi, MiniMax and NVIDIA Nemotron\",\"citations\":[\"https://www.qubrid.com/\",\"https://www.qubrid.com/blog/qubrid-ai-is-the-icing-across-jensen-huangs-5-layer-ai-cake\"],\"notes\":\"Qubrid hosts or makes these model families available through its platform; this does not imply that customer inputs are sent to each model developer.\"},\"compliance_certs\":{\"status\":\"asserted\",\"value\":[\"HIPAA\"],\"citations\":[\"https://docs.platform.qubrid.com/GPU%20Clusters\",\"https://www.qubrid.com/hosting\"],\"notes\":\"The documentation claims its data centers are HIPAA compliant and \u201cSOC Type II\u201d; the hosting page says \u201cSOC Type 2.\u201d These are facility-level claims, not evidence of a company-wide audit. SOC 2 is omitted because the cited pages do not explicitly name SOC 2.\"},\"last_funding\":{\"status\":\"asserted\",\"value\":{\"stage\":\"Angel\",\"date\":\"2024-06\"},\"citations\":[\"https://pitchbook.com/profiles/company/533112-58\",\"https://www.vcbacked.co/company/qubrid-ai\",\"https://www.premieralts.com/companies/qubrid/funding-rounds\"],\"notes\":\"PitchBook lists a completed angel round on June 14, 2024 without an amount, so amount_usd is omitted. Funding records conflict: VCBacked gives $250,000 pre-seed in April 2024; Premier Alternatives claims a $25 million September 2026 seed, while PitchBook labels that seed upcoming. No completed 2026 round was independently established.\"},\"raised_18mo\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://pitchbook.com/profiles/company/533112-58\",\"https://www.vcbacked.co/company/qubrid-ai\",\"https://www.premieralts.com/companies/qubrid/funding-rounds\"],\"notes\":\"For May 9, 2025\u2013November 9, 2026, the completed-round history in PitchBook ends in June 2024 and the $25 million seed is marked upcoming. Premier Alternatives contradicts this with a September 2026 completion claim and internally inconsistent total funding; that claim was not corroborated by a dated announcement or filing.\"},\"hiring_sdr_ae\":{\"status\":\"asserted\",\"value\":false,\"citations\":[\"https://www.qubrid.com/careers/\"],\"notes\":\"The official careers page lists GPU Kubernetes Cluster Engineer and Full Stack AI Engineer, neither a qualifying sales title.\"},\"launched_6mo\":{\"status\":\"asserted\",\"value\":true,\"citations\":[\"https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side\",\"https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace\"],\"notes\":\"Within May 9\u2013November 9, 2026, Qubrid announced Model Comparison on June 11 and its Dify Marketplace integration on June 30.\"},\"leadership_change_12mo\":{\"status\":\"unknown\",\"citations\":[],\"notes\":\"No complete leadership roster with start dates was available to establish a negative for November 9, 2025\u2013November 9, 2026; no qualifying dated join or departure was verified.\"},\"crm_stack_signal\":{\"status\":\"asserted\",\"value\":[\"HubSpot\",\"Zoho\"],\"citations\":[\"https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078\"],\"notes\":\"A third-party Qubrid job listing explicitly says \u201cMaintain and update CRM (HubSpot/Zoho)\u201d; this is a hiring signal, not independently verified deployment.\"}}",
+  "structured": {
+   "eng_blog": {
+    "notes": "The reviewed blog contains model guides, benchmarks and product announcements; the product posts are attributed to Qubrid Team, not identified engineers, and do not establish two engineer-authored accounts of how the product is built.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/blog-news",
+     "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side",
+     "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+    ]
+   },
+   "hq_location": {
+    "value": {
+     "city": "McLean",
+     "country": "United States"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/533112-58",
+     "https://www.vcbacked.co/company/qubrid-ai"
+    ]
+   },
+   "public_docs": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://docs.platform.qubrid.com/",
+     "https://docs.platform.qubrid.com/GPU%20Clusters",
+     "https://docs.platform.qubrid.com/Integrations/Connect%20Your%20Tools"
+    ]
+   },
+   "raised_18mo": {
+    "notes": "For May 9, 2025\u2013November 9, 2026, the completed-round history in PitchBook ends in June 2024 and the $25 million seed is marked upcoming. Premier Alternatives contradicts this with a September 2026 completion claim and internally inconsistent total funding; that claim was not corroborated by a dated announcement or filing.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/533112-58",
+     "https://www.vcbacked.co/company/qubrid-ai",
+     "https://www.premieralts.com/companies/qubrid/funding-rounds"
+    ]
+   },
+   "founded_year": {
+    "notes": "The company profile gives 2024. Some databases give 2023, when the predecessor Qubrid platform was launched by Dihuni.",
+    "value": 2024,
+    "status": "asserted",
+    "citations": [
+     "https://www.linkedin.com/company/qubrid",
+     "https://www.prnewswire.com/news-releases/dihuni-launches-qubrid-hybrid-classical-quantum-computing-platform-301824350.html"
+    ]
+   },
+   "last_funding": {
+    "notes": "PitchBook lists a completed angel round on June 14, 2024 without an amount, so amount_usd is omitted. Funding records conflict: VCBacked gives $250,000 pre-seed in April 2024; Premier Alternatives claims a $25 million September 2026 seed, while PitchBook labels that seed upcoming. No completed 2026 round was independently established.",
+    "value": {
+     "date": "2024-06",
+     "stage": "Angel"
+    },
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/533112-58",
+     "https://www.vcbacked.co/company/qubrid-ai",
+     "https://www.premieralts.com/companies/qubrid/funding-rounds"
+    ]
+   },
+   "launched_6mo": {
+    "notes": "Within May 9\u2013November 9, 2026, Qubrid announced Model Comparison on June 11 and its Dify Marketplace integration on June 30.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side",
+     "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+    ]
+   },
+   "pricing_page": {
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/pricing"
+    ]
+   },
+   "employee_band": {
+    "notes": "PitchBook reports 16 employees as of 2026; the company profile reports 19.",
+    "value": "11-20",
+    "status": "asserted",
+    "citations": [
+     "https://pitchbook.com/profiles/company/533112-58",
+     "https://www.linkedin.com/company/qubrid"
+    ]
+   },
+   "hiring_sdr_ae": {
+    "notes": "The official careers page lists GPU Kubernetes Cluster Engineer and Full Stack AI Engineer, neither a qualifying sales title.",
+    "value": false,
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/careers/"
+    ]
+   },
+   "model_provider": {
+    "notes": "Qubrid hosts or makes these model families available through its platform; this does not imply that customer inputs are sent to each model developer.",
+    "value": "DeepSeek, Qwen, Kimi, MiniMax and NVIDIA Nemotron",
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/",
+     "https://www.qubrid.com/blog/qubrid-ai-is-the-icing-across-jensen-huangs-5-layer-ai-cake"
+    ]
+   },
+   "named_customers": {
+    "notes": "CBIT is a documented platform user in a case study; Lern.Law provides a testimonial describing its use of Qubrid support and platform.",
+    "value": [
+     "Chaitanya Bharathi Institute of Technology",
+     "Lern.Law"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus",
+     "https://platform.qubrid.com/model-studio/hugging-face-models"
+    ]
+   },
+   "ai_ml_roles_open": {
+    "notes": "The official careers site lists Full Stack AI Engineer, a remote full-time role.",
+    "value": true,
+    "status": "asserted",
+    "citations": [
+     "https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6"
+    ]
+   },
+   "compliance_certs": {
+    "notes": "The documentation claims its data centers are HIPAA compliant and \u201cSOC Type II\u201d; the hosting page says \u201cSOC Type 2.\u201d These are facility-level claims, not evidence of a company-wide audit. SOC 2 is omitted because the cited pages do not explicitly name SOC 2.",
+    "value": [
+     "HIPAA"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://docs.platform.qubrid.com/GPU%20Clusters",
+     "https://www.qubrid.com/hosting"
+    ]
+   },
+   "crm_stack_signal": {
+    "notes": "A third-party Qubrid job listing explicitly says \u201cMaintain and update CRM (HubSpot/Zoho)\u201d; this is a hiring signal, not independently verified deployment.",
+    "value": [
+     "HubSpot",
+     "Zoho"
+    ],
+    "status": "asserted",
+    "citations": [
+     "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078"
+    ]
+   },
+   "product_one_liner": {
+    "value": "Qubrid AI provides GPU cloud infrastructure and a unified inference API so developers, researchers, startups and enterprises can build, deploy and scale AI workloads.",
+    "status": "asserted",
+    "citations": [
+     "https://docs.platform.qubrid.com/"
+    ]
+   },
+   "leadership_change_12mo": {
+    "notes": "No complete leadership roster with start dates was available to establish a negative for November 9, 2025\u2013November 9, 2026; no qualifying dated join or departure was verified.",
+    "status": "unknown",
+    "citations": []
+   }
+  },
+  "grounding": [
+   {
+    "field": "structured.product_one_liner.value",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.product_one_liner.citations",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.pricing_page.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/pricing"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus"
+     },
+     {
+      "url": "https://platform.qubrid.com/model-studio/hugging-face-models"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus"
+     },
+     {
+      "url": "https://platform.qubrid.com/model-studio/hugging-face-models"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.named_customers.notes",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/case-studies/accelerating-cancer-research-with-nvidia-gpus"
+     },
+     {
+      "url": "https://platform.qubrid.com/model-studio/hugging-face-models"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.linkedin.com/company/qubrid"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.linkedin.com/company/qubrid"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.employee_band.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.linkedin.com/company/qubrid"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hq_location.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.founded_year.value",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/qubrid"
+     },
+     {
+      "url": "https://www.prnewswire.com/news-releases/dihuni-launches-qubrid-hybrid-classical-quantum-computing-platform-301824350.html"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.founded_year.citations",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/qubrid"
+     },
+     {
+      "url": "https://www.prnewswire.com/news-releases/dihuni-launches-qubrid-hybrid-classical-quantum-computing-platform-301824350.html"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.founded_year.notes",
+    "citations": [
+     {
+      "url": "https://www.linkedin.com/company/qubrid"
+     },
+     {
+      "url": "https://www.prnewswire.com/news-releases/dihuni-launches-qubrid-hybrid-classical-quantum-computing-platform-301824350.html"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/blog-news"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/blog-news"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.eng_blog.notes",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/blog-news"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.public_docs.value",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/"
+     },
+     {
+      "url": "https://docs.platform.qubrid.com/GPU%20Clusters"
+     },
+     {
+      "url": "https://docs.platform.qubrid.com/Integrations/Connect%20Your%20Tools"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.public_docs.citations",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/"
+     },
+     {
+      "url": "https://docs.platform.qubrid.com/GPU%20Clusters"
+     },
+     {
+      "url": "https://docs.platform.qubrid.com/Integrations/Connect%20Your%20Tools"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.ai_ml_roles_open.notes",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/careers/jobs/35a677912add483a96497023cb47e0f6"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-the-icing-across-jensen-huangs-5-layer-ai-cake"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-the-icing-across-jensen-huangs-5-layer-ai-cake"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.model_provider.notes",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-the-icing-across-jensen-huangs-5-layer-ai-cake"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.value",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/GPU%20Clusters"
+     },
+     {
+      "url": "https://www.qubrid.com/hosting"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.citations",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/GPU%20Clusters"
+     },
+     {
+      "url": "https://www.qubrid.com/hosting"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.compliance_certs.notes",
+    "citations": [
+     {
+      "url": "https://docs.platform.qubrid.com/GPU%20Clusters"
+     },
+     {
+      "url": "https://www.qubrid.com/hosting"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.last_funding.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     },
+     {
+      "url": "https://www.premieralts.com/companies/qubrid/funding-rounds"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.last_funding.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     },
+     {
+      "url": "https://www.premieralts.com/companies/qubrid/funding-rounds"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.last_funding.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     },
+     {
+      "url": "https://www.premieralts.com/companies/qubrid/funding-rounds"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.value",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     },
+     {
+      "url": "https://www.premieralts.com/companies/qubrid/funding-rounds"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.citations",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     },
+     {
+      "url": "https://www.premieralts.com/companies/qubrid/funding-rounds"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.raised_18mo.notes",
+    "citations": [
+     {
+      "url": "https://pitchbook.com/profiles/company/533112-58"
+     },
+     {
+      "url": "https://www.vcbacked.co/company/qubrid-ai"
+     },
+     {
+      "url": "https://www.premieralts.com/companies/qubrid/funding-rounds"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/careers/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/careers/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.hiring_sdr_ae.notes",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/careers/"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.value",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.citations",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.launched_6mo.notes",
+    "citations": [
+     {
+      "url": "https://www.qubrid.com/blog/stop-guessing-compare-ai-models-side-by-side"
+     },
+     {
+      "url": "https://www.qubrid.com/blog/qubrid-ai-is-now-live-on-the-dify-marketplace"
+     }
+    ],
+    "confidence": "high"
+   },
+   {
+    "field": "structured.crm_stack_signal.value",
+    "citations": [
+     {
+      "url": "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal.citations",
+    "citations": [
+     {
+      "url": "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078"
+     }
+    ],
+    "confidence": "medium"
+   },
+   {
+    "field": "structured.crm_stack_signal.notes",
+    "citations": [
+     {
+      "url": "https://www.foundit.in/job/ai-techincal-marketing-associate-qubrid-ai-india-46422078"
+     }
+    ],
+    "confidence": "medium"
+   }
+  ]
+ },
+ "usage": {
+  "agentComputeUnits": 4,
+  "searches": 120,
+  "emails": 0,
+  "phoneNumbers": 0
+ },
+ "costDollars": {
+  "total": 1,
+  "agentCompute": 0.4,
+  "search": 0.6,
+  "emails": 0,
+  "phoneNumbers": 0
+ }
+}

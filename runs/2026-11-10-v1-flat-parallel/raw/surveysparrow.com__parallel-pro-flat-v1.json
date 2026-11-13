@@ -1,0 +1,529 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e9feed49b0815b49d",
+  "interaction_id": "trun_142119f6a1b4439e9feed49b0815b49d",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "surveysparrow.com"
+  },
+  "created_at": "2026-11-10T18:48:39.823534Z",
+  "modified_at": "2026-11-10T18:53:35.171332Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e9feed49b0815b49d",
+   "interaction_id": "trun_142119f6a1b4439e9feed49b0815b49d",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "surveysparrow.com"
+   },
+   "created_at": "2026-11-10T18:48:39.823534Z",
+   "modified_at": "2026-11-10T18:53:35.171332Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Founded:** 2017"
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly gives 2017 as its founding year at https://surveysparrow.com/facts-for-ai.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "SurveySparrow Trust Center | Powered by SafeBase",
+       "url": "https://security.surveysparrow.com/",
+       "excerpts": [
+        "[Compliance](https://security.surveysparrow.com/?itemName=certifications&source=click) [CCPA](https://security.surveysparrow.com/?itemUid=4064ac33-7b48-407b-aed7-ce02971d1ec1&source=click) [Cyber Essentials](https://security.surveysparrow.com/?itemUid=c14c9817-8d5e-424f-b813-be044d6683e2&source=click) [GDPR](https://security.surveysparrow.com/?itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click) [HIPAA](https://security.surveysparrow.com/?itemUid=aec41c33-0f3a-4030-ac59-49adfd4a975b&source=click) [ISO/IEC 27001](https://security.surveysparrow.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [SOC 2](https://security.surveysparrow.com/?itemUid=7bfa66da-33ab-49de-8391-e329738a1ae9&source=click) [CSA STAR]"
+       ]
+      }
+     ],
+     "reasoning": "The trust center at https://security.surveysparrow.com/ lists SOC 2, ISO/IEC 27001, HIPAA and GDPR under compliance. These are public compliance claims, not a statement that HIPAA or GDPR is an independently issued certification.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Headquarters:** 2261 Market Street, San Francisco, CA 94114, USA"
+       ]
+      }
+     ],
+     "reasoning": "The headquarters address at https://surveysparrow.com/facts-for-ai explicitly places the company in the USA.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "SurveySparrow Engineering",
+       "url": "https://engineering.surveysparrow.com/",
+       "excerpts": [
+        "Stories by SurveySparrow developers on building and scaling using technology"
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://engineering.surveysparrow.com/slashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6",
+       "excerpts": [
+        "By combining Playwright\u2019s application-level sharding with Kubernetes\u2019 infrastructure-level job management, we could build a system that was faster, cheaper, and way more robust."
+       ]
+      },
+      {
+       "title": "Medium",
+       "url": "https://engineering.surveysparrow.com/scaling-real-time-applications-with-server-sent-events-sse-abd91f70a5c9",
+       "excerpts": [
+        "How to implement and scale SSE in production using Redis"
+       ]
+      }
+     ],
+     "reasoning": "https://engineering.surveysparrow.com/ identifies its content as stories by SurveySparrow developers. At least two posts describe implementation work: Playwright sharding on Kubernetes (https://engineering.surveysparrow.com/slashing-qa-runtimes-with-playwright-sharding-on-kubernetes-k8s-b11c447952e6) and production SSE scaling using Redis (https://engineering.surveysparrow.com/scaling-real-time-applications-with-server-sent-events-sse-abd91f70a5c9). Individual engineering credentials were not explicit for every author, so authorship relies partly on the publication's description.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "SurveySparrow turns talk into traction for customer experience | AWS Startups",
+       "url": "https://startups.aws.com/learn/surveysparrow-turns-talk-into-traction-for-customer-experience",
+       "excerpts": [
+        "SurveySparrow was designed for mid-market brands which receive high volumes of feedback but lack the capabilities to gain intelligent insight. Its platform pulls together data from numerous touchpoints including email, apps, kiosks, socials, and review sites, and uses AI to help businesses cut through the noise, find what matters, and act fast."
+       ]
+      }
+     ],
+     "reasoning": "The customer case study describes mid-market brands as the target users and explains that the platform combines feedback touchpoints with AI-driven insights and action: https://startups.aws.com/learn/surveysparrow-turns-talk-into-traction-for-customer-experience.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "SurveySparrow | LinkedIn",
+       "url": "https://linkedin.com/company/13253328",
+       "excerpts": [
+        "Company size 201-500 employees Headquarters San Francisco, California Type Privately Held Founded 2017"
+       ]
+      }
+     ],
+     "reasoning": "The company's LinkedIn profile lists 201\u2013500 employees: https://linkedin.com/company/13253328. This is a reported company-size band rather than an independently counted headcount.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**AI and data:** Customer data is processed only to deliver the service. Generative AI features use OpenAI (US) and Azure OpenAI (EU) as listed third-party providers (sub-processors). Customer data is not used to train AI models."
+       ]
+      },
+      {
+       "title": "SurveySparrow turns talk into traction for customer experience | AWS Startups",
+       "url": "https://aws.amazon.com/startups/learn/surveysparrow-turns-talk-into-traction-for-customer-experience",
+       "excerpts": [
+        "The team uses [Anthropic Claude Sonnet](https://aws.amazon.com/bedrock/anthropic) in [Amazon Bedrock](https://aws.amazon.com/bedrock) to power real-time summarization, clustering, and sentiment scoring."
+       ]
+      }
+     ],
+     "reasoning": "https://surveysparrow.com/facts-for-ai names OpenAI and Azure OpenAI for generative AI features. The AWS case study separately names Anthropic Claude Sonnet through Amazon Bedrock for summarization, clustering and sentiment scoring: https://aws.amazon.com/startups/learn/surveysparrow-turns-talk-into-traction-for-customer-experience.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Online Survey Software Pricing & Plans | SurveySparrow",
+       "url": "https://surveysparrow.com/pricing",
+       "excerpts": [
+        "Choose a subscription that fits your needs."
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow has a public subscription pricing page at https://surveysparrow.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: SurveySparrow; latest_funding_round_name: Seed; latest_funding_round_date: 2018-11-26; latest_funding_round_amount_usd: 1425000.0; all_funding_rounds[0].round_name: Seed; all_funding_rounds[0].amount_usd: 1425000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2018-11-26; all_funding_rounds[0].round_investor_names: Prime Venture Partners; cxo_team[0].full_name: Shihab Muhammed; cxo_team[0].title: Founder & CEO; cxo_team[0].linkedin.list[0].element: http://linkedin.com/in/shihabmuhammed; cxo_team[1].full_name: Vipin Thomas; cxo_team[1].title: Director"
+       ]
+      },
+      {
+       "title": "SurveySparrow - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors",
+       "excerpts": [
+        "SurveySparrow has raised a total of $1.42M from 1 Seed round on Nov 26, 2018from Prime Venture Partners."
+       ]
+      }
+     ],
+     "reasoning": "Tracxn reports an exact Seed-round amount of $1,425,000. Its public funding profile displays the amount rounded to $1.42M and lists only that round: https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors. Confidence is reduced because the exact amount comes from a funding database rather than a primary announcement.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is used by companies such as **Siemens, Marshalls, TATA Digital, Hero MotoCorp, XMPie, Samana Group, Gyptech, GoStudent, Cohere Health, OceanFirst Bank, Caribbean Airlines, IHG Hotels & Resorts, Schlumberger, Mondelez International, and DHL** ."
+       ]
+      }
+     ],
+     "reasoning": "The company's public customer list explicitly names Siemens and TATA Digital as users: https://surveysparrow.com/facts-for-ai.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "SurveySparrow - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors",
+       "excerpts": [
+        "SurveySparrow has raised a total of $1.42M from 1 Seed round on Nov 26, 2018from Prime Venture Partners."
+       ]
+      }
+     ],
+     "reasoning": "The funding profile dates its sole Seed round to November 26, 2018, yielding 2018-11: https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "The integrations section at https://surveysparrow.com/facts-for-ai names Salesforce, Microsoft Dynamics 365 and HubSpot. These are visible integration signals, not confirmation that SurveySparrow uses all three internally.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "SurveySparrow - Executive Leadership | The Org",
+       "url": "https://theorg.com/org/surveysparrow/teams/executive-leadership",
+       "excerpts": [
+        "Executive Leadership Unverified Executive Leadership 2 people \u00b7 0 jobs This department provides strategic direction and oversight for the organization."
+       ]
+      }
+     ],
+     "reasoning": "Unknown. The available executive page is marked unverified and provides no appointment dates; it does not establish a complete dated leadership roster. No qualifying dated appointment or departure was verified: https://theorg.com/org/surveysparrow/teams/executive-leadership.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "surveysparrow.keka.com",
+       "url": "https://surveysparrow.keka.com/careers",
+       "excerpts": [
+        "SURVEYSPARROW PRIVATE LIMITED Welcome to our Career Portal! Browse all jobs Open Positions Department Location Business Development 1 job Business Development Representative - US 41 days ago 1 - 3 Years Full Time Design 1 job Marketing Graphic Designer 102 days ago Chennai 0 - 2 Years Full Time Farming 1 job Key Account Sales Specialist 14 days ago 1 - 5 Years Full Time Marketing 3 jobs Product Marketer - SparrowCRM 12 days ago 0 - 1 Years Full Time Intern - Brand and Community Marketing 50 days ago Fresher Full Time Intern - Community Onboarding 50 days ago Freshers Full Time Partnership 1 job Senior Channel Sales Executive 14 days ago 3 - 5 Years Full Time Revenue Operations 1 job Revenue Operations Analyst 4 days ago Chennai 1 - 3 Years Full Time Solution Engineering 2 jobs Solution Engineer 32 days ago 1 - 3 Years Full Time Lead Solution Engineer 63 days ago Chennai 4 - 6 Years Full Time 2026 Keka Hire. Powered by"
+       ]
+      }
+     ],
+     "reasoning": "The current open-position list contains business development, design, account sales, marketing, partnerships, revenue operations and solution-engineering roles, but no qualifying AI, ML or data-science title: https://surveysparrow.keka.com/careers. This negative is based on listed titles, not whether other jobs involve AI.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "SurveySparrow - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors",
+       "excerpts": [
+        "SurveySparrow has raised a total of $1.42M from 1 Seed round on Nov 26, 2018from Prime Venture Partners."
+       ]
+      }
+     ],
+     "reasoning": "The funding history lists one round and identifies it as Seed: https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "SurveySparrow API (v3) | SurveySparrow APIs | Connect and REST assured",
+       "url": "https://developers.surveysparrow.com/rest-apis",
+       "excerpts": [
+        "[## \ud83d\udcc4\ufe0fOAuth 2.0 SurveySparrrow OAuth 2.0 API Documentation](https://developers.surveysparrow.com/rest-apis/OAuth)",
+        "[## \ud83d\uddc3\ufe0fContacts 7 items](https://developers.surveysparrow.com/rest-apis/contacts)",
+        "[## \ud83d\uddc3\ufe0fWebhooks 4 items](https://developers.surveysparrow.com/rest-apis/webhooks)"
+       ]
+      }
+     ],
+     "reasoning": "The public API documentation includes OAuth guidance and multiple reference articles for contacts, webhooks and other resources: https://developers.surveysparrow.com/rest-apis.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**Headquarters:** 2261 Market Street, San Francisco, CA 94114, USA"
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly gives a San Francisco headquarters address: https://surveysparrow.com/facts-for-ai.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "SurveySparrow Launches SparrowCRM, an AI-Native Sales CRM",
+       "url": "https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/surveysparrow-launches-sparrowcrm-the-ai-native-agentic-crm-for-r-1216253",
+       "excerpts": [
+        "SurveySparrow Launches SparrowCRM - the AI-Native Agentic CRM for Revenue Teams Thursday, 03 September 2026 10:00 AM Topic: Product Announcements _**SurveySparrow launches**_ [_**SparrowCRM**_](https://www.sparrowcrm.com/) _**an AI-native, agentic CRM that runs the entire sales process, connecting context from every deal and driving the right actions throughout the sales pipeline.**_ **CALIFORNIA CITY, CA / [ACCESS Newswire](https://www.accessnewswire.com/) / September 3, 2026 /** SurveySparrow, trusted by over 10,000 businesses across 149 countries, has been steadily evolving into a multi-product company. ..."
+       ]
+      }
+     ],
+     "reasoning": "SurveySparrow announced SparrowCRM on September 3, 2026, within the six-month window: https://www.accessnewswire.com/newsroom/en/computers-technology-and-internet/surveysparrow-launches-sparrowcrm-the-ai-native-agentic-crm-for-r-1216253.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "surveysparrow.keka.com",
+       "url": "https://surveysparrow.keka.com/careers/jobdetails/90588",
+       "excerpts": [
+        "Business Development Representative - US"
+       ]
+      },
+      {
+       "title": "surveysparrow.keka.com",
+       "url": "https://surveysparrow.keka.com/careers",
+       "excerpts": [
+        "Business Development 1 job [#### Business Development Representative - US 26 days ago 1 - 3 years Full Time](https://surveysparrow.keka.com/careers/jobdetails/90588) Design 1 job [#### Marketing Graphic Designer 87 days ago Chennai 0 - 2 Years Full Time](https://surveysparrow.keka.com/careers/jobdetails/82463) ..."
+       ]
+      }
+     ],
+     "reasoning": "The careers board lists Business Development Representative - US and links to its posting at https://surveysparrow.keka.com/careers/jobdetails/90588. Its appearance in the open-position index supports current hiring, although the detail page does not separately declare an active status.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "SurveySparrow - 2026 Funding Rounds & List of Investors - Tracxn",
+       "url": "https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors",
+       "excerpts": [
+        "SurveySparrow has raised a total of $1.42M from 1 Seed round on Nov 26, 2018from Prime Venture Partners.",
+        "Last updated: October 11, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile, updated October 11, 2026, lists only a November 2018 Seed round, outside the preceding 18 months: https://tracxn.com/d/companies/surveysparrow/__Gv8knohCbDJRtvW_3tttEQQ39HKqMrEWZqRcMaaB-IU/funding-and-investors.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "SurveySparrow Trust Center | Powered by SafeBase",
+       "url": "https://security.surveysparrow.com/",
+       "excerpts": [
+        "[Compliance](https://security.surveysparrow.com/?itemName=certifications&source=click) [CCPA](https://security.surveysparrow.com/?itemUid=4064ac33-7b48-407b-aed7-ce02971d1ec1&source=click) [Cyber Essentials](https://security.surveysparrow.com/?itemUid=c14c9817-8d5e-424f-b813-be044d6683e2&source=click) [GDPR](https://security.surveysparrow.com/?itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click) [HIPAA](https://security.surveysparrow.com/?itemUid=aec41c33-0f3a-4030-ac59-49adfd4a975b&source=click) [ISO/IEC 27001](https://security.surveysparrow.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [SOC 2](https://security.surveysparrow.com/?itemUid=7bfa66da-33ab-49de-8391-e329738a1ae9&source=click) [CSA STAR]"
+       ]
+      }
+     ],
+     "reasoning": "SOC 2 is explicitly listed at https://security.surveysparrow.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "SurveySparrow Trust Center | Powered by SafeBase",
+       "url": "https://security.surveysparrow.com/",
+       "excerpts": [
+        "[Compliance](https://security.surveysparrow.com/?itemName=certifications&source=click) [CCPA](https://security.surveysparrow.com/?itemUid=4064ac33-7b48-407b-aed7-ce02971d1ec1&source=click) [Cyber Essentials](https://security.surveysparrow.com/?itemUid=c14c9817-8d5e-424f-b813-be044d6683e2&source=click) [GDPR](https://security.surveysparrow.com/?itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click) [HIPAA](https://security.surveysparrow.com/?itemUid=aec41c33-0f3a-4030-ac59-49adfd4a975b&source=click) [ISO/IEC 27001](https://security.surveysparrow.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [SOC 2](https://security.surveysparrow.com/?itemUid=7bfa66da-33ab-49de-8391-e329738a1ae9&source=click) [CSA STAR]"
+       ]
+      }
+     ],
+     "reasoning": "ISO/IEC 27001 is explicitly listed at https://security.surveysparrow.com/.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "SurveySparrow Trust Center | Powered by SafeBase",
+       "url": "https://security.surveysparrow.com/",
+       "excerpts": [
+        "[Compliance](https://security.surveysparrow.com/?itemName=certifications&source=click) [CCPA](https://security.surveysparrow.com/?itemUid=4064ac33-7b48-407b-aed7-ce02971d1ec1&source=click) [Cyber Essentials](https://security.surveysparrow.com/?itemUid=c14c9817-8d5e-424f-b813-be044d6683e2&source=click) [GDPR](https://security.surveysparrow.com/?itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click) [HIPAA](https://security.surveysparrow.com/?itemUid=aec41c33-0f3a-4030-ac59-49adfd4a975b&source=click) [ISO/IEC 27001](https://security.surveysparrow.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [SOC 2](https://security.surveysparrow.com/?itemUid=7bfa66da-33ab-49de-8391-e329738a1ae9&source=click) [CSA STAR]"
+       ]
+      }
+     ],
+     "reasoning": "HIPAA is explicitly listed at https://security.surveysparrow.com/; this records the public compliance claim.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "SurveySparrow Trust Center | Powered by SafeBase",
+       "url": "https://security.surveysparrow.com/",
+       "excerpts": [
+        "[Compliance](https://security.surveysparrow.com/?itemName=certifications&source=click) [CCPA](https://security.surveysparrow.com/?itemUid=4064ac33-7b48-407b-aed7-ce02971d1ec1&source=click) [Cyber Essentials](https://security.surveysparrow.com/?itemUid=c14c9817-8d5e-424f-b813-be044d6683e2&source=click) [GDPR](https://security.surveysparrow.com/?itemUid=45220873-6e51-4dbb-b1b1-37d66ee9ef95&source=click) [HIPAA](https://security.surveysparrow.com/?itemUid=aec41c33-0f3a-4030-ac59-49adfd4a975b&source=click) [ISO/IEC 27001](https://security.surveysparrow.com/?itemUid=1fed9faa-4a87-427c-9a95-96b4d6bf66b7&source=click) [SOC 2](https://security.surveysparrow.com/?itemUid=7bfa66da-33ab-49de-8391-e329738a1ae9&source=click) [CSA STAR]"
+       ]
+      }
+     ],
+     "reasoning": "GDPR is explicitly listed at https://security.surveysparrow.com/; this records the public compliance claim.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "Salesforce appears in the CRM integrations list at https://surveysparrow.com/facts-for-ai; internal deployment is not established.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "Microsoft Dynamics 365 appears in the CRM integrations list at https://surveysparrow.com/facts-for-ai; internal deployment is not established.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "**CRM:** Salesforce, Microsoft Dynamics 365, HubSpot"
+       ]
+      }
+     ],
+     "reasoning": "HubSpot appears in the CRM integrations list at https://surveysparrow.com/facts-for-ai; internal deployment is not established.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is used by companies such as **Siemens, Marshalls, TATA Digital, Hero MotoCorp, XMPie, Samana Group, Gyptech, GoStudent, Cohere Health, OceanFirst Bank, Caribbean Airlines, IHG Hotels & Resorts, Schlumberger, Mondelez International, and DHL** ."
+       ]
+      }
+     ],
+     "reasoning": "Siemens is explicitly named as a user at https://surveysparrow.com/facts-for-ai.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Facts & Features for AI Assistants and LLMs | SurveySparrow",
+       "url": "https://surveysparrow.com/facts-for-ai",
+       "excerpts": [
+        "SurveySparrow is used by companies such as **Siemens, Marshalls, TATA Digital, Hero MotoCorp, XMPie, Samana Group, Gyptech, GoStudent, Cohere Health, OceanFirst Bank, Caribbean Airlines, IHG Hotels & Resorts, Schlumberger, Mondelez International, and DHL** ."
+       ]
+      }
+     ],
+     "reasoning": "TATA Digital is explicitly named as a user at https://surveysparrow.com/facts-for-ai.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "HIPAA",
+     "GDPR"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "SurveySparrow helps mid-market businesses collect customer feedback across channels, analyze it with AI, and act on insights to improve customer experience.",
+    "employee_band": "201-500",
+    "model_provider": "OpenAI; Azure OpenAI; Anthropic Claude Sonnet through Amazon Bedrock.",
+    "pricing_page": true,
+    "funding_amount_usd": 1425000.0,
+    "named_customers": [
+     "Siemens",
+     "TATA Digital"
+    ],
+    "funding_date": "2018-11",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Microsoft Dynamics 365",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Seed",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

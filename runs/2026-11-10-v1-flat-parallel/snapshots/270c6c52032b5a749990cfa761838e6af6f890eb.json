@@ -1,0 +1,21 @@
+{
+ "url": "https://www.opendental.com/site/apideveloperportal.html",
+ "fetched_at": "2026-11-09T21:39:51.572818+00:00",
+ "hours_after_run": 21.7,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "7225e164a6b94c741a7c67980a11474d23f65cad4ee62f325fbc20fcc3a19a86",
+ "chars": 3063,
+ "truncated": false,
+ "title": "Open Dental Software - API Developer Portal",
+ "markdown": "[![Home](https://www.opendental.com/site/resources/logoWhite160.png)](http://www.opendental.com/index.html)\n\n[![](https://www.opendental.com/site/resources/search.gif)\\\\\n\\\\\nSearch](https://www.opendental.com/site/searchsite.html)\n\nAPI Developer Portal\n\nSee [API Specification](https://www.opendental.com/site/apispecification.html)\n\n## Developer Portal Key Instructions\n\nThe apikeys endpoint allows developers to manage CustomerKeys for their accounts through API calls.\n\nAuthentication with a DeveloperPortalKey is required to access this endpoint.\n\nLog in to the Developer Portal to generate and manage your DeveloperPortalKey.\n\n**Authorization Header Format:** ODFHIR {DeveloperKey}/{DeveloperPortalKey}\n\n## ApiKeys GET (multiple)\n\nReturns all CustomerKeys associated with your account.\n\n**Example Requests:**\n\nGET /apikeys\n\n**Example Response:**\n\n\\[\\\n\\\n{\\\n\\\n\"CustomerKey\": \"QJXZR4PNK5B8W2HD\",\\\n\\\n\"KeyStatus\": \"DisabledByDeveloper\",\\\n\\\n\"DateCreated\": \"2022-05-25\",\\\n\\\n\"DateDisabled\": \"2025-08-29\",\\\n\\\n\"DateTimeAssigned\": \"2022-06-22 03:37:33\",\\\n\\\n\"DevRefId\": \"Sarah's Super Dental\"\\\n\\\n},\\\n\\\n\"CustomerKey\": \"AAM2DYNOLF0F7ZUD\",\\\n\\\n\"KeyStatus\": \"Enabled\",\\\n\\\n\"DateCreated\": \"2024-12-04\",\\\n\\\n\"DateDisabled\": \"0001-01-01\",\\\n\\\n\"DateTimeAssigned\": \"0001-01-01 00:00:00\",\\\n\\\n\"DevRefId\": \"\"\\\n\\\n},\\\n\\\n{\\\n\\\n\"CustomerKey\": \"93R8TEL22OI4UPYX\",\\\n\\\n\"KeyStatus\": \"Enabled\",\\\n\\\n\"DateCreated\": \"2024-12-04\",\\\n\\\n\"DateDisabled\": \"0001-01-01\",\\\n\\\n\"DateTimeAssigned\": \"0001-01-01 00:00:00\",\\\n\\\n\"DevRefId\": \"\"\\\n\\\n},\\\n\\\n{\\\n\\\n\"CustomerKey\": \"565ATSAH4SZDUTTK\",\\\n\\\n\"KeyStatus\": \"Enabled\",\\\n\\\n\"DateCreated\": \"2025-06-12\",\\\n\\\n\"DateDisabled\": \"0001-01-01\",\\\n\\\n\"DateTimeAssigned\": \"0001-01-01 00:00:00\",\\\n\\\n\"DevRefId\": \"\"\\\n\\\n}\\\n\\\n\\]\n\n200 OK\n\n400 BadRequest (with explanation)\n\n401 Unauthorized (with explanation)\n\n## ApiKeys POST (create)\n\nCreates and returns a new CustomerKey. This is the most common call when onboarding a new practice.\n\n**Example Requests:**\n\nPOST /apikeys\n\n**Example Response:**\n\n{\n\n\"CustomerKey\": \"565ATSAH4SZDUTTK\",\n\n\"KeyStatus\": \"Enabled\",\n\n\"DateCreated\": \"2025-06-12\",\n\n\"DateDisabled\": \"0001-01-01\",\n\n\"DateTimeAssigned\": \"0001-01-01 00:00:00\",\n\n\"DevRefId\": \"\"\n\n}\n\n201 Created\n\n400 BadRequest (with explanation)\n\n401 Unauthorized (with explanation)\n\n## ApiKeys PUT (update)\n\nUpdates the status or metadata of an existing CustomerKey.\n\n**CustomerKey:** Required. The customer key to update.\n\n**KeyStatus:** Optional. Either \"Enabled\" or \"DisabledByDeveloper\".\n\n**DevRefId:** Optional. A developer referenced identifier. Only displays in the Developer Portal.\n\n**Example Requests:**\n\nPUT /apikeys\n\n{\n\n\"CustomerKey\": \"QJXZR4PNK5B8W2HD\",\n\n\"KeyStatus\": \"DisabledByDeveloper\",\n\n\"DevRefId\": \"Sarah's Super Dental\"\n\n}\n\n**Example Response:**\n\n{\n\n\"CustomerKey\": \"QJXZR4PNK5B8W2HD\",\n\n\"KeyStatus\": \"DisabledByDeveloper\",\n\n\"DateCreated\": \"2021-05-25\",\n\n\"DateDisabled\": \"2025-08-29\",\n\n\"DateTimeAssigned\": \"2021-06-22 03:37:33\",\n\n\"DevRefId\": \"Sarah's Super Dental\"\n\n}\n\n200 OK\n\n400 BadRequest (with explanation)\n\n401 Unauthorized (with explanation)\n\n404 NotFound (with explanation)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ]
+}

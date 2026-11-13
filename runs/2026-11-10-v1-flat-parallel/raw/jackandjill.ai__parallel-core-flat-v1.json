@@ -1,0 +1,531 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb0478de17809c5aa",
+  "interaction_id": "trun_142119f6a1b4439eb0478de17809c5aa",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "jackandjill.ai"
+  },
+  "created_at": "2026-11-10T18:48:36.461099Z",
+  "modified_at": "2026-11-10T18:52:55.587201Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb0478de17809c5aa",
+   "interaction_id": "trun_142119f6a1b4439eb0478de17809c5aa",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "jackandjill.ai"
+   },
+   "created_at": "2026-11-10T18:48:36.461099Z",
+   "modified_at": "2026-11-10T18:52:55.587201Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "jackandjill.ai",
+       "url": "https://www.jackandjill.ai/llms.txt",
+       "excerpts": [
+        "- Company: Jack & Jill (legal entity: Tinker Tailor Talent Ltd.)",
+        "- Founded: 2024"
+       ]
+      }
+     ],
+     "reasoning": "Jack & Jill\u2019s own llms.txt quick facts directly state \u201cFounded: 2024.\u201d A LinkedIn-derived snippet elsewhere says 2025, so I prefer the company\u2019s directly maintained canonical facts; the discrepancy lowers confidence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Privacy Policy | Jack & Jill",
+       "url": "https://www.jackandjill.ai/privacy",
+       "excerpts": [
+        "You have various rights under the UK GDPR and other data protection laws, which include:",
+        "* **Access:** Obtain a copy of any personal data we hold about you."
+       ]
+      }
+     ],
+     "reasoning": "The company privacy policy explicitly names UK GDPR in describing users\u2019 rights. GDPR is the only item from the requested list named there; it does not name SOC 2, ISO 27001, HIPAA, or PCI DSS in the cited passage. The policy refers to GDPR rights rather than describing a formal certification, so confidence is medium.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Terms of Service | Jack & Jill",
+       "url": "https://www.jackandjill.ai/terms?section=platform",
+       "excerpts": [
+        "**Legal Entity:** Tinker Tailor Talent Limited is registered in England and Wales, Company No. 16324763, with a registered address at 86-90 Paul Street, London, England, EC2A 4NE."
+       ]
+      },
+      {
+       "title": "Jack & Jill: help fix the most important market in the world",
+       "url": "https://www.jackandjill.ai/about-us",
+       "excerpts": [
+        "## We\u2019re 28 people in London and San Francisco"
+       ]
+      }
+     ],
+     "reasoning": "The legal terms give the registered address as London, England, and the team page places the company\u2019s 28-person operation in London and San Francisco. This supports the UK as its principal country, while the page does not label a single formal headquarters, so confidence is medium.",
+     "confidence": "medium"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Hiring and job hunting advice | Jack & Jill",
+       "url": "https://www.jackandjill.ai/blog",
+       "excerpts": [
+        "# Blog",
+        "[Editorial illustration for \"$40M Series A to make warm introductions at the scale of the internet\" ## $40M Series A to make warm introductions at the scale of the internet The decisions we make about our careers are among the most important of our lives. And yet finding a job you love is left to chance. Matthew Wilson \u00b7 15 September 2026](https://www.jackandjill.ai/blog/series-a)",
+        "[All](https://www.jackandjill.ai/blog) [Jack](https://www.jackandjill.ai/blog?category=jack) [Jill](https://www.jackandjill.ai/blog?category=jill) [Company](https://www.jackandjill.ai/blog?category=company) [Press](https://www.jackandjill.ai/blog?category=press)",
+        "* [A company growth chart from 2014 to 2026 with funding rounds marked. The candidate was there from 2016 to late 2024, through the climb from under 10 people to a peak of about 130, before headcount fell back to 88 ### Company Insights: Know the company behind every candidate Company Insights is live in Jill. See how each company in a candidate\u2019s history grew, hired and kept people while they were there. Jack & Jill \u00b7 4 November 2026](https://www.jackandjill.ai/blog/company-insights)",
+        "* [Editorial illustration for \"We\u2019ve looked at hiring from both sides now\" ### We\u2019ve looked at hiring from both sides now PromptMates documented their first hire with Jack & Jill from both sides of the table: Joe Atkinson hiring, and Nikola W\u00f3jcik as the candidate. Nell Norman \u00b7 2 November 2026](https://www.jackandjill.ai/blog/hiring-from-both-sides)",
+        "* [Editorial illustration for \"AI sourcing is broken by design. Here\u2019s how we\u2019re fixing it.\" ### AI sourcing is broken by design. Here\u2019s how we\u2019re fixing it. A response to Paul Karrmann\u2019s article on why AI sourcing keeps failing, and how Jack & Jill is fixing the three structural problems he identified. Matthew Wilson \u00b7 5 July 2026](https://www.jackandjill.ai/blog/ai-sourcing-is-broken-by-design)",
+        "* [Editorial illustration for \"Rewriting tech roles\" ### Rewriting tech roles Founders Associate, Founding GTM, MTS, Forward Deployed Engineer, GTM Engineer, Talent Engineer, Founding Operator: the new generation of startup titles and where they came from. Arya Tandon \u00b7 4 June 2026](https://www.jackandjill.ai/blog/rewriting-tech-roles)",
+        "* [Editorial illustration for \"How to Build an AI-Native Team\" ### How to Build an AI-Native Team Notes from the Jack & Jill x Ashby breakfast panel: how founders and talent leaders are actually getting their teams to compound on AI, not just have access to it. Jack & Jill \u00b7 22 May 2026](https://www.jackandjill.ai/blog/how-to-build-an-ai-native-team)",
+        "* [Editorial illustration for \"How to Find a Job in 2026\" ### How to Find a Job in 2026 A practical, step-by-step guide to navigating the 2026 job market, from working out what you actually want to landing the offer and negotiating it. Ainhoa Arias \u00b7 22 May 2026](https://www.jackandjill.ai/blog/how-to-find-a-job-in-2026)"
+       ]
+      }
+     ],
+     "reasoning": "The blog index shows company announcements, product and hiring advice, an AI-sourcing commentary by the CEO, and panel notes; it does not show two posts about product construction by engineers. Under the requested definition this is not an engineering blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "$40M Series A to make warm introductions at the scale of the internet | Jack & Jill",
+       "url": "https://www.jackandjill.ai/blog/series-a",
+       "excerpts": [
+        "Jack is an AI agent for your career. Jill is an AI agent for hiring. When Jack and Jill agree there's a match, they introduce the candidate and company directly, skipping the application altogether."
+       ]
+      }
+     ],
+     "reasoning": "The company describes Jack as an AI agent for a candidate\u2019s career and Jill as an AI agent for hiring, which introduce a candidate and company directly when they match. This supports the one-sentence product description.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Jack & Jill: help fix the most important market in the world",
+       "url": "https://www.jackandjill.ai/about-us",
+       "excerpts": [
+        "## We\u2019re 28 people in London and San Francisco"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s team page says it has 28 people; 28 falls in the 21-50 band.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Terms of Service | Jack & Jill",
+       "url": "https://www.jackandjill.ai/terms?section=platform",
+       "excerpts": [
+        "## 4\\. Use of AI & Calls",
+        "AI Accuracy & Availability",
+        "Our Platform uses AI technologies. AI (and specifically large language models) is evolving rapidly and may contain errors or make mistakes. \"Jack\" (our AI) may also provide inaccurate information regarding salary ranges and professional guidance."
+       ]
+      },
+      {
+       "title": "Privacy Policy | Jack & Jill",
+       "url": "https://www.jackandjill.ai/privacy",
+       "excerpts": [
+        "From time to time we may share your personal information with other parties, such as:",
+        "**Employers:** When your visibility is set to \"Open to matches\" or \"Exceptional only\", we may share your candidate profile and professional details with potential employers who work with \"Jill\" (the 2nd AI), provided they're a fit for your professional experience, skills, and interests. We only share your contact details once you and the employer have both agreed to an introduction. Setting your visibility to \"Hidden\" stops new sharing, and you can change it at any time.",
+        "**Third-Party Providers:** We need to use third-party AI and hosting Services to find you unmissable roles. Sometimes these providers may be based outside the UK/EEA, but we'll always implement additional safeguards if so."
+       ]
+      },
+      {
+       "title": "Welcome to the Docs | Jack & Jill",
+       "url": "https://www.jackandjill.ai/docs",
+       "excerpts": [
+        "#### Overview",
+        "* [Welcome to the Docs](https://www.jackandjill.ai/docs)",
+        "* [Who is Jill?](https://www.jackandjill.ai/docs/who-is-jill)",
+        "* [Getting Started](https://www.jackandjill.ai/docs/getting-started)",
+        "* [FAQs](https://www.jackandjill.ai/docs/faqs)",
+        "#### Core Features",
+        "* [Search & Candidate Discovery](https://www.jackandjill.ai/docs/search-and-candidate-discovery)",
+        "* [The Hiring Brief](https://www.jackandjill.ai/docs/hiring-brief)",
+        "* [Introductions](https://www.jackandjill.ai/docs/introductions)",
+        "* [Pipeline Management](https://www.jackandjill.ai/docs/pipeline-management)",
+        "* [Working with Jill](https://www.jackandjill.ai/docs/working-with-jill)",
+        "#### Team & Permissions",
+        "* [Joining Your Team](https://www.jackandjill.ai/docs/joining-your-team)",
+        "* [Permissions & Private Roles](https://www.jackandjill.ai/docs/permissions-and-private-roles)",
+        "#### Integrations",
+        "* [Ashby ATS Integration](https://www.jackandjill.ai/docs/ashby-ats-integration)",
+        "* [Workable ATS Integration](https://www.jackandjill.ai/docs/workable-ats-integration)",
+        "* [BambooHR ATS Integration](https://www.jackandjill.ai/docs/bamboohr-ats-integration)",
+        "* [Pinpoint ATS Integration](https://www.jackandjill.ai/docs/pinpoint-ats-integration)",
+        "* [Greenhouse ATS Integration](https://www.jackandjill.ai/docs/greenhouse-ats-integration)",
+        "* [Lever ATS Integration](https://www.jackandjill.ai/docs/lever-ats-integration)",
+        "* [Personio ATS Integration](https://www.jackandjill.ai/docs/personio-ats-integration)",
+        "* [Teamtailor ATS Integration](https://www.jackandjill.ai/docs/teamtailor-ats-integration)",
+        "* [Custom ATS Integration (beta)](https://www.jackandjill.ai/docs/custom-ats-integration)",
+        "* [Slack Integration](https://www.jackandjill.ai/docs/slack-integration)",
+        "Documentation",
+        "# Welcome to the docs",
+        "Everything you need to understand how Jack & Jill works, from getting started to team permissions and ATS integrations.",
+        "[Overview ## Who is Jill? What Jill does, the dual-agent model, where candidates come from, and how Jill compares to agencies. Read guide](https://www.jackandjill.ai/docs/who-is-jill) [Overview ## Getting Started Sign up, create your first role, and get your first shortlist in under 10 minutes. Read guide](https://www.jackandjill.ai/docs/getting-started) [Core Features ## Search & Candidate Discovery How Jill finds and scores candidates, activity indicators, feedback loops, and Public Profiles. Read guide](https://www.jackandjill.ai/docs/search-and-candidate-discovery) [Core Features ## The Hiring Brief The document that drives everything \u2014 how Jill builds it, what's in it, and how to edit it. Read guide](https://www.jackandjill.ai/docs/hiring-brief) [Core Features ## Introductions The consent-based intro flow, the candidate pitch, and what candidates actually see. Read guide](https://www.jackandjill.ai/docs/introductions) [Core Features ## Pipeline Management Pipeline stages, shortlisting, passing, candidate notes, and ATS integration. Read guide](https://www.jackandjill.ai/docs/pipeline-management) [Core Features ## Working with Jill How to talk to Jill, manage multiple roles, configure updates, and customise role settings. Read guide](https://www.jackandjill.ai/docs/working-with-jill) [Team & Permissions ## Joining Your Team How auto-join and approval-based team membership work. Read guide](https://www.jackandjill.ai/docs/joining-your-team) [Team & Permissions ## Permissions & Private Roles Collaborator access, role visibility, and how private hiring workflows behave. Read guide](https://www.jackandjill.ai/docs/permissions-and-private-roles) [Integrations ## Ashby ATS Integration Set up the Jack & Jill Ashby integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/ashby-ats-integration) [Integrations ## Workable ATS Integration Set up the Jack & Jill Workable integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/workable-ats-integration) [Integrations ## BambooHR ATS Integration Set up the Jack & Jill BambooHR integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/bamboohr-ats-integration) [Integrations ## Pinpoint ATS Integration Set up the Jack & Jill Pinpoint integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/pinpoint-ats-integration) [Integrations ## Teamtailor ATS Integration How the Jack & Jill Teamtailor integration receives candidates from your pipeline, imports existing ones, and can add, move and reject candidates with an optional Admin key. Read guide](https://www.jackandjill.ai/docs/teamtailor-ats-integration) [Integrations ## Greenhouse ATS Integration Not live, pending partner review. How the Jack & Jill Greenhouse integration will keep your candidate pipeline in sync. Read guide](https://www.jackandjill.ai/docs/greenhouse-ats-integration) [Integrations ## Lever ATS Integration How the Jack & Jill Lever integration adds candidates to your job postings, moves them between stages, and archives or hires them. Read guide](https://www.jackandjill.ai/docs/lever-ats-integration) [Integrations ## Personio ATS Integration Set up the Jack & Jill Personio integration to submit candidates to your Personio jobs. Read guide](https://www.jackandjill.ai/docs/personio-ats-integration) [Integrations ## Custom ATS Integration (beta) Beta. Your team hosts a small API, and Jill keeps your pipeline in sync. The Jack & Jill team turns this on for your account. Read guide](https://www.jackandjill.ai/docs/custom-ats-integration) [Integrations ## Slack Integration Connect Jill to Slack, create role channels, and manage Slack notifications. Read guide](https://www.jackandjill.ai/docs/slack-integration) [FAQs ## FAQs Pricing, support, who Jill works for, and common questions about using the platform. Read guide](https://www.jackandjill.ai/docs/faqs)"
+       ]
+      }
+     ],
+     "reasoning": "The terms mention AI and large language models only generically; the privacy policy refers generically to third-party AI and hosting providers; and the public docs index lists product guides and integrations without naming a model vendor. I found no public statement in these first-party sources identifying the model provider, so it remains unknown.",
+     "confidence": "medium"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Simple, Transparent Pricing | Jack & Jill",
+       "url": "https://www.jackandjill.ai/pricing/us",
+       "excerpts": [
+        "Jack is free for candidates. Meet Jill is free. Hire Jill is from $199 per active role per month."
+       ]
+      }
+     ],
+     "reasoning": "The public pricing page lists free candidate and \u201cMeet Jill\u201d offerings and a paid \u201cHire Jill\u201d plan priced from $199 per active role per month.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "jackandjill.ai",
+       "url": "https://www.jackandjill.ai/llms.txt",
+       "excerpts": [
+        "Jack & Jill raised a $40M Series A on 15 September 2026, led by Air Street Capital, with participation from Creandum and Madrona. The Seed round was $20M, led by Creandum. See https://www.jackandjill.ai/blog/series-a."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s own canonical facts say it raised a $40M Series A on 15 September 2026; $40M equals USD 40,000,000.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Customers | Jack & Jill",
+       "url": "https://www.jackandjill.ai/customers",
+       "excerpts": [
+        "* [\u201d Attio > ### You often know exactly who the right person is, but can\u2019t get in contact with them. Jill lets you do that. > >](https://www.jackandjill.ai/customers/attio)",
+        "* [\u201d Anima > ### As soon as we started using Jill, the quality of candidates just skyrocketed. > >](https://www.jackandjill.ai/customers/anima)"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s customer-story index directly names Attio and Anima as featured stories about hiring with Jill.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "jackandjill.ai",
+       "url": "https://www.jackandjill.ai/llms.txt",
+       "excerpts": [
+        "Jack & Jill raised a $40M Series A on 15 September 2026, led by Air Street Capital, with participation from Creandum and Madrona. The Seed round was $20M, led by Creandum. See https://www.jackandjill.ai/blog/series-a."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s own canonical facts date its $40M Series A to 15 September 2026, which converts to YYYY-MM as 2026-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Welcome to the Docs | Jack & Jill",
+       "url": "https://www.jackandjill.ai/docs",
+       "excerpts": [
+        "#### Integrations",
+        "* [Ashby ATS Integration](https://www.jackandjill.ai/docs/ashby-ats-integration)",
+        "* [Workable ATS Integration](https://www.jackandjill.ai/docs/workable-ats-integration)",
+        "* [BambooHR ATS Integration](https://www.jackandjill.ai/docs/bamboohr-ats-integration)",
+        "* [Pinpoint ATS Integration](https://www.jackandjill.ai/docs/pinpoint-ats-integration)",
+        "* [Greenhouse ATS Integration](https://www.jackandjill.ai/docs/greenhouse-ats-integration)",
+        "* [Lever ATS Integration](https://www.jackandjill.ai/docs/lever-ats-integration)",
+        "* [Personio ATS Integration](https://www.jackandjill.ai/docs/personio-ats-integration)",
+        "* [Teamtailor ATS Integration](https://www.jackandjill.ai/docs/teamtailor-ats-integration)",
+        "* [Custom ATS Integration (beta)](https://www.jackandjill.ai/docs/custom-ats-integration)",
+        "* [Slack Integration](https://www.jackandjill.ai/docs/slack-integration)"
+       ]
+      },
+      {
+       "title": "GTM Engineer @ Jack & Jill",
+       "url": "https://jobs.ashbyhq.com/jack-jill-external-ats/b7e19764-25b8-465e-8a41-206ea821ef28",
+       "excerpts": [
+        "* Own GTM systems. Build systems for our commercial team that scale our impact further, and provide greater visibility into what's actually happening across every account: usage, health, expansion signals, churn risk and more.",
+        "* Build complex, scalable agents. We build with internal agents constantly, and you'll ship even more advanced agents into our existing workflows. This could include automating customer-facing delivery, such as reactivation and expansion campaigns.",
+        "* Turn signal into action. Uncover leading indicators that predict outcomes like expansion and churn, and wire them into something that executes timely account-level interventions.",
+        "* Bring strong commercial focus to everything you do. The ideal hire will frame everything in terms of commercial and customer outcomes: retention, usage, expansion, roles and revenue per account, and more.",
+        "* Work deeply in the product. Collaborate with our engineers to A/B test features, improve customer enablement in-product, and constantly take on initiatives to improve our customer experience where possible."
+       ]
+      }
+     ],
+     "reasoning": "The docs/integrations page and Jack & Jill\u2019s own GTM Engineer posting were readable. The integrations listed are ATS products and Slack, and the posting refers to GTM systems without naming a CRM or sales/marketing system. Therefore the list is empty.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "Jack & Jill: help fix the most important market in the world",
+       "url": "https://www.jackandjill.ai/about-us",
+       "excerpts": [
+        "## We\u2019re 28 people in London and San Francisco",
+        "List view",
+        "Matthew Wilson Co-founder & CEO",
+        "Saaras Mehan Co-founder & CTO"
+       ]
+      },
+      {
+       "title": "jackandjill.ai",
+       "url": "https://www.jackandjill.ai/llms.txt",
+       "excerpts": [
+        "- Company: Jack & Jill (legal entity: Tinker Tailor Talent Ltd.)",
+        "- Founded: 2024"
+       ]
+      }
+     ],
+     "reasoning": "The complete small team roster identifies Matthew Wilson and Saaras Mehan as co-founder CEO and co-founder CTO, respectively, and identifies no other C-level or VP-level member; the company states it was founded in 2024. I found no dated announcement of an executive departure or new C/VP appointment in the period. The roster has no individual start dates, so the negative is an inference and confidence is medium.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jack & Jill: help fix the most important market in the world",
+       "url": "https://www.jackandjill.ai/about-us",
+       "excerpts": [
+        "## Our open roles",
+        "[Designer London, UK \u00b7 \u00a390k\u2013\u00a3150k total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/eede08e2-4dd0-48f9-8558-6ad8b98664d5) [Account Executive San Francisco, US \u00b7 $295k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/2fd5e1c5-9f09-4d69-89eb-839393beaf68) [Account Executive London, UK \u00b7 \u00a3180k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/4f4651b9-94f9-4bec-a74a-ed0dae69edf6) [Founding Engineer London, UK \u00b7 \u00a3360k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/fac9804c-afa7-468b-ab29-a1e1bd7ed68f) [Founding Operator London, UK \u00b7 \u00a3100k\u2013\u00a3150k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/5ad034cc-1bcb-4e47-a16b-7d49f82e2fc7) [GTM Engineer London, UK \u00b7 Competitive total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/b7e19764-25b8-465e-8a41-206ea821ef28) [CFO London, UK \u00b7 Competitive total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/a4898d2d-2078-4aa2-9845-8abb99813f12) [Founding Community and Events Lead San Francisco, US \u00b7 $100k\u2013$160k base plus equity](https://jobs.ashbyhq.com/jack-jill-external-ats/1888a06c-d3d6-43b8-9f7b-e69294871575) [Founding Community and Events Lead London, UK \u00b7 \u00a350k\u2013\u00a380k base plus equity](https://jobs.ashbyhq.com/jack-jill-external-ats/050c78ca-62c8-44c0-ac3d-925b7a8a8aa3)",
+        "Don\u2019t see a role for you?"
+       ]
+      }
+     ],
+     "reasoning": "The careers page lists open roles including Founding Engineer, but none of the listed job titles contains AI, ML, data science, or another qualifying term. Per the title-based rule, the answer is false.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "jackandjill.ai",
+       "url": "https://www.jackandjill.ai/llms.txt",
+       "excerpts": [
+        "Jack & Jill raised a $40M Series A on 15 September 2026, led by Air Street Capital, with participation from Creandum and Madrona. The Seed round was $20M, led by Creandum. See https://www.jackandjill.ai/blog/series-a."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s own canonical facts explicitly identify the most recent round as a Series A dated 15 September 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Welcome to the Docs | Jack & Jill",
+       "url": "https://www.jackandjill.ai/docs",
+       "excerpts": [
+        "#### Overview",
+        "* [Welcome to the Docs](https://www.jackandjill.ai/docs)",
+        "* [Who is Jill?](https://www.jackandjill.ai/docs/who-is-jill)",
+        "* [Getting Started](https://www.jackandjill.ai/docs/getting-started)",
+        "* [FAQs](https://www.jackandjill.ai/docs/faqs)",
+        "#### Core Features",
+        "* [Search & Candidate Discovery](https://www.jackandjill.ai/docs/search-and-candidate-discovery)",
+        "* [The Hiring Brief](https://www.jackandjill.ai/docs/hiring-brief)",
+        "* [Introductions](https://www.jackandjill.ai/docs/introductions)",
+        "* [Pipeline Management](https://www.jackandjill.ai/docs/pipeline-management)",
+        "* [Working with Jill](https://www.jackandjill.ai/docs/working-with-jill)",
+        "# Welcome to the docs",
+        "Everything you need to understand how Jack & Jill works, from getting started to team permissions and ATS integrations.",
+        "[Overview ## Who is Jill? What Jill does, the dual-agent model, where candidates come from, and how Jill compares to agencies. Read guide](https://www.jackandjill.ai/docs/who-is-jill) [Overview ## Getting Started Sign up, create your first role, and get your first shortlist in under 10 minutes. Read guide](https://www.jackandjill.ai/docs/getting-started) [Core Features ## Search & Candidate Discovery How Jill finds and scores candidates, activity indicators, feedback loops, and Public Profiles. Read guide](https://www.jackandjill.ai/docs/search-and-candidate-discovery) [Core Features ## The Hiring Brief The document that drives everything \u2014 how Jill builds it, what's in it, and how to edit it. Read guide](https://www.jackandjill.ai/docs/hiring-brief) [Core Features ## Introductions The consent-based intro flow, the candidate pitch, and what candidates actually see. Read guide](https://www.jackandjill.ai/docs/introductions) [Core Features ## Pipeline Management Pipeline stages, shortlisting, passing, candidate notes, and ATS integration. Read guide](https://www.jackandjill.ai/docs/pipeline-management) [Core Features ## Working with Jill How to talk to Jill, manage multiple roles, configure updates, and customise role settings. Read guide](https://www.jackandjill.ai/docs/working-with-jill) [Team & Permissions ## Joining Your Team How auto-join and approval-based team membership work. Read guide](https://www.jackandjill.ai/docs/joining-your-team) [Team & Permissions ## Permissions & Private Roles Collaborator access, role visibility, and how private hiring workflows behave. Read guide](https://www.jackandjill.ai/docs/permissions-and-private-roles) [Integrations ## Ashby ATS Integration Set up the Jack & Jill Ashby integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/ashby-ats-integration) [Integrations ## Workable ATS Integration Set up the Jack & Jill Workable integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/workable-ats-integration) [Integrations ## BambooHR ATS Integration Set up the Jack & Jill BambooHR integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/bamboohr-ats-integration) [Integrations ## Pinpoint ATS Integration Set up the Jack & Jill Pinpoint integration so your candidate pipeline stays in sync. Read guide](https://www.jackandjill.ai/docs/pinpoint-ats-integration) [Integrations ## Teamtailor ATS Integration How the Jack & Jill Teamtailor integration receives candidates from your pipeline, imports existing ones, and can add, move and reject candidates with an optional Admin key. Read guide](https://www.jackandjill.ai/docs/teamtailor-ats-integration) [Integrations ## Greenhouse ATS Integration Not live, pending partner review. How the Jack & Jill Greenhouse integration will keep your candidate pipeline in sync. Read guide](https://www.jackandjill.ai/docs/greenhouse-ats-integration) [Integrations ## Lever ATS Integration How the Jack & Jill Lever integration adds candidates to your job postings, moves them between stages, and archives or hires them. Read guide](https://www.jackandjill.ai/docs/lever-ats-integration) [Integrations ## Personio ATS Integration Set up the Jack & Jill Personio integration to submit candidates to your Personio jobs. Read guide](https://www.jackandjill.ai/docs/personio-ats-integration) [Integrations ## Custom ATS Integration (beta) Beta. Your team hosts a small API, and Jill keeps your pipeline in sync. The Jack & Jill team turns this on for your account. Read guide](https://www.jackandjill.ai/docs/custom-ats-integration) [Integrations ## Slack Integration Connect Jill to Slack, create role channels, and manage Slack notifications. Read guide](https://www.jackandjill.ai/docs/slack-integration) [FAQs ## FAQs Pricing, support, who Jill works for, and common questions about using the platform. Read guide](https://www.jackandjill.ai/docs/faqs)"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation index links to multiple guides covering Jill, setup, candidate discovery, hiring briefs, introductions, pipeline management, team permissions, and integrations, meeting the requirement for several public product-documentation articles.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Terms of Service | Jack & Jill",
+       "url": "https://www.jackandjill.ai/terms?section=platform",
+       "excerpts": [
+        "**Legal Entity:** Tinker Tailor Talent Limited is registered in England and Wales, Company No. 16324763, with a registered address at 86-90 Paul Street, London, England, EC2A 4NE."
+       ]
+      },
+      {
+       "title": "Jack & Jill: help fix the most important market in the world",
+       "url": "https://www.jackandjill.ai/about-us",
+       "excerpts": [
+        "## We\u2019re 28 people in London and San Francisco"
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s registered address is in London, England, and its team page describes the operation as based in London and San Francisco. London is the best-supported city for its headquarters, though the company also has a San Francisco presence.",
+     "confidence": "medium"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Company Insights: Know the company behind every candidate | Jack & Jill",
+       "url": "https://www.jackandjill.ai/blog/company-insights",
+       "excerpts": [
+        "Company Insights: Know the company behind every candidate Jack & Jill \u00b7 4 November 2026 A candidate\u2019s job title and past employers only tell you so much. Have they worked at your stage? What did their team go through? ... But getting it means piecing together headcount, funding announcements and individual profiles. Without it, familiar company names can become a shortcut for relevant experience. Today we\u2019re launching Company Insights in Jill, putting that context alongside the candidate."
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s blog dated 4 November 2026 states \u201cToday we\u2019re launching Company Insights in Jill.\u201d This is within the six months before 9 November 2026 and is an explicit product-feature launch.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Jack & Jill: help fix the most important market in the world",
+       "url": "https://www.jackandjill.ai/about-us",
+       "excerpts": [
+        "## Our open roles",
+        "[Designer London, UK \u00b7 \u00a390k\u2013\u00a3150k total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/eede08e2-4dd0-48f9-8558-6ad8b98664d5) [Account Executive San Francisco, US \u00b7 $295k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/2fd5e1c5-9f09-4d69-89eb-839393beaf68) [Account Executive London, UK \u00b7 \u00a3180k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/4f4651b9-94f9-4bec-a74a-ed0dae69edf6) [Founding Engineer London, UK \u00b7 \u00a3360k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/fac9804c-afa7-468b-ab29-a1e1bd7ed68f) [Founding Operator London, UK \u00b7 \u00a3100k\u2013\u00a3150k+ total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/5ad034cc-1bcb-4e47-a16b-7d49f82e2fc7) [GTM Engineer London, UK \u00b7 Competitive total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/b7e19764-25b8-465e-8a41-206ea821ef28) [CFO London, UK \u00b7 Competitive total compensation](https://jobs.ashbyhq.com/jack-jill-external-ats/a4898d2d-2078-4aa2-9845-8abb99813f12) [Founding Community and Events Lead San Francisco, US \u00b7 $100k\u2013$160k base plus equity](https://jobs.ashbyhq.com/jack-jill-external-ats/1888a06c-d3d6-43b8-9f7b-e69294871575) [Founding Community and Events Lead London, UK \u00b7 \u00a350k\u2013\u00a380k base plus equity](https://jobs.ashbyhq.com/jack-jill-external-ats/050c78ca-62c8-44c0-ac3d-925b7a8a8aa3)",
+        "Don\u2019t see a role for you?"
+       ]
+      }
+     ],
+     "reasoning": "The live careers page lists Account Executive openings in both San Francisco and London, so the company is hiring for a qualifying role.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "jackandjill.ai",
+       "url": "https://www.jackandjill.ai/llms.txt",
+       "excerpts": [
+        "Jack & Jill raised a $40M Series A on 15 September 2026, led by Air Street Capital, with participation from Creandum and Madrona. The Seed round was $20M, led by Creandum. See https://www.jackandjill.ai/blog/series-a."
+       ]
+      }
+     ],
+     "reasoning": "The company announced a $40M Series A on 15 September 2026, within the 18 months before 9 November 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Privacy Policy | Jack & Jill",
+       "url": "https://www.jackandjill.ai/privacy",
+       "excerpts": [
+        "You have various rights under the UK GDPR and other data protection laws, which include:",
+        "* **Access:** Obtain a copy of any personal data we hold about you."
+       ]
+      }
+     ],
+     "reasoning": "The cited privacy-policy passage names UK GDPR; this is the sole listed compliance item present in the cited passage.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Customers | Jack & Jill",
+       "url": "https://www.jackandjill.ai/customers",
+       "excerpts": [
+        "* [\u201d Attio > ### You often know exactly who the right person is, but can\u2019t get in contact with them. Jill lets you do that. > >](https://www.jackandjill.ai/customers/attio)"
+       ]
+      }
+     ],
+     "reasoning": "The customer-story index names Attio as a featured Jill customer story.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Customers | Jack & Jill",
+       "url": "https://www.jackandjill.ai/customers",
+       "excerpts": [
+        "* [\u201d Anima > ### As soon as we started using Jill, the quality of candidates just skyrocketed. > >](https://www.jackandjill.ai/customers/anima)"
+       ]
+      }
+     ],
+     "reasoning": "The customer-story index names Anima as a featured Jill customer story.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2024.0,
+    "compliance_certs": [
+     "GDPR"
+    ],
+    "hq_country": "United Kingdom",
+    "eng_blog": false,
+    "product_one_liner": "Jack & Jill pairs an AI career agent that helps candidates find jobs with an AI recruiting agent that helps companies source and hire candidates through direct introductions.",
+    "employee_band": "21-50",
+    "model_provider": null,
+    "pricing_page": true,
+    "funding_amount_usd": 40000000.0,
+    "named_customers": [
+     "Attio",
+     "Anima"
+    ],
+    "funding_date": "2026-09",
+    "crm_stack_signal": [],
+    "leadership_change_12mo": false,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series A",
+    "public_docs": true,
+    "hq_city": "London",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

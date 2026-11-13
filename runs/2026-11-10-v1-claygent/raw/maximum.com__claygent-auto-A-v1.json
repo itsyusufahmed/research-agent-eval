@@ -1,0 +1,362 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob0n8mnXUcHoYZEg3",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "maximum.com",
+    "status": "complete",
+    "result": {
+     "claygent-auto-A": {
+      "eng_blog": {
+       "notes": "The public editorial index contains funding announcements and investment/media coverage, not engineer-authored technical posts. The indexed /blog/contact.html URL renders the homepage rather than an engineering blog.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/newsroom"
+       ]
+      },
+      "reasoning": "The research distinguishes Maximum Technologies, the Miami AI-native banking company at maximum.com, from the unrelated employer-branding agency that formerly used the domain. Product, careers, headquarters, funding, and the August 2026 public introduction have direct supporting sources. No pricing, public docs, qualifying AI/ML job titles, sales-representative openings, or named CRM systems appear in the relevant public pages. Customer identities, model providers, an exact permitted employee band, and leadership changes remain unverified. Founding-year sources conflict, although PitchBook and Dealroom agree on 2025. Funding announcement timing is distinguished from the earlier financing close described by an investor. Unknown fields retain mandatory tool-schema placeholders solely because this schema does not allow omitting their values.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Searched Google with query \"maximum.com Maximum company\". The results are: \n {\"search_results\":[{\"title\":\"Maximum\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core, providing an environment for banks to build and deploy ...\",\"position\":1},{\"title\":\"Maximum\",\"link\":\"https://www.linkedin.com/company/maximum\",\"displayedLink\":\"720+ followers\",\"snippet\":\"Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core...",
+       "Used visitWebpage {\"url\":\"https://maximum.com/\",\"question\":\"What product, customers, pricing, docs, blog, security, AI providers and navigation/footer links are shown?\"}. The results are: \n \"Product: Maximum’s AI-native operating system for banks; intelligent bank OS with real-time visibility, continuous monitoring, predictive reasoning. Autonomous banking: secure environment to build/deploy custom agents, automate operational workflows, and create financial products. Security: advanced security protocols and risk-management controls protecting institutions/customers. AI Migration Engine: intelligent data extraction, compliance continuity, automated reconciliation for core migratio...",
+       "Used visitWebpage {\"url\":\"https://maximum.com/careers\",\"question\":\"List all open jobs with job links and any AI ML roles, sales roles, systems used, employee count or headquarters.\"}. The results are: \n \"Open jobs (all Remote—US or Canada; no individual job URLs shown):\\n- Senior Staff Software Engineer — apply: careers@maximum.com, subject “Senior Staff Software Engineer”\\n- Staff Software Engineer — apply: careers@maximum.com, subject “Staff Software Engineer”\\n- Senior Software Engineer — apply: careers@maximum.com, subject “Senior Software Engineer”\\n\\nAI/ML: No dedicated AI/ML roles; jobs state Maximum uses AI coding agents heavily and expects engineers to use them seriously.\\nSales: No sa...",
+       "Used visitWebpage {\"url\":\"https://maximum.com/newsroom\",\"question\":\"List all dated news articles and product launches, funding announcements and leadership changes with links.\"}. The results are: \n \"Dated news and funding coverage (all August 2026; no product launches or leadership changes listed):\\n- American Banker — “New fintech Maximum aims to take on the core banking cabal” — https://americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal\\n- Forbes — “The issue has been the concentration”: CRV bets $30M on bank cores — https://forbes.com/sites/boazsobrado/2026/08/03/the-issue-has-been-the-concentration-crv-bets-30m-on-bank-cores\\n- Restive — “Why we invested...",
+       "Used visitWebpage {\"url\":\"https://maximum.com/privacy\",\"question\":\"What compliance certifications, AI providers, subprocessors, headquarters or company address does this policy state?\"}. The results are: \n \"Relevant policy details: Maximum Technologies, Inc.; Contact address: Maximum Privacy Program, 390 NE 191st Street, STE 42077, Miami, FL 33179. Privacy contact: privacy@maximum.com. The policy says Maximum works with third-party service providers that host the Website, communicate with customers, host its data environment, and provide other services; it does not name any specific subprocessors or AI providers. No compliance certifications are stated. Additional office locations shown: Miami, Ne...",
+       "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/maximum\",\"question\":\"What are headquarters, founding year, employee count, leaders, and recent announcements?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/maximum\",\"locations\":[{\"address\":\"Miami, Florida, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"\",\"formatted_address\":\"Miami, FL\",\"business_region\":\"NAM\",\"latitude\":25.77508354,\"locality\":\"Miami\",\"admin_district\":\"Florida\",\"admin_district2\":\"Miami-Dade County\",\"country_region\":\"United States\",\"locationstr\":\"Miami, Florida, US\",\"metro_area\":\"Miami-Fort Lauderdale-West Palm Beach, FL\",\"name\":\"Miami, FL\",\"neighborhood\":\"\",\"postal_code\":\"\",\"count...",
+       "Used visitWebpage {\"url\":\"https://pitchbook.com/profiles/company/1474291-54\",\"question\":\"What is founding year, headquarters, employee count, last funding round date stage and amount?\"}. The results are: \n \"Maximum — Founded: 2025. Headquarters: Miami, FL, United States (390 NorthEast 191st Street, Suite 42077, Miami, FL 33179). Employee count: not provided. Last funding round: Seed, dated 03-Aug-2026, amount $30M.\"",
+       "Used visitWebpage {\"url\":\"https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\",\"question\":\"What date, funding stage amount, founding date, founders, customer names, team size, launch status and model providers are stated?\"}. The results are: \n \"Maximum emerged from stealth on August 03, 2026, announcing a $30 million Seed round led by CRV, with participation from Pear VC, Restive, Plug and Play Ventures, Anthemis and others. Founded by Randy Fernando; no founding date is stated. Customer names are not stated—only “larger community and regional banks” and a growing base of customers. Team size is not stated. Launch status: emerged from stealth; platform/product is being built and has attracted bank interest, with funding supporting dev...",
+       "Used visitWebpage {\"url\":\"https://restive.com/blog/why-we-invested-in-maximum\",\"question\":\"What founding year, founders, team size, customer names, launch timing and technology providers are stated?\"}. The results are: \n \"Power: cloud-native card issuance platform co-founded by Randy Fernando in 2021; acquired by Marqeta in 2023. Maximum is Randy Fernando’s next company, building an AI-native banking core from the ground up. The article does not state Maximum’s founding year, team size, customer names, or launch timing. It mentions incumbent core vendors FIS and Fiserv, and describes Maximum’s technology as AI-first/AI-native, with AI-enabled full migration in days to weeks and 24/7/365 operations. Source: https...",
+       "Used visitWebpage {\"url\":\"https://pear.vc/maximum-seed\",\"question\":\"What founding year, founders, team, customer names, product launch timing and AI providers are stated?\"}. The results are: \n \"Maximum was founded by Randy Fernando; he started it with only an idea and no cofounder. No explicit founding year is stated (he shared the vision after 2021; the company raised its seed round eight months before August 3, 2026). Maximum came out of stealth on August 3, 2026, with a cloud-native, AI-powered operating system/core banking product; its ledger and AI-powered core were being brought to market, with the first bank customers coming on board at the time of writing. The team includes fo...",
+       "Searched Google with query \"site:maximum.com (blog OR docs OR security OR OpenAI OR Anthropic OR customers OR founded)\". The results are: \n {\"search_results\":[{\"title\":\"Powerful infrastructure to transform the banking system.\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Architected to protect financial institutions and their customers from sophisticated threats using advanced security protocols and risk management controls.\",\"position\":1},{\"title\":\"Privacy Policy - Maximum\",\"link\":\"https://maximum.com/privacy\",\"displayedLink\":\"https://maximum.com › privacy\",\"snippet\":\"How Maximum Technologies colle...",
+       "Searched Google with query \"Maximum \"banking\" \"founded\" \"2026\" \"2025\"\". The results are: \n {\"search_results\":[{\"title\":\"Columbia Banking System Number of Employees 2026\",\"link\":\"https://www.reveliolabs.com/companies/columbia-banking-system/employees\",\"displayedLink\":\"https://www.reveliolabs.com › companies › employees\",\"snippet\":\"Columbia Banking System had 390 active job postings in 2026, a 46.2% decline (-369) from 2025. ... When was Columbia Banking System founded and where is it ...\",\"position\":1},{\"title\":\"Forbes 2026 America's Best Banks List | Top Ranked and ...\",\"link\":\"https:...",
+       "Searched Google with query \"\"Maximum\" \"maximum.com\" \"employees\"\". The results are: \n {\"search_results\":[{\"title\":\"Maximum\",\"link\":\"https://www.linkedin.com/company/maximum\",\"displayedLink\":\"720+ followers\",\"snippet\":\"http://www.maximum.com. External link for Maximum. Industry: Technology, Information and Internet. Company size: 11-50 employees. Headquarters: Miami, Florida.\",\"position\":1},{\"title\":\"Maximum Email Formats & Email Address Examples\",\"link\":\"https://leadiq.com/c/maximum/5a1d99352300005a0087e028/email-format\",\"displayedLink\":\"https://leadiq.com › ... › Maximum\",\"snipp...",
+       "Searched Google with query \"\"Maximum\" \"Randy Fernando\" \"founded\"\". The results are: \n {\"search_results\":[{\"title\":\"Why We Invested in Maximum - Restive\",\"link\":\"https://www.restive.com/blog/why-we-invested-in-maximum\",\"displayedLink\":\"https://www.restive.com › blog › why-we-invested-in-...\",\"snippet\":\"A bit of history: Restive was the first committed investor in Power, the cloud-native card issuance platform Randy Fernando co-founded in 2021.\",\"date\":\"Aug 3, 2026\",\"position\":1},{\"title\":\"Maximum Raises $30 Million to Build the AI-Native ...\",\"link\":\"https://finance.yahoo.com/tech...",
+       "Searched Google with query \"\"maximum.com\" \"customers\" bank\". The results are: \n {\"search_results\":[{\"title\":\"Powerful infrastructure to transform the banking system.\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Architected to protect financial institutions and their customers from sophisticated threats using advanced security protocols and risk management controls.\",\"position\":1},{\"title\":\"Maximum\",\"link\":\"https://www.linkedin.com/company/maximum\",\"displayedLink\":\"720+ followers\",\"snippet\":\"http://www.maximum.com. External link for Maximum...",
+       "Searched Google with query \"\"maximum.com\" \"OpenAI\" OR \"Anthropic\" OR \"SOC\" OR \"documentation\"\". The results are: \n {\"search_results\":[{\"title\":\"Documentation\",\"link\":\"https://pressmaximum.com/docs/\",\"displayedLink\":\"https://pressmaximum.com › docs\",\"snippet\":\"Documentation. Browse our knowledge base and guides. Search. Blocksify Pro. 35 articles. Customify. 81 articles. Blocksify. 52 articles. Products.\",\"position\":1},{\"title\":\"http://www.bea.com/ns/weblogic/90/domain\",\"link\":\"https://docs.oracle.com/cd/E13222_01/wls/docs90////schemaref/config/http___www.bea.com_ns_weblogic_90_domain/complexType/network-chan...",
+       "Used visitWebpage {\"url\":\"https://maximum.com/blog/contact.html\",\"question\":\"Is this a blog with posts or a contact page and which links are available?\"}. The results are: \n \"Page content is a company homepage for Maximum Technologies, not a post listing. Available links: American Banker article “Maximum Raises $30 Million to Build the AI-Native Operating System for Banks” (https://americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal); homepage (https://maximum.com); Request access/contact (https://maximum.com/blog/contact.html#contact); Explore more (https://maximum.com/blog/contact.html#core-seq); Newsroom (https://maximum.com/blog/ne...",
+       "Used visitWebpage {\"url\":\"https://americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal\",\"question\":\"What founding year, employee team size, customer bank names, executives and AI providers are stated?\"}. The results are: \n \"no relevant data\"",
+       "Used visitWebpage {\"url\":\"https://leadiq.com/c/maximum/5a1d99352300005a0087e028/email-format\",\"question\":\"Which Maximum company is this? What industry, headquarters, description and employee count apply?\"}. The results are: \n \"Maximum (maximum.com; LinkedIn: https://linkedin.com/company/maximum-employerbranding) — Industry: Advertising Services. Headquarters: Shanghai, China; listed headquarters phone: +1-614-526-****. Description: Advertising services firm founded in 1999, with roots in the Netherlands; collaborated with clients and colleagues to shape ideas, develop brands, and pursue meaningful change. Closed in 2025. Employee count: approximately 39 (11–50 employees). Company overview: https://leadiq.com/c/maximu...",
+       "Used visitWebpage {\"url\":\"https://dealroom.co/companies/maximum/\",\"question\":\"What founding year, employee count, funding and company identity are given?\"}. The results are: \n \"Maximum — company identity: AI-native operating system for modernizing banks; fintech SaaS/B2B company headquartered in Miami, United States. Founded: 2025. Employee count: not stated for Maximum. Total funding: $10–50M; disclosed seed funding: $30M (Aug 2026), with a reported $120M valuation. Website: http://maximum.com; LinkedIn: https://linkedin.com/company/maximum; funding details: https://dealroom.co/companies/maximum#funding-history\"",
+       "Used visitWebpage {\"url\":\"https://www.techtimes.com/articles/322922/20260804/legacy-bank-cores-cannot-power-ai-agents-maximum-raises-30m-replace-them.htm\",\"question\":\"Does it name customers, founding year, executive team or describe an August product launch?\"}. The results are: \n \"Maximum launched in August 2026 (emergence from stealth) but had no publicly named bank customers and no product in production at launch. It planned initial full end-to-end bank migrations, one bank at a time. No founding year or executive-team names are provided. Source: https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\"",
+       "Searched Google with query \"site:maximum.com (\"blog\" OR \"subprocessors\" OR \"trust\" OR \"pricing\" OR \"help\")\". The results are: \n {\"search_results\":[{\"title\":\"Maximum\",\"link\":\"https://maximum.com/blog/contact.html\",\"displayedLink\":\"https://maximum.com › blog › contact.html\",\"snippet\":\"Maximum • Contact.\",\"position\":1},{\"title\":\"Powerful infrastructure to transform the banking system.\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Analytics & marketing. Help us understand site usage and deliver relevant content. Non-essential; off unless you allow them. Save preferences. Accept all.\",\"positi...",
+       "Searched Google with query \"\"Maximum\" \"Randy Fernando\" \"chief\" \"2026\"\". The results are: \n {\"search_results\":[{\"title\":\"Maximum raises $30m Seed funding for AI-native banking ...\",\"link\":\"https://ibsintelligence.com/ibsi-news/maximum-raises-30m-seed-funding-for-ai-native-banking-platform/\",\"displayedLink\":\"https://ibsintelligence.com › ibsi-news › maximum-raise...\",\"snippet\":\"Randy Fernando, Founder and Chief Executive Officer of Maximum, said ... 2026. GetVantage raises $6.6m in Series A1 funding. Read More ...\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"Maximum raises $30m seed to..."
+      ],
+      "hq_location": {
+       "notes": "",
+       "value": {
+        "city": "Miami",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.linkedin.com/company/maximum",
+        "https://pitchbook.com/profiles/company/1474291-54"
+       ]
+      },
+      "public_docs": {
+       "notes": "No public documentation, help center, or developer-portal link appears in the navigation or footer. Targeted searches did not locate public documentation.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The $30 million seed financing was announced within May 9, 2025–November 9, 2026. The investor's description placing the raise eight months before August 2026 also falls within the window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+        "https://pear.vc/maximum-seed"
+       ]
+      },
+      "founded_year": {
+       "notes": "Both funding databases report 2025; LinkedIn instead reports 2026, so public sources conflict.",
+       "value": 2025,
+       "status": "asserted",
+       "citations": [
+        "https://pitchbook.com/profiles/company/1474291-54",
+        "https://dealroom.co/companies/maximum/"
+       ]
+      },
+      "last_funding": {
+       "notes": "Announced August 3, 2026, led by CRV. An investor account says the seed financing was raised eight months before the announcement; the date here is the publicly announced round date, not a verified closing date.",
+       "value": {
+        "date": "2026-08",
+        "stage": "Seed",
+        "amount_usd": 30000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Maximum publicly emerged from stealth and introduced its AI-native banking operating system on August 3, 2026, within May 9–November 9, 2026. This was a public product introduction, not evidence that a bank deployment was already in production.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+        "https://pear.vc/maximum-seed"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The navigation and footer have no pricing link; the commercial call to action is Request access.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/"
+       ]
+      },
+      "employee_band": {
+       "notes": "The value is a schema-required placeholder, not an asserted band. LinkedIn lists company size as 11–50, which spans two permitted bands. Its 11 associated profiles do not establish total headcount. A separate listing reporting 39 employees belongs to the unrelated, closed employer-branding agency and was excluded.",
+       "value": "11-20",
+       "status": "unknown",
+       "citations": []
+      },
+      "hiring_sdr_ae": {
+       "notes": "Only three software-engineering openings are listed; no SDR, BDR, or account-executive opening appears.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/careers"
+       ]
+      },
+      "model_provider": {
+       "notes": "Reviewed the product homepage, careers descriptions, privacy policy, newsroom and linked announcements, and searched for documentation, security/trust disclosures, subprocessors, and named providers. No public model/provider disclosure was found; references to AI coding agents do not identify the product's model provider.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "No customer directory, case studies, or qualifying review listing was found. Company announcements refer to banks without naming them; August launch coverage explicitly reports no publicly named bank customers.",
+       "value": [],
+       "status": "unknown",
+       "citations": []
+      },
+      "ai_ml_roles_open": {
+       "notes": "The listed openings are Senior Staff Software Engineer, Staff Software Engineer, and Senior Software Engineer. None has a qualifying AI, ML, or data-science title.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/careers"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "The privacy policy names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS as company compliance certifications.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/privacy"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The readable job descriptions name engineering technologies but no CRM or sales/marketing systems.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/careers"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Maximum provides an AI-native banking operating system that helps banks automate operational workflows, deploy custom agents, and build financial products.",
+       "status": "asserted",
+       "citations": [
+        "https://maximum.com/"
+       ]
+      },
+      "timeTakenInSeconds": "115.61",
+      "totalCreditsCharged": 4.7,
+      "leadership_change_12mo": {
+       "notes": "The value is a schema-required placeholder, not an asserted negative. No complete, dated executive-team history or qualifying appointment/departure announcement was found. Founder Randy Fernando is identified, but that alone does not establish a leadership change during the window.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "maximum.com",
+  "status": "complete",
+  "result": {
+   "claygent-auto-A": {
+    "eng_blog": {
+     "notes": "The public editorial index contains funding announcements and investment/media coverage, not engineer-authored technical posts. The indexed /blog/contact.html URL renders the homepage rather than an engineering blog.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/newsroom"
+     ]
+    },
+    "reasoning": "The research distinguishes Maximum Technologies, the Miami AI-native banking company at maximum.com, from the unrelated employer-branding agency that formerly used the domain. Product, careers, headquarters, funding, and the August 2026 public introduction have direct supporting sources. No pricing, public docs, qualifying AI/ML job titles, sales-representative openings, or named CRM systems appear in the relevant public pages. Customer identities, model providers, an exact permitted employee band, and leadership changes remain unverified. Founding-year sources conflict, although PitchBook and Dealroom agree on 2025. Funding announcement timing is distinguished from the earlier financing close described by an investor. Unknown fields retain mandatory tool-schema placeholders solely because this schema does not allow omitting their values.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Searched Google with query \"maximum.com Maximum company\". The results are: \n {\"search_results\":[{\"title\":\"Maximum\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core, providing an environment for banks to build and deploy ...\",\"position\":1},{\"title\":\"Maximum\",\"link\":\"https://www.linkedin.com/company/maximum\",\"displayedLink\":\"720+ followers\",\"snippet\":\"Maximum is an AI-native operating system for banks. The Maximum platform leverages AI at its core...",
+     "Used visitWebpage {\"url\":\"https://maximum.com/\",\"question\":\"What product, customers, pricing, docs, blog, security, AI providers and navigation/footer links are shown?\"}. The results are: \n \"Product: Maximum’s AI-native operating system for banks; intelligent bank OS with real-time visibility, continuous monitoring, predictive reasoning. Autonomous banking: secure environment to build/deploy custom agents, automate operational workflows, and create financial products. Security: advanced security protocols and risk-management controls protecting institutions/customers. AI Migration Engine: intelligent data extraction, compliance continuity, automated reconciliation for core migratio...",
+     "Used visitWebpage {\"url\":\"https://maximum.com/careers\",\"question\":\"List all open jobs with job links and any AI ML roles, sales roles, systems used, employee count or headquarters.\"}. The results are: \n \"Open jobs (all Remote—US or Canada; no individual job URLs shown):\\n- Senior Staff Software Engineer — apply: careers@maximum.com, subject “Senior Staff Software Engineer”\\n- Staff Software Engineer — apply: careers@maximum.com, subject “Staff Software Engineer”\\n- Senior Software Engineer — apply: careers@maximum.com, subject “Senior Software Engineer”\\n\\nAI/ML: No dedicated AI/ML roles; jobs state Maximum uses AI coding agents heavily and expects engineers to use them seriously.\\nSales: No sa...",
+     "Used visitWebpage {\"url\":\"https://maximum.com/newsroom\",\"question\":\"List all dated news articles and product launches, funding announcements and leadership changes with links.\"}. The results are: \n \"Dated news and funding coverage (all August 2026; no product launches or leadership changes listed):\\n- American Banker — “New fintech Maximum aims to take on the core banking cabal” — https://americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal\\n- Forbes — “The issue has been the concentration”: CRV bets $30M on bank cores — https://forbes.com/sites/boazsobrado/2026/08/03/the-issue-has-been-the-concentration-crv-bets-30m-on-bank-cores\\n- Restive — “Why we invested...",
+     "Used visitWebpage {\"url\":\"https://maximum.com/privacy\",\"question\":\"What compliance certifications, AI providers, subprocessors, headquarters or company address does this policy state?\"}. The results are: \n \"Relevant policy details: Maximum Technologies, Inc.; Contact address: Maximum Privacy Program, 390 NE 191st Street, STE 42077, Miami, FL 33179. Privacy contact: privacy@maximum.com. The policy says Maximum works with third-party service providers that host the Website, communicate with customers, host its data environment, and provide other services; it does not name any specific subprocessors or AI providers. No compliance certifications are stated. Additional office locations shown: Miami, Ne...",
+     "Used visitWebpage {\"url\":\"https://www.linkedin.com/company/maximum\",\"question\":\"What are headquarters, founding year, employee count, leaders, and recent announcements?\"}. The results are: \n {\"url\":\"https://www.linkedin.com/company/maximum\",\"locations\":[{\"address\":\"Miami, Florida, US\",\"is_primary\":true,\"inferred_location\":{\"address_line\":\"\",\"formatted_address\":\"Miami, FL\",\"business_region\":\"NAM\",\"latitude\":25.77508354,\"locality\":\"Miami\",\"admin_district\":\"Florida\",\"admin_district2\":\"Miami-Dade County\",\"country_region\":\"United States\",\"locationstr\":\"Miami, Florida, US\",\"metro_area\":\"Miami-Fort Lauderdale-West Palm Beach, FL\",\"name\":\"Miami, FL\",\"neighborhood\":\"\",\"postal_code\":\"\",\"count...",
+     "Used visitWebpage {\"url\":\"https://pitchbook.com/profiles/company/1474291-54\",\"question\":\"What is founding year, headquarters, employee count, last funding round date stage and amount?\"}. The results are: \n \"Maximum — Founded: 2025. Headquarters: Miami, FL, United States (390 NorthEast 191st Street, Suite 42077, Miami, FL 33179). Employee count: not provided. Last funding round: Seed, dated 03-Aug-2026, amount $30M.\"",
+     "Used visitWebpage {\"url\":\"https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\",\"question\":\"What date, funding stage amount, founding date, founders, customer names, team size, launch status and model providers are stated?\"}. The results are: \n \"Maximum emerged from stealth on August 03, 2026, announcing a $30 million Seed round led by CRV, with participation from Pear VC, Restive, Plug and Play Ventures, Anthemis and others. Founded by Randy Fernando; no founding date is stated. Customer names are not stated—only “larger community and regional banks” and a growing base of customers. Team size is not stated. Launch status: emerged from stealth; platform/product is being built and has attracted bank interest, with funding supporting dev...",
+     "Used visitWebpage {\"url\":\"https://restive.com/blog/why-we-invested-in-maximum\",\"question\":\"What founding year, founders, team size, customer names, launch timing and technology providers are stated?\"}. The results are: \n \"Power: cloud-native card issuance platform co-founded by Randy Fernando in 2021; acquired by Marqeta in 2023. Maximum is Randy Fernando’s next company, building an AI-native banking core from the ground up. The article does not state Maximum’s founding year, team size, customer names, or launch timing. It mentions incumbent core vendors FIS and Fiserv, and describes Maximum’s technology as AI-first/AI-native, with AI-enabled full migration in days to weeks and 24/7/365 operations. Source: https...",
+     "Used visitWebpage {\"url\":\"https://pear.vc/maximum-seed\",\"question\":\"What founding year, founders, team, customer names, product launch timing and AI providers are stated?\"}. The results are: \n \"Maximum was founded by Randy Fernando; he started it with only an idea and no cofounder. No explicit founding year is stated (he shared the vision after 2021; the company raised its seed round eight months before August 3, 2026). Maximum came out of stealth on August 3, 2026, with a cloud-native, AI-powered operating system/core banking product; its ledger and AI-powered core were being brought to market, with the first bank customers coming on board at the time of writing. The team includes fo...",
+     "Searched Google with query \"site:maximum.com (blog OR docs OR security OR OpenAI OR Anthropic OR customers OR founded)\". The results are: \n {\"search_results\":[{\"title\":\"Powerful infrastructure to transform the banking system.\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Architected to protect financial institutions and their customers from sophisticated threats using advanced security protocols and risk management controls.\",\"position\":1},{\"title\":\"Privacy Policy - Maximum\",\"link\":\"https://maximum.com/privacy\",\"displayedLink\":\"https://maximum.com › privacy\",\"snippet\":\"How Maximum Technologies colle...",
+     "Searched Google with query \"Maximum \"banking\" \"founded\" \"2026\" \"2025\"\". The results are: \n {\"search_results\":[{\"title\":\"Columbia Banking System Number of Employees 2026\",\"link\":\"https://www.reveliolabs.com/companies/columbia-banking-system/employees\",\"displayedLink\":\"https://www.reveliolabs.com › companies › employees\",\"snippet\":\"Columbia Banking System had 390 active job postings in 2026, a 46.2% decline (-369) from 2025. ... When was Columbia Banking System founded and where is it ...\",\"position\":1},{\"title\":\"Forbes 2026 America's Best Banks List | Top Ranked and ...\",\"link\":\"https:...",
+     "Searched Google with query \"\"Maximum\" \"maximum.com\" \"employees\"\". The results are: \n {\"search_results\":[{\"title\":\"Maximum\",\"link\":\"https://www.linkedin.com/company/maximum\",\"displayedLink\":\"720+ followers\",\"snippet\":\"http://www.maximum.com. External link for Maximum. Industry: Technology, Information and Internet. Company size: 11-50 employees. Headquarters: Miami, Florida.\",\"position\":1},{\"title\":\"Maximum Email Formats & Email Address Examples\",\"link\":\"https://leadiq.com/c/maximum/5a1d99352300005a0087e028/email-format\",\"displayedLink\":\"https://leadiq.com › ... › Maximum\",\"snipp...",
+     "Searched Google with query \"\"Maximum\" \"Randy Fernando\" \"founded\"\". The results are: \n {\"search_results\":[{\"title\":\"Why We Invested in Maximum - Restive\",\"link\":\"https://www.restive.com/blog/why-we-invested-in-maximum\",\"displayedLink\":\"https://www.restive.com › blog › why-we-invested-in-...\",\"snippet\":\"A bit of history: Restive was the first committed investor in Power, the cloud-native card issuance platform Randy Fernando co-founded in 2021.\",\"date\":\"Aug 3, 2026\",\"position\":1},{\"title\":\"Maximum Raises $30 Million to Build the AI-Native ...\",\"link\":\"https://finance.yahoo.com/tech...",
+     "Searched Google with query \"\"maximum.com\" \"customers\" bank\". The results are: \n {\"search_results\":[{\"title\":\"Powerful infrastructure to transform the banking system.\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Architected to protect financial institutions and their customers from sophisticated threats using advanced security protocols and risk management controls.\",\"position\":1},{\"title\":\"Maximum\",\"link\":\"https://www.linkedin.com/company/maximum\",\"displayedLink\":\"720+ followers\",\"snippet\":\"http://www.maximum.com. External link for Maximum...",
+     "Searched Google with query \"\"maximum.com\" \"OpenAI\" OR \"Anthropic\" OR \"SOC\" OR \"documentation\"\". The results are: \n {\"search_results\":[{\"title\":\"Documentation\",\"link\":\"https://pressmaximum.com/docs/\",\"displayedLink\":\"https://pressmaximum.com › docs\",\"snippet\":\"Documentation. Browse our knowledge base and guides. Search. Blocksify Pro. 35 articles. Customify. 81 articles. Blocksify. 52 articles. Products.\",\"position\":1},{\"title\":\"http://www.bea.com/ns/weblogic/90/domain\",\"link\":\"https://docs.oracle.com/cd/E13222_01/wls/docs90////schemaref/config/http___www.bea.com_ns_weblogic_90_domain/complexType/network-chan...",
+     "Used visitWebpage {\"url\":\"https://maximum.com/blog/contact.html\",\"question\":\"Is this a blog with posts or a contact page and which links are available?\"}. The results are: \n \"Page content is a company homepage for Maximum Technologies, not a post listing. Available links: American Banker article “Maximum Raises $30 Million to Build the AI-Native Operating System for Banks” (https://americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal); homepage (https://maximum.com); Request access/contact (https://maximum.com/blog/contact.html#contact); Explore more (https://maximum.com/blog/contact.html#core-seq); Newsroom (https://maximum.com/blog/ne...",
+     "Used visitWebpage {\"url\":\"https://americanbanker.com/news/new-fintech-maximum-aims-to-take-on-the-core-banking-cabal\",\"question\":\"What founding year, employee team size, customer bank names, executives and AI providers are stated?\"}. The results are: \n \"no relevant data\"",
+     "Used visitWebpage {\"url\":\"https://leadiq.com/c/maximum/5a1d99352300005a0087e028/email-format\",\"question\":\"Which Maximum company is this? What industry, headquarters, description and employee count apply?\"}. The results are: \n \"Maximum (maximum.com; LinkedIn: https://linkedin.com/company/maximum-employerbranding) — Industry: Advertising Services. Headquarters: Shanghai, China; listed headquarters phone: +1-614-526-****. Description: Advertising services firm founded in 1999, with roots in the Netherlands; collaborated with clients and colleagues to shape ideas, develop brands, and pursue meaningful change. Closed in 2025. Employee count: approximately 39 (11–50 employees). Company overview: https://leadiq.com/c/maximu...",
+     "Used visitWebpage {\"url\":\"https://dealroom.co/companies/maximum/\",\"question\":\"What founding year, employee count, funding and company identity are given?\"}. The results are: \n \"Maximum — company identity: AI-native operating system for modernizing banks; fintech SaaS/B2B company headquartered in Miami, United States. Founded: 2025. Employee count: not stated for Maximum. Total funding: $10–50M; disclosed seed funding: $30M (Aug 2026), with a reported $120M valuation. Website: http://maximum.com; LinkedIn: https://linkedin.com/company/maximum; funding details: https://dealroom.co/companies/maximum#funding-history\"",
+     "Used visitWebpage {\"url\":\"https://www.techtimes.com/articles/322922/20260804/legacy-bank-cores-cannot-power-ai-agents-maximum-raises-30m-replace-them.htm\",\"question\":\"Does it name customers, founding year, executive team or describe an August product launch?\"}. The results are: \n \"Maximum launched in August 2026 (emergence from stealth) but had no publicly named bank customers and no product in production at launch. It planned initial full end-to-end bank migrations, one bank at a time. No founding year or executive-team names are provided. Source: https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html\"",
+     "Searched Google with query \"site:maximum.com (\"blog\" OR \"subprocessors\" OR \"trust\" OR \"pricing\" OR \"help\")\". The results are: \n {\"search_results\":[{\"title\":\"Maximum\",\"link\":\"https://maximum.com/blog/contact.html\",\"displayedLink\":\"https://maximum.com › blog › contact.html\",\"snippet\":\"Maximum • Contact.\",\"position\":1},{\"title\":\"Powerful infrastructure to transform the banking system.\",\"link\":\"https://maximum.com/\",\"displayedLink\":\"https://maximum.com\",\"snippet\":\"Analytics & marketing. Help us understand site usage and deliver relevant content. Non-essential; off unless you allow them. Save preferences. Accept all.\",\"positi...",
+     "Searched Google with query \"\"Maximum\" \"Randy Fernando\" \"chief\" \"2026\"\". The results are: \n {\"search_results\":[{\"title\":\"Maximum raises $30m Seed funding for AI-native banking ...\",\"link\":\"https://ibsintelligence.com/ibsi-news/maximum-raises-30m-seed-funding-for-ai-native-banking-platform/\",\"displayedLink\":\"https://ibsintelligence.com › ibsi-news › maximum-raise...\",\"snippet\":\"Randy Fernando, Founder and Chief Executive Officer of Maximum, said ... 2026. GetVantage raises $6.6m in Series A1 funding. Read More ...\",\"date\":\"Aug 5, 2026\",\"position\":1},{\"title\":\"Maximum raises $30m seed to..."
+    ],
+    "hq_location": {
+     "notes": "",
+     "value": {
+      "city": "Miami",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.linkedin.com/company/maximum",
+      "https://pitchbook.com/profiles/company/1474291-54"
+     ]
+    },
+    "public_docs": {
+     "notes": "No public documentation, help center, or developer-portal link appears in the navigation or footer. Targeted searches did not locate public documentation.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The $30 million seed financing was announced within May 9, 2025–November 9, 2026. The investor's description placing the raise eight months before August 2026 also falls within the window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+      "https://pear.vc/maximum-seed"
+     ]
+    },
+    "founded_year": {
+     "notes": "Both funding databases report 2025; LinkedIn instead reports 2026, so public sources conflict.",
+     "value": 2025,
+     "status": "asserted",
+     "citations": [
+      "https://pitchbook.com/profiles/company/1474291-54",
+      "https://dealroom.co/companies/maximum/"
+     ]
+    },
+    "last_funding": {
+     "notes": "Announced August 3, 2026, led by CRV. An investor account says the seed financing was raised eight months before the announcement; the date here is the publicly announced round date, not a verified closing date.",
+     "value": {
+      "date": "2026-08",
+      "stage": "Seed",
+      "amount_usd": 30000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Maximum publicly emerged from stealth and introduced its AI-native banking operating system on August 3, 2026, within May 9–November 9, 2026. This was a public product introduction, not evidence that a bank deployment was already in production.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://globenewswire.com/news-release/2026/08/03/3337824/0/en/maximum-raises-30-million-to-build-the-ai-native-operating-system-for-banks.html",
+      "https://pear.vc/maximum-seed"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The navigation and footer have no pricing link; the commercial call to action is Request access.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/"
+     ]
+    },
+    "employee_band": {
+     "notes": "The value is a schema-required placeholder, not an asserted band. LinkedIn lists company size as 11–50, which spans two permitted bands. Its 11 associated profiles do not establish total headcount. A separate listing reporting 39 employees belongs to the unrelated, closed employer-branding agency and was excluded.",
+     "value": "11-20",
+     "status": "unknown",
+     "citations": []
+    },
+    "hiring_sdr_ae": {
+     "notes": "Only three software-engineering openings are listed; no SDR, BDR, or account-executive opening appears.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/careers"
+     ]
+    },
+    "model_provider": {
+     "notes": "Reviewed the product homepage, careers descriptions, privacy policy, newsroom and linked announcements, and searched for documentation, security/trust disclosures, subprocessors, and named providers. No public model/provider disclosure was found; references to AI coding agents do not identify the product's model provider.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "No customer directory, case studies, or qualifying review listing was found. Company announcements refer to banks without naming them; August launch coverage explicitly reports no publicly named bank customers.",
+     "value": [],
+     "status": "unknown",
+     "citations": []
+    },
+    "ai_ml_roles_open": {
+     "notes": "The listed openings are Senior Staff Software Engineer, Staff Software Engineer, and Senior Software Engineer. None has a qualifying AI, ML, or data-science title.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/careers"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "The privacy policy names none of SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS as company compliance certifications.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/privacy"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The readable job descriptions name engineering technologies but no CRM or sales/marketing systems.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/careers"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Maximum provides an AI-native banking operating system that helps banks automate operational workflows, deploy custom agents, and build financial products.",
+     "status": "asserted",
+     "citations": [
+      "https://maximum.com/"
+     ]
+    },
+    "timeTakenInSeconds": "115.61",
+    "totalCreditsCharged": 4.7,
+    "leadership_change_12mo": {
+     "notes": "The value is a schema-required placeholder, not an asserted negative. No complete, dated executive-team history or qualifying appointment/departure announcement was found. Founder Randy Fernando is identified, but that alone does not establish a leadership change during the window.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    }
+   }
+  }
+ }
+}

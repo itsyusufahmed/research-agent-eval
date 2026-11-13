@@ -1,0 +1,22 @@
+{
+ "url": "https://api.windbornesystems.com/platform/integrations/python-sdk/",
+ "fetched_at": "2026-11-10T19:33:43.869332+00:00",
+ "hours_after_run": 43.6,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "a4e7d82ad02e956001dc8f12981142acc887686b625254cad6078d739295d910",
+ "chars": 3384,
+ "truncated": false,
+ "title": "Python SDK & CLI",
+ "markdown": "## Search API Docs\n\nAsk AI\n\nEsc\n\nSearching docs…\n\nAI Response\n\nAI response will appear here.AI response will appear here.\n\nShow MoreShow Less\n\nAI Response\n\nShow MoreShow Less\n\nShow MoreShow Less\n\nCopy Markdown\n\n# Python SDK & CLI\n\nThe `windborne` package provides both a Python library and a CLI for interacting with the Data and Forecast APIs.\n\n## Installation\n\npip3 install windbornepip3 install windborne\n\nShow MoreShow Less\n\n* * *\n\n## Set Credentials\n\nThe SDK reads `WB_API_KEY` from an environment variable.\n\n### macOS & Linux\n\n\\# Add to your shell config (~/.bashrc, ~/.zshrc, etc.)\\# Add to your shell config (~/.bashrc, ~/.zshrc, etc.)\n\nexport WB\\_API\\_KEY='$WB\\_API\\_KEY\n[Log in to see API keys](https://api.windbornesystems.com/docs-auth/start?return_to=%2Fplatform%2Fintegrations%2Fpython-sdk%2F)\n'export WB\\_API\\_KEY='$WB\\_API\\_KEY\n[Log in to see API keys](https://api.windbornesystems.com/docs-auth/start?return_to=%2Fplatform%2Fintegrations%2Fpython-sdk%2F)\n'\n\n\\# Reload your shell or run:\\# Reload your shell or run:\n\nsource ~/.zshrcsource ~/.zshrc\n\nShow MoreShow Less\n\n### Windows\n\n1. Press Win + X and select \"System\"\n2. Click \"Advanced system settings\" on the right\n3. Click \"Environment Variables\" at the bottom\n4. Under \"User variables\", click \"New\" and add:\n\n| Variable Name | Variable Value |\n| WB\\_API\\_KEY | your\\_api\\_key |\n\nShow MoreShow Less\n\n* * *\n\n## CLI Usage\n\nAfter installation, the `windborne` command is available globally.\n\n\\# Fetch observations\\# Fetch observations\n\nwindborne observations2026-11-09T19:33:44Z2026-11-10T01:33:44Z observations.csvwindborne observations2026-11-09T19:33:44Z2026-11-10T01:33:44Z observations.csv\n\n\\# Get a dynamic point forecast\\# Get a dynamic point forecast\n\nwindborne points\\_interpolated 37.7749,-122.4194 -m wm-6 --min-time2026-11-10T22:33:44Z --max-time2026-11-11T01:33:44Zwindborne points\\_interpolated 37.7749,-122.4194 -m wm-6 --min-time2026-11-10T22:33:44Z --max-time2026-11-11T01:33:44Z\n\n\\# List flying missions\\# List flying missions\n\nwindborne flying\\_missions output.jsonwindborne flying\\_missions output.json\n\nShow MoreShow Less\n\n* * *\n\n## Python Library\n\nfrom windborne import get\\_observations, get\\_point\\_forecasts\\_interpolatedfrom windborne import get\\_observations, get\\_point\\_forecasts\\_interpolated\n\n\\# Fetch observations\\# Fetch observations\n\nobservations = get\\_observations(observations = get\\_observations(\n\nstart\\_time=\"2026-11-09T19:33:44Z\", start\\_time=\"2026-11-09T19:33:44Z\",\n\nend\\_time=\"2026-11-10T01:33:44Z\", end\\_time=\"2026-11-10T01:33:44Z\",\n\noutput\\_file=\"observations.csv\" output\\_file=\"observations.csv\"\n\n))\n\n\\# Get a dynamic point forecast\\# Get a dynamic point forecast\n\nforecast = get\\_point\\_forecasts\\_interpolated(forecast = get\\_point\\_forecasts\\_interpolated(\n\ncoordinates=\\[(37.7749, -122.4194)\\], coordinates=\\[(37.7749, -122.4194)\\],\n\nmodel=\"wm-6\", model=\"wm-6\",\n\nmin\\_forecast\\_time=\"2026-11-10T22:33:44Z\", min\\_forecast\\_time=\"2026-11-10T22:33:44Z\",\n\nmax\\_forecast\\_time=\"2026-11-11T01:33:44Z\", max\\_forecast\\_time=\"2026-11-11T01:33:44Z\",\n\nprint\\_response=True print\\_response=True\n\n))\n\nShow MoreShow Less\n\nEach API endpoint page includes SDK and CLI examples specific to that endpoint. See [Auth](https://api.windbornesystems.com/platform/authentication/auth) for direct HTTP authentication without the SDK.\n\nInstallation\n\nSet Credentials\n\nCLI Usage\n\nPython Library",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "public_docs"
+ ],
+ "late": true
+}

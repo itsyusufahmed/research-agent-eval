@@ -1,0 +1,585 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8cf39e03275ea04c",
+  "interaction_id": "trun_142119f6a1b4439e8cf39e03275ea04c",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "aikido.dev"
+  },
+  "created_at": "2026-11-10T18:48:01.612526Z",
+  "modified_at": "2026-11-10T18:56:38.963609Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8cf39e03275ea04c",
+   "interaction_id": "trun_142119f6a1b4439e8cf39e03275ea04c",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "aikido.dev"
+   },
+   "created_at": "2026-11-10T18:48:01.612526Z",
+   "modified_at": "2026-11-10T18:56:38.963609Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Aikido Security - Software Engineer (AI Pentest)",
+       "url": "https://aikidosecurity.recruitee.com/o/software-engineer-ai-pentest",
+       "excerpts": [
+        "Founded in 2022 by third-time founders, Aikido has $85M in the bank and a long runway ahead."
+       ]
+      }
+     ],
+     "reasoning": "Aikido's job posting states it was founded in 2022; the company About page also lists 2022 as the founding year.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Trust Center | Aikido Security",
+       "url": "https://www.aikido.dev/security-overview",
+       "excerpts": [
+        "Aikido is ISO 27001:2022, ISO 42001 & AICPA's SOC 2 Type II compliant, and FedRAMP Certified: Class C (Moderate)."
+       ]
+      }
+     ],
+     "reasoning": "Aikido's Trust Center explicitly claims ISO 27001:2022 and AICPA's SOC 2 Type II compliance. Those are the matching certifications in the requested list.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "About | Aikido Security",
+       "url": "https://www.aikido.dev/company/about",
+       "excerpts": [
+        "Belgium"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      }
+     ],
+     "reasoning": "The company About page lists Belgium, and the company profile independently records Belgium as Aikido's location country.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Blog | Aikido Security",
+       "url": "https://www.aikido.dev/blog?3c5e7422_page=7&aa47d142_page=7",
+       "excerpts": [
+        "Engineering",
+        "Why Determinism Is Still a Necessity in Security"
+       ]
+      },
+      {
+       "title": "Aikido Altar: open-weight AI for sovereign security",
+       "url": "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security",
+       "excerpts": [
+        "Written by [Selim Decamps](https://www.aikido.dev/team-members/selim-decamps) [Tiburce Gridello",
+        "In order to minimize the size of open-weight models in an agentic security context while maintaining high accuracy, we used quantization and pruning."
+       ]
+      },
+      {
+       "title": "Selim Decamps",
+       "url": "https://www.aikido.dev/team-members/selim-decamps",
+       "excerpts": [
+        "Selim is the Aikido Machine Lead Engineer at Aikido."
+       ]
+      },
+      {
+       "title": "How Aikido Secures AI Pentesting Agents and Prevents Scope Drift",
+       "url": "https://www.aikido.dev/blog/ai-pentesting-agent-security",
+       "excerpts": [
+        "Written by [Sooraj Shah"
+       ]
+      },
+      {
+       "title": "2026 State of AI in Security & Development",
+       "url": "https://jp.aikido.dev/reports/2026-state-of-ai-in-security-development",
+       "excerpts": [
+        "Sooraj Shah is Content Marketing Lead at Aikido Security."
+       ]
+      }
+     ],
+     "reasoning": "The blog archive shows an Engineering-labeled post, \u201cWhy Determinism Is Still a Necessity in Security,\u201d but the available index evidence does not establish that it explains how Aikido builds its product. The Altar article does explain model-building techniques and is co-authored by Selim Decamps, identified as Aikido Machine Lead Engineer\u2014one qualifying engineering-authored build post. The other detailed AI-pentesting architecture post is by Sooraj Shah, identified as Content Marketing Lead. The evidence does not establish two qualifying build-focused posts by engineers, so this is false under the stated threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Press Kit | Aikido Security",
+       "url": "https://www.aikido.dev/company/press-kit",
+       "excerpts": [
+        "Founded in Ghent, Belgium, Aikido Security builds developer-first security products, with a vision for self-securing software.",
+        "Aikido's central security platform secures code, cloud and runtime, helping teams to reduce risk without slowing down development."
+       ]
+      }
+     ],
+     "reasoning": "The company describes its offerings as developer-first security products, and says its central platform secures code, cloud, and runtime to reduce risk without slowing development.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      }
+     ],
+     "reasoning": "The company profile reports 333 employees. That count falls within the requested 201-500 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "AutoFix Overview | Aikido",
+       "url": "https://help.aikido.dev/autofix-and-remediation/overview-aikido-autofix",
+       "excerpts": [
+        "When generating fixes for SAST, IaC, or container issues, Aikido sends only the minimal required code snippets to AI models hosted on AWS Bedrock over encrypted channels."
+       ]
+      },
+      {
+       "title": "Aikido Altar: open-weight AI for sovereign security",
+       "url": "https://www.aikido.dev/blog/aikido-altar-open-weight-ai-sovereign-security",
+       "excerpts": [
+        "We started with GLM-5.3, one of the strongest models in our [ security evaluations](https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026)."
+       ]
+      }
+     ],
+     "reasoning": "Aikido's AutoFix documentation says its AI models are hosted on AWS Bedrock. Its Altar post separately says development started from GLM-5.3, so the answer distinguishes the provider for AutoFix from the stated starting model for Altar.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Pricing | Aikido Security",
+       "url": "https://www.aikido.dev/pricing",
+       "excerpts": [
+        "Developer $0 / free forever Incl."
+       ]
+      }
+     ],
+     "reasoning": "Aikido's public pricing page lists a Developer plan at $0, establishing that a public pricing page exists.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      },
+      {
+       "title": "Aikido Security Raises $60M at a $1B valuation",
+       "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+       "excerpts": [
+        "From \"No Bullsh\\*t Security\" to $1B: We Just Raised Our $60m Series B"
+       ]
+      }
+     ],
+     "reasoning": "The structured company profile reports the latest round amount as USD 60,000,000; Aikido's funding announcement also describes a $60m Series B.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Press Kit | Aikido Security",
+       "url": "https://www.aikido.dev/company/press-kit",
+       "excerpts": [
+        "Aikido is trusted by over 150,000 teams, with a global customer base including: Deel, Revolut, SoundCloud and Niantic."
+       ]
+      }
+     ],
+     "reasoning": "Aikido's press kit identifies Deel, Revolut, SoundCloud, and Niantic as part of its global customer base.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      },
+      {
+       "title": "Aikido Security Raises $60M at a $1B valuation",
+       "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+       "excerpts": [
+        "Jan 14, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The profile dates the most recent round to 2026-01-14, matching the company's January 14, 2026 funding announcement. The requested YYYY-MM value is 2026-01.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Aikido Security - Business Development Representative US",
+       "url": "https://aikidosecurity.recruitee.com/o/technical-business-development-representative-2",
+       "excerpts": [
+        "Familiar with using CRM (we use Hubspot) and other sales tooling (LinkedIn, Outreach/Salesloft, ...)"
+       ]
+      }
+     ],
+     "reasoning": "Aikido's job posting says it uses HubSpot and names Outreach and Salesloft as sales tooling.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/maartendeschuymer",
+       "excerpts": [
+        "company name: Aikido Security",
+        "title: VP Product",
+        "start date: 2026-06-01"
+       ]
+      }
+     ],
+     "reasoning": "Maarten De Schuymer's profile lists Aikido Security, VP Product, with a start date of 2026-06-01. That VP-level start is within the 12 months before 2026-11-09.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Aikido Security - Software Engineer (AI Pentest)",
+       "url": "https://aikidosecurity.recruitee.com/o/software-engineer-ai-pentest",
+       "excerpts": [
+        "Software Engineer (AI Pentest)",
+        "Job details Apply"
+       ]
+      }
+     ],
+     "reasoning": "The live Aikido posting is titled Software Engineer (AI Pentest) and includes an Apply option, so it is an open AI-related engineering role.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      },
+      {
+       "title": "Aikido Security Raises $60M at a $1B valuation",
+       "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+       "excerpts": [
+        "From \"No Bullsh\\*t Security\" to $1B: We Just Raised Our $60m Series B"
+       ]
+      }
+     ],
+     "reasoning": "The profile and the company's funding announcement identify the latest round as a Series B.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Aikido Docs Overview",
+       "url": "https://help.aikido.dev/",
+       "excerpts": [
+        "Scanning Capabilities <a href=\"#getting-started\" id=\"getting-started\"></a>",
+        "Developer Integrations <a href=\"#getting-started\" id=\"getting-started\"></a>",
+        "Getting Started <a href=\"#getting-started\" id=\"getting-started\"></a>"
+       ]
+      }
+     ],
+     "reasoning": "Aikido's public help center has multiple documentation sections, including Getting Started, Scanning Capabilities, and Developer Integrations.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About | Aikido Security",
+       "url": "https://www.aikido.dev/company/about",
+       "excerpts": [
+        "9000 Ghent"
+       ]
+      },
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      }
+     ],
+     "reasoning": "The company About page gives a Ghent address, and the company profile records Ghent as its location city.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Blog | Aikido Security",
+       "url": "https://www.aikido.dev/blog",
+       "excerpts": [
+        "October 20, 2026 \u2022 Company Updates Aikido launches Noon: workforce security for every employee"
+       ]
+      },
+      {
+       "title": "Aikido Security launches Noon to protect employees from AI-powered social engineering",
+       "url": "http://www.wtrf.com/business/press-releases/globenewswire/1001278896/aikido-security-launches-noon-to-protect-employees-from-ai-powered-social-engineering",
+       "excerpts": [
+        "Aikido Security launches Noon to protect employees from AI-powered social engineering",
+        "Oct 20, 2026, 8:00 AM ET"
+       ]
+      }
+     ],
+     "reasoning": "Aikido's blog index dates the Noon launch to October 20, 2026, and the announcement says Aikido launched Noon. This falls within the six months before 2026-11-09.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Aikido Security - Account Executive (AI Pentest)",
+       "url": "https://aikidosecurity.recruitee.com/o/account-executive-ai-pentest-1",
+       "excerpts": [
+        "Account Executive (AI Pentest)",
+        "Job details Apply"
+       ]
+      }
+     ],
+     "reasoning": "Aikido has an open Account Executive (AI Pentest) posting with an Apply option, which satisfies the account-executive criterion.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Aikido; website_url: https://www.aikido.dev/; founded_year: 2022; employee_count_official: 333; location_city: Ghent; location_country: Belgium; latest_funding_round_name: Series B; latest_funding_round_date: 2026-01-14; latest_funding_round_amount_usd: 60000000.0; total_disclosed_funding_usd: 84506310.0; all_funding_rounds[0].round_name: Series B; all_funding_rounds[0].amount_usd: 60000000.0; all_funding_rounds[0].round_valuation_usd: null; all_funding_rounds[0].round_date: 2026-01-14; all_funding_rounds[0].round_investor_names: DST Global, Singular, Notion Capital, PSG, Matthias Frans "
+       ]
+      },
+      {
+       "title": "Aikido Security Raises $60M at a $1B valuation",
+       "url": "https://www.aikido.dev/blog/aikido-funding-series-b",
+       "excerpts": [
+        "Jan 14, 2026"
+       ]
+      }
+     ],
+     "reasoning": "The latest round is dated January 14, 2026, between the specified 18-month window start (2025-05-09) and the cutoff (2026-11-09), so the company raised in the window.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Trust Center | Aikido Security",
+       "url": "https://www.aikido.dev/security-overview",
+       "excerpts": [
+        "Aikido is ISO 27001:2022, ISO 42001 & AICPA's SOC 2 Type II compliant, and FedRAMP Certified: Class C (Moderate)."
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names ISO 27001:2022.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Trust Center | Aikido Security",
+       "url": "https://www.aikido.dev/security-overview",
+       "excerpts": [
+        "Aikido is ISO 27001:2022, ISO 42001 & AICPA's SOC 2 Type II compliant, and FedRAMP Certified: Class C (Moderate)."
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names AICPA's SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Press Kit | Aikido Security",
+       "url": "https://www.aikido.dev/company/press-kit",
+       "excerpts": [
+        "Aikido is trusted by over 150,000 teams, with a global customer base including: Deel, Revolut, SoundCloud and Niantic."
+       ]
+      }
+     ],
+     "reasoning": "Deel is explicitly named as part of Aikido's customer base.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Press Kit | Aikido Security",
+       "url": "https://www.aikido.dev/company/press-kit",
+       "excerpts": [
+        "Aikido is trusted by over 150,000 teams, with a global customer base including: Deel, Revolut, SoundCloud and Niantic."
+       ]
+      }
+     ],
+     "reasoning": "Revolut is explicitly named as part of Aikido's customer base.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "Press Kit | Aikido Security",
+       "url": "https://www.aikido.dev/company/press-kit",
+       "excerpts": [
+        "Aikido is trusted by over 150,000 teams, with a global customer base including: Deel, Revolut, SoundCloud and Niantic."
+       ]
+      }
+     ],
+     "reasoning": "SoundCloud is explicitly named as part of Aikido's customer base.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.3",
+     "citations": [
+      {
+       "title": "Press Kit | Aikido Security",
+       "url": "https://www.aikido.dev/company/press-kit",
+       "excerpts": [
+        "Aikido is trusted by over 150,000 teams, with a global customer base including: Deel, Revolut, SoundCloud and Niantic."
+       ]
+      }
+     ],
+     "reasoning": "Niantic is explicitly named as part of Aikido's customer base.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Aikido Security - Business Development Representative US",
+       "url": "https://aikidosecurity.recruitee.com/o/technical-business-development-representative-2",
+       "excerpts": [
+        "Familiar with using CRM (we use Hubspot) and other sales tooling (LinkedIn, Outreach/Salesloft, ...)"
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly says Aikido uses HubSpot as its CRM.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Aikido Security - Business Development Representative US",
+       "url": "https://aikidosecurity.recruitee.com/o/technical-business-development-representative-2",
+       "excerpts": [
+        "Familiar with using CRM (we use Hubspot) and other sales tooling (LinkedIn, Outreach/Salesloft, ...)"
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly names Outreach as sales tooling.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Aikido Security - Business Development Representative US",
+       "url": "https://aikidosecurity.recruitee.com/o/technical-business-development-representative-2",
+       "excerpts": [
+        "Familiar with using CRM (we use Hubspot) and other sales tooling (LinkedIn, Outreach/Salesloft, ...)"
+       ]
+      }
+     ],
+     "reasoning": "The posting explicitly names Salesloft as sales tooling.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2022.0,
+    "compliance_certs": [
+     "ISO 27001:2022",
+     "SOC 2 Type II"
+    ],
+    "hq_country": "Belgium",
+    "eng_blog": false,
+    "product_one_liner": "Aikido builds developer-first security products; its central platform secures code, cloud, and runtime to help development teams reduce risk without slowing development.",
+    "employee_band": "201-500",
+    "model_provider": "AWS Bedrock for AutoFix; Aikido says its Altar model started from GLM-5.3.",
+    "pricing_page": true,
+    "funding_amount_usd": 60000000.0,
+    "named_customers": [
+     "Deel",
+     "Revolut",
+     "SoundCloud",
+     "Niantic"
+    ],
+    "funding_date": "2026-01",
+    "crm_stack_signal": [
+     "HubSpot",
+     "Outreach",
+     "Salesloft"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Ghent",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": true
+   }
+  }
+ }
+}

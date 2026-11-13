@@ -1,0 +1,21 @@
+{
+ "url": "https://usenaive.ai/primitives/model-router",
+ "fetched_at": "2026-11-09T20:40:40.792173+00:00",
+ "hours_after_run": 20.7,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "55eec8f38ee39169e13e132336da2eefed3206004ad24357cf13c0e53b635b1a",
+ "chars": 3001,
+ "truncated": false,
+ "title": "Model routing | naïve",
+ "markdown": "[Model routingruntime](https://usenaive.ai/primitives)\n\n# Give your agent 300+ models through one API\n\nName any model. Managed Agents routes it. Swap providers without changing the agent.\n\n[Get a company](https://usenaive.ai/businesses) [Read the docs](https://usenaive.ai/docs/concepts/model-router)\n\nrouter300+\n\nPOST/v1/chat→one endpoint\n\nOpenAI84Anthropic62Google48Meta36Mistral28\n\nRouted to\n\nclaude-sonnet-4.6anthropic / chat completions\n\nStreaming248 tokens · $0.004\n\nNext in chainauto-fallback\n\n- OpenAIgpt-5queued\n- Googlegemini-2.5-proqueued\n- Metallama-4queued\n- DeepSeekdeepseek-v3queued\n\n## Paste and ship\n\nDrop this into Claude Code, Codex, or Cursor. It reads the docs and wires up Model routing for you.\n\nAgent promptCopy\n\n```\nRead https://usenaive.ai/docs/concepts/model-router and use the naïve Model routing primitive in my project. It is part of the runtime layer; wire it through naive.config.ts rather than calling a vendor directly.\n```\n\n## Guides\n\n- [Hosted vs Bring-Your-Own Harness for AI AgentsIn Naive Managed Agents the harness (the agent loop) is the layer you pick and the runtime is always managed. When to keep the default harness, when to bring your own, and what each does to cost per completed task.](https://usenaive.ai/blogs/hosted-vs-bring-your-own-runtime-for-ai-agents)\n\n## Related primitives\n\n[**Computer** runtime\\\\\n\\\\\nA disposable Linux box with a shell, a filesystem, and a real browser.\\\\\n\\\\\ncomputerdisposable\\\\\n\\\\\n$naive computer create--image ubuntu-24.04 --browser\\\\\n\\\\\nbox · iad/workspace2 vcpu · 4 gb · chromium 129\\\\\n\\\\\nrunning\\\\\n\\\\\nshellfsbrowsergit\\\\\n\\\\\nshell4\\\\\n\\\\\n- git clone acme/shop0.8sok\\\\\n- pnpm install && pnpm test42 passedok\\\\\n- browser open · shop.acme.co/admin1280×800ok\\\\\n- naive files publish · report.pdf1.2 mbok\\\\\n\\\\\npaused when the session sleeps$0.00 / hr asleep](https://usenaive.ai/primitives/computer) [**Completion windows** runtime\\\\\n\\\\\nOne model, three prices. Wait longer, pay less. The cheap lane never silently upgrades.\\\\\n\\\\\ncompletion windowexample prices\\\\\n\\\\\n$naive run--model claude-sonnet-5 --window loose\\\\\n\\\\\nloose · ≤ 24 h0.35×same model · same output · quoted before the call\\\\\n\\\\\n1.00×\\\\\n\\\\\nimmediatepriorityloose\\\\\n\\\\\nlanes3\\\\\n\\\\\n- immediate · now1.00×open\\\\\n- priority · ≤ 1 h0.60×open\\\\\n- loose · ≤ 24 h0.35×chosen\\\\\n\\\\\nloose never silently upgradesrates vary by model](https://usenaive.ai/primitives/completion-window) [**Cron** runtime\\\\\n\\\\\nWake on a schedule, spend a budget, deliver. Recurring work without a machine left on.\\\\\n\\\\\ncron · weekly-report0 9 \\* \\* mon\\\\\n\\\\\n$naive cron createweekly-report --at \"0 9 \\* \\* mon\" --budget 2\\\\\n\\\\\nnext wakemon 09:00$2.00 per run · sleeps between ticks\\\\\n\\\\\nin 6d 14h\\\\\n\\\\\nmontuewedthufrisatsun\\\\\n\\\\\nlast run5\\\\\n\\\\\n- wake · budget $2.0009:00done\\\\\n- pull analytics · 4 sources09:01done\\\\\n- draft + review report09:03done\\\\\n- deliver report.pdf09:04sent\\\\\n- sleep · $0.71 spent09:04idle\\\\\n\\\\\nsleepingno machine left on](https://usenaive.ai/primitives/deployments)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "model_provider"
+ ]
+}

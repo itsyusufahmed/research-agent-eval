@@ -1,0 +1,392 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob0u3h49HxEgbaP9B",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "jackandjill.ai",
+    "status": "complete",
+    "result": {
+     "claygent-luna": {
+      "eng_blog": {
+       "notes": "The blog index features product/company announcements, hiring and job-market guidance, and marketing/editorial posts; it does not show at least two engineering-authored posts about how the product is built.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/blog"
+       ]
+      },
+      "reasoning": "Primary company pages establish product, pricing, docs, headcount, customer testimonials, funding and recent product launch. Public information did not establish an internal CRM stack, model provider, or company-specific live hiring status. The team/about page supports the leadership check, while no dated executive move was found.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Searched Google with query \"site:jackandjill.ai Jack & Jill AI company\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack & Jill brings an AI agent to each side of the market, helping people find the right roles and companies find the right people, with more context, more care ...\",\"position\":1},{\"title\":\"Jack & Jill: get a direct introduction to jobs you actually want\",\"link\":\"https://www.jackandjill.ai/jack\",\"displayedLink\":\"h...",
+       "Searched Google with query \"Jack and Jill AI startup funding employees founded headquarters\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Jack & Jill AI - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/jack-jill-ai\",\"displayedLink\":\"https://www.crunchbase....",
+       "Searched Google with query \"site:jackandjill.ai/blog Jack Jill AI engineering\". The results are: \n {\"search_results\":[{\"title\":\"Hiring and job hunting advice\",\"link\":\"https://www.jackandjill.ai/blog\",\"displayedLink\":\"https://www.jackandjill.ai › blog\",\"snippet\":\"Jack & Jill raises $20M to bring conversational AI to job-hunting. The startup has built two AI agents, Jack for candidates and Jill for ...\",\"date\":\"7 days ago\",\"position\":1},{\"title\":\"Jack & Jill AI Review: What Candidates and Companies Say\",\"link\":\"https://www.jackandjill.ai/blog/jack-jill-ai-review-what-candidates-and-companies-sa...",
+       "Searched Google with query \"Jack & Jill AI careers jobs\". The results are: \n {\"search_results\":[{\"title\":\"jobs\",\"link\":\"https://www.jackandjill.ai/jobs\",\"displayedLink\":\"https://www.jackandjill.ai › jobs\",\"snippet\":\"No information is available for this page.\",\"sitelinks\":[{\"title\":\"Learn why\",\"link\":\"https://support.google.com/webmasters/answer/7489871?hl=en\"}],\"position\":1},{\"title\":\"Companies hiring open roles\",\"link\":\"https://www.jackandjill.ai/companies\",\"displayedLink\":\"https://www.jackandjill.ai › companies\",\"snippet\":\"Jack helps you find roles at top-tier companie...",
+       "Searched Google with query \"Jack and Jill AI pricing customers security docs\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Product FAQs\",\"link\":\"https://www.jackandjill.ai/docs/faqs\",\"displayedLink\":\"https://www.jackandjill.ai › docs › faqs\",\"snippet\":\"Jill is free to start, with...",
+       "Searched Google with query \"Jack and Jill AI Crunchbase funding\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill AI - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/jack-jill-ai\",\"displayedLink\":\"https://www.crunchbase.com › organization › jack-jill-ai\",\"snippet\":\"$194.5K This year, Jack & Jill AI is projected to spend $194.5K on IT, according to Aberdeen. Data source: Interest Signals. Topic, Surge Score.\",\"position\":1},{\"title\":\"Jack & Jill raises $20M to bring conversational AI to job- ...\",\"link\":\"https://techcrunch.com/202...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/\",\"question\":\"What product does company offer, pricing navigation, docs links, customer names, links to careers and blog?\"}. The results are: \n \"Product: Jack, an AI career agent that finds suitable roles, facilitates direct introductions to companies, and helps with interview preparation, understanding value, and salary negotiation; Jill, an AI hiring agent for companies. Pricing navigation: Pricing (https://jackandjill.ai/pricing); Jack is free for candidates, and the company pays only when a hire is made. Docs: https://jackandjill.ai/docs. Customer names mentioned: Ryan, Quinn, Tavus; testimonials also mention an unnamed portfolio co...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/about-us\",\"question\":\"Founding date, headquarters, employee count, leadership team and customer names\"}. The results are: \n \"Founding date: Not stated. Headquarters: Not specified; team works from offices in London and San Francisco, with a Shoreditch office mentioned. Employee count: 28. Leadership: Matthew Wilson (Co-founder & CEO); Saaras Mehan (Co-founder & CTO). Customer names featured: Strala (Timon Gregg, CEO); Omnea (Chris Mansfield, VP Enterprise); Fyxer (Archie Hollingsworth, Co-Founder); Encord (Eric Landau, CEO & Co-Founder).\"",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/docs/faqs\",\"question\":\"Does documentation discuss AI models or model providers, security certifications, integrations, CRM systems?\"}. The results are: \n \"AI: Jill is an AI recruiting agent; Jack is an AI job-seeking agent that talks with thousands of people daily and builds evolving candidate profiles. Jill uses this context to match candidates to roles and learns from feedback. Documentation links to [Who is Jill?](https://jackandjill.ai/docs/who-is-jill).\\n\\nIntegrations: The docs list ATS integrations for [Ashby](https://jackandjill.ai/docs/ashby-ats-integration), [Workable](https://jackandjill.ai/docs/workable-ats-integration), [BambooHR](ht...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/blog\",\"question\":\"Blog index newest announcements and technical engineering posts\"}. The results are: \n \"Blog index: https://jackandjill.ai/blog\\n\\nNewest announcements and technical/engineering posts:\\n- “Company Insights: Know the company behind every candidate” — Company Insights is live in Jill; see how companies in candidates’ histories grew, hired, and retained people. Jack & Jill, 4 November 2026. https://jackandjill.ai/blog/company-insights\\n- “We’ve looked at hiring from both sides now” — PromptMates documented its first Jack & Jill hire from both sides: Joe Atkinson hiring and Nikola Wój...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/privacy\",\"question\":\"Certifications, subprocessors and AI model providers\"}. The results are: \n \"Relevant links: [Privacy Policy](https://jackandjill.ai/privacy); [Data Sharing Agreement](https://jackandjill.ai/terms#data-sharing-agreement); [Assured by Warden AI](https://trust.warden-ai.com/jackandjill/ai-candidate-matching); [Platform Terms](https://jackandjill.ai/terms#platform-terms).\"",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/blog/series-a\",\"question\":\"Funding announcement round date amount and launch details\"}. The results are: \n \"Jack & Jill announced a $40M Series A on September 15, 2026, led by Air Street Capital, with participation from Creandum and Madrona. The funding is to accelerate its goal of giving people and companies an AI agent for the job market. Jack is a career agent; Jill is a hiring agent, and they introduce candidates and companies directly when both sides match. The company says 380,000 people in San Francisco, New York, and London use Jack, and more than 5,000 companies hire with Jill. Announcement:...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/jobs\",\"question\":\"Company job board open roles and job titles\"}. The results are: \n \"No specific company job board or open roles/job titles are listed. Relevant role links: Engineer Roles — https://jackandjill.ai/jack/engineer; SF Engineer Roles — https://jackandjill.ai/jack/sf-engineer.\"",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/pricing\",\"question\":\"Public pricing details\"}. The results are: \n \"US public pricing: Meet Jill is free ($0): 20 intro requests per month across unlimited roles. Hire Jill starts at $199 per active role per month: 50 intro requests per month for each active role, plus access to 1B+ public profiles. Annual billing saves $600 per active role each year. Scale Jill offers volume pricing; contact sales. Jack is free for candidates. Pricing: https://jackandjill.ai/pricing; European pricing: https://jackandjill.ai/pricing?geo=global. Pricing contact: hello@jackandjil...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/docs\",\"question\":\"Read documentation index for AI model provider, CRM systems, security and certifications\"}. The results are: \n \"Docs index: https://jackandjill.ai/docs. AI provider/model documentation: the index describes Jill’s dual-agent model but names no AI model provider. CRM/ATS integrations listed: Ashby (https://jackandjill.ai/docs/ashby-ats-integration), Workable (https://jackandjill.ai/docs/workable-ats-integration), BambooHR (https://jackandjill.ai/docs/bamboohr-ats-integration), Pinpoint (https://jackandjill.ai/docs/pinpoint-ats-integration), Teamtailor, Greenhouse, Lever (https://jackandjill.ai/docs/lever-a...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/blog\",\"question\":\"Newest blog launch post and whether posts include engineering implementation details\"}. The results are: \n \"Newest blog post: “Company Insights: Know the company behind every candidate” (Jack & Jill, 4 November 2026; https://jackandjill.ai/blog/company-insights). It says Company Insights is live in Jill and shows how companies in a candidate’s history grew, hired, and retained people. The page provides no engineering implementation details. Another relevant post, “AI sourcing is broken by design. Here’s how we’re fixing it” (Matthew Wilson, 5 July 2026; https://jackandjill.ai/blog/ai-sourcing-is-brok...",
+       "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/about-us\",\"question\":\"Team size and leadership; names and titles\"}. The results are: \n \"Team size: 28 people across London and San Francisco. Leadership: Matthew Wilson — Co-founder & CEO; Saaras Mehan — Co-founder & CTO. Other listed team members and titles: Jack Skerman — Founding Engineer; Elijah Ahmad — Founding Engineer; Will Porcellini — Founding Engineer; Ainhoa Arias — Founding Operator; Arya Tandon — Founding GTM (US); John Wong — Founding Operator; K. Fujita — B2B GTM Lead; Sophia Arora — Founding GTM; Ben Piggin — Founding Engineer; Ben Richards — Founding Engineer; Ed ...",
+       "Used visitWebpage {\"url\":\"https://trust.warden-ai.com/jackandjill/ai-candidate-matching\",\"question\":\"Which compliance certifications does trust page claim, including SOC 2, ISO 27001, HIPAA, GDPR or PCI DSS?\"}. The results are: \n \"The page lists NYC Bias Audit (New York City Local Law 144), EU AI Act Bias Audit (Regulation 2024/1689), Colorado SB 26-189 Bias Audit, and California FEHA Bias Audit. It does not mention SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS. Trust page: https://trust.warden-ai.com/jackandjill\"",
+       "Searched Google with query \"site:jackandjill.ai/jobs \"Account Executive\" OR SDR OR BDR hiring Jack Jill\". The results are: \n {\"search_results\":[{\"title\":\"Sales Development Representative (SDR) at Seed-stage ...\",\"link\":\"https://www.jackandjill.ai/jobs/sales/sales-development-representative-sdr-equity-at-seed-stage-ai-saas-startup-fce21229-0726-4c7e-a968-0652b033f186\",\"displayedLink\":\"https://www.jackandjill.ai › jobs › sales › sales-develop...\",\"snippet\":\"Experience the full sales process with a clear career path towards an Account Executive role. How Jack & Jill work together. Jack. I get to know what you're ...\",\"po...",
+       "Searched Google with query \"site:jackandjill.ai/blog Jack Jill engineering infrastructure technical architecture AI model Claude OpenAI\". The results are: \n {\"message\":\"No data returned from search query\"}",
+       "Searched Google with query \"Jack & Jill AI 2026 hiring careers SDR AE company\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Jack & Jill AI Review: What Candidates and Companies Say\",\"link\":\"https://www.jackandjill.ai/blog/jack-jill-ai-review-what-candidates-and-companies-say\",\"dis...",
+       "Searched Google with query \"Jack & Jill AI founded 2025 London 28 people\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Jack & Jill: help fix the most important market in the world\",\"link\":\"https://www.jackandjill.ai/about-us\",\"displayedLink\":\"https://www.jackandjill.ai › abou...",
+       "Searched Google with query \"Jack and Jill AI customers case study Strala Omnea Fyxer Encord\". The results are: \n {\"search_results\":[{\"title\":\"Jill is the AI agent who transforms hiring\",\"link\":\"https://www.jackandjill.ai/jill\",\"displayedLink\":\"https://www.jackandjill.ai › jill\",\"snippet\":\"Strala “Jill got the nuance of what we look for and then in ten minutes strong candidates appear on the dashboard.” Omnea Kobina M.\",\"date\":\"Sep 30, 2025\",\"position\":1},{\"title\":\"Jack & Jill: The AI Agents Reinventing How People Find Jobs ...\",\"link\":\"https://www.youtube.com/watch?v=xhceh_wIVg4\",\"displayedLink\":\"2K+ views..."
+      ],
+      "hq_location": {
+       "notes": "The company describes itself as being in London and San Francisco; its legal address and registered office are in London, supporting London as headquarters.",
+       "value": {
+        "city": "London",
+        "country": "United Kingdom"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/about-us",
+        "https://www.jackandjill.ai/privacy"
+       ]
+      },
+      "public_docs": {
+       "notes": "The public documentation includes multiple product, integration, and FAQ articles.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/docs"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The September 2026 Series A is within the 18-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/blog/series-a"
+       ]
+      },
+      "founded_year": {
+       "notes": "The cited report states it was founded in March 2025.",
+       "value": 2025,
+       "status": "asserted",
+       "citations": [
+        "https://www.eu-startups.com/2026/09/london-based-jack-jill-raises-e34-68-million-series-a-to-scale-its-ai-agents-for-jobseekers-and-employers/"
+       ]
+      },
+      "last_funding": {
+       "notes": "Announced $40 million Series A on September 15, 2026.",
+       "value": {
+        "date": "2026-09",
+        "stage": "Series A",
+        "amount_usd": 40000000
+       },
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/blog/series-a",
+        "https://press.airstreet.com/p/jack-and-jill-series-a"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "The November 4, 2026 blog announcement says Company Insights is live in Jill, which is a product feature launch within the six-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/blog/company-insights"
+       ]
+      },
+      "pricing_page": {
+       "notes": "Public pricing lists free and paid plans.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/pricing"
+       ]
+      },
+      "employee_band": {
+       "notes": "The company states it has 28 people.",
+       "value": "21-50",
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/about-us"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "Search results show sales-role listings through Jack & Jill's job marketplace, but those postings are for other employers and do not establish Jack & Jill's own hiring status.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      },
+      "model_provider": {
+       "notes": "The public docs describe Jack and Jill's AI agents but do not name a model or provider; no provider was found in the checked blog, FAQ, or privacy/trust materials.",
+       "value": "",
+       "status": "unknown",
+       "citations": []
+      },
+      "named_customers": {
+       "notes": "Both customer names appear in customer testimonials on the Jill page.",
+       "value": [
+        "Strala",
+        "Omnea"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/jill"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "The search surfaced Jack & Jill's marketplace postings for roles at other employers, not verifiable open roles at Jack & Jill itself; no current company career board was found.",
+       "value": false,
+       "status": "unknown",
+       "citations": []
+      },
+      "compliance_certs": {
+       "notes": "The trust page names bias audits but none of the requested SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS certifications.",
+       "value": [],
+       "status": "asserted",
+       "citations": [
+        "https://trust.warden-ai.com/jackandjill"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "These named tools appear in Jack & Jill's public integration documentation; the ATS products are integrations rather than proof of the company's internal CRM.",
+       "value": [
+        "Ashby",
+        "Workable",
+        "BambooHR",
+        "Pinpoint",
+        "Greenhouse",
+        "Lever",
+        "Personio",
+        "Teamtailor",
+        "Slack"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/docs"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "",
+       "value": "Jack & Jill offers Jack, an AI career agent that helps candidates find suitable jobs and connect with companies, and Jill, an AI hiring agent that helps companies find and hire talent.",
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/",
+        "https://www.jackandjill.ai/jack",
+        "https://www.jackandjill.ai/jill"
+       ]
+      },
+      "timeTakenInSeconds": "94.20",
+      "totalCreditsCharged": 0.3,
+      "leadership_change_12mo": {
+       "notes": "The small team page identifies the co-founder CEO and co-founder CTO; it does not identify a C- or VP-level person who joined within the 12-month window, and no departure is announced there.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://www.jackandjill.ai/about-us"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "jackandjill.ai",
+  "status": "complete",
+  "result": {
+   "claygent-luna": {
+    "eng_blog": {
+     "notes": "The blog index features product/company announcements, hiring and job-market guidance, and marketing/editorial posts; it does not show at least two engineering-authored posts about how the product is built.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/blog"
+     ]
+    },
+    "reasoning": "Primary company pages establish product, pricing, docs, headcount, customer testimonials, funding and recent product launch. Public information did not establish an internal CRM stack, model provider, or company-specific live hiring status. The team/about page supports the leadership check, while no dated executive move was found.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Searched Google with query \"site:jackandjill.ai Jack & Jill AI company\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack & Jill brings an AI agent to each side of the market, helping people find the right roles and companies find the right people, with more context, more care ...\",\"position\":1},{\"title\":\"Jack & Jill: get a direct introduction to jobs you actually want\",\"link\":\"https://www.jackandjill.ai/jack\",\"displayedLink\":\"h...",
+     "Searched Google with query \"Jack and Jill AI startup funding employees founded headquarters\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Jack & Jill AI - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/jack-jill-ai\",\"displayedLink\":\"https://www.crunchbase....",
+     "Searched Google with query \"site:jackandjill.ai/blog Jack Jill AI engineering\". The results are: \n {\"search_results\":[{\"title\":\"Hiring and job hunting advice\",\"link\":\"https://www.jackandjill.ai/blog\",\"displayedLink\":\"https://www.jackandjill.ai › blog\",\"snippet\":\"Jack & Jill raises $20M to bring conversational AI to job-hunting. The startup has built two AI agents, Jack for candidates and Jill for ...\",\"date\":\"7 days ago\",\"position\":1},{\"title\":\"Jack & Jill AI Review: What Candidates and Companies Say\",\"link\":\"https://www.jackandjill.ai/blog/jack-jill-ai-review-what-candidates-and-companies-sa...",
+     "Searched Google with query \"Jack & Jill AI careers jobs\". The results are: \n {\"search_results\":[{\"title\":\"jobs\",\"link\":\"https://www.jackandjill.ai/jobs\",\"displayedLink\":\"https://www.jackandjill.ai › jobs\",\"snippet\":\"No information is available for this page.\",\"sitelinks\":[{\"title\":\"Learn why\",\"link\":\"https://support.google.com/webmasters/answer/7489871?hl=en\"}],\"position\":1},{\"title\":\"Companies hiring open roles\",\"link\":\"https://www.jackandjill.ai/companies\",\"displayedLink\":\"https://www.jackandjill.ai › companies\",\"snippet\":\"Jack helps you find roles at top-tier companie...",
+     "Searched Google with query \"Jack and Jill AI pricing customers security docs\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Product FAQs\",\"link\":\"https://www.jackandjill.ai/docs/faqs\",\"displayedLink\":\"https://www.jackandjill.ai › docs › faqs\",\"snippet\":\"Jill is free to start, with...",
+     "Searched Google with query \"Jack and Jill AI Crunchbase funding\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill AI - Crunchbase Company Profile & Funding\",\"link\":\"https://www.crunchbase.com/organization/jack-jill-ai\",\"displayedLink\":\"https://www.crunchbase.com › organization › jack-jill-ai\",\"snippet\":\"$194.5K This year, Jack & Jill AI is projected to spend $194.5K on IT, according to Aberdeen. Data source: Interest Signals. Topic, Surge Score.\",\"position\":1},{\"title\":\"Jack & Jill raises $20M to bring conversational AI to job- ...\",\"link\":\"https://techcrunch.com/202...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/\",\"question\":\"What product does company offer, pricing navigation, docs links, customer names, links to careers and blog?\"}. The results are: \n \"Product: Jack, an AI career agent that finds suitable roles, facilitates direct introductions to companies, and helps with interview preparation, understanding value, and salary negotiation; Jill, an AI hiring agent for companies. Pricing navigation: Pricing (https://jackandjill.ai/pricing); Jack is free for candidates, and the company pays only when a hire is made. Docs: https://jackandjill.ai/docs. Customer names mentioned: Ryan, Quinn, Tavus; testimonials also mention an unnamed portfolio co...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/about-us\",\"question\":\"Founding date, headquarters, employee count, leadership team and customer names\"}. The results are: \n \"Founding date: Not stated. Headquarters: Not specified; team works from offices in London and San Francisco, with a Shoreditch office mentioned. Employee count: 28. Leadership: Matthew Wilson (Co-founder & CEO); Saaras Mehan (Co-founder & CTO). Customer names featured: Strala (Timon Gregg, CEO); Omnea (Chris Mansfield, VP Enterprise); Fyxer (Archie Hollingsworth, Co-Founder); Encord (Eric Landau, CEO & Co-Founder).\"",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/docs/faqs\",\"question\":\"Does documentation discuss AI models or model providers, security certifications, integrations, CRM systems?\"}. The results are: \n \"AI: Jill is an AI recruiting agent; Jack is an AI job-seeking agent that talks with thousands of people daily and builds evolving candidate profiles. Jill uses this context to match candidates to roles and learns from feedback. Documentation links to [Who is Jill?](https://jackandjill.ai/docs/who-is-jill).\\n\\nIntegrations: The docs list ATS integrations for [Ashby](https://jackandjill.ai/docs/ashby-ats-integration), [Workable](https://jackandjill.ai/docs/workable-ats-integration), [BambooHR](ht...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/blog\",\"question\":\"Blog index newest announcements and technical engineering posts\"}. The results are: \n \"Blog index: https://jackandjill.ai/blog\\n\\nNewest announcements and technical/engineering posts:\\n- “Company Insights: Know the company behind every candidate” — Company Insights is live in Jill; see how companies in candidates’ histories grew, hired, and retained people. Jack & Jill, 4 November 2026. https://jackandjill.ai/blog/company-insights\\n- “We’ve looked at hiring from both sides now” — PromptMates documented its first Jack & Jill hire from both sides: Joe Atkinson hiring and Nikola Wój...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/privacy\",\"question\":\"Certifications, subprocessors and AI model providers\"}. The results are: \n \"Relevant links: [Privacy Policy](https://jackandjill.ai/privacy); [Data Sharing Agreement](https://jackandjill.ai/terms#data-sharing-agreement); [Assured by Warden AI](https://trust.warden-ai.com/jackandjill/ai-candidate-matching); [Platform Terms](https://jackandjill.ai/terms#platform-terms).\"",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/blog/series-a\",\"question\":\"Funding announcement round date amount and launch details\"}. The results are: \n \"Jack & Jill announced a $40M Series A on September 15, 2026, led by Air Street Capital, with participation from Creandum and Madrona. The funding is to accelerate its goal of giving people and companies an AI agent for the job market. Jack is a career agent; Jill is a hiring agent, and they introduce candidates and companies directly when both sides match. The company says 380,000 people in San Francisco, New York, and London use Jack, and more than 5,000 companies hire with Jill. Announcement:...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/jobs\",\"question\":\"Company job board open roles and job titles\"}. The results are: \n \"No specific company job board or open roles/job titles are listed. Relevant role links: Engineer Roles — https://jackandjill.ai/jack/engineer; SF Engineer Roles — https://jackandjill.ai/jack/sf-engineer.\"",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/pricing\",\"question\":\"Public pricing details\"}. The results are: \n \"US public pricing: Meet Jill is free ($0): 20 intro requests per month across unlimited roles. Hire Jill starts at $199 per active role per month: 50 intro requests per month for each active role, plus access to 1B+ public profiles. Annual billing saves $600 per active role each year. Scale Jill offers volume pricing; contact sales. Jack is free for candidates. Pricing: https://jackandjill.ai/pricing; European pricing: https://jackandjill.ai/pricing?geo=global. Pricing contact: hello@jackandjil...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/docs\",\"question\":\"Read documentation index for AI model provider, CRM systems, security and certifications\"}. The results are: \n \"Docs index: https://jackandjill.ai/docs. AI provider/model documentation: the index describes Jill’s dual-agent model but names no AI model provider. CRM/ATS integrations listed: Ashby (https://jackandjill.ai/docs/ashby-ats-integration), Workable (https://jackandjill.ai/docs/workable-ats-integration), BambooHR (https://jackandjill.ai/docs/bamboohr-ats-integration), Pinpoint (https://jackandjill.ai/docs/pinpoint-ats-integration), Teamtailor, Greenhouse, Lever (https://jackandjill.ai/docs/lever-a...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/blog\",\"question\":\"Newest blog launch post and whether posts include engineering implementation details\"}. The results are: \n \"Newest blog post: “Company Insights: Know the company behind every candidate” (Jack & Jill, 4 November 2026; https://jackandjill.ai/blog/company-insights). It says Company Insights is live in Jill and shows how companies in a candidate’s history grew, hired, and retained people. The page provides no engineering implementation details. Another relevant post, “AI sourcing is broken by design. Here’s how we’re fixing it” (Matthew Wilson, 5 July 2026; https://jackandjill.ai/blog/ai-sourcing-is-brok...",
+     "Used visitWebpage {\"url\":\"https://www.jackandjill.ai/about-us\",\"question\":\"Team size and leadership; names and titles\"}. The results are: \n \"Team size: 28 people across London and San Francisco. Leadership: Matthew Wilson — Co-founder & CEO; Saaras Mehan — Co-founder & CTO. Other listed team members and titles: Jack Skerman — Founding Engineer; Elijah Ahmad — Founding Engineer; Will Porcellini — Founding Engineer; Ainhoa Arias — Founding Operator; Arya Tandon — Founding GTM (US); John Wong — Founding Operator; K. Fujita — B2B GTM Lead; Sophia Arora — Founding GTM; Ben Piggin — Founding Engineer; Ben Richards — Founding Engineer; Ed ...",
+     "Used visitWebpage {\"url\":\"https://trust.warden-ai.com/jackandjill/ai-candidate-matching\",\"question\":\"Which compliance certifications does trust page claim, including SOC 2, ISO 27001, HIPAA, GDPR or PCI DSS?\"}. The results are: \n \"The page lists NYC Bias Audit (New York City Local Law 144), EU AI Act Bias Audit (Regulation 2024/1689), Colorado SB 26-189 Bias Audit, and California FEHA Bias Audit. It does not mention SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS. Trust page: https://trust.warden-ai.com/jackandjill\"",
+     "Searched Google with query \"site:jackandjill.ai/jobs \"Account Executive\" OR SDR OR BDR hiring Jack Jill\". The results are: \n {\"search_results\":[{\"title\":\"Sales Development Representative (SDR) at Seed-stage ...\",\"link\":\"https://www.jackandjill.ai/jobs/sales/sales-development-representative-sdr-equity-at-seed-stage-ai-saas-startup-fce21229-0726-4c7e-a968-0652b033f186\",\"displayedLink\":\"https://www.jackandjill.ai › jobs › sales › sales-develop...\",\"snippet\":\"Experience the full sales process with a clear career path towards an Account Executive role. How Jack & Jill work together. Jack. I get to know what you're ...\",\"po...",
+     "Searched Google with query \"site:jackandjill.ai/blog Jack Jill engineering infrastructure technical architecture AI model Claude OpenAI\". The results are: \n {\"message\":\"No data returned from search query\"}",
+     "Searched Google with query \"Jack & Jill AI 2026 hiring careers SDR AE company\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Jack & Jill AI Review: What Candidates and Companies Say\",\"link\":\"https://www.jackandjill.ai/blog/jack-jill-ai-review-what-candidates-and-companies-say\",\"dis...",
+     "Searched Google with query \"Jack & Jill AI founded 2025 London 28 people\". The results are: \n {\"search_results\":[{\"title\":\"Jack & Jill: where remarkable people meet ambitious companies\",\"link\":\"https://www.jackandjill.ai/\",\"displayedLink\":\"https://www.jackandjill.ai\",\"snippet\":\"Jack is the AI agent for careers. Jill is the AI agent for hiring. Together they introduce remarkable people to ambitious companies.\",\"position\":1},{\"title\":\"Jack & Jill: help fix the most important market in the world\",\"link\":\"https://www.jackandjill.ai/about-us\",\"displayedLink\":\"https://www.jackandjill.ai › abou...",
+     "Searched Google with query \"Jack and Jill AI customers case study Strala Omnea Fyxer Encord\". The results are: \n {\"search_results\":[{\"title\":\"Jill is the AI agent who transforms hiring\",\"link\":\"https://www.jackandjill.ai/jill\",\"displayedLink\":\"https://www.jackandjill.ai › jill\",\"snippet\":\"Strala “Jill got the nuance of what we look for and then in ten minutes strong candidates appear on the dashboard.” Omnea Kobina M.\",\"date\":\"Sep 30, 2025\",\"position\":1},{\"title\":\"Jack & Jill: The AI Agents Reinventing How People Find Jobs ...\",\"link\":\"https://www.youtube.com/watch?v=xhceh_wIVg4\",\"displayedLink\":\"2K+ views..."
+    ],
+    "hq_location": {
+     "notes": "The company describes itself as being in London and San Francisco; its legal address and registered office are in London, supporting London as headquarters.",
+     "value": {
+      "city": "London",
+      "country": "United Kingdom"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/about-us",
+      "https://www.jackandjill.ai/privacy"
+     ]
+    },
+    "public_docs": {
+     "notes": "The public documentation includes multiple product, integration, and FAQ articles.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/docs"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The September 2026 Series A is within the 18-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/blog/series-a"
+     ]
+    },
+    "founded_year": {
+     "notes": "The cited report states it was founded in March 2025.",
+     "value": 2025,
+     "status": "asserted",
+     "citations": [
+      "https://www.eu-startups.com/2026/09/london-based-jack-jill-raises-e34-68-million-series-a-to-scale-its-ai-agents-for-jobseekers-and-employers/"
+     ]
+    },
+    "last_funding": {
+     "notes": "Announced $40 million Series A on September 15, 2026.",
+     "value": {
+      "date": "2026-09",
+      "stage": "Series A",
+      "amount_usd": 40000000
+     },
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/blog/series-a",
+      "https://press.airstreet.com/p/jack-and-jill-series-a"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "The November 4, 2026 blog announcement says Company Insights is live in Jill, which is a product feature launch within the six-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/blog/company-insights"
+     ]
+    },
+    "pricing_page": {
+     "notes": "Public pricing lists free and paid plans.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/pricing"
+     ]
+    },
+    "employee_band": {
+     "notes": "The company states it has 28 people.",
+     "value": "21-50",
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/about-us"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "Search results show sales-role listings through Jack & Jill's job marketplace, but those postings are for other employers and do not establish Jack & Jill's own hiring status.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    },
+    "model_provider": {
+     "notes": "The public docs describe Jack and Jill's AI agents but do not name a model or provider; no provider was found in the checked blog, FAQ, or privacy/trust materials.",
+     "value": "",
+     "status": "unknown",
+     "citations": []
+    },
+    "named_customers": {
+     "notes": "Both customer names appear in customer testimonials on the Jill page.",
+     "value": [
+      "Strala",
+      "Omnea"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/jill"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "The search surfaced Jack & Jill's marketplace postings for roles at other employers, not verifiable open roles at Jack & Jill itself; no current company career board was found.",
+     "value": false,
+     "status": "unknown",
+     "citations": []
+    },
+    "compliance_certs": {
+     "notes": "The trust page names bias audits but none of the requested SOC 2, ISO 27001, HIPAA, GDPR, or PCI DSS certifications.",
+     "value": [],
+     "status": "asserted",
+     "citations": [
+      "https://trust.warden-ai.com/jackandjill"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "These named tools appear in Jack & Jill's public integration documentation; the ATS products are integrations rather than proof of the company's internal CRM.",
+     "value": [
+      "Ashby",
+      "Workable",
+      "BambooHR",
+      "Pinpoint",
+      "Greenhouse",
+      "Lever",
+      "Personio",
+      "Teamtailor",
+      "Slack"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/docs"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "",
+     "value": "Jack & Jill offers Jack, an AI career agent that helps candidates find suitable jobs and connect with companies, and Jill, an AI hiring agent that helps companies find and hire talent.",
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/",
+      "https://www.jackandjill.ai/jack",
+      "https://www.jackandjill.ai/jill"
+     ]
+    },
+    "timeTakenInSeconds": "94.20",
+    "totalCreditsCharged": 0.3,
+    "leadership_change_12mo": {
+     "notes": "The small team page identifies the co-founder CEO and co-founder CTO; it does not identify a C- or VP-level person who joined within the 12-month window, and no departure is announced there.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://www.jackandjill.ai/about-us"
+     ]
+    }
+   }
+  }
+ }
+}

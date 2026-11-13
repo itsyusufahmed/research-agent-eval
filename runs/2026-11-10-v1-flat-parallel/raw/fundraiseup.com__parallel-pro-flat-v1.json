@@ -1,0 +1,564 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439eb34d87552c20c332",
+  "interaction_id": "trun_142119f6a1b4439eb34d87552c20c332",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "pro",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-pro-flat-v1",
+   "domain": "fundraiseup.com"
+  },
+  "created_at": "2026-11-10T18:48:05.170540Z",
+  "modified_at": "2026-11-10T18:51:26.050704Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439eb34d87552c20c332",
+   "interaction_id": "trun_142119f6a1b4439eb34d87552c20c332",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for pro. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "pro",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-pro-flat-v1",
+    "domain": "fundraiseup.com"
+   },
+   "created_at": "2026-11-10T18:48:05.170540Z",
+   "modified_at": "2026-11-10T18:51:26.050704Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "Fundraise Up was founded in 2017."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly states that it was founded in 2017: https://fundraiseup.com/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "Fundraise Up - SOC 2 Type 2 - March 2026",
+        "Fundraise Up - ISO27001 - February 2024",
+        "G D P R Logo",
+        "Fundraise Up - PCI DSS - AoC - 4.0.1 - May 2026"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists SOC 2 Type II, ISO 27001, GDPR, and PCI DSS compliance, including dated audit documents rather than in-progress certifications. These are public compliance claims; GDPR is not itself a formal certification. Source: https://trust.fundraiseup.com/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Senior ML-Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4674966005",
+       "excerpts": [
+        "```json [{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"@id\":\"https://fundraiseup.com/#organization\",\"url\":\"https://fundraiseup.com/\",\"name\":\"Fundraise Up\",\"legalName\":\"Fundraise Up, Inc.\",\"foundingDate\":\"2017\",\"description\":\"Fundraise Up is a donation platform that helps nonprofits increase online revenue with AI-optimized donor experiences, advanced payment options, and deep analytics.\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://fundraiseup.com/apple-touch-icon.png\"},\"address\":{\"@type\":\"PostalAddress\",\"streetAddress\":\"219 36th Street, Unit 4, Suite A100\",\"addressLocality\":\"Brooklyn\",\"addressRegion\":\"NY\",\"postalCode\":\"11232-2403\",\"addressCountry\":\"US\""
+       ]
+      },
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "Fundraise Up is headquartered in Brooklyn, New York, with team members working locally, remotely, and internationally."
+       ]
+      }
+     ],
+     "reasoning": "The About page identifies Brooklyn, New York as headquarters, and the company's organization metadata explicitly gives its address country as US. Sources: https://fundraiseup.com/about and https://fundraiseup.com/careers/4674966005.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Smart online fundraising tips for nonprofits | Fundraise Up",
+       "url": "https://fundraiseup.com/blog",
+       "excerpts": [
+        "News, research, and product updates from Fundraise Up",
+        "[<h3>The year-end countdown: an 8\u2011week checklist</h3>Fundraising"
+       ]
+      }
+     ],
+     "reasoning": "The readable blog index presents product updates, fundraising guidance, and news/knowledge content, not the required two engineer-authored implementation posts. This negative assessment is based on the inspected index rather than merely the absence of an engineering label. Source: https://fundraiseup.com/blog.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Fundraise Up Getting Started Guide and Features Overview | Fundraise Up Documentation",
+       "url": "https://fundraiseup.com/docs/get-started",
+       "excerpts": [
+        "Fundraise Up is an innovative web-based platform that makes it easy for nonprofits to accept donations and increase giving. With powerful features, Fundraise Up makes it simple for your organization to create and manage successful fundraising campaigns."
+       ]
+      }
+     ],
+     "reasoning": "The getting-started documentation describes a web-based platform for nonprofits to accept donations, increase giving, and create and manage fundraising campaigns. Source: https://fundraiseup.com/docs/get-started.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "350+ team members around the world"
+       ]
+      }
+     ],
+     "reasoning": "The company reports 350+ team members, which maps to the requested 201-500 band. The stated figure is approximate and does not explicitly establish an upper bound. Source: https://fundraiseup.com/about.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "Anthropic Anthropic \u2022 Artificial Intelligence AI processing supporting Agentic Giving and platform features US"
+       ]
+      },
+      {
+       "title": "Subprocessors",
+       "url": "https://fundraiseup.com/subprocessors",
+       "excerpts": [
+        "| Claude | | | Claude | To provide Agentic Giving Feature if enabled, software development assistance and process automation. |"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center names Anthropic for AI processing supporting Agentic Giving and platform features. The public subprocessor list names Claude for the Agentic Giving feature when enabled. This establishes product use, not merely compatibility with external assistants; no specific Claude version is stated. Sources: https://trust.fundraiseup.com/compliance and https://fundraiseup.com/subprocessors.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Nonprofit Fundraising Pricing | Fundraise Up",
+       "url": "https://fundraiseup.com/pricing",
+       "excerpts": [
+        "--- description: Start with $0 upfront and no long-term contracts."
+       ]
+      }
+     ],
+     "reasoning": "A public nonprofit fundraising pricing page exists and advertises $0 upfront and no long-term contracts. Source: https://fundraiseup.com/pricing.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Fundraise Up Secures $70 Million Growth Capital Investment",
+       "url": "https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners",
+       "excerpts": [
+        "Fundraise Up Secures $70 Million Growth Capital Investment"
+       ]
+      },
+      {
+       "title": "Fundraise Up: Funding, Investors & Team (Nov 2026) | FundedIQ",
+       "url": "https://fundediq.co/fundraise-up-fundraiseup-com-funding",
+       "excerpts": [
+        "Jan 23, 2025 Series B $70.0M"
+       ]
+      }
+     ],
+     "reasoning": "The investor announcement establishes a $70 million growth investment. The funding profile, verified in November 2026, identifies the January 2025 round as the latest listed round. Sources: https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners and https://fundediq.co/fundraise-up-fundraiseup-com-funding.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Case Studies | Fundraise Up",
+       "url": "https://fundraiseup.com/case-studies",
+       "excerpts": [
+        "A $3M+ boost: UNICEF USA's success with Fundraise Up",
+        "Jessica Bernat Canadian Red Cross [Read customer story](https://fundraiseup.com/case-studies/canadian-red-cross/)"
+       ]
+      }
+     ],
+     "reasoning": "The company's customer case-study index identifies UNICEF USA and Canadian Red Cross as customers. Source: https://fundraiseup.com/case-studies.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Fundraise Up: Funding, Investors & Team (Nov 2026) | FundedIQ",
+       "url": "https://fundediq.co/fundraise-up-fundraiseup-com-funding",
+       "excerpts": [
+        "Jan 23, 2025 Series B $70.0M"
+       ]
+      },
+      {
+       "title": "Fundraise Up Secures $70 Million Growth Capital Investment",
+       "url": "https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners",
+       "excerpts": [
+        "Brooklyn, New York \u2013 January 13, 2025"
+       ]
+      }
+     ],
+     "reasoning": "Both the funding profile and investor announcement place the investment in January 2025. Their day-level dates differ, but that does not affect the requested YYYY-MM value. Sources: https://fundediq.co/fundraise-up-fundraiseup-com-funding and https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Fundraise Up Case Study: Seller Productivity | Scratchpad",
+       "url": "https://www.scratchpad.com/customers/case-studies/fundraise-up",
+       "excerpts": [
+        "Tech stack Salesforce Scratchpad Slack GSuite Gong"
+       ]
+      },
+      {
+       "title": "Fundraise Up and HubSpot",
+       "url": "https://www.hubspot.com/case-studies/fundraise-up?size=thousand_plus+",
+       "excerpts": [
+        "Their Sales and Success teams use the sales hub to communicate with customers and keep track of all of their interactions.",
+        "Their Marketing and Partnerships teams use the marketing hub to build web pages, send marketing emails, track LinkedIn ads, post on the blog, and schedule social media posts.",
+        "Bringing in donations, tracking them in HubSpot and then having the CRM and marketing automation attached to that is incredibly exciting."
+       ]
+      }
+     ],
+     "reasoning": "Scratchpad's customer case study names Salesforce, Scratchpad, and Gong in Fundraise Up's technology stack. HubSpot's case study describes its Sales and Marketing hubs being used by Fundraise Up's own teams. These are documented usage signals, although the pages do not establish that all systems remain in simultaneous use. Sources: https://www.scratchpad.com/customers/case-studies/fundraise-up and https://www.hubspot.com/case-studies/fundraise-up?size=thousand_plus+.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "John Schneider Joins Fundraise Up As Chief Marketing Officer | KARV Tech Insider",
+       "url": "https://karvtechinsider.com/martech/cxo-moves/john-schneider-joins-fundraise-up-as-chief-marketing-officer",
+       "excerpts": [
+        "By Ash Kate November 2, 2026",
+        "[John Schneider](https://www.linkedin.com/in/schneider/) has joined Fundraise Up as Chief Marketing Officer"
+       ]
+      }
+     ],
+     "reasoning": "A November 2, 2026 announcement reports that John Schneider joined as Chief Marketing Officer, within the requested 12-month window. The available announcement is a secondary report citing his LinkedIn announcement. Source: https://karvtechinsider.com/martech/cxo-moves/john-schneider-joins-fundraise-up-as-chief-marketing-officer.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Senior ML-Engineer | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4674966005",
+       "excerpts": [
+        "We're looking for a **Senior** **ML Engineer** with 5+ years of production experience to strengthen our ML team.",
+        "[Apply Now](https://fundraiseup.com/careers/4674966005/#grnhse%5Fapp)"
+       ]
+      }
+     ],
+     "reasoning": "The live Senior ML-Engineer posting explicitly seeks an ML engineer and provides an application link; it was verified on November 10, 2026. Source: https://fundraiseup.com/careers/4674966005.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Fundraise Up: Funding, Investors & Team (Nov 2026) | FundedIQ",
+       "url": "https://fundediq.co/fundraise-up-fundraiseup-com-funding",
+       "excerpts": [
+        "Jan 23, 2025 Series B $70.0M"
+       ]
+      }
+     ],
+     "reasoning": "The funding profile labels the January 2025 $70 million round Series B. The investor announcement calls it a growth investment without using the Series B label, so the stage classification relies on the secondary funding profile. Source: https://fundediq.co/fundraise-up-fundraiseup-com-funding.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Fundraise Up Getting Started Guide and Features Overview | Fundraise Up Documentation",
+       "url": "https://fundraiseup.com/docs/get-started",
+       "excerpts": [
+        "[Step 1: Stripe](https://fundraiseup.com/docs/step-1/)",
+        "[Step 2: Installation](https://fundraiseup.com/docs/step-2/)",
+        "[Step 3: Payment methods](https://fundraiseup.com/docs/step-3/)"
+       ]
+      }
+     ],
+     "reasoning": "The public documentation site contains multiple onboarding and product articles, including Stripe setup, installation, and payment methods. Source: https://fundraiseup.com/docs/get-started.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "About Fundraise Up | Fundraise Up",
+       "url": "https://fundraiseup.com/about",
+       "excerpts": [
+        "Fundraise Up is headquartered in Brooklyn, New York, with team members working locally, remotely, and internationally."
+       ]
+      }
+     ],
+     "reasoning": "The company explicitly identifies Brooklyn, New York as its headquarters. Source: https://fundraiseup.com/about.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Reach supporters through AI\u00a0assistants with Agentic Giving | Fundraise Up",
+       "url": "https://fundraiseup.com/docs/changelog/reach-supporters-through-ai-assistants-with-agentic-giving",
+       "excerpts": [
+        "Sep 1, 2026",
+        "You can now turn on Agentic Giving, which lets AI assistants like ChatGPT and Claude read your live campaigns and recommend them to supporters looking for a cause."
+       ]
+      }
+     ],
+     "reasoning": "The September 1, 2026 changelog announces Agentic Giving, which enables AI assistants to read live campaigns and recommend them to supporters. This is substantive new functionality within the six-month window. Source: https://fundraiseup.com/docs/changelog/reach-supporters-through-ai-assistants-with-agentic-giving.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Account Executive, Education Vertical | Fundraise Up",
+       "url": "https://fundraiseup.com/careers/4735043005",
+       "excerpts": [
+        "[Apply Now](#grnhse_app) Account Executive, Education Vertical About Fundraise Up We're Fundraise Up - a global fundraising platform built to make donating to nonprofits fast, seamless, and accessible to all."
+       ]
+      }
+     ],
+     "reasoning": "The live Account Executive, Education Vertical posting provides an Apply Now link and was verified on November 10, 2026. Source: https://fundraiseup.com/careers/4735043005.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Fundraise Up: Funding, Investors & Team (Nov 2026) | FundedIQ",
+       "url": "https://fundediq.co/fundraise-up-fundraiseup-com-funding",
+       "excerpts": [
+        "Jan 23, 2025 Series B $70.0M"
+       ]
+      },
+      {
+       "title": "Fundraise Up Secures $70 Million Growth Capital Investment",
+       "url": "https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners",
+       "excerpts": [
+        "Brooklyn, New York \u2013 January 13, 2025"
+       ]
+      }
+     ],
+     "reasoning": "The latest identified round occurred in January 2025, before the 18-month window beginning in May 2025. The November 2026-verified funding profile lists no later round. Sources: https://fundediq.co/fundraise-up-fundraiseup-com-funding and https://www.summitpartners.com/news/fundraise-up-secures-70-million-growth-capital-investment-led-by-summit-partners.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "Fundraise Up - SOC 2 Type 2 - March 2026"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists a SOC 2 Type 2 report dated March 2026: https://trust.fundraiseup.com/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "Fundraise Up - ISO27001 - February 2024"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists an ISO 27001 document: https://trust.fundraiseup.com/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.2",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "G D P R Logo"
+       ]
+      }
+     ],
+     "reasoning": "GDPR appears among the Trust Center's compliance claims: https://trust.fundraiseup.com/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.3",
+     "citations": [
+      {
+       "title": "Fundraise Up's Trust Center",
+       "url": "https://trust.fundraiseup.com/compliance",
+       "excerpts": [
+        "Fundraise Up - PCI DSS - AoC - 4.0.1 - May 2026"
+       ]
+      }
+     ],
+     "reasoning": "The Trust Center lists a PCI DSS 4.0.1 attestation dated May 2026: https://trust.fundraiseup.com/compliance.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Case Studies | Fundraise Up",
+       "url": "https://fundraiseup.com/case-studies",
+       "excerpts": [
+        "A $3M+ boost: UNICEF USA's success with Fundraise Up"
+       ]
+      }
+     ],
+     "reasoning": "UNICEF USA is named in a customer success story on https://fundraiseup.com/case-studies.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Case Studies | Fundraise Up",
+       "url": "https://fundraiseup.com/case-studies",
+       "excerpts": [
+        "Jessica Bernat Canadian Red Cross [Read customer story](https://fundraiseup.com/case-studies/canadian-red-cross/)"
+       ]
+      }
+     ],
+     "reasoning": "Canadian Red Cross is named with a customer-story link on https://fundraiseup.com/case-studies.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Fundraise Up Case Study: Seller Productivity | Scratchpad",
+       "url": "https://www.scratchpad.com/customers/case-studies/fundraise-up",
+       "excerpts": [
+        "Tech stack Salesforce Scratchpad Slack GSuite Gong",
+        "Update Salesforce fields"
+       ]
+      }
+     ],
+     "reasoning": "Salesforce is named in Fundraise Up's technology stack and CRM workflow: https://www.scratchpad.com/customers/case-studies/fundraise-up.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Fundraise Up Case Study: Seller Productivity | Scratchpad",
+       "url": "https://www.scratchpad.com/customers/case-studies/fundraise-up",
+       "excerpts": [
+        "Tech stack Salesforce Scratchpad Slack GSuite Gong",
+        "By standardizing seller workflows in Scratchpad, Fundraise Up eliminated nearly half of the fourteen tools their team relied on and simplified the entire sales process. Automating admin tasks for sellers with AI Fundraise Up implemented AI CRM Updates to automatically capture and update MEDDIC fields from calls, ensuring accuracy and cleaner Salesforce hygiene"
+       ]
+      }
+     ],
+     "reasoning": "The customer case study documents Fundraise Up standardizing seller workflows in Scratchpad: https://www.scratchpad.com/customers/case-studies/fundraise-up.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Fundraise Up Case Study: Seller Productivity | Scratchpad",
+       "url": "https://www.scratchpad.com/customers/case-studies/fundraise-up",
+       "excerpts": [
+        "Tech stack Salesforce Scratchpad Slack GSuite Gong"
+       ]
+      }
+     ],
+     "reasoning": "Gong is explicitly named in Fundraise Up's technology stack: https://www.scratchpad.com/customers/case-studies/fundraise-up.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Fundraise Up and HubSpot",
+       "url": "https://www.hubspot.com/case-studies/fundraise-up?size=thousand_plus+",
+       "excerpts": [
+        "Their Sales and Success teams use the sales hub to communicate with customers and keep track of all of their interactions.",
+        "Their Marketing and Partnerships teams use the marketing hub to build web pages, send marketing emails, track LinkedIn ads, post on the blog, and schedule social media posts.",
+        "Bringing in donations, tracking them in HubSpot and then having the CRM and marketing automation attached to that is incredibly exciting."
+       ]
+      }
+     ],
+     "reasoning": "HubSpot's case study documents its Sales and Marketing hubs being used by Fundraise Up's teams. This is a public usage signal, but the older case study does not establish continued current use. Source: https://www.hubspot.com/case-studies/fundraise-up?size=thousand_plus+.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2017.0,
+    "compliance_certs": [
+     "SOC 2",
+     "ISO 27001",
+     "GDPR",
+     "PCI DSS"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Fundraise Up is an online donation platform that helps nonprofits accept donations, manage fundraising campaigns, and increase giving.",
+    "employee_band": "201-500",
+    "model_provider": "Anthropic (Claude)",
+    "pricing_page": true,
+    "funding_amount_usd": 70000000.0,
+    "named_customers": [
+     "UNICEF USA",
+     "Canadian Red Cross"
+    ],
+    "funding_date": "2025-01",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Scratchpad",
+     "Gong",
+     "HubSpot"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": true,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Brooklyn",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

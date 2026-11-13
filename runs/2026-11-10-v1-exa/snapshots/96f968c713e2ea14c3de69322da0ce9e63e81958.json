@@ -1,0 +1,22 @@
+{
+ "url": "https://www.getvim.ai/blog/a-case-study-how-to-reduce-the-cost-of-artifact-distribution-amazon-s3-direct-egress",
+ "fetched_at": "2026-11-10T19:51:45.948778+00:00",
+ "hours_after_run": 43.9,
+ "run_dates": [
+  "2026-11-09"
+ ],
+ "fetched_via": "firecrawl",
+ "status": 200,
+ "content_sha256": "65539abc8baa29f06e5cb5c057200bb6825558355dc5d471add4c3aaee039468",
+ "chars": 3718,
+ "truncated": false,
+ "title": "A Case Study: How to Reduce the Cost of Artifact Distribution – Amazon S3 Direct Egress — Vim",
+ "markdown": "As an R&D Group Manager at [Vim](https://www.getvim.ai/), I oversee the company’s cloud infrastructure and costs. As our customer base grows, we aspire to increase cloud costs incrementally to improve our investors’ ROI over time. As part of my daily responsibilities, [Ohad Dahan](https://www.linkedin.com/in/ohad-dahan-a31033266/), a Full-Stack Developer at Vim, and I reviewed our [Cloudflare](http://cloudflare.com/) dashboard and observed alarming bandwidth spikes on one of our delivery endpoints for new versions.\n\nFor anyone tasked with managing cloud services, you know this requires immediate attention. Upon further investigation, I found that the automatic download process initiated by thousands of clients each time a new version was released was the cause of these spikes.\n\nConsequently, we were incurring substantial egress costs to [S3](https://aws.amazon.com/s3/), amounting to approximately [$3,000 per month](https://calculator.aws/#/createCalculator/S3) at the present rate.\n\nCompounding this concern, our intention to transition to a daily release schedule would exacerbate the problem, potentially escalating costs to around [$50,000](https://calculator.aws/#/createCalculator/S3) per month.\n\nRecognizing the urgent need to address this issue, I immediately began brainstorming potential solutions.\n\nThis blog post is aimed to bring this real-world scenario to life in a case study so you can proactively lower your Amazon S3 Direct Egress costs.\n\n## Researching for a solution\n\nSince each update comprises identical copies of the same new version, caching seemed like a promising solution.\n\nUnfortunately, [CloudFront](https://aws.amazon.com/cloudfront/) costs weren’t much better at around [$2,500](https://calculator.aws/#/createCalculator/CloudFront) per month.\n\nBeing a big fan of CloudFlare, I knew of [R2](https://www.cloudflare.com/developer-platform/r2/) and quickly [calculated](https://www.cloudflare.com/pg-cloudflare-r2-vs-aws-s3/#htmlIdPlansMatrix) that using R2 would reduce costs to zero. The R2 interface is also compatible with S3; the main difference is that R2 does not charge on egress.\n\nHowever, since we had not used R2 previously, we determined that the best path forward would be to keep a fallback solution in place to mitigate any risk when working with a new infrastructure.\n\n## Results\n\n![](https://www.getvim.ai/assets/blog/a-case-study-how-to-reduce-the-cost-of-artifact-distribution-amazon-s3-direct-egress/post-img.png)![](https://www.getvim.ai/assets/blog/a-case-study-how-to-reduce-the-cost-of-artifact-distribution-amazon-s3-direct-egress/post-img-1.png)\n\nImplementing this was easy: I simply stored and served from R2 instead of S3.\n\n**ROI**\n\nAfter implementing this change, we saw impressive results in a few areas.\n\n**Cost:** We use a tool called [CloudHealthTech](http://cloudhealthtech.com/). It allows you to monitor your actual costs on the cloud. This change reduced the costs to near zero.\n\n**Speed:** Our download speed increased and became faster (an unexpected bonus).\n\n**ROI based on Speed and Storage:**\n\n**Before R2:** $4K per month for 30TB of traffic.\n\n**After R2:** $0.05K per month for 30TB of traffic.\n\n= 80% Improvement\n\nV\n\nVim Team\n\n## You may also _like_\n\n[Blog **The Healthcare Industry’s Growing Cybersecurity Challenge** Read now](https://www.getvim.ai/blog/the-healthcare-industrys-growing-cybersecurity-challenge) [Blog **Beyond Compliance: How InfoSec Powers Healthcare Innovation** Read now](https://www.getvim.ai/blog/beyond-compliance-how-infosec-powers-healthcare-innovation) [Blog **Vim Connect Evolution: The “Why” Behind The Platform** Read now](https://www.getvim.ai/blog/vim-connect-evolution-the-why-behind-the-platform)",
+ "error": null,
+ "final_url": null,
+ "archived_url": null,
+ "fields": [
+  "eng_blog"
+ ],
+ "late": true
+}

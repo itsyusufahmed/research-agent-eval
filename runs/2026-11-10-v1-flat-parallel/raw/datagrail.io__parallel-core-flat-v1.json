@@ -1,0 +1,654 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e962efd140ce4ec83",
+  "interaction_id": "trun_142119f6a1b4439e962efd140ce4ec83",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "spec_validation_warning",
+    "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+    "detail": {
+     "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+     "recommended_max_properties": 10.0,
+     "total_properties": 20.0
+    }
+   }
+  ],
+  "processor": "core",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-core-flat-v1",
+   "domain": "datagrail.io"
+  },
+  "created_at": "2026-11-10T18:47:33.054386Z",
+  "modified_at": "2026-11-10T18:52:05.486727Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e962efd140ce4ec83",
+   "interaction_id": "trun_142119f6a1b4439e962efd140ce4ec83",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "spec_validation_warning",
+     "message": "This task may be too complex for core processor. Consider using https://platform.parallel.ai/play to optimize your task schema.",
+     "detail": {
+      "documentation_url": "https://docs.parallel.ai/task-api/guides/specify-a-task",
+      "recommended_max_properties": 10.0,
+      "total_properties": 20.0
+     }
+    }
+   ],
+   "processor": "core",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-core-flat-v1",
+    "domain": "datagrail.io"
+   },
+   "created_at": "2026-11-10T18:47:33.054386Z",
+   "modified_at": "2026-11-10T18:52:05.486727Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "DataGrail Recognized as a Leader in the 2025 IDC MarketScape for Worldwide Data Privacy Compliance Software | DataGrail",
+       "url": "https://www.datagrail.io/press/datagrail-recognized-as-a-leader-in-the-2025-idc-marketscape-for-worldwide-data-privacy-compliance-software",
+       "excerpts": [
+        "The report noted, \"DataGrail, founded in May 2018 and headquartered in San Francisco, California, has rapidly grown into a widely trusted privacy automation, consent, and risk intelligence platform for midmarket and enterprise customers.\""
+       ]
+      }
+     ],
+     "reasoning": "The company\u2019s press page quotes a report that says DataGrail was founded in May 2018, establishing the founding year.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Data Privacy Solution & Platform for Security Teams | DataGrail",
+       "url": "https://www.datagrail.io/solutions/privacy-solution-for-security-teams",
+       "excerpts": [
+        "DataGrail prioritized meeting industry-leading security standards to demonstrate privacy, security, and reliability controls. We are HIPAA compliant and have SOC 2 Type II and Privacy Shield certifications."
+       ]
+      }
+     ],
+     "reasoning": "DataGrail\u2019s security-focused page explicitly says it is HIPAA compliant and has SOC 2 Type II certification. Those are the two requested categories it names; Privacy Shield is outside the requested list.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "DataGrail Recognized as a Leader in the 2025 IDC MarketScape for Worldwide Data Privacy Compliance Software | DataGrail",
+       "url": "https://www.datagrail.io/press/datagrail-recognized-as-a-leader-in-the-2025-idc-marketscape-for-worldwide-data-privacy-compliance-software",
+       "excerpts": [
+        "The report noted, \"DataGrail, founded in May 2018 and headquartered in San Francisco, California, has rapidly grown into a widely trusted privacy automation, consent, and risk intelligence platform for midmarket and enterprise customers.\""
+       ]
+      }
+     ],
+     "reasoning": "The company press page identifies its headquarters as San Francisco, California, which is in the United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "The DataGrail Engineering Way | DataGrail",
+       "url": "https://www.datagrail.io/blog/company/engineering/the-datagrail-engineering-way",
+       "excerpts": [
+        "[Engineering](https://www.datagrail.io/blog?category=engineering) The DataGrail Engineering Way [](http://www.linkedin.com/shareArticle?mini=true&url=https://www.datagrail.io/blog/company/engineering/the-datagrail-engineering-way/) [](https://twitter.com/intent/tweet?url=https://www.datagrail.io/blog/company/engineering/the-datagrail-engineering-way/) [Ignacio Zendejas](https://www.datagrail.io/author/ignacio/) \\- March 13, 2019 Hello, World! This is yet another engineering blog ( [YAEB](https://en.wikipedia.org/wiki/Yet_another) ). ... **9\\. We never reinvent the wheel.** Our goal is to build great products. Then, to solve technical challenges that get in the way of building great products. ... DG engineers are not afraid to take risks and make mistakes.** We should have infrastructure and processes in place to catch mistakes before they impact our customers."
+       ]
+      },
+      {
+       "title": "API Design Series \u2013 Part 1 | DataGrail",
+       "url": "https://www.datagrail.io/blog/company/engineering/api-design-series-part-1",
+       "excerpts": [
+        "[Engineering](https://www.datagrail.io/blog?category=engineering) API Design Series \u2013 Part 1 ... [Charlie Thomas](https://www.datagrail.io/author/charliethomas/) \\- August 15, 2019 _At DataGrail, we build a lot of integrations with 3rd party web APIs. Some APIs are a joy to work with, while some are a nightmare. In this blog series, we will look at design and feature choices that can make or break an application programming interface. Note that we will primarily focusing on RESTful web APIs._ **Authorization & Authentication** Figuring out how to properly authorize an HTTP request is generally our first interaction with a SaaS API, and it tends to set the tone for how painless or"
+       ]
+      },
+      {
+       "title": "Charlie Thomas - Senior Software Engineer at Lively, Inc. | The Org",
+       "url": "https://theorg.com/org/lively-me/org-chart/charlie-thomas",
+       "excerpts": [
+        "Charlie currently holds a position as a Senior Software Engineer at Lively, Inc. since October 2022. Prior to that, Charlie worked at DataGrail from August 2018 to January 2022, where they held the roles of both Senior Software Engineer and Software Engineer."
+       ]
+      },
+      {
+       "title": "Spotlight: Ignacio Zendejas, Co-founder | DataGrail",
+       "url": "https://www.datagrail.io/blog/company/employee-spotlight-ignacio-zendejas-co-founder-and-chief-technology-officer",
+       "excerpts": [
+        "**What is your role at DataGrail and how has it been shaped over the past 6 months?** I\u2019ve worn several hats. First, I\u2019ve been serving as tech lead responsible for designing (architecturally) and developing our products. It\u2019s also my responsibility to set a technical vision that will help us scale for years to come. More recently, I\u2019ve become focused on building our engineering team, doing less development and sharing my architecture design knowledge to ensure our team is well-equipped to build quickly and effectively to meet our customer demands. As we scale, I\u2019ve been serving scrum master duties as well."
+       ]
+      }
+     ],
+     "reasoning": "The Engineering-tagged Engineering Way article discusses engineering infrastructure and practices and is by Ignacio Zendejas, whom DataGrail identifies as its technical lead responsible for product architecture and development. A second Engineering-tagged post by Charlie Thomas explains design and implementation choices for the APIs used in DataGrail integrations; his profile identifies him as a DataGrail software engineer. Together these support at least two technical engineering posts.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "docs.datagrail.io",
+       "url": "https://docs.datagrail.io/llms.txt",
+       "excerpts": [
+        "> DataGrail is a complete privacy platform built for brands that need to go beyond a box-check solution and build real trust with their consumers. It covers the four pillars of privacy management: data discovery and mapping, DSR (Data Subject Request) management, consent management, and privacy risk assessment."
+       ]
+      },
+      {
+       "title": "DataGrail Recognized as a Leader in the 2025 IDC MarketScape for Worldwide Data Privacy Compliance Software | DataGrail",
+       "url": "https://www.datagrail.io/press/datagrail-recognized-as-a-leader-in-the-2025-idc-marketscape-for-worldwide-data-privacy-compliance-software",
+       "excerpts": [
+        "The report noted, \"DataGrail, founded in May 2018 and headquartered in San Francisco, California, has rapidly grown into a widely trusted privacy automation, consent, and risk intelligence platform for midmarket and enterprise customers.\""
+       ]
+      }
+     ],
+     "reasoning": "The documentation describes the platform\u2019s four privacy functions\u2014discovery and mapping, DSR management, consent, and risk assessment\u2014while the company press page identifies its audience as midmarket and enterprise customers.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/company/datagrail",
+       "excerpts": [
+        "website: https://www.datagrail.io employee count: 73 founded year: 2018"
+       ]
+      }
+     ],
+     "reasoning": "The LinkedIn company profile reports 73 employees, which falls in the 51-100 band.",
+     "confidence": "medium"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Privacy & Security Standards | DataGrail Documentation",
+       "url": "https://docs.datagrail.io/docs/vera/privacy-and-security/",
+       "excerpts": [
+        "**Separation of logic and data:** Vera's \"brain\" (the AI model, Claude Sonnet 5) is hosted in a completely separate environment (AWS Bedrock) from the core DataGrail database. The AI never has direct access to your data; instead, it accesses your data through a multi-layered security model (more below). **No training on customer data** : Your data is only used as _context_ for the model to provide responses. This means they are read from a database and fed back into the model each time you ask a question."
+       ]
+      }
+     ],
+     "reasoning": "DataGrail\u2019s Vera privacy-and-security documentation names Claude Sonnet 5 as the model and says it is hosted in AWS Bedrock.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "DataGrail : The Agentic Data Privacy Platform",
+       "url": "https://www.datagrail.io/",
+       "excerpts": [
+        "* Product",
+        "* Solutions",
+        "* [Customers](https://www.datagrail.io/customers/)",
+        "* Resources",
+        "* Company",
+        "* _Search_",
+        "* [Get a demo](https://www.datagrail.io/demo/?ir=_)",
+        "* [Contact Us](https://www.datagrail.io/contact/?ir=_)",
+        "* Learn more about DataGrail",
+        "* [About](https://www.datagrail.io/about/)",
+        "* [Careers](https://www.datagrail.io/careers/)",
+        "* [Press](https://www.datagrail.io/press/)",
+        "* [Contact Us](https://www.datagrail.io/contact/)"
+       ]
+      }
+     ],
+     "reasoning": "The official homepage navigation and company/footer links show product, solutions, resources, company, demo, and contact links, but no pricing link. This supports no public company pricing page.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "DataGrail",
+       "url": "https://aventure.vc/companies/datagrail-san-francisco-ca-us/fundraising",
+       "excerpts": [
+        "UpdatedOct 31, 2026 ... .facebook.com/datagrail) [linkedin](https://www.linkedin.com/company/datagrail) [twitter](https://x.com/datagrail) Disclosed Funding$84.2 million Last Deal Details$45 millionSeries C Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series C | October 2022 | $45,000,000 | $84,200,000 | 9 | | Series B | March 2021 |"
+       ]
+      }
+     ],
+     "reasoning": "The fundraising profile identifies the latest deal as a $45 million Series C and lists October 2022 as its date.",
+     "confidence": "medium"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "nCino Customer Case Study | DataGrail",
+       "url": "https://www.datagrail.io/customers/ncino",
+       "excerpts": [
+        "**DataGrail user since:** 2024"
+       ]
+      },
+      {
+       "title": "Life360 | DataGrail",
+       "url": "https://www.datagrail.io/customers/life360",
+       "excerpts": [
+        "\" Data Discovery has been really insightful for us."
+       ]
+      }
+     ],
+     "reasoning": "DataGrail\u2019s customer case-study pages identify nCino as a user and feature Life360 as a customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "DataGrail",
+       "url": "https://aventure.vc/companies/datagrail-san-francisco-ca-us/fundraising",
+       "excerpts": [
+        "UpdatedOct 31, 2026 ... .facebook.com/datagrail) [linkedin](https://www.linkedin.com/company/datagrail) [twitter](https://x.com/datagrail) Disclosed Funding$84.2 million Last Deal Details$45 millionSeries C Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series C | October 2022 | $45,000,000 | $84,200,000 | 9 | | Series B | March 2021 |"
+       ]
+      }
+     ],
+     "reasoning": "The funding-history table identifies the latest Series C date as October 2022, represented as 2022-10.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Job Application for Enterprise Account Executive at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7778458003",
+       "excerpts": [
+        "* Familiarity with a modern GTM tech stack (Salesforce, Gong, sales engagement and intelligence tooling) and a comfort using AI to work smarter."
+       ]
+      },
+      {
+       "title": "Job Application for Mid Market Account Executive at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981434003",
+       "excerpts": [
+        "* Familiarity with a modern GTM tech stack (Salesforce, Gong, sales engagement tooling) and comfort using AI to work smarter."
+       ]
+      },
+      {
+       "title": "Job Application for Senior Demand Generation Manager at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981433003",
+       "excerpts": [
+        "* Own paid media end to end, building, launching, and optimizing campaigns across Google Ads, LinkedIn Campaign Manager, and YouTube while partnering with our agency on execution.",
+        "* Drive the event calendar, including trade shows, webinars, and executive roundtables, sharpening targeting and follow-through while focusing investment on what delivers results.",
+        "* Carry a quarterly qualified-pipeline number and defend coverage, quality, and conversion with sales leadership, not just volume.",
+        "* Architect HubSpot as an owner, managing workflows, lifecycle stages, lead scoring, campaign objects, and the Salesforce sync.",
+        "* Build and defend the metrics that matter, including CPL, cost per qualified opportunity, event-sourced pipeline, and multi-touch attribution.",
+        "* Partner with Sales, Product Marketing, and RevOps internally, and agencies, venues, and sponsors externally, to run multiple concurrent campaigns and events without dropping a thread.",
+        "## **What You'll Bring**",
+        "* A track record of hands-on HubSpot ownership, having personally architected and administered an instance, including workflows, lifecycle, scoring, campaigns, and the Salesforce sync.",
+        "* Direct paid media execution, with hands-on experience building, optimizing, and pacing campaigns in Google Ads and LinkedIn Campaign Manager, not just briefing an agency.",
+        "* Salesforce fluency, with the ability to navigate objects, fields, and reports and reason about how marketing data lands in the CRM and why it breaks."
+       ]
+      }
+     ],
+     "reasoning": "Current DataGrail job postings name Salesforce and Gong in the GTM stack, and the demand-generation role names HubSpot, Salesforce, Google Ads, LinkedIn Campaign Manager, and YouTube. These postings provide visible CRM and marketing-stack signals; Gong appears as a familiarity requirement, so the evidence is a signal rather than independent proof of deployment.",
+     "confidence": "medium"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "linkedin.com",
+       "url": "https://linkedin.com/in/chrishwright",
+       "excerpts": [
+        "company name: DataGrail title: VP of GTM Ops, Growth & AI",
+        "start date year: 2026 start date month: 6 start date: 2026-06-01"
+       ]
+      },
+      {
+       "title": "DataGrail News and Activities",
+       "url": "https://www.theofficialboard.com/news/datagrail",
+       "excerpts": [
+        "Popular executive movements at DataGrail [Amy Reagan Hollo](https://www.theofficialboard.com/org-chart/datagrail), who was Vice President of Operations, is promoted to Chief Operating Officer \u00a0(posted on May 7 2026). [Create your alert](https://www.theofficialboard.com/user/sign-up-with-alert?companyName=DataGrail) to follow the executive moves at DataGrail."
+       ]
+      }
+     ],
+     "reasoning": "A profile records Christopher Wright as DataGrail\u2019s VP of GTM Ops, Growth & AI beginning June 2026, inside the 12-month window. Separately, an executive-movement report says Amy Reagan Hollo was promoted from VP Operations to COO in May 2026. This supports a leadership change during the period.",
+     "confidence": "medium"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Jobs at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail",
+       "excerpts": [
+        "## 3 jobs",
+        "### Customer Success",
+        "|Job |",
+        "| --- |",
+        "|[Senior Customer Success Manager Remote - United States](https://job-boards.greenhouse.io/datagrail/jobs/7982580003) |",
+        "Engineering",
+        "### Security & IT",
+        "|[IT & Business Systems Manager Remote - United States](https://job-boards.greenhouse.io/datagrail/jobs/7980031003) |",
+        "### Marketing",
+        "|[Senior Demand Generation Manager Remote - United States](https://job-boards.greenhouse.io/datagrail/jobs/7981433003) |"
+       ]
+      }
+     ],
+     "reasoning": "The live Greenhouse board lists three current roles\u2014Senior Customer Success Manager, IT & Business Systems Manager, and Senior Demand Generation Manager\u2014and none has an AI, ML, data-science, or related title.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "DataGrail",
+       "url": "https://aventure.vc/companies/datagrail-san-francisco-ca-us/fundraising",
+       "excerpts": [
+        "UpdatedOct 31, 2026 ... .facebook.com/datagrail) [linkedin](https://www.linkedin.com/company/datagrail) [twitter](https://x.com/datagrail) Disclosed Funding$84.2 million Last Deal Details$45 millionSeries C Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series C | October 2022 | $45,000,000 | $84,200,000 | 9 | | Series B | March 2021 |"
+       ]
+      }
+     ],
+     "reasoning": "The fundraising profile labels the latest round Series C.",
+     "confidence": "medium"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "DataGrail : The Agentic Data Privacy Platform",
+       "url": "https://www.datagrail.io/",
+       "excerpts": [
+        "* Support",
+        "* [Community](https://www.datagrail.io/community/)",
+        "* [Documentation](https://docs.datagrail.io/)",
+        "* [Glossary](https://www.datagrail.io/glossary/)"
+       ]
+      },
+      {
+       "title": "docs.datagrail.io",
+       "url": "https://docs.datagrail.io/llms.txt",
+       "excerpts": [
+        "[Documentation Home](https://docs.datagrail.io/): Overview of the DataGrail Privacy Platform and all products."
+       ]
+      },
+      {
+       "title": "DataGrail API v2 Reference | DataGrail Documentation",
+       "url": "https://docs.datagrail.io/api/v2",
+       "excerpts": [
+        "All API routes use the same base URL consisting of your organization's DataGrail URL and the API version:"
+       ]
+      }
+     ],
+     "reasoning": "The company homepage links to Documentation; its documentation home describes platform/product documentation, and the public API reference is another substantive article in the docs portal.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "DataGrail Recognized as a Leader in the 2025 IDC MarketScape for Worldwide Data Privacy Compliance Software | DataGrail",
+       "url": "https://www.datagrail.io/press/datagrail-recognized-as-a-leader-in-the-2025-idc-marketscape-for-worldwide-data-privacy-compliance-software",
+       "excerpts": [
+        "The report noted, \"DataGrail, founded in May 2018 and headquartered in San Francisco, California, has rapidly grown into a widely trusted privacy automation, consent, and risk intelligence platform for midmarket and enterprise customers.\""
+       ]
+      }
+     ],
+     "reasoning": "The company press page states that DataGrail is headquartered in San Francisco, California.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Introducing Automated DROP Compliance Built for Privacy Teams | DataGrail",
+       "url": "https://www.datagrail.io/blog/product/introducing-automated-drop-compliance-built-for-privacy-teams",
+       "excerpts": [
+        "[Kendall Lovett](https://www.datagrail.io/author/kendall-lovett/) \\- June 23, 2026",
+        "Today we're introducing [DataGrail Data Broker Compliance](https://www.datagrail.io/solutions/drop-compliance/) \u2014the first end-to-end DROP automation system built for privacy teams."
+       ]
+      }
+     ],
+     "reasoning": "DataGrail\u2019s June 23, 2026 announcement introduces automated DROP compliance, a major product offering. June 2026 is within the six months before November 9, 2026.",
+     "confidence": "high"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Job Application for Enterprise Account Executive at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7778458003",
+       "excerpts": [
+        "# Enterprise Account Executive",
+        "Remote - United States",
+        "Apply",
+        "## Apply for this job",
+        "\\*",
+        "indicates a required field",
+        "Autofill my application",
+        "First Name \\*"
+       ]
+      },
+      {
+       "title": "Job Application for Mid Market Account Executive at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981434003",
+       "excerpts": [
+        "# Mid Market Account Executive",
+        "Remote - United States",
+        "Apply",
+        "## Apply for this job",
+        "\\*",
+        "indicates a required field",
+        "Autofill my application",
+        "First Name \\*"
+       ]
+      }
+     ],
+     "reasoning": "The Enterprise Account Executive and Mid Market Account Executive Greenhouse postings each show an Apply link and an application form. Although the board index does not list them, the individual live postings support hiring AEs.",
+     "confidence": "medium"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "DataGrail",
+       "url": "https://aventure.vc/companies/datagrail-san-francisco-ca-us/fundraising",
+       "excerpts": [
+        "UpdatedOct 31, 2026 ... .facebook.com/datagrail) [linkedin](https://www.linkedin.com/company/datagrail) [twitter](https://x.com/datagrail) Disclosed Funding$84.2 million Last Deal Details$45 millionSeries C Funding History | <h3>Round</h3> | <h3>Date</h3> | <h3>Amount Raised</h3> | <h3>Raised To-Date</h3> | <h3>Investors</h3> | | Series C | October 2022 | $45,000,000 | $84,200,000 | 9 | | Series B | March 2021 |"
+       ]
+      }
+     ],
+     "reasoning": "The fundraising history identifies October 2022 as the latest round, well before the 18-month window beginning May 2025.",
+     "confidence": "medium"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Data Privacy Solution & Platform for Security Teams | DataGrail",
+       "url": "https://www.datagrail.io/solutions/privacy-solution-for-security-teams",
+       "excerpts": [
+        "We are HIPAA compliant and have SOC 2 Type II and Privacy Shield certifications."
+       ]
+      }
+     ],
+     "reasoning": "The security-focused page explicitly says DataGrail is HIPAA compliant.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.1",
+     "citations": [
+      {
+       "title": "Data Privacy Solution & Platform for Security Teams | DataGrail",
+       "url": "https://www.datagrail.io/solutions/privacy-solution-for-security-teams",
+       "excerpts": [
+        "We are HIPAA compliant and have SOC 2 Type II and Privacy Shield certifications."
+       ]
+      }
+     ],
+     "reasoning": "The security-focused page explicitly names SOC 2 Type II.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "nCino Customer Case Study | DataGrail",
+       "url": "https://www.datagrail.io/customers/ncino",
+       "excerpts": [
+        "**DataGrail user since:** 2024"
+       ]
+      }
+     ],
+     "reasoning": "The nCino case-study page identifies nCino as a DataGrail user.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Life360 | DataGrail",
+       "url": "https://www.datagrail.io/customers/life360",
+       "excerpts": [
+        "\" Data Discovery has been really insightful for us."
+       ]
+      }
+     ],
+     "reasoning": "The Life360 customer page identifies Life360 as a DataGrail customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Job Application for Senior Demand Generation Manager at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981433003",
+       "excerpts": [
+        "* Architect HubSpot as an owner, managing workflows, lifecycle stages, lead scoring, campaign objects, and the Salesforce sync.",
+        "* Build and defend the metrics that matter, including CPL, cost per qualified opportunity, event-sourced pipeline, and multi-touch attribution.",
+        "* Partner with Sales, Product Marketing, and RevOps internally, and agencies, venues, and sponsors externally, to run multiple concurrent campaigns and events without dropping a thread.",
+        "## **What You'll Bring**",
+        "* A track record of hands-on HubSpot ownership, having personally architected and administered an instance, including workflows, lifecycle, scoring, campaigns, and the Salesforce sync.",
+        "* Direct paid media execution, with hands-on experience building, optimizing, and pacing campaigns in Google Ads and LinkedIn Campaign Manager, not just briefing an agency.",
+        "* Salesforce fluency, with the ability to navigate objects, fields, and reports and reason about how marketing data lands in the CRM and why it breaks."
+       ]
+      }
+     ],
+     "reasoning": "The demand-generation posting names Salesforce and its sync with HubSpot.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Job Application for Enterprise Account Executive at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7778458003",
+       "excerpts": [
+        "* Familiarity with a modern GTM tech stack (Salesforce, Gong, sales engagement and intelligence tooling) and a comfort using AI to work smarter."
+       ]
+      }
+     ],
+     "reasoning": "The enterprise AE posting names Gong as part of a modern GTM technology stack.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Job Application for Senior Demand Generation Manager at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981433003",
+       "excerpts": [
+        "* Architect HubSpot as an owner, managing workflows, lifecycle stages, lead scoring, campaign objects, and the Salesforce sync.",
+        "* Build and defend the metrics that matter, including CPL, cost per qualified opportunity, event-sourced pipeline, and multi-touch attribution.",
+        "* Partner with Sales, Product Marketing, and RevOps internally, and agencies, venues, and sponsors externally, to run multiple concurrent campaigns and events without dropping a thread.",
+        "## **What You'll Bring**",
+        "* A track record of hands-on HubSpot ownership, having personally architected and administered an instance, including workflows, lifecycle, scoring, campaigns, and the Salesforce sync.",
+        "* Direct paid media execution, with hands-on experience building, optimizing, and pacing campaigns in Google Ads and LinkedIn Campaign Manager, not just briefing an agency.",
+        "* Salesforce fluency, with the ability to navigate objects, fields, and reports and reason about how marketing data lands in the CRM and why it breaks."
+       ]
+      }
+     ],
+     "reasoning": "The demand-generation posting describes HubSpot ownership and administration.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.3",
+     "citations": [
+      {
+       "title": "Job Application for Senior Demand Generation Manager at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981433003",
+       "excerpts": [
+        "* Own paid media end to end, building, launching, and optimizing campaigns across Google Ads, LinkedIn Campaign Manager, and YouTube while partnering with our agency on execution."
+       ]
+      }
+     ],
+     "reasoning": "The posting names Google Ads for paid-media campaigns.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.4",
+     "citations": [
+      {
+       "title": "Job Application for Senior Demand Generation Manager at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981433003",
+       "excerpts": [
+        "* Own paid media end to end, building, launching, and optimizing campaigns across Google Ads, LinkedIn Campaign Manager, and YouTube while partnering with our agency on execution."
+       ]
+      }
+     ],
+     "reasoning": "The posting names LinkedIn Campaign Manager for paid-media campaigns.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal.5",
+     "citations": [
+      {
+       "title": "Job Application for Senior Demand Generation Manager at DataGrail",
+       "url": "https://job-boards.greenhouse.io/datagrail/jobs/7981433003",
+       "excerpts": [
+        "* Own paid media end to end, building, launching, and optimizing campaigns across Google Ads, LinkedIn Campaign Manager, and YouTube while partnering with our agency on execution."
+       ]
+      }
+     ],
+     "reasoning": "The posting names YouTube as a paid-media campaign channel.",
+     "confidence": "medium"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2018.0,
+    "compliance_certs": [
+     "HIPAA",
+     "SOC 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": true,
+    "product_one_liner": "DataGrail automates data discovery and mapping, data-subject requests, consent management, and privacy-risk assessments for midmarket and enterprise brands.",
+    "employee_band": "51-100",
+    "model_provider": "Claude Sonnet 5, hosted on AWS Bedrock",
+    "pricing_page": false,
+    "funding_amount_usd": 45000000.0,
+    "named_customers": [
+     "nCino",
+     "Life360"
+    ],
+    "funding_date": "2022-10",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Gong",
+     "HubSpot",
+     "Google Ads",
+     "LinkedIn Campaign Manager",
+     "YouTube"
+    ],
+    "leadership_change_12mo": true,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series C",
+    "public_docs": true,
+    "hq_city": "San Francisco",
+    "launched_6mo": true,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

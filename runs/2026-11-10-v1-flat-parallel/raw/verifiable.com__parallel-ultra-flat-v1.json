@@ -1,0 +1,534 @@
+{
+ "run": {
+  "run_id": "trun_142119f6a1b4439e8e29425f8dde3ef5",
+  "interaction_id": "trun_142119f6a1b4439e8e29425f8dde3ef5",
+  "status": "completed",
+  "is_active": false,
+  "warnings": [
+   {
+    "type": "warning",
+    "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+   }
+  ],
+  "processor": "ultra",
+  "metadata": {
+   "run_date": "2026-11-09",
+   "prompt_version": "v1-2026-11-10",
+   "config_id": "parallel-ultra-flat-v1",
+   "domain": "verifiable.com"
+  },
+  "created_at": "2026-11-10T18:47:39.721228Z",
+  "modified_at": "2026-11-10T19:05:50.383598Z"
+ },
+ "result": {
+  "run": {
+   "run_id": "trun_142119f6a1b4439e8e29425f8dde3ef5",
+   "interaction_id": "trun_142119f6a1b4439e8e29425f8dde3ef5",
+   "status": "completed",
+   "is_active": false,
+   "warnings": [
+    {
+     "type": "warning",
+     "message": "enable_events unset for ultra. Setting to true by default. Consider setting to false explicitly if you do not want to track events for streaming."
+    }
+   ],
+   "processor": "ultra",
+   "metadata": {
+    "run_date": "2026-11-09",
+    "prompt_version": "v1-2026-11-10",
+    "config_id": "parallel-ultra-flat-v1",
+    "domain": "verifiable.com"
+   },
+   "created_at": "2026-11-10T18:47:39.721228Z",
+   "modified_at": "2026-11-10T19:05:50.383598Z"
+  },
+  "output": {
+   "basis": [
+    {
+     "field": "founded_year",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific Tracxn record for verifiable.com states founded_year: 2019.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs",
+     "citations": [
+      {
+       "title": "Verifiable Achieves SOC 2 Type 2 Certification",
+       "url": "https://verifiable.com/blog/verifiable-is-now-soc-2-certified",
+       "excerpts": [
+        "Verifiable is excited to share that as of March 2022 we are officially SOC 2 Type 2 compliant."
+       ]
+      }
+     ],
+     "reasoning": "Verifiable's certification announcement states that it is SOC 2 Type 2 compliant. This directly supports listing SOC 2 Type 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_country",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific record lists location_country as United States.",
+     "confidence": "high"
+    },
+    {
+     "field": "eng_blog",
+     "citations": [
+      {
+       "title": "Resource Library | Verifiable",
+       "url": "https://verifiable.com/resources",
+       "excerpts": [
+        "From legacy to scalable: Engineering the AI-powered credentialing stack [Read blog From legacy to scalable: Engineering the AI-powered credentialing stack](https://verifiable.com/blog/from-legacy-to-scalable-engineering-the-ai-powered-credentialing-stack) [](https://verifiable.com/blog/from-legacy-to-scalable-engineering-the-ai-powered-credentialing-stack) Blog AI Explained: The Intersection of System Safety, Generative AI, and Healthcare Credentialing with Brett Dooies"
+       ]
+      },
+      {
+       "title": "Engineering the AI-Powered Credentialing Stack",
+       "url": "https://verifiable.com/blog/from-legacy-to-scalable-engineering-the-ai-powered-credentialing-stack",
+       "excerpts": [
+        "By Janan Dave Published: October 21, 2025"
+       ]
+      },
+      {
+       "title": "AI Explained: System Safety Meets Healthcare Credentialing",
+       "url": "https://verifiable.com/blog/ai-explained-the-intersection-of-system-safety-generative-ai-and-healthcare-credentialing-with-brett-dooies",
+       "excerpts": [
+        "By Brett Dooies Published: December 15, 2025"
+       ]
+      }
+     ],
+     "reasoning": "The resource index lists an engineering-stack article and an AI Explained post. The engineering-stack post discusses data infrastructure and AI implementation, but its author is identified as Janan Dave, not as an engineer; the other post is a high-level discussion of AI safety and workflow principles rather than how the product is built. The evidence therefore does not establish two qualifying product-build posts by engineers, so the answer is false under the stated threshold.",
+     "confidence": "medium"
+    },
+    {
+     "field": "product_one_liner",
+     "citations": [
+      {
+       "title": "Verifiable Lands $27M Series B from Craft Ventures to Automate Healthcare Provider Credentialing",
+       "url": "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html",
+       "excerpts": [
+        "Verifiable is an API-first, provider network management platform built to help healthcare provider and payer organizations speed up network operations, save costs and streamline the provider experience."
+       ]
+      },
+      {
+       "title": "About Verifiable",
+       "url": "https://verifiable.com/about",
+       "excerpts": [
+        "Whether utilizing our software, our NCQA-certified CVO, or a hybrid of both, we enable teams to automate their workflows across the entire provider journey\u2014unifying credentialing, enrollment, and monitoring into a single source of truth."
+       ]
+      }
+     ],
+     "reasoning": "The company describes an API-first provider-network management platform for healthcare provider and payer organizations; its about page says it unifies credentialing, enrollment, and monitoring.",
+     "confidence": "high"
+    },
+    {
+     "field": "employee_band",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific record reports 138 employees, which falls in the 101-200 band.",
+     "confidence": "high"
+    },
+    {
+     "field": "model_provider",
+     "citations": [
+      {
+       "title": "Subprocessors",
+       "url": "https://verifiable.com/legal/subprocessors",
+       "excerpts": [
+        "**Anthropic, PBC ** AI model provider whose large language model (Claude) is used to support automated code generation, evaluation, testing, and workflow assistance in connection with Verifiable's platform and services."
+       ]
+      }
+     ],
+     "reasoning": "Verifiable's subprocessors page names Anthropic, PBC and Claude, and specifies the disclosed support uses: code generation, evaluation, testing, and workflow assistance.",
+     "confidence": "high"
+    },
+    {
+     "field": "pricing_page",
+     "citations": [
+      {
+       "title": "Request a demo | Verifiable",
+       "url": "https://verifiable.com/get-demo",
+       "excerpts": [
+        "Products The Only Agentic AI Built for the Future of Credentialing [Explore](https://verifiable.com/credagent) Who We Serve Who We Serve [Provider Organizations](https://verifiable.com/providers) [Health & Dental Plans](https://verifiable.com/payer-provider-network) Verifiable works with organizations across the healthcare ecosystem [Explore](https://verifiable.com/who-we-serve) Resources Resources [Resources Library](https://verifiable.com/resources) [Blog](https://verifiable.com/blog) [Community](https://verifiable.com/community) [API Docs](https://docs.discovery.verifiable.com/reference/current/overview/) Featured Blog DEA Number Lookup, Registration & Verification: 2026 FAQ [Explore](https://verifiable.com/blog/commonly-asked-questions-regarding-dea-registration-and-dea-numbers) Company Company [About Us](https://verifiable.com/about) [Careers](https://jobs.lever.co/verifiable) [Press",
+        "Ready to see the Verifiable difference? Verifiable\u2019s suite of products shifts provider operations from manual task management to sustainable scale. Book a Demo"
+       ]
+      }
+     ],
+     "reasoning": "The site's navigation has no pricing link, and the demo page directs visitors to book a demo rather than listing public prices or plans. This supports false.",
+     "confidence": "medium"
+    },
+    {
+     "field": "funding_amount_usd",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      },
+      {
+       "title": "Verifiable Lands $27M Series B from Craft Ventures to Automate Healthcare Provider Credentialing",
+       "url": "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html",
+       "excerpts": [
+        "Verifiable Lands $27M Series B from Craft Ventures to Automate Healthcare Provider Credentialing"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific funding record gives the latest round amount as $27,000,000; the funding announcement headline independently identifies a $27M Series B.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers",
+     "citations": [
+      {
+       "title": "Humana Dental Case Study",
+       "url": "https://verifiable.com/resources/case-studies/humana-dental-case-study",
+       "excerpts": [
+        "Case Study - Humana Dental"
+       ]
+      },
+      {
+       "title": "Access TeleCare on Verifiable",
+       "url": "https://verifiable.com/resources/case-studies/access-telecare-on-verifiable",
+       "excerpts": [
+        "Case Study - Access Telecare How Access TeleCare Achieved 3x Faster Provider Onboarding"
+       ]
+      },
+      {
+       "title": "CHA Nevada on Verifiable: Provider scheduling unblocked by credentialing status visibility",
+       "url": "https://verifiable.com/resources/case-studies/cha-nevada",
+       "excerpts": [
+        "Case Study - CHA Nevada CHA Nevada **Unblocked** Provider Scheduling with Credentialing Status Visibility CHA Nevada solved their credentialing inefficiencies and uncovered revenue opportunities by moving providers through to scheduling faster"
+       ]
+      }
+     ],
+     "reasoning": "Verifiable's case-study pages identify Humana Dental, Access TeleCare, and CHA Nevada as customer organizations.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_date",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific record reports the latest funding-round date as 2023-06-10; in the requested YYYY-MM format, that is 2023-06.",
+     "confidence": "medium"
+    },
+    {
+     "field": "crm_stack_signal",
+     "citations": [
+      {
+       "title": "Verifiable - Business Development Representative",
+       "url": "https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a",
+       "excerpts": [
+        "**Database Management & Reporting:** Maintaining and updating a database of prospect accounts, contacts, leads, etc, using Verifiable's instance of Salesforce.",
+        "**Tech-Stack Proficiency:** proficiency as end-user with Salesforce, Outreach/Salesloft, LinkedIn, intent tools, parallel dialers, & more."
+       ]
+      }
+     ],
+     "reasoning": "A Verifiable job post names its Salesforce instance; another names Salesforce, Outreach/Salesloft, and LinkedIn as sales-stack tools.",
+     "confidence": "high"
+    },
+    {
+     "field": "leadership_change_12mo",
+     "citations": [
+      {
+       "title": "About Verifiable",
+       "url": "https://verifiable.com/about",
+       "excerpts": [
+        "Who We Are We\u2019re a dedicated team of professionals across the U.S. and around the globe. With decades of shared experience at the intersection of cutting-edge technology and the healthcare industry, we\u2019re driven to solve hard problems and challenge the status quo. Our team strives to embody our core values in everything we do\u2014from hiring to customer experience to product decisions. Our core values are:"
+       ]
+      }
+     ],
+     "reasoning": "The about page gives a general team description but no complete leadership roster or joining dates. No in-window C-level or VP change was verified, so the answer remains unknown rather than a negative.",
+     "confidence": "low"
+    },
+    {
+     "field": "ai_ml_roles_open",
+     "citations": [
+      {
+       "title": "Verifiable",
+       "url": "https://jobs.lever.co/verifiable",
+       "excerpts": [
+        "LOCATION TYPE LOCATION TEAM WORK TYPE CUSTOMER SUCCESS APPLY Customer Success Manager REMOTE \u2014 FULL TIMEREMOTE APPLY Enterprise Customer Success Manager REMOTE \u2014 FULL TIMEREMOTE ENGINEERING APPLY Solutions Engineer REMOTE \u2014 FULL TIMEREMOTE"
+       ]
+      }
+     ],
+     "reasoning": "The rendered careers board lists customer-success and solutions-engineering roles, but no AI, ML, or data-science role title.",
+     "confidence": "high"
+    },
+    {
+     "field": "funding_stage",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      },
+      {
+       "title": "Verifiable Lands $27M Series B from Craft Ventures to Automate Healthcare Provider Credentialing",
+       "url": "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html",
+       "excerpts": [
+        "Verifiable Lands $27M Series B from Craft Ventures to Automate Healthcare Provider Credentialing"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific funding record identifies Series B as the latest round; the announcement headline confirms the same stage.",
+     "confidence": "high"
+    },
+    {
+     "field": "public_docs",
+     "citations": [
+      {
+       "title": "Verifiable API Documentation",
+       "url": "https://docs.discovery.verifiable.com/references/api",
+       "excerpts": [
+        "[* Introduction](https://docs.discovery.verifiable.com/references/api/section/introduction) [* Release Notes](https://docs.discovery.verifiable.com/references/api/section/release-notes) [* Getting Started](https://docs.discovery.verifiable.com/references/api/section/getting-started) [* Common Concepts](https://docs.discovery.verifiable.com/references/api/section/common-concepts) Authentication [* Authentication](https://docs.discovery.verifiable.com/references/api/authentication) Definitions [* Definitions](https://docs.discovery.verifiable.com/references/api/definitions) Providers [* Providers](https://docs.discovery.verifiable.com/references/api/providers) [* ProvidersInfo](https://docs.discovery.verifiable.com/references/api/providersinfo) [* ProviderProfiles](https://docs.discovery.verifiable.com/references/api/providerprofiles) [* Notes](https://docs.discovery.verifiable.com/references/api/notes) [* Files](https://docs.discovery.verifiable.com/references/api/files)",
+        "Introduction This document contains the official documentation for the latest version of the Verifiable API."
+       ]
+      }
+     ],
+     "reasoning": "The public API documentation identifies itself as official and includes numerous reference pages and sections, satisfying the several-articles requirement.",
+     "confidence": "high"
+    },
+    {
+     "field": "hq_city",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      }
+     ],
+     "reasoning": "The company-specific record lists Austin as its location city.",
+     "confidence": "high"
+    },
+    {
+     "field": "launched_6mo",
+     "citations": [
+      {
+       "title": "Verifiable Press",
+       "url": "https://verifiable.com/press",
+       "excerpts": [
+        "[Verifiable Launches CredAgent\u00ae, the Industry's First Autonomous AI Credentialing Agent PRESS Feb 26, 2026]"
+       ]
+      },
+      {
+       "title": "Altman-Backed Verifiable Launches AI Credentialing Agent",
+       "url": "https://verifiable.com/blog/altman-backed-startup-verifiable-rolls-out-ai-agent-to-automate-credentialing",
+       "excerpts": [
+        "Published: February 26, 2026 _This article \"Altman-backed startup Verifiable rolls out AI agent to automate credentialing\" originally appeared in_ [_Fierce Healthcare on Feb 26, ..."
+       ]
+      }
+     ],
+     "reasoning": "The press index identifies the newest launch-type announcement as the CredAgent launch on February 26, 2026, before the six-month window beginning May 9, 2026. No later launch was identified in the readable press/blog history.",
+     "confidence": "medium"
+    },
+    {
+     "field": "hiring_sdr_ae",
+     "citations": [
+      {
+       "title": "Verifiable - Enterprise Account Executive",
+       "url": "https://jobs.lever.co/verifiable/5a01eded-7e4c-473d-8dd5-0711cd08ebb0",
+       "excerpts": [
+        "Enterprise Account Executive"
+       ]
+      },
+      {
+       "title": "Verifiable - Enterprise Account Executive",
+       "url": "https://jobs.lever.co/verifiable/5a01eded-7e4c-473d-8dd5-0711cd08ebb0/apply",
+       "excerpts": [
+        "Submit your application"
+       ]
+      }
+     ],
+     "reasoning": "The Enterprise Account Executive posting is titled as such and its application page is open with a submit-application form, supporting that the company is hiring an AE.",
+     "confidence": "high"
+    },
+    {
+     "field": "raised_18mo",
+     "citations": [
+      {
+       "title": "Tracxn Private Data",
+       "url": "https://tracxn.com",
+       "excerpts": [
+        "name: Verifiable; website_url: https://verifiable.com; founded_year: 2019; employee_count_official: 138; location_city: Austin; location_country: United States; stage: Series B; latest_funding_round_name: Series B; latest_funding_round_date: 2023-06-10; latest_funding_round_amount_usd: 27000000.0; total_disclosed_funding_usd: 50068829.0; funded: Yes; has_investment: null; investment_count: null"
+       ]
+      },
+      {
+       "title": "Verifiable Lands $27M Series B from Craft Ventures to Automate Healthcare Provider Credentialing",
+       "url": "https://www.prnewswire.com/news-releases/verifiable-lands-27m-series-b-from-craft-ventures-to-automate-healthcare-provider-credentialing-301873076.html",
+       "excerpts": [
+        "Jul 10, 2023, 13:39 ET"
+       ]
+      }
+     ],
+     "reasoning": "The latest funding record is a 2023 round, and the funding announcement is dated July 10, 2023\u2014well before the 18-month window preceding November 9, 2026. Therefore, raised_18mo is false.",
+     "confidence": "high"
+    },
+    {
+     "field": "compliance_certs.0",
+     "citations": [
+      {
+       "title": "Verifiable Achieves SOC 2 Type 2 Certification",
+       "url": "https://verifiable.com/blog/verifiable-is-now-soc-2-certified",
+       "excerpts": [
+        "Verifiable is excited to share that as of March 2022 we are officially SOC 2 Type 2 compliant."
+       ]
+      }
+     ],
+     "reasoning": "The cited company announcement explicitly names SOC 2 Type 2.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.0",
+     "citations": [
+      {
+       "title": "Humana Dental Case Study",
+       "url": "https://verifiable.com/resources/case-studies/humana-dental-case-study",
+       "excerpts": [
+        "Case Study - Humana Dental"
+       ]
+      }
+     ],
+     "reasoning": "The Verifiable case study is titled for Humana Dental.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.1",
+     "citations": [
+      {
+       "title": "Access TeleCare on Verifiable",
+       "url": "https://verifiable.com/resources/case-studies/access-telecare-on-verifiable",
+       "excerpts": [
+        "Case Study - Access Telecare How Access TeleCare Achieved 3x Faster Provider Onboarding"
+       ]
+      }
+     ],
+     "reasoning": "The Verifiable case study names Access TeleCare as its customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "named_customers.2",
+     "citations": [
+      {
+       "title": "CHA Nevada on Verifiable: Provider scheduling unblocked by credentialing status visibility",
+       "url": "https://verifiable.com/resources/case-studies/cha-nevada",
+       "excerpts": [
+        "Case Study - CHA Nevada CHA Nevada **Unblocked** Provider Scheduling with Credentialing Status Visibility CHA Nevada solved their credentialing inefficiencies and uncovered revenue opportunities by moving providers through to scheduling faster"
+       ]
+      }
+     ],
+     "reasoning": "The Verifiable case study names CHA Nevada as its customer.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.0",
+     "citations": [
+      {
+       "title": "Verifiable - Business Development Representative",
+       "url": "https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a",
+       "excerpts": [
+        "**Database Management & Reporting:** Maintaining and updating a database of prospect accounts, contacts, leads, etc, using Verifiable's instance of Salesforce."
+       ]
+      }
+     ],
+     "reasoning": "The job post explicitly names Verifiable's Salesforce instance.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.1",
+     "citations": [
+      {
+       "title": "Verifiable - Business Development Representative",
+       "url": "https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a",
+       "excerpts": [
+        "**Tech-Stack Proficiency:** proficiency as end-user with Salesforce, Outreach/Salesloft, LinkedIn, intent tools, parallel dialers, & more."
+       ]
+      }
+     ],
+     "reasoning": "The job post names Outreach/Salesloft as sales-stack tools.",
+     "confidence": "high"
+    },
+    {
+     "field": "crm_stack_signal.2",
+     "citations": [
+      {
+       "title": "Verifiable - Business Development Representative",
+       "url": "https://jobs.lever.co/verifiable/ee87827b-616d-4c23-9fb3-d8b65f452f1a",
+       "excerpts": [
+        "**Tech-Stack Proficiency:** proficiency as end-user with Salesforce, Outreach/Salesloft, LinkedIn, intent tools, parallel dialers, & more."
+       ]
+      }
+     ],
+     "reasoning": "The job post names LinkedIn as a sales-stack tool.",
+     "confidence": "high"
+    }
+   ],
+   "type": "json",
+   "content": {
+    "founded_year": 2019.0,
+    "compliance_certs": [
+     "SOC 2 Type 2"
+    ],
+    "hq_country": "United States",
+    "eng_blog": false,
+    "product_one_liner": "Verifiable automates provider credentialing, enrollment, and monitoring for healthcare provider and payer organizations.",
+    "employee_band": "101-200",
+    "model_provider": "Anthropic Claude, disclosed for automated code generation, evaluation, testing, and workflow assistance.",
+    "pricing_page": false,
+    "funding_amount_usd": 27000000.0,
+    "named_customers": [
+     "Humana Dental",
+     "Access TeleCare",
+     "CHA Nevada"
+    ],
+    "funding_date": "2023-06",
+    "crm_stack_signal": [
+     "Salesforce",
+     "Outreach/Salesloft",
+     "LinkedIn"
+    ],
+    "leadership_change_12mo": null,
+    "ai_ml_roles_open": false,
+    "funding_stage": "Series B",
+    "public_docs": true,
+    "hq_city": "Austin",
+    "launched_6mo": false,
+    "hiring_sdr_ae": true,
+    "raised_18mo": false
+   }
+  }
+ }
+}

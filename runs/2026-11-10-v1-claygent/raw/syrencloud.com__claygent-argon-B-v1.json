@@ -1,0 +1,396 @@
+{
+ "run": {
+  "routine_run_id": "run_0tob2agQbib43Q5ZKRK",
+  "status": "complete",
+  "total": 1,
+  "finished": 1,
+  "data": [
+   {
+    "id": "syrencloud.com",
+    "status": "complete",
+    "result": {
+     "claygent-argon-B": {
+      "eng_blog": {
+       "notes": "The blog index includes multiple posts detailing product builds and architecture; technical authors include Syren solution architects. The posts are technical rather than merely marketing, though author roles are described as architect rather than uniformly titled engineer.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/blogs",
+        "https://syrencloud.com/blogs/databricks-lakebase-ai-pricing-agent/",
+        "https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning",
+        "https://syrencloud.com/blogs/author/anmol",
+        "https://syrencloud.com/blogs/author/shivam-porwal"
+       ]
+      },
+      "reasoning": "First-party company and compliance pages establish Syren’s services, headquarters, founding year, customers, and listed compliance items. The employee band comes from its LinkedIn profile; the funding database reports no rounds. Public site pages show no pricing or product-docs portal, while the dated blog and live recruiting postings support recent launch and hiring answers. Named model/tool signals are implementation-specific.",
+      "confidence": "medium",
+      "stepsTaken": [
+       "Visited https://syrencloud.com/",
+       "Visited https://compliance.syrencloud.com/",
+       "Visited https://syrencloud.com/contact",
+       "Visited https://linkedin.com/company/31334310",
+       "Visited https://syrencloud.com/licence-agreement",
+       "Visited https://syrencloud.com/blogs",
+       "Visited https://syrencloud.com/blogs/databricks-lakebase-ai-pricing-agent/",
+       "Visited https://syrencloud.com/author/anmol",
+       "Visited https://syrencloud.com/blogs/author/shivam-porwal",
+       "Visited https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning/",
+       "Visited https://syrencloud.keka.com/careers/jobdetails/141085",
+       "Visited https://syrencloud.com/case-studies/gen-ai-control-tower-implementation/",
+       "Visited https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70",
+       "Visited https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+       "Visited https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning",
+       "Visited https://www.instagram.com/syrencloud/p/DQ6pHZ-kWx5"
+      ],
+      "hq_location": {
+       "notes": "The company’s legal page names Bellevue, Washington, United States as headquarters.",
+       "value": {
+        "city": "Bellevue",
+        "country": "United States"
+       },
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/licence-agreement"
+       ]
+      },
+      "public_docs": {
+       "notes": "No product documentation, help-center, or developer-portal link appears in the public site footer; targeted searches did not surface a public docs portal.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/"
+       ]
+      },
+      "raised_18mo": {
+       "notes": "The funding profile reports no rounds, so there was no funding raise in the 18 months before 2026-11-09.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70"
+       ]
+      },
+      "founded_year": {
+       "notes": "Syren’s legal/about statement says it was founded in 2020.",
+       "value": 2020,
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/licence-agreement"
+       ]
+      },
+      "last_funding": {
+       "notes": "Tracxn reports that Syren has not raised any funding rounds; amount is zero and date is blank as the neutral schema values for no round.",
+       "value": {
+        "date": "",
+        "stage": "none",
+        "amount_usd": 0
+       },
+       "status": "asserted",
+       "citations": [
+        "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70"
+       ]
+      },
+      "launched_6mo": {
+       "notes": "Syren published its Sales Journey AI field-planning product post on 2026-06-09, within the six-month window ending 2026-11-09.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning"
+       ]
+      },
+      "pricing_page": {
+       "notes": "The public homepage/footer has no pricing link or public pricing page; the contact page directs visitors to discuss goals with a solutions expert.",
+       "value": false,
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/",
+        "https://syrencloud.com/contact"
+       ]
+      },
+      "employee_band": {
+       "notes": "The LinkedIn company profile lists the company-size band as 201–500 employees.",
+       "value": "201-500",
+       "status": "asserted",
+       "citations": [
+        "https://linkedin.com/company/31334310"
+       ]
+      },
+      "hiring_sdr_ae": {
+       "notes": "A current Syren listing is for a full-time Sales Development Representative and includes an Apply option.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09"
+       ]
+      },
+      "model_provider": {
+       "notes": "These are model/platform tools named for specific implementations, not a claim that one provider powers all Syren products.",
+       "value": "Syren names Databricks Foundation Models and Model Serving for its Pricing Agent; a separate GenAI control-tower case study names LlamaAI and VannaAI.",
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/blogs/databricks-lakebase-ai-pricing-agent/",
+        "https://syrencloud.com/case-studies/gen-ai-control-tower-implementation/"
+       ]
+      },
+      "named_customers": {
+       "notes": "Syren’s compliance profile identifies these organizations among the clients it serves.",
+       "value": [
+        "Johnson & Johnson",
+        "eBay",
+        "Microsoft",
+        "GitHub"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://compliance.syrencloud.com/"
+       ]
+      },
+      "ai_ml_roles_open": {
+       "notes": "Syren’s careers portal has a full-time AI Engineer + Knowledge Graph/Ontology posting.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.keka.com/careers/jobdetails/141085"
+       ]
+      },
+      "compliance_certs": {
+       "notes": "Listed on Syren’s compliance page; PCI DSS is not named there.",
+       "value": [
+        "HIPAA",
+        "SOC 2",
+        "GDPR",
+        "ISO 27001:2022"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://compliance.syrencloud.com/"
+       ]
+      },
+      "crm_stack_signal": {
+       "notes": "The SDR posting lists these as sales and prospecting platforms candidates should know; it does not independently prove internal deployment.",
+       "value": [
+        "LinkedIn Sales Navigator",
+        "Apollo",
+        "HubSpot",
+        "ZoomInfo"
+       ],
+       "status": "asserted",
+       "citations": [
+        "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09"
+       ]
+      },
+      "product_one_liner": {
+       "notes": "Syren describes itself as a data engineering and supply-chain solutions company and an enterprise Data & AI adoption partner.",
+       "value": "Syren provides enterprise data-engineering, supply-chain optimization, and AI solutions that help organizations modernize data platforms and operationalize AI.",
+       "status": "asserted",
+       "citations": [
+        "https://syrencloud.com/",
+        "https://syrencloud.com/licence-agreement"
+       ]
+      },
+      "leadership_change_12mo": {
+       "notes": "Syren announced Vibhu Tiwari as Vice President, GTM & Channels on 2025-11-11, inside the 12-month window.",
+       "value": true,
+       "status": "asserted",
+       "citations": [
+        "https://www.instagram.com/syrencloud/p/DQ6pHZ-kWx5"
+       ]
+      }
+     }
+    }
+   }
+  ]
+ },
+ "item": {
+  "id": "syrencloud.com",
+  "status": "complete",
+  "result": {
+   "claygent-argon-B": {
+    "eng_blog": {
+     "notes": "The blog index includes multiple posts detailing product builds and architecture; technical authors include Syren solution architects. The posts are technical rather than merely marketing, though author roles are described as architect rather than uniformly titled engineer.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/blogs",
+      "https://syrencloud.com/blogs/databricks-lakebase-ai-pricing-agent/",
+      "https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning",
+      "https://syrencloud.com/blogs/author/anmol",
+      "https://syrencloud.com/blogs/author/shivam-porwal"
+     ]
+    },
+    "reasoning": "First-party company and compliance pages establish Syren’s services, headquarters, founding year, customers, and listed compliance items. The employee band comes from its LinkedIn profile; the funding database reports no rounds. Public site pages show no pricing or product-docs portal, while the dated blog and live recruiting postings support recent launch and hiring answers. Named model/tool signals are implementation-specific.",
+    "confidence": "medium",
+    "stepsTaken": [
+     "Visited https://syrencloud.com/",
+     "Visited https://compliance.syrencloud.com/",
+     "Visited https://syrencloud.com/contact",
+     "Visited https://linkedin.com/company/31334310",
+     "Visited https://syrencloud.com/licence-agreement",
+     "Visited https://syrencloud.com/blogs",
+     "Visited https://syrencloud.com/blogs/databricks-lakebase-ai-pricing-agent/",
+     "Visited https://syrencloud.com/author/anmol",
+     "Visited https://syrencloud.com/blogs/author/shivam-porwal",
+     "Visited https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning/",
+     "Visited https://syrencloud.keka.com/careers/jobdetails/141085",
+     "Visited https://syrencloud.com/case-studies/gen-ai-control-tower-implementation/",
+     "Visited https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70",
+     "Visited https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09",
+     "Visited https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning",
+     "Visited https://www.instagram.com/syrencloud/p/DQ6pHZ-kWx5"
+    ],
+    "hq_location": {
+     "notes": "The company’s legal page names Bellevue, Washington, United States as headquarters.",
+     "value": {
+      "city": "Bellevue",
+      "country": "United States"
+     },
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/licence-agreement"
+     ]
+    },
+    "public_docs": {
+     "notes": "No product documentation, help-center, or developer-portal link appears in the public site footer; targeted searches did not surface a public docs portal.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/"
+     ]
+    },
+    "raised_18mo": {
+     "notes": "The funding profile reports no rounds, so there was no funding raise in the 18 months before 2026-11-09.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70"
+     ]
+    },
+    "founded_year": {
+     "notes": "Syren’s legal/about statement says it was founded in 2020.",
+     "value": 2020,
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/licence-agreement"
+     ]
+    },
+    "last_funding": {
+     "notes": "Tracxn reports that Syren has not raised any funding rounds; amount is zero and date is blank as the neutral schema values for no round.",
+     "value": {
+      "date": "",
+      "stage": "none",
+      "amount_usd": 0
+     },
+     "status": "asserted",
+     "citations": [
+      "https://tracxn.com/d/companies/syren/__q7r_hgLmSHkSYWsPJzgvEyZiOsFvL_8lSaYD1oXJC70"
+     ]
+    },
+    "launched_6mo": {
+     "notes": "Syren published its Sales Journey AI field-planning product post on 2026-06-09, within the six-month window ending 2026-11-09.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/blogs/syren-sales-journey-ai-databricks-field-sales-planning"
+     ]
+    },
+    "pricing_page": {
+     "notes": "The public homepage/footer has no pricing link or public pricing page; the contact page directs visitors to discuss goals with a solutions expert.",
+     "value": false,
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/",
+      "https://syrencloud.com/contact"
+     ]
+    },
+    "employee_band": {
+     "notes": "The LinkedIn company profile lists the company-size band as 201–500 employees.",
+     "value": "201-500",
+     "status": "asserted",
+     "citations": [
+      "https://linkedin.com/company/31334310"
+     ]
+    },
+    "hiring_sdr_ae": {
+     "notes": "A current Syren listing is for a full-time Sales Development Representative and includes an Apply option.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09"
+     ]
+    },
+    "model_provider": {
+     "notes": "These are model/platform tools named for specific implementations, not a claim that one provider powers all Syren products.",
+     "value": "Syren names Databricks Foundation Models and Model Serving for its Pricing Agent; a separate GenAI control-tower case study names LlamaAI and VannaAI.",
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/blogs/databricks-lakebase-ai-pricing-agent/",
+      "https://syrencloud.com/case-studies/gen-ai-control-tower-implementation/"
+     ]
+    },
+    "named_customers": {
+     "notes": "Syren’s compliance profile identifies these organizations among the clients it serves.",
+     "value": [
+      "Johnson & Johnson",
+      "eBay",
+      "Microsoft",
+      "GitHub"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://compliance.syrencloud.com/"
+     ]
+    },
+    "ai_ml_roles_open": {
+     "notes": "Syren’s careers portal has a full-time AI Engineer + Knowledge Graph/Ontology posting.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.keka.com/careers/jobdetails/141085"
+     ]
+    },
+    "compliance_certs": {
+     "notes": "Listed on Syren’s compliance page; PCI DSS is not named there.",
+     "value": [
+      "HIPAA",
+      "SOC 2",
+      "GDPR",
+      "ISO 27001:2022"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://compliance.syrencloud.com/"
+     ]
+    },
+    "crm_stack_signal": {
+     "notes": "The SDR posting lists these as sales and prospecting platforms candidates should know; it does not independently prove internal deployment.",
+     "value": [
+      "LinkedIn Sales Navigator",
+      "Apollo",
+      "HubSpot",
+      "ZoomInfo"
+     ],
+     "status": "asserted",
+     "citations": [
+      "https://platform.uplers.com/talent/all-opportunities/HR1178613457555005?source=QUJYY0VXYTVQOFluUGhvZmhCbHVQZz09"
+     ]
+    },
+    "product_one_liner": {
+     "notes": "Syren describes itself as a data engineering and supply-chain solutions company and an enterprise Data & AI adoption partner.",
+     "value": "Syren provides enterprise data-engineering, supply-chain optimization, and AI solutions that help organizations modernize data platforms and operationalize AI.",
+     "status": "asserted",
+     "citations": [
+      "https://syrencloud.com/",
+      "https://syrencloud.com/licence-agreement"
+     ]
+    },
+    "leadership_change_12mo": {
+     "notes": "Syren announced Vibhu Tiwari as Vice President, GTM & Channels on 2025-11-11, inside the 12-month window.",
+     "value": true,
+     "status": "asserted",
+     "citations": [
+      "https://www.instagram.com/syrencloud/p/DQ6pHZ-kWx5"
+     ]
+    }
+   }
+  }
+ }
+}
