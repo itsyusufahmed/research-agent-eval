@@ -4,37 +4,37 @@ Per 100 graded facts. Net score: a right answer adds one, a wrong answer subtrac
 
 | config | right | wrong | blank | net, wrong costs 1 | 95% interval | wrong costs 0 | wrong costs 2 | wrong costs 3 |
 |---|---|---|---|---|---|---|---|---|
-| exa-agent-medium-A-v1 | 81.8 | 14.7 | 3.4 | **67.1** | 63.7 to 70.4 | 81.8 | 52.4 | 37.6 |
-| exa-agent-high-B-v1 | 87.3 | 10.0 | 2.7 | **77.3** | 74.4 to 80.3 | 87.3 | 67.3 | 57.3 |
-| exa-agent-xhigh-v1 | 88.6 | 9.0 | 2.5 | **79.6** | 76.8 to 82.2 | 88.6 | 70.7 | 61.7 |
-| claygent-luna-v1 | 72.6 | 15.9 | 11.4 | **56.7** | 53.0 to 60.4 | 72.6 | 40.8 | 24.8 |
-| claygent-auto-A-v1 | 80.4 | 13.6 | 6.0 | **66.8** | 63.3 to 70.2 | 80.4 | 53.2 | 39.6 |
-| claygent-argon-B-v1 | 85.5 | 13.2 | 1.3 | **72.3** | 68.8 to 75.6 | 85.5 | 59.2 | 46.0 |
-| parallel-core-A-v1 | 85.4 | 13.7 | 0.9 | **71.6** | 68.2 to 74.8 | 85.4 | 57.9 | 44.2 |
-| parallel-pro-B-v1 | 85.2 | 12.6 | 2.3 | **72.6** | 69.3 to 75.7 | 85.2 | 60.0 | 47.5 |
-| parallel-ultra-C-v1 | 86.9 | 11.7 | 1.4 | **75.2** | 72.5 to 77.8 | 86.9 | 63.4 | 51.7 |
+| exa-agent-medium-A-v1 | 82.2 | 14.3 | 3.5 | **67.9** | 64.4 to 71.2 | 82.2 | 53.6 | 39.3 |
+| exa-agent-high-B-v1 | 87.6 | 9.6 | 2.8 | **77.9** | 75.2 to 80.7 | 87.6 | 68.3 | 58.6 |
+| exa-agent-xhigh-v1 | 89.0 | 8.6 | 2.5 | **80.4** | 77.7 to 83.0 | 89.0 | 71.8 | 63.3 |
+| claygent-luna-v1 | 72.6 | 15.9 | 11.5 | **56.8** | 53.0 to 60.3 | 72.6 | 40.9 | 25.0 |
+| claygent-auto-A-v1 | 81.0 | 13.0 | 6.0 | **68.0** | 64.5 to 71.4 | 81.0 | 55.1 | 42.1 |
+| claygent-argon-B-v1 | 85.6 | 13.0 | 1.4 | **72.6** | 69.2 to 75.7 | 85.6 | 59.6 | 46.6 |
+| parallel-core-A-v1 | 85.7 | 13.4 | 0.9 | **72.2** | 68.9 to 75.4 | 85.7 | 58.8 | 45.4 |
+| parallel-pro-B-v1 | 85.5 | 12.2 | 2.3 | **73.3** | 70.1 to 76.3 | 85.5 | 61.2 | 49.0 |
+| parallel-ultra-C-v1 | 87.1 | 11.5 | 1.4 | **75.7** | 73.0 to 78.3 | 87.1 | 64.2 | 52.7 |
 
 ## Rank at each cost of a wrong answer
 
 | wrong costs | order, best first |
 |---|---|
-| 0 | exa-agent-xhigh-v1 (88.6), exa-agent-high-B-v1 (87.3), parallel-ultra-C-v1 (86.9), claygent-argon-B-v1 (85.5), parallel-core-A-v1 (85.4), parallel-pro-B-v1 (85.2), exa-agent-medium-A-v1 (81.8), claygent-auto-A-v1 (80.4), claygent-luna-v1 (72.6) |
-| 0.5 | exa-agent-xhigh-v1 (84.1), exa-agent-high-B-v1 (82.3), parallel-ultra-C-v1 (81.0), claygent-argon-B-v1 (78.9), parallel-pro-B-v1 (78.9), parallel-core-A-v1 (78.5), exa-agent-medium-A-v1 (74.5), claygent-auto-A-v1 (73.6), claygent-luna-v1 (64.7) |
-| 1 | exa-agent-xhigh-v1 (79.6), exa-agent-high-B-v1 (77.3), parallel-ultra-C-v1 (75.2), parallel-pro-B-v1 (72.6), claygent-argon-B-v1 (72.3), parallel-core-A-v1 (71.6), exa-agent-medium-A-v1 (67.1), claygent-auto-A-v1 (66.8), claygent-luna-v1 (56.7) |
-| 1.5 | exa-agent-xhigh-v1 (75.1), exa-agent-high-B-v1 (72.3), parallel-ultra-C-v1 (69.3), parallel-pro-B-v1 (66.3), claygent-argon-B-v1 (65.8), parallel-core-A-v1 (64.8), claygent-auto-A-v1 (60.0), exa-agent-medium-A-v1 (59.7), claygent-luna-v1 (48.7) |
-| 2 | exa-agent-xhigh-v1 (70.7), exa-agent-high-B-v1 (67.3), parallel-ultra-C-v1 (63.4), parallel-pro-B-v1 (60.0), claygent-argon-B-v1 (59.2), parallel-core-A-v1 (57.9), claygent-auto-A-v1 (53.2), exa-agent-medium-A-v1 (52.4), claygent-luna-v1 (40.8) |
-| 3 | exa-agent-xhigh-v1 (61.7), exa-agent-high-B-v1 (57.3), parallel-ultra-C-v1 (51.7), parallel-pro-B-v1 (47.5), claygent-argon-B-v1 (46.0), parallel-core-A-v1 (44.2), claygent-auto-A-v1 (39.6), exa-agent-medium-A-v1 (37.6), claygent-luna-v1 (24.8) |
+| 0 | exa-agent-xhigh-v1 (89.0), exa-agent-high-B-v1 (87.6), parallel-ultra-C-v1 (87.1), parallel-core-A-v1 (85.7), claygent-argon-B-v1 (85.6), parallel-pro-B-v1 (85.5), exa-agent-medium-A-v1 (82.2), claygent-auto-A-v1 (81.0), claygent-luna-v1 (72.6) |
+| 0.5 | exa-agent-xhigh-v1 (84.7), exa-agent-high-B-v1 (82.8), parallel-ultra-C-v1 (81.4), parallel-pro-B-v1 (79.4), claygent-argon-B-v1 (79.1), parallel-core-A-v1 (78.9), exa-agent-medium-A-v1 (75.1), claygent-auto-A-v1 (74.5), claygent-luna-v1 (64.7) |
+| 1 | exa-agent-xhigh-v1 (80.4), exa-agent-high-B-v1 (77.9), parallel-ultra-C-v1 (75.7), parallel-pro-B-v1 (73.3), claygent-argon-B-v1 (72.6), parallel-core-A-v1 (72.2), claygent-auto-A-v1 (68.0), exa-agent-medium-A-v1 (67.9), claygent-luna-v1 (56.8) |
+| 1.5 | exa-agent-xhigh-v1 (76.1), exa-agent-high-B-v1 (73.1), parallel-ultra-C-v1 (69.9), parallel-pro-B-v1 (67.2), claygent-argon-B-v1 (66.1), parallel-core-A-v1 (65.5), claygent-auto-A-v1 (61.6), exa-agent-medium-A-v1 (60.8), claygent-luna-v1 (48.8) |
+| 2 | exa-agent-xhigh-v1 (71.8), exa-agent-high-B-v1 (68.3), parallel-ultra-C-v1 (64.2), parallel-pro-B-v1 (61.2), claygent-argon-B-v1 (59.6), parallel-core-A-v1 (58.8), claygent-auto-A-v1 (55.1), exa-agent-medium-A-v1 (53.6), claygent-luna-v1 (40.9) |
+| 3 | exa-agent-xhigh-v1 (63.3), exa-agent-high-B-v1 (58.6), parallel-ultra-C-v1 (52.7), parallel-pro-B-v1 (49.0), claygent-argon-B-v1 (46.6), parallel-core-A-v1 (45.4), claygent-auto-A-v1 (42.1), exa-agent-medium-A-v1 (39.3), claygent-luna-v1 (25.0) |
 
 ## Paired differences on the net score (wrong costs 1), second minus first
 
 | first | second | difference | 95% interval | clear of zero |
 |---|---|---|---|---|
-| exa-agent-medium-A-v1 | exa-agent-xhigh-v1 | +12.5 | +9.1 to +16.0 | yes |
-| exa-agent-medium-A-v1 | exa-agent-high-B-v1 | +10.2 | +6.7 to +13.7 | yes |
-| exa-agent-high-B-v1 | exa-agent-xhigh-v1 | +2.3 | -0.5 to +5.2 | no |
-| claygent-auto-A-v1 | claygent-argon-B-v1 | +5.5 | +1.2 to +9.6 | yes |
-| claygent-luna-v1 | claygent-auto-A-v1 | +10.1 | +6.7 to +13.6 | yes |
-| parallel-core-A-v1 | parallel-pro-B-v1 | +0.9 | -2.0 to +3.7 | no |
-| parallel-core-A-v1 | parallel-ultra-C-v1 | +3.5 | +1.2 to +6.0 | yes |
-| parallel-pro-B-v1 | parallel-ultra-C-v1 | +2.6 | +0.2 to +5.2 | yes |
-| claygent-argon-B-v1 | parallel-pro-B-v1 | +0.2 | -2.6 to +3.2 | no |
+| exa-agent-medium-A-v1 | exa-agent-xhigh-v1 | +12.5 | +9.1 to +15.9 | yes |
+| exa-agent-medium-A-v1 | exa-agent-high-B-v1 | +10.0 | +6.5 to +13.4 | yes |
+| exa-agent-high-B-v1 | exa-agent-xhigh-v1 | +2.5 | -0.2 to +5.3 | no |
+| claygent-auto-A-v1 | claygent-argon-B-v1 | +4.6 | +0.5 to +8.4 | yes |
+| claygent-luna-v1 | claygent-auto-A-v1 | +11.3 | +7.7 to +15.0 | yes |
+| parallel-core-A-v1 | parallel-pro-B-v1 | +1.1 | -1.7 to +3.8 | no |
+| parallel-core-A-v1 | parallel-ultra-C-v1 | +3.4 | +1.1 to +5.8 | yes |
+| parallel-pro-B-v1 | parallel-ultra-C-v1 | +2.3 | -0.0 to +4.9 | no |
+| claygent-argon-B-v1 | parallel-pro-B-v1 | +0.7 | -2.2 to +3.7 | no |

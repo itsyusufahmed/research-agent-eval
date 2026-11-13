@@ -3,12 +3,15 @@
 
 Reads grading/cells.csv (grade, status, truth status and the presence band of every cell) and records/*.json
 (cost_usd, latency_seconds) from the three board run folders. Every number is computed here: score_views.views for the
-net score and its company bootstrap, eval_common.bootstrap_ci for the accuracy intervals, paired_accuracy below with
-eval_common.mcnemar_exact for the deltas between settings. Writes:
+net score and its company bootstrap, eval_common.bootstrap_ci for the accuracy intervals, paired_accuracy below for
+the deltas between settings. Writes:
 
   grading/results.csv          one row per config: cost, accuracy, net score, right / wrong / blank, yield, trust
   grading/results_by_band.csv  accuracy by presence band (rich / medium / thin), pooled, equal-weighted, rich minus thin
   grading/setting_deltas.csv   each setting against the next one up within a vendor: accuracy and net deltas
+  grading/pairwise_net.csv     every pair of configs: the net score difference and its paired interval
+  grading/citation_support.csv one row per config: correct and wrong answers split by whether the judge could open
+                               the page the answer cites
 
   python3 results.py [--grading grading] [--runs runs/<a> runs/<b> ...] [--all-facts]
 
@@ -26,19 +29,32 @@ Definitions:
   right / wrong / blank per 100 and net(p)   score_views.py; net at a wrong cost of 1 is the headline
   $ per 1,000   1000 x mean cost_usd over the config's records (list price; Clay from credits x $0.05 + $0.005 an action)
   latency       median latency_seconds (wall clock)
-  setting delta second minus first accuracy in points on cells both ran with truth known, McNemar exact on the
-                discordant cells, 95% company bootstrap (2,000 resamples, seed 20261108); net delta at cost 1 from
-                score_views
+  setting delta second minus first accuracy in points on cells both ran with truth known, with the count of cells
+                only one of the two got right; net delta at cost 1 from score_views. Both intervals are a 95%
+                paired company bootstrap (2,000 resamples, seed 20261108): companies are resampled, not cells,
+                because the facts about one company are not independent
+  pairwise      every pair of configs, second minus first on the net score at cost 1, the second being the one
+                with the higher net score; the same paired company bootstrap. clear_of_zero = the interval
+                excludes zero
   all right     companies with every scored fact correct
+  citation support   the judge's `support` on each answer in cells.csv: supported or unsupported = it read the cited
+                page; unreachable = it could not open the cited page (dead, blocked or login-gated). An answer
+                on an unopened page is graded against the truth, whose page is truth_url in truth.csv.
+                truth page read = that URL has a saved copy that loaded (status below 400, with text) in a run
+                folder's snapshots/, grading/truth_pages/ or grading/judge_pages/. net, read only = the net
+                score at cost 1 with correct answers on an unopened page not counted as right
 """
 from __future__ import annotations
 
 import argparse
 import collections
 import csv
+import glob
+import json
 import os
 import statistics
 import sys
+from urllib.parse import urlsplit
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, ROOT)
@@ -127,7 +143,7 @@ def load_runs(run_dirs):
 # ---- metrics ----------------------------------------------------------------------------------------
 
 def paired_accuracy(graded, a, b, boot=False):
-    """Accuracy of a and b on cells both answered with truth known (neither gap), McNemar exact, optional company bootstrap."""
+    """Accuracy of a and b on cells both answered with truth known (neither gap), the cells only one got right, optional company bootstrap."""
     cell = collections.defaultdict(dict)
     for r in graded:
         if r["config_id"] in (a, b):
@@ -141,7 +157,7 @@ def paired_accuracy(graded, a, b, boot=False):
     bb = sum(1 for x, y in pairs if x["grade"] == "correct" and y["grade"] != "correct")
     cc = sum(1 for x, y in pairs if x["grade"] != "correct" and y["grade"] == "correct")
     out = {"acc_a": 100 * ra / len(pairs), "acc_b": 100 * rb / len(pairs), "delta": 100 * (rb - ra) / len(pairs),
-           "b": bb, "c": cc, "p": ec.mcnemar_exact(bb, cc), "n": len(pairs), "lo": None, "hi": None}
+           "b": bb, "c": cc, "n": len(pairs), "lo": None, "hi": None}
     if boot:
         per = collections.defaultdict(lambda: [0, 0, 0])
         for x, y in pairs:
@@ -283,12 +299,6 @@ def compute(all_rows, graded, recs):
 
 # ---- tables ----------------------------------------------------------------------------------------
 
-def pfmt(p):
-    if p is None:
-        return "n/a"
-    return "p < 0.001" if p < 0.001 else f"p = {p:.3f}" if p < 0.01 else f"p = {p:.2f}"
-
-
 RESULT_COLUMNS = ["config_id", "usd_per_1k", "accuracy", "accuracy_lo", "accuracy_hi", "net_1", "net_1_lo", "net_1_hi",
                   "right_per_100", "wrong_per_100", "blank_per_100", "yield", "trust", "wrong_per_asserted",
                   "unfindable_abstained", "unfindable_graded", "latency_median_s", "all_right_companies"]
@@ -318,7 +328,9 @@ BAND_COLUMNS = ["config_id"] + [f"{b}{s}" for b in BANDS for s in ("", "_lo", "_
     "pooled", "pooled_lo", "pooled_hi", "equal_weighted", "equal_weighted_lo", "equal_weighted_hi",
     "rich_minus_thin", "rich_minus_thin_lo", "rich_minus_thin_hi"]
 DELTA_COLUMNS = ["first", "second", "accuracy_delta", "accuracy_delta_lo", "accuracy_delta_hi", "second_only_right",
-                 "first_only_right", "mcnemar_p", "net_delta", "net_delta_lo", "net_delta_hi", "clear_of_zero"]
+                 "first_only_right", "net_delta", "net_delta_lo", "net_delta_hi", "clear_of_zero"]
+PAIRWISE_COLUMNS = ["first", "second", "first_usd_per_1k", "second_usd_per_1k", "first_net_1", "second_net_1",
+                    "net_delta", "net_delta_lo", "net_delta_hi", "clear_of_zero"]
 
 
 def band_rows(D):
@@ -344,8 +356,95 @@ def delta_rows(D):
         q = D["P"][(a, b)]
         out.append({"first": a, "second": b, "accuracy_delta": f"{q['delta']:+.1f}", "accuracy_delta_lo": f"{q['lo']:+.1f}",
                     "accuracy_delta_hi": f"{q['hi']:+.1f}", "second_only_right": q["c"], "first_only_right": q["b"],
-                    "mcnemar_p": pfmt(q["p"]), "net_delta": f"{q['net_d']:+.1f}", "net_delta_lo": f"{q['net_lo']:+.1f}",
+                    "net_delta": f"{q['net_d']:+.1f}", "net_delta_lo": f"{q['net_lo']:+.1f}",
                     "net_delta_hi": f"{q['net_hi']:+.1f}", "clear_of_zero": "yes" if q["clear"] else "no"})
+    return out
+
+
+def pairwise_rows(D):
+    """Every pair of configs on the net score at cost 1, second minus first, the second being the config with the
+    higher net score (ties in ladder order); paired company bootstrap, the same resamples as every other interval."""
+    net = lambda c: D["V"]["net"](c, D["companies"], 1)
+    ranked = sorted(ladder_order(D["cfgs"]), key=lambda c: -net(c))
+    keys = [(ranked[j], ranked[i]) for i in range(len(ranked)) for j in range(i + 1, len(ranked))]
+    add_pairs(D, keys)
+    out = []
+    for a, b in keys:
+        q = D["P"][(a, b)]
+        out.append({"first": a, "second": b, "first_usd_per_1k": f"{D['M'][a]['usd_per_1k']:.2f}",
+                    "second_usd_per_1k": f"{D['M'][b]['usd_per_1k']:.2f}", "first_net_1": f1(net(a)), "second_net_1": f1(net(b)),
+                    "net_delta": f"{q['net_d']:+.1f}", "net_delta_lo": f"{q['net_lo']:+.1f}",
+                    "net_delta_hi": f"{q['net_hi']:+.1f}", "clear_of_zero": "yes" if q["clear"] else "no"})
+    return out
+
+
+CITATION_COLUMNS = ["config_id", "correct_answers", "citation_read", "citation_not_opened", "citation_not_opened_pct",
+                    "not_opened_truth_page_read", "not_opened_truth_page_not_read", "not_opened_citing_linkedin",
+                    "no_citation", "wrong_answers", "wrong_citation_not_opened", "wrong_not_opened_citing_linkedin",
+                    "net_1", "net_1_read_only"]
+
+
+def page_key(url: str) -> str:
+    """A URL folded for matching: no scheme, no www, no trailing slash; every LinkedIn host as linkedin.com and a
+    company page's /about tab as the page itself (the captures are of the About tab)."""
+    s = urlsplit((url or "").strip())
+    h = s.netloc.lower()
+    h = h[4:] if h.startswith("www.") else h
+    path = s.path.rstrip("/")
+    if h == "linkedin.com" or h.endswith(".linkedin.com"):
+        h = "linkedin.com"
+        path = path[:-len("/about")] if path.endswith("/about") else path
+    return h + path + ("?" + s.query if s.query else "")
+
+
+def is_linkedin(url: str) -> bool:
+    return page_key(url).startswith("linkedin.com/")
+
+
+def loaded_pages(grading):
+    """Keys of every URL with a saved copy that loaded: the run folders' snapshots, the truth pages and the judge's pages."""
+    out = set()
+    for idx in sorted(glob.glob(os.path.join(ROOT, "runs", "*", "snapshots", "index.jsonl"))) + [
+            os.path.join(grading, "truth_pages", "index.jsonl"), os.path.join(grading, "judge_pages", "index.jsonl")]:
+        if not os.path.exists(idx):
+            continue
+        for line in open(idx):
+            e = json.loads(line)
+            try:
+                status = int(e.get("status"))
+            except (TypeError, ValueError):
+                continue
+            if status < 400 and (e.get("chars") or 0) > 0:
+                out.add(page_key(e["url"]))
+    return out
+
+
+def citation_rows(D, grading):
+    """Correct and wrong answers per config by the judge's `support`, and the net score with unopened-page corrects left out."""
+    truth_url = {(r["domain"], r["field"]): r.get("truth_url") or "" for r in csv.DictReader(open(os.path.join(grading, "truth.csv")))}
+    loaded = loaded_pages(grading)
+    out = []
+    for c in ladder_order(D["cfgs"]):
+        rows = [r for r in D["graded"] if r["config_id"] == c]
+        ans = [r for r in rows if r["status"] == "asserted"]
+        right = [r for r in ans if r["grade"] == "correct"]
+        wrong = [r for r in ans if r["grade"] == "wrong"]
+        blind = [r for r in right if r["support"] == "unreachable"]
+        truth_read = [r for r in blind if page_key(truth_url.get((r["domain"], r["field"]), "")) in loaded]
+        cites_li = lambda r: any(is_linkedin(u) for u in (r.get("citations") or "").split("|") if u)
+        wrong_blind = [r for r in wrong if r["support"] == "unreachable"]
+        n_right_all = sum(r["grade"] == "correct" for r in rows)
+        n_wrong_all = sum(r["grade"] == "wrong" for r in rows)
+        out.append({"config_id": c, "correct_answers": len(right),
+                    "citation_read": sum(r["support"] == "supported" for r in right), "citation_not_opened": len(blind),
+                    "citation_not_opened_pct": f1(100 * len(blind) / len(right)),
+                    "not_opened_truth_page_read": len(truth_read), "not_opened_truth_page_not_read": len(blind) - len(truth_read),
+                    "not_opened_citing_linkedin": sum(cites_li(r) for r in blind),
+                    "no_citation": sum(r["support"] not in ("supported", "unreachable") for r in right),
+                    "wrong_answers": len(wrong), "wrong_citation_not_opened": len(wrong_blind),
+                    "wrong_not_opened_citing_linkedin": sum(cites_li(r) for r in wrong_blind),
+                    "net_1": f1(100 * (n_right_all - n_wrong_all) / len(rows)),
+                    "net_1_read_only": f1(100 * (n_right_all - len(blind) - n_wrong_all) / len(rows))})
     return out
 
 
@@ -373,6 +472,8 @@ def main():
     write_csv(os.path.join(grading, "results.csv"), RESULT_COLUMNS, result_rows(D))
     write_csv(os.path.join(grading, "results_by_band.csv"), BAND_COLUMNS, band_rows(D))
     write_csv(os.path.join(grading, "setting_deltas.csv"), DELTA_COLUMNS, delta_rows(D))
+    write_csv(os.path.join(grading, "pairwise_net.csv"), PAIRWISE_COLUMNS, pairwise_rows(D))
+    write_csv(os.path.join(grading, "citation_support.csv"), CITATION_COLUMNS, citation_rows(D, grading))
 
 
 if __name__ == "__main__":
