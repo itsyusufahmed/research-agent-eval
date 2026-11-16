@@ -112,6 +112,12 @@ def load_cells(grading, all_facts=False):
         sys.exit(f"configs in {grading} differ from the nine on the board:\n  extra {sorted(set(cfgs) - set(EXPECTED))}\n"
                  f"  missing {sorted(set(EXPECTED) - set(cfgs))}")
     graded = [r for r in rows if r["grade"] != "ungraded"]
+    # an abstention is correct on an unfindable truth and unknown on a known one (grading_rules.md, Grading vocabulary)
+    off = [r for r in graded if r["status"] == "unknown"
+           and r["grade"] != ("correct" if r["truth_status"] == "unfindable" else "unknown")]
+    if off:
+        sys.exit("abstentions graded against the rule:\n" + "\n".join(
+            f"  {r['domain']} {r['field']} {r['config_id']}: grade {r['grade']} on a {r['truth_status']} truth" for r in off))
     FACTS["n"] = len({r["field"] for r in rows})
     never = {(r["domain"], r["field"]) for r in rows} - {(r["domain"], r["field"]) for r in graded}
     FACTS["never_graded"], FACTS["never_graded_companies"] = len(never), len({d for d, _ in never})
