@@ -2,7 +2,7 @@
 """The results tables for the research-agents eval, from the graded cells and the run records. Changes nothing it reads.
 
 Reads grading/cells.csv (grade, status, truth status and the presence band of every cell) and records/*.json
-(cost_usd, latency_seconds) from the three board run folders. Every number is computed here: score_views.views for the
+(cost_usd, latency_seconds) and raw/*.json (the vendor's own timing) from the three board run folders. Every number is computed here: score_views.views for the
 net score and its company bootstrap, eval_common.bootstrap_ci for the accuracy intervals, paired_accuracy below for
 the deltas between settings. Writes:
 
@@ -28,7 +28,13 @@ Definitions:
                 unknown are ungraded and left out); abstention = status unknown, assertion = status asserted
   right / wrong / blank per 100 and net(p)   score_views.py; net at a wrong cost of 1 is the headline
   $ per 1,000   1000 x mean cost_usd over the config's records (list price; Clay from credits x $0.05 + $0.005 an action)
-  latency       median latency_seconds (wall clock)
+  latency       median latency_seconds: seconds from the client's submit to the client's check that found the run
+                finished, so it includes the wait for that check (10 to 20 s between checks, longer with many
+                runs in flight)
+  vendor clock  median of the vendor's own start-to-finish seconds per run, read from raw/*.json
+                (eval_common.vendor_clock_seconds); blank for Claygent Argon, whose responses carry no timing.
+                The README's minutes per company is this median, or the latency median where it is blank,
+                rounded to the half minute
   setting delta second minus first accuracy in points on cells both ran with truth known, with the count of cells
                 only one of the two got right; net delta at cost 1 from score_views. Both intervals are a 95%
                 paired company bootstrap (2,000 resamples, seed 20261108): companies are resampled, not cells,
@@ -146,6 +152,21 @@ def load_runs(run_dirs):
     return out
 
 
+def load_vendor_clock(run_dirs):
+    """{(domain, config): seconds on the vendor's own clock} from raw/*.json beside each record; no entry
+    where the response carries no timing."""
+    out = {}
+    for d in run_dirs:
+        d = resolve(d)
+        for tag, rec in ec.iter_records(d):
+            raw = os.path.join(d, "raw", tag + ".json")
+            secs = ec.vendor_clock_seconds(ec.load_json(raw)) if os.path.exists(raw) else None
+            if secs is not None:
+                cfg = rec.get("config_id") or tag.split("__", 1)[-1]
+                out[(rec.get("domain") or tag.split("__", 1)[0], cfg)] = secs
+    return out
+
+
 # ---- metrics ----------------------------------------------------------------------------------------
 
 def paired_accuracy(graded, a, b, boot=False):
@@ -192,7 +213,7 @@ def add_pairs(D, keys):
         store_pairs(D, score_views.views(D["graded"], pairs=keys))
 
 
-def compute(all_rows, graded, recs):
+def compute(all_rows, graded, recs, clock=None):
     """Every number the tables use, keyed by config; plus the paired differences."""
     by_cfg = collections.defaultdict(list)
     for r in graded:
@@ -292,6 +313,10 @@ def compute(all_rows, graded, recs):
         m["latency_median"] = statistics.median(lats)
         q = statistics.quantiles(lats, n=4)
         m["latency_p25"], m["latency_p75"] = q[0], q[2]
+        vc = [v for (d, cc), v in (clock or {}).items() if cc == c and d in pc[c]]
+        if vc and len(vc) != len(companies):
+            sys.exit(f"{c}: vendor timing on {len(vc)} of {len(companies)} companies in --runs")
+        m["vendor_clock_median"] = statistics.median(vc) if vc else None
         M[c] = m
 
     # net scores and paired net differences (score_views recipe; the resamples are the same whatever the pair list)
@@ -307,7 +332,8 @@ def compute(all_rows, graded, recs):
 
 RESULT_COLUMNS = ["config_id", "usd_per_1k", "accuracy", "accuracy_lo", "accuracy_hi", "net_1", "net_1_lo", "net_1_hi",
                   "right_per_100", "wrong_per_100", "blank_per_100", "yield", "trust", "wrong_per_asserted",
-                  "unfindable_abstained", "unfindable_graded", "latency_median_s", "all_right_companies"]
+                  "unfindable_abstained", "unfindable_graded", "latency_median_s", "vendor_clock_median_s",
+                  "all_right_companies"]
 
 
 def f1(x):
@@ -316,7 +342,7 @@ def f1(x):
 
 def result_rows(D):
     """One row per config in ladder order: rates and scores to 0.1; cost per 1,000 to the cent and
-    median latency to 0.1 s, one step finer than the README's whole dollars and seconds."""
+    two median times to 0.1 s. The README shows whole dollars and the time in half minutes."""
     out = []
     for c in ladder_order(D["cfgs"]):
         m, v = D["M"][c], D["M"][c]["views"]
@@ -326,7 +352,9 @@ def result_rows(D):
                     "right_per_100": v["right_per_100"], "wrong_per_100": v["wrong_per_100"], "blank_per_100": v["blank_per_100"],
                     "yield": f1(m["yield"]), "trust": f1(m["trust"]), "wrong_per_asserted": f1(m["wrong_per_asserted"]),
                     "unfindable_abstained": m["abstained"], "unfindable_graded": m["unfindable_n"],
-                    "latency_median_s": f1(m["latency_median"]), "all_right_companies": m["all_right"]})
+                    "latency_median_s": f1(m["latency_median"]),
+                    "vendor_clock_median_s": "" if m["vendor_clock_median"] is None else f1(m["vendor_clock_median"]),
+                    "all_right_companies": m["all_right"]})
     return out
 
 
@@ -471,7 +499,7 @@ def main():
     a = ap.parse_args()
     grading = resolve(a.grading)
     all_rows, graded = load_cells(grading, a.all_facts)
-    D = compute(all_rows, graded, load_runs(a.runs))
+    D = compute(all_rows, graded, load_runs(a.runs), load_vendor_clock(a.runs))
     if a.all_facts:
         write_csv(os.path.join(grading, "results_all_facts.csv"), RESULT_COLUMNS, result_rows(D))
         return

@@ -145,6 +145,38 @@ def iter_records(run_dir: str) -> Iterable[Tuple[str, Dict[str, Any]]]:
             yield fn[:-5], load_json(os.path.join(rec_dir, fn))
 
 
+def vendor_clock_seconds(raw: Any) -> Optional[float]:
+    """Seconds one run took on the vendor's own clock, read from its saved response in raw/; None where the
+    response carries no timing. Exa Agent: createdAt to completedAt. Parallel Task: created_at to modified_at
+    on the run object (the API returns no completion stamp; a finished run's last change is its completion).
+    Claygent: timeTakenInSeconds in the column result, which Clay returns for Auto and Luna and not for Argon.
+    Unlike latency_seconds in the record, this does not depend on when the client next checked the run."""
+    import datetime
+
+    def span(a: Any, b: Any) -> Optional[float]:
+        try:
+            return (datetime.datetime.fromisoformat(str(b).replace("Z", "+00:00"))
+                    - datetime.datetime.fromisoformat(str(a).replace("Z", "+00:00"))).total_seconds()
+        except ValueError:
+            return None
+
+    if not isinstance(raw, dict):
+        return None
+    if raw.get("createdAt") and raw.get("completedAt"):
+        return span(raw["createdAt"], raw["completedAt"])
+    run = raw.get("run") if isinstance(raw.get("run"), dict) else {}
+    if run.get("created_at") and run.get("modified_at"):
+        return span(run["created_at"], run["modified_at"])
+    item = raw.get("item") if isinstance(raw.get("item"), dict) else {}
+    for col in (item.get("result") or {}).values():
+        if isinstance(col, dict) and col.get("timeTakenInSeconds") not in (None, ""):
+            try:
+                return float(col["timeTakenInSeconds"])
+            except (TypeError, ValueError):
+                return None
+    return None
+
+
 # ---- hashing ---------------------------------------------------------------------------
 
 def canonical_json(data: Any) -> str:
