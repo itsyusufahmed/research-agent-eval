@@ -114,7 +114,3 @@ The method was written before the runs. These are the changes made after it, in 
 Code is MIT. Results data is CC BY 4.0. Saved page copies and vendor responses belong to their owners and are included for verification only. See `LICENSE`.
 
 Page copies from LinkedIn and paid company-data providers are not redistributed. For those pages the index keeps the URL, fetch time and a SHA-256 of the text that was graded.
-
-If you own a page copied here and want it removed, open an issue.
-
-Maintained by Yusuf Ahmed.
